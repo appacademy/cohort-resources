@@ -41,4 +41,4 @@
 
 ## Demos
 
-*  Demos from lecture live within the demos repository.  For every demo, checkout the appropriate branch for the current cohort, cd into the demo directory, and create the directory for the demo you are doing.  After finishing the demo, add,commit and push your work.
+*  Demos from lecture live within the demos repository.  For every demo, checkout the appropriate branch for the current cohort, cd into the demo directory, and look for the lecture you are scribing for.  The demo will be done within the folder. After finishing the demo, add,commit and push your work.
