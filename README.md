@@ -1,12 +1,12 @@
 # Welcome to App Academy! 
 
-* Here you will find all demos, study guides and resources which will be given out throughout your time here at appacademy. 
+* Here you will find all resources which will be given out throughout your time here at appacademy. 
 
 # Student Section 
+* Clone this repository in order to have access to all resources provided throughout the cohort:``` git clone <url>```.
 * DO NOT GIT INIT ONCE YOUVE CLONED THIS REPOSITORY. When you clone, all commits are preserved.
-* Clone this repository in order to have access to all resources provided throughout the cohort (git clone (url)).
-* Once cloned, if you type git branch, you should be able to see different branches with dates.  Look for the date which corresponds with your start date and checkout that branch (git checkout (start date)). Here is where all your respective resources live.
-* After cloning, whenever something is updated you will have the ability to update your local copy of the repository by running the command git pull.  
+* Once cloned, if you type git branch, you should be able to see different branches with dates.  Look for the date which corresponds with your start date and checkout that branch: ```git checkout <month-day-year>```. Here is where all your respective resources live.
+* After cloning, whenever something is updated you will have the ability to update your local copy of the repository by running the command ```git pull```.  
 
 ## Instructor Contact Info 
 
@@ -37,8 +37,8 @@
 
 # Instructor Section
 
-* Each cohort will have its own branch.  The master branch serves as the skeleton branch.  Whenever you want to make a new branch for a cohort, branch from the master branch and name it as such: "(month)-(start day)-(year)".  
+* Each cohort will have its own branch.  The master branch serves as the skeleton branch.  Whenever you want to make a new branch for a cohort, branch from the master branch and name it as such: ```git branch <month-start day-year```.  
 
 ## Demos
 
-*  Demos from lecture live within the demos repository.  For every demo, checkout the appropriate branch for the current cohort, cd into the demo directory, and create (mkdir) the directory for the demo you are doing.  After finishing the demo, add,commit and push your work.
+*  Demos from lecture live within the demos repository.  For every demo, checkout the appropriate branch for the current cohort, cd into the demo directory, and create the directory for the demo you are doing.  After finishing the demo, add,commit and push your work.
