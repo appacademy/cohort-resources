@@ -3,6 +3,9 @@
 * Here you will find all resources which will be given out throughout your time here at appacademy. 
 
 # Student Section 
+## sf lecture notes link 
+https://github.com/appacademy/sf-lecture-notes
+## How To Use Repository
 * Clone this repository in order to have access to all resources provided throughout the cohort:``` git clone <url>```.
 * DO NOT GIT INIT ONCE YOUVE CLONED THIS REPOSITORY. When you clone, all commits are preserved.
 * Once cloned, if you type git branch, you should be able to see different branches with dates.  Look for the date which corresponds with your start date and checkout that branch: ```git checkout <month-day-year>```. Here is where all your respective resources live.
