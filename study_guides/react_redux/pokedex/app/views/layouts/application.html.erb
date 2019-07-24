@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pokedex</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+
+    <script type="text/javascript">
+      window.POKEMON_TYPES = <%= raw Pokemon::TYPES %>
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <img src="./assets/pokeball.svg" alt="pokedex">
+    </header>
+
+    <%= yield %>
+  </body>
+</html>
