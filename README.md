@@ -3,8 +3,10 @@
 * Here you will find all resources which will be given out throughout your time here at appacademy. 
 
 # Student Section 
-## sf lecture notes link 
+## SF Lecture Notes Link 
 https://github.com/appacademy/sf-lecture-notes
+## Tommy Video Link
+https://github.com/appacademy/code_for_video_demos
 ## How To Use Repository
 * Clone this repository in order to have access to all resources provided throughout the cohort:``` git clone <url>```.
 * DO NOT GIT INIT ONCE YOUVE CLONED THIS REPOSITORY. When you clone, all commits are preserved.
