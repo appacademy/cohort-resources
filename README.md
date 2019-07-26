@@ -6,7 +6,7 @@
 ## SF Lecture Notes Link 
 https://github.com/appacademy/sf-lecture-notes
 ## Alumni Engagement Agreement
-appacademy.io/alumni-engagement-agreement
+https://appacademy.io/alumni-engagement-agreement
 ## Tommy Video Link
 https://github.com/appacademy/code_for_video_demos
 ## How To Use Repository
