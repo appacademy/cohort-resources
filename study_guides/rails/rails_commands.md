@@ -36,6 +36,5 @@
 * ```bundle exec rails db:rollback```
     * rolls everything back to the most recent migration
 * ```bundle exec rails routes```
-* ```bundle exec annotate```
 
 
