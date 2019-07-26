@@ -29,13 +29,11 @@ class Array
     pairs = []
     self.each_with_index do |el1, i|
       self.each_with_index do |el2, j|
-        debugger
         if el1 + el2 == target
           pairs << [i, j]
         end
       end
     end
-    debugger
     pairs
   end
 end
