@@ -16,8 +16,8 @@ ActiveRecord::Base.transaction do
   ron = User.create!(username: 'Ron Weasley', age: 11, political_affiliation: "Gryffindor", email: "ron@hogwarts.io")
   dumbledore = User.create!(username: "Albus Dumbledore", age: 93, political_affiliation: "Headmaster", email: "dumbledore@hogwarts.io")
   draco = User.create!(username: "Draco Malfoy", age: 11, political_affiliation: "Slytherin", email: "draco@hogwarts.io")
-  nimbus = User.create!(username: "Nimbus", age: 45, email: "brooms@nimbus.io")
-  andy = User.create!(username: "Andy", age: 100, email: "andy@aa.io")
+  nimbus = User.create!(username: "Nimbus", age: 45, email: "brooms@nimbus.io", political_affiliation: "no affiliation")
+  andy = User.create!(username: "Andy", age: 100, email: "andy@aa.io", political_affiliation: "Jedi")
 
   Chirp.destroy_all
 

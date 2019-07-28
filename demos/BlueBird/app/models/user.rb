@@ -2,11 +2,13 @@
 #
 # Table name: users
 #
-#  id         :bigint           not null, primary key
-#  username   :string           not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  email      :string           not null
+#  id                    :bigint           not null, primary key
+#  username              :string           not null
+#  created_at            :datetime         not null
+#  updated_at            :datetime         not null
+#  email                 :string           not null
+#  political_affiliation :string           not null
+#  age                   :integer          not null
 #
 
 class User < ApplicationRecord
@@ -26,4 +28,8 @@ class User < ApplicationRecord
         through: :likes,
         source: :chirp 
     
+    has_many :comments,
+        primary_key: :id,
+        foreign_key: :author_id,
+        class_name: :Comment
 end

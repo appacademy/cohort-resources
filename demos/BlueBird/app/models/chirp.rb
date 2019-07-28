@@ -27,6 +27,11 @@ class Chirp < ApplicationRecord
         through: :likes,
         source: :user 
 
+    has_many :comments,
+        primary_key: :id,
+        foreign_key: :chirp_id,
+        class_name: :Comment
+
     def body_too_long
         if body && body.length > 140
             errors[:body] << 'chirp is too long'
