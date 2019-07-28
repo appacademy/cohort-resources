@@ -5,68 +5,101 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
 ActiveRecord::Base.transaction do
+
   User.destroy_all
+
+  # Wizards
+  hagrid = User.create!(username: 'Rubeus Hagrid', age: 45, political_affiliation: "Giant", email: "hagrid@hogwarts.io")
+  harry = User.create!(username: 'Harry Potter', age: 11, political_affiliation: "Gryffindor", email: "harry@hogwarts.io")
+  hermione = User.create!(username: 'Hermione Granger', age: 11, political_affiliation: "Gryffindor", email: "hermione@hogwarts.io")
+  ron = User.create!(username: 'Ron Weasley', age: 11, political_affiliation: "Gryffindor", email: "ron@hogwarts.io")
+  dumbledore = User.create!(username: "Albus Dumbledore", age: 93, political_affiliation: "Headmaster", email: "dumbledore@hogwarts.io")
+  draco = User.create!(username: "Draco Malfoy", age: 11, political_affiliation: "Slytherin", email: "draco@hogwarts.io")
+  nimbus = User.create!(username: "Nimbus", age: 45, email: "brooms@nimbus.io")
+  andy = User.create!(username: "Andy", age: 100, email: "andy@aa.io")
+
   Chirp.destroy_all
+
+  # Chirps
+  chirp1 = Chirp.create!(author_id: hagrid.id, body: "You're a wizard, Harry.")
+
+  chirp2 = Chirp.create!(author_id: harry.id, body: "I solemnly swear I am up to no good.")
+
+  chirp3 = Chirp.create!(author_id: hermione.id, body: "It’s wingardium leviOsa, not leviosAH.")
+  chirp4 = Chirp.create!(author_id: hermione.id, body: "We could all have been killed or worse, expelled.")
+  chirp5 = Chirp.create!(author_id: hermione.id, body: "Just because you have the emotional range of a teaspoon doesn’t mean we all have.")
+
+  chirp6 = Chirp.create!(author_id: dumbledore.id, body: "Words are, in my not-so-humble opinion, our most inexhaustible source of magic.")
+  chirp7 = Chirp.create!(author_id: dumbledore.id, body: "It takes a great deal of bravery to stand up to our enemies, but just as much to stand up to our friends.")
+  chirp8 = Chirp.create!(author_id: dumbledore.id, body: "It is our choices, Harry, that show what we truly are, far more than our abilities.")
+  chirp9 = Chirp.create!(author_id: dumbledore.id, body: "Happiness can be found even in the darkest of times if only one remembers to turn on the light.")
+
+  chirp10 = Chirp.create!(author_id: nimbus.id, body: "Nimbus 2000s are (quite literally) flying off the shelves - get them while they're hot!")
+  chirp11 = Chirp.create!(author_id: nimbus.id, body: "Buy your broomstick from a brand you trust. Choose Nimbus.")
+  chirp12 = Chirp.create!(author_id: nimbus.id, body: "If you're a seeker you'll love our new stick. Weave your way through the opponent with the best aerodynamics a broomstick has ever seen!")
+
+  chirp13 = Chirp.create!(author_id: andy.id, body: "Am I the only one who doesn't like Harry Potter?")
+  chirp14 = Chirp.create!(author_id: andy.id, body: "Give me Star Wars any day")
+
   Like.destroy_all
 
-  users = []
-
-  jennifer = User.create!(username: "that_fish", email: 'jenken@gmail.com')
-  users << jennifer
-
-  andy = User.create!(username: 'the_real_andy', email: 'andy@gmail.com')
-  users << andy
+  # Likes
   
-  mike = User.create!(username: 'squeakycheese', email: 'cheesecurds@gmail.com')
-  users << mike
+  # Hagrid
+  Like.create!(user_id: hagrid.id, chirp_id: chirp3.id)
+  Like.create!(user_id: hagrid.id, chirp_id: chirp4.id)
+  Like.create!(user_id: hagrid.id, chirp_id: chirp5.id)
+  Like.create!(user_id: hagrid.id, chirp_id: chirp6.id)
+  Like.create!(user_id: hagrid.id, chirp_id: chirp7.id)
+  Like.create!(user_id: hagrid.id, chirp_id: chirp8.id)
+  Like.create!(user_id: hagrid.id, chirp_id: chirp9.id)
+  Like.create!(user_id: hagrid.id, chirp_id: chirp14.id)
 
-  dean = User.create!(username: 'call_me_matt', email: 'mattdean@gmail.com')
-  users << dean
+  # Harry
+  Like.create!(user_id: harry.id, chirp_id: chirp6.id)
+  Like.create!(user_id: harry.id, chirp_id: chirp7.id)
+  Like.create!(user_id: harry.id, chirp_id: chirp8.id)
+  Like.create!(user_id: harry.id, chirp_id: chirp9.id)
+  Like.create!(user_id: harry.id, chirp_id: chirp3.id)
+  Like.create!(user_id: harry.id, chirp_id: chirp4.id)
+  Like.create!(user_id: harry.id, chirp_id: chirp10.id)
+  Like.create!(user_id: harry.id, chirp_id: chirp11.id)
+  Like.create!(user_id: harry.id, chirp_id: chirp12.id)
+  Like.create!(user_id: harry.id, chirp_id: chirp14.id)
 
-  ronil = User.create!(username: "ro_your_boat", email: 'ro_your_boat@gmail.com')
-  users << ronil
 
-  ryan = User.create(username: "mapa_tofu", email: 'i_am_mapa@gmail.com')
-  users << ryan
-  
-  elliot = User.create!(username: "smelliot", email: 'smiz@gmail.com')
-  users << elliot
-  
-  angela = User.create!(username: "sd2berkeley", email: 'angelatin@gmail.com')
-  users << angela
+  # Hermione
+  Like.create!(user_id: hermione.id, chirp_id: chirp3.id)
+  Like.create!(user_id: hermione.id, chirp_id: chirp4.id)
+  Like.create!(user_id: hermione.id, chirp_id: chirp5.id)
+  Like.create!(user_id: hermione.id, chirp_id: chirp14.id)
 
-  carlos = User.create(username: "stretchy_boi", email: 'father_stretch_my_hands@gmail.com')
-  users << carlos
+  # Ron
+  Like.create!(user_id: ron.id, chirp_id: chirp3.id)
+  Like.create!(user_id: ron.id, chirp_id: chirp10.id)
+  Like.create!(user_id: ron.id, chirp_id: chirp14.id)
 
-  quotes = []
+  # Dumbledore
+  Like.create!(user_id: dumbledore.id, chirp_id: chirp3.id)
+  Like.create!(user_id: dumbledore.id, chirp_id: chirp4.id)
+  Like.create!(user_id: dumbledore.id, chirp_id: chirp5.id)
+  Like.create!(user_id: dumbledore.id, chirp_id: chirp6.id)
+  Like.create!(user_id: dumbledore.id, chirp_id: chirp7.id)
+  Like.create!(user_id: dumbledore.id, chirp_id: chirp8.id)
+  Like.create!(user_id: dumbledore.id, chirp_id: chirp9.id)
+  Like.create!(user_id: dumbledore.id, chirp_id: chirp14.id)
 
-  until quotes.length == 13
-    quotes << Faker::ChuckNorris.fact.slice(0, 140)
-    quotes.uniq!
-  end
+  # Draco
+  Like.create!(user_id: draco.id, chirp_id: chirp10.id)
+  Like.create!(user_id: draco.id, chirp_id: chirp12.id)
+  Like.create!(user_id: draco.id, chirp_id: chirp13.id)
+  Like.create!(user_id: draco.id, chirp_id: chirp14.id)
 
-  Chirp.create!(author_id: mike.id, body: quotes.pop)
-  Chirp.create!(author_id: mike.id, body: quotes.pop)
-  Chirp.create!(author_id: andy.id, body: quotes.pop)
-  Chirp.create!(author_id: ryan.id, body: quotes.pop)
-  Chirp.create!(author_id: ryan.id, body: quotes.pop)
-  Chirp.create!(author_id: jennifer.id, body: quotes.pop)
-  Chirp.create!(author_id: ronil.id, body: quotes.pop)
-  Chirp.create!(author_id: carlos.id, body: quotes.pop)
-  Chirp.create!(author_id: carlos.id, body: quotes.pop)
-  Chirp.create!(author_id: dean.id, body: quotes.pop)
-  Chirp.create!(author_id: elliot.id, body: quotes.pop)
-  Chirp.create!(author_id: andy.id, body: quotes.pop)
-  Chirp.create!(author_id: angela.id, body: quotes.pop)
-
-  Chirp.all.each do |chirp|
-    users = User.all.to_a
-    (5..7).to_a.sample.times do
-      random_user = users.sample
-      users.delete(random_user)
-      Like.create(user_id: random_user.id, chirp_id: chirp.id)
-    end
-  end
+  # Comments
+  Comment.create(body: 'Wow! What a magnificent play on words!', author_id: hermione.id, chirp_id: chirp10.id)
+  Comment.create(body: 'The Nimbus 2000 is incredible - smoothest broom I\'ve ever flown on', author_id: harry.id, chirp_id: chirp10.id)
+  Comment.create(body: 'Bloody hell @harry, have you seen this.', author_id: ron.id, chirp_id: chirp10.id)
+  Comment.create(body: 'I will pay you money not to sell this to Harry Potter', author_id: draco.id, chirp_id: chirp10.id)
+  Comment.create(body: 'You are saying what we are all thinking', author_id: draco.id, chirp_id: chirp14.id)
 end
