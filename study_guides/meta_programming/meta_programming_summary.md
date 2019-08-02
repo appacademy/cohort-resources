@@ -1,8 +1,10 @@
-##Class Instance Variables
+## Class Instance Variables
 * these are not inherited by sub classes
 * Any objects can have instance variables of its own
 * meaning that a class is an object than the class can have instance variables
+```
 
+```
 
 ## Class variables
 * These are inherited by sub classes 
