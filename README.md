@@ -1,6 +1,6 @@
 # Welcome to App Academy! 
 
-* Here you will find all resources which will be given out throughout your time here at appacademy. 
+Here you will find all resources which will be given out throughout your time here at appacademy. 
 
 # Student Section 
 ## Calendar 
@@ -15,7 +15,18 @@ https://github.com/appacademy/code_for_video_demos
 * Clone this repository in order to have access to all resources provided throughout the cohort:``` git clone <url>```.
 * DO NOT GIT INIT ONCE YOUVE CLONED THIS REPOSITORY. When you clone, all commits are preserved.
 * Once cloned, if you type git branch, you should be able to see different branches with dates.  Look for the date which corresponds with your start date and checkout that branch: ```git checkout <month-day-year>```. Here is where all your respective resources live.
-* After cloning, whenever something is updated you will have the ability to update your local copy of the repository by running the command ```git pull```.  
+* After cloning, whenever something is updated you will have the ability to update your local copy of the repository by running the command ```git pull```.
+## Folder Breakdown  
+### assessment_tips
+* This folder is a compiliation of markdown files that list out tips and tricks for each assessment you will take during the in person portion.
+### demos  
+* All demos performed during lecture can be found in this folder. 
+### foundations_remote
+* This folder compiles all of the study guides given during the foundations portion of app academy.
+### student_success
+* This folder serves as a center for tips on how to maximize your success during your time here at app academy. 
+### study_guides
+* We've compiled a series of markdown, javascript, ruby and sql files that summarize different concepts learned throughout the course.  Look in here when you need some syntax refreshness or some quick concept summaries!
 
 ## Instructor Contact Info 
 
