@@ -3,6 +3,8 @@
 * Here you will find all resources which will be given out throughout your time here at appacademy. 
 
 # Student Section 
+## Calendar 
+https://docs.google.com/spreadsheets/d/1P8TwPa9M1SxUwWlCJktBhAk08PRx4Ls7ehC4R-G5Znw/edit?ts=5d0a7a17#gid=1556007678
 ## SF Lecture Notes Link 
 https://github.com/appacademy/sf-lecture-notes
 ## Alumni Engagement Agreement
