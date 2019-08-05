@@ -1,6 +1,6 @@
 # Welcome to App Academy! 
 
-Here you will find all resources which will be given out throughout your time here at appacademy. 
+Here you will find all resources which will be given out throughout your time here at appacademy. The folders assessment_tips, foundations_remote, student_success and study guides are consistent throughout all cohorts. 
 
 # Student Section 
 ## Calendar 
@@ -14,12 +14,15 @@ https://github.com/appacademy/code_for_video_demos
 ## How To Use Repository
 * Clone this repository in order to have access to all resources provided throughout the cohort:``` git clone <url>```.
 * DO NOT GIT INIT ONCE YOUVE CLONED THIS REPOSITORY. When you clone, all commits are preserved.
-* Once cloned, if you type git branch -r, you should be able to see different branches with dates.  Look for the date which corresponds with your start date and begin to track that branch: ```git checkout --track origin/<month-day-year>```. Here is where all your respective resources live.
-* After cloning, whenever something is updated you will have the ability to update your local copy of the repository by running the command ```git pull```.
+* Once cloned, if you type git branch -r, you should be able to see different branches with dates.  Look for the date which corresponds with YOUR start date and begin to track that branch: ```git checkout --track origin/<month-day-year>```. Here is where all your lecture demos will live.
+* In order to have the demos from lectures you must checkout your cohorts branch and run ```git pull```.
+* if there are changes done to assessment_tips, foundations_remote, student_success, or study_guides you must go into master and run ```git pull``` to receive the changes.
+
 ## Folder Breakdown  
 ### assessment_tips
 * This folder is a compiliation of markdown files that list out tips and tricks for each assessment you will take during the in person portion.
-### demos  
+### demos
+* Remember you must go into your cohorts branch in order to see this folder ```git checkout <month-start_date-year>```.
 * All demos performed during lecture can be found in this folder. 
 ### foundations_remote
 * This folder compiles all of the study guides given during the foundations portion of app academy.
@@ -57,8 +60,9 @@ https://github.com/appacademy/code_for_video_demos
 
 # Instructor Section
 
-* Each cohort will have its own branch.  The master branch serves as the skeleton branch.  Whenever you want to make a new branch for a cohort, branch from the master branch and name it as such: ```git branch <month-start_day-year>```.  
+* Each cohort will have its own branch.  The master branch serves as the skeleton branch.  Whenever you want to make a new branch for a cohort, branch from the master branch and name it as such: ```git branch <month-start_day-year>```. 
+* Only one folder will ever live in each cohorts branch.  That folder is the demos folder. 
 
 ## Demos
 
-*  Demos from lecture live within the demos repository.  For every demo, checkout the appropriate branch for the current cohort, cd into the demo directory, and look for the lecture you are scribing for.  The demo will be done within the folder. After finishing the demo, add,commit and push your work.
+*  Demos from lecture live within the demos repository.  For every demo, checkout the appropriate branch for the current cohort, cd into the demo directory, and create the lecture you are scribing for.  The demo will be done within the folder. After finishing the demo, add,commit and push your work.
