@@ -14,7 +14,7 @@ https://github.com/appacademy/code_for_video_demos
 ## How To Use Repository
 * Clone this repository in order to have access to all resources provided throughout the cohort:``` git clone <url>```.
 * DO NOT GIT INIT ONCE YOUVE CLONED THIS REPOSITORY. When you clone, all commits are preserved.
-* Once cloned, if you type git branch, you should be able to see different branches with dates.  Look for the date which corresponds with your start date and checkout that branch: ```git checkout <month-day-year>```. Here is where all your respective resources live.
+* Once cloned, if you type git branch -r, you should be able to see different branches with dates.  Look for the date which corresponds with your start date and begin to track that branch: ```git checkout --track origin/<month-day-year>```. Here is where all your respective resources live.
 * After cloning, whenever something is updated you will have the ability to update your local copy of the repository by running the command ```git pull```.
 ## Folder Breakdown  
 ### assessment_tips
@@ -57,7 +57,7 @@ https://github.com/appacademy/code_for_video_demos
 
 # Instructor Section
 
-* Each cohort will have its own branch.  The master branch serves as the skeleton branch.  Whenever you want to make a new branch for a cohort, branch from the master branch and name it as such: ```git branch <month-start day-year>```.  
+* Each cohort will have its own branch.  The master branch serves as the skeleton branch.  Whenever you want to make a new branch for a cohort, branch from the master branch and name it as such: ```git branch <month-start_day-year>```.  
 
 ## Demos
 
