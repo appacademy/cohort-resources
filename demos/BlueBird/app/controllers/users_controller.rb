@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+  before_action :require_logged_in, only: [:index, :show]
+
   def index
     @users = User.all
 
@@ -21,9 +23,12 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     
     if @user.save
+      login(@user)
       redirect_to user_url(@user)
     else
-      render json: @user.errors.full_messages, status: 422
+      flash.now[:errors] = @user.errors.full_messages
+      render :new
+      # render json: @user.errors.full_messages, status: 422
     end
   end
 
@@ -51,7 +56,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :email, :age, :political_affiliation)
+    params.require(:user).permit(:username, :password, :email, :age, :political_affiliation)
   end
 
   
