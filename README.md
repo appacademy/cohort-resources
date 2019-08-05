@@ -1,6 +1,16 @@
 # Welcome to App Academy! 
 
-Here you will find all resources which will be given out throughout your time here at appacademy. The folders assessment_tips, foundations_remote, student_success and study guides are consistent throughout all cohorts. 
+Here you will find all resources which will be given out throughout your time here at appacademy. This README is split into two sections; one that serves for students and the other for instructors.
+
+* [Student Section](#student-section)
+* [Instructor Section](#instructor-section)
+
+## How To Use Repository
+* Clone this repository in order to have access to all resources provided throughout the cohort:``` git clone <url>```.
+* DO NOT GIT INIT ONCE YOUVE CLONED THIS REPOSITORY. When you clone, all commits are preserved.
+* Once cloned, if you type git branch -r, you should be able to see different branches with dates.  Look for the date which corresponds with YOUR start date and begin to track that branch: ```git checkout --track origin/<month-day-year>```. Here is where all of the respective cohort lecture demos will live.
+* In order to have the demos from lectures you must checkout your cohorts branch and run ```git pull```.
+* If there are changes done to assessment_tips, foundations_remote, student_success, or study_guides you must go into master and run ```git pull``` to receive the changes.
 
 # Student Section 
 ## Calendar 
@@ -11,12 +21,6 @@ https://github.com/appacademy/sf-lecture-notes
 https://appacademy.io/alumni-engagement-agreement
 ## Tommy Video Link
 https://github.com/appacademy/code_for_video_demos
-## How To Use Repository
-* Clone this repository in order to have access to all resources provided throughout the cohort:``` git clone <url>```.
-* DO NOT GIT INIT ONCE YOUVE CLONED THIS REPOSITORY. When you clone, all commits are preserved.
-* Once cloned, if you type git branch -r, you should be able to see different branches with dates.  Look for the date which corresponds with YOUR start date and begin to track that branch: ```git checkout --track origin/<month-day-year>```. Here is where all your lecture demos will live.
-* In order to have the demos from lectures you must checkout your cohorts branch and run ```git pull```.
-* if there are changes done to assessment_tips, foundations_remote, student_success, or study_guides you must go into master and run ```git pull``` to receive the changes.
 
 ## Folder Breakdown  
 ### assessment_tips
