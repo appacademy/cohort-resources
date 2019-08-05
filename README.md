@@ -1,6 +1,6 @@
 # Welcome to App Academy! 
 
-Here you will find all resources which will be given out throughout your time here at appacademy. This README is split into two sections; one that serves for students and the other for instructors.
+Here you will find all resources which will be given out throughout your time here at appacademy. [How to Use Repository](#how-to-use-repository) serves for both students and instructors. There is also two other section which serve for students and instructors respectively. 
 
 * [Student Section](#student-section)
 * [Instructor Section](#instructor-section)
@@ -9,7 +9,7 @@ Here you will find all resources which will be given out throughout your time he
 * Clone this repository in order to have access to all resources provided throughout the cohort:``` git clone <url>```.
 * DO NOT GIT INIT ONCE YOUVE CLONED THIS REPOSITORY. When you clone, all commits are preserved.
 * Once cloned, if you type git branch -r, you should be able to see different branches with dates.  Look for the date which corresponds with YOUR start date and begin to track that branch: ```git checkout --track origin/<month-day-year>```. Here is where all of the respective cohort lecture demos will live.
-* In order to have the demos from lectures you must checkout your cohorts branch and run ```git pull```.
+* In order to have the demos from lectures you must checkout your cohorts branch ``` git checkout <month-day-year>```and run ```git pull```.
 * If there are changes done to assessment_tips, foundations_remote, student_success, or study_guides you must go into master and run ```git pull``` to receive the changes.
 
 # Student Section 
@@ -65,8 +65,9 @@ https://github.com/appacademy/code_for_video_demos
 # Instructor Section
 
 * Each cohort will have its own branch.  The master branch serves as the skeleton branch.  Whenever you want to make a new branch for a cohort, branch from the master branch and name it as such: ```git branch <month-start_day-year>```. 
-* Only one folder will ever live in each cohorts branch.  That folder is the demos folder. 
+* Make sure to then delete all other folders except the demos folder.
+* Each cohort branch will only house the demos folder. This is done for maintainability reasons.
 
 ## Demos
 
-*  Demos from lecture live within the demos repository.  For every demo, checkout the appropriate branch for the current cohort, cd into the demo directory, and create the lecture you are scribing for.  The demo will be done within the folder. After finishing the demo, add,commit and push your work.
+*  Demos from lecture live within the demos repository.  For every demo, checkout the appropriate branch for the cohort ```git checkout <month-start_date-year>```, cd into the demo directory, and create a folder that will house the demo.  After the demos completion, add,commit and push your work.
