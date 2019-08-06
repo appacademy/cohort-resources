@@ -1,0 +1,43 @@
+<section class="page"><div class="centered-box">
+  <img src="http://placekitten.com/g/300/300" >
+  <h1><%= @cat.name %></h1>
+
+  <table>
+    <tr>
+      <th>Attribute</th>
+      <th>Value</th>
+    </tr>
+    <% [:age, :birth_date, :color, :sex].each do |attr_name| %>
+      <tr>
+        <td><%= attr_name %></td>
+        <td><%= @cat.send(attr_name) %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <% if @cat.owner == current_user %>
+    <a href="<%= edit_cat_url(@cat) %>">Edit <%= @cat.name %></a>
+  <% end %>
+
+  <br><br>
+  <h1>Rental Requests</h1>
+  <% if @cat.rental_requests.empty? %>
+    <p><%= @cat.name %> has no rental requests.</p>
+  <% else %>
+    <table>
+      <tr>
+        <th>User</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Status</th>
+      </tr>
+      <% @cat.rental_requests.order('start_date').each do |req| %>
+        <%= render 'req_tr', req: req %>
+      <% end %>
+    </table>
+  <% end %>
+
+  <% if logged_in? %>
+    <a href="<%= new_cat_rental_request_url(cat_id: @cat.id) %>">Make new request</a>
+  <% end %>
+</div></section>
