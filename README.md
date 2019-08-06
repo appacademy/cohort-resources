@@ -11,7 +11,7 @@ Here you will find all resources which will be given out throughout your time he
 * Once cloned, if you type git branch -r, you should be able to see different branches with dates.  Look for the date which corresponds with YOUR start date and begin to track that branch: ```git checkout --track origin/<month-day-year>```. Here is where all of the respective cohort lecture demos will live.
 * You can type ``` git branch ``` to see that your cohorts branch is now there and being tracked.
 * Each cohort's branch will only have one folder that houses all demos done in lecture 
-* All other resources will be stored in the master branch 
+* ALL OTHER RESOURCES WILL BE STORED IN THE MASTER BRANCH 
 * In order to have the demos from lectures you must checkout your cohorts branch ``` git checkout <month-day-year>```and run ```git pull```.
 * If there are changes done to assessment_tips, foundations_remote, student_success, or study_guides you must go into master and run ```git pull``` to receive the changes.
 

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # get 'sessions/new'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   # get '/users', to: 'users#index'
@@ -11,5 +12,6 @@ Rails.application.routes.draw do
   end
 
   resources :chirps, only: [:show]
-
+  resource :session, only:[:new, :create, :destroy]
+  
 end
