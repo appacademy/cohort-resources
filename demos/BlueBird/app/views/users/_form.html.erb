@@ -1,6 +1,6 @@
 <% if type == :new %>
   <% action_url = users_url %>
-  <% button_text = 'Create User' %>
+  <% button_text = 'Sign Up' %>
 <% elsif type == :edit %>
   <% action_url = user_url(user) %>
   <% button_text = 'Update User' %>
@@ -11,7 +11,7 @@
   <% if type == :edit %>
     <input type="hidden" name="_method" value="patch">
   <% end %>
-  <label for="username">Username:
+  <label for="username">Username: 
     <input type="text" id="username" name="user[username]" 
           value="<%= user.username %>">
   </label>

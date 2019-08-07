@@ -13,6 +13,7 @@
 
 class User < ApplicationRecord
     validates :username, :email, :session_token, presence: true, uniqueness: true
+
     validates :password_digest, presence:true
     validates :password, length: { minimum: 6, allow_nil: true }
 
@@ -55,17 +56,17 @@ class User < ApplicationRecord
         foreign_key: :author_id,
         class_name: "Chirp"
 
-    has_many :likes,
-        primary_key: :id,
-        foreign_key: :user_id,
-        class_name: :Like 
+    # has_many :likes,
+    #     primary_key: :id,
+    #     foreign_key: :user_id,
+    #     class_name: :Like 
 
-    has_many :liked_chirps,
-        through: :likes,
-        source: :chirp 
+    # has_many :liked_chirps,
+    #     through: :likes,
+    #     source: :chirp 
     
-    has_many :comments,
-        primary_key: :id,
-        foreign_key: :author_id,
-        class_name: :Comment
+    # has_many :comments,
+    #     primary_key: :id,
+    #     foreign_key: :author_id,
+    #     class_name: :Comment
 end
