@@ -26,9 +26,13 @@
           value="<%= user.email %>">
   </label>
   <br>
-  <label for="political_affiliation">political_affiliation:
+  <label for="political_affiliation">Political Affiliation:
     <input type="text" id="political_affiliation" name="user[political_affiliation]" 
           value="<%= user.political_affiliation %>">
+  </label>
+  <label for="password">Password:
+    <input type="password" id="password" name="user[password]" 
+          value="">
   </label>
   <br>
   <input type="submit" value="<%= button_text %>">
