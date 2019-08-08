@@ -1,6 +1,6 @@
 # Welcome to App Academy! 
 
-Here you will find all resources which will be given out throughout your time here at appacademy. [How to Use Repository](#how-to-use-repository) serves for both students and instructors. There is also two other section which serve for students and instructors respectively. 
+Here you will find all resources which will be given out throughout your time here at appacademy. Each cohort's branch will only have one folder that houses all demos done in lecture. ALL OTHER RESOURCES WILL BE STORED IN THE MASTER BRANCH. If you haven't learned git yet then use this [Without Git](#without-git). Otherwise, use [How to Use Repository](#how-to-use-repository) as it serves for both students and instructors. There is also two other section which serve for students and instructors respectively. 
 
 * [Student Section](#student-section)
 * [Instructor Section](#instructor-section)
@@ -66,11 +66,17 @@ https://flexboxfroggy.com/
     * ehumphrey@appacademy.io
 * Ryan 
     * rmapa@appacademy.io
+## Without Git
+![hey](./assessment_tips/images/without_git1.png)
+![hey](./assessment_tips/images/without_git2.png)
+![hey](./assessment_tips/images/without_git3.png)
+![hey](./assessment_tips/images/without_git4.png)
 
 # Instructor Section
 
 * Each cohort will have its own branch.  The master branch serves as the skeleton branch.  Whenever you want to make a new branch for a cohort, branch from the master branch and name it as such: ```git branch <month-start_day-year>```. 
 * Make sure to then delete all other folders except the demos folder.
+* Finally, ``` git push --all``` to push all branches to the remote repository
 * Each cohort branch will only house the demos folder. This is done for maintainability reasons.
 
 ## Demos
