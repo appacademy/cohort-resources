@@ -39,6 +39,8 @@ For A04, *MAKE SURE YOU READ THE README*. There will be instructions to set up t
 
 If you ran `rails g model User`, you should already have a `user.rb` file.
 
+(Note: you can run this command with addtional arguments to specify the columns you'd like (default datatype is string), aka `rails g model User username password_digest session_token some_foreign_key:integer`)
+
 If not, you will need to manually create this file in `/app/models/`. Make sure it looks like this:
 
 ```ruby
@@ -265,6 +267,8 @@ We can move on to creating the `UsersController` and `SessionsController`. Note 
 ### UsersController
 
 Generate your controller with `rails g controller users` (*make sure users is plural*).
+
+(Note: you can generate routes and actions with this command, aka `rails g controller user new create destroy`)
 
 For user auth, you'll want _at least_ the following actions in your controller:
 
