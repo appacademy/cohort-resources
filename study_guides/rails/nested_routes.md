@@ -25,6 +25,9 @@ resources :albums, except: [:new]
 
 ```ruby
 class AlbumsController < ApplicationController
+  def new 
+  end
+  
   def create
     album = Album.new(album_params)
     if album.save
