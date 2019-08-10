@@ -9,7 +9,7 @@ And we will describing these routes dealing with *creating new albums*.
 
 ## nested `:new`
 
-If you have a nested new, creating an album will have it's own view accessible with `GET /bands/:band_id/albums/new`
+If you have a nested new, creating an album will have it's own view accessible with `GET /bands/:band_id/albums/new`. We will want to pass the :band_id as part of the form data. 
 
 ### routes
 
@@ -36,7 +36,8 @@ class AlbumsController < ApplicationController
   end
 
   def album_params
-    params.require(:album).permit(:title, :year)
+    # make sure to permit the band_id as it is sent as part of the body of the request (the form data)
+    params.require(:album).permit(:title, :year, :band_id)
   end
 end
 ```
@@ -82,6 +83,8 @@ resources :albums, except: [:create]
 class AlbumsController < ApplicationController
   def create
     album = Album.new(album_params)
+    # :band_id is part of the nested create route, so we need to make sure to save the album with this!
+    album.band_id = params[:band_id]
     if album.save
       redirect_to band_url(album.band_id)
     else
@@ -103,11 +106,9 @@ Because your form for creating an album is on the band show page `/bands/:id`, y
 ```html
 
 <!-- to hit a nested create, the url helper method will be some combination of the two entities you are dealing with (check your routes for this!) -->
-<form action="<%= band_albums_url %>" method="POST">
+<!-- pass the band id we have from params (it's in the route path as a wildcard) so "create" action will have a band_id for the album we are creating -->
+<form action="<%= band_albums_url(params[:id]) %>" method="POST">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-
-  <!-- pass the band id we have from params (it's in the route path as a wildcard) so "create" action will have a band_id for the ablum we are creating -->
-  <input type="hidden" name="album[band_id]" value="<%= params[:id] %>">
 
   <input type="text" name="album[title]">
   <input type="text" name="album[year]">
