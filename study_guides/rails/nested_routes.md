@@ -25,6 +25,9 @@ resources :albums, except: [:new]
 
 ```ruby
 class AlbumsController < ApplicationController
+  def new 
+  end
+  
   def create
     album = Album.new(album_params)
     if album.save
@@ -81,6 +84,11 @@ resources :albums, except: [:create]
 
 ```ruby
 class AlbumsController < ApplicationController
+
+  def show
+    @band = Band.find_by(params[:id])
+  end
+  
   def create
     album = Album.new(album_params)
     # :band_id is part of the nested create route, so we need to make sure to save the album with this!
@@ -104,6 +112,9 @@ end
 Because your form for creating an album is on the band show page `/bands/:id`, you will want to send that band id as part of the request you make when sending the form as an argument in the helper method.
 
 ```html
+
+<!-- to hit a nested create, the url helper method will be some combination of the two entities you are dealing with (check your routes for this!) -->
+<!-- pass the band instance variable (because we are in the "show" for a band, we should have access to a band) so the "create" action will have a band_id for the album we are creating -->
 <form action="<%= band_albums_url(@band) %>" method="POST">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
