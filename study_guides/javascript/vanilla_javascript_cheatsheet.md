@@ -3,7 +3,7 @@
 ## data-*(getting,setting and removing data from an element)
 
 * GET HTMLElement.getAttribute("data-name")
-* SET HTMLElement.setAttribute9"data-name",value)
+* SET HTMLElement.setAttribute("data-name",value)
 * DEL HTMLElement.removeAttribute("Data-name");
 
 ## Document ready
