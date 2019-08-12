@@ -1,0 +1,19 @@
+# these instructions are for setting up rbenv, after setting up git
+sudo apt-get install build-essential
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+cd ~/.rbenv && src/configure && make -C src
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+~/.rbenv/bin/rbenv init
+# follow the printed instructions after that command
+# then restart your terminal (close and open terminal again)
+rbenv init -
+rbenv install 2.5.1
+# if it errors here, sudo install what the errors recommend `sudo apt-get install -y libreadline-dev ...etc`
+rbenv global 2.5.1
+rbenv rehash
+ruby -v
+# you should see 2.5.1
+which ruby
+# you should see /Users/your-username/.rbenv/shims/ruby
+#also run this command
+sudo apt install ruby-dev make gcc
