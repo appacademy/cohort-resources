@@ -76,7 +76,8 @@ https://flexboxfroggy.com/
 
 * Each cohort will have its own branch.  The master branch serves as the skeleton branch.  Whenever you want to make a new branch for a cohort, branch from the master branch and name it as such: ```git branch <month-start_day-year>```. 
 * Make sure to then delete all other folders except the demos folder.
-* Finally, ``` git push --all``` to push all branches to the remote repository
+* Finally, ``` git push -u origin <month-start_date-year>``` to push all branches to the remote repository
+    * This will track the branch in the remote repository 
 * Each cohort branch will only house the demos folder. This is done for maintainability reasons.
 
 ## Demos
