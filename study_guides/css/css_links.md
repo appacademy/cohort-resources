@@ -4,3 +4,4 @@
 * CSS Diner: https://flukeout.github.io/
 * Flex Box Froggy: https://flexboxfroggy.com/
 * CSS Tricks: Guide to Flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+* icon bank: https://fontawesome.com/icons?from=io
