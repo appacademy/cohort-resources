@@ -2,20 +2,38 @@
 
 ## const 
 * not able to reasign 
-```
-
+```javascript
+const banana = "yellow"
+banana = "blue"
+ERROR!
 ```
 
 ## let 
 * able to reassign 
-```
-
+```javascript
+let banana = "yellow"
+banana = "blue"
 ```
 
 # block 
 
 * collection of statements within curly braces
 * therefore you cannot declare variables of the same name within the same block scope.
+* the code below works because we are declaring username within two different scopes.  
+
+```javascript
+function howToConst(){
+    //function scope
+    const username = "Harold"
+
+    if(true){
+        //if conditional scope 
+        const username = "Suzy";
+        console.log(username);
+    }
+    console.log(username)
+}
+```
 
 ```javascript
 function howToConst(){
