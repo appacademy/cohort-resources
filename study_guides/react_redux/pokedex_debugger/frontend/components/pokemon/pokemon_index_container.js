@@ -12,9 +12,12 @@ const mapStateToProps = state => {
   };
 };
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = dispatch => {
+  debugger
+  return {
   requestAllPokemon: () => dispatch(requestAllPokemon())
-});
+  }
+};
 
 export default connect(
   mapStateToProps,

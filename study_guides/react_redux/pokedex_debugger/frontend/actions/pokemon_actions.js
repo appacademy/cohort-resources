@@ -7,14 +7,27 @@ export const START_LOADING_SINGLE_POKEMON = 'START_LOADING_SINGLE_POKEMON';
 export const CREATE_POKEMON = 'CREATE_POKEMON';
 export const RECEIVE_POKEMON_ERRORS = 'RECEIVE_POKEMON_ERRORS';
 
-export const requestAllPokemon = () => (dispatch) => {
+// export const requestAllPokemon = () => (dispatch) => {
+//   debugger
+//   return APIUtil.fetchAllPokemon()
+//     .then(pokemon => {
+//       debugger
+//       dispatch(receiveAllPokemon(pokemon))
+//     });
+// }
+
+export const requestAllPokemon = () => {
   debugger
-  return APIUtil.fetchAllPokemon()
-    .then(pokemon => {
-      debugger
-      dispatch(receiveAllPokemon(pokemon))
-    });
+  return (dispatch) => {
+    debugger
+    return APIUtil.fetchAllPokemon()
+      .then(pokemon => {
+        debugger
+        dispatch(receiveAllPokemon(pokemon))
+      });
+  }
 }
+
 
 export const requestSinglePokemon = (id) => (dispatch) => {
   debugger
