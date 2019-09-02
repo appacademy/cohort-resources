@@ -82,4 +82,4 @@ https://flexboxfroggy.com/
 
 ## Demos
 
-*  Demos from lecture live within the demos repository.  For every demo, checkout the appropriate branch for the cohort ```git checkout <month-start_date-year>```, cd into the demo directory, and create a folder that will house the demo.  After the demos completion, add,commit and push your work.
+*  Demos from lecture live within the demos repository.  For every demo, checkout the appropriate branch for the cohort ```git checkout <month-start_date-year>```, cd into the demo directory, and create a folder that will house the demo ``` wXdX-(name of demo) ```.  After the demos completion, add,commit and push your work.
