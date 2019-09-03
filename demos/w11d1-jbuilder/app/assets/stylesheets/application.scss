@@ -1,0 +1,253 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+
+  $font-stack: 'Roboto', sans-serif;
+  $teal: #00BCD4;
+  $grey: #757575;
+  $done-color: $teal;
+  $undone-color: $grey;
+
+
+  $darker-teal: #0097A7;
+  $red: #FF4081;
+  $background: #B2EBF2;
+  $white: #ffffff;
+
+  // reset
+  html,
+  body,
+  ul,
+  p,
+  h3,
+  button {
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack;
+    border: none;
+  }
+
+  html, body, #content {
+    min-height: 100%;
+  }
+
+  body {
+    background-color: $background;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  // styles
+  #content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .splash-content {
+    text-align: center;
+
+    form {
+      border: 1px solid $teal;
+      border-radius: 5px;
+      background-color: white;
+      max-width: 450px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    input {
+      display: block;
+      margin: 0 auto;
+    }
+    button {
+      margin-top: 10px;
+      padding: 5px;
+    }
+  }
+
+  .log-out {
+    position: absolute;
+    right: 40px;
+    top: 10px;
+  }
+
+
+  .app {
+    width: 40%;
+    min-width: 400px;
+    margin-bottom: 40px;
+  }
+
+  // layout
+  .flex-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  h1 {
+    margin-top: 40px;
+    text-align: center;
+    color: $darker-teal;
+  }
+
+  h3 {
+    margin-bottom: 5px;
+  }
+
+  .bubble {
+    font-size: 14px;
+    font-weight: bold;
+    color: $white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 10px;
+  }
+
+  .button {
+    @extend .bubble;
+    height: 30px;
+    cursor: pointer;
+    background-color: $teal;
+  }
+  .button:focus, a:focus {
+    outline: none;
+  }
+  .button:hover {
+    background-color: $darker-teal;
+  }
+  .done {
+    @extend .button;
+    background-color: $undone-color;
+  }
+  .undone {
+    @extend .button;
+    background-color: $done-color;
+  }
+  .delete-button {
+    @extend .button;
+    background-color: $red;
+    &:hover {
+      background-color: $grey;
+    }
+  }
+  .create-button {
+    @extend .button;
+    width: 50%;
+    margin: 10px auto;
+    background-color: $teal;
+  }
+  .input {
+    padding: 5px;
+  }
+
+
+
+  .todo-list {
+    @extend .flex-col;
+    .todo-list-item {
+      background-color: $white;
+      padding: 20px;
+      margin: 10px 0;
+      border: 1px solid $teal;
+      border-radius: 5px;
+      .todo-header {
+        @extend .flex-row;
+        justify-content: space-between;
+        align-items: center;
+        a {
+          font-weight: bold;
+        }
+      }
+      .todo-body {
+        margin: 10px;
+      }
+    }
+  }
+
+  .todo-form {
+    @extend .flex-col;
+    label {
+      @extend .flex-col;
+      margin: 10px 20px;
+    }
+    input, textarea {
+      margin: 10px 10px;
+      border: 1px solid $teal;
+      border-radius: 3px;
+    }
+
+    .tag-list {
+      .bubble {
+        cursor: pointer;
+        &:hover {
+          background-color: $red;
+        }
+      }
+    }
+  }
+
+  a {
+    cursor: pointer;
+  }
+
+  .step-list {
+    @extend .flex-col;
+    margin-left: 20px;
+    .step-header {
+      @extend .flex-row;
+      // justify-content: space-between;
+      margin: 20px 0;
+      list-style: none;
+      // align-items: center;
+      .step-info {
+        width: 70%;
+      }
+      .step-buttons {
+        @extend .flex-row;
+      }
+    }
+  }
+
+  .step-form {
+    @extend .todo-form;
+    background-color: $background;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+ .tag-list {
+   @extend .flex-row;
+   li {
+     @extend .bubble;
+     background-color: $darker-teal;
+   }
+ }
+
+
+ .error-list {
+   li {
+     margin: 5px;
+     padding: 5px 10px;
+     background-color: rgba(255, 0, 0, 0.5);
+     border-radius: 5px;
+   }
+ }
