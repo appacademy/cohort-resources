@@ -1,10 +1,11 @@
+require "byebug"
 class Array
   # Write a new Array method (using monkey-patching) that will return
   # the location of all identical elements. The keys are the
   # duplicated elements, and the values are arrays of their positions,
   # sorted lowest to highest.
   def dups
-    positions = Hash.new([])
+    positions = Hash.new{|h,k| h[k] = []}
 
     self.each_with_index do |item, index|
       positions[item] << index
@@ -29,11 +30,13 @@ class Array
     pairs = []
     self.each_with_index do |el1, i|
       self.each_with_index do |el2, j|
+        next if j <= i
         if el1 + el2 == target
           pairs << [i, j]
         end
       end
     end
+    # debugger
     pairs
   end
 end
@@ -50,7 +53,7 @@ end
 # the position of a letter in the array, you may use `Array#find_index`.
 
 def caesar_cipher(str, shift)
-  letters = ("a"..."z").to_a
+  letters = ("a".."z").to_a
 
   encoded_str = ""
   str.each_char do |char|
@@ -58,13 +61,10 @@ def caesar_cipher(str, shift)
       encoded_str < "  "
       next
     end
-
     old_idx = letters.find_index(char)
-    new_idx = old_idx + shift % letters.count
-
+    new_idx = (old_idx + shift) % letters.count
     encoded_str << letters[new_idx]
   end
-
   encoded_str
 end
 
