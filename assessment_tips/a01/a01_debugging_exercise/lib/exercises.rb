@@ -5,7 +5,7 @@ class Array
   # duplicated elements, and the values are arrays of their positions,
   # sorted lowest to highest.
   def dups
-    positions = Hash.new{|h,k| h[k] = []}
+    positions = Hash.new([])
 
     self.each_with_index do |item, index|
       positions[item] << index
@@ -29,7 +29,7 @@ class Array
   def pair_sum(target)
     pairs = []
     self.each_with_index do |el1, i|
-      self.each_with_index do |el2, j|
+      self.each do |el2, j|
         next if j <= i
         if el1 + el2 == target
           pairs << [i, j]
