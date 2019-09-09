@@ -1,3 +1,8 @@
+# Rspec Documentation
+* [rspec core](https://github.com/rspec/rspec-core)
+
+* [rspec matchers](https://github.com/rspec/rspec-expectations)
+
 # Setup
 * In terminal, run bundle init to create a Gemfile.
 * Add rspec, pry and byebug gems and run bundle install.
