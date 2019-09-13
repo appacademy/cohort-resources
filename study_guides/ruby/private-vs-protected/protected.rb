@@ -11,14 +11,18 @@ class Dog2
     self.name == other_dog.name
   end
 
+  def same_name?(other_dog)
+    name == other_dog.name
+  end
+
   protected
   attr_reader :name
 end
 
 if __FILE__ == $PROGRAM_NAME
-  dog1 = Dog.new("Fido")
-  dog2 = Dog.new("Difo")
-  dog3 = Dog.new("Fido")
+  dog1 = Dog2.new("Fido")
+  dog2 = Dog2.new("Difo")
+  dog3 = Dog2.new("Fido")
 
   # This works
   puts dog1.same_name?(dog2)
