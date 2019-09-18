@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS cattoys /*lets us run the file multiple times and start fresh
+DROP TABLE IF EXISTS cattoys; /*lets us run the file multiple times and start fresh
 (create table from scratch) each time we run the file*/
-DROP TABLE IF EXISTS cats /*Drop all joins table first b/c they are referencing other tables. Can't dop the other tables 
+DROP TABLE IF EXISTS cats; /*Drop all joins table first b/c they are referencing other tables. Can't dop the other tables 
 if something is refrencing them*/ 
 
 CREATE TABLE cats (
@@ -19,5 +19,5 @@ CREATE TABLE cattoys(
     toy_id INTEGER,
 
     FOREIGN KEY (cat_id) REFERENCES cats(id),
-    FOREIGN KEY (toy_id) REFERENCES toyss(id)
+    FOREIGN KEY (toy_id) REFERENCES toys(id)
 )
