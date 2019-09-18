@@ -73,6 +73,8 @@ https://flexboxfroggy.com/
 ![hey](./assessment_tips/images/without_git4.png)
 
 # Instructor Section
+* [Multi-Day Demos](#Multi-day-Demos)
+* [Demos](#Demos)
 
 * Each cohort will have its own branch.  The master branch serves as the skeleton branch.  Whenever you want to make a new branch for a cohort, branch from the master branch and name it as such: ```git branch <month-start_day-year>```. 
 * Make sure to then delete all other folders except the demos folder.
@@ -80,6 +82,8 @@ https://flexboxfroggy.com/
     * This will track the branch in the remote repository 
 * Each cohort branch will only house the demos folder. This is done for maintainability reasons.
 
-## Demos
+## Multi-day Demos 
+* Multiday demos will live in their own repository.  In other words, they will not live within cohort resources.  A link should be placed in the demos folder README that links students to the demos repository.
 
+## Demos
 *  Demos from lecture live within the demos repository.  For every demo, checkout the appropriate branch for the cohort ```git checkout <month-start_date-year>```, cd into the demo directory, and create a folder that will house the demo ``` wXdX-(name of demo) ```.  After the demos completion, add,commit and push your work.
