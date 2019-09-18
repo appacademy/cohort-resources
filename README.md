@@ -73,8 +73,6 @@ https://flexboxfroggy.com/
 ![hey](./assessment_tips/images/without_git4.png)
 
 # Instructor Section
-* [Multi-Day Demos](#Multi-day-Demos)
-* [Demos](#Demos)
 
 * Each cohort will have its own branch.  The master branch serves as the skeleton branch.  Whenever you want to make a new branch for a cohort, branch from the master branch and name it as such: ```git branch <month-start_day-year>```. 
 * Make sure to then delete all other folders except the demos folder.
