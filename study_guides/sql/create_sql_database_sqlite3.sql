@@ -4,17 +4,19 @@ DROP TABLE IF EXISTS cats; /*Drop all joins table first b/c they are referencing
 if something is refrencing them*/ 
 
 CREATE TABLE cats (
-    id SERIAL PRIMARY KEY,
+    id INTEGER PRIMARY KEY, 
     name VARCHAR(255),
     color VARCHAR(255),
     breed VARCHAR(255) /*NO TRAILING COMMAS!!*/
 ); /*REMEMBER THE SEMICOLON!!*/
 
-INSERT INTO cats(name, color,breed), /*specifies the order we will be supplying values in below*/
-VALUES ('Fred','Yellow','Tabby') /*,...; <- if you want to add more make sure you separte by commas and end list with semicolon*/
+INSERT INTO 
+    cats(name, color,breed) /*specifies the order we will be supplying values in below*/
+VALUES 
+    ('Fred','Yellow','Tabby') /*,...; <- if you want to add more make sure you separte by commas and end list with semicolon*/
 
 CREATE TABLE cattoys(
-    id SERIAL PRIMARY KEY,
+    id INTEGER PRIMARY KEY,
     cat_id INTEGER,
     toy_id INTEGER,
 
