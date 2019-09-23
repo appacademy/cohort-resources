@@ -5,7 +5,6 @@ https://github.com/appacademy/sf-lecture-notes/tree/master/sql/w6d1-activerecord
 # where and where.not 
 ---
 # joins, left_outer_joins, distinct
-<<<<<<< HEAD
 ```ruby
 Chirp
     .joins(:author)
@@ -50,15 +49,6 @@ chirps = Chirp.joins(:likes).group(:id).pluck(:id, :body, "COUNT (*) AS NUM_LIKE
 Chirp.joins(:likes).group(:id).having('COUNT (*) >= 3').pluck(:body, "COUNT (*) AS NUM_LIKES")
 ```
 
-=======
----
-# select and pluck 
----
-# group 
----
-# having 
----
->>>>>>> c0e6bb847339f76a8b8605428eb11f3e7c12fe52
 # order offset and limit 
 ---
 # N+1 Queries and includes 
@@ -73,22 +63,10 @@ Chirp.joins(:likes).group(:id).having('COUNT (*) >= 3').pluck(:body, "COUNT (*) 
 chirps = Chirp.all
 # see the chirp load
 
-<<<<<<< HEAD
 # student challenge: find who is liking Nimbus's chirps the most 
 ```ruby
 Chirp.select("users.username", "COUNT (*) AS num_likes" ).joins(:likers, :author).where(authors_chirps: { username: 'Nimbus'}).group("users.username").order("num_likes DESC")
 ```
-=======
-chirps.each do |c|
-  puts c.author.username
-end
-```
----
-# GOOD!
-```ruby 
-chirps = Chirp.includes(:author).all
-# see chirps load and the full user load
->>>>>>> c0e6bb847339f76a8b8605428eb11f3e7c12fe52
 
 chirps.each do |c| # fetch is actually performed here when #each is called
   puts c.author.username
