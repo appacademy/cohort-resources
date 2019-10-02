@@ -1,5 +1,7 @@
 # Steps for writing auth from scratch
 
+This is a guide to creating a simple app using the auth pattern we teach. It may not include everything that is possible (no mention of `before_action` in here, but it's purpose is to give you the essentials of the auth pattern.
+
 ## Generate your rails app (if you don't have a skelton)
 
 `rails new YourAppName -d=postgresql` if you want to use postgresql.
