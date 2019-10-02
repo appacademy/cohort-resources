@@ -18,6 +18,8 @@ For A04, *MAKE SURE YOU READ THE README*. There will be instructions to set up t
 
 I recommend: `rails g model user` as this will generate the migration file _and_ the model file.
 
+(Note: you can run this command with addtional arguments to specify the columns you'd like (default datatype is string), aka `rails g model user username password_digest session_token some_foreign_key:integer`)
+
 ### Fill out your migration file for users
 
 You'll want to add the following to your users table (in the migration file):
@@ -38,8 +40,6 @@ For A04, *MAKE SURE YOU READ THE README*. There will be instructions to set up t
 ## Time for User model
 
 If you ran `rails g model User`, you should already have a `user.rb` file.
-
-(Note: you can run this command with addtional arguments to specify the columns you'd like (default datatype is string), aka `rails g model User username password_digest session_token some_foreign_key:integer`)
 
 If not, you will need to manually create this file in `/app/models/`. Make sure it looks like this:
 
@@ -308,7 +308,7 @@ resources :users, only: [:new, :create]
 
 ### SessionsController
 
-*Note:* it's _very important+ that the sessions controller be plural. `rails g controller sessions`.
+*Note:* it's _very important_ that the sessions controller be plural. `rails g controller sessions`.
 
 You'll want the following actions:
 
