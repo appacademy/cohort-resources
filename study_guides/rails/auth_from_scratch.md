@@ -70,7 +70,15 @@ validates :session_token, presence: true, uniqueness: true
 # we don't have this, if we try to resave the
 # user in the future (update them), we won't
 # have a plaintext password. This prevents the
-# validation from being run in this case.
+# validation from being run in this case. 
+# Ex: anytime you log in or log out the user, 
+# you retrieve the user record from the database
+# and receive a new instance of a user (with no
+# plaintext password attribute). As part of logging
+# in and out, you are updating their session_token 
+# and saving them. If you did not have the allow_nil,
+# ActiveRecord will not let you save because it's
+# trying to validate the plaintext password's length.
 validates :password, length: { minimum: 6, allow_nil: true }
 
 # Other validations, like username (these will depend on the specs, but an example might be:)
