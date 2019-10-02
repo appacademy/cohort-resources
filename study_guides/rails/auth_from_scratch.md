@@ -199,8 +199,8 @@ after_initialize: ensure_session_token
 
 # Store the generated session token in the
 # user's session_token attribute
-# Lazy assignment is optional, but a small
-# optimization
+# You SHOULD use lazy assigment here. Without
+# it, you might run into some difficult bugs.
 def ensure_session_token
   self.session_token ||= User.generate_session_token
 end
