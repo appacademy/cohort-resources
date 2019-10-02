@@ -1,0 +1,15 @@
+<h2>All the Chirps</h2>
+
+<ul>
+  <% @chirps.each do |chirp| %>
+    <li>
+      <%= chirp.author.username %>
+      <br>
+      <%= chirp.body %>
+      <form action="<%= chirp_url(chirp.id) %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" name="" value="Delete">
+      </form>
+    </li>
+  <% end %>
+</ul>

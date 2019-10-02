@@ -1,0 +1,11 @@
+<h1>Here are all our Wizards!</h1>
+
+<a href="<%= new_user_url %>">Create New Wizard</a>
+
+<ul>
+  <% @users.each do |banana| %>
+    <li>
+      <%= render 'user', user: banana, action: :index %>
+    </li>
+  <% end %>
+</ul>
