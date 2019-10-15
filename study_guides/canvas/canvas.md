@@ -1,7 +1,7 @@
 # Canvas 
 ## getContext("2d") Apis
-* fillStyle("color")
-    * fills the background of your shape
+* fillStyle = "color"
+    * sets the "fill style" or color of the shape you will draw
 * fillRect(xdirec,ydirec,width,height)
     * creates a rectangle with the specified arguments
 * beginPath()
