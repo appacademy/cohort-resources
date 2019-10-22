@@ -64,5 +64,5 @@ const sandra = {
     age: 30
 }
 
-// carlos.sayName.myBind(sandra)() #run this to test myBind and trace the call path
+carlos.sayName.myBind(sandra)() //run this to test myBind and trace the call path
 
