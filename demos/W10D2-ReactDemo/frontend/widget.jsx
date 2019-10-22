@@ -24,7 +24,7 @@ class Widget extends React.Component {
         }).then((resp) => this.setState({listings: resp}));
     }
 
-    (city) {
+    setLocation(city) {
         //notice i am NOT using this.state =
         this.setState({baseLocation: city}, this.fetchJobListings);
     }
