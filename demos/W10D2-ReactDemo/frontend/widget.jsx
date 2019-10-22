@@ -9,7 +9,7 @@ class Widget extends React.Component {
             baseLocation: "",
             listings: []
         };
-        this.setLocation3 = this.setLocation3.bind(this)
+        this.setLocation = this.setLocation.bind(this)
     }
 
     componentDidMount() {
