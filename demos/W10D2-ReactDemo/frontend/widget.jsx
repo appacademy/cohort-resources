@@ -3,8 +3,8 @@ import JobIndex from './jobIndex';
 
 class Widget extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             baseLocation: "",
             listings: []
