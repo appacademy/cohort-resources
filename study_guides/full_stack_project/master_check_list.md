@@ -50,6 +50,7 @@
 10. Create a webpack.config.js file.
 
 ```javascript
+const path = require('path');
 module.exports = {
     context: __dirname,
     entry: './frontend/half_time.jsx', //half_time is just an example
