@@ -1,0 +1,1 @@
+![reac-redux-cycle](images/1_QERgzuzphdQz4e0fNs1CFQ.gif)
