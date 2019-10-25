@@ -1,0 +1,26 @@
+{
+  "name": "tea_shop_demo",
+  "version": "1.0.0",
+  "description": "cool tea shop app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch --mode=development"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4",
+    "webpack": "^4.41.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.9"
+  }
+}
