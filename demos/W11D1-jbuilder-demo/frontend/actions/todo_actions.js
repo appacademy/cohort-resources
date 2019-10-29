@@ -41,7 +41,7 @@ export const fetchTodos = () => dispatch => {
 export const fetchTodo = (id) => dispatch => {
   return TodoAPIUtil.fetchTodo(id)
     .then(response => {
-      dispatch(receiveTodos(response));
+      dispatch(receiveTodo(response));
     });
 };
 
