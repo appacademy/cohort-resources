@@ -1,0 +1,2 @@
+class Tea < ApplicationRecord
+end
