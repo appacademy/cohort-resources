@@ -2,7 +2,7 @@
 
 You can start using the Google Fonts API in just two steps:
 
-1.  Add a stylesheet link to request the desired web font(s):
+1.  Add a stylesheet link to request the desired web font(s) in your application.html.erb file:
 
   * `<link rel="stylesheet" href="https: fonts.googleapis.com/css?family=Font+Name">`
 
