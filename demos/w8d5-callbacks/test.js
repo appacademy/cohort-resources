@@ -84,7 +84,7 @@ class AAPod {
         this.numStudents = numStudents;
 
         // permanently binds the AAPod instance to this._delay
-        this._delay = this._delay.bind(this);
+        // this._delay = this._delay.bind(this);
     }
 
     // instance methods
@@ -101,6 +101,7 @@ class AAPod {
     // using _ to start a function name is simply naming convention for 
     // helper methods and callbacks
     _delay() {
+        console.log(this);
         console.log(`We are ${this.name}. Hear us ROOOAAARRR!!!?`);
     }
 
