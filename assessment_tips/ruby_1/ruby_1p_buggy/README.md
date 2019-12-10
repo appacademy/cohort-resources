@@ -1,4 +1,4 @@
-# Assessment01 Instructions
+# Ruby Assessment 1 Instructions
 
 * You will have 45min for this assessment.
     * Do not worry if you do not complete all the assessment; do the
@@ -7,8 +7,8 @@
   the `spec` directory).
 * Run the specs as you solve the assessment. Try to get as many specs
   to pass as you can.
-    * To run one specific spec, add `:line_number` at the end.  For example, `bundle exec rspec spec/assessment01_spec.rb:22`
-    * To run all the specs, run `bundle exec rspec spec/assessment01_spec.rb` in the
+    * To run one specific spec, add `:line_number` at the end.  For example, `bundle exec rspec spec/ruby01_spec.rb:22`
+    * To run all the specs, run `bundle exec rspec spec/ruby01_spec.rb` in the
       console.
     * Look at the title of the spec to see why it failed; you can also
       look at the spec code for more information.
