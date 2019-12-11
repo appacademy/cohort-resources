@@ -66,6 +66,11 @@ https://flexboxfroggy.com/
     * ehumphrey@appacademy.io
 * Ryan 
     * rmapa@appacademy.io
+* Lina
+    * lkherchi@appacademy.io
+* Joe
+    * jbumbaca@appacademy.io
+
 ## Without Git
 ![hey](./assessment_tips/images/without_git1.png)
 ![hey](./assessment_tips/images/without_git2.png)

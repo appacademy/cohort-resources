@@ -2,7 +2,6 @@
 
 1.  Read the README.md
 2.  Run specs in the order provided 
-3.  No prior knowledge of the game is required. All rules are in the readme. But study the game for the real one. 
 
 
 # Common Gotcha's #######

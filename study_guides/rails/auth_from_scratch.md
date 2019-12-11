@@ -14,7 +14,7 @@ This is a guide to creating a simple app using the auth pattern we teach. It may
 
 (This step can happen later, but it *must* come before you run `rails db:migrate`, otherwise you will get an error).
 
-For A04, *MAKE SURE YOU READ THE README*. There will be instructions to set up the testing db as well.
+For Rails Assessment 2, *MAKE SURE YOU READ THE README*. There will be instructions to set up the testing db as well.
 
 ## Generate Your users table and model
 
@@ -31,13 +31,13 @@ You'll want to add the following to your users table (in the migration file):
 * (any other user specific stuff, like email and/or username)
 * add_index :users, :session_token, unique: true
 
-_Note: for A04, you do not need db constraints  like `null: false` or `unique: true` (on an index) to save on time. It won't hurt to have it for A04; and outside of A04, you should use them._
+_Note: for Rails Assessment 2, you do not need db constraints  like `null: false` or `unique: true` (on an index) to save on time. It won't hurt to have it for Rails Assessment 2; and outside of Rails Assessment 2, you should use them._
 
 ### Migrate!
 
 `rails db:migrate`
 
-For A04, *MAKE SURE YOU READ THE README*. There will be instructions to set up the testing db as well.
+For Rails Assessment 2, *MAKE SURE YOU READ THE README*. There will be instructions to set up the testing db as well.
 
 ## Time for User model
 
@@ -52,7 +52,7 @@ end
 
 ### Write your validations
 
-For A04, this will be spec dependent, but likely it will be something similar to:
+For Rails Assessment 2, this will be spec dependent, but likely it will be something similar to:
 
 ```ruby
 validates :password_digest, presence: true
