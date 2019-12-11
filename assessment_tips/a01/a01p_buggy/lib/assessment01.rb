@@ -18,16 +18,15 @@ class Array
       i += 1
     end
 
+    accumulator
   end
-  accumulator
 end
 
 # primes(num) returns an array of the first "num" primes.
 # You may wish to use an is_prime? helper method.
 
 def is_prime?(pos_prime)
-
-  (0...pos_prime).each do |num|
+  (2...pos_prime).each do |num|
     if pos_prime%num == 0 
       return false
     end
@@ -41,12 +40,17 @@ def primes(num)
   count = 0; 
   i = 2; 
   arr = []
-
   while count < num
+    if i == 3
+      debugger
+    end
+    
     if is_prime?(i)
+      
+
       arr.push(i)
       count += 1;
-    en
+    end
       i += 1  
   end
 
