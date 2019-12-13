@@ -41,7 +41,12 @@ https://flexboxfroggy.com/
 * We've compiled a series of markdown, javascript, ruby and sql files that summarize different concepts learned throughout the course.  Look in here when you need some syntax refreshness or some quick concept summaries!
 
 ## Instructor Contact Info 
-
+* All Instructors 
+    * instructors-sf@appacademy.io
+* Bay Bridge Instructors
+    * bay-bridge-instructors@appacademy.io
+* Golden Gate Instructors 
+    * golden-gate-instructors@appacademy.io
 * Darren 
     * deid@appacademy.io
 * Ronil
