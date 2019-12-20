@@ -1,0 +1,1 @@
+export const selectAllTeas = state => Object.values(state.teas);
