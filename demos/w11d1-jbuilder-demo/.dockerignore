@@ -1,0 +1,34 @@
+# This is a file for the Docker image we are building for hosting this
+# application to Heroku.
+# Do not worry about this file for now!
+
+# We don't want our entire .git history in the image we are building
+.git
+
+# you usually don't want the dockerfile or the compose files in the image either
+*docker-compose*
+Dockerfile
+
+# for Node.js apps, you want to build the node_modules in the image -> not copy from host
+node_modules
+
+# Ignore the bundler config.
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore our byebug history and extra logging files
+.DS_Store
+npm-debug.log
+.byebug_history
+
+# We want to generate our own bundle not use any pre-existing bundles
+bundle.js
+bundle.js.map
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
