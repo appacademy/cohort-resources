@@ -1,0 +1,26 @@
+{
+  "name": "react_demo",
+  "version": "1.0.0",
+  "description": "A react demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --watch --mode=development"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Us",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "webpack": "^4.41.3"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.10"
+  }
+}
