@@ -1,0 +1,8 @@
+<div class="splash-content">
+  <h1>Super Awesome Todo List</h1>
+
+  <h3>Sign Up</h3>
+
+  <%= render 'shared/user_form', user: @user, submit_text: 'Sign Up', action: users_url %>
+  <%= link_to 'Sign In', new_session_url %>
+</div>
