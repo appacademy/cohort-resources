@@ -18,8 +18,8 @@ class Array
       i += 1
     end
 
-    accumulator
   end
+  accumulator
 end
 
 # primes(num) returns an array of the first "num" primes.
@@ -27,7 +27,6 @@ end
 
 def is_prime?(pos_prime)
   (2...pos_prime).each do |num|
-    # debugger
     if pos_prime%num == 0 
       return false
     end
@@ -45,7 +44,7 @@ def primes(num)
     if is_prime?(i)
       arr.push(i)
       count += 1;
-    end
+    en
       i += 1  
   end
 
