@@ -1,0 +1,29 @@
+/*
+An html skeleton is provided. Apply the following styles:
+1. Give a font-size of 15px to all li elements
+2. Give a blue background to the element with an id of "list-header"
+3. Give red text to all elements with the class of "ruby"
+4. Give a yellow background to only the span elements that are inside li elements
+5. Give the image a height of 50px 
+You may not edit the html skeleton.
+*/
+
+li {
+    font-size: 15px;
+}
+
+#list-header {
+    background-color: blue;
+}
+
+.ruby {
+    color: red;
+}
+
+li > span {
+    background-color: yellow;
+}
+
+img {
+    height: 50px;
+}
