@@ -1,6 +1,4 @@
-# Hello!
-
-* All demos will live within this directory
+# Multi-Day Demo Links
 
 ## BlueBird
 
