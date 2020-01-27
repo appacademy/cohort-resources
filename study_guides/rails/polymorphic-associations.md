@@ -26,7 +26,7 @@ class CreatePictures < ActiveRecord::Migration
 end
 ```
 
-![polymorphic_associations](./images/polymorphic_association.png)
+![polymorphic_associations](../images/polymorphic_association.png)
 
 
 
