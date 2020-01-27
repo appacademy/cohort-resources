@@ -10,7 +10,7 @@
     * create a migration
     * if you want to create a table you must say something like: 
     ```
-    bundle exec rails g migrate CreateCats
+    bundle exec rails g migration CreateCats
     ```
     * where cats will be the name of the table and create tells rails that you want to create a table.
 *  ```bundle exec rails g controller <Controller Name>```
