@@ -1,4 +1,4 @@
-# Heroku Push Party Bug Fixes:
+## Heroku Push Party Bug Fixes:
 
 * TO-DO: Update this doc with the exact error messages which the following commands alleviate. 
 
