@@ -7,6 +7,12 @@ group :test do
   gem 'capybara'
 end
 ```
+* rails g rspec: install
+    * create  .rspec
+    * create  spec
+    * create  spec/spec_helper.rb
+    * create  spec/rails_helper.rb
+
 * Whenever you want to write new capybara tests, they'll go in the spec/features folder. This is important: the specs must be in this directory for the capybara methods to work.
 
 * At the top of each file, you'll require the rails_helper:
