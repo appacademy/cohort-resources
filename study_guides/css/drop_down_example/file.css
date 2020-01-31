@@ -1,0 +1,64 @@
+body {
+    background-color: #E8E9EB;
+    font-family: "Courier New", Courier, monospace;
+    color: black;
+  }
+
+h1 {
+    color:rgb(255, 89, 0);
+}
+
+li {
+    padding: 15px;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+    border-radius: 3px;
+    margin: 0px;
+}
+
+.aa-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h4 {
+    padding: 15px;
+    background-color: brown;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.aa-dropdown-trigger {
+    position: relative;
+  }
+
+#options-list {
+    display: none;
+    position: absolute;
+    min-width: 200px;
+    background-color: beige;
+    left: 120px;
+    top: 65px;
+}
+
+.aa-dropdown-trigger:hover #options-list {
+    display: block;
+    cursor: pointer;
+}
+
+#options-list li:hover {
+    background-color: gray;
+    color: white;
+    display: block;
+    cursor: pointer
+}
+
+
+
+
+
