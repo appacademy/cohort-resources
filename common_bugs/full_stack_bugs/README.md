@@ -24,7 +24,7 @@ Recipe for alleviating some Heroku push issues:
 
 |Bug Error Message and Image   |  How To Fix Bug  |
 |---|---|
-|  (Heroku) - H10 bug: ![h10](h10_error.png)|  1. Go to master.key 2. Copy key 3. Run the following command: `heroku config:set RAILS_MASRTER_KEY= <paste-key-here>` |
+|  (Heroku) - H10 bug: ![h10](h10_error.png)|  1. Go to master.key 2. Copy key 3. Run the following command: `heroku config:set RAILS_MASTER_KEY= <paste-key-here>` |
 |  ‘Actions must be plain objects. Must use custom middleware with thunk middleware’ (error happens in console not in webpack or server)  | 1. Go to store and import thunk from ‘redux-thunk’ 2. Add it to the store  |
 |   (AWS) -  OpenUri::Forbidden::HTTP Error 403 Error (in terminal, while trying to seed) |  ![How To](AWS_error_fix.png) Make sure buckets are all public https://docs.aws.amazon.com/AmazonS3/latest/user-guide/block-public-access-bucket.html#block-public-access-bucket-one Permissions -> Block Public Access -> Off -> Turn on read and write access for public buckets. Permissions -> Access Control List -> Finally, make items inside buckets public by selecting all -> selecting the ‘actions’ drop down -> and selecting ‘Make Public’ |
 |‘ActiveSupport::MessageEncryptor::InvalidMessage’| Make sure your heroku environment variables are set up correctly: `heroku config:set RAILS_MASTER_KEY=whatever is in your config/master.key file` |
