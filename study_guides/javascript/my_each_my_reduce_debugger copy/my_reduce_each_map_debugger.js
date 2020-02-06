@@ -9,6 +9,17 @@ Array.prototype.myEach = function (callback) {
 
 }
 
+Array.prototype.myMap = function(callback){
+
+    let result = []
+
+    this.myEach((ele) => {
+        result.push(callback(ele))
+    })
+
+    return result 
+}
+
 Array.prototype.myReduce = function (callback, acc) {
     let i;
 
@@ -34,9 +45,14 @@ let sampleCallback = (acc,el) => {
     return acc + el;
 }
 
+let sampleCallback1 = (el) => {
+    return el + 1
+}
+
 let arr = [1,2,3]
 
-console.log(arr.myReduce(sampleCallback))
+// console.log(arr.myReduce(sampleCallback))
+console.log(arr.myMap(sampleCallback1))
 
 // console.log(arr.myReduce(sampleCallback,10))
 
