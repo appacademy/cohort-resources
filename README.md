@@ -28,15 +28,26 @@ https://github.com/appacademy/code_for_video_demos
 https://flexboxfroggy.com/
 
 ## Folder Breakdown  
+
 ### assessment_tips
 * This folder is a compiliation of markdown files that list out tips and tricks for each assessment you will take during the in person portion.
+
+### common bugs 
+* This folder has information on common bugs that you may encounter during your time at app academy
+
 ### demos
 * Remember you must go into your cohorts branch in order to see this folder ```git checkout <month-start_date-year>```.
 * All demos performed during lecture can be found in this folder. 
+
+### environment setup 
+* this folder holds some information on setting up your environment
+
 ### foundations_remote
 * This folder compiles all of the study guides given during the foundations portion of app academy.
+
 ### student_success
 * This folder serves as a center for tips on how to maximize your success during your time here at app academy. 
+
 ### study_guides
 * We've compiled a series of markdown, javascript, ruby and sql files that summarize different concepts learned throughout the course.  Look in here when you need some syntax refreshness or some quick concept summaries!
 
