@@ -12,4 +12,17 @@ const slow = `
         </div>
     `;
 
-    
+let rootEl = document.querySelector("#root");
+
+window.addEventListener("hashchange",() => {
+    switch (window.location.hash) {
+        case "#fast":
+            rootEl.innerHTML = fast;
+            break;
+        case "#slow":
+            rootEl.innerHTML = slow;
+            break;
+        default:
+            break;
+    }
+})
