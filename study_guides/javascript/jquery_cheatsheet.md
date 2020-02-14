@@ -40,7 +40,7 @@
 (string,function)  (function)
 
 ex:
-```
+```js
 $(() => console.log("loaded"));
 
 or...
@@ -48,13 +48,13 @@ or...
 $(document).ready(callback)
 ```
 
-##finding elements 
+## finding elements 
 css
 selector
 (string)
 
 ex:
-```
+```js
 $("li");
 ```
 *   searches for elements that match selector
@@ -65,13 +65,13 @@ tag-name  HTML code
 (string)  (string)
 
 ex:
-```
+```js
 $("<li>banana</li>");
 ```
 * creates an HTMLElement
 * wrapped in jquery object and returns it 
 
-```
+```js
 const $li = $("<li></li>");
 $li.text ("banana");
 $li.attr("style","background-color: yellow");
@@ -90,7 +90,7 @@ $ul.append($li);
 * e is passed to your callback as an arg. you can attach a preventDefault to it which will prevent normal behavior
 
 ex:
-```
+```js
 e.preventDefault();
 ```
 ## currentTarget vs target 
@@ -99,15 +99,34 @@ e.preventDefault();
 * receiver of addEventListener
 * receiver of on 
 
-###target 
+### target 
 * element where event was triggered 
 
-##delegateTarget 
-```
+## delegateTarget 
+```js
 $("ul").on("click","li",cb) 
 ```
 
-when 'on' is given 3 arguments 
-delegateTarget -> receiver 
-currentTarget -> 2nd arg 
-target -> (unchanged; still the thing that triggers event)
+-   when 'on' is given 3 arguments 
+-   delegateTarget -> receiver 
+-   currentTarget -> 2nd arg 
+-   target -> (unchanged; still the thing that triggers event)
+
+## ajax example 
+```js
+
+$.ajax({
+  url: '/squirrels',
+  method: 'POST',
+  data: {
+    squirrel: {
+      name: 'Munchie',
+      species: 'Flying'
+    }
+  },
+  dataType: 'JSON',
+})
+.then(res => console.log(res))
+.fail(err => console.log(err));
+
+```
