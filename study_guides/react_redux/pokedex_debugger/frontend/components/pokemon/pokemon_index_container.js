@@ -20,6 +20,6 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps, //msp
+  mapDispatchToProps //mdp
 )(PokemonIndex);
