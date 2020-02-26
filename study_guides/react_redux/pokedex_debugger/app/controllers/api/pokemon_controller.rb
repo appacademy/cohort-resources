@@ -1,5 +1,6 @@
 class Api::PokemonController < ApplicationController
   def index
+    debugger
     sleep 0.5
     @pokemon = Pokemon.all
   end
