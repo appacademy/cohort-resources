@@ -62,7 +62,7 @@ https://flexboxfroggy.com/
     * deid@appacademy.io
 * Ronil
     *  rbhatia@appacademy.io
-* Jeniffer
+* Jennifer
     * jkennedy@appacademy.io
 * Mike 
     * mmadsen@appacademy.io
