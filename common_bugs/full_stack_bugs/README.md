@@ -30,3 +30,6 @@ Recipe for alleviating some Heroku push issues:
 |‘ActiveSupport::MessageEncryptor::InvalidMessage’| Make sure your heroku environment variables are set up correctly: `heroku config:set RAILS_MASTER_KEY=whatever is in your config/master.key file` |
 | ‘Undefined method [] for nil (with active storage in stack trace)’ | Make sure your credentials are set up correctly: https://github.com/appacademy/curriculum/tree/master/full-stack-project/resources/ActiveStorageDemo#setting-up-active-storage.  If it still doesn’t work: -Make sure to reset the master key  -Check storage.yml & credentials:Edit command thing -Make sure they’re not .gitignoring something important |
 | Hitting the browser’s back button doesn’t render the react component. Instead it doesn’t render anything despite placing debuggers in the respective container expected to render, and stopping at those debuggers. | SOLUTION: check their ‘application.js’ and make sure there is no sign of turbolinks. Note: turbolinks should be skipped when building a rails app that uses front end routing / React/Redux. |
+
+* to untrack master key 
+    * git rm -r --cached config/master.key
