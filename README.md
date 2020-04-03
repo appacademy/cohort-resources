@@ -103,8 +103,22 @@ https://flexboxfroggy.com/
     * This will track the branch in the remote repository 
 * Each cohort branch will only house the demos folder. This is done for maintainability reasons.
 
+## Workflow
+* So you want to contribute to cohort resources? you've come to the right spot
+* First of all, NEVER push to master.
+* Demos during lecture will follow the instructions below [Lecture Demos](#lecture-demos)
+* Any contributions to the master branch will follow the following workflow: 
+1. git pull master
+2. git checkout -b <description-of-your-contribution>
+3. add contribution to the branch
+4. git merge master 
+5. git push 
+    * do command that git tells you to do
+6. create pull request on git
+7. assign a reviewer (carlos) 
+
 ## Multi-day Demos 
 * Multiday demos will live in their own repository.  In other words, they will not live within cohort resources.  A link should be placed in the demos folder README that links students to the demos repository.
 
-## Demos
+## Lecture Demos
 *  Demos from lecture live within the demos repository.  For every demo, checkout the appropriate branch for the cohort ```git checkout <month-start_date-year>```, cd into the demo directory, and create a folder that will house the demo ``` wXdX-(name of demo) ```.  After the demos completion, add,commit and push your work.
