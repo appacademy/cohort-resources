@@ -110,7 +110,7 @@ https://flexboxfroggy.com/
 * Any contributions to the master branch will follow the following workflow: 
 1. git pull master
 2. git checkout -b `<description-of-your-contribution>`
-3. add contribution to the branch
+3. add contribution to the branch (add, commit, etc...)
 4. git checkout master 
 5. git pull master
 6. git checkout `<description-of-your-contribution>`
