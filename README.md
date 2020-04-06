@@ -109,13 +109,16 @@ https://flexboxfroggy.com/
 * Demos during lecture will follow the instructions below [Lecture Demos](#lecture-demos)
 * Any contributions to the master branch will follow the following workflow: 
 1. git pull master
-2. git checkout -b <description-of-your-contribution>
+2. git checkout -b `<description-of-your-contribution>`
 3. add contribution to the branch
-4. git merge master 
-5. git push 
+4. git checkout master 
+5. git pull master
+6. git checkout `<description-of-your-contribution>`
+7. git rebase master 
+8. git push 
     * do command that git tells you to do
-6. create pull request on git
-7. assign a reviewer (carlos) 
+9. create pull request on git
+10. assign a reviewer (carlos) 
 
 ## Multi-day Demos 
 * Multiday demos will live in their own repository.  In other words, they will not live within cohort resources.  A link should be placed in the demos folder README that links students to the demos repository.
