@@ -64,7 +64,7 @@ end
 
 ## nested `:create`
 
-If you have a nested create, you will not have a `new` view for creating albums. Instead, the form will live on the posts `show` view.
+If you have a nested create, you will not have a `new` view for creating albums. Instead, the form will live on the band's `show` view.
 
 Our route for hitting `AlbumsController#create` will look like:
 
