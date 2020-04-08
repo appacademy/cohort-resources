@@ -1,0 +1,134 @@
+
+.uppercase {
+    text-transform: uppercase; 
+}
+
+header {
+    background-color: black; 
+    height: 100px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+
+body {
+    background: #1DB954; 
+    text-align: center; 
+    font-family: 'Roboto', sans-serif; 
+}
+
+.title {
+    font-family: 'Roboto', sans-serif;  
+    font-size: 40px; 
+    color: white; 
+
+}
+
+
+
+.TA {
+    margin-top: 25px; 
+    margin-left: 10px; 
+    overflow-x: scroll; 
+}
+
+.TA > ul > li {
+    list-style-type: none; 
+    font-size: 1.5rem; 
+    color: white; 
+    background: black; 
+    margin: 2.5px; 
+    padding: 5px; 
+}
+
+ul > ul {
+    display: flex; 
+    justify-content: start; 
+}
+
+.song-form {
+    display: block; 
+    text-align: center; 
+}
+form {
+    background: black; 
+    /* margin: 2.5px; 
+    padding: 10px; */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    width: 350px; 
+    margin-left: 10px; 
+    height: 350px; 
+}
+
+.taName {
+    width: 100px; 
+}
+.songSnippet.on {
+    background: rgb(24, 155, 69); 
+    cursor: pointer; 
+}
+
+.songSnippet {
+    background: rgb(37, 37, 37); 
+    list-style-type: none; 
+    font-size: 1.5rem; 
+    color: white; 
+    margin: 2.5px; 
+    padding: 5px; 
+    border: 1px solid black; 
+}
+form > h1 {
+    color: white; 
+    font-size: 2rem; 
+    margin: 1rem;
+}
+
+
+form > label > input {
+    margin: 5px; 
+    font-size: 1.25rem; 
+    outline: none; 
+}
+
+
+form > button {
+    margin: 5px;
+    padding: 5px;
+    font-size: 1rem; 
+    background: black; 
+    color: white; 
+    border: none; 
+    outline: none;   
+}
+
+form > button:hover {
+    background: rgb(37, 37, 37); 
+    cursor: pointer; 
+    outline: none; 
+}
+
+form > label {
+    color: white; 
+}
+
+
+.bottomFlex > div > h1 {
+    font-size: 2rem; 
+    margin: 1rem;
+}
+.bottomFlex {
+    display: flex;
+    margin-top: 50px;  
+}
+li {
+    list-style-type: none; 
+    font-size: 1.5rem; 
+    color: white; 
+    background: black; 
+    margin: 2.5px; 
+    padding: 5px; 
+    width: 500px; 
+}
