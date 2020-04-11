@@ -13,7 +13,7 @@ You will have **1 hour** to complete this assessment.
 ​
 ### Objective
 ​
-Your objective is to pass all 14 test specs provided by writing code in the `/lib` files. You can view the test cases in `/spec`.
+Your objective is to pass all `insert number here` test specs provided by writing code in the `/lib` files. You can view the test cases in `/spec`.
 ​
 ### Submission
 ​
