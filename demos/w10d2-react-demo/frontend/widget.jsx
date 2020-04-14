@@ -1,4 +1,5 @@
 import React from 'react';
+import JobIndex from './job_index';
 
 class Widget extends React.Component {
   constructor(props) {
@@ -41,6 +42,7 @@ class Widget extends React.Component {
         <button onClick={() => this.setLocation("Los Angeles")}>Los Angeles</button>
         <button onClick={this.setLocation2("San Francisco")}>San Francisco</button>
         <button onClick={this.setLocation3}>New York</button>
+        <JobIndex listings={this.state.listings} />
       </div>
     )
   }
