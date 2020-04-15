@@ -1,0 +1,25 @@
+.clock {
+    font-family: 'Josefin Sans', sans-serif;
+    width: 75vw;
+}
+
+.clock h1 {
+    padding-bottom: 15px;
+}
+
+.clock main {
+    border: 1px solid black;
+    background: cyan;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 15vh;
+    font-size: 20px;
+    margin-bottom: 100px;
+}
+
+.time, .date {
+    display: flex;
+    justify-content: space-between;
+}

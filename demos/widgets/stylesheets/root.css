@@ -1,0 +1,18 @@
+.parent {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh 0;
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.clock-toggle {
+    position: fixed;
+    top: 175px;
+}
