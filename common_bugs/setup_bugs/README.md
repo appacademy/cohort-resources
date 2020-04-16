@@ -10,3 +10,15 @@
 * Test this by having student type `source ~/.bashrc` and running `pry`. If `pry` works here, it is a zshell error.
 
 * The easiest fix is to switch back to `bash`. First have the student `cd` to root then type `chsh -s /bin/bash`. Opening a new terminal tab should show `bash` and not `zsh` at the top, and `pry` should now open successfully.
+
+## When Byebug runs on external terminal but not VSCode terminal(Mac)
+
+* In the VSCode terminal, students might see this error `require: cannot load such file --byebug(Load Error)`
+
+* Check if student can switch VSCode terminal to run using `bash`
+  * To check, click on the dropdown in VSCode terminal and see if they can click on `Select Default Shell` and then select `bash bin/bash` as their default terminal
+    * Close all VSCode terminals and re-open to see if it's running on `bash`. If yes, the switch was successful. 
+
+* If unable to switch VSCode terminal to `bash` using the dropdown, the easiest fix is to check `settings.json` and make sure they have
+` "terminal.integrated.automationShell.osx": ""` and not commands that may point to incorrect operating systems
+  * example: `"terminal.integrated.shellArgs.linux"` --> delete this out 
