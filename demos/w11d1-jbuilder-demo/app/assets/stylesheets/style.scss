@@ -1,0 +1,119 @@
+body {
+  background: rgb(186, 124, 76);
+  margin: 0 auto;
+  width: 80%;
+}
+
+.tea-index {
+  text-align: center;
+  padding-top: 50px;
+
+  h1 {
+    font-size: 40px;
+    font-family: Roboto;
+  }
+}
+
+.tea-list {
+  margin-bottom: 50px;
+}
+
+.tea-index-item {
+  display: flex;
+  flex-direction: column;
+  padding: 0 100px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100%;
+  margin: 20px 0;
+  background-color: rgb(255, 160, 90);
+  border-radius: 25px;
+}
+
+.tea-index-item:hover {
+  background-color: rgb(255, 185, 90);
+  cursor: pointer;
+}
+
+.basic-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  font-size: 20px;
+}
+
+.tea-transactions {
+  background-color: #8B4513;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  padding-top: 10px;
+}
+
+.tea-description {
+  text-align: left;
+  margin-bottom: 25px;
+  font-size: 16px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.tea-transaction {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+
+  p {
+    width: 33%;
+    text-align: center;
+  }
+}
+
+.columns {
+  font-weight: 700;
+}
+
+.tea-form {
+  background-color: rgb(138, 100, 134); 
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 0;
+  padding-bottom: 25px;
+
+  label {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  input {
+    height: 20px;
+    border-radius: 10px;
+    background-color: #eee;
+    outline: none;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  input:hover {
+    border: 2px solid black;
+  }
+
+  input[type="submit"] {
+    background: rgb(92, 134, 162);
+    width: 300px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 24px;
+    margin-top: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  input[type="submit"]:hover {
+    background: rgb(92, 154, 162);
+  }
+}
