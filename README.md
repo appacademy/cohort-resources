@@ -16,16 +16,9 @@ Here you will find all resources which will be given out throughout your time he
 * If there are changes done to assessment_tips, foundations_remote, student_success, or study_guides you must go into master and run ```git pull``` to receive the changes.
 
 # Student Section 
-## Calendar 
-https://docs.google.com/spreadsheets/d/1P8TwPa9M1SxUwWlCJktBhAk08PRx4Ls7ehC4R-G5Znw/edit?ts=5d0a7a17#gid=1556007678
-## SF Lecture Notes Link 
-https://github.com/appacademy/sf-lecture-notes
+
 ## Alumni Engagement Agreement
 https://appacademy.io/alumni-engagement-agreement
-## Tommy Video Link
-https://github.com/appacademy/code_for_video_demos
-## Flex Box Froggy
-https://flexboxfroggy.com/
 
 ## Folder Breakdown  
 
