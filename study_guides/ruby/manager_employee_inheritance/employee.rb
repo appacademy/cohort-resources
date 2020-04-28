@@ -5,11 +5,6 @@ class Employee
   def initialize(name, salary, title, boss = nil)
     @name, @salary, @title = name, salary, title
     self.boss = boss
-
-    @boss = boss
-    # if @boss
-    #     @boss.employees.push(self)
-    # end
   end
 
   def boss=(boss)
