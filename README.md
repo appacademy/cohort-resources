@@ -20,6 +20,15 @@ Here you will find all resources which will be given out throughout your time he
 ## Alumni Engagement Agreement
 https://appacademy.io/alumni-engagement-agreement
 
+## Holidays 
+* New Years Day 
+* Martin Luther King, Jr Day
+* Memorial Day
+* Independence Day
+* Labor Day
+* ThanksGiving Holiday
+* Winter Holiday 
+
 ## Folder Breakdown  
 
 ### assessment_tips
