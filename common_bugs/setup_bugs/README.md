@@ -10,3 +10,15 @@
 * Test this by having student type `source ~/.bashrc` and running `pry`. If `pry` works here, it is a zshell error.
 
 * The easiest fix is to switch back to `bash`. First have the student `cd` to root then type `chsh -s /bin/bash`. Opening a new terminal tab should show `bash` and not `zsh` at the top, and `pry` should now open successfully.
+
+
+## Rails 6 installed 
+
+* First, run `gem uninstall rails` and select `all versions` when prompted
+    - After this, `rails -v` should return an error.
+
+* Next, run `gem uninstall railties` and select `y` when prompted to remove all dependencies.
+
+* Finally, run `gem install rails --version 5.2.3`
+
+* Voila! `rails -v` should now no longer have `rails 6.X.X`
