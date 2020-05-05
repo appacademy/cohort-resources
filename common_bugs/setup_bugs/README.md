@@ -21,7 +21,7 @@
 
 * Finally, run `gem install rails --version 5.2.3`
 
-* Voila! `rails -v` should now no longer have `rails 6.X.X`
+* Voila! `rails -v` should no longer have `rails 6.X.X`
 ## When Byebug runs on external terminal but not VSCode terminal(Mac)
 
 * In the VSCode terminal, students might see this error `require: cannot load such file --byebug(Load Error)`
