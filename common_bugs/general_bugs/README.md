@@ -20,4 +20,6 @@
 
 # react/redux
 
-
+## Bug: Gem::Ext::BuildError Failed to build gem native extension
+### Solution 
+Tends to happen when someone has updated their operating system. The solution is usually to run xcode-select --install to install the XCode Command Line Developer Tools. Note that this installation takes some time (10-20 mins). Once done, they should be able to successfully bundle install.
