@@ -1,10 +1,15 @@
 # aliases
 * rails g 
     * g is short for generate
+* rails d
+    * d is short for destroy
+* rails s
+    * s is short for server
 # bundle exec 
 * whenever you run bundle exec in front of your rails commands, the rails cli will make sure to run the command based on the versions specified in the Gemfile.lock file
 # Useful Commands
 *  ```rails new <Project Name>```
+*  ```rails _VERSION_ new <Project Name>``` 
 *  ```rails new  <Project Name> -G -d postgresql```
 *  ```rails g migration <Migration Description>```
     * create a migration
@@ -17,10 +22,12 @@
     * make sure controller name is plural 
 * ```bundle exec rails g model```
     * makes model and creates a migration that allows you to make your table
+* ```bundle exec rails d controller <Controller Name>```
+    * deletes controller and additional files created with the ```rails g controller``` command
+* ```bundle exec rails d model <Model Name>```
+    * deletes model, migration, and additional files created with the ```rails g model``` command
 * ```rails c```
     * gets you into the rails console 
-* ```bundle exec rails db:reset```
-    * runs db:drop db:create db:migrate
 * ```bundle exec rails db:create```
     * creates your database
 * ```bundle exec rails db:migrate```
@@ -29,12 +36,15 @@
     * seeds the data base from the seed information located in the seed file
 * ```bundle exec rails db:setup```
     * runs db:schema:load, db:seed
-
 * ```bundle exec rails db:drop```
     * drops all of the info in your database
+* ```bundle exec rails db:reset```
+    * runs db:drop db:setup
 * ```bundle exec rails db:rollback```
     * rolls everything back to the most recent migration
 * ```bundle exec rails routes```
     * shows all routes defined in the routes file 
+* ```bundle exec rails routes -c <Controller Name>```
+    * shows all routes for a specific controller
 
 
