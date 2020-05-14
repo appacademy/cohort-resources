@@ -35,7 +35,6 @@ end
 ```ruby
 class Picture < ApplicationRecord
 
-    # class_name and foreign_key omitted bc rails magic (don't have to omit them though)
     belongs_to :pictureable, polymorphic: true
 
 end
