@@ -33,3 +33,6 @@
 * If unable to switch VSCode terminal to `bash` using the dropdown, the easiest fix is to check `settings.json` and make sure they have
 ` "terminal.integrated.automationShell.osx": ""` and not commands that may point to incorrect operating systems
   * example: `"terminal.integrated.shellArgs.linux"` --> delete this out 
+
+## If students are recieving a bunch of warnings when running any rails commands or while runnings through specs 
+* run `gem pristine --all`
