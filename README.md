@@ -92,10 +92,10 @@ https://appacademy.io/alumni-engagement-agreement
     * jwang@appacademy.io
 
 ## Without Git
-![hey](./assessment_tips/images/without_git1.png)
-![hey](./assessment_tips/images/without_git2.png)
-![hey](./assessment_tips/images/without_git3.png)
-![hey](./assessment_tips/images/without_git4.png)
+![hey](./images/without_git1.png)
+![hey](./images/without_git2.png)
+![hey](./images/without_git3.png)
+![hey](./images/without_git4.png)
 
 # Instructor Section
 
@@ -107,6 +107,48 @@ https://appacademy.io/alumni-engagement-agreement
 
 ## Workflow
 * So you want to contribute to cohort resources? you've come to the right spot
+### Jira Workflow 
+* [Jira Link](https://appacademyio.atlassian.net/secure/RapidBoard.jspa?rapidView=86&projectKey=IN&selectedIssue=IN-91)
+#### submitting a ticket
+* Submitting a ticket is quite easy. First create a new task on the Instructional Issues Backlog:
+    ![label picture jira](./images/jira_workflow1.png)
+    ![label picture jira](./images/jira_workflow2.png)
+
+
+* There are a few necessary elements to include:
+
+* label 
+    ![label picture jira](./images/jira_workflow3.png)
+    * please makre sure that you add the cohort-resources label
+
+* Summary
+    * This is the 'at a glance' view of the issue being created. Please include the course where the issue is occurring as well as a terse description (~15 words or less) of what's going wrong.
+
+    * Example: [CR] add study guide for active record
+
+* Description
+    * Here is your chance to explain the issue as best you can in as much detail as you can muster and give us everything we need to fix the issue. A few things MUST be present:
+
+    1. a link to the place where the issue is happening or where you are adding something
+    2. a description of what you observe and why this conflicts with what you think it should be
+    3. priority, in your opinion (described below)
+        * To make our life even easier please provide a screenshot if applicable or even a suggestion for how the problem should be solved.
+
+* Estimating priority
+    * Please set priority in line with the following guidelines:
+
+    * lowest - fine if we never do it, might be an improvement
+    * low - should probably do at some point, it's fine for now that students see it as is, no workarounds needed, recently out of date, typos in text. Small errors that students wouldn't be confused by.
+    * medium - should do before next students see it, if possible, workarounds required. Typos level mistakes in code / solutions. Many students will have to ask questions to get through.
+    * high - must do before next students see it, can only partially work around, partially incorrect information
+    * highest - must fix ASAP, blocks student progress, offensive, blatantly wrong information
+
+* What to expect
+    * We on the cohort resources team meet regularly and prioritize issues to fix. We will evaluate them based on urgency and our availability.
+    * When we do go over the issue, we might ask you questions about your issue. 
+
+### git Workflow 
+* Before contributing please make sure that you follow the steps above to submit an issue and assign yourself to it once it has been placed in the selected for development section
 * First of all, NEVER push to master.
 * Demos during lecture will follow the instructions below [Lecture Demos](#lecture-demos)
 * Any contributions to the master branch will follow the following workflow: 
@@ -120,7 +162,7 @@ https://appacademy.io/alumni-engagement-agreement
 8. git push 
     * do command that git tells you to do
 9. create pull request on git
-10. assign a reviewer (carlos) 
+10. assign a reviewer (someone on cohort resources team) 
 
 ## Multi-day Demos 
 * Multiday demos will live in their own repository.  In other words, they will not live within cohort resources.  A link should be placed in the demos folder README that links students to the demos repository.
