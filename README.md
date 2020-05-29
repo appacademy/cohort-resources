@@ -60,36 +60,6 @@ https://appacademy.io/alumni-engagement-agreement
     * bay-bridge-instructors@appacademy.io
 * Golden Gate Instructors 
     * golden-gate-instructors@appacademy.io
-* Darren 
-    * deid@appacademy.io
-* Ronil
-    *  rbhatia@appacademy.io
-* Jennifer
-    * jkennedy@appacademy.io
-* Mike 
-    * mmadsen@appacademy.io
-* Andy 
-    * aminucos@appacademy.io
-* Angela 
-    * atopchev@appacademy.io
-* Alissa 
-    * alissacrane123@gmail.com
-* Vanessa
-    * vchen@appacademy.io
-* Dean 
-    * dlacap@appacademy.io
-* Carlos 
-    * cgarcia@appacademy.io
-* Ryan 
-    * rmapa@appacademy.io
-* Lina
-    * lkherchi@appacademy.io
-* Joe
-    * jbumbaca@appacademy.io
-* Erik
-    * eelliott@appacademy.io
-* Julia
-    * jwang@appacademy.io
 
 ## Without Git
 ![hey](./images/without_git1.png)
