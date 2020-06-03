@@ -4,17 +4,21 @@
 
 * Add --database=postgresql if using Postgres.
 * Add --skip-turbolinks to skip the turbolinks gem.
+* cohort resources reference [rails commands](https://github.com/appacademy/cohort-resources/blob/master/study_guides/rails/rails_commands.md)
+* example:
+    * ```rails new  <Project Name> -G -d postgresql```
 2. Update your Gemfile.
-
-* better_errors
-* binding_of_caller
-* pry-rails
-* annotate
-* bcrypt
-* jquery-rails (When using rails 5.1+)
+* add these gems to your Gemfile
+    * better_errors
+    * binding_of_caller
+    * pry-rails
+    * annotate
+    * bcrypt
+    * jquery-rails (When using rails 5.1+)
 3. bundle install
 
 4. When using Rails 5.1+, update your application.js manifest to include:
+* this is locatied in app/assests/javascript/application.js
 
 * //= require jquery
 * //= require jquery_ujs
