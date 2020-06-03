@@ -1,3 +1,4 @@
+# react/redux summary
 1. DOMContentloaded
 2. create Store
     * store has a root reducer 
@@ -23,4 +24,6 @@ ui:{
     * the route will also pass props to the components they render.
 5. after invoking msp and mdp we will then render the component.
     * if there is a componentDidMount() then we will hit that after the component has attempted to render. 
-6. if there is a prop that dispatches an ajax request in the componentDidMount() we invoke a function that dispatches the ajax request to the middleware. the middle ware will then see if the the action is a function or not.  If it is a function it will then invoke the function and then pass the dispatch function as an argument. the dispatch function that is passed will then be used after we get the info back from the ajax request. remember that the dispatch sends an action to the middleware and then invokes the next argument that ships it to the next middleware.  if there is no other middle ware then we will send the action to all of the reducers. 
+
+# middleware summary
+if there is a prop that dispatches an ajax request in the componentDidMount() we invoke a function that dispatches the ajax request to the middleware. the middle ware will then see if the the action is a function or not.  If it is a function it will then invoke the function and then pass the dispatch function as an argument. the dispatch function that is passed will then be used after we get the info back from the ajax request. remember that the dispatch sends an action to the middleware and then invokes the next argument which then ships it to the next middleware.  if there is no other middleware then we will send the action to all of the reducers. 
