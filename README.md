@@ -15,10 +15,19 @@ Here you will find all resources which will be given out throughout your time he
 * In order to have the demos from lectures you must checkout your cohorts branch ``` git checkout <month-day-year>```and run ```git pull```.
 * If there are changes done to assessment_tips, foundations_remote, student_success, or study_guides you must go into master and run ```git pull``` to receive the changes.
 
-# Student Section 
+# Student Section
 
-## Alumni Engagement Agreement
-https://appacademy.io/alumni-engagement-agreement
+## Instructor Contact Info 
+* All Instructors 
+    * instructors-sf@appacademy.io
+* Bay Bridge Instructors
+    * bay-bridge-instructors@appacademy.io
+* Golden Gate Instructors 
+    * golden-gate-instructors@appacademy.io
+
+## Assessment Policy
+* The App Academy Assessment Policy can be found [here](https://docs.google.com/document/d/1h_fKuhRYP5mGzTZrJHRyp9cpnBPlv5E7TjY_5pLZPNk/edit#).
+    * For further questions, please reach out to your instructional team.
 
 ## Holidays 
 * New Years Day 
@@ -29,20 +38,23 @@ https://appacademy.io/alumni-engagement-agreement
 * ThanksGiving Holiday
 * Winter Holiday 
 
+## Alumni Engagement Agreement
+https://appacademy.io/alumni-engagement-agreement
+
 ## Folder Breakdown  
 
 ### assessment_tips
 * This folder is a compiliation of markdown files that list out tips and tricks for each assessment you will take during the in person portion.
 
 ### common bugs 
-* This folder has information on common bugs that you may encounter during your time at app academy
+* This folder has information on common bugs that you may encounter during your time at app academy.
 
 ### demos
 * Remember you must go into your cohorts branch in order to see this folder ```git checkout <month-start_date-year>```.
-* All demos performed during lecture can be found in this folder. 
+* All demos performed during lecture can be found in this folder.
 
 ### environment setup 
-* this folder holds some information on setting up your environment
+* this folder holds some information on setting up your environment.
 
 ### foundations_remote
 * This folder compiles all of the study guides given during the foundations portion of app academy.
@@ -52,14 +64,6 @@ https://appacademy.io/alumni-engagement-agreement
 
 ### study_guides
 * We've compiled a series of markdown, javascript, ruby and sql files that summarize different concepts learned throughout the course.  Look in here when you need some syntax refreshness or some quick concept summaries!
-
-## Instructor Contact Info 
-* All Instructors 
-    * instructors-sf@appacademy.io
-* Bay Bridge Instructors
-    * bay-bridge-instructors@appacademy.io
-* Golden Gate Instructors 
-    * golden-gate-instructors@appacademy.io
 
 ## Without Git
 ![hey](./images/without_git1.png)
@@ -89,7 +93,7 @@ https://appacademy.io/alumni-engagement-agreement
 
 * label 
     ![label picture jira](./images/jira_workflow3.png)
-    * please makre sure that you add the cohort-resources label
+    * Please, make sure that you add the cohort-resources label.
 
 * Summary
     * This is the 'at a glance' view of the issue being created. Please include the course where the issue is occurring as well as a terse description (~15 words or less) of what's going wrong.
