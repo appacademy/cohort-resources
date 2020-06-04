@@ -42,11 +42,12 @@ window.addEventListener("DOMContentLoaded",()=>{
 ```javascript
 //creating a circle with path
 var ctx = c.getContext("2d");
-ctx.beginPath();
+ctx.beginPath(); // necessary to begin drawing this path
 ctx.arc(100, 75, 25, 0, 2 * Math.PI);
-ctx.stroke();
-ctx.closePath()
+// (circleCenterX, circleCenterY, radius, startAngle, endAngle, counterclockwise(optional))
+ctx.strokeStyle = "red"; // optionally sets color of path
+ctx.stroke(); // draws path (default color is black)
+ctx.closePath(); // optional when drawing a circle
+ctx.fillStyle = "blue"; // sets color to be filled inside of the path
+ctx.fill(); // fills the interior of the circle (does not work without fillStyle being set)
 ```
-* This will create a circle at the origin of the canvas.
-* In order to create a circle at a different position of the canvas then you have to use moveTo(x,y) to start the circle somewhere else.
-
