@@ -1,4 +1,4 @@
-# Important Links
+# Useful Links
 
 ## BlueBird wiki demo
 * https://github.com/appacademy/bluebird/wiki
