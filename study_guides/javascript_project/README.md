@@ -2,6 +2,8 @@
 
 * Great resource for using webpack
 [webpack documentation](https://webpack.js.org/guides/getting-started/)
+* Great resource for setting up github pages as it's own repo
+[Github Pages Docs](https://pages.github.com/)
 * Great resource for getting github pages working with webpack
 [online resource](https://gist.github.com/cobyism/4730490)
 
