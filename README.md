@@ -3,18 +3,18 @@
 Here you will find all resources which will be given out throughout your time here at appacademy. In order to preview the markdown files in vs code press (control + shift + m). Each cohort's branch will only have one folder that houses all demos done in lecture. ALL OTHER RESOURCES WILL BE STORED IN THE MASTER BRANCH. If you haven't learned git yet then use this [Without Git](#without-git). Otherwise, use [How to Use Repository](#how-to-use-repository) as it serves for both students and instructors. There is also two other section which serve for students and instructors respectively. 
 
 * [Student Section](#student-section)
-    + [Instructor Contact Info](##instructor-contact-info)
-    + [Assessment Policy](##assessment-policy)
-    + [Holidays](##holidays)
-    + [Alumni Engagement Agreement](##alumni-engagement-agreement)
-    + [Folder Breakdown](##folder-breakdown)
-    + [Using this Repo without Git](##without-git)
+    + [Instructor Contact Info](#instructor-contact-info)
+    + [Assessment Policy](#assessment-policy)
+    + [Holidays](#holidays)
+    + [Alumni Engagement Agreement](#alumni-engagement-agreement)
+    + [Folder Breakdown](#folder-breakdown)
+    + [Using this Repo without Git](#without-git)
 * [Instructor Section](#instructor-section)
-    + [Workflow](##workflow)
-        * [Jira Workflow](###jira-workflow)
-        * [Git Workflow](###git-workflow)
-    + [Lecture Demos](##lecture-demos)
-    + [Multi-day Demos](##multi-day-demos)
+    + [Workflow](#workflow)
+        * [Jira Workflow](#jira-workflow)
+        * [Git Workflow](#git-workflow)
+    + [Lecture Demos](#lecture-demos)
+    + [Multi-day Demos](#multi-day-demos)
 
 ## How To Use Repository
 * Clone this repository in order to have access to all resources provided throughout the cohort:``` git clone <url>```.
