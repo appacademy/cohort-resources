@@ -3,7 +3,18 @@
 Here you will find all resources which will be given out throughout your time here at appacademy. In order to preview the markdown files in vs code press (control + shift + m). Each cohort's branch will only have one folder that houses all demos done in lecture. ALL OTHER RESOURCES WILL BE STORED IN THE MASTER BRANCH. If you haven't learned git yet then use this [Without Git](#without-git). Otherwise, use [How to Use Repository](#how-to-use-repository) as it serves for both students and instructors. There is also two other section which serve for students and instructors respectively. 
 
 * [Student Section](#student-section)
+    + [Instructor Contact Info](#instructor-contact-info)
+    + [Assessment Policy](#assessment-policy)
+    + [Holidays](#holidays)
+    + [Alumni Engagement Agreement](#alumni-engagement-agreement)
+    + [Folder Breakdown](#folder-breakdown)
+    + [Using this Repo without Git](#without-git)
 * [Instructor Section](#instructor-section)
+    + [Workflow](#workflow)
+        * [Jira Workflow](#jira-workflow)
+        * [Git Workflow](#git-workflow)
+    + [Lecture Demos](#lecture-demos)
+    + [Multi-day Demos](#multi-day-demos)
 
 ## How To Use Repository
 * Clone this repository in order to have access to all resources provided throughout the cohort:``` git clone <url>```.
@@ -46,14 +57,14 @@ https://appacademy.io/alumni-engagement-agreement
 ### assessment_tips
 * This folder is a compiliation of markdown files that list out tips and tricks for each assessment you will take during the in person portion.
 
-### common bugs 
+### common_bugs 
 * This folder has information on common bugs that you may encounter during your time at app academy.
 
 ### demos
 * Remember you must go into your cohorts branch in order to see this folder ```git checkout <month-start_date-year>```.
 * All demos performed during lecture can be found in this folder.
 
-### environment setup 
+### environment_setup 
 * this folder holds some information on setting up your environment.
 
 ### foundations_remote
@@ -83,7 +94,7 @@ https://appacademy.io/alumni-engagement-agreement
 * So you want to contribute to cohort resources? you've come to the right spot
 ### Jira Workflow 
 * [Jira Link](https://appacademyio.atlassian.net/secure/RapidBoard.jspa?rapidView=86&projectKey=IN&selectedIssue=IN-91)
-#### submitting a ticket
+#### Submitting a Ticket
 * Submitting a ticket is quite easy. First create a new task on the Instructional Issues Backlog:
     ![label picture jira](./images/jira_workflow1.png)
     ![label picture jira](./images/jira_workflow2.png)
@@ -121,12 +132,12 @@ https://appacademy.io/alumni-engagement-agreement
     * We on the cohort resources team meet regularly and prioritize issues to fix. We will evaluate them based on urgency and our availability.
     * When we do go over the issue, we might ask you questions about your issue. 
 
-### git Workflow 
+### Git Workflow 
 * Before contributing please make sure that you follow the steps above to submit an issue and assign yourself to it once it has been placed in the selected for development section
 * First of all, NEVER directly push to master or a cohorts branch.
 * Demos during lecture will follow the instructions below [Lecture Demos](#lecture-demos)
 * ***Any contributions to the master branch will follow the following workflow***: 
-#### contributing
+#### Contributing
 1. git pull master
 2. git checkout -b `IN-<jira issue number>-<abbreviated jira issue title>`
 3. add contribution to the branch (add, commit, etc...)
@@ -141,7 +152,7 @@ https://appacademy.io/alumni-engagement-agreement
     * do command that git tells you to do
 9. create pull request on git
 10. assign a reviewer (someone on cohort resources team) 
-#### reviewing 
+#### Reviewing 
 1. make sure that after reviewing that you do not merge the request. Only branch managers will be allowed to merge requests. 
 
 ## Lecture Demos
@@ -160,5 +171,5 @@ https://appacademy.io/alumni-engagement-agreement
 * If you run into any issues please contact cohort resource [Branch Managers](https://appacademyio.atlassian.net/wiki/spaces/IN/pages/804028585/Cohort+Resources)
 
 ## Multi-day Demos 
-* Multiday demos will live in their own repository.  In other words, they will not live within cohort resources.  A link should be placed in the demos folder README that links students to the demos repository. Please make sure that you follow the instructions within [Lecture Demos](#lecture-demos) upon placing the link. 
+* Multi-day demos will live in their own repository.  In other words, they will not live within cohort resources.  A link should be placed in the demos folder README that links students to the demos repository. Please make sure that you follow the instructions within [Lecture Demos](#lecture-demos) upon placing the link. 
 
