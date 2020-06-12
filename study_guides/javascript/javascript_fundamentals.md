@@ -1,18 +1,24 @@
 # const vs let 
 
 ## const 
-* not able to reasign 
+* not able to reassign 
 ```javascript
-const banana = "yellow"
-banana = "blue"
+const banana = "yellow";
+banana = "blue";
 ERROR!
 ```
 
 ## let 
 * able to reassign 
 ```javascript
-let banana = "yellow"
-banana = "blue"
+let banana = "yellow";
+banana = "blue";
+```
+* cannot redeclare
+```javascript
+let mango = "orange";
+let mango = "yellow";
+ERROR!
 ```
 
 # block 
