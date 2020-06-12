@@ -8,7 +8,7 @@
 class Map
   attr_reader :grid
   
-  # initialize takes in a dimension n and sets @grid instance var
+  # initialize takes in a dimension n and sets @grid instance variable
   # equal to 2d array of length n such that each subarr is distinct in memory
   # and filled with :x
   def initialize(n)

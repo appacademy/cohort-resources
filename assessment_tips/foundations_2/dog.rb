@@ -4,7 +4,7 @@
 # Given RSpec specs, define class and instance variables that pass the specs
 
 class Dog 
-  # dog initialize method sets @pos instance var
+  # dog initialize method sets @pos instance variable
   # to position argument, sets age instance variable
   # random number between 1 and 20
   def initialize(pos)
@@ -12,7 +12,7 @@ class Dog
     @age = (1...20).to_a.sample
   end
 
-  # how do we know by looking at specs if its a class or instance method?
+  # how do we know by looking at specs if it's a class or instance method?
   # class methods => ::find_older_dog, takes in 2 dog instances and returns older dog
   def self.find_older_dog(dog1, dog2)
       if dog1.age > dog2.age
@@ -24,9 +24,9 @@ class Dog
     end
   end
 
-  # in order to access the dogs age, like i've done, whats missing?
+  # in order to access the dog's age, like I've done, what's missing?
   # attr_reader for name
-  # instance methods => #age, returns dogs age
+  # instance methods => #age, returns dog's age
   def age
     @age
   end
