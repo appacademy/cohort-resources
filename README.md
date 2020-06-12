@@ -4,6 +4,7 @@ Here you will find all resources which will be given out throughout your time he
 
 * [Student Section](#student-section)
     + [Instructor Contact Info](#instructor-contact-info)
+    + [Cohort Calendar](#cohort-calendar)
     + [Assessment Policy](#assessment-policy)
     + [Holidays](#holidays)
     + [Alumni Engagement Agreement](#alumni-engagement-agreement)
@@ -35,6 +36,14 @@ Here you will find all resources which will be given out throughout your time he
     * bay-bridge-instructors@appacademy.io
 * Golden Gate Instructors 
     * golden-gate-instructors@appacademy.io
+
+## Cohort Calendar
+* Your Cohort's Calendar is found on the README of your Cohort's Branch
+* To get there, go to the top of the page and click the branch dropdown 
+![calendar](./images/calendar-branch.png)
+* Then, click on the branch with the name of your Cohort's start date
+* The Calendar link will then be on the branch's README as shown in the image below
+![calendar-on-branch](./images/calendar-on-branch.png)
 
 ## Assessment Policy
 * The App Academy Assessment Policy can be found [here](https://docs.google.com/document/d/1h_fKuhRYP5mGzTZrJHRyp9cpnBPlv5E7TjY_5pLZPNk/edit#).
