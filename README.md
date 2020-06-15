@@ -38,11 +38,12 @@ Here you will find all resources which will be given out throughout your time he
     * golden-gate-instructors@appacademy.io
 
 ## Cohort Calendar
-* Your Cohort's Calendar is found on the README of your Cohort's Branch
-* To get there, go to the top of the page and click the branch dropdown 
+**Your Cohort's Calendar is found on the README of your Cohort's Branch**
+1. To get there, go to the top of the page and click the branch dropdown 
+2. Then, click on the branch with the name of your Cohort's start date
+    + This process is shown in this image
 ![calendar](./images/calendar-branch.png)
-* Then, click on the branch with the name of your Cohort's start date
-* The Calendar link will then be on the branch's README as shown in the image below
+3. The Calendar link will then be on the branch's README as shown in the image below
 ![calendar-on-branch](./images/calendar-on-branch.png)
 
 ## Assessment Policy
