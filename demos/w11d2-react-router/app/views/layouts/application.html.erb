@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TodoRedux</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+  </head>
+
+  <body>
+    <% if logged_in? %>
+      <%= button_to 'Log Out', session_url, method: :delete, class: 'log-out button' %>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>
