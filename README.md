@@ -1,6 +1,6 @@
 # Welcome to App Academy! 
 
-Here you will find all resources which will be given out throughout your time here at appacademy. In order to preview the markdown files in vs code press (control + shift + m). Each cohort's branch will only have one folder that houses all demos done in lecture. ALL OTHER RESOURCES WILL BE STORED IN THE MASTER BRANCH. If you haven't learned git yet then use this [Without Git](#without-git). Otherwise, use [How to Use Repository](#how-to-use-repository) as it serves for both students and instructors. There is also two other section which serve for students and instructors respectively. 
+Here you will find all resources which will be given out throughout your time here at appacademy. In order to preview the markdown files in vs code press (control + shift + m). Each cohort's branch will only have one folder that houses all lectures. ALL OTHER RESOURCES WILL BE STORED IN THE MASTER BRANCH. If you haven't learned git yet then use this [Without Git](#without-git). Otherwise, use [How to Use Repository](#how-to-use-repository) as it serves for both students and instructors. There is also two other section which serve for students and instructors respectively. 
 
 * [Student Section](#student-section)
     + [Instructor Contact Info](#instructor-contact-info)
@@ -14,15 +14,15 @@ Here you will find all resources which will be given out throughout your time he
     + [Workflow](#workflow)
         * [Jira Workflow](#jira-workflow)
         * [Git Workflow](#git-workflow)
-    + [Lecture Demos](#lecture-demos)
+    + [Cohort-Lectures](#cohort-lectures)
     + [Multi-day Demos](#multi-day-demos)
 
 ## How To Use Repository
 * Clone this repository in order to have access to all resources provided throughout the cohort:``` git clone <url>```.
 * DO NOT GIT INIT ONCE YOUVE CLONED THIS REPOSITORY. When you clone, all commits are preserved.
-* Once cloned, if you type git branch -r, you should be able to see different branches with dates.  Look for the date which corresponds with YOUR start date and begin to track that branch: ```git checkout --track origin/<month-day-year>```. Here is where all of the respective cohort lecture demos will live.
+* Once cloned, if you type git branch -r, you should be able to see different branches with dates.  Look for the date which corresponds with YOUR start date and begin to track that branch: ```git checkout --track origin/<month-day-year>```. Here is where all of the respective cohort lectures will live.
 * You can type ``` git branch ``` to see that your cohorts branch is now there and being tracked.
-* Each cohort's branch will only have one folder that houses all demos done in lecture 
+* Each cohort's branch will only have one folder that houses all lectures
 * ALL OTHER RESOURCES WILL BE STORED IN THE MASTER BRANCH 
 * In order to have the demos from lectures you must checkout your cohorts branch ``` git checkout <month-day-year>```and run ```git pull```.
 * If there are changes done to assessment_tips, foundations_remote, student_success, or study_guides you must go into master and run ```git pull``` to receive the changes.
@@ -70,9 +70,10 @@ https://appacademy.io/alumni-engagement-agreement
 ### common_bugs 
 * This folder has information on common bugs that you may encounter during your time at app academy.
 
-### demos
+### lectures
 * Remember you must go into your cohorts branch in order to see this folder ```git checkout <month-start_date-year>```.
 * All demos performed during lecture can be found in this folder.
+* Lecture slides can also be found with this folder.
 
 ### environment_setup 
 * this folder holds some information on setting up your environment.
@@ -95,10 +96,10 @@ https://appacademy.io/alumni-engagement-agreement
 # Instructor Section
 
 * Each cohort will have its own branch.  The master branch serves as the skeleton branch.  Whenever you want to make a new branch for a cohort, branch from the master branch and name it as such: ```git branch <month-start_day-year>```. 
-* Make sure to then delete all other folders except the demos folder.
+* Make sure to then delete all other folders except the lectures folder.
 * Finally, ``` git push -u origin <month-start_date-year>``` to push all branches to the remote repository
     * This will track the branch in the remote repository 
-* Each cohort branch will only house the demos folder. This is done for maintainability reasons.
+* Each cohort branch will only house the lectures folder. This is done for maintainability reasons.
 
 ## Workflow
 * So you want to contribute to cohort resources? you've come to the right spot
@@ -145,10 +146,10 @@ https://appacademy.io/alumni-engagement-agreement
 ### Git Workflow 
 * Before contributing please make sure that you follow the steps above to submit an issue and assign yourself to it once it has been placed in the selected for development section
 * First of all, NEVER directly push to master or a cohorts branch.
-* Demos during lecture will follow the instructions below [Lecture Demos](#lecture-demos)
+* lectures will follow the instructions below [Cohort-Lectures](#cohort-lectures)
 * ***Any contributions to the master branch will follow the following workflow***: 
 #### Contributing
-1. git pull master
+1. git pull (on master)
 2. git checkout -b `IN-<jira issue number>-<abbreviated jira issue title>`
 3. add contribution to the branch (add, commit, etc...)
     * commit messages must include the jira issue number. 
@@ -157,7 +158,7 @@ https://appacademy.io/alumni-engagement-agreement
 5. git pull master
 6. git checkout `<name of branch you're trying to contribute>`
 7. git rebase master 
-    * If you run into a merge conflict please contact cohort resource branch manager. Branch managers can be found here: [Branch Managers](https://appacademyio.atlassian.net/wiki/spaces/IN/pages/804028585/Cohort+Resources)
+    * If you run into a merge conflict please contact a cohort resources branch manager. Branch managers can be found here: [Branch Managers](https://appacademyio.atlassian.net/wiki/spaces/IN/pages/804028585/Cohort+Resources)
 8. git push 
     * do command that git tells you to do
 9. create pull request on git
@@ -165,21 +166,21 @@ https://appacademy.io/alumni-engagement-agreement
 #### Reviewing 
 1. make sure that after reviewing that you do not merge the request. Only branch managers will be allowed to merge requests. 
 
-## Lecture Demos
-*  Demos from lecture live within the demos repository of the cohorts branch.  For every demo: 
+## Cohort-Lectures
+*  lectures live within the lectures repository of the cohorts branch.  For every lecture: 
 1. checkout the appropriate branch for the cohort ```git checkout <month-start_date-year>```
 2. git pull 
 3. Create another branch that branches off from the cohorts branch that you just checked out.
     * ``` git checkout -b add-ajax-lecture-w9d4```
-4. cd into the demo directory, and create a folder that will house the demo ``` wXdX-(name of demo) ```.  After the demos completion, add, and commit work.
+4. cd into the lectures directory, and create a folder that will house the demo and lecture slides ``` wXdX-(name of demo) ```. After the lectures completion, add, and commit work.
 5. git push
     * do command that git tells you to do
-6. On Github create pull request where the base is the cohort branch you're trying to merge into. make sure that base is not master. 
+6. On Github create pull request where the base is the cohort branch you're trying to merge into. Make sure that base is not master. 
 
 7. Assign branch manager to review your pull request.
 
-* If you run into any issues please contact cohort resource [Branch Managers](https://appacademyio.atlassian.net/wiki/spaces/IN/pages/804028585/Cohort+Resources)
+* If you run into any issues please contact cohort resources [Branch Managers](https://appacademyio.atlassian.net/wiki/spaces/IN/pages/804028585/Cohort+Resources)
 
 ## Multi-day Demos 
-* Multi-day demos will live in their own repository.  In other words, they will not live within cohort resources.  A link should be placed in the demos folder README that links students to the demos repository. Please make sure that you follow the instructions within [Lecture Demos](#lecture-demos) upon placing the link. 
+* Multi-day demos will live in their own repository.  In other words, they will not live within cohort resources.  A link should be placed in the lectures folder README that links students to the demos repository. Please make sure that you follow the instructions within [Cohort-Lectures](#cohort-lectures) upon placing the link. 
 
