@@ -148,7 +148,7 @@ https://appacademy.io/alumni-engagement-agreement
 * Demos during lecture will follow the instructions below [Lecture Demos](#lecture-demos)
 * ***Any contributions to the master branch will follow the following workflow***: 
 #### Contributing
-1. git pull master
+1. git pull (on master)
 2. git checkout -b `IN-<jira issue number>-<abbreviated jira issue title>`
 3. add contribution to the branch (add, commit, etc...)
     * commit messages must include the jira issue number. 
@@ -157,7 +157,7 @@ https://appacademy.io/alumni-engagement-agreement
 5. git pull master
 6. git checkout `<name of branch you're trying to contribute>`
 7. git rebase master 
-    * If you run into a merge conflict please contact cohort resource branch manager. Branch managers can be found here: [Branch Managers](https://appacademyio.atlassian.net/wiki/spaces/IN/pages/804028585/Cohort+Resources)
+    * If you run into a merge conflict please contact a cohort resources branch manager. Branch managers can be found here: [Branch Managers](https://appacademyio.atlassian.net/wiki/spaces/IN/pages/804028585/Cohort+Resources)
 8. git push 
     * do command that git tells you to do
 9. create pull request on git
@@ -171,14 +171,14 @@ https://appacademy.io/alumni-engagement-agreement
 2. git pull 
 3. Create another branch that branches off from the cohorts branch that you just checked out.
     * ``` git checkout -b add-ajax-lecture-w9d4```
-4. cd into the demo directory, and create a folder that will house the demo ``` wXdX-(name of demo) ```.  After the demos completion, add, and commit work.
+4. cd into the demo directory, and create a folder that will house the demo ``` wXdX-(name of demo) ```.  Make sure that you also include the lecture slides without the instructor notes. After the demos completion, add, and commit work.
 5. git push
     * do command that git tells you to do
-6. On Github create pull request where the base is the cohort branch you're trying to merge into. make sure that base is not master. 
+6. On Github create pull request where the base is the cohort branch you're trying to merge into. Make sure that base is not master. 
 
 7. Assign branch manager to review your pull request.
 
-* If you run into any issues please contact cohort resource [Branch Managers](https://appacademyio.atlassian.net/wiki/spaces/IN/pages/804028585/Cohort+Resources)
+* If you run into any issues please contact cohort resources [Branch Managers](https://appacademyio.atlassian.net/wiki/spaces/IN/pages/804028585/Cohort+Resources)
 
 ## Multi-day Demos 
 * Multi-day demos will live in their own repository.  In other words, they will not live within cohort resources.  A link should be placed in the demos folder README that links students to the demos repository. Please make sure that you follow the instructions within [Lecture Demos](#lecture-demos) upon placing the link. 
