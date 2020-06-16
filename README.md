@@ -70,9 +70,10 @@ https://appacademy.io/alumni-engagement-agreement
 ### common_bugs 
 * This folder has information on common bugs that you may encounter during your time at app academy.
 
-### demos
+### lectures
 * Remember you must go into your cohorts branch in order to see this folder ```git checkout <month-start_date-year>```.
 * All demos performed during lecture can be found in this folder.
+* Lecture slides can also be found with this folder.
 
 ### environment_setup 
 * this folder holds some information on setting up your environment.
