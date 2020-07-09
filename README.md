@@ -167,7 +167,7 @@ https://appacademy.io/alumni-engagement-agreement
 1. make sure that after reviewing that you do not merge the request. Only branch managers will be allowed to merge requests. 
 
 ## Cohort-Lectures
-*  lectures live within the lectures repository of the cohorts branch.  For every lecture: 
+*  lectures live within the lectures repository of the cohorts branch. If you are doing a lecture that uses a demo that spands multiple days please follow directions in [Multi-Day Demos](#Multi-day-Demos).  For every other lecture please follow these steps: 
 1. checkout the appropriate branch for the cohort ```git checkout <month-start_date-year>```
 2. git pull 
 3. Create another branch that branches off from the cohorts branch that you just checked out.
