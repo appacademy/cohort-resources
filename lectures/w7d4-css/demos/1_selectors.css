@@ -1,0 +1,39 @@
+
+
+/* (0,0,0,1) */
+/* .descendant-selector p {
+  background-color: blue;
+} */
+
+
+/* (0,0,0,2) */
+h3 ~ p {
+  background-color: green;
+}
+
+
+
+
+
+
+.child-selector > p {
+  background-color: red;
+}
+
+.highlight {
+  background: yellow;
+}
+
+/* p.highlight {
+  background: yellow;
+} */
+
+
+
+div#pink {
+  background-color: pink;
+}
+
+#pink {
+  background-color: red;
+}
