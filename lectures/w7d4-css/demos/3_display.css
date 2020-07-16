@@ -1,0 +1,95 @@
+.block-one {
+  background: coral;
+}
+
+.block-two {
+  background: cornflowerblue;
+}
+
+
+.block-three {
+  background: pink;
+  margin: 10px;
+}
+
+.block-four {
+  background: powderblue;
+  margin: 50px;
+}
+
+/* (0,0,1,0) */
+[class*="block"] {
+  height: 100px;
+  width: 100px;
+}
+
+
+
+/* Note that inline can not have h or w */
+.inline-one {
+  background: red;
+  height: 300px;
+  width: 200px;
+}
+
+
+.inline-two {
+  background: orange;
+}
+
+.inline-three {
+  background: yellow;
+}
+.inline-four {
+  background: green;
+}
+.inline-five {
+  background: blue;
+}
+.inline-six {
+  background: purple;
+}
+.inline-note {
+  background: lightgray;
+}
+
+[class*="inline"] {
+  font-size: 36px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  margin: 10px;
+}
+
+
+
+
+
+
+
+
+
+[class*="inline-block"] {
+  display: inline-block;
+}
+.inline-block-one {
+  background: coral;
+}
+
+.inline-block-two {
+  background: cornflowerblue;
+}
+
+
+
+
+.flexed {
+  display: flex;
+  height: 700px;
+  background: lightslategray;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
