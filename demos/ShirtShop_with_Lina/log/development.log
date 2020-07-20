@@ -1,0 +1,3081 @@
+Started GET "/" for ::1 at 2020-06-14 10:25:47 -0700
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/linakherchi/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 5852ms (Views: 2507.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:26:05 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (5.3ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4872ms (Views: 15.0ms | ActiveRecord: 27.7ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:27:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 707ms (Views: 705.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:28:01 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.7ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 41ms (Views: 22.3ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:31:50 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 554ms (Views: 552.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:31:51 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (7.4ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 11ms (Views: 2.4ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:31:52 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:31:53 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.8ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:32:13 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 91ms (Views: 90.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:32:13 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.3ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:32:49 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 60ms (Views: 59.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:32:50 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.4ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:33:41 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 86ms (Views: 84.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:33:42 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:33:43 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 38ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:33:43 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.8ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:33:51 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 88ms (Views: 87.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:33:52 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (8.3ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 12ms (Views: 2.7ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:33:53 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 38ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:33:53 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (3.0ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 7ms (Views: 2.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:34:04 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 83ms (Views: 81.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:34:05 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (7.8ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 11ms (Views: 2.1ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:34:06 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:34:06 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (8.7ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 13ms (Views: 2.6ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:34:08 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:34:08 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.8ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:34:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 55ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:34:21 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.8ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:34:22 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:34:23 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.4ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:34:24 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:34:24 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.9ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:34:41 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 78ms (Views: 77.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:34:42 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (8.3ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 12ms (Views: 2.8ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:34:43 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:34:44 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.3ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:34:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 37ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:34:45 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.4ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:35:05 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 130ms (Views: 128.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:35:06 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (42.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 46ms (Views: 2.4ms | ActiveRecord: 42.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:35:23 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 64ms (Views: 62.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:35:24 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.7ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:35:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 75ms (Views: 74.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:35:32 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.6ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:35:53 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 55ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:35:54 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (3.0ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:36:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 84ms (Views: 83.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:36:29 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (6.1ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 10ms (Views: 2.5ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:37:12 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 66ms (Views: 64.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:37:13 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:37:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 70ms (Views: 69.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:37:22 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:38:15 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 1081ms (Views: 1073.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:38:17 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.8ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:39:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 72ms (Views: 70.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:39:00 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.7ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:39:01 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 28ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:39:02 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (2.4ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:40:26 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 59ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:40:26 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:40:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:40:28 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:41:17 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 79ms (Views: 78.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:41:17 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:42:31 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 92ms (Views: 91.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:42:31 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.3ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:43:12 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 68ms (Views: 66.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:43:12 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.0ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:43:13 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:43:13 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.0ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:43:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 56ms (Views: 55.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:43:35 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.4ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:43:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:43:36 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:43:55 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 75ms (Views: 73.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:43:56 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.8ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:43:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:43:57 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:44:03 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:44:04 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.2ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:45:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 92ms (Views: 91.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:45:15 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.4ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:45:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 43ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:45:28 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.4ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:46:12 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 821ms (Views: 820.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:46:13 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (43.4ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 54ms (Views: 8.3ms | ActiveRecord: 43.4ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:46:26 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 59ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:46:27 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (29.1ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 32ms (Views: 1.9ms | ActiveRecord: 29.1ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:46:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 93ms (Views: 92.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:46:40 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (43.3ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 46ms (Views: 1.8ms | ActiveRecord: 43.3ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:46:54 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 76ms (Views: 75.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:46:55 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (46.9ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 51ms (Views: 2.8ms | ActiveRecord: 46.9ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:47:36 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 76ms (Views: 74.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:47:37 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (3.1ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 8ms (Views: 3.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:48:37 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 85ms (Views: 84.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:48:37 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.6ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:48:55 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 116ms (Views: 115.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:48:56 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:49:09 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 60ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:49:10 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.1ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:49:11 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 34ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:49:11 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.6ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:51:17 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 77ms (Views: 76.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:51:17 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (5.1ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 10ms (Views: 4.0ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:51:51 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 75ms (Views: 73.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:51:51 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.6ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:52:11 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 59ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:52:12 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (3.0ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:52:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 63ms (Views: 61.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:52:36 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.0ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:53:09 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 855ms (Views: 853.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:53:10 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (9.9ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 13ms (Views: 2.3ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:53:16 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 57ms (Views: 55.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:53:17 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (22.4ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 26ms (Views: 2.8ms | ActiveRecord: 22.4ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:53:22 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 83ms (Views: 82.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:53:23 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.4ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:53:24 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:53:24 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:53:30 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 59ms (Views: 58.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:53:31 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:53:58 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 53ms (Views: 52.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:53:59 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:54:49 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 56ms (Views: 55.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:54:50 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.4ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:55:05 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 88ms (Views: 87.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:55:06 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:55:15 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 61ms (Views: 59.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:55:16 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:55:41 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 68ms (Views: 67.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:55:41 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (37.7ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 41ms (Views: 2.5ms | ActiveRecord: 37.7ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:56:07 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 84ms (Views: 82.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:56:08 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.6ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:56:16 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 84ms (Views: 83.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:56:17 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:56:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 99ms (Views: 97.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:56:30 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.6ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:56:43 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 102ms (Views: 100.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:56:43 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (28.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 32ms (Views: 2.0ms | ActiveRecord: 28.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:57:26 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 728ms (Views: 727.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:57:28 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:57:41 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 108ms (Views: 106.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:57:42 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (8.8ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 12ms (Views: 2.3ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:57:43 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 52ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:57:43 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (2.6ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:57:50 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 59ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:57:51 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:58:18 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 72ms (Views: 70.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:58:19 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.6ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:59:07 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 738ms (Views: 737.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:59:08 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.8ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:59:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 84ms (Views: 82.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:59:25 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (24.2ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 29ms (Views: 3.9ms | ActiveRecord: 24.2ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 10:59:48 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 68ms (Views: 66.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 10:59:48 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.0ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:00:05 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 119ms (Views: 116.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:00:06 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.9ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:00:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 89ms (Views: 88.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:00:35 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (18.0ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 21ms (Views: 2.3ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:00:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 108ms (Views: 107.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:00:44 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.7ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:00:56 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 89ms (Views: 87.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:00:57 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.3ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:01:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 107ms (Views: 105.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:01:38 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.4ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:01:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 82ms (Views: 80.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:01:58 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.0ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:02:07 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 106ms (Views: 105.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:02:07 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.4ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:02:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:02:15 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.8ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:02:33 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 83ms (Views: 82.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:02:34 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (3.7ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 8ms (Views: 3.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:03:37 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 91ms (Views: 89.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:03:38 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (3.7ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 8ms (Views: 3.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:03:39 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:03:39 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:04:15 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 84ms (Views: 82.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:04:16 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.8ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:04:17 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 820ms (Views: 819.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:04:18 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.7ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:04:43 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 131ms (Views: 129.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:04:44 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (35.7ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 40ms (Views: 2.8ms | ActiveRecord: 35.7ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:04:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:04:45 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (85.8ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 173ms (Views: 86.7ms | ActiveRecord: 85.8ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:04:54 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 88ms (Views: 86.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:04:55 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.4ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:05:01 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 77ms (Views: 76.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:05:01 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (3.2ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 7ms (Views: 3.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:05:13 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 72ms (Views: 70.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:05:14 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:05:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 38ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:05:15 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.9ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:05:15 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:05:16 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.7ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 7ms (Views: 3.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:05:56 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 71ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:05:56 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.4ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:05:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:05:58 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.0ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:05:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:05:59 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (151.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 156ms (Views: 3.0ms | ActiveRecord: 151.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:06:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 738ms (Views: 736.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:06:33 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (2.8ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:06:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:06:35 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (3.1ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:06:40 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 93ms (Views: 92.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:06:41 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (2.3ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:06:43 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 40ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:06:43 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (4.7ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 8ms (Views: 2.4ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:07:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 92ms (Views: 90.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:07:30 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.3ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:07:36 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 121ms (Views: 118.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:07:37 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:07:55 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 98ms (Views: 97.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:07:56 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.8ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:07:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 50ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:07:57 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (38.1ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 42ms (Views: 2.5ms | ActiveRecord: 38.1ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:08:02 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 71ms (Views: 70.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:08:03 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.4ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:08:12 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 71ms (Views: 70.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:08:13 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.6ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:08:17 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 71ms (Views: 70.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:08:18 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (2.0ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:08:27 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 81ms (Views: 79.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:08:28 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.7ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:08:37 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 79ms (Views: 77.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:08:38 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (46.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 50ms (Views: 2.5ms | ActiveRecord: 46.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:08:51 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 115ms (Views: 113.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:08:51 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.4ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:09:13 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:09:13 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.9ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/api/shirts" for ::1 at 2020-06-14 11:09:16 -0700
+Processing by Api::ShirtsController#create as JSON
+  Parameters: {"shirt"=>{"style"=>"sdf", "price"=>"sfdf", "id"=>"255554"}}
+Unpermitted parameter: :id
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/shirts_controller.rb:12
+  [1m[36mShirt Create (15.4ms)[0m  [1m[32mINSERT INTO "shirts" ("style", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["style", "sdf"], ["price", 0.0], ["created_at", "2020-06-14 18:09:17.002326"], ["updated_at", "2020-06-14 18:09:17.002326"]]
+  ↳ app/controllers/api/shirts_controller.rb:12
+  [1m[35m (28.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/shirts_controller.rb:12
+Completed 200 OK in 52ms (Views: 0.8ms | ActiveRecord: 45.6ms)
+
+
+Started POST "/api/shirts" for ::1 at 2020-06-14 11:09:20 -0700
+Processing by Api::ShirtsController#create as JSON
+  Parameters: {"shirt"=>{"style"=>"sdfdf", "price"=>"sdfdsf", "id"=>"159835"}}
+Unpermitted parameter: :id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/shirts_controller.rb:12
+  [1m[36mShirt Create (2.1ms)[0m  [1m[32mINSERT INTO "shirts" ("style", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["style", "sdfdf"], ["price", 0.0], ["created_at", "2020-06-14 18:09:20.101471"], ["updated_at", "2020-06-14 18:09:20.101471"]]
+  ↳ app/controllers/api/shirts_controller.rb:12
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/shirts_controller.rb:12
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:09:22 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:09:23 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:09:24 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:09:25 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (25.0ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 30ms (Views: 3.5ms | ActiveRecord: 25.0ms)
+
+
+Started POST "/api/shirts" for ::1 at 2020-06-14 11:09:30 -0700
+Processing by Api::ShirtsController#create as JSON
+  Parameters: {"shirt"=>{"style"=>"sdfdf", "price"=>"3", "id"=>"71742"}}
+Unpermitted parameter: :id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/shirts_controller.rb:12
+  [1m[36mShirt Create (0.4ms)[0m  [1m[32mINSERT INTO "shirts" ("style", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["style", "sdfdf"], ["price", 3.0], ["created_at", "2020-06-14 18:09:30.599581"], ["updated_at", "2020-06-14 18:09:30.599581"]]
+  ↳ app/controllers/api/shirts_controller.rb:12
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/shirts_controller.rb:12
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:09:36 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:09:37 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (4.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 8ms (Views: 2.9ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-14 11:11:10 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 61ms (Views: 59.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-14 11:11:10 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (37.8ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 42ms (Views: 3.3ms | ActiveRecord: 37.8ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mShirt Create (1.0ms)[0m  [1m[32mINSERT INTO "shirts" ("style", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["style", "Alvin's plaid shirt"], ["price", 1000000.0], ["created_at", "2020-06-14 18:25:20.042297"], ["updated_at", "2020-06-14 18:25:20.042297"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mShirt Create (0.4ms)[0m  [1m[32mINSERT INTO "shirts" ("style", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["style", "Erik's hawaiian bonanza"], ["price", 500000.0], ["created_at", "2020-06-14 18:25:20.045850"], ["updated_at", "2020-06-14 18:25:20.045850"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mShirt Create (0.4ms)[0m  [1m[32mINSERT INTO "shirts" ("style", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["style", "Joe's Brewery Collection"], ["price", 500000.0], ["created_at", "2020-06-14 18:25:20.048129"], ["updated_at", "2020-06-14 18:25:20.048129"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (25.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mShirt Load (21.1ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mShirt Destroy (0.6ms)[0m  [1m[31mDELETE FROM "shirts" WHERE "shirts"."id" = $1[0m  [["id", 51]]
+  ↳ db/seeds.rb:9
+  [1m[35m (26.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mShirt Destroy (0.7ms)[0m  [1m[31mDELETE FROM "shirts" WHERE "shirts"."id" = $1[0m  [["id", 52]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mShirt Destroy (0.5ms)[0m  [1m[31mDELETE FROM "shirts" WHERE "shirts"."id" = $1[0m  [["id", 53]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mShirt Create (0.6ms)[0m  [1m[32mINSERT INTO "shirts" ("style", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["style", "Alvin's plaid shirt"], ["price", 1000000.0], ["created_at", "2020-06-14 18:27:45.886667"], ["updated_at", "2020-06-14 18:27:45.886667"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mShirt Create (0.3ms)[0m  [1m[32mINSERT INTO "shirts" ("style", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["style", "Erik's hawaiian bonanza"], ["price", 500000.0], ["created_at", "2020-06-14 18:27:45.889408"], ["updated_at", "2020-06-14 18:27:45.889408"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mShirt Create (0.4ms)[0m  [1m[32mINSERT INTO "shirts" ("style", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["style", "Joe's Brewery Collection"], ["price", 500000.0], ["created_at", "2020-06-14 18:27:45.891771"], ["updated_at", "2020-06-14 18:27:45.891771"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE DATABASE "ShirtShop_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "ShirtShop_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35mSQL (4.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (36.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "shirts" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (36.2ms)[0m  [1m[35mCREATE TABLE "shirts" ("id" bigserial primary key, "style" character varying, "price" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (10.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "shirts" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (12.8ms)[0m  [1m[35mCREATE TABLE "shirts" ("id" bigserial primary key, "style" character varying, "price" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Update (5.8ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2020-06-15 15:21:37.446122"], ["key", "environment"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-06-15 15:21:37.456684"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mShirt Load (0.9ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mShirt Create (1.0ms)[0m  [1m[32mINSERT INTO "shirts" ("style", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["style", "Alvin's plaid shirt"], ["price", 1000000.0], ["created_at", "2020-06-15 15:21:37.501504"], ["updated_at", "2020-06-15 15:21:37.501504"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mShirt Create (0.4ms)[0m  [1m[32mINSERT INTO "shirts" ("style", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["style", "Erik's hawaiian bonanza"], ["price", 500000.0], ["created_at", "2020-06-15 15:21:37.504728"], ["updated_at", "2020-06-15 15:21:37.504728"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mShirt Create (0.4ms)[0m  [1m[32mINSERT INTO "shirts" ("style", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["style", "Joe's Brewery Collection"], ["price", 500000.0], ["created_at", "2020-06-15 15:21:37.507260"], ["updated_at", "2020-06-15 15:21:37.507260"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+Started GET "/" for ::1 at 2020-06-15 08:22:34 -0700
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/linakherchi/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 2582ms (Views: 2575.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-15 08:22:37 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.7ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 45ms (Views: 18.0ms | ActiveRecord: 22.9ms)
+
+
+Started GET "/" for ::1 at 2020-06-15 08:30:47 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 59ms (Views: 57.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-15 08:30:47 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (1.9ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2020-06-15 09:00:33 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 146ms (Views: 133.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-15 09:00:34 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (4.3ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 25ms (Views: 17.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/" for ::1 at 2020-06-15 09:05:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 163ms (Views: 160.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-15 09:05:30 -0700
+Processing by Api::ShirtsController#index as JSON
+  [1m[36mShirt Load (0.8ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/controllers/api/shirts_controller.rb:5
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-15 09:07:49 -0700
+Processing by Api::ShirtsController#index as JSON
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template api/shirts/index, application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/linakherchi/Desktop/ShirtShop_with_Carlos-start/app/views"
+):
+  
+app/controllers/api/shirts_controller.rb:5:in `index'
+Started GET "/api/shirts" for ::1 at 2020-06-15 09:08:37 -0700
+Processing by Api::ShirtsController#index as JSON
+  Rendering api/shirts/index.json.jbuilder
+  Rendered api/shirts/index.json.jbuilder (154332.1ms)
+Completed 200 OK in 154383ms (Views: 154373.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-15 09:11:12 -0700
+Started GET "/" for ::1 at 2020-06-15 09:11:12 -0700
+Started GET "/api/shirts" for ::1 at 2020-06-15 09:11:12 -0700
+Processing by Api::ShirtsController#index as JSON
+  Rendering api/shirts/index.json.jbuilder
+  Rendered api/shirts/index.json.jbuilder (38.2ms)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 0.0ms)
+
+
+  
+Processing by Api::ShirtsController#index as JSON
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+  Rendering api/shirts/index.json.jbuilder
+    1: @shirts.each do |shirt|
+    2:     json.set! shirt.id do
+    3:         json.extract! shirt, :id, :style, :price 
+    4:     end
+  
+  Rendered api/shirts/index.json.jbuilder (7.1ms)
+app/views/api/shirts/index.json.jbuilder:1:in `_app_views_api_shirts_index_json_jbuilder__4304664790938117065_70334059397620'
+app/controllers/api/shirts_controller.rb:5:in `index'
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: @shirts.each do |shirt|
+    2:     json.set! shirt.id do
+    3:         json.extract! shirt, :id, :style, :price 
+    4:     end
+  
+app/views/api/shirts/index.json.jbuilder:1:in `_app_views_api_shirts_index_json_jbuilder__4304664790938117065_70334059397620'
+app/controllers/api/shirts_controller.rb:5:in `index'
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 328ms (Views: 324.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-15 09:11:33 -0700
+Processing by Api::ShirtsController#index as JSON
+  Rendering api/shirts/index.json.jbuilder
+  [1m[36mShirt Load (1.7ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/views/api/shirts/index.json.jbuilder:1
+  Rendered api/shirts/index.json.jbuilder (148.4ms)
+Completed 200 OK in 181ms (Views: 107.9ms | ActiveRecord: 67.3ms)
+
+
+Started GET "/" for ::1 at 2020-06-15 09:11:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 116ms (Views: 114.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-15 09:12:01 -0700
+Processing by Api::ShirtsController#index as JSON
+  Rendering api/shirts/index.json.jbuilder
+  [1m[36mShirt Load (1.1ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/views/api/shirts/index.json.jbuilder:1
+  Rendered api/shirts/index.json.jbuilder (5.5ms)
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-06-15 09:14:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1842ms (Views: 1840.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-15 09:15:01 -0700
+Processing by Api::ShirtsController#index as JSON
+  Rendering api/shirts/index.json.jbuilder
+  [1m[36mShirt Load (1.3ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/views/api/shirts/index.json.jbuilder:1
+  Rendered api/shirts/index.json.jbuilder (36.4ms)
+Completed 200 OK in 62ms (Views: 37.6ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-15 09:45:39 -0700
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/linakherchi/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 6783ms (Views: 6739.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-15 09:45:47 -0700
+Processing by Api::ShirtsController#index as JSON
+  Rendering api/shirts/index.json.jbuilder
+  [1m[36mShirt Load (11.7ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/views/api/shirts/index.json.jbuilder:1
+  Rendered api/shirts/_shirt.json.jbuilder (0.8ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.2ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.3ms)
+  Rendered api/shirts/index.json.jbuilder (162.5ms)
+Completed 200 OK in 193ms (Views: 105.3ms | ActiveRecord: 80.6ms)
+
+
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6069202098388543590)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to UpdateShirtsTable (20200615164710)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.2ms)[0m  [1m[35mALTER TABLE "shirts" ADD "color" character varying[0m
+  ↳ db/migrate/20200615164710_update_shirts_table.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "shirts" ADD "image_url" character varying[0m
+  ↳ db/migrate/20200615164710_update_shirts_table.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200615164710"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20200615164758)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (14.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200615164758_create_users.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6069202098388543590)[0m
+  ↳ bin/rails:9
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE DATABASE "ShirtShop_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE DATABASE "ShirtShop_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (20.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "shirts" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (15.6ms)[0m  [1m[35mCREATE TABLE "shirts" ("id" bigserial primary key, "style" character varying, "price" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (16.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "shirts" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (25.1ms)[0m  [1m[35mCREATE TABLE "shirts" ("id" bigserial primary key, "style" character varying, "price" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (2.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Update (0.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2020-06-15 16:49:40.875005"], ["key", "environment"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-06-15 16:49:40.883051"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6069202098388543590)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20200615164758)
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200615164758_create_users.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6069202098388543590)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (105.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ShirtShop_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (76.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ShirtShop_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (357.5ms)[0m  [1m[35mCREATE DATABASE "ShirtShop_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (174.4ms)[0m  [1m[35mCREATE DATABASE "ShirtShop_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (6.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "shirts" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (27.9ms)[0m  [1m[35mCREATE TABLE "shirts" ("id" bigserial primary key, "style" character varying, "price" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200612162729)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (18.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (1.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-06-15 16:50:31.408205"], ["updated_at", "2020-06-15 16:50:31.408205"]]
+  ↳ db/schema.rb:13
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "shirts" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (29.1ms)[0m  [1m[35mCREATE TABLE "shirts" ("id" bigserial primary key, "style" character varying, "price" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200612162729)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (14.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (4.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-06-15 16:50:31.584933"], ["updated_at", "2020-06-15 16:50:31.584933"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.8ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-06-15 16:50:31.593151"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6069202098388543590)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to UpdateShirtsTable (20200615164710)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "shirts" ADD "color" character varying[0m
+  ↳ db/migrate/20200615164710_update_shirts_table.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "shirts" ADD "image_url" character varying[0m
+  ↳ db/migrate/20200615164710_update_shirts_table.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200615164710"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20200615164758)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200615164758_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200615164758"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateReviews (20200615164822)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.8ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "description" character varying, "user_id" integer NOT NULL, "shirt_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200615164822_create_reviews.rb:3
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE  INDEX  "index_reviews_on_user_id" ON "reviews"  ("user_id")[0m
+  ↳ db/migrate/20200615164822_create_reviews.rb:3
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_reviews_on_shirt_id" ON "reviews"  ("shirt_id")[0m
+  ↳ db/migrate/20200615164822_create_reviews.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200615164822"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6069202098388543590)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/linakherchi/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:8
+  [1m[36mShirt Load (1.6ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mReview Load (2.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mShirt Create (2.9ms)[0m  [1m[32mINSERT INTO "shirts" ("style", "price", "created_at", "updated_at", "color", "image_url") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["style", "Alvin's plaid shirt"], ["price", 1000000.0], ["created_at", "2020-06-15 16:58:53.309945"], ["updated_at", "2020-06-15 16:58:53.309945"], ["color", "Black"], ["image_url", "alvin.jpg"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mShirt Create (0.4ms)[0m  [1m[32mINSERT INTO "shirts" ("style", "price", "created_at", "updated_at", "color", "image_url") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["style", "Erik's hawaiian bonanza"], ["price", 500000.0], ["created_at", "2020-06-15 16:58:53.316478"], ["updated_at", "2020-06-15 16:58:53.316478"], ["color", "Red"], ["image_url", "erik.jpg"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mShirt Create (0.4ms)[0m  [1m[32mINSERT INTO "shirts" ("style", "price", "created_at", "updated_at", "color", "image_url") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["style", "Joe's Brewery Collection"], ["price", 500000.0], ["created_at", "2020-06-15 16:58:53.321233"], ["updated_at", "2020-06-15 16:58:53.321233"], ["color", "Black"], ["image_url", "joe.jpeg"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mShirt Create (0.6ms)[0m  [1m[32mINSERT INTO "shirts" ("style", "price", "created_at", "updated_at", "color", "image_url") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["style", "Carlos' button up shirt"], ["price", 10000000000000.0], ["created_at", "2020-06-15 16:58:53.324390"], ["updated_at", "2020-06-15 16:58:53.324390"], ["color", "White"], ["image_url", "carlos.jpeg"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "MAPA"], ["created_at", "2020-06-15 16:58:53.337541"], ["updated_at", "2020-06-15 16:58:53.337541"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Daniel"], ["created_at", "2020-06-15 16:58:53.342921"], ["updated_at", "2020-06-15 16:58:53.342921"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Create (2.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Leo Yulin Li_Official\u2029"], ["created_at", "2020-06-15 16:58:53.345541"], ["updated_at", "2020-06-15 16:58:53.345541"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Michael H"], ["created_at", "2020-06-15 16:58:53.352609"], ["updated_at", "2020-06-15 16:58:53.352609"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mShirt Load (0.6ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mReview Create (1.9ms)[0m  [1m[32mINSERT INTO "reviews" ("description", "user_id", "shirt_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Not bad! Could be more Hawaiian"], ["user_id", 1], ["shirt_id", 2], ["created_at", "2020-06-15 16:58:53.396884"], ["updated_at", "2020-06-15 16:58:53.396884"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mShirt Load (0.3ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("description", "user_id", "shirt_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Best shirt eva!!!!!!!!"], ["user_id", 2], ["shirt_id", 4], ["created_at", "2020-06-15 16:58:53.405129"], ["updated_at", "2020-06-15 16:58:53.405129"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mShirt Load (0.3ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mReview Create (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("description", "user_id", "shirt_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "I guess its cool"], ["user_id", 3], ["shirt_id", 3], ["created_at", "2020-06-15 16:58:53.413700"], ["updated_at", "2020-06-15 16:58:53.413700"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mShirt Load (0.3ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mReview Create (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("description", "user_id", "shirt_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Hello programmers !"], ["user_id", 4], ["shirt_id", 1], ["created_at", "2020-06-15 16:58:53.420628"], ["updated_at", "2020-06-15 16:58:53.420628"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+Started GET "/" for ::1 at 2020-06-15 10:01:18 -0700
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/linakherchi/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 2670ms (Views: 2633.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-15 10:01:23 -0700
+Processing by Api::ShirtsController#index as JSON
+  Rendering api/shirts/index.json.jbuilder
+  [1m[36mShirt Load (1.1ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/views/api/shirts/index.json.jbuilder:1
+  Rendered api/shirts/_shirt.json.jbuilder (1.1ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.2ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.1ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.1ms)
+  Rendered api/shirts/index.json.jbuilder (91.3ms)
+Completed 200 OK in 134ms (Views: 85.5ms | ActiveRecord: 19.2ms)
+
+
+Started GET "/api/shirts/1" for ::1 at 2020-06-15 10:01:30 -0700
+Processing by Api::ShirtsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mShirt Load (0.6ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shirts_controller.rb:20
+  Rendering api/shirts/show.json.jbuilder
+  Rendered api/shirts/show.json.jbuilder (0.7ms)
+Completed 200 OK in 22ms (Views: 14.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/shirts/1" for ::1 at 2020-06-15 10:01:44 -0700
+Processing by Api::ShirtsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mShirt Load (0.7ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shirts_controller.rb:20
+  Rendering api/shirts/show.json.jbuilder
+  Rendered api/shirts/show.json.jbuilder (1.0ms)
+Completed 200 OK in 22ms (Views: 17.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/shirts/1" for ::1 at 2020-06-15 10:02:17 -0700
+Processing by Api::ShirtsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mShirt Load (1.4ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shirts_controller.rb:20
+  Rendering api/shirts/show.json.jbuilder
+  Rendered api/shirts/show.json.jbuilder (1.2ms)
+Completed 200 OK in 28ms (Views: 23.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/shirts/1" for ::1 at 2020-06-15 10:02:47 -0700
+Processing by Api::ShirtsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mShirt Load (0.9ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shirts_controller.rb:20
+  Rendering api/shirts/show.json.jbuilder
+  Rendered api/shirts/show.json.jbuilder (108.1ms)
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `reviews_ids' for #<Shirt:0x00007f9ade3583d0>
+Did you mean?  review_ids
+               review_ids=):
+    1: json.shirt do 
+    2:     json.extract! @shirt, :id, :price, :color, :reviews_ids 
+    3: end
+    4: 
+    5: json.reviews do 
+  
+app/views/api/shirts/show.json.jbuilder:2:in `block in _app_views_api_shirts_show_json_jbuilder___2611035346017504525_70151564858380'
+app/views/api/shirts/show.json.jbuilder:1:in `_app_views_api_shirts_show_json_jbuilder___2611035346017504525_70151564858380'
+app/controllers/api/shirts_controller.rb:21:in `show'
+Started GET "/api/shirts/1" for ::1 at 2020-06-15 10:02:55 -0700
+Processing by Api::ShirtsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mShirt Load (0.6ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shirts_controller.rb:20
+  Rendering api/shirts/show.json.jbuilder
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."shirt_id" = $1[0m  [["shirt_id", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:2
+  Rendered api/shirts/show.json.jbuilder (91.4ms)
+Completed 200 OK in 110ms (Views: 94.1ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/api/shirts/1" for ::1 at 2020-06-15 10:04:35 -0700
+Processing by Api::ShirtsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mShirt Load (1.6ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shirts_controller.rb:20
+  Rendering api/shirts/show.json.jbuilder
+  Rendered api/shirts/show.json.jbuilder (8.6ms)
+Completed 200 OK in 36ms (Views: 28.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/shirts/1" for ::1 at 2020-06-15 10:04:42 -0700
+Processing by Api::ShirtsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mShirt Load (0.4ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shirts_controller.rb:20
+  Rendering api/shirts/show.json.jbuilder
+  Rendered api/shirts/show.json.jbuilder (1.1ms)
+Completed 200 OK in 25ms (Views: 20.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/shirts/1" for ::1 at 2020-06-15 10:05:03 -0700
+Processing by Api::ShirtsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mShirt Load (0.5ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shirts_controller.rb:20
+  Rendering api/shirts/show.json.jbuilder
+  Rendered api/shirts/show.json.jbuilder (6.2ms)
+Completed 200 OK in 22ms (Views: 18.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/shirts/1" for ::1 at 2020-06-15 10:06:48 -0700
+Processing by Api::ShirtsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mShirt Load (0.7ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shirts_controller.rb:20
+  Rendering api/shirts/show.json.jbuilder
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shirt_id" = $1[0m  [["shirt_id", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:7
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:10
+  Rendered api/shirts/show.json.jbuilder (167.3ms)
+Completed 200 OK in 186ms (Views: 173.8ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-15 10:10:47 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 2285ms (Views: 2283.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-15 10:10:51 -0700
+Processing by Api::ShirtsController#index as JSON
+  Rendering api/shirts/index.json.jbuilder
+  [1m[36mShirt Load (1.4ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/views/api/shirts/index.json.jbuilder:1
+  Rendered api/shirts/_shirt.json.jbuilder (1.1ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.1ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.2ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.6ms)
+  Rendered api/shirts/index.json.jbuilder (15.9ms)
+Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/shirts/1" for ::1 at 2020-06-15 10:11:37 -0700
+Processing by Api::ShirtsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mShirt Load (1.5ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shirts_controller.rb:20
+  Rendering api/shirts/show.json.jbuilder
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shirt_id" = $1[0m  [["shirt_id", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:7
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:10
+  Rendered api/shirts/show.json.jbuilder (9.6ms)
+Completed 200 OK in 29ms (Views: 23.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2020-06-15 10:17:47 -0700
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/linakherchi/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 3565ms (Views: 3552.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-15 10:17:52 -0700
+Processing by Api::ShirtsController#index as JSON
+  Rendering api/shirts/index.json.jbuilder
+  [1m[36mShirt Load (1.5ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/views/api/shirts/index.json.jbuilder:1
+  Rendered api/shirts/_shirt.json.jbuilder (0.5ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.1ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.2ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.1ms)
+  Rendered api/shirts/index.json.jbuilder (94.1ms)
+Completed 200 OK in 122ms (Views: 59.6ms | ActiveRecord: 48.3ms)
+
+
+Started GET "/api/shirts/1" for ::1 at 2020-06-15 10:17:55 -0700
+Processing by Api::ShirtsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mShirt Load (0.7ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shirts_controller.rb:20
+  Rendering api/shirts/show.json.jbuilder
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shirt_id" = $1[0m  [["shirt_id", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:7
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:10
+  Rendered api/shirts/show.json.jbuilder (120.2ms)
+Completed 200 OK in 151ms (Views: 109.2ms | ActiveRecord: 30.3ms)
+
+
+Started GET "/" for ::1 at 2020-06-15 10:38:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 1743ms (Views: 1731.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-15 10:38:03 -0700
+Processing by Api::ShirtsController#index as JSON
+  Rendering api/shirts/index.json.jbuilder
+  [1m[36mShirt Load (2.0ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/views/api/shirts/index.json.jbuilder:1
+  Rendered api/shirts/_shirt.json.jbuilder (1.4ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.6ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.2ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.1ms)
+  Rendered api/shirts/index.json.jbuilder (27.9ms)
+Completed 200 OK in 40ms (Views: 36.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/shirts/1" for ::1 at 2020-06-15 10:38:48 -0700
+Processing by Api::ShirtsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mShirt Load (0.6ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shirts_controller.rb:20
+  Rendering api/shirts/show.json.jbuilder
+  [1m[36mReview Load (3.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shirt_id" = $1[0m  [["shirt_id", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:7
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:10
+  Rendered api/shirts/show.json.jbuilder (16.4ms)
+Completed 200 OK in 32ms (Views: 20.9ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/" for ::1 at 2020-06-15 10:40:54 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2877ms (Views: 2875.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-15 10:40:59 -0700
+Processing by Api::ShirtsController#index as JSON
+  Rendering api/shirts/index.json.jbuilder
+  [1m[36mShirt Load (0.9ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/views/api/shirts/index.json.jbuilder:1
+  Rendered api/shirts/_shirt.json.jbuilder (1.0ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.1ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.1ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.3ms)
+  Rendered api/shirts/index.json.jbuilder (14.0ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/shirts/1" for ::1 at 2020-06-15 10:41:25 -0700
+Processing by Api::ShirtsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mShirt Load (7.4ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shirts_controller.rb:20
+  Rendering api/shirts/show.json.jbuilder
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shirt_id" = $1[0m  [["shirt_id", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:7
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:10
+  Rendered api/shirts/show.json.jbuilder (57.2ms)
+Completed 200 OK in 106ms (Views: 91.1ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/" for ::1 at 2020-06-15 10:44:03 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 3764ms (Views: 3762.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-15 10:44:09 -0700
+Processing by Api::ShirtsController#index as JSON
+  Rendering api/shirts/index.json.jbuilder
+  [1m[36mShirt Load (0.6ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/views/api/shirts/index.json.jbuilder:1
+  Rendered api/shirts/_shirt.json.jbuilder (2.4ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.1ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.1ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.2ms)
+  Rendered api/shirts/index.json.jbuilder (14.3ms)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/shirts/1" for ::1 at 2020-06-15 10:44:13 -0700
+Processing by Api::ShirtsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mShirt Load (0.7ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shirts_controller.rb:20
+  Rendering api/shirts/show.json.jbuilder
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shirt_id" = $1[0m  [["shirt_id", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:7
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:10
+  Rendered api/shirts/show.json.jbuilder (7.8ms)
+Completed 200 OK in 23ms (Views: 18.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2020-06-15 10:55:33 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 2242ms (Views: 2234.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-15 10:55:37 -0700
+Processing by Api::ShirtsController#index as JSON
+  Rendering api/shirts/index.json.jbuilder
+  [1m[36mShirt Load (5.4ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/views/api/shirts/index.json.jbuilder:1
+  Rendered api/shirts/_shirt.json.jbuilder (2.2ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.6ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.1ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.1ms)
+  Rendered api/shirts/index.json.jbuilder (34.1ms)
+Completed 200 OK in 57ms (Views: 48.1ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/api/shirts/1" for ::1 at 2020-06-15 10:55:45 -0700
+Processing by Api::ShirtsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mShirt Load (0.5ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shirts_controller.rb:20
+  Rendering api/shirts/show.json.jbuilder
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shirt_id" = $1[0m  [["shirt_id", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:7
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:10
+  Rendered api/shirts/show.json.jbuilder (13.1ms)
+Completed 200 OK in 34ms (Views: 27.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for ::1 at 2020-06-15 11:02:03 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3117ms (Views: 3115.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-15 11:02:08 -0700
+Processing by Api::ShirtsController#index as JSON
+  Rendering api/shirts/index.json.jbuilder
+  [1m[36mShirt Load (2.3ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/views/api/shirts/index.json.jbuilder:1
+  Rendered api/shirts/_shirt.json.jbuilder (2.0ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.2ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.1ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.2ms)
+  Rendered api/shirts/index.json.jbuilder (24.7ms)
+Completed 200 OK in 47ms (Views: 43.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2020-06-15 11:03:47 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2702ms (Views: 2700.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-15 11:03:52 -0700
+Processing by Api::ShirtsController#index as JSON
+  Rendering api/shirts/index.json.jbuilder
+  [1m[36mShirt Load (1.6ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/views/api/shirts/index.json.jbuilder:1
+  Rendered api/shirts/_shirt.json.jbuilder (0.7ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.1ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.1ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.2ms)
+  Rendered api/shirts/index.json.jbuilder (12.6ms)
+Completed 200 OK in 31ms (Views: 27.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2020-06-15 11:27:56 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 2092ms (Views: 2090.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-06-15 11:28:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 2154ms (Views: 2152.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-15 11:28:23 -0700
+Processing by Api::ShirtsController#index as JSON
+  Rendering api/shirts/index.json.jbuilder
+  [1m[36mShirt Load (4.6ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/views/api/shirts/index.json.jbuilder:1
+  Rendered api/shirts/_shirt.json.jbuilder (1.0ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.1ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.3ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.3ms)
+  Rendered api/shirts/index.json.jbuilder (21.9ms)
+Completed 200 OK in 36ms (Views: 29.7ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/" for ::1 at 2020-06-15 11:28:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 214ms (Views: 208.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-15 11:29:00 -0700
+Processing by Api::ShirtsController#index as JSON
+  Rendering api/shirts/index.json.jbuilder
+  [1m[36mShirt Load (6.1ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/views/api/shirts/index.json.jbuilder:1
+  Rendered api/shirts/_shirt.json.jbuilder (1.7ms)
+  Rendered api/shirts/_shirt.json.jbuilder (62.6ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.2ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.1ms)
+  Rendered api/shirts/index.json.jbuilder (121.3ms)
+Completed 200 OK in 154ms (Views: 146.2ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/api/shirts/1" for ::1 at 2020-06-15 11:29:11 -0700
+Processing by Api::ShirtsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mShirt Load (1.4ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shirts_controller.rb:20
+  Rendering api/shirts/show.json.jbuilder
+  [1m[36mReview Load (1.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shirt_id" = $1[0m  [["shirt_id", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:7
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:10
+  Rendered api/shirts/show.json.jbuilder (24.9ms)
+Completed 200 OK in 47ms (Views: 34.0ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/" for ::1 at 2020-06-15 11:34:46 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3131ms (Views: 3129.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-15 11:34:51 -0700
+Processing by Api::ShirtsController#index as JSON
+  Rendering api/shirts/index.json.jbuilder
+  [1m[36mShirt Load (0.6ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/views/api/shirts/index.json.jbuilder:1
+  Rendered api/shirts/_shirt.json.jbuilder (1.0ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.1ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.2ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.4ms)
+  Rendered api/shirts/index.json.jbuilder (21.4ms)
+Completed 200 OK in 47ms (Views: 44.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-06-15 11:43:11 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 1880ms (Views: 1874.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-15 11:43:14 -0700
+Processing by Api::ShirtsController#index as JSON
+  Rendering api/shirts/index.json.jbuilder
+  [1m[36mShirt Load (4.6ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/views/api/shirts/index.json.jbuilder:1
+  Rendered api/shirts/_shirt.json.jbuilder (1.6ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.1ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.1ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.1ms)
+  Rendered api/shirts/index.json.jbuilder (19.3ms)
+Completed 200 OK in 31ms (Views: 23.7ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/api/shirts/1" for ::1 at 2020-06-15 11:43:18 -0700
+Processing by Api::ShirtsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mShirt Load (1.9ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shirts_controller.rb:20
+  Rendering api/shirts/show.json.jbuilder
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shirt_id" = $1[0m  [["shirt_id", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:7
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:10
+  Rendered api/shirts/show.json.jbuilder (14.2ms)
+Completed 200 OK in 34ms (Views: 21.6ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/api/shirts/2" for ::1 at 2020-06-15 11:43:31 -0700
+Processing by Api::ShirtsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mShirt Load (0.5ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/shirts_controller.rb:20
+  Rendering api/shirts/show.json.jbuilder
+  [1m[36mReview Load (1.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shirt_id" = $1[0m  [["shirt_id", 2]]
+  ↳ app/views/api/shirts/show.json.jbuilder:7
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:10
+  Rendered api/shirts/show.json.jbuilder (12.4ms)
+Completed 200 OK in 28ms (Views: 23.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/shirts/3" for ::1 at 2020-06-15 11:43:36 -0700
+Processing by Api::ShirtsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mShirt Load (2.7ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/shirts_controller.rb:20
+  Rendering api/shirts/show.json.jbuilder
+  [1m[36mReview Load (1.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shirt_id" = $1[0m  [["shirt_id", 3]]
+  ↳ app/views/api/shirts/show.json.jbuilder:7
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:10
+  Rendered api/shirts/show.json.jbuilder (21.3ms)
+Completed 200 OK in 45ms (Views: 28.9ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/api/shirts/4" for ::1 at 2020-06-15 11:43:39 -0700
+Processing by Api::ShirtsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mShirt Load (1.2ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/shirts_controller.rb:20
+  Rendering api/shirts/show.json.jbuilder
+  [1m[36mReview Load (1.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shirt_id" = $1[0m  [["shirt_id", 4]]
+  ↳ app/views/api/shirts/show.json.jbuilder:7
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:10
+  Rendered api/shirts/show.json.jbuilder (18.1ms)
+Completed 200 OK in 32ms (Views: 22.5ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/" for ::1 at 2020-06-15 11:47:42 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 181ms (Views: 178.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-15 11:47:43 -0700
+Processing by Api::ShirtsController#index as JSON
+  Rendering api/shirts/index.json.jbuilder
+  [1m[36mShirt Load (1.0ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/views/api/shirts/index.json.jbuilder:1
+  Rendered api/shirts/_shirt.json.jbuilder (0.7ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.1ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.1ms)
+  Rendered api/shirts/_shirt.json.jbuilder (0.2ms)
+  Rendered api/shirts/index.json.jbuilder (14.7ms)
+Completed 200 OK in 26ms (Views: 23.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/shirts/4" for ::1 at 2020-06-15 11:47:45 -0700
+Processing by Api::ShirtsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mShirt Load (1.1ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/shirts_controller.rb:20
+  Rendering api/shirts/show.json.jbuilder
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shirt_id" = $1[0m  [["shirt_id", 4]]
+  ↳ app/views/api/shirts/show.json.jbuilder:7
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:10
+  Rendered api/shirts/show.json.jbuilder (11.6ms)
+Completed 200 OK in 29ms (Views: 23.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/api/shirts/3" for ::1 at 2020-06-15 11:47:47 -0700
+Processing by Api::ShirtsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mShirt Load (0.5ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/shirts_controller.rb:20
+  Rendering api/shirts/show.json.jbuilder
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shirt_id" = $1[0m  [["shirt_id", 3]]
+  ↳ app/views/api/shirts/show.json.jbuilder:7
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:10
+  Rendered api/shirts/show.json.jbuilder (8.1ms)
+Completed 200 OK in 19ms (Views: 15.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/shirts/2" for ::1 at 2020-06-15 11:47:49 -0700
+Processing by Api::ShirtsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mShirt Load (0.5ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/shirts_controller.rb:20
+  Rendering api/shirts/show.json.jbuilder
+  [1m[36mReview Load (4.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shirt_id" = $1[0m  [["shirt_id", 2]]
+  ↳ app/views/api/shirts/show.json.jbuilder:7
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:10
+  Rendered api/shirts/show.json.jbuilder (18.0ms)
+Completed 200 OK in 46ms (Views: 36.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/api/shirts/1" for ::1 at 2020-06-15 11:47:53 -0700
+Processing by Api::ShirtsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mShirt Load (0.8ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shirts_controller.rb:20
+  Rendering api/shirts/show.json.jbuilder
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shirt_id" = $1[0m  [["shirt_id", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:7
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:10
+  Rendered api/shirts/show.json.jbuilder (10.1ms)
+Completed 200 OK in 30ms (Views: 25.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2020-06-15 11:54:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2137ms (Views: 2135.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-15 11:55:03 -0700
+Processing by Api::ShirtsController#index as JSON
+  Rendering api/shirts/index.json.jbuilder
+  [1m[36mShirt Load (8.3ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/views/api/shirts/index.json.jbuilder:1
+  Rendered api/shirts/index.json.jbuilder (89.2ms)
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 8.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: @shirts.each do |shirt|
+    2:     json.set! shirt.id do
+    3:         json.extract! @shirt, :id, :price, :color, :style
+    4:         json.image_url asset_path(@shirt.image_url)
+    5:     end
+    6: end
+  
+app/views/api/shirts/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_shirts_index_json_jbuilder___540789152578772645_70346024097260'
+app/views/api/shirts/index.json.jbuilder:2:in `block in _app_views_api_shirts_index_json_jbuilder___540789152578772645_70346024097260'
+app/views/api/shirts/index.json.jbuilder:1:in `_app_views_api_shirts_index_json_jbuilder___540789152578772645_70346024097260'
+app/controllers/api/shirts_controller.rb:5:in `index'
+Started GET "/" for ::1 at 2020-06-15 11:55:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 102ms (Views: 99.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shirts" for ::1 at 2020-06-15 11:55:26 -0700
+Processing by Api::ShirtsController#index as JSON
+  Rendering api/shirts/index.json.jbuilder
+  [1m[36mShirt Load (1.3ms)[0m  [1m[34mSELECT "shirts".* FROM "shirts"[0m
+  ↳ app/views/api/shirts/index.json.jbuilder:1
+  Rendered api/shirts/index.json.jbuilder (20.5ms)
+Completed 200 OK in 34ms (Views: 30.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/shirts/1" for ::1 at 2020-06-15 11:55:29 -0700
+Processing by Api::ShirtsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mShirt Load (0.6ms)[0m  [1m[34mSELECT  "shirts".* FROM "shirts" WHERE "shirts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shirts_controller.rb:20
+  Rendering api/shirts/show.json.jbuilder
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shirt_id" = $1[0m  [["shirt_id", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:7
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/shirts/show.json.jbuilder:10
+  Rendered api/shirts/show.json.jbuilder (16.8ms)
+Completed 200 OK in 55ms (Views: 49.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/api/shirts/2" for ::1 at 2020-06-15 14:02:24 -0700
+  
+LoadError (cannot load such file -- /Users/linakherchi/Desktop/ShirtShop_with_Carlos-start/config/routes.rb):
+  
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:55:in `load'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:55:in `load'
+activesupport (5.2.4.3) lib/active_support/dependencies.rb:285:in `block in load'
+activesupport (5.2.4.3) lib/active_support/dependencies.rb:257:in `load_dependency'
+activesupport (5.2.4.3) lib/active_support/dependencies.rb:285:in `load'
+railties (5.2.4.3) lib/rails/application/routes_reloader.rb:41:in `block in load_paths'
+railties (5.2.4.3) lib/rails/application/routes_reloader.rb:41:in `each'
+railties (5.2.4.3) lib/rails/application/routes_reloader.rb:41:in `load_paths'
+railties (5.2.4.3) lib/rails/application/routes_reloader.rb:20:in `reload!'
+railties (5.2.4.3) lib/rails/application/routes_reloader.rb:30:in `block in updater'
+activesupport (5.2.4.3) lib/active_support/file_update_checker.rb:83:in `execute'
+railties (5.2.4.3) lib/rails/application/routes_reloader.rb:10:in `execute'
+railties (5.2.4.3) lib/rails/application/finisher.rb:143:in `block (2 levels) in <module:Finisher>'
+activesupport (5.2.4.3) lib/active_support/callbacks.rb:426:in `instance_exec'
+activesupport (5.2.4.3) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.4.3) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+activesupport (5.2.4.3) lib/active_support/callbacks.rb:606:in `block (2 levels) in default_terminator'
+activesupport (5.2.4.3) lib/active_support/callbacks.rb:605:in `catch'
+activesupport (5.2.4.3) lib/active_support/callbacks.rb:605:in `block in default_terminator'
+activesupport (5.2.4.3) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.4.3) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.4.3) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.4.3) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.4.3) lib/active_support/callbacks.rb:131:in `run_callbacks'
+activesupport (5.2.4.3) lib/active_support/execution_wrapper.rb:110:in `run!'
+activesupport (5.2.4.3) lib/active_support/reloader.rb:115:in `run!'
+activesupport (5.2.4.3) lib/active_support/execution_wrapper.rb:72:in `block in run!'
+activesupport (5.2.4.3) lib/active_support/execution_wrapper.rb:69:in `tap'
+activesupport (5.2.4.3) lib/active_support/execution_wrapper.rb:69:in `run!'
+activesupport (5.2.4.3) lib/active_support/reloader.rb:64:in `run!'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
