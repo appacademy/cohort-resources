@@ -1,0 +1,130 @@
+# W9D3
+### Intro to the DOM, and jQuery
+---
+### Reminder on Questions
+---
+### HTML to Browser diagram
+![DOMIntro](https://user-images.githubusercontent.com/51456702/74045475-ac630200-4981-11ea-8c27-6dbc34879033.png)
+
+---
+
+### Lecture Agenda
+
++ DOM introduction
++ The 4 ways to use jQuery
++ Common jQuery methods
++ Kahoot
+
+---
+
+### Learning Objectives
+
++ Get familiarized with the DOM
++ Understand the practicality of jQuery
+
+---
+
+### Layers of the Front-end
+
+![Frontend Layers](https://user-images.githubusercontent.com/51456702/74088928-5f019600-4a50-11ea-8403-168bc1e545be.png)
+
+---
+
+### Document Object Model (DOM)
+
+![dom-tree](https://www.w3schools.com/js/pic_htmltree.gif)
+
+Note:
+* The DOM is a programming interface that represents an HTML page.
+* Elements, attributes, classes, ids, etc... all are be represented by Objects
+* Javascript will allow us to manipulate objects in the DOM, thus giving us full control over the behavior of our webpages.
+
+---
+
+### Questions
+
+---
+
+### Brief Overview of jQuery
+
++ JavaScript wrapper-library used for low-level DOM manipulation
++ around since January 2006 
++ used by 76% of top 10,000,000 sites
++ universally supported by all browsers
+  + consistent API for programmers to interact with, regardless of browser
+  + "Write less, do more" - jQuery
+ 
+ + [jQuery vs. React on Google Trends](https://trends.google.com/trends/explore?date=all&q=%2Fm%2F0268gyp,%2Fm%2F012l1vxv)
+
+---
+
+### Ways to use jQuery
+
++ Wrapper-style
++ Selector-style
++ HTML-style
++ Ready-style
+
+---
+
+### Selector-style
+
++ input: CSS selector as a string
++ output: jQuery object (array-like) containing all elements that match the selector
++ example: `$('li.someClass')`
+
+
+---
+
+### HTML-style
+
++ input: HTML code as a string
++ output: jQuery object containing the top-level elements you built
++ example: `$('<li class="someClass"></li>')`
+
+---
+
+### Wrapper-style
+
++ input: unwrapped HTML Element or array of several elements
++ output: jQuery object wrapping those elements, giving you access to jQuery methods
++ example: `$(someHTMLVariable)`
+
+---
+
+### Ready-style
+
++ input: function to run when DOM is fully loaded
++ example `$(() => alert('DOM is fully loaded'))`
+
+---
+
+### More jQuery Methods (Refer to jQuery API docs):
+
++ `hide` & `show`
++ `addClass`
++ `css`
++ `attr` & `data`
++ `.val()` 
++ `.find(someSelector)` 
++ `on(event, handler)`
+    
+---
+
+
+### Brief Introduction to Events
+
++ events: describes most interactions users can have with an app (clicking, submitting, typing)
+	+ an object containing information about the action that just happened. 
++ to respond to events, we must install `event listeners` on HTML elements (`on`)
++ `currentTarget` vs `target`
+  + currentTarget === element where the event listener is attached to
+  + target === element that event occurred on
+
+---
+
+## Kahoot
+
+---
+
+### Thank you!
