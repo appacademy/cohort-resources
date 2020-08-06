@@ -10,7 +10,7 @@
 import { RECEIVE_TEA } from '../actions/tea_actions';
 
 const teasReducer = (oldState = {}, action) => {
-    // SHOULD NEVER MUTATE OLDSTATE !important
+    // SHOULD NEVER MUTATE OLDSTATE important!
     Object.freeze(oldState);
     let nextState = Object.assign({}, oldState); // create a copy of oldState
     // let nextState = { ...oldState }; same thing as above

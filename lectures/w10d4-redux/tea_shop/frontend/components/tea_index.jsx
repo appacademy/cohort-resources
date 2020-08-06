@@ -3,6 +3,14 @@ import React from 'react';
 class TeaIndex extends React.Component {
     constructor(props) {
         super(props);
+
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick(e) {
+        e.preventDefault();
+        let milkTea = { id: 87364871, flavor: 'Milk Tea', amount: 12 };
+        this.props.receiveTea(milkTea);
     }
 
     render() {
@@ -20,6 +28,7 @@ class TeaIndex extends React.Component {
                         )
                     })}
                 </ul>
+                <button onClick={this.handleClick}>Add Milk Tea</button>
             </div>
         );
     }
