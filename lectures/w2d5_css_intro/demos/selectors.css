@@ -1,0 +1,44 @@
+/* 11 */
+/* .descendant-selector p {
+  background-color: blue;
+} */
+
+
+/* 2 */
+h3 ~ p { 
+  background-color: green;
+  /* font-family: Arial, Helvetica, sans-serif;
+  color: yellow; */
+}
+
+.child-selector > p {
+  background-color: red;
+}
+
+/* 10 */
+.highlight {
+  background: yellow;
+}
+
+/* show p.highlight vs p .highlight */
+
+p .highlight {
+  background: orange;
+}
+
+/* 101 */
+div#blue {
+  background-color: blue;
+}
+
+/* make it red! (add .red) */
+
+/* 110 */
+#blue.red {
+  background-color: red;
+}
+
+/* 10 */
+/* .red {
+  background-color: red;
+} */
