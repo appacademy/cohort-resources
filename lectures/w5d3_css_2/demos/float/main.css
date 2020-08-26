@@ -1,0 +1,52 @@
+header {
+  display: none;
+}
+
+.pool {
+  background-image: url("pool.jpg");
+  background-size: cover;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  border: 20px solid gray;
+}
+
+body {
+  margin: 0;
+}
+
+.sidewalk {
+  width: 100vw;
+  height: 200px;
+  background-color: rgb(207, 207, 207);
+}
+
+
+img {
+  opacity: 0.9;
+}
+
+/* .duck {
+  float: right;
+} */
+
+.flamingo, .donut {
+  float: left;
+  clear: both;
+}
+
+.duck, .pineapple {
+  float: right;
+  clear: both;
+}
+
+/* p { clear: both; } */
+
+
+
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table
+}
