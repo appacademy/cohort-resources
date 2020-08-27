@@ -36,3 +36,11 @@
 
 ## If students are recieving a bunch of warnings when running any rails commands or while runnings through specs 
 * run `gem pristine --all`
+
+
+## Unable to Bundle Install FFI
+
+![ffi](../images/ffi-bug.png)
+
+* To solve this run `LDFLAGS="-L/usr/local/opt/libffi/lib" PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig" gem install ffi -v 'X.X.X'` where X.X.X is the version number found in the error message
+* Mac only to our knowledge
