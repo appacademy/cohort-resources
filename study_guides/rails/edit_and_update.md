@@ -2,17 +2,15 @@
 
 A controller's edit and update actions are similar to new and create, but there are important differences. Let's explore them below.
 
-For this example, assume we are using the following schema:
+For this example, we will be working with an Albums resource. Albums have a title and year.
 
-* Albums have a title and year
-
-And we will dealing with *non-nested routes*.
+We will dealing with *non-nested routes*.
 
 ## `:edit`
 
 ### routes
 
-The albums routes might look something like this:
+The `albums` routes might look something like this:
 
 ```ruby
 resources :albums only: [:new, :create, :index, :edit, :update]
@@ -37,8 +35,9 @@ class AlbumsController < ApplicationController
 This is the form that the edit action will render. We should include the following:
   1. The appropriate `action`
   2. A hidden input to change the `method`
-  3. Pre-filled values for the inputs
-  4. Correct button and header text
+  3. An authenticity token
+  4. Pre-filled values for the inputs
+  5. Correct button and header text
 
 ```html
 <h1>Edit Album Form</h1>
@@ -59,11 +58,13 @@ This is the form that the edit action will render. We should include the followi
 
 ## `:update`
 
-If our form's action and method have been set properly, the form data will be sent to the update action of the controller and stored in the params hash.
+If our form's action and method have been set properly, the form data will be sent to the update action of the controller via the params hash.
 
-We can extract the id of the album as well as the values of the form's inputs from the params hash.
+Again, we'll extract the id from the params hash in order to retrieve the album from the database.
 
-We'll rely on our strong params to preserve the integrity of the database.
+We'll rely on strong params to preserve the integrity of the database as we update the album with form data from the params hash.
+
+If the album exists and is successfully updated, we'll redirect to the index of all albums. Otherwise, we'll flash the errors and re-render the edit view.
 
 ### controller
 
