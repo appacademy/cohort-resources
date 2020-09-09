@@ -20,7 +20,7 @@ resources :albums only: [:new, :create, :index, :edit, :update]
 
 Unlike with `:new`, the album is already persisted and needs to be retrieved from the database.
 
-As `:edit` is a top level resource, the id of the album we want to change will be the wildcard in our params hash.
+In this example, `:edit` is a top level resource. The route to the edit action for an album might be, for example, `albums/1/edit`. The id of the album that we want to edit is be the wildcard in our params hash, stored at a key of `:id`. With this information, we can look up the matching record in the databse and store it in an instance variable that will be available in the view that this controller action will render.
 
 ```ruby
 class AlbumsController < ApplicationController
@@ -58,11 +58,19 @@ This is the form that the edit action will render. We should include the followi
 
 ## `:update`
 
-If our form's action and method have been set properly, the form data will be sent to the update action of the controller via the params hash.
+If our form's action and method have been set properly, the form data will be sent to the update action of the controller via the params hash. It should look something like this:
 
-Again, we'll extract the id from the params hash in order to retrieve the album from the database.
+```ruby
+  <ActionController::Parameters {"_method"=>"patch", "album"=>{"title"=>"Best Album", "year"=>"1991"}, "controller"=>"albums", "action"=>"update", "id"=>"1"} permitted: false>
+```
 
-We'll rely on strong params to preserve the integrity of the database as we update the album with form data from the params hash.
+Note that the params hash contains all of the data that was entered into the form, including the updated values for `title` and `year`, as well as the necessary information to route this data to the correct controller.
+
+Note also that `album` is a top level key in the params hash, while `title` and `year` are nested within another hash under the key of `album`. This structure exists because our form inputs have name attributes set to `album[title]` and `album[year]`. Following this naming convention for our form inputs not only keeps the form data tidily organized, but also allows us to comform to strong params as well as use mass assignment in the controller.
+
+In `:update`, we'll again extract the id from the params hash in order to retrieve the album from the database.
+
+We'll rely on strong params to preserve the integrity of the database as we update (*en masse*) all of the attributes of the album with form data from the params hash.
 
 If the album exists and is successfully updated, we'll redirect to the index of all albums. Otherwise, we'll flash the errors and re-render the edit view.
 
