@@ -48,3 +48,9 @@
 1. brew install libxml2
 2. bundle config build.nokogiri "--use-system-libraries --with-xml2-include=/usr/local/opt/libxml2/include/libxml2"
 3. bundle install
+
+## `gem` and `bundle install` commands to rubygems.org get stuck and timeout
+#### For Mac OS do this:
+![mac-fix](../images/mac-gem-timeout-fix.png)
+#### For Linux do this:
+![linux-fix](../images/linux-gem-timeout-fix.png)
