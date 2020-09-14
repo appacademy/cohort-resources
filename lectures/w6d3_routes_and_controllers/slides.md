@@ -4,7 +4,7 @@
 
 ---
 
-![Peace-of-Mind](https://raw.githubusercontent.com/appacademy/sf-lecture-notes/master/rails/w6d3-rails-controllers/assets/peace_mind.jpeg?token=AMIDLIGN77QAHSN7IGVKKKK7KZ7AA)
+![Peace-of-Mind](https://raw.githubusercontent.com/appacademy/sf-lecture-notes/master/rails/w6d3-rails-controllers/assets/peace_mind.jpeg?token=AG2UGP5P7EBBBBSNHTXUGO27M76GA)
   
 ---
 
@@ -40,7 +40,7 @@ Note:
 
 ---
 
-![http](https://raw.githubusercontent.com/appacademy/sf-lecture-notes/master/rails/w6d3-rails-controllers/assets/basic-http-request.png?token=AMIDLIBWKEMGNMXEN3P6UPK7KZ6WI)
+![http](https://raw.githubusercontent.com/appacademy/sf-lecture-notes/master/rails/w6d3-rails-controllers/assets/basic-http-request.png?token=AG2UGP6Q6GIGJCB7UUCRGZC7M76IQ)
 
 Note:
 
@@ -90,7 +90,7 @@ Note:
 
 ## Parts of a URL
 
-![url-parts](https://raw.githubusercontent.com/appacademy/sf-lecture-notes/master/rails/w6d3-rails-controllers/assets/url-parts.png?token=AMIDLIDRCCBIE2USQI4Q5GK7KZ6Z6)
+![url-parts](https://raw.githubusercontent.com/appacademy/sf-lecture-notes/master/rails/w6d3-rails-controllers/assets/url-parts.png?token=AG2UGPZGN3IBPDUWBZMVDRS7M76KO)
 
 Note:
 + Discuss how we make an HTTP request to a _domain_ and that everything that comes after the domain is what we call the _path_. Often, students are confused the difference between a URL and a path. Explain how the routes we write in our app are simply paths that are relative to the domain. Let them know that we aren't putting our apps on the internet yet so we'll be using `localhost` which is a domain for our own machine's IP (which is always `127.0.0.1`).
@@ -99,7 +99,7 @@ Note:
 
 ## RESTful Routes
 
-![restful-routes](https://raw.githubusercontent.com/appacademy/sf-lecture-notes/master/rails/w6d3-rails-controllers/assets/restful-routes.png?token=AMIDLIGZKVHTIMCSJNNPJ7K7KZ64A)
+![restful-routes](https://raw.githubusercontent.com/appacademy/sf-lecture-notes/master/rails/w6d3-rails-controllers/assets/restful-routes.png?token=AG2UGP2ZVWIXU73AANFGF7K7M76MA)
 
 Note: 
 + REST is a set of design principles for making network communication more scalable and flexible.
