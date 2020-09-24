@@ -30,12 +30,20 @@ Here you will find all resources which will be given out throughout your time he
 # Student Section
 
 ## Instructor Contact Info 
+### SF Instructors
 * All Instructors 
     * instructors-sf@appacademy.io
 * Bay Bridge Instructors
     * bay-bridge-instructors@appacademy.io
 * Golden Gate Instructors 
     * golden-gate-instructors@appacademy.io
+### NY Instructors
+* All Instructors
+    * instructors-ny@appacademy.io
+* Madison Instructors
+    * madison-instructors@appacademy.io
+* Park Instructors 
+    * park-instructors@appacademy.io
 
 ## Cohort Calendar
 **Your Cohort's Calendar is found on the README of your Cohort's Branch**
