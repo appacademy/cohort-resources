@@ -1,0 +1,1863 @@
+Started GET "/" for ::1 at 2020-07-27 21:10:55 -0700
+  [1m[35m (88.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 3544ms (Views: 3530.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-28 20:22:39 -0700
+  [1m[35m (368.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 6585ms (Views: 6554.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (13.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35mSQL (86.9ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (212.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "gifs" CASCADE[0m
+  [1m[35m (55.4ms)[0m  [1m[35mCREATE TABLE "gifs" ("id" bigserial primary key, "title" character varying, "url" character varying)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (122.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (14.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "gifs" CASCADE[0m
+  [1m[35m (23.6ms)[0m  [1m[35mCREATE TABLE "gifs" ("id" bigserial primary key, "title" character varying, "url" character varying)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (14.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "gifs" CASCADE[0m
+  [1m[35m (26.7ms)[0m  [1m[35mCREATE TABLE "gifs" ("id" bigserial primary key, "title" character varying, "url" character varying)[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2020-07-29 14:23:05.516001"], ["key", "environment"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-07-29 14:23:05.525957"], ["key", "environment"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-07-29 07:25:26 -0700
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 7472ms (Views: 7454.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-07-29 07:25:37 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-07-29 07:25:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 41ms (Views: 36.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-07-29 07:25:45 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-07-29 07:30:40 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 56ms (Views: 50.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-07-29 07:30:41 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-07-29 07:31:04 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 58ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 07:31:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 39ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-07-29 07:32:00 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-07-29 07:32:05 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-07-29 07:32:05 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-07-29 07:32:12 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 39ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-07-29 07:32:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-07-29 07:32:15 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 39ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 07:32:15 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 50ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 08:46:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 154ms (Views: 129.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 08:46:36 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 65ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 08:56:31 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 182ms (Views: 174.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 08:56:31 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 62ms (Views: 59.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:41:04 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 127ms (Views: 115.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:41:04 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 68ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:42:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 119ms (Views: 114.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:42:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 73ms (Views: 67.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:42:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 93ms (Views: 86.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:42:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 79ms (Views: 69.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:43:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 169ms (Views: 164.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:43:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 51ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:44:09 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 86ms (Views: 80.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:44:10 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:44:37 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 50ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:44:37 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 54ms (Views: 49.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:45:17 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 42ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:45:17 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 54ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:46:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 50ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:46:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 62ms (Views: 57.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:46:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 60ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:46:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 54ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:47:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 59ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:47:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 58ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:47:56 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 62ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:47:56 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 39ms (Views: 35.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:48:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:48:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 55ms (Views: 52.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:48:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 38ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:48:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 44ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:49:11 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 78ms (Views: 69.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:49:12 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 49ms (Views: 44.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:51:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 114ms (Views: 106.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:51:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 76ms (Views: 73.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:51:08 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 101ms (Views: 94.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:51:09 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 76ms (Views: 71.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:52:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 72ms (Views: 67.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:52:30 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 56ms (Views: 51.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:53:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 45ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 09:53:15 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 56ms (Views: 51.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 10:14:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 247ms (Views: 232.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 10:14:33 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 58ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 10:23:27 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 71ms (Views: 64.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 10:23:27 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 51ms (Views: 48.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 11:07:27 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 216ms (Views: 198.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 11:07:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 82ms (Views: 76.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 11:07:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 70ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 11:07:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 65ms (Views: 59.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 11:08:02 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 35ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 11:08:03 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 40ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 11:08:31 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 174ms (Views: 165.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 11:08:31 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 78ms (Views: 65.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 11:55:05 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 437ms (Views: 421.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 11:55:06 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 75ms (Views: 69.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:00:31 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 197ms (Views: 191.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:00:31 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 54ms (Views: 50.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:00:41 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 159ms (Views: 154.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:00:41 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 88ms (Views: 83.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:06:43 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 166ms (Views: 161.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:06:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 48ms (Views: 44.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:07:26 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 65ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:07:26 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 48ms (Views: 44.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:07:52 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 170ms (Views: 161.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:07:53 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 52ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:08:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 178ms (Views: 172.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:08:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 70ms (Views: 65.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:21:43 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 243ms (Views: 232.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:21:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 77ms (Views: 72.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:22:23 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 53ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:22:23 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 57ms (Views: 51.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:24:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 262ms (Views: 256.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:24:36 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 78ms (Views: 72.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:25:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 58ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:25:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 73ms (Views: 70.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:25:53 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 254ms (Views: 248.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:25:54 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 71ms (Views: 65.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/gifs" for ::1 at 2020-07-29 12:25:59 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"test1", "url"=>"https://media0.giphy.com/media/4WFPy8gcqpm9xQlA1J/giphy.gif"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Exists (52.1ms)[0m  [1m[34mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "test1"], ["LIMIT", 1]]
+  [1m[35mSQL (8.5ms)[0m  [1m[32mINSERT INTO "gifs" ("title", "url") VALUES ($1, $2) RETURNING "id"[0m  [["title", "test1"], ["url", "https://media0.giphy.com/media/4WFPy8gcqpm9xQlA1J/giphy.gif"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 221ms (Views: 0.4ms | ActiveRecord: 142.9ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:26:48 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 185ms (Views: 179.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:26:49 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 84ms (Views: 77.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/gifs" for ::1 at 2020-07-29 12:26:54 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"test1", "url"=>"https://media1.giphy.com/media/1PBvjRBgrVL9ZT1zpOYE/giphy.gif"}}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Exists (46.6ms)[0m  [1m[34mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "test1"], ["LIMIT", 1]]
+  [1m[35m (41.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 151ms (Views: 2.1ms | ActiveRecord: 88.8ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:28:06 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 187ms (Views: 181.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:28:07 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 39ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/gifs" for ::1 at 2020-07-29 12:28:11 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"test1", "url"=>"https://media1.giphy.com/media/YT8pvYik4xJL1U4SNR/giphy.gif"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "test1"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 53ms (Views: 0.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:29:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 226ms (Views: 220.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:29:26 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 70ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/gifs" for ::1 at 2020-07-29 12:29:29 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"test1", "url"=>"https://media2.giphy.com/media/l41YtCkpaQMFN0tzy/giphy.gif"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "test1"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 6ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:29:52 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 214ms (Views: 207.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:29:53 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 41ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/gifs" for ::1 at 2020-07-29 12:29:56 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"test1", "url"=>"https://media0.giphy.com/media/9zXDNWINIgbwbPK1y9/giphy.gif"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "test1"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 6ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/gifs" for ::1 at 2020-07-29 12:30:16 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"scrubber", "url"=>"https://media0.giphy.com/media/9zXDNWINIgbwbPK1y9/giphy.gif"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "scrubber"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "gifs" ("title", "url") VALUES ($1, $2) RETURNING "id"[0m  [["title", "scrubber"], ["url", "https://media0.giphy.com/media/9zXDNWINIgbwbPK1y9/giphy.gif"]]
+  [1m[35m (41.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 46ms (Views: 0.6ms | ActiveRecord: 42.5ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:31:05 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 175ms (Views: 169.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:31:06 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 82ms (Views: 76.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/gifs" for ::1 at 2020-07-29 12:31:11 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"test2", "url"=>"https://media2.giphy.com/media/3ohhwCiwfF1z4ico0w/giphy.gif"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Exists (42.8ms)[0m  [1m[34mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "test2"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "gifs" ("title", "url") VALUES ($1, $2) RETURNING "id"[0m  [["title", "test2"], ["url", "https://media2.giphy.com/media/3ohhwCiwfF1z4ico0w/giphy.gif"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 51ms (Views: 0.5ms | ActiveRecord: 46.5ms)
+
+
+Started POST "/gifs" for ::1 at 2020-07-29 12:31:44 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"test3", "url"=>"https://media3.giphy.com/media/g0perzqlFFVnYOObnQ/giphy.gif"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "test3"], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "gifs" ("title", "url") VALUES ($1, $2) RETURNING "id"[0m  [["title", "test3"], ["url", "https://media3.giphy.com/media/g0perzqlFFVnYOObnQ/giphy.gif"]]
+  [1m[35m (19.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 25ms (Views: 0.5ms | ActiveRecord: 21.3ms)
+
+
+Started POST "/gifs" for ::1 at 2020-07-29 12:32:05 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"test1", "url"=>"https://media3.giphy.com/media/g0perzqlFFVnYOObnQ/giphy.gif"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "test1"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:32:18 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 264ms (Views: 256.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:32:18 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 96ms (Views: 92.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/gifs" for ::1 at 2020-07-29 12:32:22 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"test1", "url"=>"https://media0.giphy.com/media/mEnyB02qmGMqVon3pe/giphy.gif"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "test1"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:36:04 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 190ms (Views: 184.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:36:04 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 70ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:36:05 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 53ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:36:05 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 69ms (Views: 65.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:36:33 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 200ms (Views: 194.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:36:33 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 88ms (Views: 83.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/gifs" for ::1 at 2020-07-29 12:36:40 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"some title", "url"=>"https://media1.giphy.com/media/W3m5Bp9ZuvPWcgeiNS/giphy.gif"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "some title"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "gifs" ("title", "url") VALUES ($1, $2) RETURNING "id"[0m  [["title", "some title"], ["url", "https://media1.giphy.com/media/W3m5Bp9ZuvPWcgeiNS/giphy.gif"]]
+  [1m[35m (41.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 49ms (Views: 0.5ms | ActiveRecord: 42.9ms)
+
+
+Started GET "/gifs/scrubber" for ::1 at 2020-07-29 12:36:44 -0700
+Processing by GifsController#show as JSON
+  Parameters: {"title"=>"scrubber"}
+  [1m[36mGif Load (2.6ms)[0m  [1m[34mSELECT  "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "scrubber"], ["LIMIT", 1]]
+Completed 200 OK in 106ms (Views: 0.5ms | ActiveRecord: 44.2ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:37:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 215ms (Views: 208.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-29 12:37:01 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 58ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gifs/scrubber" for ::1 at 2020-07-29 12:37:02 -0700
+Processing by GifsController#show as JSON
+  Parameters: {"title"=>"scrubber"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT  "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "scrubber"], ["LIMIT", 1]]
+Completed 200 OK in 10ms (Views: 1.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/gifs" for ::1 at 2020-07-29 14:50:56 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"test3", "url"=>"https://media0.giphy.com/media/SRvsl1t7p13ZQlkRor/giphy.gif"}}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Exists (44.0ms)[0m  [1m[34mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "test3"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 262ms (Views: 5.2ms | ActiveRecord: 45.3ms)
+
+
+Started POST "/gifs" for ::1 at 2020-07-29 14:51:02 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"test4", "url"=>"https://media0.giphy.com/media/SRvsl1t7p13ZQlkRor/giphy.gif"}}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "test4"], ["LIMIT", 1]]
+  [1m[35mSQL (43.8ms)[0m  [1m[32mINSERT INTO "gifs" ("title", "url") VALUES ($1, $2) RETURNING "id"[0m  [["title", "test4"], ["url", "https://media0.giphy.com/media/SRvsl1t7p13ZQlkRor/giphy.gif"]]
+  [1m[35m (41.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 169ms (Views: 4.5ms | ActiveRecord: 87.0ms)
+
+
+Started GET "/gifs/test4" for ::1 at 2020-07-29 14:51:06 -0700
+Processing by GifsController#show as JSON
+  Parameters: {"title"=>"test4"}
+  [1m[36mGif Load (1.0ms)[0m  [1m[34mSELECT  "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "test4"], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gifs/test4" for ::1 at 2020-07-29 14:51:12 -0700
+Processing by GifsController#show as JSON
+  Parameters: {"title"=>"test4"}
+  [1m[36mGif Load (1.5ms)[0m  [1m[34mSELECT  "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "test4"], ["LIMIT", 1]]
+Completed 200 OK in 16ms (Views: 3.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/gifs/test1" for ::1 at 2020-07-29 14:51:15 -0700
+Processing by GifsController#show as JSON
+  Parameters: {"title"=>"test1"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT  "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "test1"], ["LIMIT", 1]]
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/gifs/test2" for ::1 at 2020-07-29 14:51:18 -0700
+Processing by GifsController#show as JSON
+  Parameters: {"title"=>"test2"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT  "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "test2"], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/gifs/test3" for ::1 at 2020-07-29 14:51:21 -0700
+Processing by GifsController#show as JSON
+  Parameters: {"title"=>"test3"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT  "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "test3"], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/gifs/test4" for ::1 at 2020-07-29 14:51:23 -0700
+Processing by GifsController#show as JSON
+  Parameters: {"title"=>"test4"}
+  [1m[36mGif Load (0.2ms)[0m  [1m[34mSELECT  "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "test4"], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35mSQL (12.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (12.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "gifs" CASCADE[0m
+  [1m[35m (125.6ms)[0m  [1m[35mCREATE TABLE "gifs" ("id" bigserial primary key, "title" character varying, "url" character varying)[0m
+  [1m[35m (46.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (17.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180218183701)[0m
+  [1m[35m (27.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-21 18:38:19.222048"], ["updated_at", "2020-09-21 18:38:19.222048"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (11.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "gifs" CASCADE[0m
+  [1m[35m (72.7ms)[0m  [1m[35mCREATE TABLE "gifs" ("id" bigserial primary key, "title" character varying, "url" character varying)[0m
+  [1m[35m (140.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (28.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180218183701)[0m
+  [1m[35m (38.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-21 18:38:19.744516"], ["updated_at", "2020-09-21 18:38:19.744516"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-09-21 18:38:19.754138"], ["key", "environment"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (7.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-09-21 11:46:36 -0700
+  [1m[35m (9.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 5713ms (Views: 5682.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-21 11:46:46 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 171ms (Views: 162.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-21 16:12:09 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (63.9ms)
+Completed 200 OK in 1246ms (Views: 1040.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-21 16:12:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 762ms (Views: 753.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-23 11:57:49 -0700
+  [1m[35m (6.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 2340ms (Views: 2325.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-23 11:57:54 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 71ms (Views: 67.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35mSQL (28.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (33.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "gifs" CASCADE[0m
+  [1m[35m (158.3ms)[0m  [1m[35mCREATE TABLE "gifs" ("id" bigserial primary key, "title" character varying, "url" character varying)[0m
+  [1m[35m (54.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (26.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (7.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180218183701)[0m
+  [1m[35m (48.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-24 17:18:20.952835"], ["updated_at", "2020-09-24 17:18:20.952835"]]
+  [1m[35m (29.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (46.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "gifs" CASCADE[0m
+  [1m[35m (179.5ms)[0m  [1m[35mCREATE TABLE "gifs" ("id" bigserial primary key, "title" character varying, "url" character varying)[0m
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180218183701)[0m
+  [1m[35m (98.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (22.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-24 17:18:21.485614"], ["updated_at", "2020-09-24 17:18:21.485614"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-09-24 17:18:21.498888"], ["key", "environment"]]
+  [1m[35m (30.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (29.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-09-24 10:20:06 -0700
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 5712ms (Views: 5619.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 10:20:17 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 122ms (Views: 116.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 10:52:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 311ms (Views: 291.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 10:52:36 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 95ms (Views: 89.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 10:59:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 320ms (Views: 301.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 10:59:33 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 85ms (Views: 81.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:00:50 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 517ms (Views: 507.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:00:51 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 138ms (Views: 132.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:01:01 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 91ms (Views: 79.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:01:02 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 65ms (Views: 59.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:01:23 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 146ms (Views: 140.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:01:24 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 43ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:01:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 63ms (Views: 57.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:01:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 53ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:01:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 67ms (Views: 60.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:01:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 58ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:01:30 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 73ms (Views: 67.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:01:31 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 63ms (Views: 58.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:01:31 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 48ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:01:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 71ms (Views: 67.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:01:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 47ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:01:33 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 72ms (Views: 67.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:01:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 60ms (Views: 52.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:01:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 70ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:01:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 74ms (Views: 69.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:01:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 59ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:01:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 69ms (Views: 62.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:01:46 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 57ms (Views: 51.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/undefined" for ::1 at 2020-09-24 11:01:59 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/undefined"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-09-24 11:20:23 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 415ms (Views: 400.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:20:24 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 56ms (Views: 50.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/gifs" for ::1 at 2020-09-24 11:22:16 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"doug", "url"=>"https://media1.giphy.com/media/joqLcdKL8gr1kB6FSN/giphy.gif"}}
+  [1m[35m (14.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Exists (36.9ms)[0m  [1m[34mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "doug"], ["LIMIT", 1]]
+  [1m[35mSQL (29.2ms)[0m  [1m[32mINSERT INTO "gifs" ("title", "url") VALUES ($1, $2) RETURNING "id"[0m  [["title", "doug"], ["url", "https://media1.giphy.com/media/joqLcdKL8gr1kB6FSN/giphy.gif"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 301ms (Views: 2.2ms | ActiveRecord: 187.4ms)
+
+
+Started POST "/gifs" for ::1 at 2020-09-24 11:23:05 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"", "url"=>"https://media2.giphy.com/media/fSMh4zrhbQ75X0WYyX/giphy.gif"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", ""], ["LIMIT", 1]]
+  [1m[35mSQL (9.0ms)[0m  [1m[32mINSERT INTO "gifs" ("title", "url") VALUES ($1, $2) RETURNING "id"[0m  [["title", ""], ["url", "https://media2.giphy.com/media/fSMh4zrhbQ75X0WYyX/giphy.gif"]]
+  [1m[35m (30.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 55ms (Views: 0.8ms | ActiveRecord: 40.6ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:23:53 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 507ms (Views: 495.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:23:55 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 116ms (Views: 108.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:23:58 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 77ms (Views: 72.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:23:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 186ms (Views: 180.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/gifs" for ::1 at 2020-09-24 11:24:03 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"title"=>"", "url"=>"https://media4.giphy.com/media/26n7aEOYdjoGY8Vyw/giphy.gif"}
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: gif):
+  
+app/controllers/gifs_controller.rb:24:in `gif_params'
+app/controllers/gifs_controller.rb:4:in `create'
+Started GET "/" for ::1 at 2020-09-24 11:25:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 274ms (Views: 265.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:25:47 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 72ms (Views: 68.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/gifs" for ::1 at 2020-09-24 11:25:53 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"", "url"=>"https://media4.giphy.com/media/1Be2LLwlgGsV0SYl1q/giphy.gif"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", ""], ["LIMIT", 1]]
+  [1m[35m (20.5ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 105ms (Views: 0.4ms | ActiveRecord: 64.2ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:27:51 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 360ms (Views: 353.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:27:52 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 77ms (Views: 68.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:27:56 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 105ms (Views: 100.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:27:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 73ms (Views: 68.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/gifs" for ::1 at 2020-09-24 11:28:06 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"", "url"=>"https://media2.giphy.com/media/3oEhn17xWedUDBWeYw/giphy.gif"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", ""], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 26ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/gifs" for ::1 at 2020-09-24 11:28:27 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"", "url"=>"https://media2.giphy.com/media/3oEhn17xWedUDBWeYw/giphy.gif"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", ""], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 11ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:29:46 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 340ms (Views: 334.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:29:47 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 71ms (Views: 63.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/gifs" for ::1 at 2020-09-24 11:29:55 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"", "url"=>"https://media0.giphy.com/media/QuPgDtlvZlDyev9OoU/giphy.gif"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Exists (9.2ms)[0m  [1m[34mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", ""], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 45ms (Views: 0.2ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:37:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 337ms (Views: 320.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:38:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 65ms (Views: 58.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gifs/doug" for ::1 at 2020-09-24 11:38:16 -0700
+Processing by GifsController#show as JSON
+  Parameters: {"title"=>"doug"}
+  [1m[36mGif Load (25.9ms)[0m  [1m[34mSELECT  "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "doug"], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 0.6ms | ActiveRecord: 27.3ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:39:39 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 307ms (Views: 301.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:39:40 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 106ms (Views: 94.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gifs/doug" for ::1 at 2020-09-24 11:39:48 -0700
+Processing by GifsController#show as JSON
+  Parameters: {"title"=>"doug"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT  "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "doug"], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/gifs/Charlos" for ::1 at 2020-09-24 11:40:11 -0700
+Processing by GifsController#show as JSON
+  Parameters: {"title"=>"Charlos"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT  "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "Charlos"], ["LIMIT", 1]]
+Completed 422 Unprocessable Entity in 12ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:42:37 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 329ms (Views: 320.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:42:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 67ms (Views: 61.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gifs/charlos" for ::1 at 2020-09-24 11:42:42 -0700
+Processing by GifsController#show as JSON
+  Parameters: {"title"=>"charlos"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT  "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "charlos"], ["LIMIT", 1]]
+Completed 422 Unprocessable Entity in 10ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/gifs" for ::1 at 2020-09-24 11:43:03 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"charlos", "url"=>"https://media0.giphy.com/media/Xp6rpZpMfFqLTRdifh/giphy.gif"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "charlos"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "gifs" ("title", "url") VALUES ($1, $2) RETURNING "id"[0m  [["title", "charlos"], ["url", "https://media0.giphy.com/media/Xp6rpZpMfFqLTRdifh/giphy.gif"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 20ms (Views: 0.4ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/gifs" for ::1 at 2020-09-24 11:43:14 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"ryan", "url"=>"https://media3.giphy.com/media/l0K4awT2LnHUncsKs/giphy.gif"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Exists (31.6ms)[0m  [1m[34mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "ryan"], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "gifs" ("title", "url") VALUES ($1, $2) RETURNING "id"[0m  [["title", "ryan"], ["url", "https://media3.giphy.com/media/l0K4awT2LnHUncsKs/giphy.gif"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 47ms (Views: 0.5ms | ActiveRecord: 34.0ms)
+
+
+Started POST "/gifs" for ::1 at 2020-09-24 11:43:24 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"julia", "url"=>"https://media2.giphy.com/media/H41wjlbNivrAEO0p4i/giphy.gif"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "julia"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "gifs" ("title", "url") VALUES ($1, $2) RETURNING "id"[0m  [["title", "julia"], ["url", "https://media2.giphy.com/media/H41wjlbNivrAEO0p4i/giphy.gif"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 33ms (Views: 0.3ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/gifs" for ::1 at 2020-09-24 11:43:38 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"zack", "url"=>"https://media2.giphy.com/media/3ov9jUHV8ibQAJTA1q/giphy.gif"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "zack"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "gifs" ("title", "url") VALUES ($1, $2) RETURNING "id"[0m  [["title", "zack"], ["url", "https://media2.giphy.com/media/3ov9jUHV8ibQAJTA1q/giphy.gif"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 23ms (Views: 0.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/gifs/ryan" for ::1 at 2020-09-24 11:43:58 -0700
+Processing by GifsController#show as JSON
+  Parameters: {"title"=>"ryan"}
+  [1m[36mGif Load (2.6ms)[0m  [1m[34mSELECT  "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "ryan"], ["LIMIT", 1]]
+Completed 200 OK in 19ms (Views: 0.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/gifs/charlos" for ::1 at 2020-09-24 11:44:08 -0700
+Processing by GifsController#show as JSON
+  Parameters: {"title"=>"charlos"}
+  [1m[36mGif Load (1.1ms)[0m  [1m[34mSELECT  "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "charlos"], ["LIMIT", 1]]
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/gifs/zack" for ::1 at 2020-09-24 11:44:17 -0700
+Processing by GifsController#show as JSON
+  Parameters: {"title"=>"zack"}
+  [1m[36mGif Load (1.6ms)[0m  [1m[34mSELECT  "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "zack"], ["LIMIT", 1]]
+Completed 200 OK in 19ms (Views: 0.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/gifs/julia" for ::1 at 2020-09-24 11:44:25 -0700
+Processing by GifsController#show as JSON
+  Parameters: {"title"=>"julia"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT  "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "julia"], ["LIMIT", 1]]
+Completed 200 OK in 22ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:44:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 140ms (Views: 130.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:44:37 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 74ms (Views: 66.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gifs/zack" for ::1 at 2020-09-24 11:44:41 -0700
+Processing by GifsController#show as JSON
+  Parameters: {"title"=>"zack"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT  "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "zack"], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/gifs/" for ::1 at 2020-09-24 11:45:39 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/gifs"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-09-24 11:47:40 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 448ms (Views: 440.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-24 11:47:42 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 80ms (Views: 66.5ms | ActiveRecord: 0.0ms)
+
+
