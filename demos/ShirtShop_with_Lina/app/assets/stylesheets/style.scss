@@ -1,0 +1,83 @@
+body{
+    background-color: beige;
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        color: blue;
+    }
+    div.shirt-list{
+        padding-top: 50px;
+        ul{
+            background-color: gainsboro;
+            border-radius: 40px;
+            display: flex;
+            justify-content: space-between;
+            padding: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            li{
+                list-style-type: none;
+            }
+        }
+    }
+    div.shirt-item-detail{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        ul{
+            display: block;
+            background-color: pink;
+            width: 200px;
+            div{
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+            }
+        }
+        img{
+            padding-top: 30px;
+        }
+    }
+    form{
+        background-color:rgb(130, 171, 238);
+        border-radius: 40px;
+        height: 250px;
+        h4{
+            padding: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            color: white;
+            margin: 0;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            label{
+                padding: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                input{
+                    height: 30px;
+                    width: 120px;
+                    border-radius: 50px;
+                    padding-left: 20px;
+                }
+                input:focus{
+                    outline: none
+                }
+            }
+            
+        }
+        input[type="submit"]{
+            margin-bottom: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            float: right;
+            margin-right: 60px;
+            font-size: 17px;
+            border-radius: 30px;
+            padding: 8px;
+        }
+        
+    }
+}    

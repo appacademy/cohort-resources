@@ -1,0 +1,39 @@
+section {
+  margin-top: 50vh;
+}
+
+[class^="nested"] {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nested-inner {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border: 1px solid black;
+  font-size: 30px;
+}
+
+.nested-middle {
+  width: 300px;
+  height: 175px;
+  background-color: green;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 30px;
+}
+
+.nested-outer {
+  width: 700px;
+  height: 250px;
+  background-color: yellow;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 30px;
+}
+
+.hidden {
+  visibility: hidden;
+}

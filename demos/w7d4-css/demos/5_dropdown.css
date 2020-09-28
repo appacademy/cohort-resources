@@ -1,0 +1,33 @@
+.navbar {
+  background-color: aquamarine;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.button {
+  background-color: dodgerblue;
+  padding: 10px;
+  color: white;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  /* z-index: -1; */
+  background-color: white;
+  padding: 0px 20px 0px 0px;
+  min-width: 200px;
+}
+
+.dropdown-content li:hover {
+  background-color: #dadce0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
