@@ -41,9 +41,17 @@ module.exports = {
     devtool: 'source-map'
 };
 ```
+* Add this if you are on WSL and the watch flag does not work aka webpack doesn't update with changes. 
+``` 
+watch: true,
+  watchOptions: {
+    poll: true
+  }
+```
 4. In the generated package.json:
 
     * Add a webpack script for webpack to your package.json ("webpack": "webpack --mode=development --watch")
+    * For students on WSL and added the `watchOptions` to config file, use this script("webpack": "webpack --watch --watch-poll --mode=development")
     * Create a .gitignore for your node modules and bundled files
 
 ```javascript 
