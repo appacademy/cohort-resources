@@ -1,36 +1,29 @@
-components are organized as follows:
-* `Root`
-  * `App`
-    * `NavBar`
-    * `(main component here)`
-    * `Footer`
+## Frontend Routes
+Our components are organized as follows:
++ `Root`
+  + `App`
+    + `NavBar`
+    + (main component goes here)
+    + `Footer`
 
-The following routes, defined in `App`, will render components between `NavBar` and `Footer`
-* `/`
-  * `Splash`
-* `/login`
-  * `SessionForm`
-* `/feed`
-  * `StoryIndex`
-    * `StoryIndexItem`
-* I don't want to show all the stories in the feed.  I want to limit the number of stories based on relevance to the user
+The following routes, defined in `App`, will render components between `NavBar` and `Footer`.
 
-* `/users/userId`
-  * `ProfileComponent`
-  * `StoryIndex`
-    * `StoryIndexItem`
-
-* `/stories/new`
-  * `StoryForm`
-* `stories/storyId`
-  * `StoryShow`
-* `stories/storyId/edit`
-  * `StoryForm`
-
-* `/stories/comments/new`
-  * `CommentForm`
-* `stories/comments/commentId`
-  * `CommentShow`
-* `stories/comments/commentId/edit`
-  * `CommentForm`
-
++ `/`
+  + `Splash`
++ `/login`
+  + `SessionForm`
++ `/signup`
+  + `SessionForm`
++ `/feed`
+  + `ChirpIndex`
+    + `ChirpIndexItem`
++ `/users/:userId`
+  + `ProfileComponent`
+  + `ChirpIndex`
+    + `ChirpIndexItem`
++ `/chirps/new`
+  + `ChirpForm`
++ `/chirps/:chirpId`
+  + `ChirpShow`
++ `/chirps/:chirpId/edit`
+  + `ChirpForm`

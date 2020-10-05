@@ -1,59 +1,46 @@
-## **`users`**
+# Postgres Database Schema
 
-|   Column Name   | Data Type |          Details          |
-| :-------------: | :-------: | :-----------------------: |
-|       id        |  integer  |   not null, primary key   |
-|      email      |  string   |     not null, indexed     |
-| password_digest |  string   |         not null          |
-|  session_token  |  string   | not null, indexed, unique |
-|   created_at    | datetime  |         not null          |
-|   updated_at    | datetime  |         not null          |
+## `users`
 
-## **`stories`**
+| column name       | data type | details                   |
+| :---------------- | :-------: | :------------------------ |
+| `id`              |  integer  | not null, primary key     |
+| `username`        |  string   | not null, indexed, unique |
+| `email`           |  string   | not null, indexed, unique |
+| `password_digest` |  string   | not null                  |
+| `session_token`   |  string   | not null, indexed, unique |
+| `created_at`      | datetime  | not null                  |
+| `updated_at`      | datetime  | not null                  |
 
-| Column Name | Data Type |         Details         |
-| :---------: | :-------: | :---------------------: |
-|     id      |  integer  |  not null, primary key  |
-|  author_id  |  integer  |  not null, foreign key  |
-|   feed_id   |  integer  |       foreign key       |
-|    title    |  string   | not null,unique,indexed |
-|    body     |   text    |     not null,unique     |
-| created_at  | datetime  |        not null         |
-| updated_at  | datetime  |        not null         |
+- index on `username, unique: true`
+- index on `email, unique: true`
+- index on `session_token, unique: true`
 
-## **`comments`**
+## `chirps`
 
-| Column Name | Data Type |        Details        |
-| :---------: | :-------: | :-------------------: |
-|     id      |  integer  | not null, primary key |
-|  author_id  |  integer  | not null, foreign key |
-|    body     |   text    |       not null        |
-| created_at  | datetime  |       not null        |
-| updated_at  | datetime  |       not null        |
+| column name  | data type | details                        |
+| :----------- | :-------: | :----------------------------- |
+| `id`         |  integer  | not null, primary key          |
+| `body`       |  string   | not null                       |
+| `author_id`  |  integer  | not null, indexed, foreign key |
+| `created_at` | datetime  | not null                       |
+| `updated_at` | datetime  | not null                       |
 
-## **`likes as snaps`**
+- `author_id` references `users`
+- index on `author_id`
 
-| Column Name | Data Type |        Details        |
-| :---------: | :-------: | :-------------------: |
-|     id      |  integer  | not null, primary key |
-|   user_id   |  integer  | not null, foreign key |
-|  story_id   |  integer  | not null, foreign key |
-| created_at  | datetime  |       not null        |
-| updated_at  | datetime  |       not null        |
+## `likes`
 
-## **`follows`**
+| column name  | data type | details                        |
+| :----------- | :-------: | :----------------------------- |
+| `id`         |  integer  | not null, primary key          |
+| `user_id`    |  integer  | not null, indexed, foreign key |
+| `chirp_id`   |  integer  | not null, indexed, foreign key |
+| `created_at` | datetime  | not null                       |
+| `updated_at` | datetime  | not null                       |
 
-| Column Name | Data Type |        Details        |
-| :---------: | :-------: | :-------------------: |
-|     id      |  integer  | not null, primary key |
-| follower_id |  integer  | not null, foreign key |
-| followee_id |  integer  | not null, foreign key |
-| created_at  | datetime  |       not null        |
-| updated_at  | datetime  |       not null        |
+- `user_id` references `users`
+- `chirp_id` references `chirps`
+- index on `[:chirp_id, :user_id], unique: true`
 
-## **`feed`**
-
-| Column Name | Data Type |        Details        |
-| :---------: | :-------: | :-------------------: |
-|     id      |  integer  | not null, primary key |
-| categories  |  string   | not null, foreign key |
+// We don't need a separate index for `chirp_id` or `user_id` because the first index adds it for us.
