@@ -1,22 +1,17 @@
-# Steps for Success
-1. Read the README.md
-2. Open Gemfile and add 'gem annotate'
-3. Run 'bundle install' and './setup_db.sh'
-    * do not start writing anything associations until fully setup
-    * if you need to re-setup your db, use rails db:drop to drop your database, then re-run './setup_db.sh'
-4. Go to your models folder and go file by file, foreign key by foreign key.
-5. If you see a foreign key, write its 'belongs_to' association, then immediately go write its associated 'has_many'.
-6. After all your associations for the foreign keys are done => 'bundle exec rspec' 
-7. Go spec by spec and see if you named any incorrectly or have a 'has_many' where it should be 'has_one'
-8. Tackle 'has_many throughs'
-
-# Working with Sqlite3
-1. In order to go into a database that you need query from, you do: sqlite3 (name of database)
-2. .tables shows all the tables that you're working with 
-3. ".mode column" makes the output from the query calls more readable by returning the information in data form 
-4. ".headers on" shows the names of each column so it makes it easier to see what each column represents 
-5. Making a query call is simple, just write out the query call in vs code and copy and paste it into the terminal. Make sure that you place a semi colon at the end. 
-
+# Rails 1 
+---
+# General Tips
+* This is a much harder assessment than the previous one
+* READ THE README
+* Take the practice assessment until you cant get any wrong answers
+* Do one section at a time and close out all the tabs of the previous section when done
+* Focus on understanding NOT memorization
+---
+# Assessment Tips
+* Read the README
+* Start with migrations then do associations
+* Once you have spent the recommended time on a section, move on and come back later
+---
 # Common Bugs
 1. Spelling
     * Are the association names spelled correctly?
@@ -24,10 +19,37 @@
 2. Is the name of the class in your association properly capitalized?
 3. Am I missing any colons, commas?
 4. Is it a has_one instead of a has_many association?
+---
+# Migrations
+* Read the README
+* Know your rails commands:
+    * bundle exec rails g migration Change[Whatever]To[Whatever]
+    * bundle exec rails db:migrate
+* Do a separate migration for each table changed
+* If you mess up, just start over
+---
+# Associations
+* Read the README
+* Find foreign key -> write belongs_to -> write corresponding has_one/has_many
+    * After doing all of these, run specs and figure out naming discrepancies
+* after doing the above, write has_many/throughs
+* Care for missing/extra commas
+    * They will cause all of the specs to fail
+---
+# SQL
+* Read the README
+* Read the question very carefully
+* Read the error messages
+* Get very familiar with joins
+* Having and aggregators can only work after group by
+---
+# Active Record
+* It is very similar to SQL
+* When you do a joins, you are calling the names of the associations 
+---
+# Final thoughts
+* Breathe
+* You got This
+* Study up
 
-# Other Tips
-1. Familiarize yourself with the file tree
-    * Your models are under the App folder
-    * The schema is under the db folder
-2. Use Command + T for quick file finder
-3. Find a strategy/approach that works for you
+
