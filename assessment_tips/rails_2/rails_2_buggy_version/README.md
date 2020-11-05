@@ -1,26 +1,23 @@
 # Rails Assessment 2 Practice Overview
 
 You will have **2 hours** to complete this assessment. This assessment consists
-of 2 components:
+of 1 component:
 
-1. [HackerRank](http://hr.gs/c5ea833c-02b4-4828-81d8-48de3f8629d8)(password:
-   `practiceRails`)
-2. Goal Application with User Authentication
+1. Goal Application with User Authentication
 
 ## Scoring and time estimates
 
 | Component             | Maximum Points | Estimated Time (minutes) |
 | --------------------- | -------------- | ------------------------ |
-| HackerRank            | 48             | 30 min                   |
 | User Goal Application | 68             | 1 hour and 30 min        |
 
-The maximum number of points for this entire assessment is **116**. Your final
+The maximum number of points for this entire assessment is **68**. Your final
 score will be calculated as the percentage of points awarded over the maximum
 number of points:
 
-`score = (total_points_awarded / 116) * 100`
+`score = (total_points_awarded / 68) * 100`
 
-The passing score for this assessment is **75**.
+The passing score for this assessment is **80**.
 
 ## Overall File Structure
 
@@ -30,7 +27,7 @@ not alter any of the spec files.**
 ## Scoring & Objective for Goal Application
 
 Each passing spec will award one point, for a total of 68 points. This component
-of the assessment is estimated to take **1 hour and 30 minutes**. Your objective
+of the assessment is estimated to take **2 hours**. Your objective
 is to pass as many specs as possible.
 
 ## Getting Started
