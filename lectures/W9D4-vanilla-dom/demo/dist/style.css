@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+
+html {
+  box-sizing: border-box;
+  background:#ebeef5;
+  font-family: 'Indie Flower';
+  text-align: center;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+h1 {
+  color: gray;
+  font-weight: 600;
+  font-size: 60px;
+  padding-top: 30px;
+}
+
+h3 {
+  padding: 10px;
+}
+
+.grocery-container {
+max-width: 700px;
+min-height: 400px;
+margin: 50px auto 0px;
+/* background: #aeb1b8; */
+background-image: url(./background.jpg);
+padding: 40px;
+}
+
+.grocery-container > h2 {
+  font-size: 35px;
+  font-weight: 500;
+  text-decoration: underline;
+  padding: 15px;
+}
+
+.grocery-form > input[name="add-grocery"] {
+  font-size: 14px;
+  color: #333;
+  font-size: 14px;
+  padding: 9px 7px 7px;
+  border: 1px solid #E1E4DF;
+  border-bottom: 1px solid #E1E4DF;
+  border-radius: 5px;
+  text-align: center;
+  margin: auto;
+  min-width: 250px;
+} 
+
+
+.grocery-form > input[type="submit"] {
+  font-size: 14px;
+  color: #333;
+  font-size: 14px;
+  padding: 9px 7px 7px;
+  border: 1px solid #E1E4DF;
+  border-bottom: 1px solid #E1E4DF;
+  border-radius: 5px;
+  text-align: center;
+  margin: auto;
+} 
+
+.done {
+  text-decoration: line-through;
+}
+
+.grocery-container li {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.grocery-container a {
+  text-decoration: none;
+}
+
+
+.grocery-form {
+  padding-top: 20px;
+}
+
+.recipe-list > a {
+  cursor: pointer;
+  margin: 5px;
+}
+
+.recipes > a {
+  cursor: pointer;
+  margin: 5px;
+}
+
+.recipes {
+  margin: 0;
+  padding: 0;
+}
+
