@@ -1,0 +1,40 @@
+form {
+  background: whitesmoke;
+  border: 4px dotted purple;
+  margin: 0 auto;
+  color: blue;
+}
+
+.html-elements-example {
+  border: 2px solid aqua
+}
+article {
+  border: 2px solid peru
+}
+aside {
+  border: 2px solid peru
+}
+figcaption {
+  border: 2px solid peru
+}
+figure {
+  border: 2px solid peru
+}
+footer {
+  border: 2px solid peru
+}
+header {
+  border: 2px solid peru
+}
+main {
+  border: 2px solid peru
+}
+section {
+  border: 2px solid peru
+}
+
+span {
+  border: 2px solid peru
+}
+
+/* feel free to do something nice with the styling, this is purely an example */
