@@ -22,3 +22,7 @@
 
 You should be good to go!
 
+Sources: 
+    1. https://osxdaily.com/2020/11/18/how-run-homebrew-x86-terminal-apple-silicon-mac/
+    2. https://gorails.com/setup/osx/11.0-big-sur
+
