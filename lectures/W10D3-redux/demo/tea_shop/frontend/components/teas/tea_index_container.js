@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import TeaIndex from './tea_index';
 import { receiveTea } from '../../actions/tea_actions';
+import { selectAllTeas } from '../../reducers/selectors';
 
 // connect TeaIndex to our redux store
 // connect takes in 2 callbacks
@@ -12,7 +13,7 @@ import { receiveTea } from '../../actions/tea_actions';
 const mapStateToProps = (state) => {
     // state === application (redux) state
     return {
-        teas: Object.values(state.teas)
+        teas: selectAllTeas(state)
     };
 }
 
@@ -27,4 +28,7 @@ const mapDispatchToProps = (dispatch) => {
 // connect checks for null if you pass it in as first arg
 // const connectedComponent = connect(mapStateToProps, mapDispatchToProps)(TeaIndex);
 // export default connectedComponent;
+
+// connect has access to the store via the Provider
+    // store has state and dispatch
 export default connect(mapStateToProps, mapDispatchToProps)(TeaIndex);
