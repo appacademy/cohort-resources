@@ -1,16 +1,19 @@
 import React from 'react';
 import TeaIndexItem from './tea_index_item';
+import TeaForm from './tea_form';
 
-const TeaIndex = (props) => {
-    console.log(props.teas);
+const TeaIndex = ({ teas, callReceiveTea }) => {
+    // console.log(teas);
     return (
         <div>
             <h1>THE TEA INDEX</h1>
             <ul>
-                {props.teas.map(tea => (
-                    <TeaIndexItem tea={tea} key={tea.id}/>
+                {teas.map(tea => (
+                    <TeaIndexItem tea={tea} key={tea.id} />
                 ))}
             </ul>
+
+            <TeaForm callReceiveTea={callReceiveTea} />
         </div>
     )
 }
