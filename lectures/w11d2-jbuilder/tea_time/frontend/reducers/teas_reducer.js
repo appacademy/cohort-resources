@@ -1,4 +1,4 @@
-import { RECEIVE_TEA, RECEIVE_TEAS } from '../actions/tea_actions'
+import { RECEIVE_TEA, RECEIVE_TEAS, RECEIVE_TEA_DETAIL } from '../actions/tea_actions'
 
 const teasReducer = (state = {}, action) => {
   Object.freeze(state); // pure function, don't mutate state!!
@@ -10,6 +10,10 @@ const teasReducer = (state = {}, action) => {
     case RECEIVE_TEAS:
       // action.teas.forEach(tea => nextState[tea.id] = tea);
       Object.assign(nextState, action.teas);
+      return nextState;
+    case RECEIVE_TEA_DETAIL:
+      debugger;
+      nextState[action.payload.tea.id] = action.payload.tea;
       return nextState;
     default:
       return state;

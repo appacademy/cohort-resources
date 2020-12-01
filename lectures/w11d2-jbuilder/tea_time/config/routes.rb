@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   # nesting routes under an api namespace
   namespace :api, defaults: {format: :json } do 
-    resources :teas, only: [:index, :create]
+    resources :teas, only: [:index, :create, :show]
   end
 
   # root to static pages controller, root method
