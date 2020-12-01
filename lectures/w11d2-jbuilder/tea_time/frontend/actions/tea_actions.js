@@ -2,6 +2,7 @@ import * as TeaApiUtil from '../util/tea_api_util';
 
 export const RECEIVE_TEA = 'RECEIVE_TEA';
 export const RECEIVE_TEAS = 'RECEIVE_TEAS';
+export const RECEIVE_TEA_DETAIL = 'RECEIVE_TEA_DETAIL';
 
 // static action
 export const receiveGreenTea = {
@@ -27,6 +28,13 @@ export const receiveTeas = (teas) => {
   };
 };
 
+export const receiveTeaDetail = (payload) => {
+  return {
+    type: RECEIVE_TEA_DETAIL,
+    payload
+  }
+}
+
 // THUNK ACTION CREATORS
 export const requestTeas = () => dispatch => {
   return TeaApiUtil.fetchTeas() // returns promise like object
@@ -39,3 +47,10 @@ export const createTea = tea => dispatch => {
   return TeaApiUtil.createTea(tea)
     .then(tea => dispatch(receiveTea(tea)))
 };
+
+// originally invoked with id in a react component
+// invoked with dispatch
+export const requestTeaDetail = (id) => dispatch => {
+  return TeaApiUtil.fetchTea(id)
+    .then(payload => dispatch(receiveTeaDetail(payload)))
+}

@@ -15,4 +15,11 @@ export const createTea = (tea) => {
     });
 };
 
+export const fetchTea = (id) => {
+  return $.ajax({
+    url: `/api/teas/${id}`,
+    method: 'GET'
+  })
+};
+
 // tea = { flavor: 'stuff', amount: 2.25 }

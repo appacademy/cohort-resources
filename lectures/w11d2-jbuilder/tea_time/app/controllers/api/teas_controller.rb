@@ -1,19 +1,25 @@
 class Api::TeasController < ApplicationController
     def index
-        teas = Tea.all
+        @teas = Tea.all
         # render json: teas
         render :index
     end 
 
+    def show
+      # /api/teas/:id
+      @tea = Tea.find(params[:id])
+      render :show
+    end
+
     def create
-        tea = Tea.new(tea_params)
-        if tea.save
+        @tea = Tea.new(tea_params)
+        if @tea.save
             # render json: tea
             render :info
         else
             # need to send a status with error message
             # default status code is 200 (success)
-            render json: tea.errors.full_messages, status: 422
+            render json: @tea.errors.full_messages, status: 422
         end
     end
 
