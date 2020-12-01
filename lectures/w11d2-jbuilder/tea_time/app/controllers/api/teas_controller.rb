@@ -1,13 +1,15 @@
 class Api::TeasController < ApplicationController
     def index
         teas = Tea.all
-        render json: teas
+        # render json: teas
+        render :index
     end 
 
     def create
         tea = Tea.new(tea_params)
         if tea.save
-            render json: tea
+            # render json: tea
+            render :info
         else
             # need to send a status with error message
             # default status code is 200 (success)

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   # nesting routes under an api namespace
-  namespace :api do 
+  namespace :api, defaults: {format: :json } do 
     resources :teas, only: [:index, :create]
   end
 
