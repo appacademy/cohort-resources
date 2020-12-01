@@ -12,7 +12,7 @@ const teasReducer = (state = {}, action) => {
       Object.assign(nextState, action.teas);
       return nextState;
     case RECEIVE_TEA_DETAIL:
-      debugger;
+      // debugger;
       nextState[action.payload.tea.id] = action.payload.tea;
       return nextState;
     default:
