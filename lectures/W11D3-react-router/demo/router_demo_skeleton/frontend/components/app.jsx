@@ -14,8 +14,11 @@ const App = () => (
     <Header />
     <Switch>
       <Route path="/todos/new" component={TodoFormContainer} />
+      <Route path="/todos/:id" component={TodoShowContainer} />
       <Route path="/todos" component={TodoIndexContainer} />
-      <Route path="/" component={Home} />
+      <Route path="/error" component={Error} />
+      <Route exact path="/" component={Home} />
+      <Redirect to="/error" />
     </Switch>
   </div>
 );
