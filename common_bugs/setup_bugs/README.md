@@ -14,9 +14,9 @@
 ## Rails 6 installed 
 
 * First, run `gem uninstall rails` and select `all versions` when prompted
-    - After this, `rails -v` should return an error.
 
 * Next, run `gem uninstall railties` and select `y` when prompted to remove all dependencies.
+  - After this, `rails -v` should return an error.
 
 * Finally, run `gem install rails --version 5.2.3`
 
