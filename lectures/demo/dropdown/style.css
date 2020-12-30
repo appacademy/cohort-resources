@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: beige;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 50px;
+  color: teal;
+  width: 100%;
+}
+
+main {
+  background-color: pink;
+  height: 1500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.pup-img {
+  margin: 30px;
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+}
+
+footer {
+  background-color: maroon;
+  height: 200px;
+}
+/* position the parent element relative to 'anchor' the absolutely positioned child */
+.dropdown {
+  width: 500px;
+  position: relative;
+}
+/* position the child absolute to take it out of the flow of the document (it will appear on top of other elements) */
+.dropdown-items {
+  display: none;
+  position: absolute;
+  left: 15px;
+}
+
+/* on hover of the class dropdown do some css to the class dropdown-items */
+.dropdown:hover .dropdown-items {
+  display: block;
+  background-color: yellow;
+}
+
+li:hover {
+  cursor: pointer;
+  background-color: gray;
+}
