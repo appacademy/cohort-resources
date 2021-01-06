@@ -84,11 +84,7 @@ resources :albums, except: [:create]
 
 ```ruby
 class AlbumsController < ApplicationController
-
-  def show
-    @band = Band.find_by(params[:id])
-  end
-  
+ 
   def create
     album = Album.new(album_params)
     # :band_id is part of the nested create route, so we need to make sure to save the album with this!
