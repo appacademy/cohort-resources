@@ -77,7 +77,7 @@ resources :bands do
   resources :albums, only: [:create]
 end
 
-resources :albums, except: [:create]
+resources :albums, except: [:create, :new]
 ```
 
 ### controller
@@ -92,8 +92,9 @@ class AlbumsController < ApplicationController
     if album.save
       redirect_to band_url(album.band_id)
     else
-      flash.now[:errors] = album.errors.full_messages
-      render 'bands/show'
+      flash[:errors] = album.errors.full_messages
+      redirect_to band_url(params[:band_id])
+      # if we don't save we redirect back to the band's show page because the new album form exists there
     end
   end
 
@@ -129,7 +130,7 @@ For no nesting you don't need to pull the band_id from params anywhere. In the a
 
 ```ruby
 resources :bands 
-resources :albums
+resources :albums, except: [:new]
 ```
 
 ### controller
@@ -141,8 +142,9 @@ class AlbumsController < ApplicationController
     if album.save
       redirect_to band_url(album.band_id)
     else
-      flash.now[:errors] = album.errors.full_messages
-      render :new
+      flash[:errors] = album.errors.full_messages
+      redirect_to band_url(album.band_id)
+      # we redirect back to the band show page if the save fails because the new album form exists there
     end
   end
 
