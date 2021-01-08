@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Goal App</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+
+      <% if signed_in? %>
+        <nav>
+          <a class='button' href="<%= users_url %>">Home</a>
+          
+          <div>
+            <p>Logged in as: <%= current_user.username %></p>
+          <form action=<%= session_url %> method='post'>
+            <input
+              type="hidden"
+              name="_method"
+              value="delete">
+            <input
+              type="hidden"
+              name="authenticity_token"
+              value="<%= form_authenticity_token %>">
+            <input 
+              type="submit" value="Sign Out">
+          </form>
+          </div>
+        </nav>
+      <% end %>
+
+      <% if flash[:errors] %>
+        <p><%= flash[:errors].join(", ") %></p>
+      <% end %>
+
+    <%= yield %>
+  </body>
+</html>
