@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- ^ loads jquery for us -->
+  <script type="text/javascript" src="./jQueryDemo.js"></script>
+  <title>Bucket List</title>
+</head>
+<body>
+  <h1>🌈Bucket List🌈</h1>
+  <article>
+    <section>
+      <h2>Bucket List</h2>
+        <ul class="bucket-list">
+          <li class="single-bucket">Buy a parrot. Teach the parrot to say, "Help! I've been turned into a parrot"</li>
+          <li class="single-bucket">Major in philosophy. Ask people WHY they would like fries with that.</li>
+          <li class="single-bucket">Buy a horse, name it 'Oscar takes the lead', enter it in horse races.</li>
+          <li class="single-bucket">Hire two private investigators. Get them to follow each other.</li>
+        </ul>
+        <button id="complete-all" class="button">Complete All</button>
+    </section>
+
+    <section>
+      <h3>Add bucket</h3>
+
+      <form class="add-bucket-form">
+        <p></p>
+        <input id="add-bucket-text" type="text" name="add-bucket" placeholder="Add Bucket">
+        <input type="submit" value="Submit New Bucket">
+      </form>
+    </section>
+  </article>
+  <script>
+    // $(() => alert('I am ready'))
+  </script>
+</body>
+</html>
