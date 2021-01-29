@@ -1,0 +1,21 @@
+  
+.box-model {
+  width: 300px;
+  height: 100px;
+  padding: 20px;
+  margin: 50px;
+  border: 2px solid black;
+  background: pink;
+}
+
+.border-box {
+  box-sizing: border-box;
+  /* box-sizing: content-box; */
+}
+
+
+.line-br {
+  border: 1px solid black;
+  width: 300px;
+  margin-left: 50px;
+}

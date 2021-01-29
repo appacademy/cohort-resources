@@ -1,0 +1,33 @@
+
+.descendant-selector p {
+    background-color: blue;
+}
+
+h3 ~ p {
+    color: pink;
+    background-color: whitesmoke;
+}
+
+.child-selector > p {
+    color: mediumslateblue;
+}
+
+p.highlight {
+    background-color: orange;
+}
+
+p .highlight {
+    background-color: darkblue;
+}
+
+div#blue {
+    background-color: blue;
+}
+
+.red#blue {
+    background-color: #f500aa;
+}
+
+div, p {
+    background-color: cornflowerblue;
+}
