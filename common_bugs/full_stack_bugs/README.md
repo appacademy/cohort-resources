@@ -7,7 +7,12 @@ Recipe for alleviating some Heroku push issues:
 ### Making sure Bundler is the correct version:
 
   - Gem uninstall bundler
-  - Gem install bundler -v 2.0.2
+  - Gem install bundler -v 2.1.4
+
+N.B: Even if you install the new bundler version and run bundle install, your Gemfile.lock may still be using the older version. In order to force your Gemfile.lock to use the new Bundler version, please run `bundle _2.1.4_ install`
+
+### Making sure the Heroku stack is set to 18 
+  - heroku stack:set heroku-18
 
 ### Push Failed:
 
