@@ -11,12 +11,12 @@
     + `chsh -s /bin/zsh`
     + `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
     + `brew install rbenv ruby-build`
-    + `echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.zshrc source ~/.zshrc`
+    + `echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.zshrc
+    + `echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc`
+    + `source ~/.zshrc
     + `rbenv install 2.5.1`
     + `rbenv global 2.5.1`
     + `ruby -v`
-    + `echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc`
-    + `echo 'eval "$(rbenv init -)"' >> ~/.zshrc`
     + `source ~/.zshrc`
     + `rbenv rehash`
 
