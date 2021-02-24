@@ -16,9 +16,9 @@
     + `source ~/.zshrc`
     + `rbenv install 2.5.1`
     + `rbenv global 2.5.1`
-    + `ruby -v`
-    + `source ~/.zshrc`
     + `rbenv rehash`
+    + `which ruby`
+    + `ruby -v`
 
 You should be good to go!
 
