@@ -1,0 +1,98 @@
+
+
+/* h1 {
+  background-color: peachpuff;
+} */
+
+
+/* .class-h1{
+  background-color: yellow;
+} */
+
+/* #id-h1{
+  background-color: green;
+} */
+
+
+/* 
+.descendant-selector p {
+  background-color: blue;
+} */
+
+/* .child-selector > p {
+  background-color: red;
+} */
+
+
+/* p.highlight {
+  background: yellow;
+}  */
+
+/* show p.highlight vs p .highlight */
+
+/* p .highlight {
+  background: orange;
+} */
+
+/* 0,0,0,0 */
+/*  * {
+  color: blue;
+  font-size: 15px;
+}*/
+
+/* 0,0,0,1 */
+/* h1 {
+  color: black;
+} */
+
+/* 0,0,1,0 */
+/* .class-h1{
+  color: green;
+} */
+
+/* 0,1,0,0 */
+/* #id-h1{
+  color: orange;
+} */
+
+
+
+/* h3 ~ p ~ h1{  */
+  /* background-color: green; */
+  /* font-family: Arial, Helvetica, sans-serif;
+  color: yellow;  */
+/* } */
+
+h3 + p {
+  background-color: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* div#blue {
+  background-color: blue;
+} */
+
+/* make it red! (add .red) */
+
+/* #blue.red {
+  background-color: purple;
+} */
+
+
+/* .red {
+  background-color: red;
+} */
