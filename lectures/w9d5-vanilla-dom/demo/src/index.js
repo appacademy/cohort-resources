@@ -53,11 +53,20 @@ const updateList = () => {
 
 //create event handler to cross out list items on click
 const markAsDone = (e) => {
+  e.stopPropagation();
   const clickedLi = e.target;
   clickedLi.classList.toggle('done');
 }
 
+//call our methods to populate DOM
+updateList();
+
 //--------------------PHASE II EVENT BUBBLING DEMO---------------------------------//
+
+const surprise = e => {
+  groceries.parentNode.style.backgroundImage = "url('surprise.gif')";
+  groceries.parentNode.style.backgroundSize = "100% 100%";
+}
 
 //COMMENT IN TO SHOW UNINTENDED SIDE EFFECTS OF EVENT BUBBLING
 // let groc = document.querySelectorAll(".groceries li") //select the li's
@@ -94,8 +103,14 @@ const updateWeeklyRecipe = () => {
   });
 
   //ADD AN EVENT LISTENER to set window.location.hash
-  
+  recipes.addEventListener("click", (e) => {
+    e.preventDefault();
+    const recipe = e.target;
+    window.location.hash = recipe.innerText.trim();
+  })
 }
+
+updateWeeklyRecipe();
 
 //---------------------------------------------------------------------//
 
@@ -107,9 +122,8 @@ groceryForm.addEventListener('submit', addItem);
 groceries.addEventListener('click', markAsDone);
 
 //add event listener to to add recipe
+recipeList.addEventListener("click", addRecipe);
 
-//call our methods to populate DOM
-updateList();
 
 //---------------------------------------------------------------------//
 
@@ -145,8 +159,4 @@ updateList();
 
 
 
-const surprise = e => {
-  console.log('TEST');
-  groceries.parentNode.style.backgroundImage = "url('surprise.gif')";
-  groceries.parentNode.style.backgroundSize = "100% 100%";
-}
+
