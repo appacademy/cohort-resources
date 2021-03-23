@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://puppy_survey/./frontend/entry.js"],"names":["console","log"],"mappings":";;;;;AAAAA,OAAO,CAACC,GAAR,CAAY,qBAAZ,E","file":"bundle.js","sourcesContent":["console.log(\"Webpack is working!\");"],"sourceRoot":""}
