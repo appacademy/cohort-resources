@@ -4,7 +4,7 @@ const path = require('path'); //It's a module available to use from Node with
 // on the machine’s filesystem. We need to first require this module.
 
 module.exports = {
-  entry: './frontend/entry.js', // specifies where webpack will start looking. With react, we will now have a frontend directory and an entry file.
+  entry: './frontend/entry.jsx', // specifies where webpack will start looking. With react, we will now have a frontend directory and an entry file.
   // for now, our entry file will be entry.js and during puppy-survey demo we will change this to entry.js at some point
   output: { //where webpack should output the bundled files
     //we use the output.filename and the output.path properties to tell webpack the name of our bundle and where we want it to be emitted to. 
