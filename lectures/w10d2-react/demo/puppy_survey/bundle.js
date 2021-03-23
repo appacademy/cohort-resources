@@ -2,6 +2,26 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./frontend/api_util.js":
+/*!******************************!*\
+  !*** ./frontend/api_util.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "fetchDogGif": () => (/* binding */ fetchDogGif)
+/* harmony export */ });
+var fetchDogGif = function fetchDogGif() {
+  // always be returning 
+  return $.ajax({
+    method: 'get',
+    url: 'http://api.giphy.com/v1/gifs/random?api_key=4X3Pk8YMCh7iqyxS8XhWtWwJOSeu5kPb&tag=funny+dog&rating=g'
+  });
+};
+
+/***/ }),
+
 /***/ "./frontend/app.jsx":
 /*!**************************!*\
   !*** ./frontend/app.jsx ***!
@@ -18,7 +38,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Hello ", props.name, ", from React"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Popular Dogs!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_dog_index__WEBPACK_IMPORTED_MODULE_1__.default, null));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "app"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Hello ", props.name, ", from React"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Popular Dogs!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_dog_index__WEBPACK_IMPORTED_MODULE_1__.default, null));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
@@ -37,6 +59,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _dog_index_item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dog_index_item */ "./frontend/dog_index_item.jsx");
+/* harmony import */ var _api_util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./api_util */ "./frontend/api_util.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -62,6 +85,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var DogIndex = /*#__PURE__*/function (_React$Component) {
   _inherits(DogIndex, _React$Component);
 
@@ -73,8 +97,10 @@ var DogIndex = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, DogIndex);
 
     _this = _super.call(this, props);
+    debugger;
     _this.state = {
-      totalVotes: 0
+      totalVotes: 0,
+      gif: null
     };
     _this.breeds = ['Border Collie', 'Samoyed', 'Poodle', 'Hot Dog', 'Sheltie', 'Chonker'];
     _this.addTotalVote = _this.addTotalVote.bind(_assertThisInitialized(_this));
@@ -89,22 +115,42 @@ var DogIndex = /*#__PURE__*/function (_React$Component) {
       });
     }
   }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      // console.log('HOWDY');
+      debugger;
+      (0,_api_util__WEBPACK_IMPORTED_MODULE_2__.fetchDogGif)().then(function (gifObj) {
+        _this2.setState({
+          gif: gifObj.data.image_url
+        });
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
+      var _this3 = this;
 
       var breeds = this.breeds.map(function (breed, idx) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_dog_index_item__WEBPACK_IMPORTED_MODULE_1__.default, {
           key: "".concat(idx, "-").concat(breed),
           breed: breed,
-          addTotalVote: _this2.addTotalVote
+          addTotalVote: _this3.addTotalVote
         });
-      }); // <li key={`${idx}-${breed}`} onClick={this.addTotalVote}>{breed}</li>
+      });
+      debugger; // [<DogIndexItem />, <DogIndexItem />]
+      // debugger
+      // <li key={`${idx}-${breed}`} onClick={this.addTotalVote}>{breed}</li>
       // 1. bind inline <li onClick={this.addTotalVote.bind(this)}></li>
       // 2. use anonymous arrow function <li onClick={() => this.addTotalVote()}></li>
       // 3. bind in the constructor function this.addTotalVote = this.addTotalVote.bind(this);
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "TOTAL DOG VOTES: ", this.state.totalVotes), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, breeds));
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "dog-index"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "TOTAL DOG VOTES: ", this.state.totalVotes), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: this.state.gif
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, breeds));
     }
   }]);
 
@@ -174,13 +220,16 @@ var DogIndexItem = /*#__PURE__*/function (_React$Component) {
       this.props.addTotalVote();
       this.setState({
         dogVoteCount: this.state.dogVoteCount + 1
-      });
+      } // () => console.log('new-dog-vote', this.state.dogVoteCount)
+      ); // console.log('old-dog-vote', this.state.dogVoteCount);
     }
   }, {
     key: "render",
     value: function render() {
       // console.log(this.props);
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "dog-detail"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
         onClick: this.addDogVote
       }, this.props.breed, ": ", this.state.dogVoteCount));
     }

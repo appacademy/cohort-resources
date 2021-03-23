@@ -3,7 +3,7 @@ import DogIndex from './dog_index';
 
 const App = (props) => {
   return (
-    <div>
+    <div className='app'>
       <h1>Hello {props.name}, from React</h1>
       <h1>Popular Dogs!</h1>
       <DogIndex />
