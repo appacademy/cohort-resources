@@ -36,10 +36,16 @@ class House
         end
     end
 
+    def self.big 
+        self.pool 
+    end
+
+
 end
 
 la_house = House.new(1, 1, true, 700)
-p la_house.bigger_than_500?
+p House.big
+# p la_house.bigger_than_500?
 # p House::DOOR
 # p la_house.door 
 # la_house.remove_door
