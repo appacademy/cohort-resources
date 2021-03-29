@@ -1,13 +1,7 @@
-export const RECEIVE_TEA = 'RECEIVE_TEA';
+import * as TeaAPIUtil from '../utils/tea_utils';
 
-// export const receiveGreenTea = {
-//     type: 'RECEIVE_TEA',
-//     tea: {
-//         flavor: 'green',
-//         amount: 2,
-//         id: 1
-//     }
-// }
+export const RECEIVE_TEA = 'RECEIVE_TEA';
+export const RECEIVE_TEAS = 'RECEIVE_TEAS';
 
 export const receiveTea = (teaPayload) => {
     return {
@@ -16,4 +10,13 @@ export const receiveTea = (teaPayload) => {
     }
 }
 
-// store.dispatch(receiveTea(tea))
+export const receiveTeas = (teas) => {
+    return {
+        type: RECEIVE_TEAS,
+        teas: teas
+    }
+}
+
+export const fetchAllTeas = () => (dispatch, getState) => (
+    TeaAPIUtil.fetchTeas().then(teas => dispatch(receiveTeas(teas)))
+)

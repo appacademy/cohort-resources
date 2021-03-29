@@ -1,5 +1,5 @@
 import configureStore from './store/store';
-import { receiveTea } from './actions/tea_actions';
+import * as TeaActions from './actions/tea_actions';
 import * as TeaAPIUtil from './utils/tea_utils';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const store = configureStore();
   window.store = store;
-  window.receiveTea = receiveTea;
+  window.TeaActions = TeaActions;
   window.TeaAPIUtil = TeaAPIUtil;
 
   const root = document.getElementById("root");

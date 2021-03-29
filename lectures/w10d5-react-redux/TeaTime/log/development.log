@@ -195,3 +195,10 @@ Processing by Api::TeasController#index as JSON
 Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for ::1 at 2021-03-29 11:31:52 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 177ms (Views: 176.1ms | ActiveRecord: 0.0ms)
+
+

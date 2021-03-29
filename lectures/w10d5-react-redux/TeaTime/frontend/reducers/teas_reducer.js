@@ -1,4 +1,5 @@
-import { RECEIVE_TEA } from '../actions/tea_actions';
+import { bindActionCreators } from 'redux';
+import { RECEIVE_TEA, RECEIVE_TEAS } from '../actions/tea_actions';
 
 const teasReducer = (state = {}, action) => {
     Object.freeze(state);  
@@ -18,6 +19,9 @@ const teasReducer = (state = {}, action) => {
     switch (action.type) {
         case RECEIVE_TEA:
             nextState[action.tea.id] = action.tea;
+            return nextState;
+        case RECEIVE_TEAS:
+            action.teas.forEach(tea => nextState[tea.id] = tea)
             return nextState;
         default: 
             return state;

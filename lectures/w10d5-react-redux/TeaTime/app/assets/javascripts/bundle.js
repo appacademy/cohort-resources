@@ -70,23 +70,34 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "RECEIVE_TEA": () => (/* binding */ RECEIVE_TEA),
-/* harmony export */   "receiveTea": () => (/* binding */ receiveTea)
+/* harmony export */   "RECEIVE_TEAS": () => (/* binding */ RECEIVE_TEAS),
+/* harmony export */   "receiveTea": () => (/* binding */ receiveTea),
+/* harmony export */   "receiveTeas": () => (/* binding */ receiveTeas),
+/* harmony export */   "fetchAllTeas": () => (/* binding */ fetchAllTeas)
 /* harmony export */ });
-var RECEIVE_TEA = 'RECEIVE_TEA'; // export const receiveGreenTea = {
-//     type: 'RECEIVE_TEA',
-//     tea: {
-//         flavor: 'green',
-//         amount: 2,
-//         id: 1
-//     }
-// }
+/* harmony import */ var _utils_tea_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/tea_utils */ "./frontend/utils/tea_utils.js");
 
+var RECEIVE_TEA = 'RECEIVE_TEA';
+var RECEIVE_TEAS = 'RECEIVE_TEAS';
 var receiveTea = function receiveTea(teaPayload) {
   return {
     type: RECEIVE_TEA,
     tea: teaPayload
   };
-}; // store.dispatch(receiveTea(tea))
+};
+var receiveTeas = function receiveTeas(teas) {
+  return {
+    type: RECEIVE_TEAS,
+    teas: teas
+  };
+};
+var fetchAllTeas = function fetchAllTeas() {
+  return function (dispatch, getState) {
+    return _utils_tea_utils__WEBPACK_IMPORTED_MODULE_0__.fetchTeas().then(function (teas) {
+      return dispatch(receiveTeas(teas));
+    });
+  };
+};
 
 /***/ }),
 
@@ -396,6 +407,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_tea_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/tea_actions */ "./frontend/actions/tea_actions.js");
 
 
+
 var teasReducer = function teasReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments.length > 1 ? arguments[1] : undefined;
@@ -413,6 +425,12 @@ var teasReducer = function teasReducer() {
   switch (action.type) {
     case _actions_tea_actions__WEBPACK_IMPORTED_MODULE_0__.RECEIVE_TEA:
       nextState[action.tea.id] = action.tea;
+      return nextState;
+
+    case _actions_tea_actions__WEBPACK_IMPORTED_MODULE_0__.RECEIVE_TEAS:
+      action.teas.forEach(function (tea) {
+        return nextState[tea.id] = tea;
+      });
       return nextState;
 
     default:
@@ -33918,7 +33936,7 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("Welcome to the magic tea shop.");
   var store = (0,_store_store__WEBPACK_IMPORTED_MODULE_0__.default)();
   window.store = store;
-  window.receiveTea = _actions_tea_actions__WEBPACK_IMPORTED_MODULE_1__.receiveTea;
+  window.TeaActions = _actions_tea_actions__WEBPACK_IMPORTED_MODULE_1__;
   window.TeaAPIUtil = _utils_tea_utils__WEBPACK_IMPORTED_MODULE_2__;
   var root = document.getElementById("root");
   react_dom__WEBPACK_IMPORTED_MODULE_4__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(_components_root__WEBPACK_IMPORTED_MODULE_5__.default, {
