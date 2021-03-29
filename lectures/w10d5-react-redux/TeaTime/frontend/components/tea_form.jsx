@@ -26,7 +26,7 @@ class TeaForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        this.props.receiveTea(this.state)
+        this.props.createTea4(this.state)
 
         this.setState({
             id: Math.floor(Math.random() * 1000000),

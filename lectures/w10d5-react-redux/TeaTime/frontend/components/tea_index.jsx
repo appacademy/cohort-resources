@@ -29,7 +29,7 @@ class TeaIndex extends React.Component {
                     this.props.greenTeas.map(tea => <li key={tea.id}>{tea.flavor}: {tea.amount}</li>)
                 }
             </ul>
-            <TeaForm receiveTea={this.props.receiveTea}/>
+            <TeaForm receiveTea={this.props.receiveTea} createTea4={this.props.createTea3}/>
         </div>
     )};
 }

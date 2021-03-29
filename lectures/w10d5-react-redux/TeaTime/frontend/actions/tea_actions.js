@@ -10,6 +10,7 @@ export const receiveTea = (teaPayload) => {
     }
 }
 
+// action creators
 export const receiveTeas = (teas) => {
     return {
         type: RECEIVE_TEAS,
@@ -20,3 +21,8 @@ export const receiveTeas = (teas) => {
 export const fetchAllTeas = () => (dispatch, getState) => (
     TeaAPIUtil.fetchTeas().then(teas => dispatch(receiveTeas(teas)))
 )
+
+// thunk action creator
+export const createTea2 = (tea) => (dispatch) => {
+    return TeaAPIUtil.createTea(tea).then(tea => dispatch(receiveTea(tea)));
+}

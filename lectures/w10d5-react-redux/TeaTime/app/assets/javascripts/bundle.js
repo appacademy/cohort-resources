@@ -73,7 +73,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "RECEIVE_TEAS": () => (/* binding */ RECEIVE_TEAS),
 /* harmony export */   "receiveTea": () => (/* binding */ receiveTea),
 /* harmony export */   "receiveTeas": () => (/* binding */ receiveTeas),
-/* harmony export */   "fetchAllTeas": () => (/* binding */ fetchAllTeas)
+/* harmony export */   "fetchAllTeas": () => (/* binding */ fetchAllTeas),
+/* harmony export */   "createTea2": () => (/* binding */ createTea2)
 /* harmony export */ });
 /* harmony import */ var _utils_tea_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/tea_utils */ "./frontend/utils/tea_utils.js");
 
@@ -84,7 +85,8 @@ var receiveTea = function receiveTea(teaPayload) {
     type: RECEIVE_TEA,
     tea: teaPayload
   };
-};
+}; // action creators
+
 var receiveTeas = function receiveTeas(teas) {
   return {
     type: RECEIVE_TEAS,
@@ -95,6 +97,14 @@ var fetchAllTeas = function fetchAllTeas() {
   return function (dispatch, getState) {
     return _utils_tea_utils__WEBPACK_IMPORTED_MODULE_0__.fetchTeas().then(function (teas) {
       return dispatch(receiveTeas(teas));
+    });
+  };
+}; // thunk action creator
+
+var createTea2 = function createTea2(tea) {
+  return function (dispatch) {
+    return _utils_tea_utils__WEBPACK_IMPORTED_MODULE_0__.createTea(tea).then(function (tea) {
+      return dispatch(receiveTea(tea));
     });
   };
 };
@@ -229,7 +239,7 @@ var TeaForm = /*#__PURE__*/function (_React$Component) {
     key: "handleSubmit",
     value: function handleSubmit(e) {
       e.preventDefault();
-      this.props.receiveTea(this.state);
+      this.props.createTea4(this.state);
       this.setState({
         id: Math.floor(Math.random() * 1000000),
         flavor: '',
@@ -332,7 +342,8 @@ var TeaIndex = /*#__PURE__*/function (_React$Component) {
           key: tea.id
         }, tea.flavor, ": ", tea.amount);
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tea_form__WEBPACK_IMPORTED_MODULE_1__.default, {
-        receiveTea: this.props.receiveTea
+        receiveTea: this.props.receiveTea,
+        createTea4: this.props.createTea3
       }));
     }
   }]);
@@ -381,6 +392,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     },
     fetchAllTeas: function fetchAllTeas() {
       return dispatch((0,_actions_tea_actions__WEBPACK_IMPORTED_MODULE_2__.fetchAllTeas)());
+    },
+    createTea3: function createTea3(tea) {
+      return dispatch((0,_actions_tea_actions__WEBPACK_IMPORTED_MODULE_2__.createTea2)(tea));
     }
   };
 };
@@ -493,6 +507,64 @@ var teasReducer = function teasReducer() {
 
 /***/ }),
 
+/***/ "./frontend/store/myMiddleware.js":
+/*!****************************************!*\
+  !*** ./frontend/store/myMiddleware.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var myMiddleware = function myMiddleware(store) {
+  console.log("I'm in the top level middleware function");
+  console.log("store: ", store);
+  return function (next) {
+    console.log("I'm in the function where next is an argument!");
+    console.log("next: ", next);
+    return function (action) {
+      console.log("I'm in the innermost middleware function");
+      console.log("action: ", action);
+      return next(action);
+    };
+  };
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (myMiddleware);
+
+/***/ }),
+
+/***/ "./frontend/store/myThunk.js":
+/*!***********************************!*\
+  !*** ./frontend/store/myThunk.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var myThunk = function myThunk(store) {
+  return function (next) {
+    return function (action) {
+      if (typeof action === 'function') {
+        return action(store.dispatch, store.getState); // action: TeaAPIUtil.fetchTeas().then(teas => dispatch(receiveTeas(teas)))
+      } else {
+        // next is the next middleware (if there is one)
+        // otherwise next is a dispatch to reducers
+        return next(action); // action: { type: RECEIVE_TEAS, teas: [...]}
+      }
+    };
+  };
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (myThunk);
+
+/***/ }),
+
 /***/ "./frontend/store/store.js":
 /*!*********************************!*\
   !*** ./frontend/store/store.js ***!
@@ -504,11 +576,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-logger */ "./node_modules/redux-logger/dist/redux-logger.js");
 /* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux_logger__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-thunk */ "./node_modules/redux-thunk/es/index.js");
-/* harmony import */ var _reducers_root_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../reducers/root_reducer */ "./frontend/reducers/root_reducer.js");
+/* harmony import */ var _myThunk__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./myThunk */ "./frontend/store/myThunk.js");
+/* harmony import */ var _myMiddleware__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./myMiddleware */ "./frontend/store/myMiddleware.js");
+/* harmony import */ var _reducers_root_reducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../reducers/root_reducer */ "./frontend/reducers/root_reducer.js");
+
+
 
 
  // import teasReducer from '../reducers/teas_reducer';
@@ -517,7 +593,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var configureStore = function configureStore() {
   var preloadedState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  return (0,redux__WEBPACK_IMPORTED_MODULE_3__.createStore)(_reducers_root_reducer__WEBPACK_IMPORTED_MODULE_2__.default, preloadedState, (0,redux__WEBPACK_IMPORTED_MODULE_3__.applyMiddleware)(redux_thunk__WEBPACK_IMPORTED_MODULE_1__.default, (redux_logger__WEBPACK_IMPORTED_MODULE_0___default())));
+  return (0,redux__WEBPACK_IMPORTED_MODULE_5__.createStore)(_reducers_root_reducer__WEBPACK_IMPORTED_MODULE_4__.default, preloadedState, (0,redux__WEBPACK_IMPORTED_MODULE_5__.applyMiddleware)(redux_thunk__WEBPACK_IMPORTED_MODULE_1__.default, (redux_logger__WEBPACK_IMPORTED_MODULE_0___default())));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (configureStore);
