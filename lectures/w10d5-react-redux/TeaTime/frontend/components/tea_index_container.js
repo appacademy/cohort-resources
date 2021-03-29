@@ -1,8 +1,9 @@
 import { connect } from 'react-redux';
 import TeaIndex from './tea_index';
-import { receiveTea } from '../actions/tea_actions';
+import { receiveTea, fetchAllTeas } from '../actions/tea_actions';
 import { selectTeasByFlavor } from '../reducers/selectors';
 
+// connected component can read from the store (state)
 const mapStateToProps = state => {
     // console.log(state.teas)
     // console.log(Object.values(state.teas))
@@ -14,9 +15,11 @@ const mapStateToProps = state => {
     })
 }
 
+// connected component can write to the store (dispatch)
 const mapDispatchToProps = dispatch => {
     return ({
-        receiveTea: tea => dispatch(receiveTea(tea))
+        receiveTea: tea => dispatch(receiveTea(tea)),
+        fetchAllTeas: () => dispatch(fetchAllTeas())
     })
 }
 
