@@ -5,6 +5,11 @@ class Api::TeasController < ApplicationController
     render :index
   end
 
+  def show
+    @tea = Tea.find_by(id: params[:id])
+    render :show
+  end
+
   def create
     @tea = Tea.new(tea_params)
 

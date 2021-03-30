@@ -1,5 +1,4 @@
-import { bindActionCreators } from 'redux';
-import { RECEIVE_TEA, RECEIVE_TEAS } from '../actions/tea_actions';
+import { RECEIVE_TEA, RECEIVE_TEAS, RECEIVE_TEA_DETAIL } from '../actions/tea_actions';
 
 const teasReducer = (state = {}, action) => {
     Object.freeze(state);  
@@ -25,6 +24,9 @@ const teasReducer = (state = {}, action) => {
             // debugger
             // return Object.assign(nextState, action.teas);
             return {...nextState, ...action.teas};
+        case RECEIVE_TEA_DETAIL:
+            nextState[action.payload.tea.id] = action.payload.tea;
+            return nextState;
         default: 
             return state;
     }

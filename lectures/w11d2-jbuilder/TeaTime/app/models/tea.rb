@@ -3,6 +3,10 @@ class Tea < ApplicationRecord
   validates :flavor, uniqueness: true
 
   has_many :transactions
+  has_many :buyers,
+    through: :transactions,
+    source: :user
+
   has_many :likes
   has_many :likers,
     through: :likes,

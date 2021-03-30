@@ -71,15 +71,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "RECEIVE_TEA": () => (/* binding */ RECEIVE_TEA),
 /* harmony export */   "RECEIVE_TEAS": () => (/* binding */ RECEIVE_TEAS),
+/* harmony export */   "RECEIVE_TEA_DETAIL": () => (/* binding */ RECEIVE_TEA_DETAIL),
 /* harmony export */   "receiveTea": () => (/* binding */ receiveTea),
 /* harmony export */   "receiveTeas": () => (/* binding */ receiveTeas),
 /* harmony export */   "fetchAllTeas": () => (/* binding */ fetchAllTeas),
-/* harmony export */   "createTea2": () => (/* binding */ createTea2)
+/* harmony export */   "createTea2": () => (/* binding */ createTea2),
+/* harmony export */   "fetchTea": () => (/* binding */ fetchTea)
 /* harmony export */ });
 /* harmony import */ var _utils_tea_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/tea_utils */ "./frontend/utils/tea_utils.js");
 
 var RECEIVE_TEA = 'RECEIVE_TEA';
-var RECEIVE_TEAS = 'RECEIVE_TEAS'; // NORMAL action creators
+var RECEIVE_TEAS = 'RECEIVE_TEAS';
+var RECEIVE_TEA_DETAIL = 'RECEIVE_TEA_DETAIL'; // NORMAL action creators
 
 var receiveTea = function receiveTea(teaPayload) {
   return {
@@ -92,8 +95,16 @@ var receiveTeas = function receiveTeas(teas) {
     type: RECEIVE_TEAS,
     teas: teas
   };
+};
+
+var receiveTeaDetail = function receiveTeaDetail(payload) {
+  return {
+    type: RECEIVE_TEA_DETAIL,
+    payload: payload
+  };
 }; // thunk action creator
 // thunk action === function
+
 
 var fetchAllTeas = function fetchAllTeas() {
   return function (dispatch, getState) {
@@ -106,6 +117,13 @@ var createTea2 = function createTea2(tea) {
   return function (dispatch) {
     return _utils_tea_utils__WEBPACK_IMPORTED_MODULE_0__.createTea(tea).then(function (tea) {
       return dispatch(receiveTea(tea));
+    });
+  };
+};
+var fetchTea = function fetchTea(teaId) {
+  return function (dispatch) {
+    return _utils_tea_utils__WEBPACK_IMPORTED_MODULE_0__.fetchTea(teaId).then(function (payload) {
+      return dispatch(receiveTeaDetail(payload));
     });
   };
 };
@@ -212,11 +230,22 @@ var TeaDetail = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(TeaDetail, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.fetchTea();
+    }
+  }, {
     key: "render",
     value: function render() {
+      console.log(this.props.transactions); // debugger
+
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "tea-detail"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "tea-description"
-      }, "Detail goes here");
+      }, this.props.tea.description), this.props.transactions.map(function (obj) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, obj.customer);
+      }));
     }
   }]);
 
@@ -224,6 +253,48 @@ var TeaDetail = /*#__PURE__*/function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0__.Component);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TeaDetail);
+
+/***/ }),
+
+/***/ "./frontend/components/tea_detail_container.js":
+/*!*****************************************************!*\
+  !*** ./frontend/components/tea_detail_container.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _tea_detail__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tea_detail */ "./frontend/components/tea_detail.jsx");
+/* harmony import */ var _actions_tea_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../actions/tea_actions */ "./frontend/actions/tea_actions.js");
+/* harmony import */ var _reducers_selectors__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../reducers/selectors */ "./frontend/reducers/selectors.js");
+
+
+
+
+
+var mapSTP = function mapSTP(state, ownProps) {
+  // debugger
+  // ownProps === props of the container
+  return {
+    tea: state.teas[ownProps.teaId],
+    transactions: (0,_reducers_selectors__WEBPACK_IMPORTED_MODULE_3__.selectTransactionsByTeaId)(state, ownProps.teaId)
+  };
+};
+
+var mapDTP = function mapDTP(dispatch, ownProps) {
+  // debugger
+  return {
+    fetchTea: function fetchTea() {
+      return dispatch((0,_actions_tea_actions__WEBPACK_IMPORTED_MODULE_2__.fetchTea)(ownProps.teaId));
+    }
+  };
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_0__.connect)(mapSTP, mapDTP)(_tea_detail__WEBPACK_IMPORTED_MODULE_1__.default));
 
 /***/ }),
 
@@ -491,7 +562,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _tea_detail__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tea_detail */ "./frontend/components/tea_detail.jsx");
+/* harmony import */ var _tea_detail_container__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tea_detail_container */ "./frontend/components/tea_detail_container.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -551,7 +622,9 @@ var TeaIndexItem = /*#__PURE__*/function (_React$Component) {
         onClick: this.handleClick
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "basic-info"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, tea.flavor, " Tea"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, "$", tea.amount)), this.state.detail ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tea_detail__WEBPACK_IMPORTED_MODULE_1__.default, null) : '');
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, tea.flavor, " Tea"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, "$", tea.amount)), this.state.detail ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tea_detail_container__WEBPACK_IMPORTED_MODULE_1__.default, {
+        teaId: tea.id
+      }) : '');
     }
   }]);
 
@@ -573,12 +646,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _teas_reducer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./teas_reducer */ "./frontend/reducers/teas_reducer.js");
+/* harmony import */ var _transactions_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./transactions_reducer */ "./frontend/reducers/transactions_reducer.js");
+/* harmony import */ var _users_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./users_reducer */ "./frontend/reducers/users_reducer.js");
 
 
-var rootReducer = (0,redux__WEBPACK_IMPORTED_MODULE_1__.combineReducers)({
+
+
+var rootReducer = (0,redux__WEBPACK_IMPORTED_MODULE_3__.combineReducers)({
   teas: _teas_reducer__WEBPACK_IMPORTED_MODULE_0__.default,
+  transactions: _transactions_reducer__WEBPACK_IMPORTED_MODULE_1__.default,
+  users: _users_reducer__WEBPACK_IMPORTED_MODULE_2__.default,
   cookies: function cookies() {
     return {};
   },
@@ -603,12 +682,21 @@ var rootReducer = (0,redux__WEBPACK_IMPORTED_MODULE_1__.combineReducers)({
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "selectTeasByFlavor": () => (/* binding */ selectTeasByFlavor)
+/* harmony export */   "selectTeasByFlavor": () => (/* binding */ selectTeasByFlavor),
+/* harmony export */   "selectTransactionsByTeaId": () => (/* binding */ selectTransactionsByTeaId)
 /* harmony export */ });
 var selectTeasByFlavor = function selectTeasByFlavor(teas, flavor) {
   var teasArray = Object.values(teas);
   return teasArray.filter(function (tea) {
     return tea.flavor === flavor;
+  });
+};
+var selectTransactionsByTeaId = function selectTransactionsByTeaId(state, teaId) {
+  var transactionIds = state.teas[teaId].transactionIds || [];
+  return transactionIds.map(function (id) {
+    var transaction = state.transactions[id];
+    transaction.customer = state.users[transaction.userId].username;
+    return transaction;
   });
 };
 
@@ -631,7 +719,6 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 
 
 
@@ -660,12 +747,94 @@ var teasReducer = function teasReducer() {
       // return Object.assign(nextState, action.teas);
       return _objectSpread(_objectSpread({}, nextState), action.teas);
 
+    case _actions_tea_actions__WEBPACK_IMPORTED_MODULE_0__.RECEIVE_TEA_DETAIL:
+      nextState[action.payload.tea.id] = action.payload.tea;
+      return nextState;
+
     default:
       return state;
   }
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (teasReducer);
+
+/***/ }),
+
+/***/ "./frontend/reducers/transactions_reducer.js":
+/*!***************************************************!*\
+  !*** ./frontend/reducers/transactions_reducer.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _actions_tea_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/tea_actions */ "./frontend/actions/tea_actions.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+var transactionsReducer = function transactionsReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(state);
+  var nextState = Object.assign({}, state);
+
+  switch (action.type) {
+    case _actions_tea_actions__WEBPACK_IMPORTED_MODULE_0__.RECEIVE_TEA_DETAIL:
+      return _objectSpread(_objectSpread({}, nextState), action.payload.transactions);
+
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (transactionsReducer);
+
+/***/ }),
+
+/***/ "./frontend/reducers/users_reducer.js":
+/*!********************************************!*\
+  !*** ./frontend/reducers/users_reducer.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _actions_tea_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/tea_actions */ "./frontend/actions/tea_actions.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+var usersReducer = function usersReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(state);
+  var nextState = Object.assign({}, state);
+
+  switch (action.type) {
+    case _actions_tea_actions__WEBPACK_IMPORTED_MODULE_0__.RECEIVE_TEA_DETAIL:
+      return _objectSpread(_objectSpread({}, nextState), action.payload.users);
+
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (usersReducer);
 
 /***/ }),
 
@@ -774,6 +943,7 @@ var configureStore = function configureStore() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "fetchTeas": () => (/* binding */ fetchTeas),
+/* harmony export */   "fetchTea": () => (/* binding */ fetchTea),
 /* harmony export */   "createTea": () => (/* binding */ createTea)
 /* harmony export */ });
 var fetchTeas = function fetchTeas() {
@@ -781,6 +951,12 @@ var fetchTeas = function fetchTeas() {
   return $.ajax({
     method: 'GET',
     url: '/api/teas'
+  });
+};
+var fetchTea = function fetchTea(teaId) {
+  return $.ajax({
+    method: 'GET',
+    url: "api/teas/".concat(teaId)
   });
 };
 var createTea = function createTea(tea) {

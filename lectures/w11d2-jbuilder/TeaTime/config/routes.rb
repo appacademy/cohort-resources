@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   # add /api to request path to route to teas
   namespace :api, defaults: {format: :json} do
-    resources :teas, only: [:index, :create]
+    resources :teas, only: [:index, :create, :show]
   end
 
   root to: 'static_pages#root' # if the request is get '/' route to here

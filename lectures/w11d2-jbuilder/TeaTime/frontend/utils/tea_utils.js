@@ -6,6 +6,14 @@ export const fetchTeas = () => {
   })
 };
 
+export const fetchTea = (teaId) => {
+
+  return $.ajax({
+    method: 'GET',
+    url: `api/teas/${teaId}`
+  })
+}
+
 export const createTea = (tea) => {
   return $.ajax({
     method: 'POST',
