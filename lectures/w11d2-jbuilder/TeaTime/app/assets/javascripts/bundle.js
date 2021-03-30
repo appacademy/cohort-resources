@@ -237,15 +237,27 @@ var TeaDetail = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log(this.props.transactions); // debugger
+      // console.log(this.props.transactions);
+      var _this$props = this.props,
+          tea = _this$props.tea,
+          transactions = _this$props.transactions; // cosnt tea = this.props.tea;
+      // const transactions = this.props.transactions;
+      // debugger
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "tea-detail"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "tea-description"
-      }, this.props.tea.description), this.props.transactions.map(function (obj) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, obj.customer);
-      }));
+      }, tea.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+        className: "tea-transactions"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "tea-transaction columns"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Customer"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Quantity"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Price"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Total")), transactions.map(function (transaction) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          className: "tea-transaction",
+          key: transaction.id
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, transaction.customer), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, transaction.quantity), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, tea.amount), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, tea.amount * transaction.quantity));
+      })));
     }
   }]);
 
