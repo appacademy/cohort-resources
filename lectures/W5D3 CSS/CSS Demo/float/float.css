@@ -1,0 +1,39 @@
+header {
+  display: none;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  opacity: 0.9;
+}
+
+.pool {
+  background-image: url("pool.jpg");
+  background-size: cover;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  border: 20px solid gray;
+}
+
+/* float */
+.flamingo, .donut {
+  float: left;
+  clear: both;
+}
+
+.duck, .pineapple {
+  float: right;
+  clear: both;
+}
+
+/* p { clear: both; } */
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}

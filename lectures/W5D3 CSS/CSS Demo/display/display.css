@@ -1,0 +1,38 @@
+
+div {
+   height: 100px;
+   background: pink;
+   border: 1px solid red;
+   margin-bottom: 25px; 
+}
+
+section div {
+    background: turquoise;
+    border: 1px solid teal;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+span {
+ /* display: inline; */
+ background: tomato;
+ /* height: 100px; */
+
+ margin-left: 10px;
+ padding-left: 10px;
+
+ /* margin-top: 1000px; */
+}
+
+
+section div:first-child {
+
+}
+
+.inline-block-demo {
+    display: inline-block;
+    background: violet;
+    height: 50px;
+    margin-bottom: 5px;
+}
