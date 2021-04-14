@@ -1,0 +1,58 @@
+header {
+  display: none;
+}
+
+.pool {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  background-image: url("pool.jpg");
+  background-size: cover;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  border: 20px solid gray;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  opacity: 0.9;
+}
+
+.flamingo, .donut, .duck, .pineapple {
+  border: 10px solid blue;
+  margin: 5px;
+}
+
+/* flex */
+.flamingo-donut-paragraph-container{
+  display: flex;
+  justify-content: space-evenly;
+  border: 10px solid red;
+  margin: 5px;
+  width: auto;
+}
+
+.flamingo-donut-paragraph-container p {
+  border: 10px solid black;
+  margin: 5px;
+}
+
+.flamingo-donut-container{
+  border: 10px solid yellow;
+  margin: 5px;
+}
+
+.duck-pineapple-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 800px;
+  width: auto%;
+  border: 10px solid red;
+  margin: 5px;
+}
+
