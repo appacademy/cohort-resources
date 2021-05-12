@@ -1,0 +1,60 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+article {
+  display: flex;
+}
+
+section {
+  padding: 12px;
+}
+
+li, button {
+  font-size: 1.5em;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+input {
+  font-size: 1.5em;
+}
+
+.bucket-list > li {
+  background-color: rgba(255, 0, 0, 0.1);
+  border: 8px solid rgb(255, 0, 0);
+}
+
+.bucket-list > li.complete {
+  background-color: rgba(0, 255, 0, 0.5);
+  border: 8px solid rgb(0, 255, 0);
+}
+
+.button {
+  background-color: rgba(0, 0, 255, 0.3);
+  border: 8px solid rgb(0, 0, 255);
+  font-size: 1.5em;
+  color: white;
+  cursor: pointer;
+  margin-left: 45%;
+}
+
+input[type="submit"]{
+  font-size: 1.5em;
+  cursor: pointer;
+  border: 2px solid black;
+  margin-top: 15px;
+}
+
+.bucket-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.blue {
+  color: blue
+}
