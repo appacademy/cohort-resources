@@ -1,0 +1,20 @@
+{
+  "name": "redux-demo-march",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch --mode=development"
+  },
+  "author": "app-academy",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "babel-loader": "^8.2.2",
+    "redux": "^4.1.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.7.0"
+  }
+}
