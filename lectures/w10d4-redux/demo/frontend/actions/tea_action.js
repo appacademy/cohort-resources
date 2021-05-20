@@ -1,6 +1,6 @@
 export const RECEIVE_TEA = "RECEIVE_TEA";
 
-// static action
+// ____static action____
 export const receiveJasmineTea = {
     type: RECEIVE_TEA,
     tea: {
