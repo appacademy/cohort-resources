@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: "./frontend/tea_shop.js",
+  entry: "./frontend/tea_shop.jsx",
   output: {
     path: path.resolve(__dirname),
     filename: "./bundle.js",
@@ -13,7 +13,7 @@ module.exports = {
         exclude: /(node_modules)/,
         loader: "babel-loader",
         options: {
-          presets: ["@babel/env"], //'@babel/react'
+          presets: ["@babel/env", "@babel/react"],
         },
       },
     ],

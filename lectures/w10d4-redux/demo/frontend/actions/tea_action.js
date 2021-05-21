@@ -12,6 +12,7 @@ export const receiveJasmineTea = {
 
 // action creators
 export const receiveTea = (tea) => {
+    debugger
     return {
         type: RECEIVE_TEA,
         tea
