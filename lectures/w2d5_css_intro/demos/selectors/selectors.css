@@ -1,0 +1,67 @@
+/* Select all p descendants of .descendant-selector */
+
+/* specificity: (0,0,1,1) */
+.descendant-selector p { 
+  background-color: aqua;
+}
+
+/* .descendant-selector p { 
+  background-color: pink;
+} */
+
+/* Select all p siblings of h3s */
+
+/* specificity: (0,0,0,2) */
+/* h3 ~ p {
+  background-color: pink;
+} */
+
+/* Select all direct children p of .child-selector */
+
+/* specificity: (0,0,1,1) */
+.child-selector > p {
+  background-color: black;
+}
+
+.highlight {
+  background: yellow;
+}
+
+/* show p.highlight vs p .highlight */
+
+/* p.highlight {
+  background: orange;
+} */
+
+p .highlight {
+  background: orange;
+}
+
+
+/* specificity: (0,1,0,1) */
+div#blue {
+  background-color: blue;
+}
+
+/* make it red! (add .red) */
+
+/* div#blue.red {
+  background-color: red;
+} */
+
+/* div#blue {
+  background-color: red;
+} */
+
+/* div.red#blue {
+  background-color: red;
+} */
+
+/* specificity: (0,0,1,1) */
+/* div .red {
+  background-color: red;
+} */
+
+body div#blue.red {
+  background-color: red;
+}
