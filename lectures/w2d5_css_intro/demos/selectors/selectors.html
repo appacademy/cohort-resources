@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./selectors.css">
+    <title>Selectors</title>
+</head>
+
+<body>
+    <h1>Selectors</h1>
+
+    <h2>Descendant Selector</h2>
+    <div class="descendant-selector">
+        <p>I'm paragraph 1</p>
+        <h3>I'm just a header</h3>
+        <p>p2 whatever</p>
+        <p>p3 hi</p>
+        <div>
+            <p>I'm a nested paragraph</p>
+        </div>
+        <p>I'm not nested</p>
+    </div>
+
+    <h2>Child Selector</h2>
+    <div class="child-selector">
+        <p>I'm a direct child</p>
+        <h3>I'm just a header</h3>
+        <div>
+            <p>I'm a nested paragraph</p>
+        </div>
+        <p>I'm not nested (a direct child)</p>
+    </div>
+
+
+    <div id="blue" class="red">
+        Select me!
+    </div>
+
+
+    <h3>p.highlight vs p .highlight</h3>
+    <p class="highlight">This whole thing is highlighted</p>
+    <p>Only <span class="highlight">some</span> words are <span class="highlight">highlighted</span>.</p>
+</body>
+
+</html>
