@@ -1,0 +1,7 @@
+<% if errors && errors[type] %>
+  <ul>
+    <% errors[type].each do |error| %>
+    <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
