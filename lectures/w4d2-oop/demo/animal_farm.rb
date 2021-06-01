@@ -1,19 +1,31 @@
 #!/usr/bin/env ruby
+require_relative 'modules/myenumerable'
+require 'singleton'
+
+module Flyable
+  def fly
+    puts "#{@name} flys!"
+  end
+end
 
 class Farm
+  include MyEnumerable
+
   def initialize(animals)
     # expecting an array of animals
     @animals = animals
     # @a1, @a2, @a3 = animals
   end
 
-  def each(&blk)
+  # def each(&blk)
     # yield @a1
     # yield @a2
     # yield @a3
-    @animals.each(&blk)
-  end
+   #  @animals.each(&blk)
+ #  end
+
 end
+
 
 class Animal
   def initialize(name, pos)
@@ -45,6 +57,7 @@ class Horse < Animal
 end
 
 class Pig < Animal
+  include Flyable
   def movement
     "trots"
   end
@@ -79,13 +92,13 @@ class Dinosaur < Animal
   # 1. overwrite(replace) move superclass method
   # 2. do its own thing ex: print loudly
   # 3. call super, to use superclass method
-  def move(distance)
+  def move
     print "Loudly, "
     # super called with no args => implicitly pass distance to superclass move method
-    super
+    # super
 
     # super called with args => explicity call superclass method with args
-    # super(500)
+    super(500)
 
     # do your own thing (don't want to puts anything, dont call super)
     # new_pos = @pos + distance
@@ -101,6 +114,30 @@ class Dinosaur < Animal
   end
 end
 
+class NullAnimal < Animal
+  include Singleton
+  def initialize
+    @name = "nothing"
+    @pos = 0
+  end
+
+  #def move
+    #puts "doesn't move"
+  #end
+
+  #def make_noise
+   # puts "..."
+  #end
+
+  def movement
+    "moves"
+  end
+
+  def noise
+    "..."
+  end
+end
+
 # checks if code is being directly run, wont run if required by another file
 # if I run ruby animal_farm.rb -- then this shoulod return true
 # if I had another file and it require_relative'd this, and ran ruby another_file.rb, it would not run
@@ -110,14 +147,19 @@ if $PROGRAM_NAME == __FILE__
   bud = Dog.new("Bud", 1)
   donald = Duck.new("Donald", 4)
   blue = Dinosaur.new("Blue", -100000000)
+  nothing = NullAnimal.instance
 
   mayo.move(-3)
   megahan.move(5)
   bud.move(1)
   donald.move(-45)
   blue.move
+  nothing.move(3)
 
-  farm = Farm.new([mayo, megahan, bud, donald, blue])
+  farm = Farm.new([mayo, megahan, bud, donald, blue, nothing])
 
   farm.each(&:make_noise)
+  # Farm.each {|ele| puts ele}
+
+  megahan.fly
 end
