@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
+$header-height: 150px;
+$text-size: 150px;
+$left-width: $header-height * 1.5;
+
+$font: 'Limelight', cursive;
+
+body {
+    font-family: $font;
+}

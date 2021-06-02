@@ -1,0 +1,32 @@
+html, body, div, span, iframe, svg,
+h1, h2, h3, h4, h5, h6, button,
+p, a, img, strong, main, small, input,
+ol, ul, li, label, form, textarea,
+article, aside, canvas, figure, time,
+footer, header, figcaption, nav, section {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    outline: 0;
+    background: transparent;
+    box-sizing: border-box;
+    font: inherit;
+    color: inherit;
+    text-align: inherit;
+    text-decoration: inherit;
+    vertical-align: inherit;
+    margin-block-start: 0;
+    margin-inline-start: 0;
+    margin-block-end: 0;
+    margin-inline-end: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}

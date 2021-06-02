@@ -1,0 +1,61 @@
+.css-lecture {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: $header-height 1fr;
+    grid-template-columns: $left-width 1fr $header-height;
+    // grid-template-areas: 
+    // "header header header"
+    // "left-bar main-content right-bar";
+    // gap: 10px;
+    > section {
+        // grid-area: main-content;
+        overflow-y: scroll;
+        grid-column: 2;
+        grid-row: 2;
+    }
+}
+
+header {
+    // grid-area: header;
+}
+
+.left-bar {
+    // grid-area: left-bar;
+}
+
+.right-bar {
+    // grid-area: right-bar;
+//     // Do we still want our right-bar display flex? ((yes))
+}
+
+header {
+    // grid-column-start: 1;
+    // grid-column-end: 4;
+    // grid-column-start: span 3;
+    // grid-column: 2 / span 2;
+}
+
+
+
+.css-lecture {
+    header {
+        grid-area: 1 / 1 / 2 / 4;
+    }
+    .left-bar {
+        // opacity: 50%;
+        grid-column: 1 / span 1;
+        // grid-row: 2;
+        // could also say
+        // grid-area: 2 / 1 / 3 / 3;
+    }
+}
+
+
+// Below is just cleanup to remove styles from 'starting.scss' for ease of demo-ing
+
+header, .left-bar, .right-bar {
+    width: unset;
+    height: unset;
+    flex-shrink: unset;
+}

@@ -1,0 +1,35 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.css-lecture {
+    background-color: lightskyblue;
+}
+
+aside {
+    display: block;
+}
+
+// button, .hover {
+//     border: 3px solid white;
+//     padding: 10px;
+//     color: white;
+//     border-radius: 10px;
+//     text-align: center;
+//     vertical-align: middle;
+//     svg {
+//         margin-left: 5px;
+//     }
+//     &:hover {
+//         color: lightgray;
+//         border-color: lightgray;
+//         cursor: pointer;
+//     }
+// }
+
+
+
+
+
+button, .hover {
+    @include button(white)
+}

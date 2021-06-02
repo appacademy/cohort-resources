@@ -1,0 +1,121 @@
+header {
+  background-color: red;
+  border-bottom: 5px solid darkred;
+  padding: 20px;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  width: 50px;
+}
+
+header > nav.left {
+  display: flex;
+  align-items: center;
+}
+
+header > nav.right {
+  color: white;
+  font-size: 75px;
+}
+
+.left-bar {
+  width: 225px;
+  background-color: darkslateblue;
+  border-right: 5px solid purple;
+  flex-shrink: 0;
+  display: flex;
+}
+
+.left-bar > button {
+  height: 50px;
+  width: 190px;
+  margin: 10px auto;
+  background-color: inherit;
+}
+
+.left-bar > button > .tooltip {
+  background-color: slategray;
+  padding: 10px;
+  border: 2px solid grey;
+  border-radius: 2px;
+  width: 80px;
+  bottom: 35px;
+  right: -70px;
+  display: none;
+}
+
+.left-bar > button:hover > .tooltip {
+  display: block;
+}
+
+.right-bar {
+  width: 150px;
+  background-color: darkblue;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.right-bar > a {
+  height: fit-content;
+  margin-bottom: 10px;
+}
+
+.right-bar > a > button {
+  height: 50px;
+}
+
+section {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgreen;
+}
+
+section > h1 {
+  font-size: 150px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 800;
+}
+
+section > p {
+  margin-top: 75px;
+  text-indent: 150px;
+  font-size: 75px;
+}
+
+.dropdown {
+  margin-left: 20px;
+}
+
+.dropdown > .content {
+  background-color: palevioletred;
+  padding: 20px 0;
+  border: 2px solid deeppink;
+  border-radius: 2px;
+  width: 200px;
+  top: 45px;
+  left: 25px;
+}
+
+.dropdown > .content h3 {
+  font-weight: bold;
+}
+
+.dropdown > .content li {
+  text-align: left;
+  width: 100%;
+  padding: 3px 10px;
+  margin: 5px 0;
+}
+
+.dropdown > .content li:hover {
+  color: white;
+  background-color: deeppink;
+}

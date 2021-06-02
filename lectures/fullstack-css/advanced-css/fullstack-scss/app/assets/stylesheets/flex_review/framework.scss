@@ -1,0 +1,121 @@
+
+.flex-demo {
+    display: flex;
+    margin: 10px; 
+}
+.details {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    @include flex($flex-direction: column);
+    > h1 {
+        margin: 50px 0;
+        font-size: 40px;
+        font-weight: 900;
+        text-align: center;
+        font-variant: small-caps;
+    }
+}
+.back button {
+    margin-top: 40px;
+    background: lighten($frog-color, 20);
+    @include button($frog-color);
+    > svg {
+        margin-left: 10px;
+    }
+}
+
+.toggle {
+    > label {
+        margin: 20px 5px;
+        // @include flex($justify-content: space-between);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    } 
+    .toggle-btn {
+        margin-left: 10px;
+        height: 20px;
+        width: 20px;
+        border-radius: 100%;
+        border: 1px solid $frog-color;
+        &.selected {
+            background-color: $frog-color;
+        }
+    }
+}
+
+.pond {
+    background-image: linear-gradient(
+        rgba(21, 37, 71,$opacity),
+        rgba(21, 37, 71,$opacity),
+    ), asset-url("pool.jpg"); 
+    background-size: cover;
+    border: 50px solid rgb(116, 113, 117);
+    width: 900px;
+    height: 800px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.frog:last-child, .frog-row > .frog:last-child  {
+    --this-color: #{ lighten($frog-color, 10) };
+}
+
+.frog {
+    &:first-child {
+        --this-color: #{ darken($frog-color, 8) };
+    }
+    &:nth-child(2) {
+        --this-color: #{$frog-color};
+    }
+    background-color: var(--this-color);
+    height: $frog-size - ( $diff * 1.5 );
+    height: $frog-size - ( $diff );
+    width: $frog-size;
+    border-radius: 100%;
+    margin: $frog-size / 6;
+    position: relative;
+    .eyes {
+        &::before {
+            height: $white-height;
+            width: $white-height;
+            background-color: white;
+            border-radius: 100%;
+            content: "";
+            position: absolute;
+            top: $diff / 2;
+            left: $diff / 2;            
+        }
+        &::after {
+            height: $white-height - $diff;
+            width: $white-height - $diff;
+            border-radius: 100%;
+            background-color: black;
+            position: absolute;
+            content: "";
+            top: $diff;
+            left: $diff - ($diff / 4) ;
+        }
+        height: $frog-size / 2.25;
+        width: $frog-size / 2.25;
+        background-color: var(--this-color);
+        border-radius: 100%;
+        content: "";
+        position: absolute;
+        top: -($frog-size / 15);
+        &:last-of-type {
+            right: 0px;
+        }
+
+    }
+}
+
+.frog-row {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1px;
+}
+
+.frogs-left {
+    background-color: rgba(255, 255, 255, 0.5);
+}

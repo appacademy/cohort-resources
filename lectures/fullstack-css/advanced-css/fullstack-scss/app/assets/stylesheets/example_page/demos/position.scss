@@ -1,0 +1,61 @@
+$sidebar-height: calc(100vh - #{ $header-height } );
+
+// header {
+//     position: fixed;
+//     top: 0;
+//     width: 100%;
+// }
+
+// .left-bar {
+//     position: fixed; 
+//     top: 150px;
+//     height: $sidebar-height;   
+// }
+
+// .right-bar {
+//     position: fixed;
+//     top: 150px;
+//     height: $sidebar-height;
+//     right: 0; 
+// }
+
+
+
+
+
+
+
+
+
+
+
+// section {
+//     margin: $header-height $header-height 0 $left-width;
+// }
+
+
+
+
+// z-index attempt 1
+// header {
+//     z-index: 10;
+// }
+// // z-index attempt 2
+// .left-bar {
+//     z-index: -1;
+// }
+// // z-index -1 means we can't hover and get our tooltip! D:
+
+// Other possible attempts
+
+// .dropdown > .content {
+//     z-index: 10;
+// }
+
+// .left-bar {
+//     z-index: 1;
+// }
+
+// .dropdown {
+//     z-index: 10;
+// }

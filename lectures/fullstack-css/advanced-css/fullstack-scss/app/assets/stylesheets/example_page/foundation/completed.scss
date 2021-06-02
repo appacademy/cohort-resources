@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;900&display=swap');
+$roboto: 'Roboto', sans-serif;
+.completed {
+    &.css-lecture {
+        font-family: $roboto;
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: $header-height 1fr;
+        grid-template-columns: $left-width 1fr $header-height;
+        grid-template-areas: 
+        "header header header"
+        "left-bar main-content right-bar";
+        > section {
+            grid-area: main-content;
+            overflow-y: scroll;
+        }
+        header {
+            grid-area: header;
+        }
+    }
+
+    .left-bar > button, .dropdown {
+        position: relative;
+        > .tooltip, .content {
+            position: absolute;
+            z-index: 1;
+        }
+    }
+}

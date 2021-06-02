@@ -1,0 +1,10 @@
+// @import './foundation/starting_oldschool.scss';
+@import './foundation/starting.scss';
+
+@import "./demos/*";
+// Does the same as
+// @import './demos/position.scss';
+// @import './demos/flex.scss';
+// @import './demos/grid.scss';
+
+@import './foundation/completed.scss';
