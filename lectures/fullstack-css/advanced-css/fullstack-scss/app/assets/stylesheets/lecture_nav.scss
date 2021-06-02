@@ -1,0 +1,63 @@
+.lecture-nav, .resources {
+    background: lightskyblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: $roboto;
+    padding: 100px;
+    h1, h2 {
+        font-weight: 900;
+    }
+    h1 {
+        font-size: 100px;
+        margin-bottom: 100px;
+    }
+    h2 {
+        font-size: 60px;
+        margin: 20px -20px;
+        &:last-of-type {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            &:hover {
+                color: darkslateblue;
+            }
+        }
+    }
+    ul {
+        font-size: 30px;
+        font-weight: 600;
+        li {
+            margin: 10px;
+            &:hover {
+                color: darkslateblue;
+            }
+        }
+    }
+}
+.resources {
+    margin-top: -50px;
+    button {
+        @include button(darkslateblue);
+        position: fixed;
+        left: 50px;
+        top: 75px;
+    }
+}
+
+.lecture-nav {
+    a.back {
+        margin-top: 50px;
+        @include button(mix(darkslateblue, grey, 70%));
+        &:hover {
+            background-color: mix(darkslateblue, lightskyblue, 10%);
+        }
+        display: flex;
+        font-size: 40px;
+        img {
+            width: 100px;
+        }
+    }
+}

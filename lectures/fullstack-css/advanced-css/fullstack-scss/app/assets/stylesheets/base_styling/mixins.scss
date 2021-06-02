@@ -1,0 +1,26 @@
+@mixin button($color){
+    border: 3px solid $color;
+    padding: 10px;
+    color: $color;
+    border-radius: 10px;
+    text-align: center;
+    vertical-align: middle;
+    svg {
+        margin-left: 5px;
+    }
+    &:hover {
+        color: darken($color, 20);
+        border-color: darken($color, 20);
+        cursor: pointer;
+    }
+}
+
+// Let's build a small 'flex' mixin that takes in an argument for 'justify-content', 'align-items', and 'flex-direction'!
+
+
+@mixin flex($justify-content: center, $align-items: center, $flex-direction: row) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $flex-direction;
+}

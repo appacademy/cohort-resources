@@ -1,0 +1,115 @@
+header {
+    background-color: red;
+    border-bottom: 5px solid darkred;
+    padding: 20px;
+    height: $header-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        width: 50px;
+    }
+    > nav {
+        &.left {
+            display: flex;
+            align-items: center;
+        }
+        &.right {
+            color: white;
+            font-size: $header-height/ 2;
+        }
+    }
+}
+
+.left-bar {
+    width: $left-width;
+    background-color: darkslateblue;
+    border-right: 5px solid purple;
+    flex-shrink: 0;
+    display: flex;
+    > button {
+        height: 50px;
+        width: 190px;
+        margin: 10px auto;
+        position: relative;
+        background-color: inherit;
+        > .tooltip {
+            background-color: slategray;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 2px;
+            width: 80px;
+            position: absolute;
+            bottom: 35px;
+            right: -70px;
+            display: none;
+        }
+        &:hover > .tooltip {
+            display: block;
+        }
+    }
+}
+
+.right-bar {
+    width: $header-height;
+    background-color: darkblue;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    > a {
+        height: fit-content;
+        align-self: flex-end;
+        margin-bottom: 10px;
+        > button {
+            height: 50px;
+        }
+    }
+    
+}
+
+section {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightgreen;
+    > h1 {
+        font-size: $text-size;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 800;
+    }
+    > p {
+        margin-top: $text-size / 2;
+        text-indent: $text-size;
+        font-size: $text-size / 2;
+    }
+}
+
+.dropdown {
+    margin-left: 20px;
+    position: relative;
+    > .content {
+        background-color: palevioletred;
+        padding: 20px 0;
+        border: 2px solid deeppink;
+        border-radius: 2px;
+        width: 200px;
+        position: absolute;
+        top: 45px;
+        left: 25px;
+        h3 {
+            font-weight: bold;
+        }
+        li {
+            text-align: left;
+            width: 100%;
+            padding: 3px 10px;
+            margin: 5px 0;
+            &:hover {
+                color: white;
+                background-color: deeppink;
+            }
+        }
+    }
+}

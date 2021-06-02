@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FullstackScss</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+
+    <script>
+      window.logoUrl = '<%= image_url('logo.png') %>'
+    </script>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
