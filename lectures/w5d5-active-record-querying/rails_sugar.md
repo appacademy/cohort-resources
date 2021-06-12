@@ -118,5 +118,5 @@ WHERE
   actors.name = 'Harrison Ford' 
   AND (movies.score BETWEEN 7 AND 10)
   AND (movies.director_id = 360)
-  AND "castings"."ord" != 1
+  AND castings.ord != 1
 ```
