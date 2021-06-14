@@ -1,0 +1,32 @@
+.pool {
+  background-image: url("pool.jpg");
+  background-size: cover;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  border: 20px solid gray;
+}
+
+.flamingo {
+  float: left;
+}
+
+.donut {
+  float: right;
+}
+
+/* p {
+  clear: left;
+} */
+
+
+
+.clearfix::after{
+  content: "";
+  font-size: 0;
+  clear: both;
+  display: block;
+}
+
+
+
