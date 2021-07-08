@@ -1,0 +1,30 @@
+const GifApiUtil = {
+  newGifAJAX: () => {
+    // always explicitly return because it makes debugging easier
+    // explicitly returning whatever is returned by the ajax method. (a promise)
+    return $.ajax({
+      method: 'GET',
+      url: 'https://api.giphy.com/v1/gifs/random?api_key=9IfxO6R6fpEZMAdqdw66QUgQdPejVIAW&rating=G&tag=kittens',
+    })
+  },
+  saveGifAJAX: function(gifArg) { // expect gifArg to have keys of title and url
+    // gifArg === {title: "", url: ""}
+    return $.ajax({
+      method: 'POST',
+      url: "/gifs",
+      data: {
+        gif: gifArg
+      },
+      dataType: 'JSON'
+    })
+  },
+  fetchSavedGifAJAX: function(titleArg) { // expect title arg to just be a string matching a title
+    return $.ajax({
+      method: 'GET',
+      url: `/gifs/${titleArg}`,
+      dataType: 'JSON'
+    })
+  }
+};
+
+module.exports = GifApiUtil;
