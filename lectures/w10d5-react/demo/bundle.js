@@ -2,6 +2,30 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./frontend/api_util.js":
+/*!******************************!*\
+  !*** ./frontend/api_util.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "fetchDogGif": () => (/* binding */ fetchDogGif)
+/* harmony export */ });
+// util files typically export more than one thing, so we don't want to export default
+// example of a named export 
+var fetchDogGif = function fetchDogGif() {
+  // always be returning 
+  return $.ajax({
+    method: 'get',
+    url: 'http://api.giphy.com/v1/gifs/random?api_key=4X3Pk8YMCh7iqyxS8XhWtWwJOSeu5kPb&tag=funny+dog&rating=g'
+  });
+}; // when we import this file, we're basically importing a plain javascript object.
+// that JS object's keys will be the functions, objects, etc. that we exported.
+//api: erase rating g at the end of api
+
+/***/ }),
+
 /***/ "./frontend/app.jsx":
 /*!**************************!*\
   !*** ./frontend/app.jsx ***!
@@ -117,6 +141,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _dogDetail__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dogDetail */ "./frontend/dogDetail.jsx");
+/* harmony import */ var _api_util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./api_util */ "./frontend/api_util.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -140,6 +165,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
+
  // list some dogs that we can vote on
 
 var DogIndex = /*#__PURE__*/function (_React$Component) {
@@ -154,7 +180,8 @@ var DogIndex = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
     _this.state = {
-      totalVotes: 0
+      totalVotes: 0,
+      gif: null
     };
     _this.breeds = ["Australian Mountain Dog", "Australian Shepherd", "Corgi", "Golden Retriever", "Shiba Inu", "Sivas Kangal", "Papillon", "Pug"];
     _this.addVote = _this.addVote.bind(_assertThisInitialized(_this));
@@ -169,20 +196,38 @@ var DogIndex = /*#__PURE__*/function (_React$Component) {
       });
     }
   }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      (0,_api_util__WEBPACK_IMPORTED_MODULE_2__.fetchDogGif)().then(function (dogGif) {
+        _this2.setState({
+          gif: dogGif
+        });
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
+      var _this3 = this;
 
       var allBreeds = this.breeds.map(function (breed, idx) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_dogDetail__WEBPACK_IMPORTED_MODULE_1__.default, {
           key: idx,
           breed: breed,
-          addVote: _this2.addVote
+          addVote: _this3.addVote
         });
-      });
+      }); // console.log(this.state.gif)
+      // wont render anything until gif request complete
+      // if (!this.state.gif) return null;
+      // use a ternary so that we only set image to null before the request finishes
+
+      var image = this.state.gif ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: this.state.gif.data.image_url
+      }) : null;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "dog-index"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Total dog votes: ", this.state.totalVotes), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, allBreeds));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Total dog votes: ", this.state.totalVotes), image, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, allBreeds));
     }
   }]);
 
