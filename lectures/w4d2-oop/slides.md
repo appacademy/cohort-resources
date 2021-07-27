@@ -1,16 +1,17 @@
 # W4D2
 
-### Object-Oriented Programming
-
-![UML diagram](https://lkrnac.net/wp-stuff/uploads/2014/04/animals-class-diagram.png)
+## Object-Oriented Programming
 
 ---
 
-## Lecture Goals
+## Lecture Objectives
 
 1. Sufficient background knowledge for today's projects
+2. Chess (Day 1)
 2. Context and motivation for OOP
 3. OOP concepts & vocabulary
+4. Understand Public/Private/Protected
+5. Intro to Modules
 
 ---
 
@@ -19,9 +20,6 @@
 * We will hold questions for specific slides.
 * These slides will have an outline.
 * We will also take questions during demos.
-
-Note:
-If you feel overwhelmed and confused by OOP, that's normal. It takes a lot of practice until you develop the intuitions to feel comfortable with it. You probably won't get there this week or even during the cohort.
 
 ---
 
@@ -36,57 +34,52 @@ If you feel overwhelmed and confused by OOP, that's normal. It takes a lot of pr
     3. Polymorphism
     4. Inheritance
 5. OOP Design Patterns
-6. The OOP Path
+6. Exceptions
+7. The OOP Path
+
+---
+
+## How to approach this topic
+
+* OOP can feel like an overwhelming topic.
+* Let's just start by talking about it.
+* We'll go over some practical aspects of Ruby too!
+  * With a lot of demo code
 
 ---
 
 ## OOP Context
 
-#### What is the programmer's greatest enemy?
+### What is a programmer's greatest enemy?
 
 Note:
 + This is a rhetorical question
 + The answer is "reality"
-
----
-
-![Software Engineering perception vs. reality](https://external-preview.redd.it/2pfj-xlviP2xaWxytOcyrfPYxxuhhWRvz0w8xR9FvK0.jpg?auto=webp&s=c579b5c7e70f8ef1f1ec546e092fd94b8573cc7d)
-
-Note:
 + Design is elegant. Reality is messy.
-+ Solutions are simple and elegant in your mind. Real code is ugly, filled with bugs and idiosyncracies that require messy conditional logic.
++ Solutions are simple and elegant in your mind. Real code is ugly, filled with bugs and idiosyncratic that require messy conditional logic.
 
 ---
 
-> Controlling complexity is the essence of computer programming.
->
-> &mdash; _Brian Kernighan_
+### OOP Goal: Control Complexity
 
-![Brian Kernighan Photo](http://2.bp.blogspot.com/-vjmojesfTK0/UwjkPF_nLLI/AAAAAAAACHY/7cTOimc_e5g/s1600/Brian+Kernighan.jpg)
-
-Note:
-You need code that's simple and easy to reason about in order to write and maintain it, but it still needs to perform complex functions that are often hard to reason about.
-
-(Brian Kernighan is one of the foundational programmers of the 60's and 70's. He came up with the name "Unix" and co-authored the first book on C with Dennis Ritchie.)
+* There are countless ways to solve a problem
+* OOP gives a structured way to break down that complexity
+  * It's relatively easy for humans to grasp
 
 ---
 
 ## Complexity Limits Solutions
 
-+ code complexity limit = short-term memory limit
-+ You can hold **~7 things** in short-term memory
++ code complexity limit = short-term memory limit  
++ You can hold **4 things** in short-term memory  
 
-If we reduce the mental complexity of code, we increase the complexity of the problems we can solve.
-
-Note:
-
-Check out the [Coursera course on Learning How to Learn](https://www.coursera.org/learn/learning-how-to-learn). If you struggle with studying efficiently, it might be worth your time to go through this next weekend.
+#### If we reduce the mental complexity of code, we increase the complexity of the problems we can solve.
 
 ---
 
 ## OOP Controls Complexity
 
-+ Locates related code in the same place
++ Places related code in the same place
 + Limits inter-dependencies in code
 + Reduces repeated code (DRY)
 + Intuitive because it mirrors physical reality
@@ -94,10 +87,6 @@ Check out the [Coursera course on Learning How to Learn](https://www.coursera.or
 ---
 
 ## Questions?
-
-1. OOP context
-2. Software Complexity
-3. OOP Advantages
 
 ---
 
@@ -119,6 +108,9 @@ Check out the [Coursera course on Learning How to Learn](https://www.coursera.or
 + Methods can access and modify an object's _state_ (any data that it contains).
 + Objects can interact with one another via their methods.
 
+Note:
+You don't directly manipulate the data like in procedural programming. You call _methods_ and the methods manipulate the data.
+
 ---
 
 ## Classes vs. Objects
@@ -134,16 +126,14 @@ Check out the [Coursera course on Learning How to Learn](https://www.coursera.or
 + "Unified Modeling Language"
 + We'll use this to diagram classes today.
 
-![UML Key](https://raw.githubusercontent.com/appacademy/sf-lecture-notes/master/ruby/w4d2-oop/uml_key.png?token=AK3MF7HMFVJNI3PWL4KPUXLAX4HGG)
+![UML Key](https://raw.githubusercontent.com/appacademy/sf-lecture-notes/master/ruby/w4d2-oop/uml_key.png?token=ANVMGKNWOEBXWB533PT6VQLBBA2H2)
+
+Note:
++ Reference the legend on the slide.
 
 ---
 
 ## Questions?
-
-1. OOP vs. Procedural Programming
-2. Objects, data and methods
-3. Classes, instances, and instantiation
-4. UML
 
 ---
 
@@ -186,38 +176,50 @@ Note:
 ### What is an Interface?
 
 + A signature of _methods_, _arguments_, _argument types_, and _return types_.
-+ Basically, anything that would cause a caller to break if changed.
++ How can we interact with the underlying data of this object?
 
 ![puzzle pieces](https://healingaftermyhusbandsaffair.files.wordpress.com/2013/06/puzzle-pieces.jpg)
+
+Note:
++ An Interface is is a description of all functions that an object must have in order to be object "X"
++ This is a central concept in OOP. It will come up in all 4 of the main principles.
++ Each side of a puzzle piece is an interface. Another puzzle piece must match that interface to fit.
++ The central OOP design question: What interface should this object have?
 
 ---
 
 ### Coupling
 
 + The size and complexity of the interface between two objects.
++ coupling refers to the degree of direct knowledge that one element has of another
 + _tight coupling_ = hard to change
     + Large interface or too much knowledge of implementation
 + Well-designed interfaces lead to _loose coupling_.
 
----
-
-### Demo - Animal Farm
-
-Let's try and refactor some procedural code using our Object-Oriented tools and the principle of _encapsulation_.
+![tangled headphones](https://media.istockphoto.com/photos/tangled-eareuds-picture-id525874844?k=6&m=525874844&s=612x612&w=0&h=kvC-gS6-7l_GSM9kOrYBoMOlpE9DW-t03-_xzcS9LYs=)
 
 Note:
-+ Add a "Napoleon" pig and have it move and make noise to show how hard it is to modify the code.
+
+Tight Coupling Examples:
+* In object oriented design, Coupling refers to the degree of direct knowledge that one element has of another. In other words, how often do changes in class A force related changes in class B
++ the headphones ("spaghetti code" - dependencies stringing every which way)
++ also like puzzle pieces with 50 tongue/grooves between them. If even one of those gets changed...
+
+---
+
+## Demo - Animal Farm (Part 1)
+
+#### Let's try and refactor some procedural code using our Object-Oriented tools and the principle of _encapsulation_.
+
+Note:
++ Add a pig and have it move and make noise to show how hard it is to modify the code.
 + Refactor into different classes for the different animals.
   + Create UML diagram first.
   + Classes should have separately-named methods for move and make noise because we haven't gotten to polymorphism yet.
 
 ---
 
-## Questions?
-
-1. Encapsulation
-2. Interface / Coupling (we'll flesh this out more later)
-3. Demo
+### Questions? 
 
 ---
 
@@ -236,9 +238,13 @@ Note:
 
 + You only need to understand an object's _interface_ to use it.
 + No understanding of its _implementation_ is needed.
-+ All of computation is built on this principle.
+
+Note:
+You write in Ruby without worrying about what specific operations the CPU is doing. The Ruby compiler sends instructions to the CPU without worrying about how the logic gates are arranged or what the transistors are made of, etc.
 
 ---
+
+### Interface
 
 ![car interface](https://pro2-bar-s3-cdn-cf.myportfolio.com/f970bec91caea68a8c20114d1613dd40/b6a020e5-aa58-4d96-abd3-c281d780bd5a_rw_1200.jpg?h=aefc2c271daaf7c6e251377b698d714d)
 
@@ -247,6 +253,8 @@ Note:
 * This is a car's _interface_.
 
 ---
+
+### Implementation 
 
 ![car implementation](https://pro2-bar-s3-cdn-cf.myportfolio.com/f970bec91caea68a8c20114d1613dd40/847ef4f7-1f0b-4e3b-be6f-d2fafb56bad5_rw_1200.jpg?h=ac211ba5b6a7761e2daa79afa8fc9df0)
 
@@ -260,14 +268,17 @@ Note:
 
 + Complementary, but not the same.
 + Encapsulation: Each class should be self-contained.
-    + If I modify a class's code, I shouldn't have to touch _any other_ code (unless I change the interface).
-+ Abstraction: I shouldn't have to _think_ about how a class is implemented to use it.
+    + If I modify a class's code, I shouldn't have to touch _any other_ code
++ Abstraction: I shouldn't have to _think_ about how a class is _implemented_ to use it.
+
+Note:
+Same idea from two perspectives:
++ Encapsulation is from the object's perspective.
++ Abstraction is from the perspective of other objects.
 
 ---
 
-### Back on the Farm...
-
-![Animal Farm](http://bluecerealeducation.com/sites/default/files/AnimalFarm1.jpg)
+### Back on the Farm... (Part 2)
 
 Note:
 + Create `Farm` class to contain all the variables. Give it an `#each` that iterates through the animals.
@@ -277,10 +288,6 @@ Note:
 ---
 
 ### Questions?
-
-1. Abstraction
-2. Abstraction vs. Encapsulation
-3. Demo
 
 ---
 
@@ -293,16 +300,6 @@ Note:
 
 ---
 
-### Duck Typing
-
-+ "If it looks like a duck and quacks like a duck, it's a duck."
-+ Ruby is _dynamically typed_.
-  + You don't have to declare variable types.
-  + It doesn't complain about mismatched types.
-  + You can get `NoMethodError`s.
-
----
-
 ### Polymorphism
 
 + Objects with the same interface are interchangeable.
@@ -311,7 +308,20 @@ Note:
 
 ---
 
-### Speaking of ducks... (back to demo)
+### Duck Typing
+
++ "If it looks like a duck and quacks like a duck, it's a duck."
++ Ruby is _dynamically typed_.
+  + You don't have to declare variable types.
+  + You can get `NoMethodError`s.
+
+Note:
++ As long as you only care about appearance and sound, this quote is true.
++ This is the meaning of `undefined method ... for nil:NilClass`.
+
+---
+
+### Speaking of ducks... (Part 3)
 
 Note:
 + Try to add a Duck class. Show how cumbersome the case statement becomes.
@@ -321,18 +331,11 @@ Note:
 
 ### Questions?
 
-1. Duck Typing
-2. Polymorphism
-3. Demo
-
 ---
 
-## Let's take a break!
-
-![Horse bedtime gif](https://media.giphy.com/media/lvsCopWLh7R96/giphy.gif)
+### Break!
 
 ---
-
 
 ## The 4 Principles of OOP
 
@@ -355,15 +358,23 @@ Note:
 
 `class SubClass < SuperClass`
 
-### superclass
+### Superclass
 a.k.a. parent class, base class
 
 A class that is used as the basis for inheritance.
 
-### subclass
+### Subclass
 a.k.a. child class
 
 A class that inherits from a parent class.
+
+---
+
+### Subclass Behavior
+
++ Sub classes 'inherit' all behavior from parent class
++ Can add methods to subclass without changing parent
++ Methods defined on subclass 'override' parent
 
 ---
 
@@ -375,56 +386,49 @@ A class that inherits from a parent class.
   of the method
   + `super` without arguments implicitly uses those passed into sub class'
   version of the method
+  + `super()` to invoke the parent method with no arguments 
 
 ---
 
-### Let's try these out!
-
+### Let's try these out! (Part 4)
 
 Note:
 + Draw out a class hierarchy.
 + Implement the classes.
-+ Add a new Goat class to show how easy it is now.
 + Demonstrate super.
 
 ---
 
 ### Questions?
 
-1. Inheritance
-2. `Subclass < Superclass`
-3. `super`
-4. Demo
+---
 
-Note:
-### How Ruby Dereferences Method Names (for the curious)
+### How does Ruby know if a method exists?
 
-* All Ruby methods live in some class or module.
-  * Methods defined in empty space actually live in the `Object` class.
-* All inherited classes and included modules are kept in a list.
-  * The list is ordered from child to parent.
-* When you call a method, Ruby looks down the list until it finds a match.
-* You can see this list using `#class.ancestors`.
-* `super` starts the search one rung down on the ladder.
++ First it checks the class of the object you call the method on
++ Then it checks the parent class
++ Then it checks the next parent
++ Then it checks the next parent...
++ Up to `BasicObject`
 
 ---
 
-## Mixins
+## Modules/Mixins
 
 + Mixins are an alternative to inheritance as a way of adding functionality to a class.
 + Mixins are modules. (e.g. `Enumerable`, `Comparable`, `Kernel`)
-+ You can include multiple mixins in a single class.
-+ You can define methods and use `self` and `@ivars`, just like when defining a class.
++ You can have multiple mixins in a single class.
++ You can define methods and use `self` and `@instance_variables`, just like when defining a class.
 
 ---
 
 ### `::include`
 
-This command adds a module's methods to a class as _instance_ methods.
++ This command adds a module's methods to a class as _instance_ methods.
 
 ### `::extend`
 
-This command adds a module's methods to a class as _class_ methods.
++ This command adds a module's methods to a class as _class_ methods.
 
 ---
 
@@ -446,19 +450,21 @@ This command adds a module's methods to a class as _class_ methods.
 
 #### How they're used:
 
-+ Inheritance is used for objects that relate to each other taxonomically. (A `FordAnglia` is a `Car`.)
-+ Mixins are used to add functionality to different kinds of things. (An enchanted `FordAnglia` and a `FlyingBroomstick` are both `Flyable`.)
++ Inheritance is used for objects that relate to each other by type. (A `Toyota` is a `Car`.)
++ Mixins are used to add functionality to different kinds of things. (A `Dragon` (with wings) and a `FlyingBroomstick` are both `Flyable`.)
 
 ---
 
-### Meanwhile, back on the farm...
-
+### Meanwhile, back on the farm... (Part 5)
 
 Note:
-+ Implement `MyEnumerable`.
-+ include it in `Farm`.
-+ change `include` to `extend`. Use a simple fixed array for `::each`.
-+ change `MyEnumerable` to `Enumerable` to show that it works the same way.
++ Implement `Flyable`.
++ change `include` to `extend`.
++ Show error handling and implicit begin/end
+
+---
+
+### Questions?
 
 ---
 
@@ -466,21 +472,15 @@ Note:
 
 + Inheritance creates implicit dependencies.
     + Inherited methods and variables are not listed in the subclass code.
-    + Multiple inheritance and mixins: potential for conflict.
+    + Inheritance and mixins: potential for conflict.
 + Don't overwrite the interface!
     + Okay to change the implementation (but stay DRY)
     + Okay to add to the interface
 
----
-
-### Questions?
-
-1. Mixins
-    + `::include`
-    + `::extend`
-2. Mixins vs. Inheritance
-3. Demo
-4. Inheritance Pitfalls
+Note:
++ The interface between the subclass and parent class is implicit, and can be very large if you aren't careful. Ruby especially makes this hard (implicit self, all global methods live in Object)
++ Mixin methods override inherited methods
++ Liskov Substitution Principle - any type can be replaced by subtype without breaking
 
 ---
 
@@ -504,25 +504,29 @@ Note:
 
 ### Singleton Pattern
 
-+ Control access to a limited resource, usually some kind of IO.
-    + (e.g. stdio, file system, screen, logger, etc)
++ Save space!!!
 + Reuse reference to a stateless object (e.g. `nil`)
+
+![Highlander: There can be only one.](https://paradisefoundaround.com/wp-content/uploads/highlander_there_can_be_only_one_quote.jpg?74f3cb)
+
+Note:
+
+Highlander is basically the most '80's movie imagineable. A hunky Scotsman from the clan era gets dropped in the middle of New York City, falls for a woman with '80's bangs, and fights a punk villain to the death with broadswords. Oh, and the soundtrack is by Queen!
 
 ---
 
-### Demo Time!
+### Demo Time! (Part 6)
 
 Note:
 + Implement a null animal. Overwrite `#move` and `#make_noise`.
 + Include `Singleton` - it's stateless, so we can just reuse it
     + Try to call `#new`
-    + Show how this impacts `==`
 
 ---
 
 ## OOP Tips
 
-+ Decompose the system into parts
++ Break things down into parts
     + Nouns could be objects.
     + Verbs could be methods.
 + Single Responsibility Principle
@@ -534,15 +538,7 @@ Note:
 
 ---
 
-### Questions?
-
-1. Null Object Pattern
-2. Singleton Pattern
-3. Demo
-4. OOP Tips
-    + Object Decomposition
-    + Single Responsibility Principle
-    + Interface before implementation
+## Questions?
 
 ---
 
@@ -553,7 +549,7 @@ Note:
 + Education - know common patterns and use them
     + Learn to pick the right tool for the problem at hand.
     + We're giving you some tools to start your toolbox.
-    + I recommend _Head First Design Patterns_ after you're comfortable with the basics.
+
 ---
 
 ##  Today's Projects
@@ -568,5 +564,3 @@ Note:
 ## Go make it happen!
 
 ![Dog leaping over sheep](https://i.giphy.com/media/10E8Jj1TSQaul2/giphy.webp)
-
----
