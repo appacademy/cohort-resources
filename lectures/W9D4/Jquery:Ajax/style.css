@@ -1,0 +1,40 @@
+h1{
+    text-align: center;
+    color: green;
+    /* background: aquamarine; */
+    font-size: 100px;
+
+}
+
+.square{
+    height: 300px;
+    width: 300px;
+    border: 1px solid black;
+}
+
+  #circle {
+      width: 500px;
+      height: 500px;
+      background: red;
+      border-radius: 50%
+    }
+
+
+    .container{
+        height: 700px;
+        width: 100vw;
+        border: 2px solid black;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .item{
+        
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        border: 1px solid black;
+
+    }
+
