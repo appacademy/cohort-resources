@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla DOM Demo</title>
+    <link rel="stylesheet" type="text/css" href="./reset.css" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous">
+        </script>
+    <script type="application/javascript" src="../src/index.js" defer></script>
+</head>
+<body>
+    <div >
+        <h1 >Weekly Meal Planner:</h1>
+        <form class="grocery-form">
+            <input type="text" name="add-grocery" placeholder="Hm...what shall I eat this week?" required>
+            <input type="submit" value="Add Item">
+        </form>
+    </div>
+
+    <!-- use recipe container to demo window.location.hash -->
+    <div class="recipe-container">
+        <h3>This week's recipe:</h3>
+        <h3 class="recipes">
+            <!-- <li class="placeholder">Nothing added yet!</li> -->
+        </h3>
+    </div>
+
+    <!-- use grocery container to demo vanilla js methods and even handlers -->
+    <div class="grocery-container">
+        <h2>Grocery List:</h2>
+     
+        <ul class="groceries"></ul>
+    </div>
+    <br>
+
+    <!-- used in conjunction with recipe container to demo window.location and window.history.back() -->
+    <div class="recipes">Recipe Notes
+        <a href="http://www.google.com" >Let's Google It!</a>
+        <p>
+            Some really random recipe ideas:
+            <ul class="recipe-list">
+                <a id="spaghetti">spaghetti</a>,
+                <a id="sandwich">sandwich</a>,
+                <a id="soup">soup</a>,
+                <a id="bread">bread</a>,
+                <a id="noodles">noodles</a>,
+                <a id="vegetales">vegetales</a>,
+                <a id="pork">pork</a>,
+            </ul>   
+        </p>
+        <br>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quas consequatur excepturi quos nostrum obcaecati veritatis, qui atque
+            iure ut labore dolores maiores nulla deleniti quod provident! Neque
+            totam eligendi impedit?
+        </p>
+        <br>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quas consequatur excepturi quos nostrum obcaecati veritatis, qui atque
+            iure ut labore dolores maiores nulla deleniti quod provident! Neque
+            totam eligendi impedit?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quas consequatur excepturi quos nostrum obcaecati veritatis, qui atque
+            iure ut labore dolores maiores nulla deleniti quod provident! Neque
+            totam eligendi impedit?
+        </p>
+    </div>
+</body>
+</html>
