@@ -1,0 +1,22 @@
+{
+  "name": "demo_start",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch --mode=development"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "redux": "^4.1.1",
+    "webpack": "^5.52.1",
+    "webpack-cli": "^4.8.0"
+  }
+}
