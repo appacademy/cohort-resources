@@ -1,0 +1,21 @@
+# == Schema Information
+#
+# Table name: transactions
+#
+#  id         :bigint           not null, primary key
+#  user_id    :integer          not null
+#  tea_id     :integer          not null
+#  quantity   :integer          not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+one:
+  user_id: 1
+  tea_id: 1
+  quantity: 1
+
+two:
+  user_id: 1
+  tea_id: 1
+  quantity: 1
