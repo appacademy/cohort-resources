@@ -12,9 +12,7 @@
 Note:
 * Write a method that takes in an array and doubles it
   * If they ask for it or need help, an example test case is: doubler([1, 2, 3]) # => [1, 2, 3, 1, 2, 3]
-  * 
 * Ask for a volunteer, and tell the students that you'll give them an easy question, and that it's just to go over some fundamentals.
-* Once someone comes up, ask them to write an algorithm that doubles every element in an array. They will likely write something that multiplies elements by 2. Once they are done, have them sit down, give them some kudos for coming up, and ask the class if they think it's a good solution. Then ask what if you gave an array of strings, and you wanted the strings to be doubled. Use this as a chance to explain the first part of CREPE, clarify.
 * Explain how interviewers don't care if you know solutions, they want to see how you think and how you work. If you get started without asking any questions, they're going to be wary about hiring you.
 
 ---
