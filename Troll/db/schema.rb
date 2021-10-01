@@ -10,17 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_30_174157) do
+ActiveRecord::Schema.define(version: 2021_09_30_210120) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "trolls", force: :cascade do |t|
+  create_table "likes", force: :cascade do |t|
+    t.integer "tweet_id", null: false
+    t.integer "liker_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["liker_id"], name: "index_likes_on_liker_id"
+    t.index ["tweet_id", "liker_id"], name: "index_likes_on_tweet_id_and_liker_id", unique: true
+  end
+
+  create_table "tweets", force: :cascade do |t|
     t.text "body", null: false
     t.integer "author_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["author_id"], name: "index_trolls_on_author_id"
+    t.index ["author_id"], name: "index_tweets_on_author_id"
   end
 
   create_table "users", force: :cascade do |t|
