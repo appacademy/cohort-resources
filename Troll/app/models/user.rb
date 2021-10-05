@@ -11,6 +11,7 @@
 #
 class User < ApplicationRecord
   validates :username, :email, presence: true, uniqueness: true
+  validates :political_affiliation, :age, presence: true
 
   has_many :tweets,
     primary_key: :id,

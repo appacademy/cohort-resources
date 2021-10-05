@@ -194,6 +194,7 @@ GEM
       nokogiri (~> 1.8)
 
 PLATFORMS
+  ruby
   x86_64-darwin-20
 
 DEPENDENCIES
