@@ -1,0 +1,26 @@
+
+div {
+  /* display: block; */
+  height: 100px;
+  width: 200px;
+  margin: 5px;
+  /* border: 1px solid green; */
+  background: pink;
+}
+
+/* .center {
+  margin: 0 auto;
+} */
+
+span {
+  /* display: inline; */
+  background: cornflowerblue;
+  /* margin-top: 50px;
+  margin-bottom: 50px; */
+}
+
+
+.inline-block-demo {
+  display: inline-block;
+  background: orange;
+}
