@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(version: 2021_10_01_064928) do
     t.string "email", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "age", null: false
-    t.string "political_affiliation", null: false
+    t.integer "age"
+    t.string "political_affiliation"
     t.index ["age"], name: "index_users_on_age"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true

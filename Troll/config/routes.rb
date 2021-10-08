@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # delete '/users/:id', to: 'users#destroy'
 
   #we keep this one because it has less symbols
-  resources :users, except: [:new, :edit] do
+  resources :users do
     resources :tweets, only: [:index]
   end
 
