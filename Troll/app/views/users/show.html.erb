@@ -1,0 +1,17 @@
+<!--  
+<ul>
+    <li>
+        <%# @user.username %>
+    </li>
+    
+    <li>
+        <%# @user.age %>
+    </li>
+
+    <li>
+        <%# @user.email %>
+    </li>
+</ul> 
+-->
+
+<%= render "user", user: @user, action: :show %>

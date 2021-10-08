@@ -1,0 +1,13 @@
+<h1>Here are all of our users!</h1>
+
+<a href="<%= new_user_url %>">
+    New User
+</a>
+
+<ul>
+    <% @users.each do |user| %>
+        <li>
+            <%= render "user", user: user, action: :index %>
+        </li>
+    <% end %>
+</ul>
