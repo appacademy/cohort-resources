@@ -9,15 +9,15 @@
   User.destroy_all
   
   # Instructors
-  charis = User.create!(username: "chairs_are_people_too", age: 32, email: "those_are_teef@aa.io")
-  sam = User.create!(username: "photogenic_sam", age: 27, email: "boulderz@aa.io")
-  jack = User.create!(username: "jacked_jack", age: 31, email: "surfer_dude@aa.io")
-  paulo = User.create!(username: "worlds_best_pal", age: 37, email: "peru_4ever@aa.io")
-  chris = User.create!(username: "president_dellacqua", age: 27, email: "ballin@aa.io")
-  andy = User.create!(username: "road_runner", age: 31, email: "meep_meep@aa.io")
-  walker = User.create!(username: "wakka_wakka", age: 48, email: "wakka@wakka.walking")
-  mike = User.create!(username: "like_mike", age: 54, email: "mike@aa.io")
-  joe = User.create!(username: "joe_shmoe", age: 24, email: "regular_guy@vono.ru")
+  charis = User.create!(username: "chairs_are_people_too", age: 32, email: "those_are_teef@aa.io", password: "password")
+  sam = User.create!(username: "photogenic_sam", age: 27, email: "boulderz@aa.io", password: "password")
+  jack = User.create!(username: "jacked_jack", age: 31, email: "surfer_dude@aa.io", password: "password")
+  paulo = User.create!(username: "worlds_best_pal", age: 37, email: "peru_4ever@aa.io", password: "password")
+  chris = User.create!(username: "president_dellacqua", age: 27, email: "ballin@aa.io", password: "password")
+  andy = User.create!(username: "road_runner", age: 31, email: "meep_meep@aa.io", password: "password")
+  walker = User.create!(username: "wakka_wakka", age: 48, email: "wakka@wakka.walking", password: "password")
+  mike = User.create!(username: "like_mike", age: 54, email: "mike@aa.io", password: "password")
+  joe = User.create!(username: "joe_shmoe", age: 24, email: "regular_guy@vono.ru", password: "password")
 
   Tweet.destroy_all
 

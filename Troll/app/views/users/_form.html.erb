@@ -1,40 +1,32 @@
-<%# KEY VALUE PAIRS
-
-    {
-        user: @user, 
-        action: :new OR :edit etc..., 
-        fruit: casava, 
-        veg: :broc
-        etc...
-    }
-
- %>
-
 <% if action == :new %>
-    <% action_url = users_url %>
-    <% button_text = "CREATE USER" %>
+  <% action_url = users_url %>
+  <% button_text = "CREATE USER" %>
 <% elsif action == :edit %>
-    <% action_url = user_url(user) %>
-    <% button_text = "UPDATE USER" %>
+  <% action_url = user_url(user) %>
+  <% button_text = "UPDATE USER" %>
 <% end %>
 
 <form action="<%= action_url %>" method="POST">
-    <% if action == :edit %>
-        <input type="hidden" name="_method" value="PATCH" />
-    <% end %>
+  <% if action == :edit %>
+    <input type="hidden" name="_method" value="PATCH" />
+  <% end %>
 
-    <label> Username
-        <input type="text" name="user[username]" value="<%= user.username %>" />
-    </label>
-    <br/>
-    <label> Email
-        <input type="text" name="user[email]" value="<%= user.email %>" />
-    </label>
-    <br/>
-    <label> Age
-        <input type="text" name="user[age]" value="<%= user.age %>" />
-    </label>
-    <br/>
+  <label for="username">Username</label>
+  <input id="username" type="text" name="user[username]" value="<%= user.username %>" />
+  
+  <label for="email">Email</label>
+  <input id="email" type="text" name="user[email]" value="<%= user.email %>" />
+  
+  <label for="age">Age</label>
+  <input id="email" type="text" name="user[age]" value="<%= user.age %>" />
 
-    <input type="submit" value="<%= button_text %>" />
+  <input type="submit" value="<%= button_text %>" />
 </form>
+
+
+<!-- not good
+
+<label> Username
+<input type="text" name="user[username]" value="<%= user.username %>" />
+</label>
+-->
