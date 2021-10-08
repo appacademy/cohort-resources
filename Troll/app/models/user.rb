@@ -7,7 +7,6 @@
 #  email       :string           not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#  troll_score :integer          not null
 #
 class User < ApplicationRecord
   validates :username, :email, presence: true, uniqueness: true

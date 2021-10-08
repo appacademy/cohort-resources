@@ -22,7 +22,6 @@ class UsersController < ApplicationController
     end
 
     def update
-        debugger
         user = User.find(params[:id])
 
         if user.update(user_params)
@@ -39,7 +38,7 @@ class UsersController < ApplicationController
     end
 
     def user_params
-        params.require(:user).permit(:username, :email, :age, :political_affiliation)
+        params.require(:user).permit(:username, :email, :age)
     end
 
 end
