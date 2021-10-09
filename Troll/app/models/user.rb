@@ -10,7 +10,7 @@
 #
 class User < ApplicationRecord
   validates :username, :email, presence: true, uniqueness: true
-
+cd ~/
   has_many :tweets,
     primary_key: :id,
     foreign_key: :author_id,
