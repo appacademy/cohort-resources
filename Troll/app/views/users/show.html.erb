@@ -1,1 +1,11 @@
 <%= render "user", user: @user, action: :show %>
+
+<h3><%= @user.username %>'s Activity</h3>
+<ul>
+  <% @user.tweets.each do |tweet| %>
+    <li>
+      <p>At <%=tweet.created_at%>, <%=@user.username%> tweeted:</p>
+      <h3><%= tweet.body %></h3>
+    </li>
+  <% end %>
+</ul>
