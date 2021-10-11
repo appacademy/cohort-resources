@@ -14,11 +14,16 @@
   <label for="username">Username</label>
   <input id="username" type="text" name="user[username]" value="<%= user.username %>" />
   <br/>
+  <% if action == :new %>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="user[password]" value=""/>
+    <br>
+  <% end %>
   <label for="email">Email</label>
   <input id="email" type="text" name="user[email]" value="<%= user.email %>" />
   <br/>
   <label for="age">Age</label>
-  <input id="email" type="text" name="user[age]" value="<%= user.age %>" />
+  <input id="age" type="text" name="user[age]" value="<%= user.age %>" />
   <br/>
   <input type="submit" value="<%= button_text %>" />
 </form>

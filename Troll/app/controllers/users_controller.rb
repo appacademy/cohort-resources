@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  before_action :require_logged_in, except: [:new, :create]
+  before_action :require_logged_out, only: [:new, :create]
+
   def new
     @user = User.new
     render :new
@@ -22,6 +25,7 @@ class UsersController < ApplicationController
   def create
     user = User.new(user_params)
     if user.save #runs user.save. If true, then:
+      login(user)
       redirect_to user_url(user)
     else
       render json: user.errors.full_messages, status: 422 #422: unprocessable entity
@@ -45,7 +49,8 @@ class UsersController < ApplicationController
   end
   
   def user_params
-    params.require(:user).permit(:username, :email, :age)
+    params.require(:user).permit(:username, :email, :age, :password)
+    #password_digest and session_token are set by default in our model
   end
   
 end

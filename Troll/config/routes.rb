@@ -11,9 +11,11 @@ Rails.application.routes.draw do
     resources :tweets, only: [:index]
   end
 
+  resource :session, only: [:new, :create, :destroy]
+
   resources :tweets, only: [:show]
 
   # resources :users, only: [:update, :destroy, :index, :show, :create]
-
+  root to: 'users#index'
   
 end

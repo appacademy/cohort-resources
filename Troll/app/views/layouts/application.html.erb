@@ -12,9 +12,20 @@
   <body>
     <header>
       <h1>TROLL</h1>
-      <a href="<%= new_session_url %>">Log In</a>
+      <% if logged_in? %>
+          <h2> Hello, <%= current_user.username %> </h2>      
+          <h3> You are the best Troll </h3>      
+          <form action="<%= session_url %>" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="submit" value="Log Out!">
+          </form>
+      <% else  %>
+        <a href="<%= new_user_url %>">Sign Up!</a>
+        <br>
+        <a href="<%= new_session_url %>">Log In!</a>
+      <% end  %>
     </header>
 
-    <%= yield %>
+    <%= yield %> <!-- yields to the view  (render :new will render form) (render :index will render index) -->
   </body>
 </html>
