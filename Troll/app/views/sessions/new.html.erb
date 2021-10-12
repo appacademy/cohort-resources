@@ -1,6 +1,8 @@
 
 <h1>Log In</h1>
 <form action="<%= session_url %>"  method="POST">
+    <%= auth_token %>
+
     <label for="username">Username</label>
     <input id="username" type="text" name="user[username]" value="" />
     <br>
