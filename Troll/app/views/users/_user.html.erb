@@ -17,6 +17,7 @@
   </li>
   <li>
     <form action="<%= user_url(user) %>" method="POST" >
+      <%= auth_token %>
       <input type="hidden" name="_method" value="DELETE"/>
       <input type="submit" value="Delete User" />
     </form>

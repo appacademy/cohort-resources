@@ -17,6 +17,7 @@
           <h3> You are the best Troll </h3>      
           <form action="<%= session_url %>" method="POST">
             <input type="hidden" name="_method" value="DELETE">
+            <%= auth_token %>
             <input type="submit" value="Log Out!">
           </form>
       <% else  %>
@@ -26,6 +27,23 @@
       <% end  %>
     </header>
 
+    <% if flash[:messages] %>
+      <ol>
+        <% flash[:messages].each do |message| %>
+          <li class="message"><%= message %></li>
+        <% end %>
+      </ol>
+    <% end %>
+
     <%= yield %> <!-- yields to the view  (render :new will render form) (render :index will render index) -->
+
+    <% if flash[:errors] %>
+      <ol>
+        <% flash[:errors].each do |error| %>
+          <li class="error"><%= error %></li>
+        <% end %>
+      </ol>
+    <% end %>
+
   </body>
 </html>
