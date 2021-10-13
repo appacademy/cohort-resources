@@ -16,6 +16,6 @@ Rails.application.routes.draw do
   resources :tweets, only: [:show]
 
   # resources :users, only: [:update, :destroy, :index, :show, :create]
-  root to: 'users#index'
+  root to: 'users#index' # creates route if it doesn't already exist
   
 end

@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     render :new
   end
   
+  # if we don't define index, it will automatically render :index
   def index
     @users = User.all
     render :index
@@ -45,6 +46,7 @@ class UsersController < ApplicationController
     end 
   end
   
+  # if destroy is not defined, there is no view so it will do nothing
   def destroy
     user = User.find(params[:id])
     user.destroy
