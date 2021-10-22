@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: beige;
+  /* height: 50px; */
+  display: flex;
+  justify-content: space-between;
+  font-size: 50px;
+  color: teal;
+  position: static;
+  width: 100%;
+}
+
+main {
+  background-color: pink;
+  color: black;
+  height: 1500px;
+}
+
+footer {
+  background-color: maroon;
+  height: 200px;
+}
+
+.menu {
+  width: 500px;
+  position: relative;
+}
+
+/* drop down code below */
+
+.menu-items {
+  position: absolute;
+  /* bottom: 0; */
+  left: -10px;
+  background-color: beige;
+  display: none;
+}
+
+.menu:hover .menu-items {
+  display: block;
+}
+
+.menu-items li:hover {
+  background-color: lightyellow;
+}
