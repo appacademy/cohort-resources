@@ -1,0 +1,17 @@
+#user-form {
+  color: black;
+}
+
+.role-select {
+  color: purple;
+}
+
+form {
+  background: whitesmoke;
+  border: 5px dotted purple;
+  margin: 0 auto;
+  color: blue;
+}
+
+
+/* feel free to do something nice with the styling, this is purely an example */
