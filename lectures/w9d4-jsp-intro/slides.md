@@ -69,6 +69,23 @@
 
 # Examples!
 
+games:
+
+https://towertime.herokuapp.com/
+https://amendoza514.github.io/
+https://samblyon.github.io/mattressFactory/
+https://ashotovich1990.github.io/matroshka/
+https://davidoh14.github.io/
+https://yuehanh.github.io/the_wizard_of_corgs/
+
+data vis:
+https://john-chau.com/DanceMusicDance/
+https://ezekielp.com/nutrition_facts_scroller/#anchor-0
+https://nba-shot-crunch.herokuapp.com/
+http://timhwang21.github.io/shortcut-sloths/#/1?_k=1m0lih
+https://jayzizzle.github.io/versus/
+https://ginoreyes.me/nbasixdegrees/
+
 ---
 
 ## Considerations & Resources: Games
