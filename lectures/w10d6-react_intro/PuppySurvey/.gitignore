@@ -1,0 +1,7 @@
+/node_modules
+bundle.js
+bundle.js.map
+.DS_Store
+# **/.DS_Store to ignore it in all dirs
+
+# Hide your API keys
