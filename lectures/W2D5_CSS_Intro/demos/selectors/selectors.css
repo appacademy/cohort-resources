@@ -1,0 +1,48 @@
+/* Calculate the specificity scores for each selector as we go (0,0,0,0) */
+
+/* (0, 0, 1, 1) */
+
+.descendant-selector p {
+  background-color: blue;
+}
+
+/* (0,0,0,2) */
+h3 ~ p { 
+  background-color: green;
+  font-family: Arial, Helvetica, sans-serif;
+  color: yellow;
+}
+
+/* (0,0,1,1) */
+.child-selector > p {
+  background-color: red;
+}
+
+/* (0,0,1,0) */
+.highlight {
+  background: yellow;
+}
+
+/* show p.highlight vs p .highlight */
+
+/* (0,0,1,1) */
+p.highlight {
+  background: orange;
+}
+
+/* (0,1,0,1) */
+div#blue {
+  background-color: blue;
+}
+
+/* make it red! (add .red) */
+
+/* (0,1,1,0) */
+/* #blue.red {
+  background-color: red;
+} */
+
+/* (0,0,1,0) */
+.red {
+  background-color: red;
+}
