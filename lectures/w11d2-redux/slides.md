@@ -1,4 +1,4 @@
-# W10D4 - Redux
+# W11D2 - Redux
 
 ---
 
@@ -6,10 +6,9 @@
 
 + Today: Intro to the Redux Pattern/Cycle
 + Tomorrow: Connecting React and Redux
-+ Monday: Adding a backend + Middleware
-+ Tuesday: Formatting backend response + putting it all together
-+ Wednesday: Frontend Routing
-+ Thursday: Good ol' Auth
++ Thursday: Adding a backend + Middleware
++ Friday: Formatting backend response + putting it all together
++ Monday: Frontend Routing
 
 ---
 
