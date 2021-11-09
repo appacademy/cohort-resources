@@ -49,12 +49,12 @@ Dog.prototype.delayedBark = function (){
   
 
   // Bound Func (would not work with apply/call because it cannot be invoked just yet)
-  setTimeout(this.bark.bind(this), 2500);
+  // setTimeout(this.bark.bind(this), 2500);
 
   // Arrow Func will inherit surrounding context
-  setTimeout(()=>{
-    console.log(`${this.name} says 'woof'.`);
-  }, 2500);
+  // setTimeout(()=>{
+  //   console.log(`${this.name} says 'woof'.`);
+  // }, 2500);
 
 }
 
