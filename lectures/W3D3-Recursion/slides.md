@@ -72,7 +72,26 @@ How we use the return value of the previous step to determine the current result
 ---
 
 # Movie Theater Example
-How do you know what row you are in in a dark theater?
+Imagine yourself in a dark movie theater. You want to know what row you in.
+
+How might you find this out?
+
+Iterative apprach:
+Get up out of your chair, walk along the isle, and count how many rows to the front.
+
+Recursive approach:
+Ask the person in front of you and give them these instructions; 
+1. "What row are you in?" (The recursive call)
+2. "You can check by asking the person in front of you the same question and 
+   adding 1 to their answer." (Inductive step)
+3. "If you are in the front row, you are in row 1" (Base case)
+
+Note: each person you go through is the running of a program or set of 
+operations. This represents each function call. The iterative approach involves 
+only yourself - no additional function calls. 
+
+This is a useful example to think back to if you ever forget how to think about 
+recursion.
 
 ---
 
