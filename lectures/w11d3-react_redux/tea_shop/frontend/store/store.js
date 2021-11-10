@@ -11,9 +11,7 @@ import rootReducer from '../reducers/root_reducer';
 // Export a configureStore function = convention
 // Why? => to have the option to pass a 
 // preloaded state in the callback
-
 const configureStore = (preloadedState={}) => {
-    debugger
     return createStore(rootReducer, preloadedState);
     // createStore returns a store with predefined 
     // functions on it like getState and dispatch

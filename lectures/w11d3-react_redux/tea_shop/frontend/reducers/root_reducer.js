@@ -4,7 +4,7 @@ import teasReducer from "./teas_reducer";
 const rootReducer = combineReducers({
     teas: teasReducer
     // users: usersReducer, 
-    // s        t: stocksReducer, 
+    // stocks: stocksReducer, 
 });
 
 export default rootReducer;

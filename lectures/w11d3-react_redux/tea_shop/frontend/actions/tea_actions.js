@@ -11,19 +11,18 @@ export const RECEIVE_TEA = "RECEIVE_TEA";
 // }
 
 // dynamic action creator
-export const receiveTea = (tea) => {
-    debugger
-    return {
-        type: RECEIVE_TEA, 
-        tea: tea
-    };
-}
+// export const receiveTea = (tea) => {
+//     return {
+//         type: RECEIVE_TEA, 
+//         tea: tea
+//     };
+// }
 
 // with syntactic sugar
-// export const receiveTea = (tea) => ({
-//     type: RECEIVE_TEA, 
-//     tea
-// })
+export const receiveTea = (tea) => ({
+    type: RECEIVE_TEA, 
+    tea
+})
 
 // coming up next...
 // RECEIVE_TEAS
