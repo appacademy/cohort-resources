@@ -8,3 +8,11 @@
 - [Environment Setup](https://github.com/appacademy/campus-hybrid-setup)
 - [Course Rules](https://github.com/appacademy/cohort-resources/blob/master/course_rules.md)
 - [Additional Resources](https://github.com/appacademy/cohort-resources)
+
+
+
+
+
+
+
+[Blue Bird Repo](https://github.com/appacademy/bluebird-sf-oct-2021)
