@@ -55,7 +55,7 @@
   2. Share Screenshots of your source code (with line numbers), console errors (the whole error), and (if applicable) whatever is rendering wrong.
   3. Tell us what you've tried and Googled in attempt to resolve the issue.
   4. When resolved, edit the post to indicate the issue is Resolved and share the solution/cause of the issue.
-- StackOverFlow's [How To Ask](https://stackoverflow.com/help/how-to-)
+- StackOverFlow's [How To Ask](https://stackoverflow.com/help/how-to-ask)
 
 ---
 
