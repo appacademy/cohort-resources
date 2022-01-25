@@ -73,7 +73,7 @@ function howToConst(){
 * Harold will print twice.  This is a result of lexical scope. In javascript lexical scoping is when you set the scope of a variable so that it may only be called (referenced) from within the block of code in which it is defined. Since the if statement is within the function scope, then username is able to be printed without it being reassigned.
 
 # hoisting 
-* This is a term that says that when there is declared variable within the scope the compiliation will hoist the declaration to the top of the block and see that there is some sort of declaration within the block.  var declarations are initiales with undefined but let and const declarations remain unitialized. If a let or const variable gets reassigned before the declaration then it will give an error.  Let's look at the code below: 
+* This is a term that says that when there is declared variable within the scope the compiliation will hoist the declaration to the top of the block and see that there is some sort of declaration within the block.  var declarations are initialized with undefined but let and const declarations remain unitialized. If a let or const variable gets reassigned before the declaration then it will give an error.  Let's look at the code below: 
 
 ```javascript
 function howToLet() {
