@@ -1,0 +1,30 @@
+
+div {
+  display: block;
+  height: 100px;
+  width: 200px;
+  margin: 40px;
+  background: pink;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+span {
+  /* display: inline; */
+  background: cornflowerblue;
+  /* width: 200px;
+  height: 100px; */
+  font-size: x-large;
+  margin: 10px;
+  padding: 10px;
+}
+
+
+.inline-block-demo {
+  display: inline-block;
+  background: orange;
+  margin: 20px;
+  padding: 20px;
+}
