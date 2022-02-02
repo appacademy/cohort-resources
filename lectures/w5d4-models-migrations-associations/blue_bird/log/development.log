@@ -691,3 +691,4 @@ Migrating to CreateLikes (20220127192310)
   [1m[36mUser Load (12.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
   [1m[36mChirp Load (49.7ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
   [1m[36mLike Load (1.9ms)[0m  [1m[34mSELECT "likes".* FROM "likes"[0m
+  [1m[36mLike Load (3.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes"[0m
