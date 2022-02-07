@@ -1,0 +1,18 @@
+<ul>
+  <li>username: <%= user.username %></li>
+  <li>email: <%= user.email %></li>
+  <li>age: <%= user.age %></li>
+  <li>coding affiliation: <%= user.coding_affiliation %></li>
+  <li><%= link_to 'Edit User', edit_user_url(user) %></li>
+  <li><%= button_to 'Delete User', user_url(user), method: :delete %></li>
+  <form action="<%= user_url(user) %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <button type="submit">Delete User2</button>
+  </form>
+</ul>
+
+<% if action == :show %>
+  <li><a href=<%= users_url %>>User Index Page</a></li>
+  <% else %>
+    <li><a href=<%= user_url(user) %>>User Show Page</a></li>
+<% end%>
