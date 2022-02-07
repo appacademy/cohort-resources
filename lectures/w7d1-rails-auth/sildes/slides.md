@@ -468,9 +468,6 @@ Note:
 - We are only allowing a user to be logged in on one device
 - We would need multiple sessions if we were to allow for multiple devices
 
----
-
-## [Kahoot!](https://play.kahoot.it/v2/?quizId=0aa59f22-2534-4568-8eb2-2e368d959d91)
 
 ---
 
@@ -478,9 +475,3 @@ Note:
 
 ![sloth-star](https://media.giphy.com/media/SqGzDP3l5NNQY/giphy.gif)
 
-Note:
-
-* **After class slack out this version of Bluebird with detailed comments for all
-parts of auth (shoutout Andy Wynkoop):** https://github.com/appacademy/bluebird-oct-2018/blob/rails-auth-end/app/models/user.rb
-* Also refer them to the Auth I, Auth II, and Common User Auth Questions 
-readings that appear as additional resources 
