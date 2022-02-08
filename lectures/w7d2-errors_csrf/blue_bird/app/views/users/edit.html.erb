@@ -1,0 +1,37 @@
+
+
+<!-- method: attribute in the form tag will need to be overwritten because we need to do a patch request-->
+<!-- action: attribute that will route our date and will need a wildcard-->
+
+<!-- input type "hidden": users will not see this input tag on the page-->
+<!-- name="_method": this is the synta to overwrite the method attribute for the form tag-->
+<!-- value="PATCH" the HTTP verb that we want instead-->
+
+<form action="<%= user_url(@user) %>" method="POST">
+  <input type="hidden" name="_method" value="PATCH">
+  <label for="username">Username</label>
+  <input type="text" id="username" name="user[username]" value="<%= @user.username %>">
+
+  <br>
+
+  <label>Email:
+  <input type="text" name="user[email]" value="<%= @user.email %>">
+  </label>
+
+  <br>
+
+   <label>Age:
+  <input type="text" name="user[age]" value="<%= @user.age %>">
+  </label>
+
+  <br>
+
+   <label>Coding Affiliation:
+  <input type="text" name="user[coding_affiliation]" value="<%= @user.coding_affiliation %>">
+  </label>
+
+
+  <input type="submit" value="Update User">
+
+
+</form>
