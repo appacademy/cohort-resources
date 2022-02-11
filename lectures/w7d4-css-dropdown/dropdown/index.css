@@ -1,0 +1,24 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.dropdown {
+    cursor: pointer;
+}
+
+ul {
+    display: none;
+    position: absolute;
+    top: 30px;
+}
+
+.dropdown:hover ul {
+    display: block;
+}
+
+li:hover {
+    background-color: rgb(221, 119, 221);
+}
+
