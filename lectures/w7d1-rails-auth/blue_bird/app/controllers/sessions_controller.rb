@@ -1,4 +1,7 @@
 class SessionsController < ApplicationController
+  before_action :require_logged_out, only: [:new, :create]
+  before_action :require_logged_in, only: [:destroy]
+
   def new
     @user = User.new
     render :new
@@ -10,7 +13,9 @@ class SessionsController < ApplicationController
       login!(@user)
       redirect_to user_url(@user)
     else
-      render json: ["invalid credentials"], status: 401
+      # render json: ["invalid credentials"], status: 401
+      flash.now[:errors] = ['Invalid Username or Password']
+      render :new
     end
   end
 

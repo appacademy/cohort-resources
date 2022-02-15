@@ -5,7 +5,7 @@
 <!-- for: used in the label tag and must be the same as the input tag's id attribute -->
 <!-- name: how the data is named when passed through and will point to value returned within params -->
 <h1>Sign Up!</h1>
-<form action="<%=users_url %>" method="POST">
+<form action="<%= users_url %>" method="POST">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"/>
 
   <label for="username">Username</label>

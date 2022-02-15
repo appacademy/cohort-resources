@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+    before_action :require_logged_out, only: [:new, :create]
+    before_action :require_logged_in, only: [:index, :show]
+
     def index
         @users = User.all
         render :index
@@ -26,7 +29,9 @@ class UsersController < ApplicationController
             login!(@user)
             redirect_to user_url(@user)
         else
-            render json: @user.errors.full_messages, status: 422
+            # render json: @user.errors.full_messages, status: 422
+            flash.now[:errors] = @user.errors.full_messages
+            render :new
         end
     end
 

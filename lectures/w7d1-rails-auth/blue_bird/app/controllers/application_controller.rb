@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-    skip_before_action :verify_authenticity_token # this is too avoid csrf verification - will cover tomorrow
+    # skip_before_action :verify_authenticity_token # this is too avoid csrf verification - will cover tomorrow
 
     helper_method :current_user, :logged_in? # need to do this to use these methods in views!
 
@@ -11,8 +11,14 @@ class ApplicationController < ActionController::Base
     end
 
     def require_logged_in
-        redirect_to new_user_url unless current_user
+        redirect_to new_session_url unless current_user
     end
+
+    def require_logged_out
+        redirect_to users_url if logged_in?
+    end
+
+
 
     def login!(user)
         # session is an object that can be accessed from browser and from rails

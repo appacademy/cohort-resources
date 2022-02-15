@@ -16,11 +16,12 @@ class User < ApplicationRecord
     validates :username, :email, :session_token, presence: true, uniqueness: true
     validates :password_digest, :age, :coding_affiliation, presence: true
     validates :password, length: {minimum: 6, allow_nil: true} # validate password length
-
     attr_reader :password
 
+
+
     after_initialize :ensure_session_token # this method will be called after User.new
-    
+
     has_many :chirps,
         primary_key: :id,
         foreign_key: :author_id,
@@ -44,6 +45,8 @@ class User < ApplicationRecord
 
         # overwriting setter method
     def password=(password)
+        # self.password recursion
+        # password= scope problem
         @password = password # password is just an instance variable -> not saved to db
         # use bcrypt to hash our password -> set to pw_digest
         self.password_digest = BCrypt::Password.create(password)
@@ -62,8 +65,5 @@ class User < ApplicationRecord
     def ensure_session_token
         self.session_token ||= SecureRandom::urlsafe_base64 # random string
     end
-
-
-
 
 end

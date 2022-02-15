@@ -3,6 +3,7 @@ class UsersController < ApplicationController
     before_action :require_logged_in, only: [:index, :show]
 
     def index
+        debugger
         @users = User.all
         render :index
     end
@@ -23,6 +24,7 @@ class UsersController < ApplicationController
     end
 
     def create
+        # debugger
         @user = User.new(user_params)
         
         if @user.save
@@ -62,3 +64,5 @@ end
 
 
 # rails g controller users -> creates controller & views files
+
+# params = { user=>{ username: "user1", password:"21313" }  }

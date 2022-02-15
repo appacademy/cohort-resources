@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
     # skip_before_action :verify_authenticity_token # this is too avoid csrf verification - will cover tomorrow
-
+    attr_reader :current_user
     helper_method :current_user, :logged_in? # need to do this to use these methods in views!
 
     # CRLLL
