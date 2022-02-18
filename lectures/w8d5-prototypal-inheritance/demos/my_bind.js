@@ -1,7 +1,21 @@
 // simple myBind with no args
+
+Function.prototype.myBind = function(ctx){
+  const that = this;
+  return function(){
+    return that.apply(ctx); //return that.call(ctx);
+  }
+
+  // return ()=> this.apply(ctx); //not allowed on assessment
+
+}
   
   
 // myBind with arguments
+Function.prototype.myBind2 = function(ctx, ...bindArgs){
+
+  return (...callArgs) => this.apply(ctx, bindArgs.concat(callArgs));
+}
 
   
   
@@ -20,19 +34,20 @@
         message += ` ${friend},`
       })
       message += ` and ${friends[friends.length -1]}!`
-      console.log(message)
+      console.log(message);
     }
 
   }
   
 const curie = new Cat("Curie");
-// const drogo = new Cat("Drogo");
-// curie.meow(); //function called "method style"
-// setTimeout(curie.meow, 1000); //unbound callback returns 'undefined' for this and has lost original ctx
-// setTimeout(curie.meow.myBind(curie), 1000); //bound callback keeps ctx intact
-// setTimeout(()=> curie.meow(), 1000); //arrow function binds ctx
-// curie.catFriends.myBind2(curie, 'Sam', 'Chris', 'Taylor', 'Paulo')('Spencer', 'Ayce');
-// curie.catFriends.myBind2(drogo, 'Sam', 'Chris', 'Taylor', 'Paulo')('Spencer', 'Ayce');
+
+// curie.meow();
+// setTimeout(curie.meow, 1000);
+// setTimeout(curie.meow.myBind(curie), 1000);
+// setTimeout(()=> curie.meow(), 1000);
+const boundFunc = curie.catFriends.myBind2(curie, 'Sam', 'Chris', 'Taylor', 'Paulo')
+boundFunc('Spencer', 'Ayce');
+
 
 
 
