@@ -1,0 +1,29 @@
+{
+  "name": "jspWalkthrough",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "browserslist": [
+    "defaults"
+  ],
+  "scripts": {
+    "start": "webpack --watch --mode=development",
+    "build": "webpack --mode=production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
+    "core-js": "^3.21.1",
+    "css-loader": "^6.6.0",
+    "mini-css-extract-plugin": "^2.5.3",
+    "regenerator-runtime": "^0.13.9",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.6.0",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2"
+  }
+}
