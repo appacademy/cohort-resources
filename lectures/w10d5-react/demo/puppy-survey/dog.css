@@ -1,0 +1,14 @@
+.app {
+    border: solid red 3px;
+    padding: 10px;
+}
+
+.dog-index {
+    border: solid green 3px;
+    padding: 10px;
+}
+.dog-detail {
+    border: solid blue 3px;
+    cursor: pointer;
+    padding: 10px;
+}
