@@ -12,7 +12,7 @@ export const receiveGreenTea = {
 // Action Creator, takes payload data and sets type and payload. Returns Action Object
 export const receiveTea = (tea) => {
     // console.log(tea)
-    // debugger;
+    debugger;
     return {
         type: RECEIVE_TEA,
         tea // => tea: tea
