@@ -1,5 +1,7 @@
 import { RECEIVE_COOKIE } from "../actions/cookies_actions";
 
+
+
 const cookiesReducer = (state = {}, action) => {
     Object.freeze(state);
     const nextState = Object.assign({}, state);

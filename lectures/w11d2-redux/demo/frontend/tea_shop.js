@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const store = configureStore();
 
   window.store = store;
-  window.receiveGreenTea = receiveGreenTea;
+  // window.receiveGreenTea = receiveGreenTea;
   window.receiveTea = receiveTea;
   window.receiveCookie = receiveCookie
 })

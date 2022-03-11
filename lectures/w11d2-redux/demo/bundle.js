@@ -17,6 +17,7 @@ __webpack_require__.r(__webpack_exports__);
 var RECEIVE_COOKIE = 'RECEIVE_COOKIE'; //Action Creator
 
 var receiveCookie = function receiveCookie(cookie) {
+  debugger;
   return {
     type: RECEIVE_COOKIE,
     cookie: cookie
@@ -49,7 +50,7 @@ var receiveGreenTea = {
 
 var receiveTea = function receiveTea(tea) {
   // console.log(tea)
-  // debugger;
+  debugger;
   return {
     type: RECEIVE_TEA,
     tea: tea // => tea: tea
@@ -193,8 +194,8 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener("DOMContentLoaded", function () {
   console.log("Welcome to the magic tea shop.");
   var store = (0,_store_store__WEBPACK_IMPORTED_MODULE_0__.default)();
-  window.store = store;
-  window.receiveGreenTea = _actions_tea_actions__WEBPACK_IMPORTED_MODULE_1__.receiveGreenTea;
+  window.store = store; // window.receiveGreenTea = receiveGreenTea;
+
   window.receiveTea = _actions_tea_actions__WEBPACK_IMPORTED_MODULE_1__.receiveTea;
   window.receiveCookie = _actions_cookies_actions__WEBPACK_IMPORTED_MODULE_2__.receiveCookie;
 });
