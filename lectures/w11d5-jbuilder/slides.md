@@ -17,6 +17,13 @@ properly mapping associations between data
 
 ---
 
+## Learning Goals
+
++ Understand Jbuilder and how it helps sculpt our backend responses
++ Understand the purpose of normalizing state shape
+
+---
+
 ## Jbuilder Basics
 
 + `Jbuilder` is a simple DSL tool to declare JSON structures 
@@ -26,6 +33,65 @@ properly mapping associations between data
 
 Note:
 to curate normalized JSON response from server
+
+---
+
+## Jbuilder Common Methods
+
++ `extract!`
++ `set!`
++ `partial!`
+
+Fun Fact:
+"!" means its a json method, not a key of a pojo.
+
+---
+
+## `extract!`
+
+`extract!` is best used when you want the object's key to match the column name.
+
+```ruby
+# @pupper = { id: 10, name: 'Phil', age: 2 }
+
+json.extract! @pupper, :name, :age
+```
+
+```json
+{"name": "Phil", "age": "2"}
+```
+
+---
+
+## `set!`
+
+`set!` is best used when you need to dynamically create a key
+
+```rb
+# @dog = { id: 10, name: 'Phil' }
+
+json.set! @dog.id do
+  json.extract! @dog, :name
+end
+```
+
+```json
+{ '10' : { "name": "Phil" } }
+```
+
+---
+
+## `partial!`
+
+```rb
+#partial in `api/puppers/_pupper.json.jbuilder`
+
+json.partial! 'pupper', pupper: @pupper
+```
+
+```json
+{"name": "Phil", "age": "2"}
+```
 
 ---
 
@@ -214,9 +280,7 @@ Note:
 ## Code Demo Part 2 - Normalized State with Associated Data
 
 ---
-
-## Wireframe of Finished Product
-![finished product](https://raw.githubusercontent.com/appacademy/sf-lecture-notes/master/react/w11d1-jbuilder-state-shape/assets/finished-product.png?token=ANVMGKIIUSNPAC4CQIBMJYTBJUA6K)
+![goal](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/master/react/W11D5-jbuilder/past_lectures/assets/finished-product.png?token=GHSAT0AAAAAABQN6MAMAGOXOVX2S2JY3MNCYRU3QOQ)
 
 ---
 
@@ -264,103 +328,6 @@ Note:
 ```
 
 Note: Switch to code demo after this slide
-
----
-
-# Jbuilder Review
-
-Note: 
-This should come after the code demo is completely finished and should take about 30 minutes
-
----
-
-## Jbuilder Common Methods
-
-+ `extract!`
-+ `set!`
-+ `array!`
-+ `partial!`
-
-Fun Fact:
-"!" means its a json method, not a key of a pojo.
-
----
-
-## `extract!`
-
-`extract!` is best used when you want the object's key to match the column name.
-
-```ruby
-# @pupper = { id: 10, name: 'Phil', age: 2 }
-
-json.extract! @pupper, :name, :age
-```
-
-```json
-{"name": "Phil", "age": "2"}
-```
-
----
-
-## `set!`
-
-`set!` is best used when you need to dynamically create a key
-
-```rb
-# @dog = { id: 10, name: 'Phil' }
-
-json.set! @dog.id do
-  json.extract! @dog, :name
-end
-```
-
-```json
-{ '10' : { "name": "Phil" } }
-```
-
----
-
-## `array!`
-
-You can also extract attributes from an array directly.
-
-
-```rb
-# @puppinos = [
-#    { id: 10, name: 'Phil', fluffy: true},
-#    { id: 15, name: 'Niko', fluffy: false }
-#    ]
-
-json.array! @puppinos, :fluffy, :name
-```
-
-```json
-[
-    {"name": "Phil", "fluffy": true}, 
-    {"name": "Niko", "fluffy": false}
-]
-```
-
-Note:
-
-```ruby
-#pure ruby
-json.pup_ids @puppinos.map(&:name)
-```
-
----
-
-## `partial!`
-
-```rb
-#partial in `api/puppers/_pupper.json.jbuilder`
-
-json.partial! 'pupper', pupper: @pupper
-```
-
-```json
-{"name": "Phil", "age": "2"}
-```
 
 ---
 
@@ -450,10 +417,6 @@ Jbuilder.key_format camelize: :lower
 Note:
 
 While there is no single rule for exactly how those different types of data should be organized, one common pattern is to put the relational "tables" under a common parent key, such as "entities".
-
----
-
-## Common Debugging Techniques
 
 ---
 
