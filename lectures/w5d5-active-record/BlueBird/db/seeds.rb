@@ -19,7 +19,7 @@ darren = User.create!(
   username: "awesome_person", 
   email: "awesome_person@email.com", 
   
-  age: 20, 
+  age: 20, # definitely true
   coding_pref: "JavaScript"
 )
 
@@ -119,7 +119,7 @@ chirp9 = Chirp.create!(author_id: diego.id, body: "Programmer: A machine that tu
 chirp10 = Chirp.create!(author_id: big_company.id, body: "You're a wizard, instructor.")
 
 
-# Likes
+# Likes: last b/c dependent on both users and chirps
 
 # diego
 Like.create!(liker_id: diego.id, chirp_id: chirp1.id)
