@@ -19,7 +19,7 @@ darren = User.create!(
   username: "awesome_person", 
   email: "awesome_person@email.com", 
   
-  age: 30, 
+  age: 20, 
   coding_pref: "JavaScript"
 )
 
@@ -35,7 +35,7 @@ taylor = User.create!(
   username: "dan_the_man", 
   email: "dan_the_man@email.com", 
 
-  age: 30, 
+  age: 5, 
   coding_pref: "JavaScript"
 )
 
@@ -51,7 +51,7 @@ chris = User.create!(
   username: "chris", 
   email: "chris@email.com", 
  
-  age: 30, 
+  age: 45, 
   coding_pref: "Ruby"
 )
 
@@ -75,7 +75,7 @@ justin = User.create!(
   username: "justin_gets_buckets", 
   email: "justin_gets_buckets@email.com", 
  
-  age: 30, 
+  age: 15, 
   coding_pref: "JavaScript"
 )
 
@@ -83,7 +83,7 @@ sam = User.create!(
   username: "beep_boop", 
   email: "beep_boop@email.com", 
  
-  age: 30, 
+  age: 10, 
   coding_pref: "C++"
 )
 
@@ -91,7 +91,7 @@ greta = User.create!(
   username: "adventursaurus", 
   email: "adventursaurus@email.com", 
   
-  age: 30, 
+  age: 25, 
   coding_pref: "JavaScript"
 )
 
@@ -99,7 +99,7 @@ big_company = User.create!(
   username: "instructors_rock", 
   email: "instructors_rock@email.com", 
   
-  age: 30, 
+  age: 100, 
   coding_pref: "Instructors"
 )
 
