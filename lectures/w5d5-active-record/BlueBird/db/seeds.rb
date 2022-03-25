@@ -20,7 +20,7 @@ darren = User.create!(
   email: "awesome_person@email.com", 
   
   age: 30, 
-  political_affiliation: "JavaScript"
+  coding_pref: "JavaScript"
 )
 
 diego = User.create!(
@@ -28,7 +28,7 @@ diego = User.create!(
   email: "diegous@email.com", 
  
   age: 30, 
-  political_affiliation: "Ruby"
+  coding_pref: "Ruby"
 )
 
 taylor = User.create!(
@@ -36,7 +36,7 @@ taylor = User.create!(
   email: "dan_the_man@email.com", 
 
   age: 30, 
-  political_affiliation: "Ruby"
+  coding_pref: "JavaScript"
 )
 
 mike = User.create!(
@@ -44,7 +44,7 @@ mike = User.create!(
   email: "the_wizard@email.com", 
  
   age: 30, 
-  political_affiliation: "CSS"
+  coding_pref: "CSS"
 )
 
 chris = User.create!(
@@ -52,7 +52,7 @@ chris = User.create!(
   email: "chris@email.com", 
  
   age: 30, 
-  political_affiliation: "Ruby"
+  coding_pref: "Ruby"
 )
 
 paulo = User.create!(
@@ -60,7 +60,7 @@ paulo = User.create!(
   email: "squirelly@email.com", 
   
   age: 30, 
-  political_affiliation: "JavaScript"
+  coding_pref: "JavaScript"
 )
 
 ayce = User.create!(
@@ -68,7 +68,7 @@ ayce = User.create!(
   email: "talk_to_the_hand@email.com", 
 
   age: 30, 
-  political_affiliation: "Ruby"
+  coding_pref: "Ruby"
 )
 
 justin = User.create!(
@@ -76,7 +76,7 @@ justin = User.create!(
   email: "justin_gets_buckets@email.com", 
  
   age: 30, 
-  political_affiliation: "JavaScript"
+  coding_pref: "JavaScript"
 )
 
 sam = User.create!(
@@ -84,7 +84,7 @@ sam = User.create!(
   email: "beep_boop@email.com", 
  
   age: 30, 
-  political_affiliation: "C++"
+  coding_pref: "C++"
 )
 
 greta = User.create!(
@@ -92,7 +92,7 @@ greta = User.create!(
   email: "adventursaurus@email.com", 
   
   age: 30, 
-  political_affiliation: "JavaScript"
+  coding_pref: "JavaScript"
 )
 
 big_company = User.create!(
@@ -100,7 +100,7 @@ big_company = User.create!(
   email: "instructors_rock@email.com", 
   
   age: 30, 
-  political_affiliation: "Instructors"
+  coding_pref: "Instructors"
 )
 
 
