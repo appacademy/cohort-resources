@@ -1,0 +1,4 @@
+<a href="<%= new_user_url %>">Create a New User</a>
+<% @users.each do |user| %>
+    <%= render 'user', user: user, action: :index %>
+<% end %>
