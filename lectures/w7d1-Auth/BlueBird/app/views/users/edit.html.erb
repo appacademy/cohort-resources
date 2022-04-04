@@ -1,0 +1,33 @@
+<h1>Update Existing User</h1>
+
+<a href="<%= user_url(@user) %>">Back to User Show</a>
+
+<form action="<%= user_url(@user) %>" method="POST">
+    <input type="hidden" name="_method" value="PATCH">
+    <label>Username:
+        <input id='username' type="text" name="user[username]" value="<%= @user.username %>">
+    </label>
+    <br>
+    <label>Email:
+        <input id="email" type="text" name="user[email]" value="<%= @user.email %>">
+    </label>
+    <br>
+    <label>Age:
+        <input id="age" type="text" name="user[age]" value="<%= @user.age %>">
+    </label>
+    <br>
+    <label>Coding Preference:
+        <input id="coding_pref" type="text" name="user[coding_pref]" value="<%= @user.coding_pref %>">
+    </label>
+    <br>
+    <!-- <input type="submit" value="Create a New User"> -->
+    <button>Update User</button>
+    
+    <% if @errors %>
+        <% @errors.each do |error| %>
+            <p><%= error %></p>
+        <% end %>
+        
+    <% end %>
+    
+</form>
