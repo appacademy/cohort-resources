@@ -1,0 +1,24 @@
+<% if action == :show %>
+    <% url = users_url %>
+    <% text = 'Back to Index' %>
+<% else %>
+    <% url = user_url(user.id) %>
+    <% text = 'Show More Info' %>
+<% end %>
+
+<p><%= user.username %></p>
+<ul>
+    <li><%= user.age %></li>
+    <li><%= user.email %></li>
+    <li><%= user.coding_pref %></li>
+    
+    <% if action == :show %>
+        <li>
+            <a href="<%= edit_user_url(user) %>">Edit User</a>
+        </li>
+    <% end %>
+    
+    <li>
+        <a href="<%= url %>"><%= text %></a>
+    </li>
+</ul>

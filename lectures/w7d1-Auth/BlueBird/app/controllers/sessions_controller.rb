@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     # we only want logged in users to logout 
     def new
         
-        render :new
+        # render :new
     end 
 
     def create
