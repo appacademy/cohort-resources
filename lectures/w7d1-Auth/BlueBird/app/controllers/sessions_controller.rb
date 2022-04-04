@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
     before_action :require_logged_out, only:[:new, :create]
     # we dont want users to log in again
-    before_action :require_logged_in, only:[:destroy]
+    # before_action :require_logged_in, only:[:destroy]
     # we only want logged in users to logout 
     def new
         
