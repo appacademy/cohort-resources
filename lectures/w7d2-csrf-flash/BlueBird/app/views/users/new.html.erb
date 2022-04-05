@@ -1,0 +1,31 @@
+<h1>Create a New User</h1>
+<a href="<%= users_url %>">Back to User Index</a>
+<form action="<%= users_url %>" method="POST">
+    <label>Username:
+        <input id='username' type="text" name="user[username]" value="<%= @user.username %>">
+    </label>
+    <br>
+    <label>Email:
+        <input id="email" type="text" name="user[email]" value="<%= @user.email %>">
+    </label>
+    <br>
+    <label>Age:
+        <input id="age" type="text" name="user[age]" value="<%= @user.age %>">
+    </label>
+    <br>
+    <label>Coding Preference:
+        <input id="coding_pref" type="text" name="user[coding_pref]" value="<%= @user.coding_pref %>">
+    </label>
+    <br>
+    <input type="password" name="user[password]" id="password" value="">
+    <!-- <input type="submit" value="Create a New User"> -->
+    <button>Create a New User</button>
+    
+    <% if @errors %>
+        <% @errors.each do |error| %>
+            <p><%= error %></p>
+        <% end %>
+        
+    <% end %>
+    
+</form>
