@@ -15,8 +15,24 @@ class User < ApplicationRecord
     validates :password, length: {minimum: 6}, allow_nil: true 
     attr_reader :password 
     before_validation :ensure_session_token
+    
+    
+    has_many :chirps,
+        primary_key: :id,
+        foreign_key: :author_id,
+        class_name: :Chirp
+    
+    has_many :likes,
+        primary_key: :id,
+        foreign_key: :liker_id,
+        class_name: :Like
+    
+    has_many :liked_chirps,
+        through: :likes,
+        source: :chirp
 
 
+        
     def self.find_by_credentials(username, password)
         user = User.find_by(username: username)
         if user && user.is_password?(password)
@@ -65,19 +81,6 @@ class User < ApplicationRecord
 
 
 
-    has_many :chirps,
-        primary_key: :id,
-        foreign_key: :author_id,
-        class_name: :Chirp
-
-    has_many :likes,
-        primary_key: :id,
-        foreign_key: :liker_id,
-        class_name: :Like
-
-    has_many :liked_chirps,
-        through: :likes,
-        source: :chirp
 end
 
 

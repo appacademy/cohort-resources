@@ -3,12 +3,8 @@ class UsersController < ApplicationController
     before_action :require_logged_in, only:[:index, :show ]
 
     def show
-        @user = User.find_by(id: params[:id])
-        if @user
-            render :show
-        else
-            render json: ['User does not exist'], status: 404
-        end
+        @user = User.find(params[:id])
+        render :show
     end
 
     def index
