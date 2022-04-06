@@ -1,5 +1,5 @@
 class ChirpsController < ApplicationController
-    # before_action :require_logged_in
+    before_action :require_logged_in
 
     def index
         if params[:user_id]
@@ -11,6 +11,8 @@ class ChirpsController < ApplicationController
         end
         render :index
     end
+
+    
 
       def show 
         @chirp = Chirp.find(params[:id]) 
