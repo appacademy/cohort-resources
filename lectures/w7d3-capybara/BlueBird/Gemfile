@@ -44,6 +44,11 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'better_errors'
   gem 'binding_of_caller'
+
+   #added in
+   gem 'rspec-rails' # is the rails version of rspec
+   gem 'factory_bot_rails' # factory_bot allows us to automatically create models and place them into our test DB
+   gem 'rails-controller-testing' # Gives us some cool methods to help our controller testing
 end
 
 group :development do
@@ -61,6 +66,11 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+  # gem 'capybara' # We use the capybara gem specifically for integration testing.  It is included in the default Gemfile, so you won't actually need to add this one! 
+  #added in
+  gem 'faker' # Allows us to seed our DB with fake info really easily.  It's is super useful for seeding mundane information.
+  gem 'launchy' # automatically opens the page in the browser when we use the Capybara method save_and_open_page
+  gem 'shoulda-matchers' # gives us some great one liner syntax for testing
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
