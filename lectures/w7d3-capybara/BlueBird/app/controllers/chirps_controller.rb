@@ -1,16 +1,16 @@
 class ChirpsController < ApplicationController
-    before_action :require_logged_in
+    # before_action :require_logged_in
 
     def index
         if params[:user_id]
-          # user = User.find(params[:user_id])
-          # chirps = user.chirps
-          @chirps = Chirp.where(author_id: params[:user_id]).includes(:author)
+            # user = User.find(params[:user_id])
+            # chirps = user.chirps
+            @chirps = Chirp.where(author_id: params[:user_id]).includes(:author)
         else
-          @chirps = Chirp.all.includes(:author)
+            @chirps = Chirp.all.includes(:author)
         end
         render :index
-      end
+    end
 
       def show 
         @chirp = Chirp.find(params[:id]) 

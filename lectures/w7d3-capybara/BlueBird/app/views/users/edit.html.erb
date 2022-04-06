@@ -4,6 +4,7 @@
 
 <form action="<%= user_url(@user) %>" method="POST">
     <input type="hidden" name="_method" value="PATCH">
+    <input type="hidden" name="authenticity_token" value=<%=form_authenticity_token%>>
     <label>Username:
         <input id='username' type="text" name="user[username]" value="<%= @user.username %>">
     </label>
