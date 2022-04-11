@@ -1,0 +1,14 @@
+<h1>HERE ARE ALL OF OUR CHIRPS!</h1>
+<a href="<%= new_chirp_url %>">Create a Chirp</a>
+<ul>
+    <% @chirps.each do |chirp| %>
+        <li>
+            <ul>
+                <li>id: <%= chirp.id %></li>
+                <li>author_id: <%= chirp.author_id %></li>
+                <li>body: <%= chirp.body %></li>
+                <a href="<%= chirp_url(chirp) %>">Show Chirp</a>
+            </ul>
+        </li>
+    <% end %>
+</ul>
