@@ -1,11 +1,16 @@
 # a/A Approved list of Full Stack Projects
 
 ## AWS:
-- All Trails (and map)
-- AirBnB (and map)
-- HipCamp (and map)
-- Yelp (and map)
-- Open Table (and map)
+- All Trails
+   -  Google Maps Required
+- AirBnB
+  - Google Maps Required
+- HipCamp
+  -  Google Maps Required
+- Yelp
+  -  Google Maps Required
+- Open Table
+  -  Google Maps Required
 - 500px
 - Etsy
 - Amazon
@@ -13,8 +18,10 @@
 - Flickr
 - Medium
 - LinkedIn
-- Streeteasy (and map)
-- Zillow (and map)
+- Streeteasy
+  -  Google Maps
+- Zillow
+  -  Google Maps
 - Pinterest (revisit MVPS!)
 - Shopping site (All birds, chipotle, etc. - MUST do AWS)
 - Tumblr
@@ -25,14 +32,10 @@
 - Discord
 - Poll everywhere
 
-
-Other:
-Evernote
-Allowed by request of strong students:
-Spotify (takes a while to get to crud - only crud is playlist)
-Robinhood (takes a while to get to crud and can look really bad with little functionality - only crud is saving stocks)
-Netflix (takes a while to look good and takes a while to get to crud - only crud is watchlist)
-Hulu (takes a while to get to crud - only crud is watchlist)
-Soundcloud (hard - takes a while to look good)
-Youtube (and video - challenging project takes a while to look good)
-Vimeo (and video - challenging project takes a while to look good)
+You may request a site of your choice but it will need to be approved. For best change of approval make sure your site has the following"
+  - New account creation
+  - At leaset one complte CRUD feature (preferably 2)
+  - Need for at least one addtional api
+    - AWS (media storage)
+    - Google Maps
+    - etc.
