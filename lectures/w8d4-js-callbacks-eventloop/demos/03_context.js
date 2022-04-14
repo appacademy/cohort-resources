@@ -7,7 +7,7 @@ class Cat {
   constructor(name, owner) {
       this.name = name;
       this.owner = owner;
-      // debugger
+      debugger
   }
 
   cuteStatement() {
@@ -15,7 +15,7 @@ class Cat {
   }
 
   meow() {
-      // debugger
+      debugger
       return `${this.name} says meow`;
   }
 
@@ -62,6 +62,14 @@ Cat.prototype.sayHi = function() {
   return function() {
       times(3, that.meow.bind(that))
   }
+
+  // return () => {
+  //   times(3, this.meow.bind(this))
+  // }
+
+  // return () => {
+  //   times(3, ()=> this.meow())
+  // }
 
 }
 
