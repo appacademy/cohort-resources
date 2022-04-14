@@ -121,7 +121,7 @@ new func()
 
 ---
 
-![waysToCall](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/master/javascript/w8d4-js-in-depth/assets/waysToCall.png?token=GHSAT0AAAAAABSIQH4N32DTEQPARDLWESVUYSW7QRA)
+![waysToCall](assets/waysToCall.png)
 
 ---
 
@@ -160,23 +160,23 @@ NOTE: Bind is not a way to *invoke* a function! It's not invoked until later!
 
 ---
 
-![stepOne](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/master/javascript/w8d4-js-in-depth/assets/order_of_execution_1.gif?token=GHSAT0AAAAAABSIQH4NFZLDBO7SQW26P7V2YSW7SFA)
+![stepOne](assets/order_of_execution_1.gif)
 
 ---
 
-![stepTwo](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/master/javascript/w8d4-js-in-depth/assets/order_of_execution_2.gif?token=GHSAT0AAAAAABSIQH4NT55YDEWCVCXE4K2SYSW7SSQ)
+![stepTwo](assets/order_of_execution_2.gif)
 
 ---
 
-![stepThree](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/master/javascript/w8d4-js-in-depth/assets/order_of_execution_3.gif?token=GHSAT0AAAAAABSIQH4N42GIHK3HFE7T66SAYSW7TNA)
+![stepThree](assets/order_of_execution_3.gif)
 
 ---
 
-![stepFour](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/master/javascript/w8d4-js-in-depth/assets/order_of_execution_4.gif?token=GHSAT0AAAAAABSIQH4NTLEQVYY3OTYLDT6IYSW7TVQ)
+![stepFour](assets/order_of_execution_4.gif)
 
 ---
 
-![stepFive](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/master/javascript/w8d4-js-in-depth/assets/order_of_execution_5.gif?token=GHSAT0AAAAAABSIQH4NL7E3VBXX4YJUUDRUYSW7T7A)
+![stepFive](assets/order_of_execution_5.gif)
 
 ---
 

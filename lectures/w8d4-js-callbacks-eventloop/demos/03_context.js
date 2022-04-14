@@ -2,8 +2,6 @@
 //   ???
 
 
-
-
 class Cat {
 
   constructor(name, owner) {
@@ -23,6 +21,9 @@ class Cat {
 
 }
 
+
+
+
 // --------- loss of context, then preservation/binding of context ---------
 
 // First create a times function that will invoke a callback num times
@@ -33,17 +34,20 @@ function times(num, callback) {
 }
 
 // detachedMeow
-  garfield = new Cat('Garfield', 'Taylor')
-  detachedMeow = garfield.meow
+  let garfield = new Cat('Garfield', 'Taylor')
+  let detachedMeow = garfield.meow
   // times(3, detachedMeow)
 
 // betterDetachedMeow
   function betterDetachedMeow() {
     return garfield.meow()
   }
+  // times(3, betterDetachedMeow)
+  
 
 // boundMeow
   let boundMeow = detachedMeow.bind(garfield)
+  // times(3, boundMeow)
 // ---------------------------- context matters ----------------------------
 
 // Since the detachedMeow example is a bit isolated, let's see why context 
@@ -52,15 +56,13 @@ function times(num, callback) {
 // Create a Cat.prototype.sayHi is going to call meow 3 times.
 
 Cat.prototype.sayHi = function() {
-  // const that = this
+  
+  const that = this;
 
-  // return function() {
-  //     times(3, that.meow.bind(that))
-  // }
-
-  return () => {
-      times(3, ()=>this.meow())
+  return function() {
+      times(3, that.meow.bind(that))
   }
+
 }
 
 class Dog {
@@ -73,3 +75,5 @@ class Dog {
       return `${this.name} says woof! and ${action}`
   }
 }
+
+let leo = new Dog("Leo", "Taylor")

@@ -19,19 +19,11 @@ const rl = readline.createInterface({
 
 // What is wrong with the following code?
 
-// const response = rl.question('What do you think of JavaScript? ', answer => answer);
-// console.log(`Thank you for your valuable feedback: ${response}`);
+const response = rl.question('What do you think of JavaScript? ', answer => answer);
+console.log(`Thank you for your valuable feedback: ${response}`);
 
 const truth = rl.question('What do you really think of JavaScript? ', answer => answer);
 console.log(`You said: ${truth}. Thank you for your honesty.`);
 rl.close();
 
 // How do we fix it?
-
-// rl.question("What do you think of JavaScript? ", response => {
-//     console.log(`Thank you for your valuable feedback: ${response}`);
-//     rl.question("What do you really think of JavaScript? ", truth => {
-//         console.log(`You said ${truth}. Thank you for your honesty.`)
-//         rl.close()
-//     })
-// })
