@@ -1,0 +1,23 @@
+#circle{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: crimson;
+    border: 2px solid red;
+}
+
+.squares{
+    width: 250px;
+    height: 250px;
+    border: 2px solid darkcyan;
+    background-color: green;
+}
+
+p{
+    color: purple;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.yellow{
+    background-color: yellow;
+}
