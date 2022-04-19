@@ -1,3 +1,0 @@
-# Purpose 
-
-This demo showcases the importance of having the clear interval in the componentWillUnmount.  We have added a button in there that hides and shows a component so that we can show what happens when we have the clearInterval and when we dont have it.  Best way to showcase this is by commenting out the clearInterval in the componentWillUnmount of the clock.jsx and showing what happens when we click the unmount/mount button. Then after showing that, comment in the clearInterval and see the difference in performance. 
