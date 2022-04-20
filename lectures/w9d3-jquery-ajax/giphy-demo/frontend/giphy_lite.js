@@ -5,24 +5,55 @@ const setEventListeners = () => {
   $('#new-gif-form').on('submit', e => {
     e.preventDefault();
     // Fetch a new GIF
-
+    GifApiUtil.newGifAJAX()
+      .then(res => {
+        // debugger;
+        const url = res.data.images.original.url;
+        appendGif(url);
+      })
   });
 
   $('#save-gif-form').on('submit', e => {
     e.preventDefault();
     // Save GIF
+    const $messages = $('.messages');
+    const $gif = $('.gif-display');
+    const $input = $('#save-gif-title');
+    const title = $input.val();
+    const gifObject = {
+      title: title,
+      url: $gif.data('url')
+    }
+    GifApiUtil.saveGifAJAX(gifObject)
+      .then(res => {
+        $messages.text('You Did It!');
+        setTimeout(() => $messages.empty(), 2000);
+      },
+      res => {
+        $messages.text(res.responseJSON[0]);
+        setTimeout(() => $messages.empty(), 2000);
+      });
 
   });
 
   $('#old-gif-form').on('submit', e => {
     e.preventDefault();
     // Fetch saved GIF
-
+    const $input = $('#old-gif-query');
+    const gifTitle = $input.val();
+    GifApiUtil.fetchSavedGifAJAX(gifTitle)
+      .then(res => {
+        $input.val('');
+        appendGif(res.url);
+      },
+      err => {
+        console.log(err.responseJSON[0]);
+      });
   });
 
   $(".clear").on("click", () => {
     // Clear out GIF display
-
+    clearGif();
   });
 };
 
