@@ -13,6 +13,7 @@
 - Amazon
 - Eventbrite
 - Flickr
+- Goodreads
 - Medium
 - LinkedIn
 - Pinterest
@@ -140,6 +141,14 @@ You may request a site of your choice but it will need to be approved. For best 
 - Feature 4: Tags - _CRUD_
 - Bonus: Favorites
 - Bonus: Follows
+
+## Goodreads
+- Feature 1: Books - _CRUD_
+- Feature 2: Reviews - _CRUD_
+- Feature 3: Bookshelves - _CRUD_
+- Feature 4: Search - _CRUD_
+- Bonus: Review Likes
+- Bonus: Friends
 
 ## Medium
 - Feature 1: Stories - _CRUD_
