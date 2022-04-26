@@ -59,7 +59,7 @@ You may request a site of your choice but it will need to be approved. For best 
 - Bonus: Experiences
 - Bonus: User/Host profiles
 
-## HipCamp 
+## Hipcamp 
 - Feature 1: Spots 
 - Feature 2: Bookings - _CRUD_
 - Feature 3: Spots search - _Google Maps_
