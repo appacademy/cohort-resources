@@ -51,7 +51,7 @@ You may request a site of your choice but it will need to be approved. For best 
 - Bonus: Favorites 
 - Bonus: Completed trails
 
-## AirBnB
+## Airbnb
 - Feature 1: Listings - _CRUD_
 - Feature 2: Reservations - _CRUD_
 - Feature 3: Locations - _Google Maps_
