@@ -83,7 +83,7 @@ You may request a site of your choice but it will need to be approved. For best 
 - Feature 4: Ratings/Reviews - _CRUD_
 - Bonus: Favorites
 - Bonus: Discover/Explore
-- Bonus: points for bookings and usage of site
+- Bonus: Points for bookings and usage of site
 
 ## Streeteasy 
 - Feature 1: Listings - _CRUD_
