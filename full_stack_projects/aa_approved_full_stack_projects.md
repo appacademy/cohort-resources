@@ -43,7 +43,7 @@ You may request a site of your choice but it will need to be approved. For best 
 
 # Required Features for Approved Apps
 
-## All Trails
+## AllTrails
 - Feature 1: Trails
 - Feature 2: Parks - _Google Maps_
 - Feature 3: Reviews/Ratings - _CRUD_
