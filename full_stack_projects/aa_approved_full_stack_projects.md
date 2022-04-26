@@ -57,7 +57,7 @@ You may request a site of your choice but it will need to be approved. For best 
 - Feature 3: Locations - _Google Maps_
 - Feature 4: Reviews - _CRUD_
 - Bonus: Experiences
-- Bonus: User/Host Porfiles
+- Bonus: User/Host profiles
 
 ## HipCamp 
 - Feature 1: Spots 
