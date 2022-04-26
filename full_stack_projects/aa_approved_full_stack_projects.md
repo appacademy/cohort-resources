@@ -1,7 +1,7 @@
 # a/A Approved list of Apps
 
 ## Apps requiring AWS:
-- All Trails - _Google Maps required_
+- AllTrails - _Google Maps required_
 - AirBnB - _Google Maps required_
 - HipCamp - _Google Maps required_
 - Yelp - _Google Maps required_
