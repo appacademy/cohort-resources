@@ -129,7 +129,7 @@ You may request a site of your choice but it will need to be approved. For best 
 ## Eventbrite
 - Feature 1: Events - _CRUD_
 - Feature 2: Registration/Tickets - _CRUD_
-- Feature 3: Categores
+- Feature 3: Categories
 - Feature 4: Bookmark events - _CRUD_
 - Bonus: Google Maps integration
 - Bonus: Search
