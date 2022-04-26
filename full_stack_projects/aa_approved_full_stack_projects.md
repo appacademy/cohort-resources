@@ -104,7 +104,7 @@ You may request a site of your choice but it will need to be approved. For best 
 ## 500px
 - Feature 1: Post pictures - _CRUD_
 - Feature 2: Follows - _CRUD_
-- Feature 3: Home Feed
+- Feature 3: Home feed
 - Feature 4: Profile Page - _CRUD_
 - Bonus: Tags
 - Bonus: Discover
