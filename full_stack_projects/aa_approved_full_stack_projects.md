@@ -21,7 +21,7 @@
 - Splitwise
 - Stack Overflow
 
-## Apps requiring Web-sockets:
+## Apps requiring WebSocket for live chat:
 - Slack
 - Discord
 - Poll Everywhere
