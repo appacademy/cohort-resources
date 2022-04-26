@@ -13,11 +13,9 @@
 - Amazon
 - Eventbrite
 - Flickr
-- Goodreads
 - Medium
 - LinkedIn
 - Pinterest
-- Shopping site
 - Tumblr
 - Facebook
 - Splitwise
@@ -28,7 +26,6 @@
 - Discord
 - Poll Everywhere
 
-
 ## Other: 
 You may request a site of your choice but it will need to be approved. For best chance of approval make sure your site has the following:
   - New account creation, login/signup
@@ -38,6 +35,12 @@ You may request a site of your choice but it will need to be approved. For best 
     - Google Maps
     - WebSockets
     - etc.
+
+Additionally, there are a number of e-commerce websites that qualify for a Full Stack Project. If you are interested in an e-commerce site that is not listed above make sure the one you chose has the following features:
+- Product Listings
+- Shopping Cart
+- Reviews/Comments
+- Search
 
 ---
 
@@ -142,14 +145,6 @@ You may request a site of your choice but it will need to be approved. For best 
 - Bonus: Favorites
 - Bonus: Follows
 
-## Goodreads
-- Feature 1: Books - _CRUD_
-- Feature 2: Reviews - _CRUD_
-- Feature 3: Bookshelves - _CRUD_
-- Feature 4: Search - _CRUD_
-- Bonus: Review Likes
-- Bonus: Friends
-
 ## Medium
 - Feature 1: Stories - _CRUD_
 - Feature 2: Commenting on stories - _CRUD_
@@ -168,20 +163,12 @@ You may request a site of your choice but it will need to be approved. For best 
 
 ## Pinterest
 - Feature 1: Profile - _CRUD_
-- Feature 2: Boards and Pins - _CRUD_
-- Feature 3: Follows - _CRUD_
-- Feature 4: Discover Feed
-- Bonus: Notifications
-- Bonus: Private boards
+- Feature 2: Pins - _CRUD_
+- Feature 3: Boards - _CRUD_
+- Feature 4: Follows - _CRUD_
+- Bonus: Feed
 - Bonus: Likes
-
-## Shopping sites
-- Feature 1: Product Listings
-- Feature 2: Shopping Cart - _CRUD_
-- Feature 3: Reviews/Comments - _CRUD_
-- Feature 4: Search
-- Bonus: Categories
-- Bonus: Favorites/Lists
+- Bonus: Notifications
 
 ## Tumblr
 - Feature 1: Posts - _CRUD_
@@ -193,8 +180,8 @@ You may request a site of your choice but it will need to be approved. For best 
 
 ## Facebook
 - Feature 1: Profiles - _CRUD_
-- Feature 2: Friending - _CRUD_
-- Feature 3: Comments/Posting on each others' walls - _CRUD_
+- Feature 2: Comments/Posting on each others' walls - _CRUD_
+- Feature 3: Friending - _CRUD_
 - Feature 4: News Feed
 - Bonus: Notifications
 - Bonus: Likes
