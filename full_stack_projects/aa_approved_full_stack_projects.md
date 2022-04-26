@@ -33,7 +33,7 @@ You may request a site of your choice but it will need to be approved. For best 
   - Need for at least one additional API:
     - AWS (media storage)
     - Google Maps
-    - WebSockets
+    - WebSocket (live chat)
     - etc.
 
 Additionally, there are a number of e-commerce websites that qualify for a Full Stack Project. If you are interested in an e-commerce site that is not listed above make sure the one you chose has the following features:
