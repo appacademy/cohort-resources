@@ -5,7 +5,7 @@
 - Airbnb - _Google Maps required_
 - Hipcamp - _Google Maps required_
 - Yelp - _Google Maps required_
-- Open Table - _Google Maps required_
+- OpenTable - _Google Maps required_
 - Streeteasy - _Google Maps required_
 - Zillow - _Google Maps required_
 - 500px
