@@ -2,7 +2,7 @@
 
 ## Apps requiring AWS:
 - AllTrails - _Google Maps required_
-- AirBnB - _Google Maps required_
+- Airbnb - _Google Maps required_
 - HipCamp - _Google Maps required_
 - Yelp - _Google Maps required_
 - Open Table - _Google Maps required_
