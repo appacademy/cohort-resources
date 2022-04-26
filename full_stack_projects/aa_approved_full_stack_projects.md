@@ -32,7 +32,7 @@
 ## Other: 
 You may request a site of your choice but it will need to be approved. For best chance of approval make sure your site has the following:
   - New account creation, login/signup
-  - At leaset one complte CRUD feature (preferably 2)
+  - At least one complete CRUD feature (preferably 2)
   - Need for at least one addtional api:
     - AWS (media storage)
     - Google Maps
