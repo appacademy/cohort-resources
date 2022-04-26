@@ -26,7 +26,7 @@
 ## Apps requiring Web-sockets:
 - Slack
 - Discord
-- Poll everywhere
+- Poll Everywhere
 
 
 ## Other: 
