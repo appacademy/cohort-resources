@@ -36,7 +36,7 @@ You may request a site of your choice but it will need to be approved. For best 
   - Need for at least one additional API:
     - AWS (media storage)
     - Google Maps
-    - Web-sockets
+    - WebSockets
     - etc.
 
 ---
