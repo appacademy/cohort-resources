@@ -105,7 +105,7 @@ You may request a site of your choice but it will need to be approved. For best 
 - Feature 1: Post pictures - _CRUD_
 - Feature 2: Follows - _CRUD_
 - Feature 3: Home feed
-- Feature 4: Profile Page - _CRUD_
+- Feature 4: Profile page - _CRUD_
 - Bonus: Tags
 - Bonus: Discover
 - Bonus: Notifications
