@@ -76,7 +76,7 @@ You may request a site of your choice but it will need to be approved. For best 
 - Bonus: Profile
 - Bonus: Friends
 
-## Open Table 
+## OpenTable 
 - Feature 1: Restaurants
 - Feature 2: Reservations - _CRUD_
 - Feature 3: Search
