@@ -85,7 +85,7 @@ You may request a site of your choice but it will need to be approved. For best 
 - Bonus: Discover/Explore
 - Bonus: Points for bookings and usage of site
 
-## Streeteasy 
+## StreetEasy 
 - Feature 1: Listings - _CRUD_
 - Feature 2: Favorites - _CRUD_
 - Feature 3: Map - _Google Maps_
