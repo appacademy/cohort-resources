@@ -15,7 +15,7 @@ class DogDetail extends React.Component {
 
     render() {
         return (
-            <div onClick={this.addBreedVote}>
+            <div className='dog-detail' onClick={this.addBreedVote}>
                 {this.props.breed}: {this.state.votes}
             </div>
         )

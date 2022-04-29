@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './app';
 
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOMContentLoaded');
     const root = document.getElementById('root');
     ReactDOM.render(<App name='Rick' test='good' />, root);
 });
