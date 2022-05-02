@@ -1,39 +1,39 @@
 # a/A Approved list of Apps
 
 ## Apps requiring AWS:
-- AllTrails - _Google Maps required_
-- Airbnb - _Google Maps required_
-- Hipcamp - _Google Maps required_
-- Yelp - _Google Maps required_
-- OpenTable - _Google Maps required_
-- StreetEasy - _Google Maps required_
-- Zillow - _Google Maps required_
-- 500px
-- Etsy
-- Amazon
-- Eventbrite
-- Flickr
-- Medium
-- LinkedIn
-- Pinterest
-- Tumblr
-- Facebook
-- Splitwise
-- Stack Overflow
+- [AllTrails](https://www.alltrails.com/) - _Google Maps required_
+- [Airbnb](https://www.airbnb.com/) - _Google Maps required_
+- [Hipcamp](https://www.hipcamp.com/) - _Google Maps required_
+- [Yelp](https://www.yelp.com/) - _Google Maps required_
+- [OpenTable](https://www.opentable.com/) - _Google Maps required_
+- [StreetEasy](https://streeteasy.com/) - _Google Maps required_
+- [Zillow](https://www.zillow.com/) - _Google Maps required_
+- [500px](https://500px.com/)
+- [Etsy](https://www.etsy.com/)
+- [Amazon](https://www.amazon.com/)
+- [Eventbrite](https://www.eventbrite.com/)
+- [Flickr](https://www.flickr.com/)
+- [Medium](https://medium.com/)
+- [LinkedIn](https://www.linkedin.com/)
+- [Pinterest](https://www.pinterest.com/)
+- [Tumblr](https://www.tumblr.com/)
+- [Facebook](https://www.facebook.com/)
+- [Splitwise](https://www.splitwise.com/)
+- [Stack Overflow](https://stackoverflow.com/)
 
 ## Apps requiring WebSocket for live chat:
-- Slack
-- Discord
-- Poll Everywhere
+- [Slack](https://slack.com/)
+- [Discord](https://discord.com/)
+- [Poll Everywhere](https://www.polleverywhere.com/)
 
 ## Other: 
 You may request a site of your choice but it will need to be approved. For best chance of approval make sure your site has the following:
   - New account creation, login/signup
   - At least one complete CRUD feature (preferably 2)
   - Need for at least one additional API:
-    - AWS (media storage)
-    - Google Maps
-    - WebSocket (live chat)
+    - [AWS](https://aws.amazon.com/) (media storage)
+    - [Google Maps](https://developers.google.com/maps)
+    - [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) (live chat)
     - etc.
 
 Additionally, there are a number of e-commerce websites that qualify for a Full Stack Project. If you are interested in an e-commerce site that is not listed above make sure the one you chose has the following features:
