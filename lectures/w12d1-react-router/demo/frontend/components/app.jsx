@@ -12,9 +12,15 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 const App = () => (
   <div className="app">
     <Header />
-    <Home />
-    <TodoFormContainer />
-    <TodoIndexContainer />
+    <Switch>
+      {/* <Route path='' render={() => <h1>Testing</h1>} /> */}
+      <Route path='/todos/new' render={() => <TodoFormContainer test='test' />} />
+      <Route path='/todos/:id' component={TodoShowContainer} />
+      <Route path='/todos' component={TodoIndexContainer} />
+      <Route path='/error' component={Error} />
+      <Route exact path='/' component={Home} />
+      <Redirect to='/' />
+    </Switch>
   </div>
 );
 

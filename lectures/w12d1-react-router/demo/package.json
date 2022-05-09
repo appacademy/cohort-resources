@@ -25,8 +25,8 @@
     "react-dom": "^16.13.1",
     "react-fade": "^1.1.1",
     "react-redux": "^5.0.6",
-    "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0",
+    "react-router": "^5.3.1",
+    "react-router-dom": "^5.3.1",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
     "webpack": "^3.10.0"

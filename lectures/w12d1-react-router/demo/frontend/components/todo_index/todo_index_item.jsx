@@ -5,11 +5,15 @@ import { withRouter } from 'react-router-dom';
 class TodoIndexItem extends React.Component {
   constructor(props) {
     super(props);
-    // this.showDetail = this.showDetail.bind(this);
+    this.showDetail = this.showDetail.bind(this);
     this.toggleTodo = this.toggleTodo.bind(this);
   }
 
   //showDetail method
+  showDetail(e) {
+    e.preventDefault();
+    this.props.history.push(`/todos/${this.props.todo.id}`);
+  }
 
   toggleTodo(e) {
     e.preventDefault();
@@ -38,4 +42,4 @@ class TodoIndexItem extends React.Component {
   }
 }
 
-export default TodoIndexItem;
+export default withRouter(TodoIndexItem);

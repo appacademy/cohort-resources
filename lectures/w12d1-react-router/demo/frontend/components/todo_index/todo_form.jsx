@@ -54,6 +54,7 @@ class TodoForm extends React.Component {
       const clickHandler = () => this.removeTag(idx);
       return <li key={ idx } onClick={ clickHandler }>{ tag }</li>;
     });
+    console.log(this.props.test);
 
     return (
       <form className="todo-form" onSubmit={ this.handleSubmit }>

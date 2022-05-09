@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => {
   });
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch, ownProps) => {
   return ({
   requestTodos: () => dispatch(fetchTodos()),
   updateTodo: todo => dispatch(updateTodo(todo))

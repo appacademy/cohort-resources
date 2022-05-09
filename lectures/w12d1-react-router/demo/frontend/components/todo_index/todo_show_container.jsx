@@ -4,14 +4,15 @@ import TodoShow from './todo_show';
 import { deleteTodo, fetchTodo } from '../../actions/todo_actions';
 
 const mapStateToProps = (state, ownProps) => {
+  // debugger;
   return({
-    todo: ""
+    todo: state.todos[ownProps.match.params.id]
   });
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return({
-    fetchTodo: () => dispatch(fetchTodo()),
+    fetchTodo: () => dispatch(fetchTodo(ownProps.match.params.id)),
     destroyTodo: (todo) => dispatch(deleteTodo(todo))
   });
 };
