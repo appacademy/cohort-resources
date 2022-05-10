@@ -568,3 +568,135 @@ Unpermitted parameter: :id
 Completed 200 OK in 48ms (Views: 0.7ms | ActiveRecord: 35.4ms)
 
 
+Started GET "/" for ::1 at 2022-05-05 12:22:30 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 62ms (Views: 61.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/teas" for ::1 at 2022-05-05 12:22:30 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (136.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4
+Completed 200 OK in 144ms (Views: 6.0ms | ActiveRecord: 136.4ms)
+
+
+Started GET "/" for ::1 at 2022-05-05 12:22:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/teas" for ::1 at 2022-05-05 12:22:32 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.6ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2022-05-05 12:27:01 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 353ms (Views: 352.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-05-05 12:27:08 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 281ms (Views: 279.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-05-05 12:27:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 275ms (Views: 274.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/teas" for ::1 at 2022-05-05 12:27:28 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (1.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2022-05-05 12:27:39 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 42ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/teas" for ::1 at 2022-05-05 12:27:39 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (2.7ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/api/teas" for ::1 at 2022-05-05 12:27:43 -0700
+Processing by Api::TeasController#create as JSON
+  Parameters: {"tea"=>{"flavor"=>"sdfsdf", "price"=>"sdfsdf", "id"=>"269818"}}
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teas_controller.rb:9
+  [1m[36mTea Create (11.7ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["flavor", "sdfsdf"], ["price", 0.0], ["created_at", "2022-05-05 19:27:43.570666"], ["updated_at", "2022-05-05 19:27:43.570666"]]
+  ↳ app/controllers/api/teas_controller.rb:9
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/teas_controller.rb:9
+Completed 200 OK in 17ms (Views: 0.4ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/" for ::1 at 2022-05-05 12:29:56 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 337ms (Views: 335.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/teas" for ::1 at 2022-05-05 12:29:57 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (13.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4
+Completed 200 OK in 19ms (Views: 5.2ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/api/teas" for ::1 at 2022-05-05 13:22:00 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (9.6ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4
+Completed 200 OK in 41ms (Views: 29.5ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/" for ::1 at 2022-05-05 13:22:33 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 75ms (Views: 74.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/teas" for ::1 at 2022-05-05 13:22:33 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2022-05-05 13:22:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/teas" for ::1 at 2022-05-05 13:22:45 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.5ms)
+
+
