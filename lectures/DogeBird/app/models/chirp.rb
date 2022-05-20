@@ -40,60 +40,71 @@ class Chirp < ApplicationRecord
 
 
   #Find all chirps for a particular user
+  #-- bad way: User.find_by(username: "chrismas").chirps
+  #-- good way: Chirp.joins(:user).where( users: {username: "chrismas"})
+
 
   #Find all chirps liked by people whose favorite coin is Dogecoin
+  #-- Chirp.joins(:likers).where("users.favorite_coin = 'Dogecoin'")
+  #-- Chirp.joins(:likers).where(users: {favorite_coin: 'Dogecoin'})
 
   #Get only the unique values from the previous query
+  #-- Chirp.joins(:likers).where(users: {favorite_coin: 'Dogecoin'}).distinct
 
   #Find all chirps with no likes
+  #-- Chirp.left_outer_joins(:likes).where(likes: {id: nil})
 
   #Find how many likes each chirp has
+  #-- Chirp.left_outer_joins(:likes).group('chirps.id').pluck('chirps.body, COUNT(chirps.id) AS num_likes')
+  #-- Chirp.select(:id, :body, "COUNT(*) as num_likes").joins(:likes).group(:id)
 
   #Find chirps with at least 3 likes
+  #-- Chirp.left_outer_joins(:likes).group('chirps.id').having('COUNT(chirps.id) >= 3').pluck('chirps.body, COUNT(chirps.id)')
+  #-- Chirp.joins(:likes).group(:id).having("COUNT(*) >= ?", 3).pluck(:body)
 
 
   # Includes #
 
-  # def self.see_chirp_authors_n_plus_one
-  #   # the "+1"
-  #   chirps = Chirp.all
+  def self.see_chirp_authors_n_plus_one
+    # the "+1"
+    chirps = Chirp.all
 
-  #   # the "N"
-  #   chirps.each do |chirp|
-  #       puts chirp.author.username
-  #   end
+    # the "N"
+    chirps.each do |chirp|
+        puts chirp.user.username
+    end
 
-  # end
+  end
 
-  # def self.see_chirps_optimized
-  #     # pre-fetches data
-  #     chirps = Chirp.includes(:author).all
+  def self.see_chirps_optimized
+      # pre-fetches data
+      chirps = Chirp.includes(:user).all
 
-  #     chirps.each do |chirp| 
-  #     # uses pre-fetched data 
-  #         puts chirp.author.username
-  #     end
-  # end
+      chirps.each do |chirp| 
+      # uses pre-fetched data 
+          puts chirp.user.username
+      end
+  end
 
   # # Joins #
 
-  # def self.see_chirp_num_likes_n_plus_one
-  #     chirps = Chirp.all
+  def self.see_chirp_num_likes_n_plus_one
+      chirps = Chirp.all
 
-  #     chirps.each do |chirp|
-  #         puts chirp.likes.length
-  #     end
-  # end
+      chirps.each do |chirp|
+          puts chirp.likes.length
+      end
+  end
 
-  # def self.see_chirp_num_likes_optimized
-  #     chirps_with_likes = Chirp
-  #         .select("chirps.*, COUNT(*) AS num_likes")
-  #         .joins(:likes)
-  #         .group(:id)
+  def self.see_chirp_num_likes_optimized
+      chirps_with_likes = Chirp
+          .select("chirps.*, COUNT(*) AS num_likes")
+          .joins(:likes)
+          .group(:id)
   
-  #     chirps_with_likes.each do |chirp|
-  #         puts chirp.num_likes
-  #     end
-  # end
+      chirps_with_likes.each do |chirp|
+          puts chirp.num_likes
+      end
+  end
 
 end

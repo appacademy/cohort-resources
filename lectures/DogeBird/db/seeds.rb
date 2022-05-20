@@ -41,7 +41,7 @@ Like.create!(liker_id: mike.id, chirp_id: chirp9.id)
 
 # Paulo's likes
 Like.create!(liker_id: paulo.id, chirp_id: chirp1.id)
-Like.create!(liker_id: paulo.id, chirp_id: chirp7.id)
+# Like.create!(liker_id: paulo.id, chirp_id: chirp7.id)
 Like.create!(liker_id: paulo.id, chirp_id: chirp10.id)
 
 # Abbey's likes
