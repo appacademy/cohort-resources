@@ -44,6 +44,8 @@ group :development, :test do
   gem 'pry-rails'
   # Annotate adds schema as comment at top of file (Super helpful!)
   gem 'annotate'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :development do

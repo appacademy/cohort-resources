@@ -2246,3 +2246,262 @@ DEPRECATION WARNING: Dangerous query method (method whose arguments are used as 
   [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 9]]
   [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 10]]
   [1m[36mChirp Load (9.1ms)[0m  [1m[34mSELECT chirps.*, COUNT(*) AS num_likes FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" GROUP BY "chirps"."id"[0m
+  [1m[36mChirp Load (5.2ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+Started GET "/" for ::1 at 2022-05-25 10:54:23 -0700
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christophercheasty/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/christophercheasty/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.8/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/christophercheasty/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.8/lib/rails/templates/rails/welcome/index.html.erb (5.6ms)
+Completed 200 OK in 18ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chirps" for ::1 at 2022-05-25 10:54:51 -0700
+Processing by ChirpsController#index as HTML
+  [1m[36mChirp Load (23.0ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  ↳ app/controllers/chirps_controller.rb:5
+Completed 200 OK in 78ms (Views: 9.7ms | ActiveRecord: 58.1ms)
+
+
+Started GET "/chirps" for ::1 at 2022-05-25 10:58:32 -0700
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christophercheasty/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ChirpsController#index as HTML
+Started GET "/" for ::1 at 2022-05-25 11:19:17 -0700
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christophercheasty/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/christophercheasty/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.8/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/christophercheasty/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.8/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
+Completed 200 OK in 10ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-05-25 11:19:29 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/christophercheasty/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.8/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/christophercheasty/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.8/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chirps" for ::1 at 2022-05-25 11:19:41 -0700
+Processing by ChirpsController#index as HTML
+  [1m[36mChirp Load (58.3ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  ↳ app/controllers/chirps_controller.rb:6
+Completed 200 OK in 17966ms (Views: 10.5ms | ActiveRecord: 85.7ms)
+
+
+Started GET "/chirps" for ::1 at 2022-05-25 11:20:25 -0700
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christophercheasty/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ChirpsController#index as HTML
+  [1m[36mChirp Load (1.2ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  ↳ app/controllers/chirps_controller.rb:6
+Completed 200 OK in 29ms (Views: 4.4ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/chirps/3" for ::1 at 2022-05-25 11:20:48 -0700
+
+AbstractController::ActionNotFound - The action 'show' could not be found for ChirpsController:
+
+Started POST "/__better_errors/5ac38e84b8c6b81b/variables" for ::1 at 2022-05-25 11:20:48 -0700
+Started GET "/chirps/3" for ::1 at 2022-05-25 11:24:08 -0700
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christophercheasty/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ChirpsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mChirp Load (1.9ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:10
+Completed 200 OK in 37ms (Views: 0.3ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/chirps/3" for ::1 at 2022-05-25 11:29:07 -0700
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christophercheasty/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ChirpsController#show as HTML
+  Parameters: {"id"=>"3"}
+Started GET "/chirps/paulo" for ::1 at 2022-05-25 11:46:55 -0700
+  [1m[36mChirp Load (1.7ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:11
+Completed 200 OK in 1068916ms (Views: 4.3ms | ActiveRecord: 82.1ms)
+
+
+Processing by ChirpsController#show as HTML
+  Parameters: {"banana"=>"paulo"}
+Completed 404 Not Found in 19ms (ActiveRecord: 13.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Chirp without an ID:
+  app/controllers/chirps_controller.rb:11:in `show'
+
+Started POST "/__better_errors/32c91945cc11d292/variables" for ::1 at 2022-05-25 11:46:56 -0700
+Started GET "/chirps/paulo" for ::1 at 2022-05-25 11:47:32 -0700
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christophercheasty/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ChirpsController#show as HTML
+  Parameters: {"banana"=>"paulo"}
+Started GET "/chirps" for ::1 at 2022-05-25 12:10:37 -0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christophercheasty/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/chirps"):
+  
+actionpack (5.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/chirps" for ::1 at 2022-05-25 12:11:35 -0700
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christophercheasty/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ChirpsController#index as */*
+  [1m[36mChirp Load (4.5ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  ↳ app/controllers/chirps_controller.rb:6
+Completed 200 OK in 36ms (Views: 4.6ms | ActiveRecord: 21.8ms)
+
+
+Started GET "/chirps/2" for ::1 at 2022-05-25 12:12:23 -0700
+Processing by ChirpsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mChirp Load (1.0ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:11
+Completed 200 OK in 20ms (Views: 0.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/chirps/paulo" for ::1 at 2022-05-25 13:40:51 -0700
+Processing by ChirpsController#show as HTML
+  Parameters: {"id"=>"paulo"}
+  [1m[36mChirp Load (6.1ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:11
+Completed 404 Not Found in 41ms (ActiveRecord: 30.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Chirp with 'id'=paulo:
+  app/controllers/chirps_controller.rb:11:in `show'
+
+Started POST "/__better_errors/cb4e1bd13690b5d8/variables" for ::1 at 2022-05-25 13:40:51 -0700
+Started GET "/chirps/3" for ::1 at 2022-05-25 13:45:32 -0700
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christophercheasty/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ChirpsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mChirp Load (5.7ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:11
+Completed 200 OK in 39ms (Views: 0.3ms | ActiveRecord: 22.4ms)
+
+
+Started GET "/chirps" for ::1 at 2022-05-25 13:45:36 -0700
+Processing by ChirpsController#index as */*
+  [1m[36mChirp Load (0.6ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  ↳ app/controllers/chirps_controller.rb:6
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/chirps" for ::1 at 2022-05-25 13:47:51 -0700
+Processing by ChirpsController#create as */*
+  Parameters: {"chirp"=>{"body"=>"\"hello world\""}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/chirps" for ::1 at 2022-05-25 13:50:19 -0700
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christophercheasty/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ChirpsController#create as */*
+  Parameters: {"chirp"=>{"body"=>"\"hello world\""}}
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:18
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/chirps_controller.rb:19
+  [1m[36mChirp Create (5.3ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "\"hello world\""], ["author_id", 1], ["created_at", "2022-05-25 20:52:20.615383"], ["updated_at", "2022-05-25 20:52:20.615383"]]
+  ↳ app/controllers/chirps_controller.rb:19
+  [1m[35m (10.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/chirps_controller.rb:19
+Redirected to http://localhost:3000/chirps/11
+Completed 302 Found in 121019ms (ActiveRecord: 70.0ms)
+
+
+Started GET "/chirps/11" for ::1 at 2022-05-25 13:52:20 -0700
+Processing by ChirpsController#show as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mChirp Load (0.7ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:11
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/chirps" for ::1 at 2022-05-25 13:53:16 -0700
+Processing by ChirpsController#create as */*
+  Parameters: {"chirp"=>{"body"=>"won't work", "banana"=>"banana"}}
+Unpermitted parameter: :banana
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:18
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/chirps_controller.rb:19
+  [1m[36mChirp Create (1.3ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "won't work"], ["author_id", 1], ["created_at", "2022-05-25 20:53:34.125453"], ["updated_at", "2022-05-25 20:53:34.125453"]]
+  ↳ app/controllers/chirps_controller.rb:19
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/chirps_controller.rb:19
+Redirected to http://localhost:3000/chirps/12
+Completed 302 Found in 17360ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/chirps/12" for ::1 at 2022-05-25 13:53:34 -0700
+Processing by ChirpsController#show as */*
+  Parameters: {"id"=>"12"}
+  [1m[36mChirp Load (0.9ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:11
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mChirp Load (0.7ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" ORDER BY "chirps"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/chirps" for ::1 at 2022-05-25 13:55:34 -0700
+Processing by ChirpsController#create as */*
+  Parameters: {"body"=>"won't work"}
+Completed 400 Bad Request in 25622ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: chirp:
+  app/controllers/chirps_controller.rb:27:in `chirp_params'
+  app/controllers/chirps_controller.rb:17:in `create'
+
+Started POST "/chirps" for ::1 at 2022-05-25 14:01:41 -0700
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christophercheasty/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ChirpsController#create as */*
+  Parameters: {"chirp"=>{"body"=>""}}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:18
+  [1m[35m (3.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/chirps_controller.rb:19
+  [1m[35m (4.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/chirps_controller.rb:19
+Completed 422 Unprocessable Entity in 143415ms (Views: 2.2ms | ActiveRecord: 50.3ms)
+
+
