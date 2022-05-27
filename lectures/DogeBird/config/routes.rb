@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # delete '/chirps/:id', to: 'chirps#destroy'
   
   resources :chirps, only: [:index, :show, :create, :update, :destroy]
+  resources :users
   
   # get '/chirps/:username', to: 'chirps#show' -> custom route example
 
