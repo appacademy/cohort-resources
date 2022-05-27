@@ -1,23 +1,34 @@
 class UsersController < ApplicationController
 
+  def new
+    @user = User.new
+    render :new
+  end
+
   def index
-    users = User.all
-    render json: users
+    @users = User.all
+    render :index
   end
 
   def show
-    user = User.find_by(id: params[:id])
-    render json: user
+    @user = User.find_by(id: params[:id])
+    render :show
   end
 
   def create
+    # debugger
     user = User.new(user_params)
 
     if user.save
       redirect_to user_url(user)
     else
-      render json: user.errors.full_messages, status: 422
+      render :new
     end
+  end
+
+  def edit
+    @user = User.find_by(id: params[:id])
+    render :edit
   end
 
   def update

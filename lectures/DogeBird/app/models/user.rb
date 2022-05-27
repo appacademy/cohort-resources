@@ -11,7 +11,7 @@
 #
 class User < ApplicationRecord
   validates :username, :email, presence: true, uniqueness: true
-  validates :favorite_coin, :age, presence: true
+  validates :age, presence: true
 
   has_many :chirps,
     primary_key: :id,
