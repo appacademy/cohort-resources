@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   
   resources :chirps, only: [:index, :show, :create, :update, :destroy]
   resources :users
+  resource :session, only: [:new, :create, :destroy]
   
   # get '/chirps/:username', to: 'chirps#show' -> custom route example
 

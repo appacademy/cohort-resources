@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+  before_action :require_logged_out, only: [:new, :create]
+
   def new
     @user = User.new
     render :new
@@ -20,6 +22,7 @@ class UsersController < ApplicationController
     user = User.new(user_params)
 
     if user.save
+      login!(user)
       redirect_to user_url(user)
     else
       render :new
@@ -33,7 +36,7 @@ class UsersController < ApplicationController
 
   def update
     user = User.find_by(id: params[:id])
-
+    debugger
     if user.update(user_params)
       redirect_to user_url(user)
     else
@@ -50,7 +53,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:username, :email, :age)
+    params.require(:user).permit(:username, :password, :email, :age)
   end
   
 end
