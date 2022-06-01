@@ -7,11 +7,12 @@
 <% end %>
 
 <form action="<%= action_url %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <% if type == :edit %>
     <input type="hidden" name="_method" value="patch">
   <% end %>
   <label >Username:
-    <input type="text" name="user[username]" value="<%= @user.username%>">
+    <input type="text" name="user[username]" value="<%= user.username%>">
   </label>
   <br>
   <% if type == :new %>
@@ -21,11 +22,11 @@
   <% end %>
   <br>
   <label >Email:
-    <input type="text" name="user[email]" value="<%= @user.email %>">
+    <input type="text" name="user[email]" value="<%= user.email %>">
   </label>
   <br>
   <label>Age:
-    <input type="text" name="user[age]" value="<%= @user.age %>">
+    <input type="text" name="user[age]" value="<%= user.age %>">
   </label>
   <br>
   <input type="submit" value="<%= button_text %>">

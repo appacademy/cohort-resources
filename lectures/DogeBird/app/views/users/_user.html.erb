@@ -13,6 +13,7 @@
 <a href="<%= edit_user_url(user) %>">Edit <%= user.username %></a>
 
 <form action="<%= user_url(user) %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <input type="hidden" name="_method" value="delete">
   <input type="submit" value="Delete <%= user.username %>">
 </form>

@@ -19,12 +19,13 @@ class UsersController < ApplicationController
 
   def create
     # debugger
-    user = User.new(user_params)
+    @user = User.new(user_params)
 
-    if user.save
-      login!(user)
-      redirect_to user_url(user)
+    if @user.save
+      login!(@user)
+      redirect_to user_url(@user)
     else
+      flash.now[:errors] = @user.errors.full_messages
       render :new
     end
   end
@@ -35,12 +36,12 @@ class UsersController < ApplicationController
   end
 
   def update
-    user = User.find_by(id: params[:id])
+    @user = User.find_by(id: params[:id])
     debugger
-    if user.update(user_params)
-      redirect_to user_url(user)
+    if @user.update(user_params)
+      redirect_to user_url(@user)
     else
-      render json: user.errors.full_messages, status: 422
+      flash.now[:errors] = @user.errors.full_messages
     end
   end
 

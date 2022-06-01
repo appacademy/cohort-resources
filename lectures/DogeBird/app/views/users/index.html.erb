@@ -1,17 +1,5 @@
 <h1>Here is our users!</h1>
 
-<% if logged_in? %>
-  <h2>Welcome, <%= current_user.username%>!</h2>
-  <form action="<%= session_url %>" method="post">
-    <input type="hidden" name="_method" value="delete">
-    <input type="submit" value="Logout">
-  </form>
-<% else %>
-  <a href="<%= new_user_url %>">Sign Up</a>
-  <a href="<%= new_session_url %>">Sign In</a>
-<% end %>
-
-
 <ul>
   <% @users.each do |user| %>
     <li>

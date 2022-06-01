@@ -4957,3 +4957,962 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 1.0ms)
 
 
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE DATABASE "DogeBird_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE DATABASE "DogeBird_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35mSQL (1.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (11.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "chirps" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (14.3ms)[0m  [1m[35mCREATE TABLE "chirps" ("id" bigserial primary key, "body" text NOT NULL, "author_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_chirps_on_author_id" ON "chirps"  ("author_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "likes" CASCADE[0m
+  ↳ db/schema.rb:26
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "likes" ("id" bigserial primary key, "liker_id" integer NOT NULL, "chirp_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:26
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_likes_on_chirp_id_and_liker_id" ON "likes"  ("chirp_id", "liker_id")[0m
+  ↳ db/schema.rb:26
+  [1m[35m (5.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:34
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "email" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "age" integer NOT NULL, "favorite_coin" character varying, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL)[0m
+  ↳ db/schema.rb:34
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:34
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:34
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/schema.rb:34
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (10.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220531052751)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (61.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (1.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (17.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "chirps" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (11.2ms)[0m  [1m[35mCREATE TABLE "chirps" ("id" bigserial primary key, "body" text NOT NULL, "author_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE  INDEX  "index_chirps_on_author_id" ON "chirps"  ("author_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (8.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "likes" CASCADE[0m
+  ↳ db/schema.rb:26
+  [1m[35m (27.6ms)[0m  [1m[35mCREATE TABLE "likes" ("id" bigserial primary key, "liker_id" integer NOT NULL, "chirp_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:26
+  [1m[35m (111.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_likes_on_chirp_id_and_liker_id" ON "likes"  ("chirp_id", "liker_id")[0m
+  ↳ db/schema.rb:26
+  [1m[35m (3.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:34
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "email" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "age" integer NOT NULL, "favorite_coin" character varying, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL)[0m
+  ↳ db/schema.rb:34
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:34
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:34
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/schema.rb:34
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220531052751)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220527153949);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2022-06-01 16:46:43.873216"], ["key", "environment"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (9.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2022-06-01 16:46:43.890322"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mLike Load (1.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mChirp Load (1.1ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "michaelsoft"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (3.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pizzaman@msn.ca"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "j6zclVhHUdgrrCDyW8TpOQ"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "age", "favorite_coin", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "michaelsoft"], ["email", "pizzaman@msn.ca"], ["created_at", "2022-06-01 16:46:44.690878"], ["updated_at", "2022-06-01 16:46:44.690878"], ["age", 99], ["favorite_coin", "Ethereum"], ["password_digest", "$2a$12$Oe76LbQE/hhVHbVg7tZDAO8O0eRH1u3QChqbDLeNOZ4Am1XMPqU.2"], ["session_token", "j6zclVhHUdgrrCDyW8TpOQ"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "chrismas"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tasty_chasetea@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PKwzsQ5wf6NwOsj3mAr-lA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "age", "favorite_coin", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "chrismas"], ["email", "tasty_chasetea@gmail.com"], ["created_at", "2022-06-01 16:46:45.378268"], ["updated_at", "2022-06-01 16:46:45.378268"], ["age", 11], ["favorite_coin", "Dogecoin"], ["password_digest", "$2a$12$o.kTXs9BQ1BpgdSuYR1wDu6D0PRsWGSMhTRsJVar5JLMkJPOP12WO"], ["session_token", "PKwzsQ5wf6NwOsj3mAr-lA"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (6.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "paulito"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "newroom@aa.dev"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (2.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "QWwKjr195bg4uLUaR_h3cw"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "age", "favorite_coin", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "paulito"], ["email", "newroom@aa.dev"], ["created_at", "2022-06-01 16:46:46.072393"], ["updated_at", "2022-06-01 16:46:46.072393"], ["age", 11], ["favorite_coin", "Dogecoin"], ["password_digest", "$2a$12$gJZ71Z86saYQFDz1hr2ZyeeS2gjw99bug0cNnCERIpSh3NX8QZ5ue"], ["session_token", "QWwKjr195bg4uLUaR_h3cw"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "shmaybe"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gale@geocities.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "pzSWZ7KCzqXnKPbGeFliqw"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Create (2.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "age", "favorite_coin", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "shmaybe"], ["email", "gale@geocities.com"], ["created_at", "2022-06-01 16:46:46.757976"], ["updated_at", "2022-06-01 16:46:46.757976"], ["age", 11], ["favorite_coin", "Ethereum"], ["password_digest", "$2a$12$U5YSz2GGz01R7Lk2JOE2gu.fKw4nCKFqYSLJzwlrNxchz3eAPjJNi"], ["session_token", "pzSWZ7KCzqXnKPbGeFliqw"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "taylor_made"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "craycray4taytay@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "m6mKBv_TEANdcLDVdn8MnA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "age", "favorite_coin", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "taylor_made"], ["email", "craycray4taytay@hotmail.com"], ["created_at", "2022-06-01 16:46:47.446784"], ["updated_at", "2022-06-01 16:46:47.446784"], ["age", 3], ["favorite_coin", "Bitcoin"], ["password_digest", "$2a$12$88U7IAvReR38G8Vdxn84h.prhaIUjMvufEqfPoZujDKEuNESSRKaS"], ["session_token", "m6mKBv_TEANdcLDVdn8MnA"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "darelicte"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "capEtan@aa.io"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1MgebqGSbdzTWENsKL9iBQ"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "age", "favorite_coin", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "darelicte"], ["email", "capEtan@aa.io"], ["created_at", "2022-06-01 16:46:48.134348"], ["updated_at", "2022-06-01 16:46:48.134348"], ["age", 79], ["favorite_coin", "USD Coin"], ["password_digest", "$2a$12$h5leOHJNtD7yWzICO8QJNelM.qcLUik64aXFYwrgVQqNwiPyg7vV2"], ["session_token", "1MgebqGSbdzTWENsKL9iBQ"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "disneeland"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ilovedogs@yahoo.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "9Wfkj3EPsatHr78da83jOQ"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "age", "favorite_coin", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "disneeland"], ["email", "ilovedogs@yahoo.com"], ["created_at", "2022-06-01 16:46:48.820061"], ["updated_at", "2022-06-01 16:46:48.820061"], ["age", 19], ["favorite_coin", "Bitcoin"], ["password_digest", "$2a$12$4s4NyOngzJMCOG/GFrQHuedQU8/KaMMHFEYJMh8uV4mtSretqXVJa"], ["session_token", "9Wfkj3EPsatHr78da83jOQ"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "dieguccio"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dieguccio@aol.org"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "JABx8y4xeOLPLrbG8ChFZQ"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "age", "favorite_coin", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "dieguccio"], ["email", "dieguccio@aol.org"], ["created_at", "2022-06-01 16:46:49.507280"], ["updated_at", "2022-06-01 16:46:49.507280"], ["age", 21], ["favorite_coin", "Bitcoin"], ["password_digest", "$2a$12$PGs3cN2l0WMSdVZpTECP0.GXvdTujDE2UpSfXfuBMo90/7DwEPio6"], ["session_token", "JABx8y4xeOLPLrbG8ChFZQ"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mChirp Create (2.4ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "has this app been blessed by lord elon yet?"], ["author_id", 1], ["created_at", "2022-06-01 16:46:49.521466"], ["updated_at", "2022-06-01 16:46:49.521466"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mChirp Create (0.5ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "we should name our app twinkle"], ["author_id", 3], ["created_at", "2022-06-01 16:46:49.526259"], ["updated_at", "2022-06-01 16:46:49.526259"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mChirp Create (0.2ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "@paulito please no"], ["author_id", 2], ["created_at", "2022-06-01 16:46:49.528404"], ["updated_at", "2022-06-01 16:46:49.528404"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mChirp Create (0.2ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Wish I could be a dog and hang out with dogs all day"], ["author_id", 7], ["created_at", "2022-06-01 16:46:49.530281"], ["updated_at", "2022-06-01 16:46:49.530281"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mChirp Create (0.2ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "@disneeland please no"], ["author_id", 5], ["created_at", "2022-06-01 16:46:49.532004"], ["updated_at", "2022-06-01 16:46:49.532004"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mChirp Create (0.2ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "I need a new phone number D:"], ["author_id", 4], ["created_at", "2022-06-01 16:46:49.533952"], ["updated_at", "2022-06-01 16:46:49.533952"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mChirp Create (0.2ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "San Francisco has the worst food in the country not even joking"], ["author_id", 8], ["created_at", "2022-06-01 16:46:49.535718"], ["updated_at", "2022-06-01 16:46:49.535718"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mChirp Create (0.2ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Captain's log, stardate 45944.1. We have still not found any good pizza in the gamma quadrant."], ["author_id", 1], ["created_at", "2022-06-01 16:46:49.537483"], ["updated_at", "2022-06-01 16:46:49.537483"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:33
+  [1m[36mChirp Create (0.2ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Thanks @michaelsoft, I'm addicted to super auto pets now"], ["author_id", 6], ["created_at", "2022-06-01 16:46:49.539268"], ["updated_at", "2022-06-01 16:46:49.539268"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mChirp Create (0.2ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Has anyone lost their glasses? We found someone's glasses in Torvalds."], ["author_id", 2], ["created_at", "2022-06-01 16:46:49.541164"], ["updated_at", "2022-06-01 16:46:49.541164"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:38
+  [1m[36mChirp Load (0.4ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:38
+  [1m[36mLike Create (0.7ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 1], ["chirp_id", 3], ["created_at", "2022-06-01 16:46:49.551409"], ["updated_at", "2022-06-01 16:46:49.551409"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mChirp Load (1.4ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mLike Create (0.2ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 1], ["chirp_id", 5], ["created_at", "2022-06-01 16:46:49.556733"], ["updated_at", "2022-06-01 16:46:49.556733"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:40
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mChirp Load (0.2ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mLike Create (0.2ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 1], ["chirp_id", 9], ["created_at", "2022-06-01 16:46:49.561194"], ["updated_at", "2022-06-01 16:46:49.561194"]]
+  ↳ db/seeds.rb:40
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:43
+  [1m[36mChirp Load (0.1ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:43
+  [1m[36mLike Create (0.5ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 3], ["chirp_id", 1], ["created_at", "2022-06-01 16:46:49.563653"], ["updated_at", "2022-06-01 16:46:49.563653"]]
+  ↳ db/seeds.rb:43
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mChirp Load (0.2ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 3], ["chirp_id", 10], ["created_at", "2022-06-01 16:46:49.566686"], ["updated_at", "2022-06-01 16:46:49.566686"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:48
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:48
+  [1m[36mChirp Load (0.2ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:48
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 4], ["chirp_id", 4], ["created_at", "2022-06-01 16:46:49.569571"], ["updated_at", "2022-06-01 16:46:49.569571"]]
+  ↳ db/seeds.rb:48
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:49
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:49
+  [1m[36mChirp Load (0.1ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:49
+  [1m[36mLike Create (0.2ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 4], ["chirp_id", 6], ["created_at", "2022-06-01 16:46:49.572157"], ["updated_at", "2022-06-01 16:46:49.572157"]]
+  ↳ db/seeds.rb:49
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mChirp Load (0.1ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 4], ["chirp_id", 8], ["created_at", "2022-06-01 16:46:49.574697"], ["updated_at", "2022-06-01 16:46:49.574697"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:51
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:51
+  [1m[36mChirp Load (0.1ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:51
+  [1m[36mLike Create (0.2ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 4], ["chirp_id", 10], ["created_at", "2022-06-01 16:46:49.577231"], ["updated_at", "2022-06-01 16:46:49.577231"]]
+  ↳ db/seeds.rb:51
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:54
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:54
+  [1m[36mChirp Load (0.1ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:54
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 2], ["chirp_id", 2], ["created_at", "2022-06-01 16:46:49.579732"], ["updated_at", "2022-06-01 16:46:49.579732"]]
+  ↳ db/seeds.rb:54
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:55
+  [1m[36mChirp Load (1.4ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:55
+  [1m[36mLike Create (0.4ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 2], ["chirp_id", 4], ["created_at", "2022-06-01 16:46:49.583600"], ["updated_at", "2022-06-01 16:46:49.583600"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:56
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:56
+  [1m[36mChirp Load (0.1ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:56
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 2], ["chirp_id", 5], ["created_at", "2022-06-01 16:46:49.586608"], ["updated_at", "2022-06-01 16:46:49.586608"]]
+  ↳ db/seeds.rb:56
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:56
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:57
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:57
+  [1m[36mChirp Load (0.1ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:57
+  [1m[36mLike Create (0.2ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 2], ["chirp_id", 6], ["created_at", "2022-06-01 16:46:49.589371"], ["updated_at", "2022-06-01 16:46:49.589371"]]
+  ↳ db/seeds.rb:57
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:57
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mChirp Load (0.1ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mLike Create (0.2ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 2], ["chirp_id", 10], ["created_at", "2022-06-01 16:46:49.592068"], ["updated_at", "2022-06-01 16:46:49.592068"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mChirp Load (0.1ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mLike Create (0.2ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 7], ["chirp_id", 6], ["created_at", "2022-06-01 16:46:49.594521"], ["updated_at", "2022-06-01 16:46:49.594521"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:62
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:62
+  [1m[36mChirp Load (0.1ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:62
+  [1m[36mLike Create (0.2ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 7], ["chirp_id", 10], ["created_at", "2022-06-01 16:46:49.597004"], ["updated_at", "2022-06-01 16:46:49.597004"]]
+  ↳ db/seeds.rb:62
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:62
+Started GET "/users" for ::1 at 2022-06-01 09:47:08 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mikemadsen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.2ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/index.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 563ms (Views: 551.4ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/session/new" for ::1 at 2022-06-01 09:47:14 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 59ms (Views: 57.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2022-06-01 09:47:28 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"username"=>"mikemike", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mikemike"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:45
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 23ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/session/new" for ::1 at 2022-06-01 09:47:28 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2022-06-01 09:48:45 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 53ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2022-06-01 09:48:51 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]", "email"=>"", "age"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:24
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Ap9w2VhwUQnhrVhvQfjSFg"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:24
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 738ms (Views: 17.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users" for ::1 at 2022-06-01 09:50:08 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/_user.html.erb (1.8ms)
+  Rendered users/_user.html.erb (0.4ms)
+  Rendered users/_user.html.erb (0.3ms)
+  Rendered users/_user.html.erb (0.3ms)
+  Rendered users/_user.html.erb (0.4ms)
+  Rendered users/_user.html.erb (0.3ms)
+  Rendered users/_user.html.erb (0.3ms)
+  Rendered users/_user.html.erb (0.3ms)
+  Rendered users/index.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 63ms (Views: 58.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/new" for ::1 at 2022-06-01 09:50:10 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 51ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2022-06-01 09:50:12 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]", "email"=>"", "age"=>""}}
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:24
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "DJMbaJeGfcuhSp9ZNZcqIQ"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:24
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 753ms (Views: 15.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/session/new" for ::1 at 2022-06-01 09:54:59 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 52ms (Views: 22.7ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/session/new" for ::1 at 2022-06-01 09:55:00 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 61ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2022-06-01 09:55:09 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"username"=>"michaelsoft", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "michaelsoft"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:45
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:61
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "michaelsoft"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "pizzaman@msn.ca"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "ulwkHqR1swkuC2RSN7_p4w"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "ulwkHqR1swkuC2RSN7_p4w"], ["updated_at", "2022-06-01 16:55:10.712366"], ["id", 1]]
+  ↳ app/models/user.rb:61
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:61
+Redirected to http://localhost:3000/users
+Completed 302 Found in 737ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/users" for ::1 at 2022-06-01 09:55:10 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ulwkHqR1swkuC2RSN7_p4w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/session" for ::1 at 2022-06-01 09:55:17 -0700
+Processing by SessionsController#destroy as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ulwkHqR1swkuC2RSN7_p4w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:61
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "michaelsoft"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "pizzaman@msn.ca"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "bBvkyTlR7sHMOHZSMAuP2A"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "bBvkyTlR7sHMOHZSMAuP2A"], ["updated_at", "2022-06-01 16:55:17.441826"], ["id", 1]]
+  ↳ app/models/user.rb:61
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:61
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 24ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/session/new" for ::1 at 2022-06-01 09:55:17 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 46ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2022-06-01 09:55:34 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"username"=>"michaelsoft", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "michaelsoft"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:45
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:61
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "michaelsoft"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "pizzaman@msn.ca"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "zcK7HPMqKfSdZyjl-SPD5A"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "zcK7HPMqKfSdZyjl-SPD5A"], ["updated_at", "2022-06-01 16:55:35.335339"], ["id", 1]]
+  ↳ app/models/user.rb:61
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:61
+Redirected to http://localhost:3000/users
+Completed 302 Found in 744ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/users" for ::1 at 2022-06-01 09:55:35 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zcK7HPMqKfSdZyjl-SPD5A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.2ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 32ms (Views: 28.1ms | ActiveRecord: 3.1ms)
+
+
+Started DELETE "/session" for ::1 at 2022-06-01 09:55:40 -0700
+Processing by SessionsController#destroy as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zcK7HPMqKfSdZyjl-SPD5A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:61
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "michaelsoft"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "pizzaman@msn.ca"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "RDXs-lR9vfTWYniGm_6Aqg"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[36mUser Update (1.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "RDXs-lR9vfTWYniGm_6Aqg"], ["updated_at", "2022-06-01 16:55:40.658685"], ["id", 1]]
+  ↳ app/models/user.rb:61
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:61
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 30ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/session/new" for ::1 at 2022-06-01 09:55:40 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2022-06-01 10:09:49 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 59ms (Views: 24.4ms | ActiveRecord: 16.5ms)
+
+
+Started POST "/session" for ::1 at 2022-06-01 10:09:57 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"username"=>"michaelsoft", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/0cef81b18aac690f/variables" for ::1 at 2022-06-01 10:09:58 -0700
+Started GET "/session/new" for ::1 at 2022-06-01 10:12:45 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2022-06-01 10:12:47 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 58ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2022-06-01 10:12:53 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"jkvhVG//+ALZjhzrBMaVU/tPPTyyjIOotrF/PE49d3AtpX5z1DJR53lbN05J0SOlIiFw8elUpL7IRiLVwBECXg==", "user"=>{"username"=>"michaelsoft", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "michaelsoft"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:45
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:61
+  [1m[36mUser Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "michaelsoft"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "pizzaman@msn.ca"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "2rqMGGc0g1_qph-XVy7mbw"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[36mUser Update (7.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "2rqMGGc0g1_qph-XVy7mbw"], ["updated_at", "2022-06-01 17:12:53.769854"], ["id", 1]]
+  ↳ app/models/user.rb:61
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:61
+Redirected to http://localhost:3000/users
+Completed 302 Found in 761ms (ActiveRecord: 14.6ms)
+
+
+Started GET "/users" for ::1 at 2022-06-01 10:12:53 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2rqMGGc0g1_qph-XVy7mbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/session" for ::1 at 2022-06-01 10:13:05 -0700
+Processing by SessionsController#destroy as HTML
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/04c22610d27d07d4/variables" for ::1 at 2022-06-01 10:13:05 -0700
+Started GET "/session/new" for ::1 at 2022-06-01 12:03:59 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mikemadsen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2rqMGGc0g1_qph-XVy7mbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Redirected to http://localhost:3000/users
+Filter chain halted as :require_logged_out rendered or redirected
+Completed 302 Found in 24ms (ActiveRecord: 9.7ms)
+
+
+Started GET "/users" for ::1 at 2022-06-01 12:03:59 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2rqMGGc0g1_qph-XVy7mbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/_user.html.erb (0.2ms)
+  Rendered users/_user.html.erb (0.2ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 180ms (Views: 178.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/3/edit" for ::1 at 2022-06-01 12:04:05 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.8ms)
+  Rendered users/edit.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 55ms (Views: 50.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2022-06-01 12:04:45 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2rqMGGc0g1_qph-XVy7mbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/_user.html.erb (3.2ms)
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/_user.html.erb (0.4ms)
+  Rendered users/_user.html.erb (0.4ms)
+  Rendered users/_user.html.erb (0.4ms)
+  Rendered users/_user.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 72ms (Views: 69.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users" for ::1 at 2022-06-01 12:04:46 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2rqMGGc0g1_qph-XVy7mbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/_user.html.erb (2.5ms)
+  Rendered users/_user.html.erb (0.9ms)
+  Rendered users/_user.html.erb (0.8ms)
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/_user.html.erb (0.4ms)
+  Rendered users/_user.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 68ms (Views: 65.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/5/edit" for ::1 at 2022-06-01 12:04:47 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.8ms)
+  Rendered users/edit.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 79ms (Views: 75.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/5/edit" for ::1 at 2022-06-01 12:05:14 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (241.0ms)
+  Rendered users/edit.html.erb within layouts/application (244.9ms)
+Completed 500 Internal Server Error in 261ms (ActiveRecord: 0.6ms)
+
+
+
+NameError - undefined local variable or method `user' for #<#<Class:0x0000000132adf330>:0x0000000103065460>
+Did you mean?  @user:
+  app/views/users/_form.html.erb:5:in `_app_views_users__form_html_erb__2226601124582637986_2172827220'
+  app/views/users/edit.html.erb:2:in `_app_views_users_edit_html_erb__2411238770418215062_2172854420'
+  app/controllers/users_controller.rb:35:in `edit'
+
+Started POST "/__better_errors/592ebb9746341c88/variables" for ::1 at 2022-06-01 12:05:14 -0700
+Started GET "/users/5/edit" for ::1 at 2022-06-01 12:05:14 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (364.3ms)
+  Rendered users/edit.html.erb within layouts/application (365.5ms)
+Completed 500 Internal Server Error in 369ms (ActiveRecord: 0.3ms)
+
+
+
+NameError - undefined local variable or method `user' for #<#<Class:0x0000000132adf330>:0x0000000132fd1500>
+Did you mean?  @user:
+  app/views/users/_form.html.erb:5:in `_app_views_users__form_html_erb__2226601124582637986_2575275660'
+  app/views/users/edit.html.erb:2:in `_app_views_users_edit_html_erb__2411238770418215062_2575204500'
+  app/controllers/users_controller.rb:35:in `edit'
+
+Started POST "/__better_errors/57ef4d4f1a7366db/variables" for ::1 at 2022-06-01 12:05:15 -0700
+Started GET "/session/new" for ::1 at 2022-06-01 12:05:32 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2rqMGGc0g1_qph-XVy7mbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Redirected to http://localhost:3000/users
+Filter chain halted as :require_logged_out rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for ::1 at 2022-06-01 12:05:32 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2rqMGGc0g1_qph-XVy7mbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/_user.html.erb (2.5ms)
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/_user.html.erb (0.3ms)
+  Rendered users/_user.html.erb (0.2ms)
+  Rendered users/_user.html.erb (0.3ms)
+  Rendered users/_user.html.erb (0.3ms)
+  Rendered users/_user.html.erb (0.3ms)
+  Rendered users/_user.html.erb (0.2ms)
+  Rendered users/index.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 62ms (Views: 58.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/4/edit" for ::1 at 2022-06-01 12:05:34 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.9ms)
+  Rendered users/edit.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 66ms (Views: 62.8ms | ActiveRecord: 0.5ms)
+
+
