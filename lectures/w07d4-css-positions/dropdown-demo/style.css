@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #e3f2fd;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  color: teal;
+  background-color: aliceblue;
+  position: fixed;
+  width: 100%;
+}
+
+main {
+  height: 1500px;
+  background-color: #e3f2fd;
+}
+
+footer {
+  background-color: pink;
+  height: 200px;
+}
+
+.menu {
+  width: 500px;
+  cursor: pointer;
+}
+
+.menu-items {
+  width: inherit;
+  font-size: 40px;
+  display: none;
+  position: relative;
+  top: 100px;
+  /* background */
+}
+
+.menu:hover .menu-items {
+  display: block;
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: #fff;
+}
