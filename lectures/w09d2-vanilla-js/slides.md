@@ -379,30 +379,6 @@ Note:
 
 ---
 
-## jQuery?
-
-* **A JS library that abstracts much of the DOM manipulation for us**
-  * Low-level => fast
-  * Rapid Development
-    * concise: "write less, do more"
-    * Simplifies "complicated" AJAX calls and DOM manipulation
-  * Multi-browser cross compatible
-  * Most popular JavaScript library...for now
-
-* **A solid understanding of Vanilla JS and Dom Manipulation means JQuery may not be necessary. Always ask yourself, ["Do I need JQuery?](https://blog.garstasio.com/you-dont-need-jquery/why-not/) or is Vanilla JS better for this application?"**
-
----
-
-## Closing thoughts - Single Page App (SPA)
-
-* A web app that interacts with the user by dynamically rewriting the current page rather than loading entire new pages from a server.
-
-* The appropriate resources are dynamically loaded and added to the page as necessary, usually in response to user actions.
-
-* [When to use Vanilla JavaScript vs jQuery](https://www.geeksforgeeks.org/when-to-use-vanilla-javascript-vs-jquery/)
-
----
-
 # Questions
 
 * [Cohort Resources](https://github.com/appacademy/cohort-resources/blob/master/study_guides/javascript/vanilla_javascript_cheatsheet.md)
