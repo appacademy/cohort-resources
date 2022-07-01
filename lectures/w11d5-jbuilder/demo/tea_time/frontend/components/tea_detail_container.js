@@ -4,6 +4,7 @@ import { requestTea } from '../actions/tea_actions';
 import { selectTransactionsByTea } from '../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
+    // debugger
     return {
         tea: state.teas[ownProps.teaId],
         transactions: selectTransactionsByTea(state, ownProps.teaId)

@@ -18,7 +18,10 @@ class TeaForm extends React.Component {
       .then(() => this.setState({ flavor: '', amount: '', description: '' }));
   }
   
+  // dry function for updating fields in a form
   update(field) {
+    // field === "flavor"
+    // ["flavor"]:
     return e => this.setState({ [field]: e.currentTarget.value });
   }
   
@@ -32,7 +35,7 @@ class TeaForm extends React.Component {
             <input 
               type="text"
               value={this.state.flavor}
-              onChange={this.update('flavor')}
+              onChange={e => this.setState({ "flavor": e.currentTarget.value })}
             />
           </label>
           <label>

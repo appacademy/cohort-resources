@@ -8,9 +8,12 @@ const teasReducer = (state = {}, action) => {
       nextState[action.tea.id] = action.tea;
       return nextState;
     case RECEIVE_TEAS:
-      action.teas.forEach(tea => nextState[tea.id] = tea);
-      return nextState;
+      // action.teas.forEach(tea => nextState[tea.id] = tea);
+      // return nextState;
+      // return action.teas
+      return Object.assign(nextState, action.teas)
     case RECEIVE_TEA_DETAIL:
+      // debugger
       nextState[action.payload.tea.id] = action.payload.tea;
       return nextState;
     default:

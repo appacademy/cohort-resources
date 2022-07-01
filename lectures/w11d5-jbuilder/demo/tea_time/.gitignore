@@ -12,3 +12,5 @@ node_modules/
 # Ignore bundle
 bundle.js
 bundle.js.map
+
+config/master.key

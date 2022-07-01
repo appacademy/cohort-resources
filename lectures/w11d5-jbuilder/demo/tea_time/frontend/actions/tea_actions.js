@@ -2,6 +2,7 @@ import * as TeaApiUtil from '../util/tea_api_util';
 
 export const RECEIVE_TEA = 'RECEIVE_TEA';
 export const RECEIVE_TEAS = 'RECEIVE_TEAS';
+export const RECEIVE_TEA_DETAIL = 'RECEIVE_TEA_DETAIL';
 
 // static action
 export const receiveGreenTea = {
