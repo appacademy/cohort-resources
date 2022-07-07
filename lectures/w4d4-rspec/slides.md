@@ -34,12 +34,12 @@
 
 # What is TDD?
 
-![tdd](demo/assets/tdd.png)
+![tdd](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/master/ruby/w4d4-rspec/tdd.png?token=GHSAT0AAAAAABWJ4G3R6YMXJQFBQOS7WN5GYWHBWFQ)
 
 ---
 
 # What do we test?
-![testing-pyramid](demo/assets/testing_pyramid.png)
+![testing-pyramid](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/master/ruby/w4d4-rspec/testing_pyramid.png?token=GHSAT0AAAAAABWJ4G3QLSWBGLASDK5GBAMSYWHBWVA)
 
 ---
 
