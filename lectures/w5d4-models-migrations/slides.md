@@ -298,18 +298,18 @@ Note:
   - It is only has_one if you want to return one ActiveRecord object, instead of an array.
 ---
 
-## [Kahoot](https://create.kahoot.it/details/4c14ff91-05fc-4344-9e01-78be04363941)
+## [Kahoot](https://play.kahoot.it/v2/?quizId=4c14ff91-05fc-4344-9e01-78be04363941)
 
 ---
 
 ## Terminal Commands Recap
-- `rails new {project_name} -d postgresql`
+- `rails new {project_name} -d postgresql --minimal -T -G`
 - `bundle exec rails db:create`
 - `bundle exec rails g migration Create{TableName}`
 - `bundle exec rails db:migrate`
 - `bundle exec rails db:migrate:status`
 - `bundle exec rails g model {ModelName}`
-  - (creates migration file and model file)
+- (creates migration file and model file)
 
 ---
 
