@@ -37,6 +37,9 @@ class User < ApplicationRecord
     has_many :chirp_likers,
         through: :chirp_likes,
         source: :liker
+
+
+
  # ----------------------------------------------------------------------
 
 #Find all users between the ages of 10 and 20 inclusive. Show their username, and political affiliation.
