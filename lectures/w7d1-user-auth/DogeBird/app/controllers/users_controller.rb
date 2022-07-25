@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
 
+    before_action :require_logged_out, only: [:new, :create]
+    # we dont want users who are logged in to try to sign up again
+    before_action :require_logged_in, only: [:index, :edit, :update, :show, :destroy]
+    # we only want users who are logged in to access the main part of our app
+
     def index
         @users = User.all
         # render json: @users 
@@ -64,7 +69,7 @@ class UsersController < ApplicationController
 
     private 
     def user_params 
-        params.require(:user).permit(:username, :age, :email, :favorite_coin)
+        params.require(:user).permit(:username, :age, :email, :favorite_coin, :password)
     end 
     
 end 

@@ -2,18 +2,88 @@
 #
 # Table name: users
 #
-#  id            :bigint           not null, primary key
-#  username      :string           not null
-#  email         :string           not null
-#  created_at    :datetime         not null
-#  updated_at    :datetime         not null
-#  age           :integer          not null
-#  favorite_coin :string           not null
+#  id              :bigint           not null, primary key
+#  username        :string           not null
+#  email           :string           not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  age             :integer          not null
+#  favorite_coin   :string           not null
+#  password_digest :string           not null
+#  session_token   :string           not null
 #
 class User < ApplicationRecord
-    validates :age, :favorite_coin, presence: true
-    validates :username, :email, uniqueness: true, presence: true
+    validates :age, :favorite_coin, :password_digest, presence: true
+    validates :username, :email, :session_token, uniqueness: true, presence: true
+    validates :password, length: {minimum: 6}, allow_nil: true
+    # We want to validate that, if a password is provided, it has a length of at least 6
+    # We want to allow nil since we won't always include password in our params (example: update action)
+    # This validation requires a @password instance variable to be set as well as an attr_reader
 
+    attr_reader :password #needed to be able to do password validation
+    before_validation :ensure_session_token #runs method before validation
+
+    def self.find_by_credentials(username, password)
+        # find a user by their username
+        user = User.find_by(username: username)
+        # check if the user exists (username is in db) AND the password is correct (using instance method)
+        if user && user.is_password(password) # could also name the method check_password?
+            user
+        else
+            # if username isn't found, or password is incorrect, return nil
+            nil
+        end
+    end
+
+    def password=(password)
+        @password = password
+        self.password_digest = BCrypt::Password.create(password)
+    end
+
+    def is_password(password)
+        # `self.password_digest` is a string from the db. we can turn it back into a BCrypt Password by passing it as an argument of Bcrypt::Password.new()
+        # Bcrypt::Password.new() takes an existing digest and returns a Bcrypt Password instance
+        bcrypt_obj = BCrypt::Password.new(self.password_digest)
+        # It looks like a string, but check out its `.class` method!
+        # We can call `.is_password?` on the instance, passing a string of our submitted password
+        # Bcrypt will be able to tell if the digest was generated from that password, and returns a boolean
+        bcrypt_obj.is_password?(password)
+    end
+
+    def reset_session_token
+        # We want to call this method any time we're: 
+        # logging in a user - to ensure they aren't left logged in elsewhere
+        # logging out a user - to ensure their session_token is no good once they log out
+        # self.session_token = SecureRandom::urlsafe_base64
+        self.session_token = generate_unique_session_token
+        # make sure the new token persists!
+        # use save with a ! to help debug
+        self.save!
+        # return the new token for convenience
+        self.session_token
+    end
+
+    
+    def ensure_session_token
+        # self.session_token ||= SecureRandom::urlsafe_base64 
+        self.session_token ||= generate_unique_session_token
+        # since this method is run everytime we validate if we use before_validation, we only want to assign session_token
+        # if it isn't already provided. Otherwise, we'll reset it when we update as well
+        # and log out our user!
+        # SecureRandom is a number generating library
+        # urlsafe_base64 generates a random string for us that is urlsafe and base64 encoded.
+    end
+    
+    
+    def generate_unique_session_token
+        #ensures that the session_token does not match any existing user's session token
+        token = SecureRandom::urlsafe_base64
+        while User.exists?(session_token: token)
+            token = SecureRandom::urlsafe_base64
+        end
+        token
+    end
+    
     has_many :chirps,
         primary_key: :id,
         foreign_key: :author_id,

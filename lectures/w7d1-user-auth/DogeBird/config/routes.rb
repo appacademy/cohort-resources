@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   # get '/users/new', to: 'users#new'
   # get '/users/:id/edit', to: 'users#edit'
 
+  resource :session, only: [:new, :create, :destroy]
+
 
 
 end

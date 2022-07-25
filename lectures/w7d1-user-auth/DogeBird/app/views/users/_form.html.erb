@@ -1,7 +1,7 @@
 <% if action == :new %>
-    <% title_text = 'Create User!' %>
+    <% title_text = 'Sign up!' %>
     <% action_url = users_url %>
-    <% button_text = 'Create user!' %>
+    <% button_text = 'Sign up!' %>
 <% else %>
     <% title_text = 'Edit User!' %>
     <% action_url = user_url(user) %>
@@ -23,6 +23,18 @@
         value="<%= @user.username %>"
     />
     <br>
+
+    <% if action == :new %>
+      <label for="password">Password:</label>
+        <input
+            id="password"
+            type="password"
+            name="user[password]" 
+            value=""
+        />
+    <br>
+    <% end %>
+    
     <label>Email:
         <input
             type="text"
