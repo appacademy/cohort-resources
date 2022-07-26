@@ -384,3 +384,10 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 44ms (Views: 39.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2022-07-26 10:41:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 154ms (Views: 148.2ms | ActiveRecord: 0.0ms)
+
+
