@@ -1,0 +1,7 @@
+<br>
+<a href="<%= chirps_url %>">Chirps Index</a>
+
+<h1>This is all of our users!</h1>
+<% @users.each do |user| %>
+    <%= render 'user', user: user, action: :index %>
+<% end %>

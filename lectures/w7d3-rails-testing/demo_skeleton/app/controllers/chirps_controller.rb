@@ -1,5 +1,5 @@
 class ChirpsController < ApplicationController
-    before_action :require_logged_in
+    # before_action :require_logged_in
 
     def index
         if params[:user_id]
@@ -20,7 +20,7 @@ class ChirpsController < ApplicationController
         if @chirp.save
             redirect_to user_url(@chirp.author)
         else
-            render json: @chirp.errors.full_messages, status: 404
+            render json: @chirp.errors.full_messages, status: 422
         end
     end
 
