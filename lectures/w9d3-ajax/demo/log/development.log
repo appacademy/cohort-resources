@@ -305,3 +305,1137 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 4ms (Views: 3.5ms | Allocations: 2250)
 
 
+Started GET "/gif/table" for ::1 at 2022-08-10 08:30:58 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/gif/table"):
+  
+Started GET "/" for ::1 at 2022-08-10 08:32:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 26)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 5030)
+Completed 200 OK in 8ms (Views: 7.7ms | Allocations: 5621)
+
+
+Started GET "/gifs/test" for ::1 at 2022-08-10 08:32:37 -0700
+Processing by GifsController#show as HTML
+  Parameters: {"title"=>"test"}
+  [1m[36mGif Load (1.0ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:12:in `show'
+Completed 422 Unprocessable Entity in 68ms (Views: 0.3ms | ActiveRecord: 26.6ms | Allocations: 8148)
+
+
+Started GET "/" for ::1 at 2022-08-10 08:37:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.2ms | Allocations: 20)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 2208)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 2470)
+
+
+Started GET "/" for ::1 at 2022-08-10 08:41:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 4747)
+Completed 200 OK in 25ms (Views: 23.8ms | Allocations: 4976)
+
+
+Started GET "/" for ::1 at 2022-08-10 08:41:52 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 4668)
+Completed 200 OK in 19ms (Views: 18.9ms | Allocations: 4897)
+
+
+Started GET "/" for ::1 at 2022-08-10 08:41:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 4662)
+Completed 200 OK in 23ms (Views: 22.1ms | Allocations: 4891)
+
+
+Started GET "/" for ::1 at 2022-08-10 08:42:02 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 4671)
+Completed 200 OK in 18ms (Views: 17.4ms | Allocations: 4900)
+
+
+Started GET "/" for ::1 at 2022-08-10 08:42:07 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2067)
+Completed 200 OK in 6ms (Views: 5.9ms | Allocations: 2296)
+
+
+Started GET "/" for ::1 at 2022-08-10 08:42:13 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 4677)
+Completed 200 OK in 16ms (Views: 16.0ms | Allocations: 4906)
+
+
+Started GET "/" for ::1 at 2022-08-10 08:42:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 4686)
+Completed 200 OK in 27ms (Views: 25.8ms | Allocations: 4915)
+
+
+Started GET "/" for ::1 at 2022-08-10 08:42:22 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2027)
+Completed 200 OK in 4ms (Views: 4.1ms | Allocations: 2256)
+
+
+Started GET "/" for ::1 at 2022-08-10 08:42:26 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 2058)
+Completed 200 OK in 9ms (Views: 8.5ms | Allocations: 2287)
+
+
+Started GET "/" for ::1 at 2022-08-10 08:43:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 2030)
+Completed 200 OK in 9ms (Views: 8.6ms | Allocations: 2259)
+
+
+Started GET "/" for ::1 at 2022-08-10 08:43:26 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2027)
+Completed 200 OK in 5ms (Views: 4.2ms | Allocations: 2256)
+
+
+Started GET "/" for ::1 at 2022-08-10 08:43:26 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2051)
+Completed 200 OK in 4ms (Views: 3.7ms | Allocations: 2280)
+
+
+Started GET "/" for ::1 at 2022-08-10 08:43:27 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2015)
+Completed 200 OK in 4ms (Views: 4.1ms | Allocations: 2244)
+
+
+Started GET "/" for ::1 at 2022-08-10 08:43:27 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2018)
+Completed 200 OK in 4ms (Views: 4.0ms | Allocations: 2247)
+
+
+Started GET "/" for ::1 at 2022-08-10 08:43:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 2000)
+Completed 200 OK in 4ms (Views: 4.0ms | Allocations: 2230)
+
+
+Started GET "/" for ::1 at 2022-08-10 08:43:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2009)
+Completed 200 OK in 5ms (Views: 4.9ms | Allocations: 2238)
+
+
+Started GET "/" for ::1 at 2022-08-10 08:43:30 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2039)
+Completed 200 OK in 5ms (Views: 4.7ms | Allocations: 2268)
+
+
+Started GET "/" for ::1 at 2022-08-10 08:43:30 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2024)
+Completed 200 OK in 5ms (Views: 4.4ms | Allocations: 2253)
+
+
+Started GET "/" for ::1 at 2022-08-10 08:43:31 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2012)
+Completed 200 OK in 7ms (Views: 6.5ms | Allocations: 2241)
+
+
+Started GET "/" for ::1 at 2022-08-10 08:46:50 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 2052)
+Completed 200 OK in 15ms (Views: 14.2ms | Allocations: 2281)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application.js-0464bd33a03b57d71abe48e4527731c6f280189481b30de5098b0e8a8e7315a2.map"):
+  
+Started GET "/" for ::1 at 2022-08-10 08:46:55 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2020)
+Completed 200 OK in 4ms (Views: 3.7ms | Allocations: 2251)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application.js-0464bd33a03b57d71abe48e4527731c6f280189481b30de5098b0e8a8e7315a2.map"):
+  
+Started GET "/" for ::1 at 2022-08-10 08:48:30 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 4667)
+Completed 200 OK in 23ms (Views: 22.0ms | Allocations: 4897)
+
+
+Started GET "/" for ::1 at 2022-08-10 08:48:48 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 2061)
+Completed 200 OK in 11ms (Views: 10.1ms | Allocations: 2290)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application.js-987cd37073242772680b2a80e4626fac3590f875f04779e9fb4c5bc4f69b948a.map"):
+  
+Started GET "/" for ::1 at 2022-08-10 08:49:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 4674)
+Completed 200 OK in 24ms (Views: 23.9ms | Allocations: 4903)
+
+
+Started GET "/" for ::1 at 2022-08-10 08:50:49 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 4668)
+Completed 200 OK in 20ms (Views: 19.1ms | Allocations: 4897)
+
+
+Started GET "/" for ::1 at 2022-08-10 09:43:47 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.6ms | Allocations: 441)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 19444)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 22066)
+
+
+Started GET "/" for ::1 at 2022-08-10 09:43:54 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.3ms | Allocations: 20)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2124)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 2418)
+
+
+Started GET "/" for ::1 at 2022-08-10 09:46:01 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.3ms | Allocations: 184)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 2673)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 3575)
+
+
+Started GET "/" for ::1 at 2022-08-10 09:46:05 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2027)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 2273)
+
+
+Started GET "/" for ::1 at 2022-08-10 09:50:13 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 2016)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 2254)
+
+
+Started GET "/" for ::1 at 2022-08-10 09:55:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 32.3ms | Allocations: 4747)
+Completed 200 OK in 34ms (Views: 33.5ms | Allocations: 4976)
+
+
+Started GET "/" for ::1 at 2022-08-10 09:59:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 4664)
+Completed 200 OK in 27ms (Views: 26.1ms | Allocations: 4894)
+
+
+Started GET "/" for ::1 at 2022-08-10 10:04:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 4655)
+Completed 200 OK in 22ms (Views: 20.7ms | Allocations: 4884)
+
+
+Started GET "/" for ::1 at 2022-08-10 10:12:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 4674)
+Completed 200 OK in 24ms (Views: 16.2ms | Allocations: 4903)
+
+
+Started GET "/" for ::1 at 2022-08-10 10:12:24 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2030)
+Completed 200 OK in 5ms (Views: 5.0ms | Allocations: 2259)
+
+
+Started POST "/gifs" for ::1 at 2022-08-10 10:12:30 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"title"=>"pretend", "url"=>"www.pretendurl.com", "gif"=>{"title"=>"pretend", "url"=>"www.pretendurl.com"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 14.1ms | Allocations: 1069)
+
+
+
+ActionController::InvalidAuthenticityToken - Can't verify CSRF token authenticity.:
+
+Started GET "/" for ::1 at 2022-08-10 10:16:22 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.2ms | Allocations: 20)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 4923)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.0ms | Allocations: 5203)
+
+
+Started GET "/" for ::1 at 2022-08-10 10:16:50 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 4678)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.0ms | Allocations: 4910)
+
+
+Started GET "/" for ::1 at 2022-08-10 10:17:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 4663)
+Completed 200 OK in 28ms (Views: 26.9ms | Allocations: 4892)
+
+
+Started GET "/" for ::1 at 2022-08-10 10:18:03 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 4663)
+Completed 200 OK in 20ms (Views: 19.6ms | Allocations: 4892)
+
+
+Started POST "/gifs" for ::1 at 2022-08-10 10:18:08 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"title"=>"pretend", "url"=>"www.pretendurl.com", "gif"=>{"title"=>"pretend", "url"=>"www.pretendurl.com"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:4:in `create'
+  [1m[36mGif Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "pretend"], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:4:in `create'
+  [1m[36mGif Create (2.4ms)[0m  [1m[32mINSERT INTO "gifs" ("title", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "pretend"], ["url", "www.pretendurl.com"], ["created_at", "2022-08-10 17:18:08.405805"], ["updated_at", "2022-08-10 17:18:08.405805"]]
+  ↳ app/controllers/gifs_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:4:in `create'
+Completed 200 OK in 92ms (Views: 0.4ms | ActiveRecord: 20.5ms | Allocations: 14439)
+
+
+Started GET "/" for ::1 at 2022-08-10 10:19:51 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.3ms | Allocations: 20)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 4922)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.0ms | Allocations: 5182)
+
+
+Started GET "/gifs/pretend" for ::1 at 2022-08-10 10:20:00 -0700
+Processing by GifsController#show as */*
+  Parameters: {"title"=>"pretend"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "pretend"], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:12:in `show'
+Completed 200 OK in 8ms (Views: 1.0ms | ActiveRecord: 0.7ms | Allocations: 1107)
+
+
+Started GET "/" for ::1 at 2022-08-10 10:22:08 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 4678)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms | Allocations: 4910)
+
+
+Started GET "/" for ::1 at 2022-08-10 10:36:13 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 2047)
+Completed 200 OK in 14ms (Views: 13.1ms | Allocations: 2282)
+
+
+Started GET "/gifs/pretend" for ::1 at 2022-08-10 10:36:15 -0700
+Processing by GifsController#show as */*
+  Parameters: {"title"=>"pretend"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "pretend"], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:12:in `show'
+Completed 200 OK in 29ms (Views: 0.9ms | ActiveRecord: 12.0ms | Allocations: 3675)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:06:52 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.4ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 2067)
+Completed 200 OK in 18ms (Views: 17.1ms | Allocations: 2296)
+
+
+Started GET "/gifs/pretend" for ::1 at 2022-08-10 11:06:55 -0700
+Processing by GifsController#show as */*
+  Parameters: {"title"=>"pretend"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "pretend"], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:12:in `show'
+Completed 200 OK in 23ms (Views: 0.8ms | ActiveRecord: 8.1ms | Allocations: 3563)
+
+
+Started GET "/gifs/idontexist" for ::1 at 2022-08-10 11:07:24 -0700
+Processing by GifsController#show as */*
+  Parameters: {"title"=>"idontexist"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "idontexist"], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:12:in `show'
+Completed 422 Unprocessable Entity in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 616)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:12:03 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 52.7ms | Allocations: 4682)
+Completed 200 OK in 55ms (Views: 54.2ms | ActiveRecord: 0.0ms | Allocations: 4914)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:12:03 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2030)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 2262)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:12:03 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2024)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 2256)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:12:03 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2032)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 2266)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:15:09 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 49.1ms | Allocations: 4672)
+Completed 200 OK in 54ms (Views: 52.3ms | Allocations: 4901)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:15:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2018)
+Completed 200 OK in 6ms (Views: 5.2ms | Allocations: 2247)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:15:15 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2033)
+Completed 200 OK in 4ms (Views: 4.0ms | Allocations: 2262)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:15:15 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2018)
+Completed 200 OK in 5ms (Views: 4.0ms | Allocations: 2248)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:15:31 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 40.0ms | Allocations: 4686)
+Completed 200 OK in 41ms (Views: 40.6ms | Allocations: 4915)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:19:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 41.1ms | Allocations: 4688)
+Completed 200 OK in 43ms (Views: 42.2ms | Allocations: 4917)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:20:56 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 37.5ms | Allocations: 4681)
+Completed 200 OK in 40ms (Views: 39.1ms | Allocations: 4910)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:23:23 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.3ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 4675)
+Completed 200 OK in 29ms (Views: 28.1ms | Allocations: 4904)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:24:27 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 4699)
+Completed 200 OK in 21ms (Views: 20.2ms | Allocations: 4928)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:25:24 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 4678)
+Completed 200 OK in 22ms (Views: 21.4ms | Allocations: 4907)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:25:53 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.3ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 4675)
+Completed 200 OK in 23ms (Views: 21.0ms | Allocations: 4904)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:26:10 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 4654)
+Completed 200 OK in 19ms (Views: 19.0ms | Allocations: 4883)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:29:56 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 4675)
+Completed 200 OK in 30ms (Views: 29.5ms | Allocations: 4904)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:30:16 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 4675)
+Completed 200 OK in 21ms (Views: 20.5ms | Allocations: 4904)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:30:19 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2027)
+Completed 200 OK in 5ms (Views: 4.7ms | Allocations: 2256)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:30:19 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2015)
+Completed 200 OK in 4ms (Views: 3.8ms | Allocations: 2244)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:30:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2015)
+Completed 200 OK in 4ms (Views: 3.4ms | Allocations: 2244)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:30:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 2003)
+Completed 200 OK in 8ms (Views: 7.3ms | Allocations: 2232)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:30:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2009)
+Completed 200 OK in 7ms (Views: 6.5ms | Allocations: 2238)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:30:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2021)
+Completed 200 OK in 5ms (Views: 4.9ms | Allocations: 2250)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:30:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 2018)
+Completed 200 OK in 8ms (Views: 7.7ms | Allocations: 2247)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:30:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2021)
+Completed 200 OK in 5ms (Views: 4.3ms | Allocations: 2250)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:30:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2015)
+Completed 200 OK in 5ms (Views: 4.7ms | Allocations: 2244)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:43:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 2058)
+Completed 200 OK in 18ms (Views: 17.2ms | Allocations: 2287)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:46:43 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.3ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 4660)
+Completed 200 OK in 22ms (Views: 21.6ms | Allocations: 4889)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:46:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2009)
+Completed 200 OK in 5ms (Views: 4.3ms | Allocations: 2238)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:46:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2048)
+Completed 200 OK in 4ms (Views: 3.8ms | Allocations: 2277)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:46:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2026)
+Completed 200 OK in 18ms (Views: 17.8ms | Allocations: 2256)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:46:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.4ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2024)
+Completed 200 OK in 6ms (Views: 5.9ms | Allocations: 2254)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:46:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2006)
+Completed 200 OK in 6ms (Views: 5.7ms | Allocations: 2235)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:46:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2009)
+Completed 200 OK in 5ms (Views: 5.2ms | Allocations: 2238)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:46:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2006)
+Completed 200 OK in 4ms (Views: 3.8ms | Allocations: 2235)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:46:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2036)
+Completed 200 OK in 4ms (Views: 3.7ms | Allocations: 2265)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:46:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2023)
+Completed 200 OK in 6ms (Views: 4.8ms | Allocations: 2252)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:54:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 4663)
+Completed 200 OK in 28ms (Views: 21.4ms | Allocations: 4892)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:54:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2024)
+Completed 200 OK in 5ms (Views: 5.0ms | Allocations: 2254)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:54:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2027)
+Completed 200 OK in 6ms (Views: 6.1ms | Allocations: 2256)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:54:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2021)
+Completed 200 OK in 7ms (Views: 6.2ms | Allocations: 2250)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:54:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2033)
+Completed 200 OK in 7ms (Views: 6.4ms | Allocations: 2262)
+
+
+Started GET "/" for ::1 at 2022-08-10 11:54:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2033)
+Completed 200 OK in 7ms (Views: 6.1ms | Allocations: 2262)
+
+
+Started GET "/gifs/pretend" for ::1 at 2022-08-10 11:54:56 -0700
+Processing by GifsController#show as */*
+  Parameters: {"title"=>"pretend"}
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "pretend"], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:12:in `show'
+Completed 200 OK in 33ms (Views: 0.9ms | ActiveRecord: 13.6ms | Allocations: 3617)
+
+
+Started POST "/gifs" for ::1 at 2022-08-10 11:55:36 -0700
+Error occurred while parsing request parameters.
+Contents:
+
+[object Object]
+Processing by GifsController#create as JSON
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 1743)
+
+
+
+ActionDispatch::Http::Parameters::ParseError - Error occurred while parsing request parameters:
+
+Started GET "/" for ::1 at 2022-08-10 11:55:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 4657)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms | Allocations: 4889)
+
+
+Started POST "/gifs" for ::1 at 2022-08-10 11:56:01 -0700
+Processing by GifsController#create as JSON
+  Parameters: {"title"=>"new_title", "url"=>"www.newpretendurl.com", "gif"=>{"title"=>"new_title", "url"=>"www.newpretendurl.com"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:4:in `create'
+  [1m[36mGif Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "new_title"], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:4:in `create'
+  [1m[36mGif Create (2.3ms)[0m  [1m[32mINSERT INTO "gifs" ("title", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "new_title"], ["url", "www.newpretendurl.com"], ["created_at", "2022-08-10 18:56:01.368167"], ["updated_at", "2022-08-10 18:56:01.368167"]]
+  ↳ app/controllers/gifs_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:4:in `create'
+Completed 200 OK in 17ms (Views: 0.4ms | ActiveRecord: 4.8ms | Allocations: 3107)
+
+
+Started GET "/" for ::1 at 2022-08-10 12:08:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 1997)
+Completed 200 OK in 11ms (Views: 10.3ms | Allocations: 2226)
+
+
+Started GET "/" for ::1 at 2022-08-10 12:08:30 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2015)
+Completed 200 OK in 5ms (Views: 4.6ms | Allocations: 2244)
+
+
+Started GET "/" for ::1 at 2022-08-10 12:09:50 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 2058)
+Completed 200 OK in 9ms (Views: 8.6ms | Allocations: 2287)
+
+
+Started GET "/gifs/pretend" for ::1 at 2022-08-10 12:10:03 -0700
+Processing by GifsController#show as */*
+  Parameters: {"title"=>"pretend"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "pretend"], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:12:in `show'
+Completed 200 OK in 23ms (Views: 0.9ms | ActiveRecord: 7.3ms | Allocations: 3574)
+
+
+Started GET "/" for ::1 at 2022-08-10 12:11:41 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 4660)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.0ms | Allocations: 4892)
+
+
+Started GET "/" for ::1 at 2022-08-10 12:11:42 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2006)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 2238)
+
+
+Started GET "/gifs/pretend" for ::1 at 2022-08-10 12:11:43 -0700
+Processing by GifsController#show as JSON
+  Parameters: {"title"=>"pretend"}
+  [1m[36mGif Load (1.0ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "pretend"], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:12:in `show'
+Completed 200 OK in 7ms (Views: 1.1ms | ActiveRecord: 1.0ms | Allocations: 674)
+
+
+Started GET "/" for ::1 at 2022-08-10 12:12:11 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 34.7ms | Allocations: 4669)
+Completed 200 OK in 36ms (Views: 35.7ms | ActiveRecord: 0.0ms | Allocations: 4901)
+
+
+Started GET "/gifs/pretend" for ::1 at 2022-08-10 12:12:13 -0700
+Processing by GifsController#show as HTML
+  Parameters: {"title"=>"pretend"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "pretend"], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:12:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 674)
+
+
+Started GET "/" for ::1 at 2022-08-10 12:13:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 26)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 2292)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 2895)
+
+
+Started GET "/gifs/pretend" for ::1 at 2022-08-10 12:13:03 -0700
+
+SyntaxError - syntax error, unexpected ':', expecting `end'
+      render: gif
+            ^
+/Users/deid/Documents/cohort-resources/lectures/w9d3-ajax/demo/app/controllers/gifs_controller.rb:16: syntax error, unexpected ':', expecting `end'
+      render: ['There is no GIF with that ...
+            ^
+/Users/deid/Documents/cohort-resources/lectures/w9d3-ajax/demo/app/controllers/gifs_controller.rb:16: syntax error, unexpected ',', expecting `end'
+...e is no GIF with that title!'], status: 422
+...                              ^:
+  app/controllers/gifs_controller.rb:14:in `'
+
+Started GET "/" for ::1 at 2022-08-10 12:13:22 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 26)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 2274)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 2877)
+
+
+Started GET "/gifs/pretend" for ::1 at 2022-08-10 12:13:23 -0700
+Processing by GifsController#show as HTML
+  Parameters: {"title"=>"pretend"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "pretend"], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:12:in `show'
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 22.7ms | Allocations: 5728)
+
+
+
+ActionView::MissingTemplate - Missing partial gifs/_gif with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+Searched in:
+  * "/Users/deid/Documents/cohort-resources/lectures/w9d3-ajax/demo/app/views":
+  app/controllers/gifs_controller.rb:14:in `show'
+
+Started GET "/" for ::1 at 2022-08-10 12:14:37 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 1.6ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 2653)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.0ms | Allocations: 3460)
+
+
+Started GET "/gifs/pretend" for ::1 at 2022-08-10 12:14:40 -0700
+Processing by GifsController#show as HTML
+  Parameters: {"title"=>"pretend"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "pretend"], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:12:in `show'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.6ms | Allocations: 2109)
+
+
+
+ActionView::MissingTemplate - Missing partial gifs/_gif with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+Searched in:
+  * "/Users/deid/Documents/cohort-resources/lectures/w9d3-ajax/demo/app/views":
+  app/controllers/gifs_controller.rb:14:in `show'
+
+Started GET "/" for ::1 at 2022-08-10 12:15:54 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 26)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 2294)
+Completed 200 OK in 2ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 2898)
+
+
+Started GET "/" for ::1 at 2022-08-10 12:16:11 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2067)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 2313)
+
+
+Started GET "/gifs/pretend" for ::1 at 2022-08-10 12:16:13 -0700
+Processing by GifsController#show as JSON
+  Parameters: {"title"=>"pretend"}
+  [1m[36mGif Load (3.0ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "pretend"], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:12:in `show'
+Completed 200 OK in 30ms (Views: 1.3ms | ActiveRecord: 9.1ms | Allocations: 3353)
+
+
+Started GET "/pretend" for ::1 at 2022-08-10 12:16:28 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/pretend"):
+  
+Started GET "/gifs/pretend" for ::1 at 2022-08-10 12:16:36 -0700
+Processing by GifsController#show as HTML
+  Parameters: {"title"=>"pretend"}
+  [1m[36mGif Load (0.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "pretend"], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering gifs/show.html.erb within layouts/application
+  Rendered gifs/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 151)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2417)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.2ms | Allocations: 3664)
+
+
+Started GET "/gifs/pretend" for ::1 at 2022-08-10 12:17:54 -0700
+Processing by GifsController#show as HTML
+  Parameters: {"title"=>"pretend"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "pretend"], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering gifs/show.html.erb within layouts/application
+  Rendered gifs/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 1994)
+Completed 200 OK in 15ms (Views: 9.2ms | ActiveRecord: 0.5ms | Allocations: 2856)
+
+
+Started GET "/gifs/pretend" for ::1 at 2022-08-10 12:17:55 -0700
+Processing by GifsController#show as HTML
+  Parameters: {"title"=>"pretend"}
+  [1m[36mGif Load (0.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "pretend"], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering gifs/show.html.erb within layouts/application
+  Rendered gifs/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2021)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.2ms | Allocations: 2786)
+
+

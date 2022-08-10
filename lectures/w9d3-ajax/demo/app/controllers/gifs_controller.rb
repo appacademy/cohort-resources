@@ -11,9 +11,12 @@ class GifsController < ApplicationController
   def show
     gif = Gif.find_by(title: params[:title])
     if gif
-      render json: gif
+      respond_to do |format|
+        format.json { render json: gif }
+        format.html { render :show }
+      end
     else
-      render json: ['There is no GIF with that title!'], status: 422
+      render ['There is no GIF with that title!'], status: 422
     end
   end
 

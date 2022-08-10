@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
+  resources :gifs, only: [:create]
+  get '/gifs/:title', to: 'gifs#show'
   root "static_pages#root"
 end
