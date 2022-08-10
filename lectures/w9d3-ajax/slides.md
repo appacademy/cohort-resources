@@ -20,7 +20,8 @@
 + Handle, process, and chain together `Promise` objects
 	+ particularly those returned by invocations of `fetch`
 + Rewrite promise-based code written in the more traditional `then()` syntax using the more modern `async`/`await` keywords
-+ 
++ Describe the differences between multiple and single page applications
++ Refactor a Rails back-end to respond to `XMLHttpRequest`s with JSON data
 
 ---
 
