@@ -1,0 +1,27 @@
+/* SITE WIDE STYLING */
+ul {
+  list-style: none;
+}
+.app {
+  border: 1px solid blue;
+}
+
+.job-index {
+  border: 1px dotted red;
+}
+
+.job-index-item {
+  border: 1px solid green;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.nav-link {
+  padding: .4rem;
+}
+
+.job-show {
+  border: 1px solid purple;
+}
