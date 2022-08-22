@@ -134,6 +134,16 @@ Yukihiro Matsumoto, Chief Designer of Ruby
 
 ---
 
+#### # and :: when refering to methods and constants
+
+
+  + instance method -> Fish#find
+  + class method -> Fish::make_fish
+  + class constant -> Fish::FISH_NAMES
+
+
+---
+
 #### `{}` > `do .. end` for one lines
 
 ```ruby
