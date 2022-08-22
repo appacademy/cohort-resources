@@ -1,0 +1,15 @@
+form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    justify-content: space-evenly;
+    height: 25vh;
+}
+
+form > *{
+    height:25% ;
+    margin: 5px;
+}
+
