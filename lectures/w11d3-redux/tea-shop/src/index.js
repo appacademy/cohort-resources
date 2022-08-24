@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
 import configureStore from './store';
 import { receiveTea, receiveTeas, removeTea } from './store/teaReducer';
-import { Provider } from 'react-redux';
 
 const initialState = {
   teas: {
@@ -23,11 +23,15 @@ window.receiveTeas = receiveTeas;
 window.removeTea = removeTea;
 //
 
+const Root = () => (
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
+
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <Root />
   </React.StrictMode>,
   document.getElementById('root')
 );

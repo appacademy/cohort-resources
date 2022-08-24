@@ -3,7 +3,9 @@ import { useDispatch } from "react-redux";
 import { receiveTea } from "../../store/teaReducer";
 
 const AddTeaForm = props => {
+  console.log('rendering');
   const dispatch = useDispatch();
+  
   const [flavor, setFlavor] = useState('');
   const [price, setPrice] = useState('');
   
@@ -21,22 +23,25 @@ const AddTeaForm = props => {
     setPrice('');
   };
 
-
   return(
-    <>
+    <div className="tea-form">
       <h2>I'm the AddTeaForm</h2>
       <form onSubmit={handleSubmit}>
+        <label for="flavor">Flavor:</label>
         <input
+          id="flavor"
           value={flavor} 
           onChange={e => setFlavor(e.target.value)}
         />
+        <label for="price">Price:</label>
         <input
+          id="price"
           value={price}
           onChange={e => setPrice(e.target.value)}
         />
         <input type="submit" value="Add Tea" />
       </form>
-    </>
+    </div>
   )
 };
 
