@@ -63,6 +63,104 @@
 
 ---
 
+# DEMO RAILS SETUP
+
+Note:
+(Mike) Here are my notes for setting up a rails backend for this app:
+
+### Step 1: Review the code from yesterday
+
+Go over the code from yesterday's demo:
+
+* Review the file structure: components (presentational vs containers), reducers, actions, store
+* Make sure to go over anything that may have changed from yesterday (aka selectors)
+
+### Step 2: Generate a new Rails app and `teas` migration
+
+Now lets get started on setting up our Rails backend!
+
+1. Generate a new Rails app: `rails new TeaTime -G -T --database=postgresql --api --minimal`.
+2. Update your Gemfile with `pry-rails`, `binding_of_caller`, `better_errors` and `annotate` under `:development`.
+3. Comment out the debug gem and add `gem "byebug"`.
+4. Run `bundle install`.
+
+### Step 3: Create `tea` migration & model
+
+1. `rails g model tea`
+2. Set up a tea migration with `t.string :flavor, null: false` and `t.float :price, null: false` and `t.string :description`
+3. Add an index `add_index :teas, :flavor, unique: true`
+4. Add validations `validates :flavor, presence: true, uniqueness: true`
+5. Add validations `validates :flavor, :price, presence: true`
+6. Run `rails db:setup` and `rails db:migrate`
+
+### Step 4: Seeds file
+
+* Paste in seed file and run `rails db:seed` to add them to the DB and give us some data to work with
+
+### Step 5: Setup Teas Routes
+
+Our Rails backend is going to serve purely as an API, so we will
+define our teas routes and controller under an API namespace. We can create the controller like so:
+`rails g controller api/teas`
+
+Here's what the controller should look like
+
+```ruby
+class Api::TeasController < ApplicationController
+  # controller is under the api folder to indicate we are sending back api/json info
+  def index 
+    @teas = Tea.all 
+    render json: @teas 
+  end
+
+  def create 
+    tea = Tea.new(tea_params) #doesn't have to be @tea. no more views 
+    if tea.save
+      render json: tea 
+    else
+      render json: tea.errors.full_messages, status: 422 
+    end
+
+  end 
+
+  def tea_params 
+    params.require(:tea).permit(:flavor, :price, :description)
+  end
+  
+end
+```
+
+And our routes like so:
+
+```ruby
+  Rails.application.routes.draw do
+    namespace :api, defaults: {format: :json} do
+      resources :teas, only: [:index, :create]
+    end
+  end
+```
+
+By putting your routes inside of a namespace like that, you set 
+up your routes so that you will have to access `api/teas`. Using 
+an api namespace helps avoid name collisions.
+
+The `defaults: {format: :json}` makes sure that your responses will be in json by default, rather than html.
+
+
+### Step 7: Connect and Test
+
+Let's go ahead and move yesterday's demo into this rails folder to act as the frontend for our rails backend.
+
+1. Go to your `config/puma.rb` and change PORT 3000 to 5000 on line 18
+2. Move entire frontend folder into top level directory of our rails app
+3. Add `"proxy": "http://localhost:5000",` to your `package.json`.
+4. run `npm install` in the frontend folder to reinstall all our packages
+6. run `npm start` and `rails s` in their respective folders
+7. check that it all still works!
+
+
+---
+
 ## Connecting backend & frontend
 
 * Receiving backend data through fetch requests
