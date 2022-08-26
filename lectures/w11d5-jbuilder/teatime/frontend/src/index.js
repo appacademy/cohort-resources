@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import configureStore from './store';
-import {receiveTea, receiveTeas, removeTea } from './store/teaReducer';
+import {receiveTea, receiveTeas, removeTea, fetchTeaDetail } from './store/teaReducer';
 import { Provider } from 'react-redux';
 import { requestTeas, postTea } from './utils/tea_api_utils';
 import { fetchAllTeas} from './store/teaReducer';
@@ -26,6 +26,7 @@ window.removeTea = removeTea;
 window.requestTeas = requestTeas;
 window.postTea = postTea;
 window.fetchAllTeas = fetchAllTeas;
+window.fetchTeaDetail = fetchTeaDetail;
 //
 
 ReactDOM.render(

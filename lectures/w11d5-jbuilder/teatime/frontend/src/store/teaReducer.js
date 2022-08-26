@@ -3,6 +3,16 @@ import { requestTeas, postTea} from "../utils/tea_api_utils";
 const RECEIVE_TEA = 'RECEIVE_TEA';
 const RECEIVE_TEAS = 'RECEIVE_TEAS';
 const REMOVE_TEA = 'REMOVE_TEA';
+export const RECEIVE_TEA_DETAIL = 'RECEIVE_TEA_DETAIL';
+
+
+export const fetchTeaDetail = (teaId) => async (dispatch) => {
+  const res = await fetch(`api/teas/${teaId}`);
+  const data = await res.json();
+  dispatch(receiveTeaDetail(data));
+}
+
+
 
 /* ----THUNK ACTION CREATORS---- */
 export const fetchAllTeas = () => (dispatch) => {
@@ -21,6 +31,13 @@ export const createTea = (tea) => (dispatch) => {
 }
 
 /* ----ACTION CREATORS---- */
+export const receiveTeaDetail = payload => {
+  return {
+    type: RECEIVE_TEA_DETAIL,
+    payload
+  }
+}
+
 export const receiveTea = tea => {
   // debugger
 return {
@@ -55,6 +72,9 @@ const teaReducer = (state = {}, action) => {
       return { ...nextState, ...action.teas };
     case REMOVE_TEA:
       delete nextState[action.teaId];
+      return nextState;
+    case RECEIVE_TEA_DETAIL:
+      nextState[action.payload.tea.id] = action.payload.tea;
       return nextState;
     default:
       return nextState;
