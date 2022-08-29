@@ -128,6 +128,7 @@ import React from 'react';
 class ClassComponent extends React.Component {
   constructor(props) {
     super(props); // Reference props as aparameter
+    // this.props = props;
   }
 
   render() {
@@ -151,7 +152,9 @@ class ClassComponent extends React.Component {
     
     // Initialize the component state object
     this.state = {
-      count: 0
+      username: '',
+      password: '',
+      passwordConfirmation: ''
     };
   }
 ```
@@ -162,7 +165,9 @@ class ClassComponent extends React.Component {
 
 ```js
   handleClick(e) {
-    this.setState(state => ({ count: state.count + 1 }));
+    // this.setState({ count: this.state.count + 1 });
+    this.setState((state, props) => ({ count: state.count + 1 }));
+    console.log(this.state.count);
   }
 
   render() {
@@ -239,7 +244,7 @@ Note:
 
 ---
 
-### `componentDidUpdate(prevProps)`
+### `componentDidUpdate(prevProps, prevState)`
 
 + Invoked immediately after updating (and re-rendering)
 	+ Not called on the initial render
@@ -288,9 +293,6 @@ Note:
 
 ```js
   useEffect(() => {
-    setTimeout(() => {
-      setCount(0);
-    }, 1000);
     return () => console.log('cleanup');
   }, []);
 ```
