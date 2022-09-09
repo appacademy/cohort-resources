@@ -92,7 +92,7 @@ end
 # Joins #
 
 def self.see_chirp_num_likes_n_plus_one
-    chirps = Chirp.all
+    chirps = Chirp.all # select * from chirps
 
     chirps.each do |chirp|
         puts chirp.likes.length
