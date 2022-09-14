@@ -9,6 +9,7 @@
 #  updated_at    :datetime         not null
 #  favorite_coin :string           not null
 #  age           :integer          not null
+#  admin         :boolean         
 #
 class User < ApplicationRecord
   validates :username, presence: true, uniqueness: true

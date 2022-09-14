@@ -716,3 +716,236 @@ Migrating to RemoveTitleFromChirps (20220909162027)
   [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 9]]
   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 10]]
   [1m[36mChirp Load (8.4ms)[0m  [1m[34mSELECT chirps.*, COUNT(*) AS num_likes FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" GROUP BY "chirps"."id"[0m
+  [1m[36mChirp Load (9.1ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  [1m[36mChirp Load (0.6ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+Started GET "/" for ::1 at 2022-09-14 11:42:38 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/mikemadsen/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/mikemadsen/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.0ms | Allocations: 549)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 2836)
+
+
+Started GET "/mike" for ::1 at 2022-09-14 11:43:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/mike"):
+  
+Started GET "/chirps" for ::1 at 2022-09-14 11:43:18 -0700
+Processing by ChirpsController#index as HTML
+  [1m[36mChirp Load (4.7ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  ↳ app/controllers/chirps_controller.rb:5:in `index'
+Completed 200 OK in 55ms (Views: 14.5ms | ActiveRecord: 21.0ms | Allocations: 8442)
+
+
+Started GET "/chirps" for ::1 at 2022-09-14 11:51:18 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChirpsController#index as HTML
+  [1m[36mChirp Load (17.5ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  ↳ app/controllers/chirps_controller.rb:6:in `index'
+Completed 200 OK in 238719ms (Views: 28.2ms | ActiveRecord: 106.8ms | Allocations: 109896)
+
+
+Started GET "/chirps/2" for ::1 at 2022-09-14 11:55:35 -0700
+
+AbstractController::ActionNotFound - The action 'show' could not be found for ChirpsController:
+
+Started POST "/__better_errors/6b939a7cd8ad333c/variables" for ::1 at 2022-09-14 11:55:35 -0700
+Started GET "/chirps/mike" for ::1 at 2022-09-14 11:55:53 -0700
+
+AbstractController::ActionNotFound - The action 'show' could not be found for ChirpsController:
+
+Started POST "/__better_errors/8bbccd1af946795c/variables" for ::1 at 2022-09-14 11:55:53 -0700
+Started GET "/" for ::1 at 2022-09-14 11:57:11 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/mikemadsen/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/mikemadsen/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 14.9ms | Allocations: 540)
+Completed 200 OK in 24ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 2461)
+
+
+Started GET "/chirps" for ::1 at 2022-09-14 11:57:18 -0700
+
+ActionController::RoutingError - uninitialized constant ChirpsController
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  ChirpController
+            raise MissingController.new(error.message, error.name)
+            ^^^^^:
+
+Started POST "/__better_errors/8894646e94037e94/variables" for ::1 at 2022-09-14 11:57:18 -0700
+Started GET "/chirps" for ::1 at 2022-09-14 11:57:59 -0700
+
+Zeitwerk::NameError - expected file /Users/mikemadsen/appacademy/cohort-resources/lectures/DogeBird/app/controllers/chirps_controller.rb to define constant ChirpsController, but didn't
+      raise Zeitwerk::NameError.new("expected file #{file} to define constant #{cpath}, but didn't", cref.last)
+      ^^^^^:
+
+Started POST "/__better_errors/182ce027fa27a388/variables" for ::1 at 2022-09-14 11:57:59 -0700
+Started GET "/chirps/2" for ::1 at 2022-09-14 12:04:01 -0700
+Processing by ChirpsController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 406 Not Acceptable in 85ms (Allocations: 2583)
+
+
+
+ActionController::MissingExactTemplate - ChirpsController#show is missing a template for request formats: text/html:
+
+Started POST "/__better_errors/c48d3c9410122728/variables" for ::1 at 2022-09-14 12:04:01 -0700
+Started GET "/chirps/2" for ::1 at 2022-09-14 12:04:16 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChirpsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChirp Load (7.6ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ (byebug):1:in `show'
+  [1m[36mChirp Load (1.3ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ (byebug):1:in `show'
+  [1m[36mChirp Load (4.9ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ (byebug):1:in `show'
+Completed 406 Not Acceptable in 104357ms (ActiveRecord: 92.0ms | Allocations: 113485)
+
+
+
+ActionController::MissingExactTemplate - ChirpsController#show is missing a template for request formats: text/html:
+
+Started POST "/__better_errors/409308e5d0962198/variables" for ::1 at 2022-09-14 12:06:01 -0700
+Started GET "/chirps/2" for ::1 at 2022-09-14 12:06:31 -0700
+Processing by ChirpsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChirp Load (0.3ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:9:in `show'
+Completed 200 OK in 148ms (Views: 0.7ms | ActiveRecord: 138.1ms | Allocations: 5105)
+
+
+Started GET "/chirps/40" for ::1 at 2022-09-14 12:06:43 -0700
+Processing by ChirpsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mChirp Load (0.3ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:9:in `show'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.3ms | Allocations: 1075)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Chirp with 'id'=40:
+  app/controllers/chirps_controller.rb:9:in `show'
+
+Started POST "/__better_errors/b30d1fc35eccb79b/variables" for ::1 at 2022-09-14 12:06:43 -0700
+Started GET "/chirps/40" for ::1 at 2022-09-14 12:07:07 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChirpsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mChirp Load (0.4ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:9:in `show'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 7697)
+
+
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/chirps" for ::1 at 2022-09-14 12:13:39 -0700
+Processing by ChirpsController#create as */*
+  Parameters: {"author_id"=>"9", "body"=>"\"this is stupid\""}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (Allocations: 703)
+
+
+
+ActionController::InvalidAuthenticityToken - Can't verify CSRF token authenticity.:
+
+Started POST "/chirps" for ::1 at 2022-09-14 12:14:11 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChirpsController#create as */*
+  Parameters: {"author_id"=>"9", "body"=>"\"this is stupid\""}
+No template found for ChirpsController#create, rendering head :no_content
+Completed 204 No Content in 79697ms (ActiveRecord: 0.0ms | Allocations: 82874)
+
+
+Started POST "/chirps" for ::1 at 2022-09-14 12:16:06 -0700
+Processing by ChirpsController#create as */*
+  Parameters: {"chirp"=>{"author_id"=>"9", "body"=>"this is not stupid"}}
+No template found for ChirpsController#create, rendering head :no_content
+Completed 204 No Content in 465504ms (ActiveRecord: 22.9ms | Allocations: 16192)
+
+
+Started POST "/chirps" for ::1 at 2022-09-14 13:45:32 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChirpsController#create as */*
+  Parameters: {"chirp"=>{"author_id"=>"9", "body"=>"this is a test"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/chirps_controller.rb:13:in `create'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:13:in `create'
+  [1m[36mChirp Create (9.2ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "this is a test"], ["author_id", 9], ["created_at", "2022-09-14 20:45:32.921578"], ["updated_at", "2022-09-14 20:45:32.921578"]]
+  ↳ app/controllers/chirps_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/chirps_controller.rb:13:in `create'
+Redirected to http://localhost:3000/chirps
+Completed 302 Found in 54ms (ActiveRecord: 31.9ms | Allocations: 22809)
+
+
+Started GET "/chirps" for ::1 at 2022-09-14 13:45:32 -0700
+Processing by ChirpsController#index as */*
+  [1m[36mChirp Load (0.4ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  ↳ app/controllers/chirps_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.4ms | Allocations: 2096)
+
+
+Started POST "/chirps" for ::1 at 2022-09-14 13:46:18 -0700
+Processing by ChirpsController#create as */*
+  Parameters: {"chirp"=>{"author_id"=>"9", "body"=>"this is another test"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/chirps_controller.rb:13:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:13:in `create'
+  [1m[36mChirp Create (1.8ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "this is another test"], ["author_id", 9], ["created_at", "2022-09-14 20:46:19.123918"], ["updated_at", "2022-09-14 20:46:19.123918"]]
+  ↳ app/controllers/chirps_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/chirps_controller.rb:13:in `create'
+Redirected to http://localhost:3000/chirps/12
+Completed 302 Found in 126ms (ActiveRecord: 73.3ms | Allocations: 12461)
+
+
+Started GET "/chirps/12" for ::1 at 2022-09-14 13:46:19 -0700
+Processing by ChirpsController#show as */*
+  Parameters: {"id"=>"12"}
+  [1m[36mChirp Load (0.7ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:27:in `show'
+Completed 200 OK in 64131ms (Views: 1.0ms | ActiveRecord: 0.7ms | Allocations: 84029)
+
+
+Started PATCH "/chirps/12" for ::1 at 2022-09-14 13:50:06 -0700
+Processing by ChirpsController#update as */*
+  Parameters: {"chirp"=>{"author_id"=>"9", "body"=>"this is an update"}, "id"=>"12"}
+No template found for ChirpsController#update, rendering head :no_content
+Completed 204 No Content in 204893ms (ActiveRecord: 0.0ms | Allocations: 3491)
+
+
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[31mROLLBACK[0m
+Started DELETE "/chirps/12" for ::1 at 2022-09-14 13:57:02 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChirpsController#destroy as */*
+  Parameters: {"chirp"=>{"author_id"=>"9", "body"=>"this is an update"}, "id"=>"12"}
+  [1m[36mChirp Load (5.5ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:42:in `destroy'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/chirps_controller.rb:43:in `destroy'
+  [1m[36mChirp Destroy (34.8ms)[0m  [1m[31mDELETE FROM "chirps" WHERE "chirps"."id" = $1[0m  [["id", 12]]
+  ↳ app/controllers/chirps_controller.rb:43:in `destroy'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/chirps_controller.rb:43:in `destroy'
+Completed 200 OK in 58ms (Views: 0.2ms | ActiveRecord: 47.9ms | Allocations: 12081)
+
+
+Started GET "/chirps" for ::1 at 2022-09-14 13:57:10 -0700
+Processing by ChirpsController#index as */*
+  Parameters: {"chirp"=>{"author_id"=>"9", "body"=>"this is an update"}}
+  [1m[36mChirp Load (0.2ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  ↳ app/controllers/chirps_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1967)
+
+
+Started GET "/chirps/2" for ::1 at 2022-09-14 14:10:18 -0700
+Processing by ChirpsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChirp Load (6.8ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:27:in `show'
+Completed 200 OK in 318ms (Views: 5.0ms | ActiveRecord: 101.8ms | Allocations: 3832)
+
+
