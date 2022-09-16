@@ -14,6 +14,7 @@
 class User < ApplicationRecord
   validates :username, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
+  validates :age, inclusion: { in: 10..999 }
   #validates :email, :username, presence: true, uniqueness: true     <== also valid
 
   has_many :chirps,
@@ -33,7 +34,6 @@ class User < ApplicationRecord
   has_many :chirp_likers,
     through: :chirps,
     source: :likers
-
 
   # AR queries
 
@@ -70,7 +70,4 @@ class User < ApplicationRecord
     Chirp.joins(:user).where("username = 'chrismas'")
     # User.joins(:chirps).where("username = 'chrismas'")
   end
-
-
-
 end

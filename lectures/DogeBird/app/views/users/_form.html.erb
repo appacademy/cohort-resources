@@ -1,0 +1,38 @@
+<% if type == :new %>
+  <% action_url = users_url %>
+  <% button_text = 'Create User' %>
+<% elsif type == :edit %>
+  <% action_url = user_url(user) %>
+  <% button_text = 'Update User' %>
+<% end %>
+
+<h1><%= button_text %></h1>
+
+<form action="<%= action_url %>" method="POST">
+  <% if type == :edit %>
+    <input type="hidden" name="_method" value="PATCH" />
+  <% end %>
+  <label for="username">Username:</label>
+  <input id="username" type="text" name="user[username]" value="<%= @user.username %>" />
+  <br>
+  <br>
+  <label>Email:
+    <input type="email" name="user[email]" value="<%= @user.email %>" />
+  </label>
+  <br>
+  <br>
+  <label for="age">Age:</label>
+  <input id="age" type="text" name="user[age]" value="<%= @user.age %>" />
+  <br>
+  <br>
+  <label for="favorite_coin">Favorite Coin:</label>
+  <input id="favorite_coin" type="text" name="user[favorite_coin]" value="<%= @user.favorite_coin %>" />
+  <br>
+  <br>
+  <input type="submit" value="<%= button_text %>" />
+</form>
+<% if type == :edit %>
+  <a href="<%= user_url(user) %>">Cancel</a>
+<% else %>
+  <a href="<%= users_url %>">Cancel</a>
+<% end %>

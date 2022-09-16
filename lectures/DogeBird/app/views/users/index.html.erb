@@ -1,0 +1,7 @@
+<h1>User Index</h1>
+
+<% @users.each do |user|  %>
+  <%= render 'user', user: user, action: 'index' %>
+<% end %>
+
+<a href="<%= new_user_url %>">Retrieve New User Form</a>
