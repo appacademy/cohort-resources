@@ -21,6 +21,13 @@
   </label>
   <br>
   <br>
+  <% if  type == :new %>
+  <label>Password:
+    <input type="password" name="user[password]" value="" />
+  </label>
+  <br>
+  <br>
+  <% end %>
   <label for="age">Age:</label>
   <input id="age" type="text" name="user[age]" value="<%= @user.age %>" />
   <br>

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   # this is equivalent to the above
   resources :chirps, only: [:index, :create, :show, :update, :destroy]
   resources :users, only: [:show, :index, :new, :create, :edit, :update, :destroy]
+  resource :session, only: [:new, :create, :destroy]
 
   # Defines the root path route ("/")
   # root "articles#index"

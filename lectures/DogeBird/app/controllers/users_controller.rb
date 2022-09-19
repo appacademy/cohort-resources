@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  before_action :require_logged_in, only: [:index, :show]
+  before_action :require_logged_out, only:[:new, :create]
+
   def show
     @user = User.find_by(id: params[:id])
     render :show
@@ -16,8 +19,10 @@ class UsersController < ApplicationController
   end
 
   def create
+    # debugger
     @user = User.new(user_params)
     if @user.save # save! fails loudly => 500 level error
+      login!(@user)
       redirect_to user_url(@user)
     else
       # render json: { errors: @user.errors.full_messages }, status: 422
@@ -32,6 +37,7 @@ class UsersController < ApplicationController
   end
 
   def update
+    # debugger
     @user = User.find_by(id: params[:id]) 
     if @user.update(user_params)
       redirect_to user_url(@user)
@@ -52,6 +58,6 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:username, :email, :favorite_coin, :age)
+    params.require(:user).permit(:username, :email, :favorite_coin, :age, :password)
   end
 end

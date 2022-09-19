@@ -1,0 +1,15 @@
+<%# login with username & password %>
+<h1>Sign In to DogeBird</h1>
+<form action=" <%= session_url %> " method="post">
+    <label>Username:
+        <input type="text" name="user[username]" value="">
+    </label>
+    <br>
+    <br>
+    <label>Password:
+        <input type="password" name="user[password]" value="">
+    </label>
+    <br>
+    <br>
+    <input type="submit" value="Log in!">
+</form>
