@@ -26,6 +26,8 @@ class UsersController < ApplicationController
       redirect_to user_url(@user)
     else
       # render json: { errors: @user.errors.full_messages }, status: 422
+      flash.now[:errors] = @user.errors.full_messages 
+        # ["Username already taken", "Password too short", "Favorite coin must be filled"]
       render :new
       # redirect_to new_user_url
     end

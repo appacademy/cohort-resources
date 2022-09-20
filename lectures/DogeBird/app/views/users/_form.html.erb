@@ -9,6 +9,7 @@
 <h1><%= button_text %></h1>
 
 <form action="<%= action_url %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <% if type == :edit %>
     <input type="hidden" name="_method" value="PATCH" />
   <% end %>
