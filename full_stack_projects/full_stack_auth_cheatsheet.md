@@ -62,7 +62,9 @@
             class ChangeUsers < ActiveRecord::Migration[7.0]
                 def change
                     add_column :users, :password_digest, :string, null: false
-                    add_column :users, :session_token, :string, null: false, index: { unique: true }
+                    add_column :users, :session_token, :string, null: false
+
+                    add_index :users, :session_token, unique: true
                 end
             end
         ```
@@ -72,8 +74,7 @@
         new attributes as a result of the additional columns.
 
 2. Update `user.rb` with SPIRE and validations
-    - Add has_secure_password - this handles the `password=` and `is_password?`
-    functions for us and uses BCrypt:
+    - Add has_secure_password - this handles the `password=` and gives us `authenticate` which is the equivalent of `is_password?`
         ```rb
             has_secure_password
         ```
