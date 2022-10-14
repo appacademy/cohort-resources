@@ -1,0 +1,24 @@
+/* TODO Add site wide styles */
+
+.app {
+  /* border: 1px solid blue; */
+}
+
+.job-index {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.job-item {
+  /* border: 1px solid green; */
+}
+
+/* .job-item:active {
+  border: 1px solid green;
+} */
+
+* {
+  background-color: #f0ead6;
+}
