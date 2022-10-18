@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import './NavBar.css';
-import logoImg from '../../assets/logo.jpeg';
 
 const NavBar = props => {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -22,7 +20,7 @@ const NavBar = props => {
     <>
       <div className="main-header">
         <Link to="/" className="logo">
-          <img src={logoImg} className="logo-img" />
+          {/* <img src={logoImg} className="logo-img" /> */}
           <p>RIBBIT</p>
         </Link>
         <div>

@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import './PostIndex.css';
 
 const PostIndex = props => {
   console.log("Rendering...");
@@ -27,6 +26,7 @@ const PostIndex = props => {
         <div key={i} className="index-item">
           <p className='title'>{ele.title}</p>
           <p className='body'>{ele.body}</p>
+          {/* <PostIndexItem post={ele} /> */}
         </div>
       ))}
     </>
