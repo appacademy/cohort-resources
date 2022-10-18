@@ -1,18 +1,18 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
-const NavBar = props => {
-  const [loggedIn, setLoggedIn] = useState(false);
+const NavBar = (props) => {
+  const [loggedIn, setLogin] = useState(false);
   const [currentUser, setCurrentUser] = useState({});
 
   const handleClick = e => {
     e.preventDefault();
     if (loggedIn) {
       setCurrentUser({});
-      setLoggedIn(false);
+      setLogin(false);
     } else {
       setCurrentUser({ name: 'Mike' });
-      setLoggedIn(true);
+      setLogin(true);
     }
   }
 

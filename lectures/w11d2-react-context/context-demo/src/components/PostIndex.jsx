@@ -15,9 +15,10 @@ const PostIndex = props => {
       setData(fetchedData);
     };
     func();
-  }, [familyName]);
+  }, []);
 
   const title = familyName.slice(0, familyName.length - 1);
+
 
   return (
     <>
@@ -26,7 +27,6 @@ const PostIndex = props => {
         <div key={i} className="index-item">
           <p className='title'>{ele.title}</p>
           <p className='body'>{ele.body}</p>
-          {/* <PostIndexItem post={ele} /> */}
         </div>
       ))}
     </>
