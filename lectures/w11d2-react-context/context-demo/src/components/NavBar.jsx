@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { useSessionContext } from "../context/sessionContext";
 import { Link, NavLink } from "react-router-dom";
 
 const NavBar = (props) => {
-  const [loggedIn, setLogin] = useState(false);
+  // const [loggedIn, setLogin] = useState(false);
   const [currentUser, setCurrentUser] = useState({});
+
+  const {loggedIn, setLogin} = useSessionContext();
+
+  console.log(loggedIn)
 
   const handleClick = e => {
     e.preventDefault();
@@ -15,6 +20,15 @@ const NavBar = (props) => {
       setLogin(true);
     }
   }
+  
+  const button = loggedIn ? (
+    <>
+      <p>Welcome {currentUser.name}!</p>
+      <button onClick={handleClick}>Log Out</button>
+    </>
+  ) : (
+      <button onClick={handleClick}>Log In</button>
+  )
 
   return (
     <>
@@ -27,7 +41,7 @@ const NavBar = (props) => {
           <p>The Front Page of the Swamp</p>
         </div>
         <div className="session-buttons">
-          {!loggedIn && (
+          {/* {!loggedIn && (
             <button onClick={handleClick}>Log In</button>
           )}
           {loggedIn && (
@@ -35,7 +49,8 @@ const NavBar = (props) => {
               <p>Welcome {currentUser.name}!</p>
               <button onClick={handleClick}>Log Out</button>
             </>
-          )}
+          )} */}
+          {button}
         </div>
       </div>
       <div className="sub-nav-bar">

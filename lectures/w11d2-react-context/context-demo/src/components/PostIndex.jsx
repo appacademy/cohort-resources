@@ -1,11 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useSessionContext } from '../context/sessionContext';
 
 const PostIndex = props => {
   console.log("Rendering...");
 
   const [data, setData] = useState([]);
   const { familyName } = useParams();
+
+  const { loggedIn } = useSessionContext();
 
   useEffect(() => {
     console.log('fetching new data');
@@ -19,6 +22,7 @@ const PostIndex = props => {
 
   const title = familyName.slice(0, familyName.length - 1);
 
+  if (!loggedIn) return <h2>You are not logged in</h2>
 
   return (
     <>
