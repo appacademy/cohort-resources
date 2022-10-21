@@ -63,9 +63,3 @@ const teaReducer = (state = {}, action) => {
 };
 
 export default teaReducer;
-
-/*
-let obj = { 'greeting': 'hello', 'farewell': 'goodbye' };
-let val = 'greeting';
-obj[val]
-*/
