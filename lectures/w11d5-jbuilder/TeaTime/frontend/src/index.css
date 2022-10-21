@@ -51,3 +51,8 @@ li p {
     margin: 2px;
     text-align: center;
 }
+
+.transaction {
+    display: flex;
+    justify-content: space-around;
+}

@@ -6,12 +6,33 @@ const REMOVE_TEA = 'REMOVE_TEA';
 export const RECEIVE_TEA_DETAIL = 'RECEIVE_TEA_DETAIL';
 
 
-export const fetchTeaDetail = (teaId) => async (dispatch) => {
-  const res = await fetch(`api/teas/${teaId}`);
-  const data = await res.json();
-  dispatch(receiveTeaDetail(data));
+/* ----ACTION CREATORS---- */
+export const receiveTeaDetail = payload => {
+  // debugger
+  return {
+    type: RECEIVE_TEA_DETAIL,
+    payload
+  }
 }
 
+export const receiveTea = tea => {
+  return {
+    type: RECEIVE_TEA,
+    tea
+  }
+};
+
+export const receiveTeas = teas => {
+  return {
+    type: RECEIVE_TEAS,
+    teas
+  }
+};
+
+export const removeTea = teaId => ({
+  type: REMOVE_TEA,
+  teaId
+});
 
 
 /* ----THUNK ACTION CREATORS---- */
@@ -29,30 +50,11 @@ export const createTea = (tea) => (dispatch) => {
     .then(data => dispatch(receiveTea(data)))
 }
 
-/* ----ACTION CREATORS---- */
-export const receiveTeaDetail = payload => {
-  return {
-    type: RECEIVE_TEA_DETAIL,
-    payload
-  }
+export const fetchTeaDetail = (teaId) => async (dispatch) => {
+  const res = await fetch(`api/teas/${teaId}`);
+  const data = await res.json();
+  dispatch(receiveTeaDetail(data));
 }
-
-export const receiveTea = tea => {
-return {
-  type: RECEIVE_TEA,
-  tea
-}};
-
-export const receiveTeas = teas => {
-  return {
-    type: RECEIVE_TEAS,
-    teas
-}};
-
-export const removeTea = teaId => ({
-  type: REMOVE_TEA,
-  teaId
-});
 
 /* ----REDUCER---- */
 const teaReducer = (state = {}, action) => {
@@ -64,6 +66,7 @@ const teaReducer = (state = {}, action) => {
       nextState[action.tea.id] = action.tea;
       return nextState;
     case RECEIVE_TEAS:
+      // debugger
       return { ...nextState, ...action.teas };
     case REMOVE_TEA:
       delete nextState[action.teaId];
