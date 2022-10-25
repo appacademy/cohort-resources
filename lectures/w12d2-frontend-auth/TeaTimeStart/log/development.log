@@ -6490,3 +6490,1279 @@ FOREIGN KEY ("user_id")
   [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
   [1m[36mLike Create (0.1ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 7], ["tea_id", 4], ["created_at", "2022-10-25 15:50:38.084126"], ["updated_at", "2022-10-25 15:50:38.084126"]]
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 09:16:07 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (2.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.3ms | Allocations: 138)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 12.4ms | Allocations: 5680)
+Completed 200 OK in 18ms (Views: 7.9ms | ActiveRecord: 7.8ms | Allocations: 10436)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2022-10-25 09:16:22 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:11:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Pluck (1.4ms)[0m  [1m[34mSELECT "transactions"."id" FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:4
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:8
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:12
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:12
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:12
+  Rendered api/teas/show.json.jbuilder (Duration: 48.2ms | Allocations: 20193)
+Completed 200 OK in 58ms (Views: 40.3ms | ActiveRecord: 10.1ms | Allocations: 23855)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2022-10-25 09:16:24 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:11:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Pluck (0.4ms)[0m  [1m[34mSELECT "transactions"."id" FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:4
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:12
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:12
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:12
+  Rendered api/teas/show.json.jbuilder (Duration: 15.4ms | Allocations: 4244)
+Completed 200 OK in 19ms (Views: 14.4ms | ActiveRecord: 2.0ms | Allocations: 4989)
+
+
+Started GET "/api/teas/2" for 127.0.0.1 at 2022-10-25 09:16:28 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:11:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Pluck (0.4ms)[0m  [1m[34mSELECT "transactions"."id" FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/show.json.jbuilder:4
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/show.json.jbuilder:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:12
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:12
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:12
+  Rendered api/teas/show.json.jbuilder (Duration: 29.5ms | Allocations: 5550)
+Completed 200 OK in 32ms (Views: 28.4ms | ActiveRecord: 2.0ms | Allocations: 6249)
+
+
+Started POST "/api/teas" for 127.0.0.1 at 2022-10-25 09:17:10 -0700
+Processing by Api::TeasController#create as JSON
+  Parameters: {"flavor"=>"Dragon's blood", "price"=>"1337", "description"=>"Only the best -  cures all ailments", "tea"=>{"flavor"=>"Dragon's blood", "price"=>"1337", "description"=>"Only the best -  cures all ailments"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teas_controller.rb:18:in `create'
+  [1m[36mTea Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "Dragon's blood"], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `create'
+  [1m[36mTea Create (1.5ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["flavor", "Dragon's blood"], ["price", 1337.0], ["description", "Only the best -  cures all ailments"], ["created_at", "2022-10-25 16:17:10.563165"], ["updated_at", "2022-10-25 16:17:10.563165"]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/teas_controller.rb:18:in `create'
+  Rendering api/teas/info.json.jbuilder
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 22)
+  Rendered api/teas/info.json.jbuilder (Duration: 2.3ms | Allocations: 241)
+Completed 200 OK in 26ms (Views: 3.7ms | ActiveRecord: 3.7ms | Allocations: 4908)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 09:17:45 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.8ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 23)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 10.5ms | Allocations: 1290)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.8ms | Allocations: 1479)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 09:17:46 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 23)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 4.2ms | Allocations: 1289)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.3ms | Allocations: 1477)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 09:17:47 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 23)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 3.4ms | Allocations: 1289)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.2ms | Allocations: 1477)
+
+
+Started GET "/api/teas/5" for 127.0.0.1 at 2022-10-25 09:17:48 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:11:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Pluck (0.5ms)[0m  [1m[34mSELECT "transactions"."id" FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 5]]
+  ↳ app/views/api/teas/show.json.jbuilder:4
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 5]]
+  ↳ app/views/api/teas/show.json.jbuilder:8
+  Rendered api/teas/show.json.jbuilder (Duration: 7.2ms | Allocations: 1339)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 1.5ms | Allocations: 2021)
+
+
+Started GET "/api/teas/4" for 127.0.0.1 at 2022-10-25 09:17:52 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:11:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Pluck (0.4ms)[0m  [1m[34mSELECT "transactions"."id" FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 4]]
+  ↳ app/views/api/teas/show.json.jbuilder:4
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 4]]
+  ↳ app/views/api/teas/show.json.jbuilder:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:12
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:12
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:12
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:12
+  Rendered api/teas/show.json.jbuilder (Duration: 18.9ms | Allocations: 4952)
+Completed 200 OK in 24ms (Views: 18.0ms | ActiveRecord: 2.6ms | Allocations: 5635)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 09:37:30 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (1.8ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.8ms | Allocations: 170)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 14.7ms | Allocations: 5904)
+Completed 200 OK in 21ms (Views: 9.5ms | ActiveRecord: 8.1ms | Allocations: 11225)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 09:37:32 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.3ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 3.7ms | Allocations: 1431)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.4ms | Allocations: 2059)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 09:37:41 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.9ms | Allocations: 1365)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 1897)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 09:38:45 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.3ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 4.2ms | Allocations: 1365)
+Completed 200 OK in 10ms (Views: 4.3ms | ActiveRecord: 0.5ms | Allocations: 1915)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 09:39:31 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 3.2ms | Allocations: 1365)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 1688)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 09:39:39 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 3.0ms | Allocations: 1357)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.4ms | Allocations: 1751)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 09:39:40 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.7ms | Allocations: 1357)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 1748)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 09:39:41 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.6ms | Allocations: 1357)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1742)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 09:39:42 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.8ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 5.4ms | Allocations: 1357)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.8ms | Allocations: 1745)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 09:40:21 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.8ms | Allocations: 1357)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1667)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 09:40:31 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 11.9ms | Allocations: 1357)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.3ms | Allocations: 1761)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 09:46:28 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.7ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 69)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 19.6ms | Allocations: 3158)
+Completed 200 OK in 23ms (Views: 6.8ms | ActiveRecord: 13.3ms | Allocations: 5680)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 09:46:31 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.0ms | Allocations: 1357)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 1817)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 09:47:49 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 69)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 8.1ms | Allocations: 3129)
+Completed 200 OK in 11ms (Views: 3.8ms | ActiveRecord: 4.8ms | Allocations: 5628)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 09:48:02 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (1.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.3ms | Allocations: 170)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 10.6ms | Allocations: 5904)
+Completed 200 OK in 17ms (Views: 7.2ms | ActiveRecord: 6.1ms | Allocations: 11188)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 09:49:51 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (1.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 6.5ms | Allocations: 1431)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 1.1ms | Allocations: 1922)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 09:50:24 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 69)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 12.4ms | Allocations: 3210)
+Completed 200 OK in 64262ms (Views: 7.5ms | ActiveRecord: 6.6ms | Allocations: 88661)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 09:52:41 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 09:52:50 -0700
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 09:52:50 -0700
+  [1m[36mTea Load (0.6ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 81)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 39)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 39)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 39)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 39)
+  Rendered api/teas/index.json.jbuilder (Duration: 6.9ms | Allocations: 2045)
+Completed 200 OK in 8555ms (Views: 8.3ms | ActiveRecord: 0.6ms | Allocations: 92857)
+
+
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (626.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 63)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 29)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 29)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 29)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 29)
+  Rendered api/teas/index.json.jbuilder (Duration: 632.6ms | Allocations: 5427)
+Completed 200 OK in 1539ms (Views: 7.4ms | ActiveRecord: 626.5ms | Allocations: 7944)
+
+
+  [1m[36mTea Load (1.0ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 57)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 22.8ms | Allocations: 6316)
+Completed 200 OK in 650ms (Views: 12.3ms | ActiveRecord: 11.7ms | Allocations: 9063)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2704736276874159675)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to UpdateUser (20221025165651)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.7ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" character varying NOT NULL[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2704736276874159675)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (41.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "teatime_development"[0m
+  [1m[35m (29.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "teatime_test"[0m
+  [1m[35m (101.6ms)[0m  [1m[35mCREATE DATABASE "teatime_development" ENCODING = 'unicode'[0m
+  [1m[35m (37.6ms)[0m  [1m[35mCREATE DATABASE "teatime_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "likes" CASCADE[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "likes" ("id" bigserial primary key, "user_id" bigint NOT NULL, "tea_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_likes_on_tea_id_and_user_id" ON "likes" ("tea_id", "user_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE INDEX "index_likes_on_user_id" ON "likes" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "teas" CASCADE[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "teas" ("id" bigserial primary key, "flavor" character varying NOT NULL, "price" float NOT NULL, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_teas_on_flavor" ON "teas" ("flavor")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "quantity" integer NOT NULL, "tea_id" bigint NOT NULL, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_transactions_on_tea_id" ON "transactions" ("tea_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_transactions_on_user_id" ON "transactions" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_42cb2ae4ad"
+FOREIGN KEY ("tea_id")
+  REFERENCES "teas" ("id")
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_1e09b5dabf"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_d165608510"
+FOREIGN KEY ("tea_id")
+  REFERENCES "teas" ("id")
+[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_77364e6416"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220825205459)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220825164849),
+(20220825204934),
+(20220825205335);
+
+[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-10-25 16:59:58.104621"], ["updated_at", "2022-10-25 16:59:58.104621"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "8829e22ac5a95c1de116b8d75bc18659fb5b864a"], ["created_at", "2022-10-25 16:59:58.107794"], ["updated_at", "2022-10-25 16:59:58.107794"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "likes" CASCADE[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "likes" ("id" bigserial primary key, "user_id" bigint NOT NULL, "tea_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_likes_on_tea_id_and_user_id" ON "likes" ("tea_id", "user_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_likes_on_user_id" ON "likes" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "teas" CASCADE[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "teas" ("id" bigserial primary key, "flavor" character varying NOT NULL, "price" float NOT NULL, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_teas_on_flavor" ON "teas" ("flavor")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "quantity" integer NOT NULL, "tea_id" bigint NOT NULL, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_transactions_on_tea_id" ON "transactions" ("tea_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_transactions_on_user_id" ON "transactions" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_42cb2ae4ad"
+FOREIGN KEY ("tea_id")
+  REFERENCES "teas" ("id")
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_1e09b5dabf"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_d165608510"
+FOREIGN KEY ("tea_id")
+  REFERENCES "teas" ("id")
+[0m
+  [1m[35m (3.2ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_77364e6416"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220825205459)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220825164849),
+(20220825204934),
+(20220825205335);
+
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-10-25 16:59:58.137928"], ["updated_at", "2022-10-25 16:59:58.137928"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2022-10-25 16:59:58.139800"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "8829e22ac5a95c1de116b8d75bc18659fb5b864a"], ["created_at", "2022-10-25 16:59:58.141564"], ["updated_at", "2022-10-25 16:59:58.141564"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2704736276874159675)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to UpdateUser (20221025165651)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" character varying NOT NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "session_token" character varying NOT NULL[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_session_token" ON "users" ("session_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221025165651"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2704736276874159675)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (44.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "teatime_development"[0m
+  [1m[35m (20.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "teatime_test"[0m
+  [1m[35m (89.0ms)[0m  [1m[35mCREATE DATABASE "teatime_development" ENCODING = 'unicode'[0m
+  [1m[35m (41.4ms)[0m  [1m[35mCREATE DATABASE "teatime_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "likes" CASCADE[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "likes" ("id" bigserial primary key, "user_id" bigint NOT NULL, "tea_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_likes_on_tea_id_and_user_id" ON "likes" ("tea_id", "user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_likes_on_user_id" ON "likes" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "teas" CASCADE[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "teas" ("id" bigserial primary key, "flavor" character varying NOT NULL, "price" float NOT NULL, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_teas_on_flavor" ON "teas" ("flavor")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "quantity" integer NOT NULL, "tea_id" bigint NOT NULL, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_transactions_on_tea_id" ON "transactions" ("tea_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_transactions_on_user_id" ON "transactions" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_session_token" ON "users" ("session_token")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_42cb2ae4ad"
+FOREIGN KEY ("tea_id")
+  REFERENCES "teas" ("id")
+[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_1e09b5dabf"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_d165608510"
+FOREIGN KEY ("tea_id")
+  REFERENCES "teas" ("id")
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_77364e6416"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20221025165651)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220825164849),
+(20220825204934),
+(20220825205335),
+(20220825205459);
+
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-10-25 17:01:08.768783"], ["updated_at", "2022-10-25 17:01:08.768783"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "cc7214788efea7571c59ac493bb2f4726d34aa44"], ["created_at", "2022-10-25 17:01:08.771996"], ["updated_at", "2022-10-25 17:01:08.771996"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "likes" CASCADE[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "likes" ("id" bigserial primary key, "user_id" bigint NOT NULL, "tea_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_likes_on_tea_id_and_user_id" ON "likes" ("tea_id", "user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_likes_on_user_id" ON "likes" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "teas" CASCADE[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "teas" ("id" bigserial primary key, "flavor" character varying NOT NULL, "price" float NOT NULL, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_teas_on_flavor" ON "teas" ("flavor")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "quantity" integer NOT NULL, "tea_id" bigint NOT NULL, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_transactions_on_tea_id" ON "transactions" ("tea_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_transactions_on_user_id" ON "transactions" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_session_token" ON "users" ("session_token")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_42cb2ae4ad"
+FOREIGN KEY ("tea_id")
+  REFERENCES "teas" ("id")
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_1e09b5dabf"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_d165608510"
+FOREIGN KEY ("tea_id")
+  REFERENCES "teas" ("id")
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_77364e6416"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20221025165651)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220825164849),
+(20220825204934),
+(20220825205335),
+(20220825205459);
+
+[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-10-25 17:01:08.822007"], ["updated_at", "2022-10-25 17:01:08.822007"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2022-10-25 17:01:08.824074"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "cc7214788efea7571c59ac493bb2f4726d34aa44"], ["created_at", "2022-10-25 17:01:08.825844"], ["updated_at", "2022-10-25 17:01:08.825844"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes"[0m
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  [1m[36mTea Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "Green"], ["LIMIT", 1]]
+  [1m[36mTea Create (0.4ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["flavor", "Green"], ["price", 1.75], ["description", "Green tea is a type of tea that is made from Camellia sinensis leaves and buds that have not undergone the same withering and oxidation process used to make oolong teas and black teas. Green tea originated in China, but its production and manufacture has spread to other countries in East Asia."], ["created_at", "2022-10-25 17:01:08.857327"], ["updated_at", "2022-10-25 17:01:08.857327"]]
+  [1m[36mTea Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "Oolong"], ["LIMIT", 1]]
+  [1m[36mTea Create (0.1ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["flavor", "Oolong"], ["price", 2.0], ["description", "Oolong tea is a type of tea that is sometimes called \"wulong\" (also pronounced \"oolong\") or \"black dragon\" tea. Oolong teas are semi-oxidized teas. They are sometimes called \"semi-fermented teas\" though this moniker is considered to be less technically correct than semi-oxidized teas. After the tea leaves are picked, they are rolled and allowed to oxidize. Oxidation produces floral notes that characterize many oolongs."], ["created_at", "2022-10-25 17:01:08.859807"], ["updated_at", "2022-10-25 17:01:08.859807"]]
+  [1m[36mTea Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "Earl Grey"], ["LIMIT", 1]]
+  [1m[36mTea Create (0.1ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["flavor", "Earl Grey"], ["price", 2.5], ["description", "Earl Grey tea is a tea blend which has been flavoured with the addition of oil of bergamot. The rind's fragrant oil is added to black tea to give Earl Grey its unique taste. Traditionally, Earl Grey was made from black teas such as China keemun and therefore intended to be drunk without milk. However, tea companies have since begun to offer Earl Grey based upon stronger teas such as Ceylons which are better suited to the addition of milk or cream. Other varieties have been introduced as well, such as green or oolong."], ["created_at", "2022-10-25 17:01:08.861651"], ["updated_at", "2022-10-25 17:01:08.861651"]]
+  [1m[36mTea Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "Rooibos"], ["LIMIT", 1]]
+  [1m[36mTea Create (0.1ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["flavor", "Rooibos"], ["price", 3.0], ["description", "Rooibos (/ˈrɔɪbɒs/ ROY-boss; Afrikaans: [rɔːibɔs]; Aspalathus linearis), meaning 'red bush'; is a broom-like member of the plant family Fabaceae that grows in South Africa's fynbos. The leaves are used to make a herbal tea that is called by the names: rooibos (especially in Southern Africa), bush tea, red tea, or redbush tea (predominantly in Great Britain). The tea has been popular in Southern Africa for generations, but is now consumed in many countries worldwide. It is sometimes spelled rooibosch in accordance with the original Dutch for 'red bush'. The tea has a taste and color somewhat similar to hibiscus tea, with more or less of an earthy flavor like yerba mate."], ["created_at", "2022-10-25 17:01:08.863001"], ["updated_at", "2022-10-25 17:01:08.863001"]]
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "madz"], ["created_at", "2022-10-25 17:01:08.866569"], ["updated_at", "2022-10-25 17:01:08.866569"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (35.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "teatime_development"[0m
+  [1m[35m (27.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "teatime_test"[0m
+  [1m[35m (105.1ms)[0m  [1m[35mCREATE DATABASE "teatime_development" ENCODING = 'unicode'[0m
+  [1m[35m (36.4ms)[0m  [1m[35mCREATE DATABASE "teatime_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "likes" CASCADE[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "likes" ("id" bigserial primary key, "user_id" bigint NOT NULL, "tea_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_likes_on_tea_id_and_user_id" ON "likes" ("tea_id", "user_id")[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE INDEX "index_likes_on_user_id" ON "likes" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "teas" CASCADE[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "teas" ("id" bigserial primary key, "flavor" character varying NOT NULL, "price" float NOT NULL, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_teas_on_flavor" ON "teas" ("flavor")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "quantity" integer NOT NULL, "tea_id" bigint NOT NULL, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE INDEX "index_transactions_on_tea_id" ON "transactions" ("tea_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_transactions_on_user_id" ON "transactions" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_session_token" ON "users" ("session_token")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_42cb2ae4ad"
+FOREIGN KEY ("tea_id")
+  REFERENCES "teas" ("id")
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_1e09b5dabf"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_d165608510"
+FOREIGN KEY ("tea_id")
+  REFERENCES "teas" ("id")
+[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_77364e6416"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20221025165651)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220825164849),
+(20220825204934),
+(20220825205335),
+(20220825205459);
+
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-10-25 17:16:41.189885"], ["updated_at", "2022-10-25 17:16:41.189885"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "cc7214788efea7571c59ac493bb2f4726d34aa44"], ["created_at", "2022-10-25 17:16:41.193049"], ["updated_at", "2022-10-25 17:16:41.193049"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "likes" CASCADE[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "likes" ("id" bigserial primary key, "user_id" bigint NOT NULL, "tea_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_likes_on_tea_id_and_user_id" ON "likes" ("tea_id", "user_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_likes_on_user_id" ON "likes" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "teas" CASCADE[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "teas" ("id" bigserial primary key, "flavor" character varying NOT NULL, "price" float NOT NULL, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_teas_on_flavor" ON "teas" ("flavor")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "quantity" integer NOT NULL, "tea_id" bigint NOT NULL, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE INDEX "index_transactions_on_tea_id" ON "transactions" ("tea_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_transactions_on_user_id" ON "transactions" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_session_token" ON "users" ("session_token")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_42cb2ae4ad"
+FOREIGN KEY ("tea_id")
+  REFERENCES "teas" ("id")
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_1e09b5dabf"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_d165608510"
+FOREIGN KEY ("tea_id")
+  REFERENCES "teas" ("id")
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_77364e6416"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20221025165651)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220825164849),
+(20220825204934),
+(20220825205335),
+(20220825205459);
+
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-10-25 17:16:41.222996"], ["updated_at", "2022-10-25 17:16:41.222996"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2022-10-25 17:16:41.224933"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "cc7214788efea7571c59ac493bb2f4726d34aa44"], ["created_at", "2022-10-25 17:16:41.226575"], ["updated_at", "2022-10-25 17:16:41.226575"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes"[0m
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  [1m[36mTea Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "Green"], ["LIMIT", 1]]
+  [1m[36mTea Create (0.3ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["flavor", "Green"], ["price", 1.75], ["description", "Green tea is a type of tea that is made from Camellia sinensis leaves and buds that have not undergone the same withering and oxidation process used to make oolong teas and black teas. Green tea originated in China, but its production and manufacture has spread to other countries in East Asia."], ["created_at", "2022-10-25 17:16:41.258058"], ["updated_at", "2022-10-25 17:16:41.258058"]]
+  [1m[36mTea Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "Oolong"], ["LIMIT", 1]]
+  [1m[36mTea Create (0.1ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["flavor", "Oolong"], ["price", 2.0], ["description", "Oolong tea is a type of tea that is sometimes called \"wulong\" (also pronounced \"oolong\") or \"black dragon\" tea. Oolong teas are semi-oxidized teas. They are sometimes called \"semi-fermented teas\" though this moniker is considered to be less technically correct than semi-oxidized teas. After the tea leaves are picked, they are rolled and allowed to oxidize. Oxidation produces floral notes that characterize many oolongs."], ["created_at", "2022-10-25 17:16:41.260180"], ["updated_at", "2022-10-25 17:16:41.260180"]]
+  [1m[36mTea Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "Earl Grey"], ["LIMIT", 1]]
+  [1m[36mTea Create (0.1ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["flavor", "Earl Grey"], ["price", 2.5], ["description", "Earl Grey tea is a tea blend which has been flavoured with the addition of oil of bergamot. The rind's fragrant oil is added to black tea to give Earl Grey its unique taste. Traditionally, Earl Grey was made from black teas such as China keemun and therefore intended to be drunk without milk. However, tea companies have since begun to offer Earl Grey based upon stronger teas such as Ceylons which are better suited to the addition of milk or cream. Other varieties have been introduced as well, such as green or oolong."], ["created_at", "2022-10-25 17:16:41.261399"], ["updated_at", "2022-10-25 17:16:41.261399"]]
+  [1m[36mTea Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "Rooibos"], ["LIMIT", 1]]
+  [1m[36mTea Create (0.1ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["flavor", "Rooibos"], ["price", 3.0], ["description", "Rooibos (/ˈrɔɪbɒs/ ROY-boss; Afrikaans: [rɔːibɔs]; Aspalathus linearis), meaning 'red bush'; is a broom-like member of the plant family Fabaceae that grows in South Africa's fynbos. The leaves are used to make a herbal tea that is called by the names: rooibos (especially in Southern Africa), bush tea, red tea, or redbush tea (predominantly in Great Britain). The tea has been popular in Southern Africa for generations, but is now consumed in many countries worldwide. It is sometimes spelled rooibosch in accordance with the original Dutch for 'red bush'. The tea has a taste and color somewhat similar to hibiscus tea, with more or less of an earthy flavor like yerba mate."], ["created_at", "2022-10-25 17:16:41.262531"], ["updated_at", "2022-10-25 17:16:41.262531"]]
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53:in `generate_unique_session_token'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "madz"], ["created_at", "2022-10-25 17:16:41.530470"], ["updated_at", "2022-10-25 17:16:41.530470"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"]]
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53:in `generate_unique_session_token'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "papi"], ["created_at", "2022-10-25 17:16:41.772979"], ["updated_at", "2022-10-25 17:16:41.772979"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"]]
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53:in `generate_unique_session_token'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "kriz"], ["created_at", "2022-10-25 17:16:42.015746"], ["updated_at", "2022-10-25 17:16:42.015746"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"]]
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53:in `generate_unique_session_token'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "abz"], ["created_at", "2022-10-25 17:16:42.257695"], ["updated_at", "2022-10-25 17:16:42.257695"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"]]
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53:in `generate_unique_session_token'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "darude"], ["created_at", "2022-10-25 17:16:42.501109"], ["updated_at", "2022-10-25 17:16:42.501109"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"]]
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53:in `generate_unique_session_token'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "didi"], ["created_at", "2022-10-25 17:16:42.743241"], ["updated_at", "2022-10-25 17:16:42.743241"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"]]
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53:in `generate_unique_session_token'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "taytay"], ["created_at", "2022-10-25 17:16:42.986824"], ["updated_at", "2022-10-25 17:16:42.986824"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"]]
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53:in `generate_unique_session_token'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "diz"], ["created_at", "2022-10-25 17:16:43.228953"], ["updated_at", "2022-10-25 17:16:43.228953"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.6ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "tea_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["tea_id", 1], ["user_id", 2], ["created_at", "2022-10-25 17:16:43.242357"], ["updated_at", "2022-10-25 17:16:43.242357"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.4ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "tea_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 2], ["tea_id", 1], ["user_id", 3], ["created_at", "2022-10-25 17:16:43.244920"], ["updated_at", "2022-10-25 17:16:43.244920"]]
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.3ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "tea_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["tea_id", 1], ["user_id", 4], ["created_at", "2022-10-25 17:16:43.246967"], ["updated_at", "2022-10-25 17:16:43.246967"]]
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTransaction Create (1.9ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "tea_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 3], ["tea_id", 1], ["user_id", 3], ["created_at", "2022-10-25 17:16:43.248997"], ["updated_at", "2022-10-25 17:16:43.248997"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.4ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "tea_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["tea_id", 2], ["user_id", 1], ["created_at", "2022-10-25 17:16:43.252819"], ["updated_at", "2022-10-25 17:16:43.252819"]]
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.5ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "tea_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["tea_id", 2], ["user_id", 5], ["created_at", "2022-10-25 17:16:43.254941"], ["updated_at", "2022-10-25 17:16:43.254941"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.3ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "tea_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 5], ["tea_id", 2], ["user_id", 1], ["created_at", "2022-10-25 17:16:43.257247"], ["updated_at", "2022-10-25 17:16:43.257247"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.3ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "tea_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 3], ["tea_id", 2], ["user_id", 1], ["created_at", "2022-10-25 17:16:43.259197"], ["updated_at", "2022-10-25 17:16:43.259197"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.3ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "tea_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 2], ["tea_id", 2], ["user_id", 1], ["created_at", "2022-10-25 17:16:43.261313"], ["updated_at", "2022-10-25 17:16:43.261313"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.3ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "tea_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["tea_id", 2], ["user_id", 6], ["created_at", "2022-10-25 17:16:43.263266"], ["updated_at", "2022-10-25 17:16:43.263266"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.3ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "tea_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["tea_id", 3], ["user_id", 6], ["created_at", "2022-10-25 17:16:43.265168"], ["updated_at", "2022-10-25 17:16:43.265168"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.2ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "tea_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 2], ["tea_id", 3], ["user_id", 2], ["created_at", "2022-10-25 17:16:43.267122"], ["updated_at", "2022-10-25 17:16:43.267122"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.2ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "tea_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 3], ["tea_id", 3], ["user_id", 6], ["created_at", "2022-10-25 17:16:43.268860"], ["updated_at", "2022-10-25 17:16:43.268860"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.2ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "tea_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 15], ["tea_id", 3], ["user_id", 7], ["created_at", "2022-10-25 17:16:43.270568"], ["updated_at", "2022-10-25 17:16:43.270568"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.3ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "tea_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 2], ["tea_id", 3], ["user_id", 8], ["created_at", "2022-10-25 17:16:43.272404"], ["updated_at", "2022-10-25 17:16:43.272404"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.3ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "tea_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 2], ["tea_id", 4], ["user_id", 8], ["created_at", "2022-10-25 17:16:43.274300"], ["updated_at", "2022-10-25 17:16:43.274300"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.3ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "tea_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["tea_id", 4], ["user_id", 7], ["created_at", "2022-10-25 17:16:43.276405"], ["updated_at", "2022-10-25 17:16:43.276405"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.3ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "tea_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 3], ["tea_id", 4], ["user_id", 8], ["created_at", "2022-10-25 17:16:43.278385"], ["updated_at", "2022-10-25 17:16:43.278385"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.3ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "tea_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 2], ["tea_id", 4], ["user_id", 4], ["created_at", "2022-10-25 17:16:43.280195"], ["updated_at", "2022-10-25 17:16:43.280195"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.3ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "tea_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["tea_id", 4], ["user_id", 5], ["created_at", "2022-10-25 17:16:43.282125"], ["updated_at", "2022-10-25 17:16:43.282125"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLike Create (1.2ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["tea_id", 1], ["created_at", "2022-10-25 17:16:43.288943"], ["updated_at", "2022-10-25 17:16:43.288943"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLike Create (0.4ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["tea_id", 1], ["created_at", "2022-10-25 17:16:43.291887"], ["updated_at", "2022-10-25 17:16:43.291887"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 4], ["tea_id", 1], ["created_at", "2022-10-25 17:16:43.293980"], ["updated_at", "2022-10-25 17:16:43.293980"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["tea_id", 1], ["created_at", "2022-10-25 17:16:43.295914"], ["updated_at", "2022-10-25 17:16:43.295914"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["tea_id", 2], ["created_at", "2022-10-25 17:16:43.297844"], ["updated_at", "2022-10-25 17:16:43.297844"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mLike Create (0.4ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["tea_id", 2], ["created_at", "2022-10-25 17:16:43.299902"], ["updated_at", "2022-10-25 17:16:43.299902"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["tea_id", 3], ["created_at", "2022-10-25 17:16:43.301961"], ["updated_at", "2022-10-25 17:16:43.301961"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLike Create (0.2ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["tea_id", 3], ["created_at", "2022-10-25 17:16:43.304783"], ["updated_at", "2022-10-25 17:16:43.304783"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mLike Create (0.1ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 6], ["tea_id", 3], ["created_at", "2022-10-25 17:16:43.306623"], ["updated_at", "2022-10-25 17:16:43.306623"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mLike Create (0.1ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 7], ["tea_id", 3], ["created_at", "2022-10-25 17:16:43.308374"], ["updated_at", "2022-10-25 17:16:43.308374"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mLike Create (0.1ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 6], ["tea_id", 4], ["created_at", "2022-10-25 17:16:43.310202"], ["updated_at", "2022-10-25 17:16:43.310202"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mLike Create (0.2ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 8], ["tea_id", 4], ["created_at", "2022-10-25 17:16:43.311900"], ["updated_at", "2022-10-25 17:16:43.311900"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mLike Create (0.2ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 4], ["tea_id", 4], ["created_at", "2022-10-25 17:16:43.313731"], ["updated_at", "2022-10-25 17:16:43.313731"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mLike Create (0.2ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["tea_id", 4], ["created_at", "2022-10-25 17:16:43.315726"], ["updated_at", "2022-10-25 17:16:43.315726"]]
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 7], ["tea_id", 4], ["created_at", "2022-10-25 17:16:43.318251"], ["updated_at", "2022-10-25 17:16:43.318251"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/api/api/teas" for 127.0.0.1 at 2022-10-25 10:54:12 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/api/api/teas"):
+  
+Started GET "/api/api/teas" for 127.0.0.1 at 2022-10-25 10:54:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/api/teas"):
+  
+Started GET "/api/session" for ::1 at 2022-10-25 10:54:30 -0700
+
+SyntaxError - syntax error, unexpected [, expecting `do' or '{' or '('
+...tion :require_logged_in, only [:destroy]
+...                              ^:
+  app/controllers/api/sessions_controller.rb:3:in `'
+
+Started POST "/__better_errors/998fcab08d32c354/variables" for ::1 at 2022-10-25 10:54:30 -0700
+Started GET "/favicon.ico" for ::1 at 2022-10-25 10:54:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/session" for ::1 at 2022-10-25 10:54:47 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 35ms (Views: 0.3ms | ActiveRecord: 18.9ms | Allocations: 5274)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-10-25 10:58:14 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"darude", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 644)
+
+
+
+ActionController::InvalidAuthenticityToken - Can't verify CSRF token authenticity.:
+
+Started POST "/api/session" for 127.0.0.1 at 2022-10-25 10:58:33 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"darude", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "darude"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:31:in `find_by_credentials'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  [1m[36mUser Update (2.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "session_token" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2022-10-25 17:58:34.290231"], ["session_token", "[FILTERED]"], ["id", 5]]
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.5ms | Allocations: 289)
+Completed 200 OK in 267ms (Views: 1.2ms | ActiveRecord: 11.0ms | Allocations: 11805)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 10:59:37 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 1.1ms | Allocations: 151)
+Completed 200 OK in 8ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 1356)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-10-25 11:00:11 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"darude", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Filter chain halted as :require_logged_out rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 846)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2022-10-25 11:00:57 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "session_token" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2022-10-25 18:00:57.842043"], ["session_token", "[FILTERED]"], ["id", 5]]
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41:in `reset_session_token'
+Completed 204 No Content in 17ms (ActiveRecord: 2.7ms | Allocations: 3138)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:01:20 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 0.6ms | Allocations: 898)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2022-10-25 11:03:04 -0700
+
+NameError - undefined local variable or method `require_logged_out' for Api::UsersController:Class
+  before_action require_logged_out, only: [:create]
+                ^^^^^^^^^^^^^^^^^^
+Did you mean?  require_relative:
+  app/controllers/api/users_controller.rb:4:in `<class:UsersController>'
+  app/controllers/api/users_controller.rb:1:in `<top (required)>'
+
+Started POST "/api/users" for 127.0.0.1 at 2022-10-25 11:03:27 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"username"=>"bob", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.3ms | Allocations: 1802)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/api/users_controller.rb:18:in `user_params'
+  app/controllers/api/users_controller.rb:7:in `create'
+
+Started POST "/api/users" for 127.0.0.1 at 2022-10-25 11:04:38 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"username"=>"bob", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 400 Bad Request in 8ms (ActiveRecord: 3.1ms | Allocations: 4022)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/api/users_controller.rb:18:in `user_params'
+  app/controllers/api/users_controller.rb:7:in `create'
+
+Started POST "/api/users" for 127.0.0.1 at 2022-10-25 11:05:32 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"username"=>"bob", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.3ms | Allocations: 1783)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/api/users_controller.rb:18:in `user_params'
+  app/controllers/api/users_controller.rb:7:in `create'
+
+Started POST "/api/users" for 127.0.0.1 at 2022-10-25 11:06:01 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"bob", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:53:in `generate_unique_session_token'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53:in `generate_unique_session_token'
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "bob"], ["created_at", "2022-10-25 18:06:01.922791"], ["updated_at", "2022-10-25 18:06:01.922791"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"]]
+  ↳ app/controllers/api/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "session_token" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2022-10-25 18:06:01.927594"], ["session_token", "[FILTERED]"], ["id", 9]]
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.2ms | Allocations: 189)
+Completed 200 OK in 292ms (Views: 0.9ms | ActiveRecord: 7.2ms | Allocations: 7962)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:06:18 -0700
+Processing by Api::SessionsController#show as JSON
+  Parameters: {"user"=>{"username"=>"bob", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.4ms | Allocations: 206)
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 1786)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2022-10-25 11:06:24 -0700
+Processing by Api::SessionsController#destroy as JSON
+  Parameters: {"user"=>{"username"=>"bob", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "session_token" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2022-10-25 18:06:24.546233"], ["session_token", "[FILTERED]"], ["id", 9]]
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41:in `reset_session_token'
+Completed 204 No Content in 9ms (ActiveRecord: 1.6ms | Allocations: 3320)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:06:28 -0700
+Processing by Api::SessionsController#show as JSON
+  Parameters: {"user"=>{"username"=>"bob", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 913)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:10:19 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::SessionsController#show as JSON
+  Parameters: {"username"=>"bob", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 2.0ms | Allocations: 6480)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-10-25 11:10:28 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"bob", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bob"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:31:in `find_by_credentials'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "session_token" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2022-10-25 18:10:28.315206"], ["session_token", "[FILTERED]"], ["id", 9]]
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.7ms | Allocations: 512)
+Completed 200 OK in 293ms (Views: 4.2ms | ActiveRecord: 6.3ms | Allocations: 12108)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2022-10-25 11:10:33 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"username"=>"bob", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Filter chain halted as :require_logged_out rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1328)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2022-10-25 11:10:39 -0700
+Processing by Api::SessionsController#destroy as JSON
+  Parameters: {"username"=>"bob", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "session_token" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2022-10-25 18:10:39.447844"], ["session_token", "[FILTERED]"], ["id", 9]]
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41:in `reset_session_token'
+Completed 204 No Content in 10ms (ActiveRecord: 1.7ms | Allocations: 3192)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2022-10-25 11:10:49 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"username"=>"bob", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.3ms | Allocations: 1487)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/api/users_controller.rb:18:in `user_params'
+  app/controllers/api/users_controller.rb:7:in `create'
+
+Started POST "/api/users" for 127.0.0.1 at 2022-10-25 11:12:46 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::UsersController#create as JSON
+  Parameters: {"username"=>"bob", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 400 Bad Request in 8ms (ActiveRecord: 3.0ms | Allocations: 6865)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/api/users_controller.rb:18:in `user_params'
+  app/controllers/api/users_controller.rb:7:in `create'
+

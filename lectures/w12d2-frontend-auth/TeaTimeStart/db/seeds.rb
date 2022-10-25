@@ -27,14 +27,14 @@ ActiveRecord::Base.transaction do
  
 puts "Creating users..."
 
-  mike = User.create!(username: 'madz')
-  paulo = User.create!(username: 'papi')
-  chris = User.create!(username: 'kriz')
-  abbey = User.create!(username: 'abz')
-  darren = User.create!(username: 'darude')
-  diego = User.create!(username: 'didi')
-  taylor = User.create!(username: 'taytay')
-  disnee = User.create!(username: "diz")
+  mike = User.create!(username: 'madz', password: 'password')
+  paulo = User.create!(username: 'papi', password: 'password')
+  chris = User.create!(username: 'kriz', password: 'password')
+  abbey = User.create!(username: 'abz', password: 'password')
+  darren = User.create!(username: 'darude', password: 'password')
+  diego = User.create!(username: 'didi', password: 'password')
+  taylor = User.create!(username: 'taytay', password: 'password')
+  disnee = User.create!(username: "diz", password: 'password')
 
   puts "Creating transactions..."
 
