@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 import { requestTeas, postTea } from './utils/tea_api_utils';
 import { fetchAllTeas} from './store/teaReducer';
 import { csrfFetch, restoreSession } from './store/csrf';
-import { loginUser } from './store/sessionReducer';
+import { loginUser, logoutUser } from './store/sessionReducer';
 
 const initialRender = () => {
   let currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
@@ -18,7 +18,6 @@ const initialRender = () => {
       users: { [currentUser.id]: currentUser },
       session: { currentUser: currentUser.id }
     };
-    
   }
   
   const store = configureStore(initialState);
@@ -34,6 +33,7 @@ const initialRender = () => {
   window.fetchTeaDetail = fetchTeaDetail;
   window.csrfFetch = csrfFetch;
   window.loginUser = loginUser;
+  window.logoutUser = logoutUser;
   //
   ReactDOM.render(
     <React.StrictMode>

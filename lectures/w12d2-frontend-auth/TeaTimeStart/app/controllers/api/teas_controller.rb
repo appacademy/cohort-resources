@@ -1,5 +1,6 @@
 class Api::TeasController < ApplicationController
   # controller is under the api folder to indicate we are making backend requests
+  before_action :require_logged_in, only: [:create]
 
   def index
     @teas = Tea.all
