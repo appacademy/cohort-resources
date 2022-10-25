@@ -1,5 +1,5 @@
 class Api::UsersController < ApplicationController
-  # wrap_parameters :user, include: User.attribute_names + ['password']
+  wrap_parameters :user, include: User.attribute_names + ['password']
 
   before_action :require_logged_out, only: [:create]
 

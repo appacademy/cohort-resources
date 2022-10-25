@@ -7,33 +7,42 @@ import {receiveTea, receiveTeas, removeTea, fetchTeaDetail } from './store/teaRe
 import { Provider } from 'react-redux';
 import { requestTeas, postTea } from './utils/tea_api_utils';
 import { fetchAllTeas} from './store/teaReducer';
+import { csrfFetch, restoreSession } from './store/csrf';
+import { loginUser } from './store/sessionReducer';
 
-const initialState = {
-  // teas: {
-  //   1: {
-  //     id: 1, flavor: 'green', price: 5.33
-  //   }
-  // }
+const initialRender = () => {
+  let currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+  let initialState = {};
+  if (currentUser) {
+    initialState = {
+      users: { [currentUser.id]: currentUser },
+      session: { currentUser: currentUser.id }
+    };
+    
+  }
+  
+  const store = configureStore(initialState);
+  
+  // testing
+  window.store = store;
+  window.receiveTea = receiveTea;
+  window.receiveTeas = receiveTeas;
+  window.removeTea = removeTea;
+  window.requestTeas = requestTeas;
+  window.postTea = postTea;
+  window.fetchAllTeas = fetchAllTeas;
+  window.fetchTeaDetail = fetchTeaDetail;
+  window.csrfFetch = csrfFetch;
+  window.loginUser = loginUser;
+  //
+  ReactDOM.render(
+    <React.StrictMode>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
 };
 
-const store = configureStore(initialState);
-
-// testing
-window.store = store;
-window.receiveTea = receiveTea;
-window.receiveTeas = receiveTeas;
-window.removeTea = removeTea;
-window.requestTeas = requestTeas;
-window.postTea = postTea;
-window.fetchAllTeas = fetchAllTeas;
-window.fetchTeaDetail = fetchTeaDetail;
-//
-
-ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+restoreSession().then(initialRender);

@@ -7766,3 +7766,2380 @@ ActionController::ParameterMissing - param is missing or the value is empty: use
   app/controllers/api/users_controller.rb:18:in `user_params'
   app/controllers/api/users_controller.rb:7:in `create'
 
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:14:09 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (1.9ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.5ms | Allocations: 167)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 26.5ms | Allocations: 5600)
+Completed 200 OK in 39ms (Views: 20.4ms | ActiveRecord: 12.3ms | Allocations: 9503)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:14:28 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1273)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:14:38 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 893)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:15:00 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 61)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.5ms | Allocations: 1251)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1690)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:15:04 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 875)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-10-25 11:16:09 -0700
+Processing by Api::SessionsController#create as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:31:in `find_by_credentials'
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1553)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2022-10-25 11:16:34 -0700
+Processing by Api::UsersController#create as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 400 Bad Request in 41ms (ActiveRecord: 0.6ms | Allocations: 1381)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/api/users_controller.rb:18:in `user_params'
+  app/controllers/api/users_controller.rb:7:in `create'
+
+Started POST "/api/users" for 127.0.0.1 at 2022-10-25 11:17:23 -0700
+Processing by Api::UsersController#create as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.3ms | Allocations: 1364)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/api/users_controller.rb:18:in `user_params'
+  app/controllers/api/users_controller.rb:7:in `create'
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:17:32 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (1.9ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 3.8ms | Allocations: 1211)
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 1.9ms | Allocations: 1603)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:26:48 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 21ms (Views: 0.2ms | ActiveRecord: 5.9ms | Allocations: 6532)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:26:48 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (1.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 69)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 5.8ms | Allocations: 2741)
+Completed 200 OK in 11ms (Views: 6.0ms | ActiveRecord: 1.3ms | Allocations: 5006)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:27:31 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 1014)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:27:31 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.7ms | Allocations: 1212)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1625)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:27:32 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 904)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:27:32 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 4.0ms | Allocations: 1212)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.3ms | Allocations: 1614)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:27:33 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 906)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:27:33 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 41.1ms | Allocations: 1212)
+Completed 200 OK in 42ms (Views: 41.6ms | ActiveRecord: 0.4ms | Allocations: 1618)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:27:34 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 906)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:27:34 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.7ms | Allocations: 1211)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1621)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:27:34 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 906)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:27:34 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.5ms | Allocations: 1211)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1630)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:27:35 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 894)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:27:35 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.4ms | Allocations: 1211)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1613)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:27:36 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 936)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:27:36 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.0ms | Allocations: 1211)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1620)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:27:37 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 900)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:27:37 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.1ms | Allocations: 1211)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 1621)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:29:01 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 897)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:29:01 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.6ms | Allocations: 1211)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 1621)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:29:06 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 900)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:29:06 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.6ms | Allocations: 1211)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1621)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:29:07 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 901)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:29:07 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.6ms | Allocations: 1211)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1630)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:29:11 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 900)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:29:11 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.2ms | Allocations: 1211)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 1627)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:29:13 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 891)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:29:13 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.3ms | Allocations: 1211)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 1621)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:29:22 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 916)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:29:22 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.3ms | Allocations: 1211)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 1624)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:29:50 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 900)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:30:08 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 897)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:40:22 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 23ms (Views: 0.2ms | ActiveRecord: 7.9ms | Allocations: 3944)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:40:22 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.7ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 3.9ms | Allocations: 1246)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.7ms | Allocations: 1652)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:40:46 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 909)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:41:00 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 930)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:41:10 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 888)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-10-25 11:42:19 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"darude", "password"=>"[FILTERED]", "session"=>{"username"=>"darude", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "darude"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:31:in `find_by_credentials'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "session_token" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2022-10-25 18:42:19.516406"], ["session_token", "[FILTERED]"], ["id", 5]]
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.5ms | Allocations: 289)
+Completed 200 OK in 299ms (Views: 1.2ms | ActiveRecord: 7.6ms | Allocations: 9033)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-10-25 11:42:33 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"darude", "password"=>"[FILTERED]", "session"=>{"username"=>"darude", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Filter chain halted as :require_logged_out rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1168)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:42:41 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.3ms | Allocations: 151)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 1072)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:42:52 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.4ms | Allocations: 135)
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 2.3ms | Allocations: 1053)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:42:52 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 54)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.2ms | Allocations: 1225)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms | Allocations: 1639)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:44:45 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.7ms | Allocations: 136)
+Completed 200 OK in 12ms (Views: 1.3ms | ActiveRecord: 0.9ms | Allocations: 1046)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:44:45 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.6ms | Allocations: 1211)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1644)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:44:56 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.2ms | Allocations: 135)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1056)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:44:56 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.3ms | Allocations: 1211)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 1628)
+
+
+Started POST "/api/teas" for 127.0.0.1 at 2022-10-25 11:45:14 -0700
+Processing by Api::TeasController#create as JSON
+  Parameters: {"flavor"=>"Dragon's Blood", "price"=>"1234", "description"=>"Still the berst", "tea"=>{"flavor"=>"Dragon's Blood", "price"=>"1234", "description"=>"Still the berst"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 552)
+
+
+
+ActionController::InvalidAuthenticityToken - Can't verify CSRF token authenticity.:
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:46:13 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.6ms | Allocations: 135)
+Completed 200 OK in 10ms (Views: 1.1ms | ActiveRecord: 0.5ms | Allocations: 1062)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:46:13 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.6ms | Allocations: 1211)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 1613)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:46:26 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.3ms | Allocations: 135)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 1041)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:46:26 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.4ms | Allocations: 1211)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 1637)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:46:33 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 1.2ms | Allocations: 135)
+Completed 200 OK in 11ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 1035)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:46:33 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.9ms | Allocations: 1211)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.5ms | Allocations: 1623)
+
+
+Started POST "/api/teas" for 127.0.0.1 at 2022-10-25 11:46:41 -0700
+Processing by Api::TeasController#create as JSON
+  Parameters: {"flavor"=>"Dragon's Blood", "price"=>"12456", "description"=>"Woah", "tea"=>{"flavor"=>"Dragon's Blood", "price"=>"12456", "description"=>"Woah"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teas_controller.rb:18:in `create'
+  [1m[36mTea Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "Dragon's Blood"], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `create'
+  [1m[36mTea Create (3.2ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["flavor", "Dragon's Blood"], ["price", 12456.0], ["description", "Woah"], ["created_at", "2022-10-25 18:46:41.166340"], ["updated_at", "2022-10-25 18:46:41.166340"]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/teas_controller.rb:18:in `create'
+  Rendering api/teas/info.json.jbuilder
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 52)
+  Rendered api/teas/info.json.jbuilder (Duration: 2.0ms | Allocations: 257)
+Completed 200 OK in 21ms (Views: 3.6ms | ActiveRecord: 5.3ms | Allocations: 4011)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:47:42 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 1.3ms | Allocations: 136)
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1057)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:47:42 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 9.0ms | Allocations: 1357)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.4ms | Allocations: 1780)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:47:56 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.2ms | Allocations: 135)
+Completed 200 OK in 13ms (Views: 6.7ms | ActiveRecord: 0.2ms | Allocations: 1047)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:47:56 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.4ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.7ms | Allocations: 1357)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 1778)
+
+
+Started POST "/api/teas" for 127.0.0.1 at 2022-10-25 11:48:04 -0700
+Processing by Api::TeasController#create as JSON
+  Parameters: {"flavor"=>"hello", "price"=>"hello", "description"=>"hello", "tea"=>{"flavor"=>"hello", "price"=>"hello", "description"=>"hello"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teas_controller.rb:18:in `create'
+  [1m[36mTea Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "hello"], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `create'
+  [1m[36mTea Create (0.8ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["flavor", "hello"], ["price", 0.0], ["description", "hello"], ["created_at", "2022-10-25 18:48:04.410695"], ["updated_at", "2022-10-25 18:48:04.410695"]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/teas_controller.rb:18:in `create'
+  Rendering api/teas/info.json.jbuilder
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 52)
+  Rendered api/teas/info.json.jbuilder (Duration: 0.6ms | Allocations: 184)
+Completed 200 OK in 12ms (Views: 1.3ms | ActiveRecord: 2.1ms | Allocations: 3306)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:50:09 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 817)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:50:09 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.2ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 1924)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:54:27 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.4ms | Allocations: 136)
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 1039)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:54:27 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 3.4ms | Allocations: 1503)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms | Allocations: 1935)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:56:43 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.6ms | Allocations: 135)
+Completed 200 OK in 10ms (Views: 1.8ms | ActiveRecord: 0.6ms | Allocations: 1047)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:56:43 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 7.3ms | Allocations: 1503)
+Completed 200 OK in 12ms (Views: 7.8ms | ActiveRecord: 0.4ms | Allocations: 1921)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:56:45 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.4ms | Allocations: 135)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 1058)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:56:45 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.3ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1935)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:58:27 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.5ms | Allocations: 135)
+Completed 200 OK in 12ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 1056)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:58:27 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.8ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1923)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 11:58:32 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.2ms | Allocations: 135)
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 1053)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 11:58:32 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.9ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1936)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:00:57 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.7ms | Allocations: 135)
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 1038)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:00:57 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.0ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1932)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:00:58 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.2ms | Allocations: 136)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1048)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:00:58 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.8ms | Allocations: 1503)
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1923)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:01:54 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 1.1ms | Allocations: 136)
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.4ms | Allocations: 1073)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:01:54 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.0ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1935)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:02:00 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.2ms | Allocations: 135)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1074)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:02:00 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.4ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1908)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-10-25 12:02:50 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"darude", "password"=>"[FILTERED]", "session"=>{"username"=>"darude", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Filter chain halted as :require_logged_out rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 856)
+
+
+Started DELETE "/api/sesison" for 127.0.0.1 at 2022-10-25 12:03:28 -0700
+  
+ActionController::RoutingError (No route matches [DELETE] "/api/sesison"):
+  
+Started DELETE "/api/session" for 127.0.0.1 at 2022-10-25 12:03:37 -0700
+Processing by Api::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  [1m[36mUser Update (1.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "session_token" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2022-10-25 19:03:37.023896"], ["session_token", "[FILTERED]"], ["id", 5]]
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41:in `reset_session_token'
+Completed 204 No Content in 19ms (ActiveRecord: 3.6ms | Allocations: 3122)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:03:45 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 913)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:03:50 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 897)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:03:50 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.6ms | Allocations: 1503)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1912)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-10-25 12:04:14 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"darude", "password"=>"[FILTERED]", "session"=>{"username"=>"darude", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 566)
+
+
+
+ActionController::InvalidAuthenticityToken - Can't verify CSRF token authenticity.:
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:04:26 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 912)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:04:26 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.6ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1902)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-10-25 12:04:38 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"darude", "password"=>"[FILTERED]", "session"=>{"username"=>"darude", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "darude"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:31:in `find_by_credentials'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "session_token" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2022-10-25 19:04:38.520159"], ["session_token", "[FILTERED]"], ["id", 5]]
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.1ms | Allocations: 130)
+Completed 200 OK in 292ms (Views: 0.4ms | ActiveRecord: 2.9ms | Allocations: 3994)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:04:59 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.3ms | Allocations: 136)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 1045)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:04:59 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 11.8ms | Allocations: 1503)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.3ms | Allocations: 1936)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:08:46 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.6ms | Allocations: 136)
+Completed 200 OK in 6ms (Views: 1.1ms | ActiveRecord: 0.8ms | Allocations: 1046)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:08:46 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.7ms | Allocations: 1503)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1932)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:08:58 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.4ms | Allocations: 135)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.7ms | Allocations: 1062)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:08:58 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.7ms | Allocations: 1503)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1914)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:09:21 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.6ms | Allocations: 135)
+Completed 200 OK in 7ms (Views: 1.1ms | ActiveRecord: 0.8ms | Allocations: 1068)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:09:21 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 3.2ms | Allocations: 1503)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 1917)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:11:35 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.4ms | Allocations: 135)
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.5ms | Allocations: 1041)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:11:35 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.2ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 1932)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:12:13 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 1.0ms | Allocations: 135)
+Completed 200 OK in 5ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1057)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:12:13 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.2ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 1911)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:12:19 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.2ms | Allocations: 135)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1061)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:12:19 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.5ms | Allocations: 1503)
+Completed 200 OK in 7ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 1935)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:12:37 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.5ms | Allocations: 135)
+Completed 200 OK in 9ms (Views: 1.2ms | ActiveRecord: 2.9ms | Allocations: 1050)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:12:37 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.4ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 1921)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:12:52 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.2ms | Allocations: 135)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1062)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:12:52 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.1ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 1923)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:14:29 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.4ms | Allocations: 136)
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 1060)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:14:29 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.6ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.9ms | Allocations: 1503)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.6ms | Allocations: 1935)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:14:31 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.1ms | Allocations: 136)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1052)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:14:31 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.8ms | Allocations: 1503)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 1918)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:14:34 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.1ms | Allocations: 136)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1063)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:14:34 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.6ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 1959)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:15:07 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.5ms | Allocations: 135)
+Completed 200 OK in 10ms (Views: 3.9ms | ActiveRecord: 0.5ms | Allocations: 1062)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:15:07 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (2.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 5.6ms | Allocations: 1503)
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 2.5ms | Allocations: 1935)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:15:10 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.2ms | Allocations: 135)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1056)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:15:10 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.0ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1929)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:15:44 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.4ms | Allocations: 135)
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 1044)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:15:44 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.0ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1936)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:16:36 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.5ms | Allocations: 135)
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 1041)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:16:36 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.0ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1934)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:16:46 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.2ms | Allocations: 135)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1032)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:16:46 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.7ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1921)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:16:48 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.3ms | Allocations: 135)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 1047)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:16:48 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.8ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 4.0ms | Allocations: 1503)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.8ms | Allocations: 1905)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:17:19 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.4ms | Allocations: 135)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 1056)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:17:19 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.9ms | Allocations: 1503)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1920)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:17:45 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 1.9ms | Allocations: 136)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 1055)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:17:45 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.1ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1944)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:17:50 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.3ms | Allocations: 135)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1045)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:17:50 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.3ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.0ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1917)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:18:18 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 3.2ms | Allocations: 136)
+Completed 200 OK in 8ms (Views: 3.7ms | ActiveRecord: 0.5ms | Allocations: 1063)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:18:18 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.6ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 5.6ms | Allocations: 1503)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.6ms | Allocations: 1926)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:18:22 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.2ms | Allocations: 135)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1050)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:18:22 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.7ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 1911)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:18:24 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.1ms | Allocations: 135)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 1050)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:18:24 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.6ms | Allocations: 1503)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1929)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:18:36 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 1.2ms | Allocations: 135)
+Completed 200 OK in 12ms (Views: 2.7ms | ActiveRecord: 2.1ms | Allocations: 1039)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:18:36 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.0ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1956)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:19:06 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.5ms | Allocations: 135)
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 1052)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:19:06 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.8ms | Allocations: 1503)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 1932)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:19:13 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.2ms | Allocations: 135)
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 3.5ms | Allocations: 1066)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:19:14 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 3.0ms | Allocations: 1503)
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.5ms | Allocations: 1923)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:19:15 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.2ms | Allocations: 135)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1050)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:19:15 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.3ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.9ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1935)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:19:27 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.4ms | Allocations: 135)
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 1050)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:19:27 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.8ms | Allocations: 1503)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1936)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:19:29 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.2ms | Allocations: 136)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 1057)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:19:29 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 3.5ms | Allocations: 1503)
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 1936)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:20:17 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.4ms | Allocations: 135)
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 1071)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:20:17 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.9ms | Allocations: 1503)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 1926)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:20:20 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.3ms | Allocations: 136)
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 2.8ms | Allocations: 1075)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:20:20 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.3ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 1914)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:20:23 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.2ms | Allocations: 135)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 1047)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:20:23 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.5ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 1911)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:20:45 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.4ms | Allocations: 135)
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 1044)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:20:45 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.9ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1918)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:20:46 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.5ms | Allocations: 135)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 1050)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:20:46 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 3.6ms | Allocations: 1503)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 1925)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2022-10-25 12:21:21 -0700
+Processing by Api::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "session_token" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2022-10-25 19:21:21.493709"], ["session_token", "[FILTERED]"], ["id", 5]]
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41:in `reset_session_token'
+Completed 204 No Content in 21ms (ActiveRecord: 3.1ms | Allocations: 3080)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:21:24 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 903)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:21:24 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.5ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1898)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:22:03 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 897)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:22:03 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.7ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.5ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 4.4ms | Allocations: 1503)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.4ms | Allocations: 1928)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:22:09 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 898)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:22:09 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.0ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1928)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-10-25 12:22:54 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"darude", "password"=>"[FILTERED]", "session"=>{"username"=>"darude", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "darude"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:31:in `find_by_credentials'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  [1m[36mUser Update (1.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "session_token" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2022-10-25 19:22:54.484208"], ["session_token", "[FILTERED]"], ["id", 5]]
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.2ms | Allocations: 130)
+Completed 200 OK in 274ms (Views: 0.4ms | ActiveRecord: 4.1ms | Allocations: 3995)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:23:38 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.9ms | Allocations: 135)
+Completed 200 OK in 7ms (Views: 1.8ms | ActiveRecord: 0.7ms | Allocations: 1038)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:23:38 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.3ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.1ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1917)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:23:45 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.2ms | Allocations: 136)
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1054)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:23:45 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.9ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1932)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-10-25 12:23:49 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"darude", "password"=>"[FILTERED]", "session"=>{"username"=>"darude", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Filter chain halted as :require_logged_out rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 862)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:24:00 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.3ms | Allocations: 135)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 1068)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:24:00 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.9ms | Allocations: 1503)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 1945)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:24:09 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.5ms | Allocations: 135)
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 1049)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:24:09 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.0ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1935)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:25:07 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.5ms | Allocations: 135)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1056)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:25:07 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.4ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 1921)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:26:31 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.4ms | Allocations: 135)
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 1056)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:26:31 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.3ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 1935)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:26:51 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.1ms | Allocations: 135)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1065)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:26:51 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.1ms | Allocations: 1503)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.5ms | Allocations: 1929)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:26:58 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.4ms | Allocations: 136)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 1088)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:26:58 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.6ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 6.2ms | Allocations: 1503)
+Completed 200 OK in 14ms (Views: 6.3ms | ActiveRecord: 0.6ms | Allocations: 1917)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:27:53 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.5ms | Allocations: 135)
+Completed 200 OK in 7ms (Views: 1.0ms | ActiveRecord: 0.5ms | Allocations: 1059)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:27:53 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 3.1ms | Allocations: 1503)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 1933)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:29:01 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.7ms | Allocations: 136)
+Completed 200 OK in 7ms (Views: 1.5ms | ActiveRecord: 0.7ms | Allocations: 1057)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:29:01 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.7ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1929)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:29:02 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.4ms | Allocations: 136)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:29:02 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 1.6ms | Allocations: 1503)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1923)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:29:09 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.4ms | Allocations: 135)
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 1050)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:29:09 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.8ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 9.1ms | Allocations: 1503)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.8ms | Allocations: 1933)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:29:14 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.3ms | Allocations: 135)
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.6ms | Allocations: 1043)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:29:14 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.5ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 1935)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2022-10-25 12:29:40 -0700
+Processing by Api::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "session_token" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2022-10-25 19:29:40.151479"], ["session_token", "[FILTERED]"], ["id", 5]]
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41:in `reset_session_token'
+Completed 204 No Content in 12ms (ActiveRecord: 2.5ms | Allocations: 3092)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-10-25 12:29:42 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 200 OK in 8ms (Views: 3.4ms | ActiveRecord: 1.1ms | Allocations: 895)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2022-10-25 12:29:42 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 53)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 19)
+  Rendered api/teas/index.json.jbuilder (Duration: 3.6ms | Allocations: 1503)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 1913)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-10-25 12:30:16 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"darude", "password"=>"[FILTERED]", "session"=>{"username"=>"darude", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "darude"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:31:in `find_by_credentials'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:53:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "session_token" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2022-10-25 19:30:16.297189"], ["session_token", "[FILTERED]"], ["id", 5]]
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41:in `reset_session_token'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.1ms | Allocations: 129)
+Completed 200 OK in 289ms (Views: 0.4ms | ActiveRecord: 2.8ms | Allocations: 3992)
+
+
