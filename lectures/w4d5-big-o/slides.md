@@ -45,6 +45,12 @@ What is it? Why do we care?
 
 ---
 
+![Complexity Chart](http://bigocheatsheet.com/img/big-o-complexity-chart.png "Complexity Chart")
+
+Source: **bigocheatsheet.com**
+
+---
+
 
 ## Benchmarking demo
 
@@ -72,6 +78,11 @@ What is it? Why do we care?
 
 ---
 
+![Complexity Chart](https://www.bigocheatsheet.com/img/big-o-complexity-chart.png)
+
+---
+
+
 ### Asymptotes
 
 >>>* An asymptote of a curve is a line such that the distance between the curve and the line approaches zero as the input grows to infinity.
@@ -86,9 +97,6 @@ What is it? Why do we care?
 
 >>* Big-O notation is a tool for understanding asymptotic behaviour
 
----
-
-![Complexity Chart](https://www.bigocheatsheet.com/img/big-o-complexity-chart.png)
 
 ---
 
@@ -175,7 +183,7 @@ Note:
 def adding_operations
   puts "hello" # 1 operation
   puts "world" # 1 operation
-  puts "!"
+  puts "!" # 1 operation
   # total = 1 + 1 + 1= 3operations
 end
 ```
@@ -213,8 +221,6 @@ end
 ---
 
 ### Questions?
-
----
 
 ---
 
