@@ -41,21 +41,27 @@ class Chirp < ApplicationRecord
 
     #Demo 3 (Using Associations and Joins)
     #Find all chirps for a particular user
+    User.find_by(username: 'dieguccio').chirps
+    User.where('users.id = 3').joins(:chirps)
+    Chirp.joins(:author).where(users: {id: 3}).select('chirps.body')
 
     #Find all chirps liked by people with coding pref of JavaScript
-   
+   Chirp.joins(:likers).where(users: {coding_pref: 'JavaScript'})
+   Chirp.joins(:likers).where("users.coding_pref = 'JavaScript'")
 
     #Get only the unique values from the previous query
-
+    Chirp.joins(:likers).where(users: {coding_pref: 'JavaScript'}).distinct
 
     #Find all chirps with no likes
-   
+   Chirp.left_outer_joins(:likes).where('likes.liker_id IS NULL')
+   Chirp.left_outer_joins(:likes).where(likes: {liker_id: nil} )
+
 
     #Find how many likes each chirp has
-   
+   Chirp.left_outer_joins(:likes).group(:id).count('likes.id')
 
     #Find chirps with at least 3 likes and return only those chirp bodies in an array
- 
+    Chirp.group(:id).joins(:likes).having('COUNT(likes.liker_id) >= 3').pluck(:id, :body)
 
 
 
