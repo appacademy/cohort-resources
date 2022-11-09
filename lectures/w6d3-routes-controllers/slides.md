@@ -35,7 +35,7 @@
 
 ## The HTTP Request-Response Cycle
 
-![http](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/w6d3-routes-controllers/rails/w6d3-routes-controllers/assets/basic-http-request.png?token=ALOGIUE4A2OFK52KLUQXS527AM7SG)
+![http](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/master/rails/w6d3-routes-controllers/assets/basic-request-response-cycle.jpeg?token=GHSAT0AAAAAABX4ES4G76FY6CATYYCUC3EUY3L4RZQ)
 
 + When you type `www.google.com` in your url bar and hit `Enter`:
     1. Our computer (the client) sends an HTTP request to a server. (GET www.google.com page)
@@ -66,7 +66,7 @@
 
 The **path** and **query string** are part of the URL
 
-![url-parts](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/w6d3-routes-controllers/rails/w6d3-routes-controllers/assets/url-parts.png?token=ALOGIUCE4TUBJOD3JOUMQE27AM7VM)
+![url-parts](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/master/rails/w6d3-routes-controllers/assets/anatomy-of-url.png?token=GHSAT0AAAAAABX4ES4GSHCMTURWS5SMTXRCY3L4PWQ)
 
 * The `path` in an http request is simply the path that is relative to the domain. 
 * We won't worry about the domain for now. We'll focus on the `path` for our discussion of HTTP requests and Rails routes and controllers.
@@ -137,7 +137,7 @@ A RESTful API defines a predictable way for us to access and manipulate resource
 
 ## RESTful Routes
 
-![restful-routes](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/w6d3-routes-controllers/rails/w6d3-routes-controllers/assets/restful-routes.png?token=ALOGIUB3TA2JZYL5NIIKJQC7AM7ZE)
+![restful-routes](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/master/rails/w6d3-routes-controllers/assets/restful-routes.png?token=GHSAT0AAAAAABX4ES4HZYY7LPF4ODB33XDQY3L4QOQ)
 
 ---
 

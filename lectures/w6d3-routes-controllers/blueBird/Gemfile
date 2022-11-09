@@ -52,6 +52,8 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem 'pry-rails'
+  gem 'better_errors' #Will give us nice formatted errors when we encounter them
+  gem 'binding_of_caller' #Will allow us to poke around our code at the time of the error and see what might have gone wrong (like a debugger).
 end
 
 group :development do
