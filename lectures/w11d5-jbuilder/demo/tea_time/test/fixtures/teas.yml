@@ -1,0 +1,18 @@
+# == Schema Information
+#
+# Table name: teas
+#
+#  id         :bigint           not null, primary key
+#  flavor     :string           not null
+#  amount     :float            not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+one:
+  flavor: MyString
+  amount: 1.5
+
+two:
+  flavor: MyString
+  amount: 1.5

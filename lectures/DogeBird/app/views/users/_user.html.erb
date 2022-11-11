@@ -1,0 +1,19 @@
+<% if action == :show %>
+  <a href="<%= users_url %>">User Index</a>
+<% else %>
+  <a href="<%= user_url(user) %>">User's Show Page</a>
+<% end %>
+
+<ul>
+  <li><%= user.username %></li>
+  <li><%= user.email %></li>
+  <li><%= user.age %></li>
+</ul>
+
+<a href="<%= edit_user_url(user) %>">Edit <%= user.username %></a>
+
+<form action="<%= user_url(user) %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete <%= user.username %>">
+</form>

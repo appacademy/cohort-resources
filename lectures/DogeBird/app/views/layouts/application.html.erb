@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DogeBird</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% if flash[:errors] %>
+      <ul>
+        <% flash[:errors].each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      </ul>
+    <% end %>
+    
+  <% if logged_in? %>
+    <h2>Welcome, <%= current_user.username%>!</h2>
+    <form action="<%= session_url %>" method="post">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Logout">
+    </form>
+  <% else %>
+    <a href="<%= new_user_url %>">Sign Up</a>
+    <a href="<%= new_session_url %>">Sign In</a>
+  <% end %>
+
+    <%= flash[:messages] %>
+    <%= yield %>
+  </body>
+</html>

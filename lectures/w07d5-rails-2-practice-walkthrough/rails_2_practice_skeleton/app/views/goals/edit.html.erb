@@ -1,0 +1,25 @@
+<h1>Edit a Goal</h1>
+
+<form action="<%= goal_url(@goal) %>" method="post">
+  <input type="hidden" name="_method" value="PATCH">
+
+
+  <label >Name <input type="text" name="goal[name]" value='<%= @goal.name %>'></label>
+  <label >Details <input type="text" name="goal[details]" value='<%= @goal.details %>'></label>
+
+  <label >True
+    <input type="radio" name="goal[status]" value="true" <% if @goal.status %>checked<%end%>>
+  </label>
+  <label >False
+    <input type="radio" name="goal[status]" value="false" <% if !@goal.status %>checked<%end%>>
+  </label>
+
+  <% if @goal.status %>
+    <p>Done</p>
+  <% else %>
+    <p>Incomplete</p>
+  <% end %>
+  
+
+  <button>Update Goal</button>
+</form>

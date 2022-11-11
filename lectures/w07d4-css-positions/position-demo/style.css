@@ -1,0 +1,122 @@
+.parent {
+  
+}
+
+.child-one {
+
+}
+
+.child-two {
+
+}
+
+.child-three {
+
+}
+
+/* Static Demo */
+/* 
+notice that static is the default
+notice that left, right, top and bottom have no effect.
+*/
+/* .child-two {
+  position: static;
+} */
+
+
+
+/* Realitive Demo */
+/* 
+  moves relative to it's own position
+  moves in away from the specified position
+*/
+/* .child-two {
+  position: relative;
+  left: 100px;
+  top: 200px;
+} */
+
+
+
+/* Absolute Demo */
+/* 
+  moves relative to the top level element,
+  which defaults to the html element
+  moves in away from the specified position
+*/
+/* .child-two {
+  position: absolute;
+  left: 100px;
+  top: 100px;
+} */
+/* to bring element forward */
+/* .child-one {
+  position: absolute;
+  z-index: 1;
+} */
+
+
+
+/* Sticky Demo */
+/* 
+  moves relative to the webpage,
+  moves in away from the specified position
+*/
+/* .child-two {
+  position: sticky;
+  left: 0px;
+  top: 0px;
+} */
+/* to bring element forward */
+/* .child-one {
+  position: relative;
+  z-index: 1;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.parent {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 5px;
+  background-color: #9acde0;
+  border: 5px solid #9acde0;
+  border-radius: 6px;
+  height: 1400px;
+}
+
+.child {
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.child-one {
+  background-color: #f3bfb3;
+}
+
+.child-two {
+  background-color: #fdf8e2;
+}
+
+.child-three {
+  background-color: #ffddd3;
+}
