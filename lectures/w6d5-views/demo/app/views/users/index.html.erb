@@ -1,0 +1,6 @@
+<h2>Users Index</h2>
+
+<% @users.each do |user| %>
+  <%= render 'user', user: user, action: :index %>
+  <!-- <a href="<%= user_url(user) %>">inspect</a> -->
+<% end %>

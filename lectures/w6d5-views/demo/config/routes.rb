@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   # get '/chirps', to: 'chirps#index'
   # get '/chirps/:id', to: 'chirps#show', as: 'chirp'
+  # get '/chirps/new', to: 'chirps#new'
+  # get '/chirps/:id/edit', to: 'chirps#edit'
   # post '/chirps', to: 'chirps#create'
   # patch '/chirps/:id', to: 'chirps#update'
   # put '/chirps/:id', to: 'chirps#update'
@@ -17,6 +19,7 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :chirps, only: [:index]
+    # get '/users/:user_id/chirps', 'chirps#index'
   end
 
 end
