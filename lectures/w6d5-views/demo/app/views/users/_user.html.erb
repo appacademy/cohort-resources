@@ -6,5 +6,8 @@
   <li><%= user.email %></li>
   <li><%= user.age %></li>
   <li>coding_pref: <%= user.coding_pref || 'n/a' %></li>
+  <% if action == :show %>
+    <li><a href="<%= edit_user_url(user) %>">edit user</a></li>
+  <% end %>
   <li><a href="<%= url %>"><%= txt %></a></li>
 </ul>

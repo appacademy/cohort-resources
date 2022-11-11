@@ -15,7 +15,8 @@ class UsersController < ApplicationController
   end
 
   def edit
-    # ???
+    @user =  User.find_by(id: params[:id])
+    render :edit
   end
 
   def create
@@ -24,14 +25,16 @@ class UsersController < ApplicationController
       # render :show
       redirect_to user_url(@user)
     else
-      render json: @user.errors.full_messages, status: 422
+      # handle errors to be displayed
+      redirect_to new_user_url
+      render :new
     end
   end
 
   def update
     user = User.find_by(id: params[:id])
     if user.update(user_params)
-      render json: user
+      redirect_to user_url(user)
     else
       render json: user.errors.full_messages, status: 422
     end

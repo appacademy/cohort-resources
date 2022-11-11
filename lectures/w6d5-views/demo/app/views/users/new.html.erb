@@ -1,12 +1,2 @@
 <h2>New User Form</h2>
-
-<form action="<%= users_url %>" method="POST">
-  <label>Username:
-    <input type="text" name="user[username]" value="<%= @user.username %>" placeholder="username"/><br />
-  </label>
-  <label for="email">Email:</label>
-  <input id="email" type="text" name="user[email]" value="<%= @user.email %>"/><br />
-  <input type="text" name="user[age]" value="<%= @user.age %>" placeholder="age"/><br />
-  <input type="text" name="user[coding_pref]" value="<%= @user.coding_pref %>" placeholder="coding preference"/><br />
-  <input type="submit" value="Create" />
-</form>
+<%= render 'form', user: @user, action: :new %>
