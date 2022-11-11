@@ -1,0 +1,19 @@
+/* input:focus {
+  background-color: cyan
+}
+
+p:first-child {
+  background-color: cyan;
+} */
+
+input[type="text"] {
+  background-color: coral;
+}
+
+p.highlight {
+  background-color: blueviolet
+}
+
+p .highlight {
+  background-color: aqua
+}
