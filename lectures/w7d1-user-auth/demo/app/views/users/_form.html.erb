@@ -1,0 +1,19 @@
+<% path = action == :new ? users_url : user_url(user) %>
+<% submit = action == :new ? 'create' : 'update' %>
+<% back = action == :new ? users_url : user_url(user) %>
+
+<form action="<%= path %>" method="POST">
+  <% if action == :edit %>
+    <input type="hidden" name="_method" value="PATCH" />
+  <% end %>
+  <label>Username:
+    <input type="text" name="user[username]" value="<%= user.username %>" placeholder="username"/><br />
+  </label>
+  <label for="email">Email:</label>
+  <input id="email" type="text" name="user[email]" value="<%= user.email %>"/><br />
+  <input type="text" name="user[age]" value="<%= user.age %>" placeholder="age"/><br />
+  <input type="text" name="user[coding_pref]" value="<%= user.coding_pref %>" placeholder="coding preference"/><br />
+  <input type="password" name="user[password]">
+  <input type="submit" value="<%= submit %>" />
+</form>
+<a href="<%= back %>">cancel</a>
