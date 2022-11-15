@@ -21,14 +21,16 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    if @user.save!
+    if @user.save
       # render :show
       login(@user)
+      flash[:messages] = ["Successfully created and logged in"]
       redirect_to user_url(@user)
     else
-      # handle errors to be displayed
-      redirect_to new_user_url
-      # render :new
+      # flash[:errors] = @user.errors.full_messages
+      # redirect_to new_user_url
+      flash.now[:errors] = @user.errors.full_messages
+      render :new
     end
   end
 

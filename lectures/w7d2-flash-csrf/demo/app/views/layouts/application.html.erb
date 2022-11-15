@@ -13,6 +13,7 @@
     <%if logged_in? %>
       <h2> Welcome, <%= current_user.username %></h2>
       <form action="<%= session_url %>" method="POST">
+        <%= auth_token %>
         <input type="hidden" name="_method" value="DELETE">
         <button>Log Out!</button>
 
@@ -23,6 +24,18 @@
     <% end  %>
 
     <%= yield %>
+    <% if flash[:errors]%>
+      <% flash[:errors].each do |error| %>
+        <%= error %>
+        <br>
+        <% end%>
+    <% elsif flash[:messages]%>
+      <% flash[:messages].each do |message| %>
+        <%= message %>
+        <br>
+      <% end %>
+    <% end %>
+
   </body>
 </html>
 

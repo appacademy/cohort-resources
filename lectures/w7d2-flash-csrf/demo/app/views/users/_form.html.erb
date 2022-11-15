@@ -3,6 +3,7 @@
 <% back = action == :new ? users_url : user_url(user) %>
 
 <form action="<%= path %>" method="POST">
+  <input type="hidden" name='authenticity_token' value='<%= form_authenticity_token %>'>
   <% if action == :edit %>
     <input type="hidden" name="_method" value="PATCH" />
   <% end %>
@@ -17,3 +18,4 @@
   <input type="submit" value="<%= submit %>" />
 </form>
 <a href="<%= back %>">cancel</a>
+<br>
