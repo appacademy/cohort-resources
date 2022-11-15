@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BlueBird</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+    <%if logged_in? %>
+      <h2> Welcome, <%= current_user.username %></h2>
+      <form action="<%= session_url %>" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <button>Log Out!</button>
+
+      </form>
+    <% else %>
+      <a href="<%= new_user_url %>">sign up</a> <br>
+      <a href="<%= new_session_url %>">log in</a> <br>
+    <% end  %>
+
+    <%= yield %>
+  </body>
+</html>
+
