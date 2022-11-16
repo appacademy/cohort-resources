@@ -1,0 +1,64 @@
+<% if action == :new %>
+    <% title_text = 'Sign up!' %>
+    <% action_url = users_url %>
+    <% button_text = 'Sign up!' %>
+<% else %>
+    <% title_text = 'Edit User!' %>
+    <% action_url = user_url(user) %>
+    <% button_text = 'Edit User!' %>
+<% end %>
+
+<h1><%= title_text %></h1>
+<form action="<%= action_url %>" method="post">
+    <input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %>>
+
+    <% if action == :edit %>
+        <input type="hidden" name="_method" value="patch" />
+    <% end %>
+    
+    <label for="username">Username:</label>
+    <input
+        id="username"
+        type="text"
+        name="user[username]" 
+        value="<%= @user.username %>"
+    />
+    <br>
+
+    <% if action == :new %>
+      <label for="password">Password:</label>
+        <input
+            id="password"
+            type="password"
+            name="user[password]" 
+            value=""
+        />
+    <br>
+    <% end %>
+    
+    <label>Email:
+        <input
+            type="text"
+            name="user[email]" 
+            value="<%= @user.email %>"
+        />
+    </label>
+    <br>
+    <label for="age">Age:</label>
+    <input
+        id="age"
+        type="text"
+        name="user[age]" 
+        value="<%= @user.age %>"
+    />
+    <br>
+    <label for="favorite_coin">Favorite Coin:</label>
+    <input
+        id="favorite_coin"
+        type="text"
+        name="user[favorite_coin]" 
+        value="<%= @user.favorite_coin %>"
+    />
+    <br />
+    <input type="submit" value="<%= button_text %>" />
+</form>
