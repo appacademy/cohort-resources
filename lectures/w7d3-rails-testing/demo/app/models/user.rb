@@ -11,7 +11,8 @@
 #  age         :integer          not null
 #
 class User < ApplicationRecord
-    validates :username, uniqueness: true, presence: true
+    validates :username, presence: true
+    validates :username, uniqueness: true
     validates :password_digest, presence: true 
     validates :session_token, presence: true, uniqueness: true 
     validates :password, length: {minimum: 6}, allow_nil: true  

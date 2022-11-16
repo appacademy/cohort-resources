@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   # resources :chirps # get back all 7 routes
   # resources :chirps, only: [:create, :update, :show, :delete]
-  resources :chirps
+  resources :chirps, except: [:update]
 
   resources :users do
     resources :chirps, only: [:index]
