@@ -4,16 +4,25 @@ body {
 
 header {
   background-color: beige;
-  height: 50px;
+  /* height: 50px; */
   display: flex;
   justify-content: space-between;
   font-size: 50px;
   color: teal;
   width: 100%;
+  position: sticky;
+  top: 0px;
 }
 
 main {
   background-color: pink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+img{
+  display: block;
+  padding: 10px;
 }
 
 footer {
@@ -21,11 +30,18 @@ footer {
   height: 50px;
 }
 
-.menu {
-  width: 500px;
-}
-
 .menu-items {
   width: 500px;
   background-color: beige;
+  display: none;
+  position: absolute;
+  right: 10px;
+}
+
+.menu:hover .menu-items{
+  display: block;
+}
+
+.menu-items li:hover{
+  background-color: gray;
 }
