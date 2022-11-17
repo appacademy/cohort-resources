@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="position.css">
+  <script src="position.js"></script>
+
+  <title>Position Demo</title>
+</head>
+<body>
+  <main>
+    <section class="playground">
+      <h2>Position Playground</h2>
+      
+      <div class="parent">
+        <div id="customizer">
+          <select class="position-select">
+            <option selected>static</option>
+            <option>relative</option>
+            <option>absolute</option>
+            <option>fixed</option>
+            <option>sticky</option>
+          </select>
+          <input class="top">
+          <input class="right">
+          <input class="bottom">
+          <input class="left">
+        </div>
+
+        <article>
+          <div class="child"></div>
+          <div class="child"></div>
+          <div class="child"></div>
+        </article>
+      </div>
+      
+    </section>
+  </main>
+</body>
+</html>
