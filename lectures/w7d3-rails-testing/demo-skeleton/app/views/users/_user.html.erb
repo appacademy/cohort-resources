@@ -1,0 +1,12 @@
+<ul>
+    <li><%= user.username %></li>
+    <li><%= user.email %></li>
+    <li><%= user.age %></li>
+    <li><%= user.favorite_coin %></li>
+    <% if action == :index %>
+        <li><a href="<%= user_url(user) %>">User Show Page</a></li>
+    <% else %>
+        <li><a href="<%= edit_user_url(user) %>">Edit User</a></li>
+        <li><a href="<%= users_url %>">Back to Index</a></li>
+    <% end %>
+</ul>
