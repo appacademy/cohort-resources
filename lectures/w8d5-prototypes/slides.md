@@ -1,5 +1,5 @@
-# W8D5
-## Prototypal Inheritance
+## W8D5
+# Prototypal Inheritance
 
 ---
 
@@ -65,7 +65,7 @@ function addThreeNumbers(num1) {
 }
 ```
 
-* Currying is useful when the arguments used by a function aren't all available at the same point in time.
+* Currying is useful when the arguments used by a function aren't all available at the same point in time (or in the same scope)
 
 ---
 
@@ -92,6 +92,9 @@ function addThreeNumbers(num1) {
         this.personality = personality
     }
     ```
+---
+
+## Two key players in JS inheritance
 
 + **prototype**: object, defines shared behavior and properties for all instances of a class
     ```js
@@ -141,6 +144,8 @@ new Cat("Garfield", "lazy");
 
 ![prototypes1](https://aa-ch-lecture-assets.s3.us-west-1.amazonaws.com/javascript/prototypes/cat_prototypes_1.png)
 
+---
+
 **The `prototype` is a property on a constructor function that sets what will become the `__proto__` property on the constructed object.**
 
 ---
@@ -164,6 +169,8 @@ new Cat("Garfield", "lazy");
 ## Property access and the prototype chain
 
 ![prototypes3](https://aa-ch-lecture-assets.s3.us-west-1.amazonaws.com/javascript/prototypes/cat_prototypes_3.png)
+
+---
 
 * Because `garfield` inherits from `Cat`, which inherits from `Animal`, which inherits from `Object`, `garfield` has access to all methods defined in all prototypes in the chain. `garfield` can `meow`, `eat`, and have `toString` called on it.
 
