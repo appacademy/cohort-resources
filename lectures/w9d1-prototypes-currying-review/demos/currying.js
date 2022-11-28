@@ -1,6 +1,19 @@
 //Write a function, myCurry, that collects a predetermined number of args 
 //before invoking the original receiver function with those args.
 
+Function.prototype.myCurry = function(numArgs){
+  let fnc = this;
+  let arr = [];
+  return function _function(...nums){
+    arr.push(...nums);
+    // debugger
+    if(arr.length >= numArgs){
+      return fnc(...arr.slice(0, numArgs))
+    } else {
+      return _function
+    }
+  }
+}
 
 
 
