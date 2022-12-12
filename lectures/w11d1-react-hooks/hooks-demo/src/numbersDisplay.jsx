@@ -27,13 +27,15 @@ function NumbersDisplay(props){
   // console.log('after the useEffect')
   
   const increment = () => {
-    setCount(count + 1);
+    // setCount(count + 1);
+    setCount(prevCount => prevCount + 1);
     // counter += 1;
     // console.log(counter)
   }
 
   const decrement = () => {
-    setCount(count - 1);
+    // setCount(count - 1);
+    setCount(prevCount => prevCount - 1);
     // counter -= 1
     // console.log(counter)
 

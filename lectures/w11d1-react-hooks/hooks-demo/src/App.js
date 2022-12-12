@@ -11,8 +11,11 @@ function App() {
     <>
       <h1>Hello from Hogwarts</h1>
       {/* <NumbersDisplay /> */}
+      <br/>
       <StudentIndex />
+      <br/>
       <Route path="/students/:studentName" component={StudentShow} />
+      <br/>
       <Form/>
     </>
   );

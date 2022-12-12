@@ -1,6 +1,13 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useRef} from 'react';
 
 function Form(props){
+  const renderCounter = useRef(0);
+  const firstNameEle = useRef();
+  
+
+  useEffect(()=>{
+    renderCounter.current = renderCounter.current + 1;
+  })
 
   const[user, setUser] = useState({
     firstName: '',
@@ -29,6 +36,7 @@ function Form(props){
 
 
   const handleChange = (incomingKey) => {
+    console.log(firstNameEle.current);
     return e => {
       
       const newObj = Object.assign({}, user, {[incomingKey]: e.target.value})
@@ -78,13 +86,15 @@ function Form(props){
   return(
     <>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder='First Name' onChange={handleChange('firstName')} value={user.firstName}/>
+        <input type="text" placeholder='First Name' onChange={handleChange('firstName')} value={user.firstName} ref={firstNameEle}/>
         <input type="text" placeholder='Last Name' onChange={handleChange('lastName')} value={user.lastName}/>
         <input type="text" placeholder='Email' onChange={handleChange('email')} value={user.email}/>
         <input type="password" placeholder='Password' onChange={handleChange('password')} value={user.password}/>
         <button>Submit</button>
         {showErrors()}
       </form>
+
+      <h2>Rerender Counter: {renderCounter.current}</h2>
     </>
   )
 }
