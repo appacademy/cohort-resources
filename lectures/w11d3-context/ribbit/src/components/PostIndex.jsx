@@ -2,13 +2,16 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchPosts } from '../util/fetchPosts';
 import './PostIndex.css';
+import PostIndexItem from './PostIndexItem';
 
 const PostIndex = props => {
   const [data, setData] = useState([]);
   const { familyName } = useParams();
 
+  // will run when component first mounts
+  // and whenever familyName changes
   useEffect(() => {
-    console.log('fetching new data');
+    console.log(`fetching new data about ${familyName}`);
     const f = async () => {
       const fetchedData = await fetchPosts();
       setData(fetchedData);
@@ -22,10 +25,7 @@ const PostIndex = props => {
     <>
       <p>Fun {title[0].toUpperCase() + title.slice(1,title.length)} Posts</p>
       {data.map((ele, i) => (
-        <div key={i} className="index-item">
-          <p className='title'>{ele.title}</p>
-          <p className='body'>{ele.body}</p>
-        </div>
+        <PostIndexItem key={i} post={ele} />
       ))}
     </>
   )

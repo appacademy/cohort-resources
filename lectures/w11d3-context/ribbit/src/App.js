@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar";
 import PostIndex from "./components/PostIndex";
 
 function App() {
+
   return (
     <>
       <NavBar />
