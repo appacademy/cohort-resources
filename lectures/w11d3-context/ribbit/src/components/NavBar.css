@@ -1,0 +1,51 @@
+.main-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed lightgrey;
+}
+
+.sub-nav-bar {
+  border-bottom: 1px solid black;
+}
+
+.nav-links {
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+a {
+  color: black;
+}
+
+.active {
+  font-weight: bold;
+}
+
+li {
+  padding-right: 5px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.logo-img {
+  max-height: 40px;
+}
+
+.session-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.session-buttons > * {
+  padding-right: 5px;
+}
