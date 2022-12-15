@@ -1,0 +1,8 @@
+.tea-index {
+  border: 1px solid green;
+}
+
+.tea-index-item {
+  border: 2px solid purple;
+  margin: 5px;
+}
