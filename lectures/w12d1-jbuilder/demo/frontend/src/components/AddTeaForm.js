@@ -15,7 +15,7 @@ const AddTeaForm = props => {
     const tea = {
       // id: id,
       flavor: flavor,
-      price: price
+      price
     };
     // debugger
     dispatch(createTea(tea));

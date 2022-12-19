@@ -30,6 +30,7 @@ export const receiveTea = tea => {
   type: RECEIVE_TEA,
   tea
 }};
+// {tea: '1': {id:1} ,...}
 
 export const receiveTeas = teas => ({
   type: RECEIVE_TEAS,
@@ -52,12 +53,19 @@ const teaReducer = (state = {}, action) => {
       nextState[action.tea.id] = action.tea;
       return nextState;
     case RECEIVE_TEAS:
-      return { ...nextState, ...action.teas };
+      // action.teas.forEach((tea)=>{
+      //   nextState[tea.id] = tea;
+      // })
+      
+      // return nextState;
+
+      return {...nextState, ...action.teas}
     case REMOVE_TEA:
       delete nextState[action.teaId];
       return nextState;
     default:
-      return nextState;
+      // return nextState;
+      return state;
   };
 };
 

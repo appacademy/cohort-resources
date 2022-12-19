@@ -4,6 +4,10 @@ import { fetchAllTeas } from "../store/teaReducer";
 
 const TeaIndex = props => {
   const teas = useSelector(state => Object.values(state.teas));
+  
+  // const userTeas = useSelector(state =>{
+  //   state.teas.filter((tea)=> tea.userId === currentUserId )
+  // })
   const dispatch = useDispatch();
 
   useEffect(()=> {
