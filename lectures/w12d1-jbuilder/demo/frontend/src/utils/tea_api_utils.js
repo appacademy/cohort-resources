@@ -13,4 +13,8 @@ export const postTea = (tea) => {
   });
 };
 
+export const requestTeaDetail = id => {
+  return fetch(`/api/teas/${id}`)
+}
+
 //let tea = {flavor: 'Par', price: 5, description: "Its par tea time"}

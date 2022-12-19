@@ -4,14 +4,14 @@ import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
 import configureStore from './store';
-import { receiveTea, receiveTeas, removeTea, fetchAllTeas, createTea } from './store/teaReducer';
+import { receiveTea, receiveTeas, removeTea, fetchAllTeas, createTea, fetchTeaDetail } from './store/teaReducer';
 
 const initialState = {
-  teas: {
-    1: {
-      id: 1, flavor: 'green', price: 5.33
-    }
-  }
+  // teas: {
+  //   1: {
+  //     id: 1, flavor: 'green', price: 5.33
+  //   }
+  // }
 };
 
 const store = configureStore(initialState);
@@ -23,6 +23,7 @@ window.receiveTeas = receiveTeas;
 window.removeTea = removeTea;
 window.fetchAllTeas = fetchAllTeas;
 window.createTea = createTea;
+window.fetchTeaDetail = fetchTeaDetail;
 //
 
 const Root = () => (

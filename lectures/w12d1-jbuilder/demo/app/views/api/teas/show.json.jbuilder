@@ -2,6 +2,12 @@ json.tea do
   json.extract! @tea, :id, :flavor, :price, :description, :transaction_ids
 end
 
+# json.tea do
+#   json.set! @tea.id do
+#     json.extract! @tea, :id, :flavor, :price, :description, :transaction_ids
+#   end
+# end
+
 
 json.transactions do
   @tea.transactions.each do |transaction|
