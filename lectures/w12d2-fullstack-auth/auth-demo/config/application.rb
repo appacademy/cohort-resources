@@ -38,7 +38,7 @@ module Teatime
 
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use ActionDispatch::Session::CookieStore,
-      key: '_[appname]_session',
+      key: '_teatime_session',
       same_site: :lax, 
       secure: Rails.env.production?
   end
