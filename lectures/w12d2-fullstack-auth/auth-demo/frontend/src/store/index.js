@@ -3,10 +3,12 @@ import teaReducer from './teaReducer';
 import transactionReducer from './transactionReducer';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
+import userReducer from './userReducer';
 
 const rootReducer = combineReducers({
   teas: teaReducer,
-  transactions: transactionReducer
+  transactions: transactionReducer,
+  users: userReducer
 });
 
 const configureStore = (preloadedState = {}) => (
