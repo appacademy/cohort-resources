@@ -5,6 +5,7 @@ import './index.css';
 import App from './App';
 import configureStore from './store';
 import { receiveTea, receiveTeas, removeTea, fetchAllTeas, createTea, fetchTeaDetail } from './store/teaReducer';
+import { restoreSession } from './store/csrf';
 
 const initialState = {
   // teas: {
@@ -24,6 +25,7 @@ window.removeTea = removeTea;
 window.fetchAllTeas = fetchAllTeas;
 window.createTea = createTea;
 window.fetchTeaDetail = fetchTeaDetail;
+window.restoreSession = restoreSession;
 //
 
 const Root = () => (
@@ -32,9 +34,9 @@ const Root = () => (
   </Provider>
 );
 
-ReactDOM.render(
+restoreSession().then(() => ReactDOM.render(
   <React.StrictMode>
     <Root />
   </React.StrictMode>,
   document.getElementById('root')
-);
+));
