@@ -1302,3 +1302,107 @@ FOREIGN KEY ("liker_id")
   [1m[36mChirp Load (0.1ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
   [1m[36mLike Create (0.2ms)[0m  [1m[32mINSERT INTO "likes" ("created_at", "updated_at", "liker_id", "chirp_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2023-01-06 16:45:00.808174"], ["updated_at", "2023-01-06 16:45:00.808174"], ["liker_id", 15], ["chirp_id", 20]]
   [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mChirp Load (0.3ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" INNER JOIN "users" ON "users"."id" = "chirps"."author_id" WHERE "users"."username" = $1[0m  [["username", "michaelsoft"]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 200], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 200], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "paulito"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "paulito"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "paulito"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "paulito"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (age >= 10 AND age <= 20)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users"."username", "users"."age" FROM "users" WHERE (age >= 10 AND age <= 20)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT username, age FROM "users" WHERE (age >= 10 AND age <= 20)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users"."username", "users"."age" FROM "users" WHERE "users"."age" BETWEEN $1 AND $2[0m  [["age", 10], ["age", 20]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE NOT (age < 11)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE NOT (age < 11)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users"."favorite_coin" FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users"."favorite_coin" FROM "users" GROUP BY "users"."favorite_coin"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "users"."favorite_coin" FROM "users"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users"."favorite_coin" FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users"."favorite_coin" FROM "users"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users"."favorite_coin" FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users"."favorite_coin" FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (favorite_coin IN 'Bitcoin','Ethereum') ORDER BY favorite_coin ASC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (favorite_coin IN 'Bitcoin','Ethereum') /* loading for inspect */ ORDER BY favorite_coin ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (favorite_coin IN ('Bitcoin','Ethereum')) ORDER BY favorite_coin ASC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (favorite_coin IN ('Bitcoin','Ethereum')) ORDER BY username ASC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."favorite_coin" IN ($1, $2) ORDER BY "users"."username" ASC[0m  [["favorite_coin", "Bitcoin"], ["favorite_coin", "Ethereum"]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."favorite_coin" IN ($1, $2) ORDER BY "users"."username" ASC[0m  [["favorite_coin", "Bitcoin"], ["favorite_coin", "Ethereum"]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "chrispy"], ["LIMIT", 1]]
+  [1m[36mChirp Load (0.1ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."author_id" = $1[0m  [["author_id", 10]]
+  [1m[36mChirp Load (0.4ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" INNER JOIN "users" ON "users"."id" = "chirps"."author_id" WHERE (username = 'chrispy')[0m
+  [1m[36mChirp Load (0.2ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" INNER JOIN "users" ON "users"."id" = "chirps"."author_id" WHERE "users"."username" = $1[0m  [["username", "chrispy"]]
+  [1m[36mChirp Load (0.6ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" INNER JOIN "users" ON "users"."id" = "likes"."liker_id"[0m
+  [1m[36mChirp Load (0.5ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" INNER JOIN "users" ON "users"."id" = "likes"."liker_id" WHERE (users.favorite_coin = 'Dogecoin')[0m
+  [1m[36mChirp Load (0.5ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" INNER JOIN "users" ON "users"."id" = "likes"."liker_id"[0m
+  [1m[36mChirp Load (0.5ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" INNER JOIN "users" ON "users"."id" = "likes"."liker_id"[0m
+  [1m[36mChirp Load (0.4ms)[0m  [1m[34mSELECT "users"."username" FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" INNER JOIN "users" ON "users"."id" = "likes"."liker_id"[0m
+  [1m[36mChirp Load (0.5ms)[0m  [1m[34mSELECT "users"."username" FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" INNER JOIN "users" ON "users"."id" = "likes"."liker_id"[0m
+  [1m[36mChirp Load (0.5ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" INNER JOIN "users" ON "users"."id" = "likes"."liker_id" WHERE (users.favorite_coin = 'Dogecoin')[0m
+  [1m[36mChirp Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "chirps".* FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" INNER JOIN "users" ON "users"."id" = "likes"."liker_id" WHERE (users.favorite_coin = 'Dogecoin')[0m
+  [1m[36mChirp Count (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "chirps"."id") FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" INNER JOIN "users" ON "users"."id" = "likes"."liker_id" WHERE (users.favorite_coin = 'Dogecoin')[0m
+  [1m[36mChirp Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" INNER JOIN "users" ON "users"."id" = "likes"."liker_id" WHERE (users.favorite_coin = 'Dogecoin')[0m
+  [1m[36mChirp Load (0.2ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" LEFT OUTER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" WHERE "likes"."id" IS NULL[0m
+  [1m[36mChirp Load (0.3ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" LEFT OUTER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" WHERE (likes.id IS NULL)[0m
+  [1m[36mChirp Pluck (0.2ms)[0m  [1m[34mSELECT "liker_id" FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id"[0m
+  [1m[36mChirp Pluck (0.3ms)[0m  [1m[34mSELECT "chirps"."body" FROM "chirps"[0m
+  [1m[36mChirp Load (0.2ms)[0m  [1m[34mSELECT count(*) FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" GROUP BY "chirp_id"[0m
+  [1m[36mChirp Load (0.5ms)[0m  [1m[34mSELECT count(*) FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" GROUP BY "chirp_id"[0m
+  [1m[36mChirp Pluck (0.2ms)[0m  [1m[34mSELECT num_likes FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" GROUP BY "chirp_id"[0m
+  [1m[36mChirp Load (0.2ms)[0m  [1m[34mSELECT count(*) as num_likes FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" GROUP BY "chirp_id" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mChirp Load (0.4ms)[0m  [1m[34mSELECT count(*) as num_likes FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" GROUP BY "chirp_id"[0m
+  [1m[36mChirp Load (0.5ms)[0m  [1m[34mSELECT count(*) as num_likes FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" GROUP BY "chirp_id" ORDER BY "chirps"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mChirp Load (0.7ms)[0m  [1m[34mSELECT count(*) as num_likes FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" GROUP BY "chirp_id" ORDER BY "chirps"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mChirp Load (0.4ms)[0m  [1m[34mSELECT count(*) as num_likes FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" GROUP BY "chirp_id"[0m
+  [1m[36mChirp Load (0.4ms)[0m  [1m[34mSELECT count(*) as num_likes FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" GROUP BY "chirp_id"[0m
+  [1m[36mChirp Load (0.4ms)[0m  [1m[34mSELECT count(*) as num_likes FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" GROUP BY "chirp_id"[0m
+  [1m[36mChirp Pluck (0.4ms)[0m  [1m[34mSELECT num_likes FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" GROUP BY "chirp_id"[0m
+  [1m[36mChirp Pluck (0.5ms)[0m  [1m[34mSELECT "num_likes" FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" GROUP BY "chirp_id"[0m
+  [1m[36mChirp Load (0.4ms)[0m  [1m[34mSELECT count(*) as num_likes FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" GROUP BY "chirp_id"[0m
+  [1m[36mChirp Load (0.3ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" GROUP BY "chirps"."id" HAVING (COUNT(*) >= 3)[0m
+  [1m[36mChirp Load (0.3ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" GROUP BY "likes"."chirp_id" HAVING (COUNT(*) >= 3)[0m
+  [1m[36mChirp Load (0.3ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" GROUP BY "likes"."chirp_id" HAVING (COUNT(*) >= 3) /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mChirp Load (0.3ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" GROUP BY "chirp_id" HAVING (COUNT(*) >= 3)[0m
+  [1m[36mChirp Load (0.3ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" GROUP BY "chirp_id" HAVING (COUNT(*) >= 3) /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT * from users where favorite_coin = 'Bitcoin'[0m
+  [1m[36mChirp Load (0.2ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mChirp Load (0.4ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mChirp Load (0.3ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3, $4, $5, $6, $7, $8)[0m  [["id", 9], ["id", 11], ["id", 10], ["id", 15], ["id", 13], ["id", 12], ["id", 16], ["id", 14]]
+  [1m[36mChirp Load (0.3ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 11]]
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 12]]
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 13]]
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 14]]
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 15]]
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 16]]
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 17]]
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 18]]
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 19]]
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 20]]
+  [1m[36mChirp Load (0.5ms)[0m  [1m[34mSELECT chirps.*, COUNT(*) AS num_likes FROM "chirps" INNER JOIN "likes" ON "likes"."chirp_id" = "chirps"."id" GROUP BY "chirps"."id"[0m
