@@ -21,25 +21,25 @@ User.destroy_all
 
 # Users
 mike = User.create!(username: 'michaelsoft', email: "pizzaman@msn.ca", favorite_coin: 'Ethereum', age: 99)
-chris = User.create!(username: "chrismas", email: "tasty_chasetea@gmail.com", favorite_coin: 'Dogecoin', age: 18)
+chris = User.create!(username: "chrispy", email: "tasty_chasetea@gmail.com", favorite_coin: 'Dogecoin', age: 18)
 paulo = User.create!(username: 'paulito', email: 'newroom@aa.dev', favorite_coin: 'Dogecoin', age: 11)
 abbey = User.create!(username: 'shmaybe', email: 'gale@geocities.com', favorite_coin: 'Ethereum', age: 21)
 taylor = User.create!(username: 'taylor_made', email: 'craycray4taytay@hotmail.com', favorite_coin: 'Bitcoin', age: 33)
 darren = User.create!(username: 'darelicte', email: 'capEtan@aa.io', favorite_coin: 'USD Coin', age: 79)
-disnee = User.create!(username: 'disneeland', email: 'ilovedogs@yahoo.com', favorite_coin: 'Bitcoin', age: 19)
+disnee = User.create!(username: 'disneeze', email: 'ilovedogs@yahoo.com', favorite_coin: 'Bitcoin', age: 19)
 diego = User.create!(username: 'dieguccio', email: 'dieguccio@aol.org', favorite_coin: 'Bitcoin', age: 21)
 
 # Chirps
-chirp1 = Chirp.create!(author_id: mike.id, body: 'has this app been blessed by lord elon yet?')
+chirp1 = Chirp.create!(author_id: mike.id, body: 'maybe if we restrict speech on here elon will buy us')
 chirp2 = Chirp.create!(author_id: paulo.id, body: 'we should name our app twinkle')
 chirp3 = Chirp.create!(author_id: chris.id, body: '@paulito please no')
 chirp4 = Chirp.create!(author_id: disnee.id, body: 'Wish I could be a dog and hang out with dogs all day')
-chirp5 = Chirp.create!(author_id: taylor.id, body: '@disneeland please no')
+chirp5 = Chirp.create!(author_id: taylor.id, body: '@disneeze please no')
 chirp6 = Chirp.create!(author_id: abbey.id, body: 'I need a new phone number D:')
 chirp7 = Chirp.create!(author_id: diego.id, body: 'San Francisco has the worst food in the country not even joking')
 chirp8 = Chirp.create!(author_id: mike.id, body: 'Captain\'s log, stardate 45944.1. We have still not found any good pizza in the gamma quadrant.')
 chirp9 = Chirp.create!(author_id: darren.id, body: 'Thanks @michaelsoft, I\'m addicted to super auto pets now')
-chirp10 = Chirp.create!(author_id: chris.id, body: 'Has anyone lost their glasses? We found someone\'s glasses in Torvalds.')
+chirp10 = Chirp.create!(author_id: chris.id, body: 'When should we do trivia night?')
 
 # Likes
 # Mike's likes
