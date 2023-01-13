@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   # get '/chrips/search', to: 'chirps#search'
 
   resources :chirps, only:[:index, :show, :create, :update, :destroy]
+  resources :users
 
   #nested routes
   # resources :users do
