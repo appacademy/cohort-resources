@@ -1,0 +1,30 @@
+<% if type == :new %>
+<%#  if we are doing a new form, should send us to create %>
+  <% action_url = users_url %>
+  <% button_text = "Create User" %>
+<% else %>
+<%# we are an edit form %>
+  <% action_url = user_url(banana) %>
+  <% button_text = "Update User" %>
+<% end %>
+
+<form action="<%= action_url %>" method="POST">
+<%# cant just put PATCH in the method, we have to overwrite it with a hidden input %>
+<% if type == :edit %>
+  <input type="hidden" name="_method" value="PATCH">
+<% end %>
+  <label>Username:
+    <%# prefill input %>
+    <input type="text" name="user[username]" value="<%= banana.username %>">
+  </label>
+  <br>
+  <label>Age:
+    <input type="text" name="user[age]" value="<%= banana.age %>">
+  </label>
+  <br>
+  <label>Email:
+    <input type="text" name="user[email]" value="<%= banana.email %>">
+  </label>
+  <br>
+  <input type="submit" value=<%= button_text %>>
+</form>

@@ -1,14 +1,21 @@
 class UsersController < ApplicationController
+
+  def new
+    @user = User.new
+    render :new
+  end
   
   def index
     @users = User.all
-    render json: @users
+    # render json: @users
+    render :index
   end
 
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to users_url
+      # redirect_to user_url(@user) # for show
+      redirect_to users_url # for index
     else
       render json: @user.errors.full_messages, status: 422
     end
@@ -16,7 +23,13 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
-    render json: @user
+    render :show
+  end
+
+  def edit
+    # need to know who you are editting
+    @user = User.find_by(id: params[:id])
+    render :edit
   end
 
   def update
@@ -32,6 +45,11 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     @user.destroy
     redirect_to users_url
+  end
+
+  private
+  def user_params
+    params.require(:user).permit(:username, :email, :age)
   end
   
 end
