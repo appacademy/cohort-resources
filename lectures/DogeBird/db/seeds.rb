@@ -20,14 +20,14 @@ User.destroy_all
 # We want to delete anything in our database we were using to test to keep it consistent 
 
 # Users
-mike = User.create!(username: 'michaelsoft', email: "pizzaman@msn.ca", favorite_coin: 'Ethereum', age: 99)
-chris = User.create!(username: "chrispy", email: "tasty_chasetea@gmail.com", favorite_coin: 'Dogecoin', age: 18)
-paulo = User.create!(username: 'paulito', email: 'newroom@aa.dev', favorite_coin: 'Dogecoin', age: 11)
-abbey = User.create!(username: 'shmaybe', email: 'gale@geocities.com', favorite_coin: 'Ethereum', age: 21)
-taylor = User.create!(username: 'taylor_made', email: 'craycray4taytay@hotmail.com', favorite_coin: 'Bitcoin', age: 33)
-darren = User.create!(username: 'darelicte', email: 'capEtan@aa.io', favorite_coin: 'USD Coin', age: 79)
-disnee = User.create!(username: 'disneeze', email: 'ilovedogs@yahoo.com', favorite_coin: 'Bitcoin', age: 19)
-diego = User.create!(username: 'dieguccio', email: 'dieguccio@aol.org', favorite_coin: 'Bitcoin', age: 21)
+mike = User.create!(username: 'michaelsoft', email: "pizzaman@msn.ca", favorite_coin: 'Ethereum', age: 99, password: 'password')
+chris = User.create!(username: "chrispy", email: "tasty_chasetea@gmail.com", favorite_coin: 'Dogecoin', age: 18, password: 'password')
+paulo = User.create!(username: 'paulito', email: 'newroom@aa.dev', favorite_coin: 'Dogecoin', age: 11, password: 'password')
+abbey = User.create!(username: 'shmaybe', email: 'gale@geocities.com', favorite_coin: 'Ethereum', age: 21, password: 'password')
+taylor = User.create!(username: 'taylor_made', email: 'craycray4taytay@hotmail.com', favorite_coin: 'Bitcoin', age: 33, password: 'password')
+darren = User.create!(username: 'darelicte', email: 'capEtan@aa.io', favorite_coin: 'USD Coin', age: 79, password: 'password')
+disnee = User.create!(username: 'disneeze', email: 'ilovedogs@yahoo.com', favorite_coin: 'Bitcoin', age: 19, password: 'password')
+diego = User.create!(username: 'dieguccio', email: 'dieguccio@aol.org', favorite_coin: 'Bitcoin', age: 21, password: 'password')
 
 # Chirps
 chirp1 = Chirp.create!(author_id: mike.id, body: 'maybe if we restrict speech on here elon will buy us')
