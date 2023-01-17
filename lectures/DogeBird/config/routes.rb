@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   resources :chirps, only:[:index, :show, :create, :update, :destroy]
   resources :users
+  # not plural because we dont want session ids
+  resource :session, only: [:new, :create, :destroy]
 
   #nested routes
   # resources :users do

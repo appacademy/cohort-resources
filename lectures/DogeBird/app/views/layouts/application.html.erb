@@ -11,6 +11,15 @@
   </head>
 
   <body>
+    <% if logged_in? %>
+      <h2>Welcome, <%= current_user.username %>!</h2>
+      <form action="<%= session_url %>" method="delete">
+        <input type="submit" value="Logout">
+      </form>
+    <% else %>
+      <a href="<%= new_user_url %>">Go to Sign up Form</a>
+      <a href="<%= new_session_url %>">Go to Sign in Form</a>
+    <% end %>
     <%= yield %>
   </body>
 </html>

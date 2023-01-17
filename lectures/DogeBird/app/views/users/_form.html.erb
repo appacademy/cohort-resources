@@ -1,7 +1,7 @@
 <% if type == :new %>
 <%#  if we are doing a new form, should send us to create %>
   <% action_url = users_url %>
-  <% button_text = "Create User" %>
+  <% button_text = "Sign up" %>
 <% else %>
 <%# we are an edit form %>
   <% action_url = user_url(banana) %>
@@ -18,6 +18,12 @@
     <input type="text" name="user[username]" value="<%= banana.username %>">
   </label>
   <br>
+  <% if type == :new %>
+    <label>Password:
+      <input type="password" name="user[password]" value="">
+    </label>
+    <br>
+  <% end %>
   <label>Age:
     <input type="text" name="user[age]" value="<%= banana.age %>">
   </label>

@@ -11,7 +11,50 @@
 #  age           :integer          not null
 #
 class User < ApplicationRecord
-    validates :username, :email, presence: true, uniqueness: true
+    validates :username, :email, :session_token, presence: true, uniqueness: true
+    validates :password_digest, presence: true
+    # allow nil true is necessary for non sign in pages to make changes with a user
+    validates :password, length: { minimum: 6 }, allow_nil: true
+
+    attr_reader :password
+
+    after_initialize :ensure_session_token
+    # before_validation :ensure_session_token
+
+    def self.find_by_credentials(username, password)
+        # return user if username and password is legit
+        user = User.find_by(username: username)
+        if user && user.check_password?(password)
+            return user
+        else 
+            return nil
+        end
+    end
+    
+    def check_password?(password)
+        # turn string from db into object
+        password_object = BCrypt::Password.new(self.password_digest)
+        # is_password? is a bcrypt method
+        password_object.is_password?(password)
+    end
+
+    def password=(password)
+        # create our password digest, and save the password to an instance variable 
+        # the instance variable allows our pw validation to work
+        self.password_digest = BCrypt::Password.create(password)
+        @password = password
+    end
+
+    def reset_session_token!
+        self.session_token = SecureRandom::urlsafe_base64
+        self.save! # loud save otherwise we wouldn't know if theres something wrong in our code
+        self.session_token
+    end
+
+    # need to create random string to pass session token validations
+    def ensure_session_token
+        self.session_token ||= SecureRandom::urlsafe_base64
+    end
 
     has_many :chirps,
         primary_key: :id,
