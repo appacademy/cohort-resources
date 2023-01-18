@@ -4,18 +4,19 @@
   <% button_text = "Sign up" %>
 <% else %>
 <%# we are an edit form %>
-  <% action_url = user_url(banana) %>
+  <% action_url = user_url(user) %>
   <% button_text = "Update User" %>
 <% end %>
 
 <form action="<%= action_url %>" method="POST">
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 <%# cant just put PATCH in the method, we have to overwrite it with a hidden input %>
 <% if type == :edit %>
   <input type="hidden" name="_method" value="PATCH">
 <% end %>
   <label>Username:
     <%# prefill input %>
-    <input type="text" name="user[username]" value="<%= banana.username %>">
+    <input type="text" name="user[username]" value="<%= user.username %>">
   </label>
   <br>
   <% if type == :new %>
@@ -25,11 +26,11 @@
     <br>
   <% end %>
   <label>Age:
-    <input type="text" name="user[age]" value="<%= banana.age %>">
+    <input type="text" name="user[age]" value="<%= user.age %>">
   </label>
   <br>
   <label>Email:
-    <input type="text" name="user[email]" value="<%= banana.email %>">
+    <input type="text" name="user[email]" value="<%= user.email %>">
   </label>
   <br>
   <input type="submit" value=<%= button_text %>>

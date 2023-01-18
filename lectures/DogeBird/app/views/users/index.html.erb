@@ -3,7 +3,7 @@
 <ul>
   <% @users.each do |user| %>
     <li>
-      <%= render 'user', banana: user, action: :index %>
+      <%= render 'user', user: user, action: :index %>
     </li>
   <% end %>
 </ul>

@@ -2,7 +2,7 @@
 
 <a href="<%= edit_user_url(@user) %>">Edit user</a>
 
-<%= render 'user', banana: @user, action: :show %>
+<%= render 'user', user: @user, action: :show %>
 
 <form action="<%= user_url(@user) %>" method="DELETE">
   <input type="submit" value="Delete User">

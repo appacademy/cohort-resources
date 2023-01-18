@@ -2,13 +2,13 @@
 <% if action == :show %>
 <%# if we are on the show page, give a link to the index page %>
   <a href="<%= users_url %>">Index page</a>
-  <h2><%= banana.username %></h2>
+  <h2><%= user.username %></h2>
 <% else %>
 <%# otherwise we are on the index, so we should link the user's show page %>
-  <a href="<%= user_url(banana) %>"><%= banana.username %></a>
+  <a href="<%= user_url(user) %>"><%= user.username %></a>
 <% end %>
 
 <ul>
-  <li><%= banana.email %></li>
-  <li><%= banana.age %></li>
+  <li><%= user.email %></li>
+  <li><%= user.age %></li>
 </ul>

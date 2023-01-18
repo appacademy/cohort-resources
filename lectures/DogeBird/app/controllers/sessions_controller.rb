@@ -4,6 +4,7 @@ class SessionsController < ApplicationController
     before_action :require_logged_in, only: :destroy
 
     def new
+        @user = User.new
         render :new
     end
 
@@ -20,12 +21,15 @@ class SessionsController < ApplicationController
             redirect_to users_url
         else
             # user is nil or not found
-            render json: ["Invalid Credentials"]
+            @user = User.new(username: params[:user][:username])
+            flash.now[:errors] = ["Invalid Credentials"]
+            render :new
         end
     end
 
     def destroy
         logout!
+        flash[:messages] = ["Successfully logged out!"]
         redirect_to new_session_url # might as well take them to sign in
     end
     

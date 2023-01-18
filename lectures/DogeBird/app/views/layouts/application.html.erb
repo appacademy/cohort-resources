@@ -13,13 +13,26 @@
   <body>
     <% if logged_in? %>
       <h2>Welcome, <%= current_user.username %>!</h2>
-      <form action="<%= session_url %>" method="delete">
+      <form action="<%= session_url %>" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="hidden" name="_method" value="delete">
         <input type="submit" value="Logout">
       </form>
     <% else %>
       <a href="<%= new_user_url %>">Go to Sign up Form</a>
       <a href="<%= new_session_url %>">Go to Sign in Form</a>
     <% end %>
+
+    <% if flash[:errors] %>
+      <ul>
+        <% flash[:errors].each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <%= flash[:messages] %>
+
     <%= yield %>
   </body>
 </html>

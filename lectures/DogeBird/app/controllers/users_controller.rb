@@ -20,7 +20,9 @@ class UsersController < ApplicationController
       # redirect_to user_url(@user) # for show
       redirect_to users_url # for index
     else
-      render json: @user.errors.full_messages, status: 422
+      # use flash.now with render new, want to use render new so that we can prefill the form
+      flash.now[:errors] = @user.errors.full_messages
+      render :new
     end
   end
 
@@ -37,10 +39,11 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find_by(id: params[:id])
-    if @user.update!(user_params)
+    if @user.update(user_params)
       redirect_to user_url(@user)
     else
-      render json: @user.errors.full_messages, status: 422
+      flash.now[:errors] = @user.errors.full_messages
+      render :edit
     end
   end
 
