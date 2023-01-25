@@ -47,7 +47,7 @@ function Dog(name) {
 }
 
 Dog.prototype.bark = function () {
-  debugger
+  // debugger
   console.log(`${this.name} says 'woof'.`);
 };
 
@@ -72,11 +72,12 @@ Dog.prototype.sniff = function (otherThing) {
 
 
 
-// function timesDo(num, cb) {
-//   for (let i = 0; i < num; i++) {
-//     cb();
-//   }
-// }
+function timesDo(num, cb) {
+  for (let i = 0; i < num; i++) {
+    debugger
+    cb();
+  }
+}
 
 // Cat.prototype.makeNamePrinter() {
 //   // Return a function that, when invoked, will print the cat's name
