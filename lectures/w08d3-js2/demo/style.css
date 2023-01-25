@@ -1,0 +1,12 @@
+.img-container {
+    height: 600px;
+}
+
+img {
+    height: 100%;
+    display: none;
+}
+
+img.revealed {
+    display: block;
+}
