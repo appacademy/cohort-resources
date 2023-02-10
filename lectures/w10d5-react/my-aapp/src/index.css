@@ -1,0 +1,15 @@
+/* TODO Add site wide styles */
+.app {
+    border: 1px solid blue;
+}
+
+.job-index {
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.job-index-item {
+    border: 1px solid green;
+}
