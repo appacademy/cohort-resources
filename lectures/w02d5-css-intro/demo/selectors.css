@@ -1,0 +1,23 @@
+/* .descendant-selector p {
+  background-color: blue;
+} */
+
+/* h3 ~ p {
+  background-color: green;
+} */
+
+/* .child-selector > :first-child {
+  background-color: red;
+} */
+
+/* .red {
+  background-color: red;
+}
+
+#blue {
+  background-color: blue;
+} */
+
+/* p:hover {
+  background-color: grey;
+} */
