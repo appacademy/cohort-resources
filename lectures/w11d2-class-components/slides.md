@@ -168,9 +168,10 @@ class ClassComponent extends React.Component {
 ## Updating State
 
 ```js
-  handleClick(e) {
+ handleClick(e) {
     // this.setState({ count: this.state.count + 1 });
     this.setState((state, props) => ({ count: state.count + 1 }));
+   
     console.log(this.state.count);
   }
 
@@ -203,6 +204,36 @@ Note:
 + Second argument is a completion callback that will be invoked only after state 
 is successfully updated
 
+---
+
+### Why use a callback function?
+- Imagine we wanted to validate an email after user input:
+```js
+changeEmail (event) {
+  this.setState({ email: event.target.value });
+  this.validateEmail();
+},
+validateEmail () {
+  if (this.state.email.length === 0) {
+    this.setState({ emailError: "Email can't be blank" });
+  }
+},
+```
+- this.setState will run asynchronously. Therefore, this.validateEmail() will run before the change of state has finished.
+
+---
+### How do we fix it?
+```js
+changeTitle (event) {
+  this.setState({ email: event.target.value }, () => {
+    this.validateEmail();
+  });
+validateEmail () {
+  if (this.state.email.length === 0) {
+    this.setState({ emailError: "Email can't be blank" });
+  }
+},
+```
 ---
 
 ## Demo Part 1
