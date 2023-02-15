@@ -1,13 +1,19 @@
 import { useState } from "react";
+import { useSessionContext } from "../context/sessionContext";
 import { Link, NavLink } from "react-router-dom";
 
 const NavBar = (props) => {
-  const [loggedIn, setLogin] = useState(false);
+  // const [loggedIn, setLogin] = useState(false);
   const [currentUser, setCurrentUser] = useState({});
+
+  // const loggedIn = props.loggedIn;
+  // const setLogin = props.setLogin;
+
+  const {loggedIn, setLogin} = useSessionContext();
 
   console.log(loggedIn)
 
-  const handleClick = e => {
+  const handleClick = e => { 
     e.preventDefault();
     if (loggedIn) {
       setCurrentUser({});
