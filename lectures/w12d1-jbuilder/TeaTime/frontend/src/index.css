@@ -1,0 +1,58 @@
+/* TODO Add site wide styles */
+
+
+body{
+    width: 75vw;
+    margin: auto;
+}
+h1{
+    text-align: center;
+}
+
+form input{
+    margin-bottom: 10px;
+}
+
+.tea-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.tea-form-container, .tea-index-container{
+    display: flex;
+    flex-direction: column;
+}
+
+ul{
+    list-style: none;
+}
+
+.teas-ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+.teas-ul ul{
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin-bottom: 5px;
+}
+li{
+  margin: 0px; 
+}
+
+li h4 {
+    margin: 2px;
+    text-align: center;
+}
+
+li p {
+    margin: 2px;
+    text-align: center;
+}
+
+.transaction {
+    display: flex;
+    justify-content: space-around;
+}
