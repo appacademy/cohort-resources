@@ -8,11 +8,10 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
+
 class Like < ApplicationRecord
+    validates :chirp_id, uniqueness: {scope: :liker_id}
 
-    validates :chirp_id, uniqueness:{scope: :liker_id}
-
-    # when you have a belongs to, it auto makes a presence true validation. 
     belongs_to :chirp,
         primary_key: :id,
         foreign_key: :chirp_id,
@@ -22,5 +21,4 @@ class Like < ApplicationRecord
         primary_key: :id,
         foreign_key: :liker_id,
         class_name: :User
-
 end
