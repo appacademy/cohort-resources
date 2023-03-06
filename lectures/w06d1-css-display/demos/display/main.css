@@ -1,0 +1,30 @@
+div {
+  /* height: 100px; */
+  border: 1px solid green;
+  background: pink;
+}
+
+section div {
+  background: turquoise;
+  /* width: 300px; */
+  /* margin: 0 auto; */
+  /* padding: 20px; */
+  /* box-sizing: border-box; */
+}
+
+
+/* inline: allows elements to left and right(unlike block), but does not honor height, width, or top/bottom margin/padding settings  */
+span {
+  /* background: cornflowerblue;
+  margin-top: 50px;
+  margin-bottom: 50px; */
+}
+
+/* inline-block: allows elements to left and right(unlike block), and does honor height, width, or top/bottom margin/padding settings(unlike inline)  */
+
+.inline-block-demo {
+  /* display: inline-block; */
+  /* background: orange;
+  margin-top: 50px;
+  margin-bottom: 50px; */
+}
