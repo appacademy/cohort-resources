@@ -57,6 +57,9 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
   gem "annotate"
+  gem 'better_errors' # will give us nice formated errors when we encounter them 
+  gem 'binding_of_caller' # this will allow us to poke around our code at the time of error 
+
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"

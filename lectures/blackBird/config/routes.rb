@@ -3,4 +3,35 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  # this is where we define out routes
+
+
+
+# VERB '/path' , to: 'controller#action'
+  # get '/chirps', to: 'chirps#index'
+
+
+  # restful routes
+
+  # exludes these routes
+  resources :chirps, except: [:new, :edit]
+  resources :users, except: [:new, :edit]
+  # only make these routes
+  # resources :chirps, only: [:create, :update, :destroy, :index]
+
+
+
+
+
+
+
+
+
+
+  # create a custom route
+  # get '/chirps', to: 'chirps#search'
+
+
+
+
 end
