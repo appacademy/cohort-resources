@@ -1,0 +1,32 @@
+<!-- method: attribute in the form tag will need to be overwritten because we need to make a patch request -->
+<!-- action: attribute will use a route that will need a wildcard -->
+
+<!-- input type= "hidden":  users will not see this input tag on the page-->
+<!-- name="_method": the syntax to overwrite the method attribute on the form tag -->
+<!-- value="PATCH": the HTTP verb we want instead.  Can be "patch" or "PATCH". -->
+
+<h1>Edit a user!</h1>
+
+<%= render 'form', user: @user, action: :edit %>
+
+
+<!--
+<form action="<%= user_url(@user.id) %>" method='POST'>
+    <input type="hidden" name="_method" value="PATCH">
+    <label for="username">Username:</label>
+    <input type="text" id='username' name='user[username]' value="<%= @user.username %>">
+    <br>
+    <label> Email:
+        <input type="text" name='user[email]' value="<%= @user.email %>">
+    </label>
+    <br>
+    <label> Age:
+        <input type="text" name='user[age]' value="<%= @user.age %>">
+    </label>
+    <br>
+
+
+    <input type="submit" value="Update User">
+</form>
+
+-->

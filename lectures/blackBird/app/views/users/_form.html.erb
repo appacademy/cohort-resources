@@ -1,0 +1,19 @@
+<form action="<%= action == :edit ? user_url(user.id) : users_url %>" method='POST'>
+    <% if action == :edit%>
+        <input type="hidden" name="_method" value="PATCH">
+    <% end%>
+    <label for="username">Username:</label>
+    <input type="text" id='username' name='user[username]' value="<%= user.username %>">
+    <br>
+    <label> Email:
+        <input type="text" name='user[email]' value="<%= user.email %>">
+    </label>
+    <br>
+    <label> Age:
+        <input type="text" name='user[age]' value="<%= user.age %>">
+    </label>
+    <br>
+
+
+    <input type="submit" value="<%= action == :edit ? 'Update User' : 'Create User' %>">
+</form>

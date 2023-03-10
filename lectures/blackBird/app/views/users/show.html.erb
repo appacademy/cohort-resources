@@ -1,0 +1,11 @@
+<h1>User show page</h1>
+
+<a href="<%= edit_user_url(@user.id) %>">Edit user</a>
+
+<form action="<%= user_url(@user) %>" method='POST'>
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete User">
+</form>
+
+<%= render 'user', user: @user, action: :show %>
+<%#= render 'name of partial without underscore', variable_name: variable_passed_in_under_variable_name %>

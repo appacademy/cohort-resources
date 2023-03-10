@@ -14,8 +14,8 @@ Rails.application.routes.draw do
   # restful routes
 
   # exludes these routes
-  resources :chirps, except: [:new, :edit]
-  resources :users, except: [:new, :edit]
+  resources :chirps
+  resources :users
   # only make these routes
   # resources :chirps, only: [:create, :update, :destroy, :index]
 
