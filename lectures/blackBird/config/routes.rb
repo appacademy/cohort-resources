@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   # exludes these routes
   resources :chirps
   resources :users
+  resource :session, only: [:new, :create, :destroy]
   # only make these routes
   # resources :chirps, only: [:create, :update, :destroy, :index]
 

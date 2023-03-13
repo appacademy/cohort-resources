@@ -1,5 +1,5 @@
 class ChirpsController < ApplicationController
-
+before_action :require_logged_in, only: [:create]
 
 # controller actions are just methods
 
