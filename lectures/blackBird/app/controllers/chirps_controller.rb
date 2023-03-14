@@ -3,22 +3,29 @@ before_action :require_logged_in, only: [:create]
 
 # controller actions are just methods
 
+
+
+    def new
+        render :new
+    end
+
     def index 
         #  free to use active record and associations 
         # debugger
         # query =params[:query]
-      chirps = Chirp.all
-      render json: chirps
+      @chirps = Chirp.all
+      render :index
 
     end 
 
     def create
-        debugger
+        # debugger
         chirp = Chirp.new(chirp_params)
-        chirp.user_id = User.first.id
+        chirp.user_id = current_user.id
         if chirp.save
             # need to include wildcard with redirect if it needs it
-            redirect_to chirp_url(chirp.id)
+            # redirect_to chirp_url(chirp.id)
+            redirect_to user_url(chirp.user_id)
         else 
             render json: chirp.errors.full_messages, status: 422 # unprocessable entity 
         end 
@@ -26,7 +33,7 @@ before_action :require_logged_in, only: [:create]
     end 
 
     def update
-        debugger
+        # debugger
         # incoming_wildcard = params[:id]
         chirp = Chirp.find_by(id: params[:id]) #nil
         # find_by will return nil
@@ -45,7 +52,8 @@ before_action :require_logged_in, only: [:create]
         incoming_wildcard = params[:id]
         chirp = Chirp.find(incoming_wildcard)
         chirp.destroy
-        redirect_to chirps_url
+        # redirect_to chirps_url
+        redirect_to user_url(chirp.user_id)
         # we can redirect 
         # when we redirect we create an additional request
 

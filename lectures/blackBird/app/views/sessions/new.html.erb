@@ -3,6 +3,8 @@
 
 
 <form action="<%= session_url %>" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
     <input type="text" name="user[username]" placeholder="username">
     <input type="password" name="user[password]" placeholder="password">
     <button>Submit</button>

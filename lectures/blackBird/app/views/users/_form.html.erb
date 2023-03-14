@@ -1,4 +1,6 @@
 <form action="<%= action == :edit ? user_url(user.id) : users_url %>" method='POST'>
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
     <% if action == :edit%>
         <input type="hidden" name="_method" value="PATCH">
     <% end%>

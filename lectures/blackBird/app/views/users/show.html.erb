@@ -3,9 +3,30 @@
 <a href="<%= edit_user_url(@user.id) %>">Edit user</a>
 
 <form action="<%= user_url(@user) %>" method='POST'>
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
     <input type="hidden" name="_method" value="DELETE">
     <input type="submit" value="Delete User">
 </form>
 
 <%= render 'user', user: @user, action: :show %>
 <%#= render 'name of partial without underscore', variable_name: variable_passed_in_under_variable_name %>
+
+<h2>User's chirps!</h2>
+<% if @user == current_user%>
+    <a href="<%= new_chirp_url %>">Create a chirp!</a>
+<% end%>
+<ul>
+    <% @user.chirps.each do |chirp|%>
+        <li style="display: flex; justify-content:space-between; width: 200px; padding: 5px">
+            <%= chirp.body %>
+            <form action="<%= chirp_url(chirp.id) %>" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="submit" value="Delete">
+            </form>    
+        </li>    
+        
+    <% end%>
+</ul>
+
+
+

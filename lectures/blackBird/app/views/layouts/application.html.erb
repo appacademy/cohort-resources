@@ -14,15 +14,27 @@
 <% if logged_in? %>
 <h2>Welcome, <%= current_user.username %></h2>
 <form action="<%= session_url %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
   <input type="hidden" name="_method" value="DELETE">
     <button>Log Out!</button>
 </form>
 
 <% end %>
 
-
-    
     <%= yield %>
+
+  <% if flash[:errors]%>
+    <% flash[:errors].each do |error|%>
+      <%= error %>
+    <% end%>
+  <% end%>
+
+   <% if flash[:messages]%>
+    <% flash[:messages].each do |message|%>
+      <%= message %>
+    <% end%>
+  <% end%>
   
   </body>
 
