@@ -1,0 +1,2 @@
+class Penguin < ApplicationRecord
+end

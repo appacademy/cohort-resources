@@ -51,6 +51,9 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "byebug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -60,6 +63,7 @@ group :development do
   gem 'better_errors' # will give us nice formated errors when we encounter them 
   gem 'binding_of_caller' # this will allow us to poke around our code at the time of error 
   gem 'pry-rails'
+  # gem 'byebug'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
@@ -73,4 +77,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem 'faker'
+  gem 'launchy'
+  # gem 'byebug'
 end
