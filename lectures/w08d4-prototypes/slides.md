@@ -1,5 +1,5 @@
-# W8D4
-## Prototypal Inheritance
+# Prototypal Inheritance
+## W8D4
 
 ---
 
