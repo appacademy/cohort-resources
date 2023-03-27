@@ -1,1 +1,0 @@
-json.partial! 'tea', tea: @tea
