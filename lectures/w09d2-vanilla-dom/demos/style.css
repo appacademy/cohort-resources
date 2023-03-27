@@ -1,0 +1,49 @@
+.yellow{
+    background-color: yellow;
+}
+
+.large{
+    height: 500px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.loud{
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 900;
+}
+
+.hidden{
+    display: none;
+}
+
+
+#parent{
+    height: 350px;
+    color: white;
+    width: 350px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.children{
+    color: black;
+    height: 50px;
+    width: 50px;
+    background-color: pink;
+    border: 1px solid red;
+    margin: 20px;
+}
+
+#grand-parent{
+    background-color: aqua;
+    border: 1px solid black;
+    height: 600px;
+    width: 600px;
+}
