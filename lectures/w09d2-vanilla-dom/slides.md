@@ -8,7 +8,7 @@
 * SQL -> ORM -> Active Record
 * Ruby on Rails
 * JS -> Vanilla DOM 🍦
-* JQuery
+* AJAX / Fetch
 * React/Redux
 
 ---
