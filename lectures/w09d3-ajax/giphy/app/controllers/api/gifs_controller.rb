@@ -5,6 +5,7 @@ class Api::GifsController < ApplicationController
       render json: gif
     else
       render json: ['No such GIF with that title'], status: 404
+    end
   end
 
   def create

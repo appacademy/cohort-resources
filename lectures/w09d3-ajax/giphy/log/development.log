@@ -605,3 +605,1175 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 3ms (Views: 3.0ms | Allocations: 3254)
 
 
+Started GET "/" for ::1 at 2023-03-29 08:59:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.2ms | Allocations: 153)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3788)
+Completed 200 OK in 5ms (Views: 5.0ms | Allocations: 4517)
+
+
+Started GET "/" for ::1 at 2023-03-29 08:59:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1920)
+Completed 200 OK in 2ms (Views: 2.1ms | Allocations: 2138)
+
+
+Started GET "/" for ::1 at 2023-03-29 08:59:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1920)
+Completed 200 OK in 2ms (Views: 2.0ms | Allocations: 2121)
+
+
+Started GET "/" for ::1 at 2023-03-29 08:59:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1920)
+Completed 200 OK in 3ms (Views: 2.2ms | Allocations: 2121)
+
+
+Started GET "/" for ::1 at 2023-03-29 08:59:37 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1920)
+Completed 200 OK in 3ms (Views: 2.4ms | Allocations: 2121)
+
+
+Started GET "/" for ::1 at 2023-03-29 08:59:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1920)
+Completed 200 OK in 2ms (Views: 2.1ms | Allocations: 2121)
+
+
+Started GET "/" for ::1 at 2023-03-29 08:59:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1911)
+Completed 200 OK in 2ms (Views: 2.0ms | Allocations: 2112)
+
+
+Started GET "/" for ::1 at 2023-03-29 09:34:23 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3120)
+Completed 200 OK in 5ms (Views: 5.2ms | Allocations: 3321)
+
+
+Started GET "/" for ::1 at 2023-03-29 09:34:30 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1911)
+Completed 200 OK in 2ms (Views: 2.2ms | Allocations: 2112)
+
+
+Started GET "/" for ::1 at 2023-03-29 09:34:30 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1914)
+Completed 200 OK in 2ms (Views: 2.2ms | Allocations: 2115)
+
+
+Started GET "/" for ::1 at 2023-03-29 09:34:31 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1923)
+Completed 200 OK in 3ms (Views: 2.8ms | Allocations: 2124)
+
+
+Started GET "/" for ::1 at 2023-03-29 09:34:31 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1917)
+Completed 200 OK in 3ms (Views: 2.4ms | Allocations: 2118)
+
+
+Started GET "/" for ::1 at 2023-03-29 09:34:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1917)
+Completed 200 OK in 3ms (Views: 2.5ms | Allocations: 2118)
+
+
+Started GET "/" for ::1 at 2023-03-29 09:34:33 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1911)
+Completed 200 OK in 2ms (Views: 1.8ms | Allocations: 2112)
+
+
+Started GET "/" for ::1 at 2023-03-29 09:34:33 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1911)
+Completed 200 OK in 2ms (Views: 2.3ms | Allocations: 2112)
+
+
+Started GET "/" for ::1 at 2023-03-29 09:34:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1926)
+Completed 200 OK in 2ms (Views: 2.2ms | Allocations: 2127)
+
+
+Started GET "/" for ::1 at 2023-03-29 09:34:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1914)
+Completed 200 OK in 3ms (Views: 2.4ms | Allocations: 2115)
+
+
+Started GET "/" for ::1 at 2023-03-29 09:34:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1923)
+Completed 200 OK in 2ms (Views: 2.3ms | Allocations: 2124)
+
+
+Started GET "/" for ::1 at 2023-03-29 09:34:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1914)
+Completed 200 OK in 2ms (Views: 2.3ms | Allocations: 2115)
+
+
+Started GET "/" for ::1 at 2023-03-29 09:34:36 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1914)
+Completed 200 OK in 2ms (Views: 1.8ms | Allocations: 2115)
+
+
+Started GET "/" for ::1 at 2023-03-29 09:34:40 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1911)
+Completed 200 OK in 2ms (Views: 2.2ms | Allocations: 2112)
+
+
+Started GET "/" for ::1 at 2023-03-29 09:39:49 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2189)
+Completed 200 OK in 4ms (Views: 3.7ms | Allocations: 2734)
+
+
+Started GET "/" for ::1 at 2023-03-29 09:42:24 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1983)
+Completed 200 OK in 3ms (Views: 3.0ms | Allocations: 2200)
+
+
+Started GET "/" for ::1 at 2023-03-29 09:42:24 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1920)
+Completed 200 OK in 3ms (Views: 3.0ms | Allocations: 2121)
+
+
+Started GET "/" for ::1 at 2023-03-29 09:42:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1929)
+Completed 200 OK in 3ms (Views: 2.5ms | Allocations: 2130)
+
+
+Started GET "/" for ::1 at 2023-03-29 09:42:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1929)
+Completed 200 OK in 3ms (Views: 2.5ms | Allocations: 2130)
+
+
+Started GET "/" for ::1 at 2023-03-29 09:42:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1911)
+Completed 200 OK in 2ms (Views: 2.2ms | Allocations: 2112)
+
+
+Started GET "/" for ::1 at 2023-03-29 09:42:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1929)
+Completed 200 OK in 3ms (Views: 2.7ms | Allocations: 2130)
+
+
+Started GET "/" for ::1 at 2023-03-29 09:42:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1917)
+Completed 200 OK in 2ms (Views: 2.0ms | Allocations: 2118)
+
+
+Started GET "/" for ::1 at 2023-03-29 09:42:40 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3174)
+Completed 200 OK in 4ms (Views: 4.2ms | Allocations: 3376)
+
+
+Started GET "/" for ::1 at 2023-03-29 09:42:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1920)
+Completed 200 OK in 2ms (Views: 2.1ms | Allocations: 2121)
+
+
+Started GET "/" for ::1 at 2023-03-29 09:48:54 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 3099)
+Completed 200 OK in 4ms (Views: 3.9ms | Allocations: 3300)
+
+
+Started GET "/" for ::1 at 2023-03-29 10:31:09 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3125)
+Completed 200 OK in 6ms (Views: 5.4ms | Allocations: 3326)
+
+
+Started GET "/" for ::1 at 2023-03-29 10:33:19 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 3129)
+Completed 200 OK in 5ms (Views: 4.6ms | Allocations: 3330)
+
+
+Started GET "/" for ::1 at 2023-03-29 10:35:49 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 3114)
+Completed 200 OK in 4ms (Views: 4.1ms | Allocations: 3315)
+
+
+Started GET "/" for ::1 at 2023-03-29 10:36:42 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 3114)
+Completed 200 OK in 4ms (Views: 3.6ms | Allocations: 3315)
+
+
+Started GET "/" for ::1 at 2023-03-29 10:37:13 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 3120)
+Completed 200 OK in 4ms (Views: 3.5ms | Allocations: 3321)
+
+
+Started GET "/" for ::1 at 2023-03-29 10:37:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 3127)
+Completed 200 OK in 4ms (Views: 3.5ms | Allocations: 3329)
+
+
+Started GET "/" for ::1 at 2023-03-29 10:38:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1946)
+Completed 200 OK in 3ms (Views: 2.5ms | Allocations: 2147)
+
+
+Started GET "/" for ::1 at 2023-03-29 10:39:02 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 3130)
+Completed 200 OK in 4ms (Views: 3.5ms | Allocations: 3331)
+
+
+Started GET "/" for ::1 at 2023-03-29 10:40:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 3135)
+Completed 200 OK in 3ms (Views: 3.3ms | Allocations: 3336)
+
+
+Started GET "/" for ::1 at 2023-03-29 10:40:49 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 3123)
+Completed 200 OK in 4ms (Views: 3.9ms | Allocations: 3324)
+
+
+Started GET "/" for ::1 at 2023-03-29 10:56:53 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1969)
+Completed 200 OK in 3ms (Views: 2.4ms | Allocations: 2170)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:20:15 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 3128)
+Completed 200 OK in 4ms (Views: 3.5ms | Allocations: 3329)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:20:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3135)
+Completed 200 OK in 5ms (Views: 5.3ms | Allocations: 3336)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:22:12 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3144)
+Completed 200 OK in 4ms (Views: 4.2ms | Allocations: 3345)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:22:22 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3132)
+Completed 200 OK in 5ms (Views: 4.4ms | Allocations: 3333)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:27:07 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 3138)
+Completed 200 OK in 4ms (Views: 4.1ms | Allocations: 3339)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:27:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1911)
+Completed 200 OK in 3ms (Views: 3.0ms | Allocations: 2112)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:29:02 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1963)
+Completed 200 OK in 3ms (Views: 2.7ms | Allocations: 2164)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:32:17 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 3120)
+Completed 200 OK in 4ms (Views: 3.8ms | Allocations: 3321)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:32:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 3135)
+Completed 200 OK in 4ms (Views: 3.4ms | Allocations: 3336)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:33:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1914)
+Completed 200 OK in 2ms (Views: 2.1ms | Allocations: 2115)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:33:26 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1923)
+Completed 200 OK in 2ms (Views: 1.9ms | Allocations: 2124)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:33:27 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1914)
+Completed 200 OK in 2ms (Views: 2.1ms | Allocations: 2115)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:33:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1923)
+Completed 200 OK in 2ms (Views: 2.1ms | Allocations: 2124)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:33:30 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1908)
+Completed 200 OK in 2ms (Views: 2.0ms | Allocations: 2109)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:33:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1920)
+Completed 200 OK in 3ms (Views: 2.5ms | Allocations: 2121)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:33:37 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1932)
+Completed 200 OK in 2ms (Views: 2.0ms | Allocations: 2133)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 3130)
+Completed 200 OK in 4ms (Views: 3.9ms | Allocations: 3331)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1926)
+Completed 200 OK in 2ms (Views: 2.3ms | Allocations: 2127)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:36 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 1950)
+Completed 200 OK in 5ms (Views: 4.4ms | Allocations: 2152)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:37 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1917)
+Completed 200 OK in 3ms (Views: 2.7ms | Allocations: 2120)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:37 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1917)
+Completed 200 OK in 2ms (Views: 2.2ms | Allocations: 2118)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1920)
+Completed 200 OK in 2ms (Views: 2.1ms | Allocations: 2121)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1908)
+Completed 200 OK in 2ms (Views: 2.0ms | Allocations: 2109)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1929)
+Completed 200 OK in 2ms (Views: 2.1ms | Allocations: 2130)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1914)
+Completed 200 OK in 3ms (Views: 2.6ms | Allocations: 2115)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1944)
+Completed 200 OK in 2ms (Views: 2.2ms | Allocations: 2145)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1932)
+Completed 200 OK in 2ms (Views: 2.0ms | Allocations: 2133)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1917)
+Completed 200 OK in 2ms (Views: 2.3ms | Allocations: 2118)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1914)
+Completed 200 OK in 2ms (Views: 2.0ms | Allocations: 2115)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:39 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1914)
+Completed 200 OK in 2ms (Views: 2.3ms | Allocations: 2115)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:39 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1932)
+Completed 200 OK in 2ms (Views: 2.3ms | Allocations: 2133)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:39 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1917)
+Completed 200 OK in 2ms (Views: 1.9ms | Allocations: 2118)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:40 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1923)
+Completed 200 OK in 2ms (Views: 2.2ms | Allocations: 2124)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:40 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1911)
+Completed 200 OK in 2ms (Views: 2.1ms | Allocations: 2112)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:40 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1911)
+Completed 200 OK in 2ms (Views: 2.0ms | Allocations: 2113)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:40 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1920)
+Completed 200 OK in 2ms (Views: 2.0ms | Allocations: 2121)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:40 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1921)
+Completed 200 OK in 2ms (Views: 2.1ms | Allocations: 2122)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:40 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1926)
+Completed 200 OK in 2ms (Views: 2.0ms | Allocations: 2127)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:40 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1917)
+Completed 200 OK in 2ms (Views: 1.9ms | Allocations: 2118)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:41 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1914)
+Completed 200 OK in 2ms (Views: 1.9ms | Allocations: 2115)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:41 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1908)
+Completed 200 OK in 2ms (Views: 2.1ms | Allocations: 2109)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:41 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1926)
+Completed 200 OK in 3ms (Views: 2.6ms | Allocations: 2127)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:35:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1911)
+Completed 200 OK in 2ms (Views: 2.2ms | Allocations: 2112)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:36:05 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1911)
+Completed 200 OK in 2ms (Views: 2.2ms | Allocations: 2112)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:36:06 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1911)
+Completed 200 OK in 2ms (Views: 2.0ms | Allocations: 2112)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:36:07 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1914)
+Completed 200 OK in 2ms (Views: 2.1ms | Allocations: 2115)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:36:07 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1926)
+Completed 200 OK in 2ms (Views: 2.0ms | Allocations: 2127)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:36:07 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1932)
+Completed 200 OK in 2ms (Views: 1.9ms | Allocations: 2133)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:36:07 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1926)
+Completed 200 OK in 2ms (Views: 1.9ms | Allocations: 2127)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:36:07 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1935)
+Completed 200 OK in 2ms (Views: 2.2ms | Allocations: 2136)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:36:08 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1917)
+Completed 200 OK in 3ms (Views: 2.5ms | Allocations: 2118)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:36:10 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1920)
+Completed 200 OK in 2ms (Views: 2.2ms | Allocations: 2121)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:36:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3146)
+Completed 200 OK in 4ms (Views: 4.1ms | Allocations: 3347)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:36:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1938)
+Completed 200 OK in 2ms (Views: 2.0ms | Allocations: 2139)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:36:46 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1914)
+Completed 200 OK in 2ms (Views: 2.0ms | Allocations: 2115)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:36:47 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1926)
+Completed 200 OK in 2ms (Views: 2.0ms | Allocations: 2127)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:36:52 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1917)
+Completed 200 OK in 2ms (Views: 2.0ms | Allocations: 2118)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:37:17 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 3146)
+Completed 200 OK in 4ms (Views: 4.0ms | Allocations: 3347)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:37:18 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1926)
+Completed 200 OK in 2ms (Views: 2.0ms | Allocations: 2127)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:37:49 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 3145)
+Completed 200 OK in 4ms (Views: 3.4ms | Allocations: 3346)
+
+
+Started GET "/" for ::1 at 2023-03-29 11:50:03 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 3158)
+Completed 200 OK in 4ms (Views: 3.4ms | Allocations: 3359)
+
+
+Started POST "/api/gifs" for ::1 at 2023-03-29 11:50:52 -0700
+  
+SyntaxError (/home/deid/cohort-resources/lectures/w09d3-ajax/giphy/app/controllers/api/gifs_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/gifs_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/gifs_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/" for ::1 at 2023-03-29 11:51:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2200)
+Completed 200 OK in 3ms (Views: 2.8ms | Allocations: 2747)
+
+
+Started POST "/api/gifs" for ::1 at 2023-03-29 11:51:36 -0700
+Processing by Api::GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"test", "url"=>"www.google.com"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (Allocations: 259)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.4.3) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.4.3) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+actionpack (7.0.4.3) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.4.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.4.3) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.3) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.3) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.3) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.3) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-03-29 11:52:18 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 2217)
+Completed 200 OK in 3ms (Views: 2.4ms | Allocations: 2757)
+
+
+Started POST "/api/gifs" for ::1 at 2023-03-29 11:52:22 -0700
+Processing by Api::GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"test", "url"=>"www.google.com"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/gifs_controller.rb:13:in `create'
+  [1m[36mGif Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/api/gifs_controller.rb:13:in `create'
+  [1m[36mGif Create (0.3ms)[0m  [1m[32mINSERT INTO "gifs" ("title", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "test"], ["url", "www.google.com"], ["created_at", "2023-03-29 18:52:23.005271"], ["updated_at", "2023-03-29 18:52:23.005271"]]
+  ↳ app/controllers/api/gifs_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/gifs_controller.rb:13:in `create'
+Completed 200 OK in 26ms (Views: 0.3ms | ActiveRecord: 9.7ms | Allocations: 12027)
+
+
+  [1m[36mGif Load (0.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs"[0m
+Started GET "/" for ::1 at 2023-03-29 11:55:23 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3430)
+Completed 200 OK in 4ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 3651)
+
+
+Started GET "/" for ::1 at 2023-03-29 12:01:30 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 3150)
+Completed 200 OK in 4ms (Views: 4.2ms | Allocations: 3336)
+
+
+Started POST "/api/gifs" for ::1 at 2023-03-29 12:01:43 -0700
+Processing by Api::GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"spooky spongebob", "url"=>"https://media2.giphy.com/media/UqjiAcvF31h7QzQ4yE/giphy.gif?cid=2cb8fdb7396b7a752297aa940337ccdd0993d5d47c2b3602&rid=giphy.gif&ct=g"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/gifs_controller.rb:13:in `create'
+  [1m[36mGif Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "spooky spongebob"], ["LIMIT", 1]]
+  ↳ app/controllers/api/gifs_controller.rb:13:in `create'
+  [1m[36mGif Create (0.2ms)[0m  [1m[32mINSERT INTO "gifs" ("title", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "spooky spongebob"], ["url", "https://media2.giphy.com/media/UqjiAcvF31h7QzQ4yE/giphy.gif?cid=2cb8fdb7396b7a752297aa940337ccdd0993d5d47c2b3602&rid=giphy.gif&ct=g"], ["created_at", "2023-03-29 19:01:43.287210"], ["updated_at", "2023-03-29 19:01:43.287210"]]
+  ↳ app/controllers/api/gifs_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/gifs_controller.rb:13:in `create'
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 5.7ms | Allocations: 5654)
+
+
+Started GET "/" for ::1 at 2023-03-29 12:03:17 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 3180)
+Completed 200 OK in 3ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 3369)
+
+
+Started POST "/api/gifs" for ::1 at 2023-03-29 12:03:25 -0700
+Processing by Api::GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"smirk", "url"=>"https://media0.giphy.com/media/m5zXsWom73q0/giphy.gif?cid=2cb8fdb7c82177040409f42b8d9ca4dd78eeb428bb67f5fc&rid=giphy.gif&ct=g"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/gifs_controller.rb:13:in `create'
+  [1m[36mGif Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "smirk"], ["LIMIT", 1]]
+  ↳ app/controllers/api/gifs_controller.rb:13:in `create'
+  [1m[36mGif Create (0.2ms)[0m  [1m[32mINSERT INTO "gifs" ("title", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "smirk"], ["url", "https://media0.giphy.com/media/m5zXsWom73q0/giphy.gif?cid=2cb8fdb7c82177040409f42b8d9ca4dd78eeb428bb67f5fc&rid=giphy.gif&ct=g"], ["created_at", "2023-03-29 19:03:25.502483"], ["updated_at", "2023-03-29 19:03:25.502483"]]
+  ↳ app/controllers/api/gifs_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/gifs_controller.rb:13:in `create'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 3.0ms | Allocations: 2786)
+
+
+Started GET "/" for ::1 at 2023-03-29 12:04:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.4ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 2517)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 3224)
+
+
+Started POST "/api/gifs" for ::1 at 2023-03-29 12:05:30 -0700
+Processing by Api::GifsController#create as JSON
+  Parameters: {"gif"=>{"title"=>"eyebrows", "url"=>"https://media4.giphy.com/media/gi2jTvu94VVIs/giphy.gif?cid=2cb8fdb7844ff73e4b80cd622230261aab9b845f84391de9&rid=giphy.gif&ct=g"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/gifs_controller.rb:13:in `create'
+  [1m[36mGif Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "eyebrows"], ["LIMIT", 1]]
+  ↳ app/controllers/api/gifs_controller.rb:13:in `create'
+  [1m[36mGif Create (0.2ms)[0m  [1m[32mINSERT INTO "gifs" ("title", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "eyebrows"], ["url", "https://media4.giphy.com/media/gi2jTvu94VVIs/giphy.gif?cid=2cb8fdb7844ff73e4b80cd622230261aab9b845f84391de9&rid=giphy.gif&ct=g"], ["created_at", "2023-03-29 19:05:30.768481"], ["updated_at", "2023-03-29 19:05:30.768481"]]
+  ↳ app/controllers/api/gifs_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/gifs_controller.rb:13:in `create'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 2.6ms | Allocations: 2991)
+
+
+Started GET "/" for ::1 at 2023-03-29 12:09:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1983)
+Completed 200 OK in 3ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 2177)
+
+
+Started GET "/" for ::1 at 2023-03-29 12:11:33 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1926)
+Completed 200 OK in 2ms (Views: 2.2ms | Allocations: 2112)
+
+
+Started GET "/" for ::1 at 2023-03-29 12:12:07 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1905)
+Completed 200 OK in 3ms (Views: 2.4ms | Allocations: 2091)
+
+
+Started GET "/" for ::1 at 2023-03-29 12:12:52 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1920)
+Completed 200 OK in 4ms (Views: 3.5ms | Allocations: 2106)
+
+
