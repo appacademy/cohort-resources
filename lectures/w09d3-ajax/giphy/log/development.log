@@ -1,0 +1,607 @@
+  [1m[35m (252.5ms)[0m  [1m[35mCREATE DATABASE "giphy_development" ENCODING = 'unicode'[0m
+  [1m[35m (223.5ms)[0m  [1m[35mCREATE DATABASE "giphy_test" ENCODING = 'unicode'[0m
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1090224241091470065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGifs (20230329153443)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "gifs" ("id" bigserial primary key, "title" character varying NOT NULL, "url" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_gifs_on_title" ON "gifs" ("title")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230329153443"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-29 15:36:07.431654"], ["updated_at", "2023-03-29 15:36:07.431654"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1090224241091470065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2023-03-29 08:37:15 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.7ms | Allocations: 410)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 6983)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 9561)
+
+
+Started GET "/" for ::1 at 2023-03-29 08:37:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1145)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2023-03-29 08:37:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1129)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 1337)
+
+
+Started GET "/" for ::1 at 2023-03-29 08:37:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1119)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 1323)
+
+
+Started GET "/" for ::1 at 2023-03-29 08:37:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1113)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 1317)
+
+
+Started GET "/" for ::1 at 2023-03-29 08:37:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1115)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 1321)
+
+
+Started GET "/" for ::1 at 2023-03-29 08:37:22 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1129)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1337)
+
+
+Started GET "/" for ::1 at 2023-03-29 08:37:22 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1111)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1319)
+
+
+Started GET "/" for ::1 at 2023-03-29 08:37:24 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1122)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1326)
+
+
+Started GET "/" for ::1 at 2023-03-29 08:37:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1110)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 1314)
+
+
+Started GET "/" for ::1 at 2023-03-29 08:37:26 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1122)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 1326)
+
+
+Started GET "/" for ::1 at 2023-03-29 08:37:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 1128)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 1332)
+
+
+Started GET "/" for ::1 at 2023-03-29 08:37:30 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1113)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 1318)
+
+
+Started GET "/" for ::1 at 2023-03-29 08:37:31 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1110)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 1314)
+
+
+Started GET "/" for ::1 at 2023-03-29 08:40:48 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.3ms | Allocations: 156)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2987)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 3714)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application" %>
+    10:     <%= javascript_include_tag "application" %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+app/controllers/static_pages_controller.rb:3:in `root'
+Started GET "/" for ::1 at 2023-03-29 08:41:16 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1839)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 2051)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application" %>
+    10:     <%= javascript_include_tag "application" %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+app/controllers/static_pages_controller.rb:3:in `root'
+Started GET "/" for ::1 at 2023-03-29 08:41:17 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1664)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1844)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application" %>
+    10:     <%= javascript_include_tag "application" %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+app/controllers/static_pages_controller.rb:3:in `root'
+Started GET "/" for ::1 at 2023-03-29 08:41:19 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1664)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1844)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application" %>
+    10:     <%= javascript_include_tag "application" %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+app/controllers/static_pages_controller.rb:3:in `root'
+Started GET "/" for ::1 at 2023-03-29 08:41:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1664)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1844)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application" %>
+    10:     <%= javascript_include_tag "application" %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+app/controllers/static_pages_controller.rb:3:in `root'
+Started GET "/" for ::1 at 2023-03-29 08:41:22 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1664)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1844)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application" %>
+    10:     <%= javascript_include_tag "application" %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+app/controllers/static_pages_controller.rb:3:in `root'
+Started GET "/" for ::1 at 2023-03-29 08:41:22 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1664)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1844)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application" %>
+    10:     <%= javascript_include_tag "application" %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+app/controllers/static_pages_controller.rb:3:in `root'
+Started GET "/" for ::1 at 2023-03-29 08:41:23 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1664)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1844)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application" %>
+    10:     <%= javascript_include_tag "application" %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+app/controllers/static_pages_controller.rb:3:in `root'
+Started GET "/" for ::1 at 2023-03-29 08:42:06 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.7ms | Allocations: 410)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 11125)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 13655)
+
+
+  
+ActionView::Template::Error (Asset `application.js` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link application.js
+
+and restart your server):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application" %>
+    10:     <%= javascript_include_tag "application" %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+app/controllers/static_pages_controller.rb:3:in `root'
+Started GET "/" for ::1 at 2023-03-29 08:42:43 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.5ms | Allocations: 410)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 8071)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 10649)
+
+
+Started GET "/" for ::1 at 2023-03-29 08:42:54 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 3118)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 3366)
+
+
+Started GET "/" for ::1 at 2023-03-29 08:44:51 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 3118)
+Completed 200 OK in 14ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 3326)
+
+
+Started GET "/" for ::1 at 2023-03-29 08:45:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.3ms | Allocations: 156)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1259)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1991)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>Giphy</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application" module %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>Giphy</title>
+5:        <meta name="viewport" content="width=device-width,initial-scale=1">
+6:        <%= csrf_meta_tags %>
+7:        <%= csp_meta_tag %>
+8:    
+9:        <%= stylesheet_link_tag "application" %>
+10:        <%= javascript_include_tag "application" module %>
+11:      </head>
+12:    
+13:      <body>
+14:        <%= yield %>
+15:      </body>
+16:    </html>
+  
+app/views/layouts/application.html.erb:10: syntax error, unexpected `module', expecting ')'
+app/views/layouts/application.html.erb:19: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:10: syntax error, unexpected `module', expecting ')'
+app/views/layouts/application.html.erb:19: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:10: syntax error, unexpected `module', expecting ')'
+app/views/layouts/application.html.erb:19: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:10: syntax error, unexpected `module', expecting ')'
+app/views/layouts/application.html.erb:19: syntax error, unexpected `end', expecting ')'
+app/controllers/static_pages_controller.rb:3:in `root'
+Started GET "/" for ::1 at 2023-03-29 08:45:58 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.3ms | Allocations: 153)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 528)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1241)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>Giphy</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application" type="module" %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>Giphy</title>
+5:        <meta name="viewport" content="width=device-width,initial-scale=1">
+6:        <%= csrf_meta_tags %>
+7:        <%= csp_meta_tag %>
+8:    
+9:        <%= stylesheet_link_tag "application" %>
+10:        <%= javascript_include_tag "application" type="module" %>
+11:      </head>
+12:    
+13:      <body>
+14:        <%= yield %>
+15:      </body>
+16:    </html>
+  
+app/views/layouts/application.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/application.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/application.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/application.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/static_pages_controller.rb:3:in `root'
+Started GET "/" for ::1 at 2023-03-29 08:45:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | Allocations: 354)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 553)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>Giphy</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application" type="module" %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>Giphy</title>
+5:        <meta name="viewport" content="width=device-width,initial-scale=1">
+6:        <%= csrf_meta_tags %>
+7:        <%= csp_meta_tag %>
+8:    
+9:        <%= stylesheet_link_tag "application" %>
+10:        <%= javascript_include_tag "application" type="module" %>
+11:      </head>
+12:    
+13:      <body>
+14:        <%= yield %>
+15:      </body>
+16:    </html>
+  
+app/views/layouts/application.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/application.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/application.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/application.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/static_pages_controller.rb:3:in `root'
+Started GET "/" for ::1 at 2023-03-29 08:47:09 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.4ms | Allocations: 153)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2582)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 3308)
+
+
+Started GET "/" for ::1 at 2023-03-29 08:52:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3190)
+Completed 200 OK in 4ms (Views: 4.3ms | Allocations: 3409)
+
+
+Started GET "/" for ::1 at 2023-03-29 08:53:04 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.5ms | Allocations: 156)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 530)
+Completed 500 Internal Server Error in 2ms (Allocations: 1225)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>Giphy</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application" defer %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>Giphy</title>
+5:        <meta name="viewport" content="width=device-width,initial-scale=1">
+6:        <%= csrf_meta_tags %>
+7:        <%= csp_meta_tag %>
+8:    
+9:        <%= stylesheet_link_tag "application" %>
+10:        <%= javascript_include_tag "application" defer %>
+11:      </head>
+12:    
+13:      <body>
+14:        <%= yield %>
+15:      </body>
+16:    </html>
+  
+app/views/layouts/application.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/application.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/application.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/application.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/static_pages_controller.rb:3:in `root'
+Started GET "/" for ::1 at 2023-03-29 08:53:16 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.2ms | Allocations: 153)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 2524)
+Completed 200 OK in 3ms (Views: 3.0ms | Allocations: 3254)
+
+
