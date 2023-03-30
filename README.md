@@ -65,7 +65,7 @@ Here you will find all resources which will be given out throughout your time he
 * Go to `https://github.com/appacademy/cohort-resources/`
 * Click on the button that says `master` located on the top left, below `<>Code`.
 * Select the correct branch, the name of your cohort branch is MM-DD-YYYY and the date matches your first day at AppAcademy.
-* Once there, you'll find all lectures under the `lectures` folder.
+* Once there, you'll find all lectures & demos under the `lectures` folder.
 
 # Instructor Section
 
