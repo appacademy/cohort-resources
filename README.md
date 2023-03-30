@@ -1,14 +1,12 @@
 # Welcome to App Academy! 
 
-Here you will find all resources which will be given out throughout your time here at appacademy. In order to preview the markdown files in vs code press (control + shift + m). Each cohort's branch will only have one folder that houses all lectures. ALL OTHER RESOURCES WILL BE STORED IN THE MASTER BRANCH. If you haven't learned git yet then use this [Without Git](#without-git). Otherwise, use [How to Use Repository](#how-to-use-repository) as it serves for both students and instructors. There is also two other section which serve for students and instructors respectively. 
+Here you will find all resources which will be given out throughout your time here at appacademy. In order to preview the markdown files in vs code press (control + shift + m). Each cohort's branch will only have one folder that houses all lectures. You can find all other resources on the master branch. If you haven't learned git yet then use this [Without Git](#without-git). Otherwise, use [How to Use Repository](#how-to-use-repository) as it serves for both students and instructors. There is also two other section which serve for students and instructors respectively. 
 
 * [Student Section](#student-section)
     + [Instructor Contact Info](#instructor-contact-info)
     + [Cohort Calendar](#cohort-calendar)
     + [Assessment Policy](#assessment-policy)
     + [Holidays](#holidays)
-    + [Alumni Engagement Agreement](#alumni-engagement-agreement)
-    + [Folder Breakdown](#folder-breakdown)
     + [Using this Repo without Git](#without-git)
 * [Instructor Section](#instructor-section)
     + [Workflow](#workflow)
@@ -46,13 +44,8 @@ Here you will find all resources which will be given out throughout your time he
     * park-instructors@appacademy.io
 
 ## Cohort Calendar
-**Your Cohort's Calendar is found on the README of your Cohort's Branch**
-1. To get there, go to the top of the page and click the branch dropdown 
-2. Then, click on the branch with the name of your Cohort's start date
-    + This process is shown in this image
-![calendar](./images/calendar-branch.png)
-3. The Calendar link will then be on the branch's README as shown in the image below
-![calendar-on-branch](./images/calendar-on-branch.png)
+**Your Cohort's Calendar is found in the description of your cohort's Slack channel**
+1. To get there, just click on the name of the channel, located on the top of the messages box, and click the link on the description.
 
 ## Assessment Policy
 * The App Academy Assessment Policy can be found [here](https://docs.google.com/document/d/1h_fKuhRYP5mGzTZrJHRyp9cpnBPlv5E7TjY_5pLZPNk/edit#).
@@ -67,39 +60,12 @@ Here you will find all resources which will be given out throughout your time he
 * ThanksGiving Holiday
 * Winter Holiday 
 
-## Alumni Engagement Agreement
-https://appacademy.io/alumni-engagement-agreement
-
-## Folder Breakdown  
-
-### assessment_tips
-* This folder is a compiliation of markdown files that list out tips and tricks for each assessment you will take during the in person portion.
-
-### common_bugs 
-* This folder has information on common bugs that you may encounter during your time at app academy.
-
-### lectures
-* Remember you must go into your cohorts branch in order to see this folder ```git checkout <month-start_date-year>```.
-* All demos performed during lecture can be found in this folder.
-* Lecture slides can also be found with this folder.
-
-### environment_setup 
-* this folder holds some information on setting up your environment.
-
-### foundations_remote
-* This folder compiles all of the study guides given during the foundations portion of app academy.
-
-### student_success
-* This folder serves as a center for tips on how to maximize your success during your time here at app academy. 
-
-### study_guides
-* We've compiled a series of markdown, javascript, ruby and sql files that summarize different concepts learned throughout the course.  Look in here when you need some syntax refreshness or some quick concept summaries!
 
 ## Without Git
-![hey](./images/without_git1.png)
-![hey](./images/without_git2.png)
-![hey](./images/without_git3.png)
-![hey](./images/without_git4.png)
+* Go to `https://github.com/appacademy/cohort-resources/`
+* Click on the button that says `master` located on the top left, below `<>Code`.
+* Select the correct branch, the name of your cohort branch is MM-DD-YYYY and the date matches your first day at AppAcademy.
+* Once there, you'll find all lectures under the `lectures` folder.
 
 # Instructor Section
 
