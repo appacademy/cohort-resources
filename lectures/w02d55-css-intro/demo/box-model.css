@@ -1,0 +1,29 @@
+  
+.box-model {
+  width: 100vw;
+  height: 91px;
+  padding: 20px;
+  /* margin: 50px; */
+  /* margin-top: 50px;
+  margin-right: 50px;
+  margin-left: 100px;
+  margin-bottom: 80px; */
+  /* margin: 50px 50px 80px 100px; */
+  border: 1px solid black;
+  /* border-radius: 50%; */
+  background: pink;
+
+  
+}
+
+.border-box {
+  box-sizing: border-box;
+  width: 500px;
+}
+
+
+.line-br {
+  border: 1px solid black;
+  width: 300px;
+  margin-left: 50px;
+}
