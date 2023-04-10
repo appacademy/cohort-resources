@@ -1,0 +1,13 @@
+img {
+  height: 10vh;
+  width: 10vw;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+}
+
+.header * {
+  padding-right: 10px;
+}
