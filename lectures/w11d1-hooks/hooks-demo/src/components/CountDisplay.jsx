@@ -17,7 +17,7 @@ const CountDisplay = props => {
     return () => {
       console.log('cleaning up');
       clearInterval(int);
-    }
+    };
   }, []);
 
   useEffect(() => {
@@ -28,15 +28,16 @@ const CountDisplay = props => {
     console.log('location changed');
   }, [location]);
 
-  const increment = () => {
-    setCount(prev => ({ num: prev.num + 1 }));
+  const increment = e => {
+    setCount(prev => ({ num: prev.num + 1 })); // pass in a callback which takes in prev value of state variable and returns the new value
+    // setCount({ num: count.num + 1 }); // pass in new value
   };
 
-  const decrement = () => {
+  const decrement = e => {
     setCount(prev => ({ num: prev.num - 1 }));
   };
 
-  const reset = () => {
+  const reset = e => {
     setCount({ num: 0 });
   };
 

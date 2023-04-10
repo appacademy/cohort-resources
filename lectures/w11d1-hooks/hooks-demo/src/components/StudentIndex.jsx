@@ -19,6 +19,7 @@ const StudentIndex = props => {
     //   let res = await fetch('https://hp-api.onrender.com/api/characters/students');
     //   let data = await res.json();
     //   setStudents(data);
+    //   setLoading(false);
     // };
 
     // fn();
