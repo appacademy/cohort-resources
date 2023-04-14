@@ -2,13 +2,11 @@ const RECEIVE_TEA = 'RECEIVE_TEA';
 const RECEIVE_TEAS = 'RECEIVE_TEAS';
 const REMOVE_TEA = 'REMOVE_TEA'
 
-//ACTION CREATORS
-export const receiveTea = tea => {
-    return {
-        type: RECEIVE_TEA,
-        tea: tea
-    };
-};
+// ACTION CREATORS
+export const receiveTea = tea => ({
+    type: RECEIVE_TEA,
+    tea
+});
 
 export const receiveTeas = teas => {
     return {
@@ -24,7 +22,11 @@ export const removeTea = teaId => (
     }
 );
 
-//REDUCER
+// SELECTORS
+
+export const selectAllTeas = state => Object.values(state.teas);
+
+// REDUCER
 const teaReducer = (state = {}, action) => {
     Object.freeze(state);
     const nextState = { ...state };
