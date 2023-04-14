@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 const TeaIndex = (props) => {
     const teas = useSelector(selectAllTeas);
     const dispatch = useDispatch();
+    console.log(teas);
 
     // a component should always fetch the information it needs (unless it's receiving them via props)
     useEffect(() => {

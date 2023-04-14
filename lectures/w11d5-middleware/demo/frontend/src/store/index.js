@@ -23,8 +23,12 @@ const myMiddleware = store => { // gives access to dispatch and getState
     };
 };
 
-const otherMiddleware = store => next => action => {
-    // innermost logic
+const myThunk = store => next => action => {
+    if (action instanceof Function ) {
+        return action(store.dispatch, store.getState);
+    } else {
+        next(action);
+    }
 };
 
 const configureStore = (preloadedState={}) => (

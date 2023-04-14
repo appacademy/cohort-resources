@@ -24,9 +24,9 @@ export const removeTea = teaId => ({
 
 // THUNK ACTION CREATORS
 export const fetchTeas = () => async (dispatch, getState) => {
-    const res = await requestTeas();
-    const teasData = await res.json();
-    return dispatch(receiveTeas(teasData));
+    const res = await requestTeas(); // make an async request
+    const teasData = await res.json(); // read response
+    return dispatch(receiveTeas(teasData)); // send data to store
 };
 
 export const createTea = tea => async (dispatch, getState) => (

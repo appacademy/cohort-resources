@@ -532,3 +532,228 @@ Processing by Api::TeasController#index as JSON
 Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1351)
 
 
+Started GET "/api/teas" for ::1 at 2023-04-14 13:33:24 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 4.2ms | ActiveRecord: 1.9ms | Allocations: 10394)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:33:40 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1466)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:33:40 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 1367)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:34:05 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1367)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:34:05 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1368)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:34:16 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1351)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:34:16 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 1351)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:34:17 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1351)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:34:17 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1351)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:41:47 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 7.3ms | ActiveRecord: 3.0ms | Allocations: 4245)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:41:47 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 1351)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:43:27 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 1351)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:43:27 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 1351)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:43:30 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1351)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:43:30 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1351)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:43:42 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1351)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:43:42 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1351)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:46:29 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1351)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:46:46 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1351)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:46:47 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1352)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:47:36 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1351)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:47:37 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1351)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:47:46 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1351)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:47:46 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1352)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:47:58 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1352)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:47:58 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 1351)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:49:35 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1351)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:49:35 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1351)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:54:22 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1351)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:54:22 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1351)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:54:47 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1351)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-04-14 13:54:47 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1351)
+
+
