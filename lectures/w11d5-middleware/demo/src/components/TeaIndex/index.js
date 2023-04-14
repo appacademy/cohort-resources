@@ -2,8 +2,7 @@ import {useSelector} from 'react-redux';
 import './index.css'
 
 const TeaIndex = (props) => {
-
-    const teas = useSelector((state) => Object.values(state.teas))
+    const teas = useSelector((state) => Object.values(state.teas));
 
     return (
         <div className='tea-index'>
@@ -23,8 +22,7 @@ const TeaIndex = (props) => {
 
             }
         </div>
-    )
-
+    );
 }
 
 export default TeaIndex;

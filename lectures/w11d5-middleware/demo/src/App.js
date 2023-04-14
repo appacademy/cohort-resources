@@ -1,7 +1,7 @@
 import TeaIndex from "./components/TeaIndex";
 import TeaForm from "./components/TeaForm";
 
-function App() {
+const App = () => {
   return (
     <>
       <h1>Hello from App</h1>
@@ -9,6 +9,6 @@ function App() {
       <TeaForm />
     </>
   );
-}
+};
 
 export default App;

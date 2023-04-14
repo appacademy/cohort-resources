@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import { useDispatch } from 'react-redux';
-import {receiveTea} from '../../store/teaReducer';
+import { receiveTea } from '../../store/teaReducer';
 import './index.css'
 
 const TeaForm = (props) => {
@@ -19,30 +19,29 @@ const TeaForm = (props) => {
             id,
             flavor,
             price
-        }
+        };
+
         dispatch(receiveTea(tea));
        
         //clear our form
         setFlavor('');
         setPrice('');
-    }
+    };
 
-    return(
+    return (
         <div className='tea-form'>
             <h2>I'm the Tea Form</h2>
             <form onSubmit={handleSubmit}>
-                <label> Flavor:
+                <label>Flavor:
                     <input value={flavor} onChange={(e)=> setFlavor(e.target.value)}/>
                 </label>
-                <label> Price:
+                <label>Price:
                     <input value={price} onChange={(e)=> setPrice(e.target.value)}/>
                 </label>
                 <input type='submit' value='Add Tea'/>
             </form>
         </div>
-    )
-
-
+    );
 }
 
 export default TeaForm;
