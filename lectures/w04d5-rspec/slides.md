@@ -1,13 +1,5 @@
-# Intro to RSpec & Test-Driven Development
-
----
-
-# Lecture Objectives
-
-+ Why do we test?
-+ What is TDD?
-+ What is the testing pyramid?
-+ Be familiar with the RSpec library
+# W4D5
+## Intro to RSpec & Test-Driven Development
 
 ---
 
@@ -85,3 +77,4 @@
     + `before`
 + Documentation, documentation, documentation!
 + BONUS: http://www.betterspecs.org/
++ MATCHERS: https://rubydoc.info/github/rspec/rspec-expectations/RSpec/Matchers
