@@ -23,5 +23,5 @@ class Chirp < ApplicationRecord
         foreign_key: :user_id,
         class_name: :User
 
-    has_many: :likes
+    has_many :likes
 end
