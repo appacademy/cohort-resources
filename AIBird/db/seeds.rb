@@ -36,8 +36,10 @@ chirp9 = Chirp.create(body:"There was already something in his gaze beyond the c
 
 puts "Creating likes"
 like1 = Like.create(chirp_id: chirp2.id ,liker_id: paulo.id)
-like1 = Like.create(chirp_id: chirp4.id ,liker_id: paulo.id)
-like1 = Like.create(chirp_id: chirp6.id ,liker_id: paulo.id)
-like1 = Like.create(chirp_id: chirp9.id ,liker_id: chris.id)
-like1 = Like.create(chirp_id: chirp8.id ,liker_id: chris.id)
-like1 = Like.create(chirp_id: chirp7.id ,liker_id: mike.id)
+like2 = Like.create(chirp_id: chirp4.id ,liker_id: paulo.id)
+like3 = Like.create(chirp_id: chirp6.id ,liker_id: paulo.id)
+like4 = Like.create(chirp_id: chirp9.id ,liker_id: chris.id)
+like5 = Like.create(chirp_id: chirp8.id ,liker_id: chris.id)
+like6 = Like.create(chirp_id: chirp7.id ,liker_id: mike.id)
+
+puts "Done :)"

@@ -17,10 +17,14 @@ class User < ApplicationRecord
     has_many :chirps,
         primary_key: :id,
         foreign_key: :user_id,
-        class_name: :Chirp
+        class_name: :Chirp,
+        dependent: :destroy
     
     has_many :likes,
         foreign_key: :liker_id,
-        class_name: :User
+        class_name: :Like,
+        dependent: :destroy
+
     
+
 end

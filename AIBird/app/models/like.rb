@@ -17,4 +17,10 @@ class Like < ApplicationRecord
         class_name: :User
 
     belongs_to :chirp
+
+    has_many :liker_chirps,
+        through: :liker,
+        source: :chirps,
+        dependent: :destroy
+
 end
