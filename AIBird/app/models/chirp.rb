@@ -26,6 +26,10 @@ class Chirp < ApplicationRecord
     has_many :likes,
         dependent: :destroy
 
+    has_many :likers,
+        through: :likes,
+        source: :liker
+
     has_many :authors_likes,
         through: :author,
         source: :likes,

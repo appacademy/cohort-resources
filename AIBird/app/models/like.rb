@@ -18,9 +18,9 @@ class Like < ApplicationRecord
 
     belongs_to :chirp
 
-    has_many :liker_chirps,
-        through: :liker,
-        source: :chirps,
-        dependent: :destroy
+    # has_many :liker_chirps,
+    #     through: :liker,
+    #     source: :chirps,
+    #     dependent: :destroy
 
 end
