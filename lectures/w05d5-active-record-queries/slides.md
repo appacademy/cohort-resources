@@ -181,5 +181,14 @@ Chirp.joins(:author).where(users: {username: 'chris'}).pluck(:body)
 # Code Demo
 
 ---
+# Visual examples of includes vs joins
+
+![includes](https://aa-ch-lecture-assets.s3.us-west-1.amazonaws.com/rails-active-record/includes.png)
+
+---
+![joins](https://aa-ch-lecture-assets.s3.us-west-1.amazonaws.com/rails-active-record/joins.png)
+
+---
+![aggregated](https://aa-ch-lecture-assets.s3.us-west-1.amazonaws.com/rails-active-record/aggregated_joins.png)
 
 ## Thank you!
