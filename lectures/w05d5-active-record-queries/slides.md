@@ -1,0 +1,185 @@
+# W5D5
+## ActiveRecord
+
+---
+
+## Learning Objectives
+
+- Understand active record methods and conditions
+- Understand how to chain active record methods in queries
+- How to avoid N+1 queries
+
+---
+
+## ActiveRecord Querying vs SQL
+
++ Ruby interface for querying database
++ Mirrors SQL queries
++ Pros: less overall database access code, more convenient
+
+---
+
+## What is an ActiveRecord::Relation?
+
++ Most queries don't return Ruby objects
+  + Instead return instances of ActiveRecord:Relation
+  + ActiveRecord:Relation objects are array-like
++ They allow for chaining
+
+---
+
+## ActiveRecord Finder Methods 
+
++ Do not return relations, instead returns Ruby objects
++ Examples: `#find()`, `#find_by()`, `#first`, `#last` 
+  + These methods return model instances
++ Executes method immediately
+
+---
+
+## Code Demo - Finder Methods
+
+---
+
+## ActiveRecord Finder Methods Recap
+
++ `#find()` :
+  - finds a single record based on id
++ `#first` :
+  - finds the first record ordered by primary key
++ `#last` :
+  - finds the last record ordered by primary key
++ `#find_by()` :
+  - look up the first matching record based on any column value
+
+---
+ ### 5 minute Break
+
+---
+
+## ActiveRecord Queries with Conditions
+
++ `#where`/ `#where.not` allows you to specify exact value to match, range of values, or multiples values to find
++ Returns an ActiveRecord::Relation
+
+  ```ruby
+  User.where("email = 'foo@bar.com'")
+  User.where(email: "foo@bar.com")
+  User.where("email = (?)", "foo@bar.com")
+  User.where.not(email: "foo@bar.com")
+  ```
+
+---
+
+## Chaining ActiveRecord Queries
+
++ More ActiveRecord methods
+	+ `#select()` : specifies which columns to display
+  + `#group()` : returns distinct records grouped by the passed attribute
+  + `#having()` : filters grouped records that match the passed statement (must be used with `#group`).
+  + `#order()` : returns records ordered by passed attribute
+  + `#offset()` : offsets the ordered records by the number passed
+  + `#limit()` : limits the returned records to the number passed
+
+---
+
+## Code Demo - Queries with conditions
+
+---
+
+### 5 minute break
+---
+
+## Querying with Associations
+
++ ActiveRecord allows us to call associations 
++ Returns a relation object that is cached inside our object model
+
+---
+
+## Joins
+
++ Uses associations to join tables
++ `#joins()`/ `#left_outer_joins()` 
+	+ Takes association names as parameters
++ Returns ActiveRecord::Relation
+
+
+```ruby
+Chirp.select(:body).joins(:author).where(users: {username: 'chris'})
+```
+---
+
+## Pluck
+
++ Accepts column names as arguments
++ Returns an **array** of values of the specified columns
++ Triggers an immediate query
++ Cannot be chained with any further queries 
+  + Must be at the end of the query
+
+```ruby
+Chirp.joins(:author).where(users: {username: 'chris'}).pluck(:body)
+```
+---
+
+## Code Demo - Joins
+
+---
+
+## N+1 Queries
+
++ When you execute a query and then you try to run queries for each member of the collection. 
+  ```ruby
+    posts = user1.posts # first query
+    res = {}
+    posts.each do |post|
+      res[post] = post.comments.length # n queries
+    end
+  ```
++ You make 1 query for user.posts. For each post, you make N queries to find the comments length for each post. This is a N+1 query.
+
+---
+
+## Includes and Eager Loading for N+1 Queries
+
++ `#includes` takes association names as parameters
++ Allows us to chain onto our queries and pre-fetch associations
+  + Generates a 2nd query to pre-fetch associated data
++ Eager loading is pre-fetching associated objects using as few queries as possible and caching the results.
+  ```ruby
+    posts = user1.posts.includes(:comments) 
+    # 1st query (posts) + 2nd query (includes comments)
+    res = {}
+    posts.each do |post|
+      res[post] = post.comments.length # no extra queries, already cached
+    end
+  ```
+
+---
+
+## Joins for N+1 Queries
+
++ Creates a single query fetching all data into a single table
++ Ideally used when using aggregation on the associated data e.g. count
+```ruby
+  posts = user1
+    .posts
+    .select("posts.*, COUNT(*) as comments_count")
+    .joins(:comments)
+    .group("posts.id")
+  # 1 query
+
+  posts.map do |post|
+    [post.title, post.comments_count]
+  end
+
+```
+
+---
+
+# Code Demo
+
+---
+
+## Thank you!
