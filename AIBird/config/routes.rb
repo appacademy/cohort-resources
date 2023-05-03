@@ -3,4 +3,20 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  # get '/users', to: 'users#index'
+  # post '/users', to: 'users#create'
+  # get '/users/:id', to: 'users#show', as: "user"
+  # patch '/users/:id', to: 'users#update'
+  # delete '/users/:id', to: 'users#destroy'
+
+  resources :users, except: [:edit, :new] do 
+    resources :chirps, only:[:index]
+  end
+
+
+  resources :chirps, except: [:edit, :new, :index]
+  # resources :users, only: [:index, :show, :create]
+
+
+  # get "/search", to: "users#search"
 end
