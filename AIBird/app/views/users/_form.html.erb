@@ -1,0 +1,31 @@
+<!-- need to pass in two variables: type, user -->
+<% path = type == :new ? users_url : user_url(user) %>
+<% text = type == :new ? 'Create User': 'Update User' %>
+
+<h2><%= text %></h2>
+
+<!-- action and method dictate behavior on form submission -->
+<form action="<%= path %>" method="POST">
+  <% if type == :edit %>
+    <input type="hidden" name="_method" value="PATCH" />
+  <% end %>
+  <div>
+    <label for="username">Username:</label>
+    <input id="username" type="text" name="user[username]" value="<%= @user.username %>" />
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input id="email" type="text" name="user[email]" value="<%= @user.email %>" />
+  </div>
+  <div>
+    <label for="affiliation">Affiliation:</label>
+    <input id="affiliation" type="text" name="user[affiliation]" value="<%= @user.affiliation %>" />
+  </div>
+  <div>
+    <label for="evil_score">Evil Score:</label>
+    <input id="evil_score" type="text" name="user[evil_score]" value="<%= @user.evil_score %>" />
+  </div>
+  <input type="submit" value="<%= text %>" />
+</form>
+
+<%= @bananas %>

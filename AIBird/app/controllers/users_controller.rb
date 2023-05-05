@@ -2,23 +2,41 @@ class UsersController < ApplicationController
     def index
         # debugger
         @users = User.all
-        render json: @users
+        # render json: @users
+        render :index
     end
 
     def show
         # debugger
         @user = User.find(params[:id])
-        render json: @user
+        # render json: @user
+        # when rendering a template, we retain access to instance variables
+        render :show
+    end
+
+    def new
+        # technically don't need anything here
+        # dummy placeholder
+        @user = User.new
+        render :new
     end
 
     def create
         # debugger
         @user = User.new(user_params)
         if @user.save
-            render json: @user
+            # initiates a new req/res cycle - sends a get request to specified path
+            redirect_to users_url
         else
-            render json: @user.errors.full_messages, status: 422
+            # render json: @user.errors.full_messages, status: 422
+            @bananas = @user.errors.full_messages
+            render :new
         end
+    end
+
+    def edit
+        @user = User.find_by(id: params[:id])
+        render :edit
     end
 
     def update
@@ -40,7 +58,7 @@ class UsersController < ApplicationController
 
     # def search
     # end
-
+    private
     def user_params
         params.require(:user).permit(:username, :email, :affiliation, :evil_score)
     end

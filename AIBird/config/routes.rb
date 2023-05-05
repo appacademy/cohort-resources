@@ -9,14 +9,9 @@ Rails.application.routes.draw do
   # patch '/users/:id', to: 'users#update'
   # delete '/users/:id', to: 'users#destroy'
 
-  resources :users, except: [:edit, :new] do 
+  resources :users do 
     resources :chirps, only:[:index]
   end
 
-
   resources :chirps, except: [:edit, :new, :index]
-  # resources :users, only: [:index, :show, :create]
-
-
-  # get "/search", to: "users#search"
 end

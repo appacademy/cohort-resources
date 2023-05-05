@@ -16,7 +16,7 @@ class ChirpsController < ApplicationController
     end
 
     def show
-        debugger
+        # debugger
         @chirp = Chirp.find(params[:id])
         render json: @chirp
     end
@@ -24,7 +24,7 @@ class ChirpsController < ApplicationController
     def update
         @chirp = Chirp.find(params[:id])
         if @chirp.update(chirp_params)
-            debugger
+            # debugger
             redirect_to chirp_url(@chirp)            
         else
             render json: @chirp.errors.full_messages, status: 422
@@ -37,6 +37,7 @@ class ChirpsController < ApplicationController
         render json: @chirp
     end
 
+    private
     def chirp_params
         params.require(:chirp).permit(:body, :user_id)
     end

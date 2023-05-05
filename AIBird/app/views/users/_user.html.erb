@@ -1,0 +1,12 @@
+<% link = bapple == :show ? users_url : user_url(user) %>
+<% text = bapple == :show ? 'Link to Index' : 'Link to Show' %>
+
+<ul>
+  <li>Username: <%= user.username %></li>
+  <li>Email: <%= user.email %></li>
+  <li>Affiliation: <%= user.affiliation %></li>
+  <li>Evil Score: <%= user.evil_score %></li>
+  <li>
+    <a href="<%= link %>"><%= text %></a>
+  </li>
+</ul>

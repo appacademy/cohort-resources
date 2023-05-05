@@ -1,0 +1,9 @@
+<h2>User Index</h2>
+<ul>
+  <% @users.each do |user| %>
+    <li>
+      <%= render 'user', user: user, bapple: :index %>
+      <!-- <a href="<%= user_url(user.id) %>">Link to Show Page</a> -->
+    </li>
+  <% end %>
+</ul>
