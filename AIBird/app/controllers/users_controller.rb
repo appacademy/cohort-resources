@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+    # can only create user if logged out
+    before_action :require_logged_out, only: [:new, :create]
+    # can only see this pages if logged in
+    before_action :require_logged_in, only: [:show, :edit, :update]
+    
     def index
         # debugger
         @users = User.all
@@ -26,6 +31,7 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.save
             # initiates a new req/res cycle - sends a get request to specified path
+            login!(@user)
             redirect_to users_url
         else
             # render json: @user.errors.full_messages, status: 422
@@ -60,6 +66,6 @@ class UsersController < ApplicationController
     # end
     private
     def user_params
-        params.require(:user).permit(:username, :email, :affiliation, :evil_score)
+        params.require(:user).permit(:username, :password, :email, :affiliation, :evil_score)
     end
 end

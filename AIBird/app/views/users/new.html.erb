@@ -1,1 +1,15 @@
-<%= render 'form', user: @user, type: :new %>
+<%#= render 'form', user: @user, type: :new %>
+
+<h1>User sign up form</h1>
+
+<form action="<%= users_url %>" method="POST">
+    <label>Username
+        <input type="text" name="user[username]" value="<%= @user.username %>"/>
+    </label>
+
+    <label>Password
+        <input type="password" name="user[password]" value=""/>
+    </label>
+
+    <input type="submit" value="Sign Up">
+</form>

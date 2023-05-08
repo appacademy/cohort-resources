@@ -11,9 +11,45 @@
 #  affiliation :string           not null
 #
 class User < ApplicationRecord
-    validates :username, :email, presence: true, uniqueness: true
-    validates :affiliation, :evil_score, presence: true
-    # validates :email, presence: true, uniqueness: true
+    validates :username, :session_token, presence: true, uniqueness: true
+    validates :password_digest, presence: true
+
+    validates :password, length: {minimum: 6}, allow_nil: true
+
+    # for validation
+    attr_reader :password
+
+    # could use before_validation too
+    after_initialize :ensure_session_token # any method we pass in here, will be called after .new (or during .create)
+
+    def self.find_by_credentials(username, password)
+        user = User.find_by(username: username)
+        user && user.check_password?(password) ? user : nil
+    end
+
+    def check_password?(password)
+        # create bcrypt object of the pw_digest
+        password_object = BCrypt::Password.new(self.password_digest)
+        password_object.is_password?(password) # method built into bcrypt to check if the password hashes to the digest
+    end
+
+    def password=(password)
+        @password = password # just for validation
+        # create the digest
+        self.password_digest = BCrypt::Password.create(password)
+    end
+
+    def reset_session_token!
+        self.session_token = SecureRandom::urlsafe_base64
+        self.save! # fail loudly
+        self.session_token
+    end
+
+    # make sure we can pass our session_token validation
+    def ensure_session_token
+        self.session_token ||= SecureRandom::urlsafe_base64
+    end
+
     
     has_many :chirps,
         primary_key: :id,

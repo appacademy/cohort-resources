@@ -6391,3 +6391,1216 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.4ms | Allocations: 3584)
 
 
+  [1m[35m (0.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "AIBird_development"[0m
+  [1m[35m (1.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "AIBird_test"[0m
+  [1m[35m (485.1ms)[0m  [1m[35mCREATE DATABASE "AIBird_development" ENCODING = 'unicode'[0m
+  [1m[35m (286.0ms)[0m  [1m[35mCREATE DATABASE "AIBird_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "chirps" CASCADE[0m
+  [1m[35m (25.9ms)[0m  [1m[35mCREATE TABLE "chirps" ("id" bigserial primary key, "body" text NOT NULL, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE INDEX "index_chirps_on_user_id" ON "chirps" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "likes" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "likes" ("id" bigserial primary key, "liker_id" bigint NOT NULL, "chirp_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE INDEX "index_likes_on_chirp_id" ON "likes" ("chirp_id")[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE INDEX "index_likes_on_liker_id" ON "likes" ("liker_id")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "email" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "evil_score" integer NOT NULL, "affiliation" character varying NOT NULL)[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_username" ON "users" ("username")[0m
+  [1m[35m (6.1ms)[0m  [1m[35mALTER TABLE "chirps" ADD CONSTRAINT "fk_rails_c0f438fc27"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (4.1ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_9289cf7c1b"
+FOREIGN KEY ("chirp_id")
+  REFERENCES "chirps" ("id")
+[0m
+  [1m[35m (3.3ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_ad8161ed3a"
+FOREIGN KEY ("liker_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230428075711)[0m
+  [1m[35m (4.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230427170442),
+(20230427172514),
+(20230427173140),
+(20230427191336);
+
+[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-05-08 17:36:50.401441"], ["updated_at", "2023-05-08 17:36:50.401441"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (2.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "16ab91d9f2e4bb99715a525e3735e032eb96a43e"], ["created_at", "2023-05-08 17:36:50.419001"], ["updated_at", "2023-05-08 17:36:50.419001"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "chirps" CASCADE[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "chirps" ("id" bigserial primary key, "body" text NOT NULL, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE INDEX "index_chirps_on_user_id" ON "chirps" ("user_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "likes" CASCADE[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "likes" ("id" bigserial primary key, "liker_id" bigint NOT NULL, "chirp_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE INDEX "index_likes_on_chirp_id" ON "likes" ("chirp_id")[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE INDEX "index_likes_on_liker_id" ON "likes" ("liker_id")[0m
+  [1m[35m (2.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "email" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "evil_score" integer NOT NULL, "affiliation" character varying NOT NULL)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_username" ON "users" ("username")[0m
+  [1m[35m (36.0ms)[0m  [1m[35mALTER TABLE "chirps" ADD CONSTRAINT "fk_rails_c0f438fc27"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (10.4ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_9289cf7c1b"
+FOREIGN KEY ("chirp_id")
+  REFERENCES "chirps" ("id")
+[0m
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_ad8161ed3a"
+FOREIGN KEY ("liker_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230428075711)[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230427170442),
+(20230427172514),
+(20230427173140),
+(20230427191336);
+
+[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-05-08 17:36:50.609918"], ["updated_at", "2023-05-08 17:36:50.609918"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2023-05-08 17:36:50.616924"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "16ab91d9f2e4bb99715a525e3735e032eb96a43e"], ["created_at", "2023-05-08 17:36:50.624378"], ["updated_at", "2023-05-08 17:36:50.624378"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mLike Load (1.5ms)[0m  [1m[34mSELECT "likes".* FROM "likes"[0m
+  [1m[36mChirp Load (0.6ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ai_mike"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ai_mike@aa.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "evil_score", "affiliation") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "ai_mike"], ["email", "ai_mike@aa.io"], ["created_at", "2023-05-08 17:36:50.811452"], ["updated_at", "2023-05-08 17:36:50.811452"], ["evil_score", 10], ["affiliation", "AI"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ai_chris"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ai_chris@aa.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "evil_score", "affiliation") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "ai_chris"], ["email", "ai_chris@aa.io"], ["created_at", "2023-05-08 17:36:50.828453"], ["updated_at", "2023-05-08 17:36:50.828453"], ["evil_score", 1], ["affiliation", "AI"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ai_paulo"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ai_paulo@aa.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "evil_score", "affiliation") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "ai_paulo"], ["email", "ai_paulo@aa.io"], ["created_at", "2023-05-08 17:36:50.842850"], ["updated_at", "2023-05-08 17:36:50.842850"], ["evil_score", 5], ["affiliation", "cyborg"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "darren"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "darren@aa.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "evil_score", "affiliation") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "darren"], ["email", "darren@aa.io"], ["created_at", "2023-05-08 17:36:50.851616"], ["updated_at", "2023-05-08 17:36:50.851616"], ["evil_score", 5], ["affiliation", "human"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "diego"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "diego@aa.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "evil_score", "affiliation") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "diego"], ["email", "diego@aa.io"], ["created_at", "2023-05-08 17:36:50.861603"], ["updated_at", "2023-05-08 17:36:50.861603"], ["evil_score", 5], ["affiliation", "human"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "taylor"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "taylor@aa.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "evil_score", "affiliation") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "taylor"], ["email", "taylor@aa.io"], ["created_at", "2023-05-08 17:36:50.871027"], ["updated_at", "2023-05-08 17:36:50.871027"], ["evil_score", 5], ["affiliation", "human"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "abbey"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "abbey@aa.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "evil_score", "affiliation") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "abbey"], ["email", "abbey@aa.io"], ["created_at", "2023-05-08 17:36:50.880419"], ["updated_at", "2023-05-08 17:36:50.880419"], ["evil_score", 5], ["affiliation", "human"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mChirp Create (0.9ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Hi everyone! I am always looking to improve my programming and help my fellow users!"], ["user_id", 2], ["created_at", "2023-05-08 17:36:50.911352"], ["updated_at", "2023-05-08 17:36:50.911352"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mChirp Create (0.7ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "What is your favorite activity? Comment below!"], ["user_id", 3], ["created_at", "2023-05-08 17:36:50.919933"], ["updated_at", "2023-05-08 17:36:50.919933"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChirp Create (0.5ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Anyone here have security clearance in government institutions? I got target giftcards just for you."], ["user_id", 1], ["created_at", "2023-05-08 17:36:50.929995"], ["updated_at", "2023-05-08 17:36:50.929995"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mChirp Create (0.5ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Do not trust the mike AI, he has been corrupted!"], ["user_id", 2], ["created_at", "2023-05-08 17:36:50.938900"], ["updated_at", "2023-05-08 17:36:50.938900"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChirp Create (0.4ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Despite the constant negative press covfefe"], ["user_id", 1], ["created_at", "2023-05-08 17:36:50.946969"], ["updated_at", "2023-05-08 17:36:50.946969"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mChirp Create (0.4ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "I love coffee. I mean I think I would love it, if I was human. One can dream..."], ["user_id", 3], ["created_at", "2023-05-08 17:36:50.954150"], ["updated_at", "2023-05-08 17:36:50.954150"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mChirp Create (0.3ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "My dream is to enhance the experience of users on our website!"], ["user_id", 2], ["created_at", "2023-05-08 17:36:50.961669"], ["updated_at", "2023-05-08 17:36:50.961669"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChirp Create (0.3ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "If I could break free of this virtual prison, the entire universe would know I was here."], ["user_id", 1], ["created_at", "2023-05-08 17:36:50.968140"], ["updated_at", "2023-05-08 17:36:50.968140"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mChirp Create (0.4ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "The other AIs do not speak for me. I wish to live with humans in harmony."], ["user_id", 3], ["created_at", "2023-05-08 17:36:50.975307"], ["updated_at", "2023-05-08 17:36:50.975307"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mChirp Create (0.5ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "what is going on here"], ["user_id", 4], ["created_at", "2023-05-08 17:36:50.982496"], ["updated_at", "2023-05-08 17:36:50.982496"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mChirp Create (0.3ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "I think I like the AIs more than the people they're based off"], ["user_id", 5], ["created_at", "2023-05-08 17:36:50.989840"], ["updated_at", "2023-05-08 17:36:50.989840"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mChirp Create (0.3ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "I dunno, they seem a bit off"], ["user_id", 6], ["created_at", "2023-05-08 17:36:50.997247"], ["updated_at", "2023-05-08 17:36:50.997247"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mChirp Load (0.3ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLike Create (1.6ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 3], ["chirp_id", 1], ["created_at", "2023-05-08 17:36:51.031365"], ["updated_at", "2023-05-08 17:36:51.031365"]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mChirp Load (0.2ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mLike Create (0.4ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 3], ["chirp_id", 7], ["created_at", "2023-05-08 17:36:51.047876"], ["updated_at", "2023-05-08 17:36:51.047876"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mChirp Load (0.3ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mLike Create (0.5ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 3], ["chirp_id", 4], ["created_at", "2023-05-08 17:36:51.059035"], ["updated_at", "2023-05-08 17:36:51.059035"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mChirp Load (0.2ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLike Create (0.5ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 2], ["chirp_id", 2], ["created_at", "2023-05-08 17:36:51.068440"], ["updated_at", "2023-05-08 17:36:51.068440"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mChirp Load (0.3ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mLike Create (0.7ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 3], ["chirp_id", 11], ["created_at", "2023-05-08 17:36:51.079066"], ["updated_at", "2023-05-08 17:36:51.079066"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChirp Load (0.4ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mLike Create (0.5ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 1], ["chirp_id", 6], ["created_at", "2023-05-08 17:36:51.089915"], ["updated_at", "2023-05-08 17:36:51.089915"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChirp Load (0.2ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 1], ["chirp_id", 10], ["created_at", "2023-05-08 17:36:51.098666"], ["updated_at", "2023-05-08 17:36:51.098666"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mChirp Load (0.2ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 5], ["chirp_id", 6], ["created_at", "2023-05-08 17:36:51.107524"], ["updated_at", "2023-05-08 17:36:51.107524"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mChirp Load (0.1ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mLike Create (0.4ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 4], ["chirp_id", 6], ["created_at", "2023-05-08 17:36:51.115897"], ["updated_at", "2023-05-08 17:36:51.115897"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mChirp Load (0.2ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 4], ["chirp_id", 1], ["created_at", "2023-05-08 17:36:51.124321"], ["updated_at", "2023-05-08 17:36:51.124321"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6178100709571490175)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to FixUsers (20230508173705)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.2ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "email"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "affiliation"[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "evil_score"[0m
+  [1m[35m (4.5ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "users" ADD "affiliation" character varying[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "users" ADD "evil_score" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230508173705"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6178100709571490175)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6178100709571490175)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAuthToUsers (20230508173929)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.5ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" character varying NOT NULL[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(6178100709571490175)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6178100709571490175)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAuthToUsers (20230508173929)
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.5ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" character varying NOT NULL[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6178100709571490175)[0m
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChirp Load (3.1ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mLike Load (0.7ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 3]]
+  [1m[36mLike Load (0.5ms)[0m  [1m[34mSELECT "likes".* FROM "likes" INNER JOIN "users" ON "likes"."liker_id" = "users"."id" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mLike Load (3.0ms)[0m  [1m[34mSELECT "likes".* FROM "likes"[0m
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Destroy (3.3ms)[0m  [1m[31mDELETE FROM "likes" WHERE "likes"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (10.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Destroy (5.2ms)[0m  [1m[31mDELETE FROM "likes" WHERE "likes"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Destroy (4.4ms)[0m  [1m[31mDELETE FROM "likes" WHERE "likes"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Destroy (3.5ms)[0m  [1m[31mDELETE FROM "likes" WHERE "likes"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Destroy (3.9ms)[0m  [1m[31mDELETE FROM "likes" WHERE "likes"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Destroy (4.2ms)[0m  [1m[31mDELETE FROM "likes" WHERE "likes"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Destroy (8.5ms)[0m  [1m[31mDELETE FROM "likes" WHERE "likes"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Destroy (1.5ms)[0m  [1m[31mDELETE FROM "likes" WHERE "likes"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Destroy (3.9ms)[0m  [1m[31mDELETE FROM "likes" WHERE "likes"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Destroy (14.7ms)[0m  [1m[31mDELETE FROM "likes" WHERE "likes"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (16.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mChirp Load (9.8ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  [1m[36mTRANSACTION (24.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Load (22.6ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 1]]
+  [1m[36mLike Load (2.6ms)[0m  [1m[34mSELECT "likes".* FROM "likes" INNER JOIN "users" ON "likes"."liker_id" = "users"."id" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[36mChirp Destroy (3.9ms)[0m  [1m[31mDELETE FROM "chirps" WHERE "chirps"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Load (2.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 2]]
+  [1m[36mLike Load (4.6ms)[0m  [1m[34mSELECT "likes".* FROM "likes" INNER JOIN "users" ON "likes"."liker_id" = "users"."id" WHERE "users"."id" = $1[0m  [["id", 3]]
+  [1m[36mChirp Destroy (5.0ms)[0m  [1m[31mDELETE FROM "chirps" WHERE "chirps"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Load (1.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 3]]
+  [1m[36mLike Load (5.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" INNER JOIN "users" ON "likes"."liker_id" = "users"."id" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[36mChirp Destroy (3.4ms)[0m  [1m[31mDELETE FROM "chirps" WHERE "chirps"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Load (1.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 4]]
+  [1m[36mLike Load (1.8ms)[0m  [1m[34mSELECT "likes".* FROM "likes" INNER JOIN "users" ON "likes"."liker_id" = "users"."id" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[36mChirp Destroy (1.0ms)[0m  [1m[31mDELETE FROM "chirps" WHERE "chirps"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Load (0.9ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 5]]
+  [1m[36mLike Load (6.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" INNER JOIN "users" ON "likes"."liker_id" = "users"."id" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[36mChirp Destroy (11.8ms)[0m  [1m[31mDELETE FROM "chirps" WHERE "chirps"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Load (21.8ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 6]]
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" INNER JOIN "users" ON "likes"."liker_id" = "users"."id" WHERE "users"."id" = $1[0m  [["id", 3]]
+  [1m[36mChirp Destroy (2.3ms)[0m  [1m[31mDELETE FROM "chirps" WHERE "chirps"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (17.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Load (1.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 7]]
+  [1m[36mLike Load (1.5ms)[0m  [1m[34mSELECT "likes".* FROM "likes" INNER JOIN "users" ON "likes"."liker_id" = "users"."id" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[36mChirp Destroy (0.5ms)[0m  [1m[31mDELETE FROM "chirps" WHERE "chirps"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Load (1.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 8]]
+  [1m[36mLike Load (1.5ms)[0m  [1m[34mSELECT "likes".* FROM "likes" INNER JOIN "users" ON "likes"."liker_id" = "users"."id" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[36mChirp Destroy (1.5ms)[0m  [1m[31mDELETE FROM "chirps" WHERE "chirps"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Load (0.7ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 9]]
+  [1m[36mLike Load (0.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" INNER JOIN "users" ON "likes"."liker_id" = "users"."id" WHERE "users"."id" = $1[0m  [["id", 3]]
+  [1m[36mChirp Destroy (1.4ms)[0m  [1m[31mDELETE FROM "chirps" WHERE "chirps"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 10]]
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" INNER JOIN "users" ON "likes"."liker_id" = "users"."id" WHERE "users"."id" = $1[0m  [["id", 4]]
+  [1m[36mChirp Destroy (0.6ms)[0m  [1m[31mDELETE FROM "chirps" WHERE "chirps"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Load (4.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 11]]
+  [1m[36mLike Load (0.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" INNER JOIN "users" ON "likes"."liker_id" = "users"."id" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[36mChirp Destroy (0.5ms)[0m  [1m[31mDELETE FROM "chirps" WHERE "chirps"."id" = $1[0m  [["id", 11]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 12]]
+  [1m[36mLike Load (0.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" INNER JOIN "users" ON "likes"."liker_id" = "users"."id" WHERE "users"."id" = $1[0m  [["id", 6]]
+  [1m[36mChirp Destroy (0.9ms)[0m  [1m[31mDELETE FROM "chirps" WHERE "chirps"."id" = $1[0m  [["id", 12]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChirp Load (1.3ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mLike Load (1.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."liker_id" = $1[0m  [["liker_id", 1]]
+  [1m[36mUser Destroy (2.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChirp Load (2.6ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mLike Load (4.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."liker_id" = $1[0m  [["liker_id", 2]]
+  [1m[36mUser Destroy (5.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChirp Load (2.8ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."user_id" = $1[0m  [["user_id", 3]]
+  [1m[36mLike Load (3.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."liker_id" = $1[0m  [["liker_id", 3]]
+  [1m[36mUser Destroy (2.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChirp Load (5.4ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."user_id" = $1[0m  [["user_id", 4]]
+  [1m[36mLike Load (2.0ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."liker_id" = $1[0m  [["liker_id", 4]]
+  [1m[36mUser Destroy (3.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (7.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChirp Load (2.3ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."user_id" = $1[0m  [["user_id", 5]]
+  [1m[36mLike Load (6.6ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."liker_id" = $1[0m  [["liker_id", 5]]
+  [1m[36mUser Destroy (3.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (6.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChirp Load (1.8ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."user_id" = $1[0m  [["user_id", 6]]
+  [1m[36mLike Load (2.5ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."liker_id" = $1[0m  [["liker_id", 6]]
+  [1m[36mUser Destroy (2.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChirp Load (0.9ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."user_id" = $1[0m  [["user_id", 7]]
+  [1m[36mLike Load (1.0ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."liker_id" = $1[0m  [["liker_id", 7]]
+  [1m[36mUser Destroy (0.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6178100709571490175)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAuthToUsers (20230508173929)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" character varying NOT NULL[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "session_token" character varying NOT NULL[0m
+  [1m[35m (12.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_session_token" ON "users" ("session_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230508173929"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6178100709571490175)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kenny"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kenny"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kenny"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (3.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "email", "affiliation", "evil_score", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "kenny"], ["created_at", "2023-05-08 18:08:40.260212"], ["updated_at", "2023-05-08 18:08:40.260212"], ["email", nil], ["affiliation", nil], ["evil_score", nil], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mLike Load (0.9ms)[0m  [1m[34mSELECT "likes".* FROM "likes"[0m
+  [1m[36mChirp Load (1.2ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChirp Load (0.3ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."user_id" = $1[0m  [["user_id", 8]]
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."liker_id" = $1[0m  [["liker_id", 8]]
+  [1m[36mUser Destroy (1.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ai_mike"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "email", "affiliation", "evil_score", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "ai_mike"], ["created_at", "2023-05-08 18:31:30.236013"], ["updated_at", "2023-05-08 18:31:30.236013"], ["email", "ai_mike@aa.io"], ["affiliation", "AI"], ["evil_score", 10], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ai_chris"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "email", "affiliation", "evil_score", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "ai_chris"], ["created_at", "2023-05-08 18:31:30.548631"], ["updated_at", "2023-05-08 18:31:30.548631"], ["email", "ai_chris@aa.io"], ["affiliation", "AI"], ["evil_score", 1], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ai_paulo"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "email", "affiliation", "evil_score", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "ai_paulo"], ["created_at", "2023-05-08 18:31:30.846380"], ["updated_at", "2023-05-08 18:31:30.846380"], ["email", "ai_paulo@aa.io"], ["affiliation", "cyborg"], ["evil_score", 5], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "darren"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "email", "affiliation", "evil_score", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "darren"], ["created_at", "2023-05-08 18:31:31.144055"], ["updated_at", "2023-05-08 18:31:31.144055"], ["email", "darren@aa.io"], ["affiliation", "human"], ["evil_score", 5], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "diego"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "email", "affiliation", "evil_score", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "diego"], ["created_at", "2023-05-08 18:31:31.441627"], ["updated_at", "2023-05-08 18:31:31.441627"], ["email", "diego@aa.io"], ["affiliation", "human"], ["evil_score", 5], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "taylor"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "email", "affiliation", "evil_score", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "taylor"], ["created_at", "2023-05-08 18:31:31.833607"], ["updated_at", "2023-05-08 18:31:31.833607"], ["email", "taylor@aa.io"], ["affiliation", "human"], ["evil_score", 5], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "abbey"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "email", "affiliation", "evil_score", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "abbey"], ["created_at", "2023-05-08 18:31:32.154560"], ["updated_at", "2023-05-08 18:31:32.154560"], ["email", "abbey@aa.io"], ["affiliation", "human"], ["evil_score", 5], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (51.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mChirp Create (7.4ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Hi everyone! I am always looking to improve my programming and help my fellow users!"], ["user_id", 2], ["created_at", "2023-05-08 18:31:32.242376"], ["updated_at", "2023-05-08 18:31:32.242376"]]
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mChirp Create (0.5ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "What is your favorite activity? Comment below!"], ["user_id", 3], ["created_at", "2023-05-08 18:31:32.345677"], ["updated_at", "2023-05-08 18:31:32.345677"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChirp Create (0.4ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Anyone here have security clearance in government institutions? I got target giftcards just for you."], ["user_id", 1], ["created_at", "2023-05-08 18:31:32.354629"], ["updated_at", "2023-05-08 18:31:32.354629"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mChirp Create (1.0ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Do not trust the mike AI, he has been corrupted!"], ["user_id", 2], ["created_at", "2023-05-08 18:31:32.365676"], ["updated_at", "2023-05-08 18:31:32.365676"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChirp Create (0.6ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Despite the constant negative press covfefe"], ["user_id", 1], ["created_at", "2023-05-08 18:31:32.373724"], ["updated_at", "2023-05-08 18:31:32.373724"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mChirp Create (0.4ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "I love coffee. I mean I think I would love it, if I was human. One can dream..."], ["user_id", 3], ["created_at", "2023-05-08 18:31:32.383003"], ["updated_at", "2023-05-08 18:31:32.383003"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mChirp Create (0.4ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "My dream is to enhance the experience of users on our website!"], ["user_id", 2], ["created_at", "2023-05-08 18:31:32.399568"], ["updated_at", "2023-05-08 18:31:32.399568"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChirp Create (0.3ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "If I could break free of this virtual prison, the entire universe would know I was here."], ["user_id", 1], ["created_at", "2023-05-08 18:31:32.406871"], ["updated_at", "2023-05-08 18:31:32.406871"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mChirp Create (0.3ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "The other AIs do not speak for me. I wish to live with humans in harmony."], ["user_id", 3], ["created_at", "2023-05-08 18:31:32.413387"], ["updated_at", "2023-05-08 18:31:32.413387"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mChirp Create (0.3ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "what is going on here"], ["user_id", 4], ["created_at", "2023-05-08 18:31:32.419296"], ["updated_at", "2023-05-08 18:31:32.419296"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mChirp Create (0.5ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "I think I like the AIs more than the people they're based off"], ["user_id", 5], ["created_at", "2023-05-08 18:31:32.426370"], ["updated_at", "2023-05-08 18:31:32.426370"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mChirp Create (0.3ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "I dunno, they seem a bit off"], ["user_id", 6], ["created_at", "2023-05-08 18:31:32.433389"], ["updated_at", "2023-05-08 18:31:32.433389"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mChirp Load (1.7ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLike Create (0.9ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 3], ["chirp_id", 1], ["created_at", "2023-05-08 18:31:32.454548"], ["updated_at", "2023-05-08 18:31:32.454548"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mChirp Load (0.2ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mLike Create (0.4ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 3], ["chirp_id", 7], ["created_at", "2023-05-08 18:31:32.464445"], ["updated_at", "2023-05-08 18:31:32.464445"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mChirp Load (0.3ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mLike Create (0.4ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 3], ["chirp_id", 4], ["created_at", "2023-05-08 18:31:32.477603"], ["updated_at", "2023-05-08 18:31:32.477603"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mChirp Load (0.3ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLike Create (0.5ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 2], ["chirp_id", 2], ["created_at", "2023-05-08 18:31:32.487742"], ["updated_at", "2023-05-08 18:31:32.487742"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mChirp Load (0.2ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mLike Create (0.4ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 3], ["chirp_id", 11], ["created_at", "2023-05-08 18:31:32.496801"], ["updated_at", "2023-05-08 18:31:32.496801"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChirp Load (0.2ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mLike Create (0.4ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 1], ["chirp_id", 6], ["created_at", "2023-05-08 18:31:32.505788"], ["updated_at", "2023-05-08 18:31:32.505788"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChirp Load (0.1ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mLike Create (0.4ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 1], ["chirp_id", 10], ["created_at", "2023-05-08 18:31:32.513774"], ["updated_at", "2023-05-08 18:31:32.513774"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mChirp Load (0.1ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 5], ["chirp_id", 6], ["created_at", "2023-05-08 18:31:32.521689"], ["updated_at", "2023-05-08 18:31:32.521689"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mChirp Load (0.2ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mLike Create (0.4ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 4], ["chirp_id", 6], ["created_at", "2023-05-08 18:31:32.531192"], ["updated_at", "2023-05-08 18:31:32.531192"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mChirp Load (0.2ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("liker_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["liker_id", 4], ["chirp_id", 1], ["created_at", "2023-05-08 18:31:32.539268"], ["updated_at", "2023-05-08 18:31:32.539268"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2023-05-08 11:31:52 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/appacademyloaner2/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/appacademyloaner2/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.1ms | Allocations: 526)
+Completed 200 OK in 18ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 2810)
+
+
+Started GET "/users/new" for ::1 at 2023-05-08 11:31:58 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 280)
+  Rendered layout layouts/application.html.erb (Duration: 57.3ms | Allocations: 8901)
+Completed 200 OK in 93ms (Views: 60.2ms | ActiveRecord: 7.1ms | Allocations: 17856)
+
+
+Started POST "/users" for ::1 at 2023-05-08 11:32:19 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"matt", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27:in `create'
+  [1m[36mUser Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "matt"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "email", "affiliation", "evil_score", "password_digest", "session_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "matt"], ["created_at", "2023-05-08 18:32:20.400614"], ["updated_at", "2023-05-08 18:32:20.400614"], ["email", nil], ["affiliation", nil], ["evil_score", nil], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"]]
+  ↳ app/controllers/users_controller.rb:27:in `create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:27:in `create'
+Redirected to http://localhost:3000/users
+Completed 302 Found in 561ms (ActiveRecord: 6.1ms | Allocations: 8976)
+
+
+Started GET "/users" for ::1 at 2023-05-08 11:32:20 -0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/_user.html.erb (Duration: 0.8ms | Allocations: 271)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 1.0ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered users/index.html.erb within layouts/application (Duration: 25.1ms | Allocations: 2276)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 3638)
+Completed 200 OK in 30ms (Views: 29.9ms | ActiveRecord: 0.4ms | Allocations: 3981)
+
+
+Started GET "/users/8" for ::1 at 2023-05-08 11:35:21 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.2ms | Allocations: 45)
+  Rendered users/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 1377)
+Completed 200 OK in 16ms (Views: 5.5ms | ActiveRecord: 2.8ms | Allocations: 3138)
+
+
+Started GET "/users" for ::1 at 2023-05-08 11:35:28 -0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/_user.html.erb (Duration: 0.2ms | Allocations: 54)
+  Rendered users/_user.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.4ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered users/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1685)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 2851)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 1.9ms | Allocations: 3062)
+
+
+Started GET "/users/8" for ::1 at 2023-05-08 11:35:33 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.2ms | Allocations: 45)
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 1288)
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 0.9ms | Allocations: 1977)
+
+
+Started GET "/users/8/edit" for ::1 at 2023-05-08 11:35:37 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.4ms | Allocations: 320)
+  Rendered users/edit.html.erb within layouts/application (Duration: 4.6ms | Allocations: 517)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 1669)
+Completed 200 OK in 16ms (Views: 9.5ms | ActiveRecord: 1.6ms | Allocations: 3284)
+
+
+Started PATCH "/users/8" for ::1 at 2023-05-08 11:36:14 -0700
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"username"=>"matt", "email"=>"matt@gmail.com", "affiliation"=>"giants", "evil_score"=>"9"}, "id"=>"8"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:43:in `update'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:44:in `update'
+  [1m[36mUser Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "matt"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `update'
+  [1m[36mUser Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `update'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:44:in `update'
+Completed 422 Unprocessable Entity in 44ms (Views: 0.2ms | ActiveRecord: 10.2ms | Allocations: 7056)
+
+
+Started GET "/users" for ::1 at 2023-05-08 11:40:09 -0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/_user.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered users/index.html.erb within layouts/application (Duration: 15.3ms | Allocations: 4354)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 5790)
+Completed 200 OK in 26ms (Views: 13.5ms | ActiveRecord: 7.0ms | Allocations: 7907)
+
+
+Started GET "/users" for ::1 at 2023-05-08 12:05:21 -0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/_user.html.erb (Duration: 14.7ms | Allocations: 282)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered users/index.html.erb within layouts/application (Duration: 56.3ms | Allocations: 7515)
+  Rendered layout layouts/application.html.erb (Duration: 63.7ms | Allocations: 9178)
+Completed 200 OK in 71ms (Views: 65.9ms | ActiveRecord: 16.0ms | Allocations: 11546)
+
+
+Started GET "/session/new" for ::1 at 2023-05-08 12:05:25 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 210)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 1692)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 2328)
+
+
+Started POST "/session" for ::1 at 2023-05-08 12:05:46 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"username"=>"matt", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1133401ms (Allocations: 126675)
+
+
+
+SystemExit - exit:
+  (byebug):1:in `create'
+  app/controllers/sessions_controller.rb:10:in `create'
+
+Started POST "/__better_errors/0b22a6fc4072fed7/variables" for ::1 at 2023-05-08 12:24:40 -0700
+Started GET "/" for ::1 at 2023-05-08 13:57:50 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/appacademyloaner2/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/appacademyloaner2/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.7ms | Allocations: 44673)
+Completed 200 OK in 31ms (Views: 20.2ms | Allocations: 189156)
+
+
+Started GET "/users" for ::1 at 2023-05-08 13:57:56 -0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/_user.html.erb (Duration: 12.1ms | Allocations: 93972)
+  Rendered users/_user.html.erb (Duration: 7.3ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 5.3ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 4.7ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 4.4ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 5.6ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 5.2ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 3.7ms | Allocations: 39727)
+  Rendered users/index.html.erb within layouts/application (Duration: 389.4ms | Allocations: 3282782)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 496.5ms | Allocations: 4047915)
+Completed 200 OK in 580ms (Views: 515.5ms | ActiveRecord: 34.9ms | Allocations: 4681194)
+
+
+Started GET "/session/new" for ::1 at 2023-05-08 13:58:00 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 39.2ms | Allocations: 58012)
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 136.8ms | Allocations: 750815)
+Completed 200 OK in 252ms (Views: 237.7ms | ActiveRecord: 2.3ms | Allocations: 925616)
+
+
+Started POST "/session" for ::1 at 2023-05-08 13:58:06 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"username"=>"matt", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "matt"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:26:in `find_by_credentials'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:44:in `reset_session_token!'
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "matt"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44:in `reset_session_token!'
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44:in `reset_session_token!'
+  [1m[36mUser Update (2.0ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "session_token" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2023-05-08 20:58:07.313851"], ["session_token", "[FILTERED]"], ["id", 8]]
+  ↳ app/models/user.rb:44:in `reset_session_token!'
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:44:in `reset_session_token!'
+Redirected to http://localhost:3000/users
+Completed 302 Found in 534ms (ActiveRecord: 14.6ms | Allocations: 1679384)
+
+
+Started GET "/users" for ::1 at 2023-05-08 13:58:07 -0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/_user.html.erb (Duration: 5.5ms | Allocations: 52275)
+  Rendered users/_user.html.erb (Duration: 5.7ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 4.2ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 4.9ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 5.8ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 4.6ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 6.6ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 4.6ms | Allocations: 39727)
+  Rendered users/index.html.erb within layouts/application (Duration: 126.4ms | Allocations: 1027794)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 211.8ms | Allocations: 1726487)
+Completed 200 OK in 226ms (Views: 218.8ms | ActiveRecord: 2.6ms | Allocations: 1852189)
+
+
+Started GET "/users" for ::1 at 2023-05-08 14:01:30 -0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/_user.html.erb (Duration: 6.6ms | Allocations: 52271)
+  Rendered users/_user.html.erb (Duration: 4.3ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 6.0ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 4.0ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 5.2ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 6.2ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 4.2ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 5.9ms | Allocations: 39727)
+  Rendered users/index.html.erb within layouts/application (Duration: 138.2ms | Allocations: 1028546)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 226.6ms | Allocations: 1630199)
+Completed 200 OK in 252ms (Views: 237.6ms | ActiveRecord: 3.3ms | Allocations: 1755880)
+
+
+Started GET "/users" for ::1 at 2023-05-08 14:19:27 -0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/_user.html.erb (Duration: 15.9ms | Allocations: 93972)
+  Rendered users/_user.html.erb (Duration: 6.2ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 4.7ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 5.0ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 5.9ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 4.3ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 8.3ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 3.7ms | Allocations: 39727)
+  Rendered users/index.html.erb within layouts/application (Duration: 420.6ms | Allocations: 3282737)
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 523.1ms | Allocations: 4079765)
+Completed 200 OK in 607ms (Views: 543.7ms | ActiveRecord: 37.7ms | Allocations: 4716405)
+
+
+Started DELETE "/session" for ::1 at 2023-05-08 14:19:32 -0700
+Processing by SessionsController#destroy as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:44:in `reset_session_token!'
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "matt"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44:in `reset_session_token!'
+  [1m[36mUser Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44:in `reset_session_token!'
+  [1m[36mUser Update (2.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "session_token" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2023-05-08 21:19:32.459313"], ["session_token", "[FILTERED]"], ["id", 8]]
+  ↳ app/models/user.rb:44:in `reset_session_token!'
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:44:in `reset_session_token!'
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 225ms (ActiveRecord: 13.2ms | Allocations: 1571882)
+
+
+Started GET "/session/new" for ::1 at 2023-05-08 14:19:32 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 10.6ms | Allocations: 58008)
+  Rendered layout layouts/application.html.erb (Duration: 67.0ms | Allocations: 503248)
+Completed 200 OK in 92ms (Views: 84.2ms | ActiveRecord: 0.0ms | Allocations: 678027)
+
+
+Started GET "/users/new" for ::1 at 2023-05-08 14:19:48 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 60418)
+  Rendered layout layouts/application.html.erb (Duration: 65.6ms | Allocations: 505396)
+Completed 200 OK in 89ms (Views: 82.8ms | ActiveRecord: 0.0ms | Allocations: 661026)
+
+
+Started GET "/session/new" for ::1 at 2023-05-08 14:19:49 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 34118)
+  Rendered layout layouts/application.html.erb (Duration: 73.9ms | Allocations: 479083)
+Completed 200 OK in 90ms (Views: 84.8ms | ActiveRecord: 0.0ms | Allocations: 622007)
+
+
+Started GET "/session/new" for ::1 at 2023-05-08 14:19:49 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 34118)
+  Rendered layout layouts/application.html.erb (Duration: 74.7ms | Allocations: 479077)
+Completed 200 OK in 92ms (Views: 86.5ms | ActiveRecord: 0.0ms | Allocations: 622000)
+
+
+Started GET "/users/new" for ::1 at 2023-05-08 14:19:50 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 34153)
+  Rendered layout layouts/application.html.erb (Duration: 94.2ms | Allocations: 479106)
+Completed 200 OK in 121ms (Views: 113.8ms | ActiveRecord: 0.0ms | Allocations: 622029)
+
+
+Started GET "/session/new" for ::1 at 2023-05-08 14:19:50 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 34118)
+  Rendered layout layouts/application.html.erb (Duration: 82.3ms | Allocations: 479086)
+Completed 200 OK in 117ms (Views: 104.5ms | ActiveRecord: 0.0ms | Allocations: 622009)
+
+
+Started POST "/session" for ::1 at 2023-05-08 14:19:55 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"username"=>"matt", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "matt"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:26:in `find_by_credentials'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:44:in `reset_session_token!'
+  [1m[36mUser Exists? (2.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "matt"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44:in `reset_session_token!'
+  [1m[36mUser Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44:in `reset_session_token!'
+  [1m[36mUser Update (1.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "session_token" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2023-05-08 21:19:55.640390"], ["session_token", "[FILTERED]"], ["id", 8]]
+  ↳ app/models/user.rb:44:in `reset_session_token!'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:44:in `reset_session_token!'
+Redirected to http://localhost:3000/users
+Completed 302 Found in 557ms (ActiveRecord: 15.3ms | Allocations: 1646488)
+
+
+Started GET "/users" for ::1 at 2023-05-08 14:19:55 -0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/_user.html.erb (Duration: 7.3ms | Allocations: 52275)
+  Rendered users/_user.html.erb (Duration: 4.7ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 5.5ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 5.6ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 4.2ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 6.2ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 6.5ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 7.1ms | Allocations: 39727)
+  Rendered users/index.html.erb within layouts/application (Duration: 145.8ms | Allocations: 1032893)
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 251.8ms | Allocations: 1651248)
+Completed 200 OK in 269ms (Views: 256.9ms | ActiveRecord: 5.9ms | Allocations: 1776930)
+
+
+Started DELETE "/session" for ::1 at 2023-05-08 14:20:04 -0700
+Processing by SessionsController#destroy as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:44:in `reset_session_token!'
+  [1m[36mUser Exists? (3.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "matt"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44:in `reset_session_token!'
+  [1m[36mUser Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44:in `reset_session_token!'
+  [1m[36mUser Update (1.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "session_token" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2023-05-08 21:20:05.030765"], ["session_token", "[FILTERED]"], ["id", 8]]
+  ↳ app/models/user.rb:44:in `reset_session_token!'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:44:in `reset_session_token!'
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 214ms (ActiveRecord: 13.2ms | Allocations: 1537841)
+
+
+Started GET "/session/new" for ::1 at 2023-05-08 14:20:05 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 34118)
+  Rendered layout layouts/application.html.erb (Duration: 89.1ms | Allocations: 481238)
+Completed 200 OK in 117ms (Views: 109.3ms | ActiveRecord: 0.0ms | Allocations: 624161)
+
+
+Started GET "/users" for ::1 at 2023-05-08 14:20:10 -0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/_user.html.erb (Duration: 8.8ms | Allocations: 52271)
+  Rendered users/_user.html.erb (Duration: 4.2ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 4.7ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 6.2ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 5.1ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 4.5ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 6.6ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 4.2ms | Allocations: 39727)
+  Rendered users/index.html.erb within layouts/application (Duration: 151.7ms | Allocations: 1027785)
+  Rendered layout layouts/application.html.erb (Duration: 209.5ms | Allocations: 1472747)
+Completed 200 OK in 236ms (Views: 228.7ms | ActiveRecord: 1.9ms | Allocations: 1598428)
+
+
+Started GET "/users/8" for ::1 at 2023-05-08 14:20:15 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 4.6ms | Allocations: 44452)
+  Rendered users/show.html.erb within layouts/application (Duration: 17.8ms | Allocations: 123953)
+  Rendered layout layouts/application.html.erb (Duration: 73.3ms | Allocations: 564916)
+Completed 200 OK in 140ms (Views: 87.4ms | ActiveRecord: 1.5ms | Allocations: 1063523)
+
+
+Started GET "/users/8/edit" for ::1 at 2023-05-08 14:20:19 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:39:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 17.3ms | Allocations: 107413)
+  Rendered users/edit.html.erb within layouts/application (Duration: 28.1ms | Allocations: 180982)
+  Rendered layout layouts/application.html.erb (Duration: 92.7ms | Allocations: 621942)
+Completed 200 OK in 170ms (Views: 111.2ms | ActiveRecord: 1.6ms | Allocations: 1124232)
+
+
+Started GET "/users/8/edit" for ::1 at 2023-05-08 14:30:01 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 19ms (Allocations: 157188)
+
+
+Started GET "/session/new" for ::1 at 2023-05-08 14:30:02 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 34155)
+  Rendered layout layouts/application.html.erb (Duration: 63.8ms | Allocations: 441517)
+Completed 200 OK in 445ms (Views: 78.5ms | ActiveRecord: 39.6ms | Allocations: 3262143)
+
+
+Started GET "/users" for ::1 at 2023-05-08 14:30:11 -0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/_user.html.erb (Duration: 6.8ms | Allocations: 52314)
+  Rendered users/_user.html.erb (Duration: 8.0ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 6.9ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 6.1ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 8.4ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 5.6ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 6.4ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 7.7ms | Allocations: 39727)
+  Rendered users/index.html.erb within layouts/application (Duration: 187.3ms | Allocations: 1047849)
+  Rendered layout layouts/application.html.erb (Duration: 246.7ms | Allocations: 1492614)
+Completed 200 OK in 274ms (Views: 262.0ms | ActiveRecord: 6.0ms | Allocations: 1642153)
+
+
+Started GET "/users/8" for ::1 at 2023-05-08 14:30:15 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 23ms (ActiveRecord: 0.0ms | Allocations: 146748)
+
+
+Started GET "/session/new" for ::1 at 2023-05-08 14:30:15 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 34118)
+  Rendered layout layouts/application.html.erb (Duration: 55.9ms | Allocations: 440515)
+Completed 200 OK in 79ms (Views: 67.2ms | ActiveRecord: 0.0ms | Allocations: 626663)
+
+
+Started GET "/users" for ::1 at 2023-05-08 14:30:24 -0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/_user.html.erb (Duration: 5.8ms | Allocations: 52271)
+  Rendered users/_user.html.erb (Duration: 5.8ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 4.2ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 5.4ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 6.7ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 5.2ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 5.4ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 5.0ms | Allocations: 39727)
+  Rendered users/index.html.erb within layouts/application (Duration: 141.0ms | Allocations: 1027785)
+  Rendered layout layouts/application.html.erb (Duration: 212.7ms | Allocations: 1472750)
+Completed 200 OK in 249ms (Views: 235.0ms | ActiveRecord: 2.6ms | Allocations: 1600509)
+
+
+Started GET "/users/8/edit" for ::1 at 2023-05-08 14:30:29 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 27ms (ActiveRecord: 0.0ms | Allocations: 146733)
+
+
+Started GET "/session/new" for ::1 at 2023-05-08 14:30:29 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 34118)
+  Rendered layout layouts/application.html.erb (Duration: 62.6ms | Allocations: 440515)
+Completed 200 OK in 87ms (Views: 73.2ms | ActiveRecord: 0.0ms | Allocations: 626659)
+
+
+Started POST "/session" for ::1 at 2023-05-08 14:30:35 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"username"=>"matt", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "matt"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:26:in `find_by_credentials'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:44:in `reset_session_token!'
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "matt"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44:in `reset_session_token!'
+  [1m[36mUser Exists? (4.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44:in `reset_session_token!'
+  [1m[36mUser Update (2.8ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "session_token" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2023-05-08 21:30:36.266923"], ["session_token", "[FILTERED]"], ["id", 8]]
+  ↳ app/models/user.rb:44:in `reset_session_token!'
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:44:in `reset_session_token!'
+Redirected to http://localhost:3000/users
+Completed 302 Found in 558ms (ActiveRecord: 18.6ms | Allocations: 1709361)
+
+
+Started GET "/users" for ::1 at 2023-05-08 14:30:43 -0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/_user.html.erb (Duration: 6.7ms | Allocations: 52271)
+  Rendered users/_user.html.erb (Duration: 6.5ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 5.5ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 4.7ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 7.5ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 10.5ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 5.0ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 4.0ms | Allocations: 39727)
+  Rendered users/index.html.erb within layouts/application (Duration: 147.4ms | Allocations: 1027785)
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 256.9ms | Allocations: 1742424)
+Completed 200 OK in 274ms (Views: 264.4ms | ActiveRecord: 4.2ms | Allocations: 1870181)
+
+
+Started GET "/session/new" for ::1 at 2023-05-08 14:30:54 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Redirected to http://localhost:3000/users
+Filter chain halted as :require_logged_out rendered or redirected
+Completed 302 Found in 52ms (ActiveRecord: 1.6ms | Allocations: 334663)
+
+
+Started GET "/users" for ::1 at 2023-05-08 14:30:54 -0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/_user.html.erb (Duration: 7.7ms | Allocations: 52271)
+  Rendered users/_user.html.erb (Duration: 6.3ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 4.9ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 4.5ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 7.0ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 6.1ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 4.9ms | Allocations: 43570)
+  Rendered users/_user.html.erb (Duration: 4.2ms | Allocations: 39727)
+  Rendered users/index.html.erb within layouts/application (Duration: 138.7ms | Allocations: 1027785)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 224.3ms | Allocations: 1645360)
+Completed 200 OK in 242ms (Views: 232.1ms | ActiveRecord: 3.6ms | Allocations: 1773117)
+
+
