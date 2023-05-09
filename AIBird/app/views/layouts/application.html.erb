@@ -10,10 +10,27 @@
   </head>
 
   <body>
+    <ul>
+      <% if flash[:errors] %>
+        <% flash[:errors].each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      <% end %>
+    </ul>
+
+    <ul>
+      <% if flash[:messages] %>
+        <% flash[:messages].each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      <% end %>
+    </ul>
+
     <% if logged_in? %>
       <h1>Welcome <%= current_user.username %>!</h1>
       <form action="<%= session_url %>" method="POST">
         <input type="hidden" name="_method" value="DELETE">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
         <input type="submit" value="Logout">
       </form>
     <% else %>

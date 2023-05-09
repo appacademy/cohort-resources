@@ -35,7 +35,7 @@ class UsersController < ApplicationController
             redirect_to users_url
         else
             # render json: @user.errors.full_messages, status: 422
-            @bananas = @user.errors.full_messages
+            flash.now[:errors] = @user.errors.full_messages
             render :new
         end
     end
