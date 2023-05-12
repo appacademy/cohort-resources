@@ -1,0 +1,34 @@
+#customizer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: static;
+
+  background: rgba(0, 0, 0, 0.63);
+  transition: 1s;
+
+  z-index: 100;
+}
+
+#customizer input {
+  width: 30px;
+  height: 20px;
+  transition: 0.5s ease-in-out;
+}
+
+.top {
+  top: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.left {
+  left: 0;
+}

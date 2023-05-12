@@ -1,0 +1,22 @@
+.parent div {
+  width: 200px;
+  height: 200px;
+  border: 1px solid grey;
+}
+
+.parent {
+  border: 2px solid green;
+  position: relative;
+}
+
+.child:nth-child(1) {
+  background: red;
+}
+
+.child:nth-child(2) {
+  background: green;
+}
+
+.child:nth-child(3) {
+  background: blue;
+}
