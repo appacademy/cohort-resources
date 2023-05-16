@@ -12,9 +12,10 @@ function scopeExample() {
 
   // the code block is denoted by { and }
   // this is what the "block" in "block scoped" refers to
+
   if (true) {
     // SCOPE B; variables: x, y
-    const y = "y";
+    const x = "y";
 
     // You can also make a code block by just inserting { and }
     {
@@ -22,7 +23,9 @@ function scopeExample() {
       const z = "z";
     }
   }
+  console.log(x)
 }
+// scopeExample();
 
 // In JavaScript, "each variable is accessible in it's direct scope and all scopes nested within that scope"
 
@@ -60,6 +63,8 @@ function howToConst() {
   console.log(username);
 }
 
+// howToConst()
+
 
 
 
@@ -89,7 +94,7 @@ function howToConst2() {
   console.log(username);
 }
 
-
+// howToConst2()
 
 
 
@@ -109,7 +114,7 @@ function howToConst3() {
   console.log(username);
 }
 
-
+// howToConst3();
 
 
 
@@ -125,15 +130,17 @@ function howToConst3() {
 
 // What will happen here?
 function howToLet() {
-  let secret = "I'm secretly a cat.";
+  const secret = "im a cat";
 
   if (true) {
-    secret = "I'm secretly a banana";
+    let secret = "I'm secretly a banana";
     console.log(secret);
   }
 
   console.log(secret);
 }
+
+// howToLet()
 
 
 
@@ -151,10 +158,19 @@ function howToLet2() {
 
   console.log(secret);
 }
+// howToLet2();
 
 
+function howToLet3() {
 
+  secret = "I'm secretly a banana";
+  console.log(secret);
 
+  let secret = "Nope, definitely a cat.";
+
+}
+
+// howToLet3();
 
 
 
@@ -195,7 +211,7 @@ function howToVar() {
 
   console.log(username);
 }
-
+// howToVar();
 
 
 
@@ -222,4 +238,4 @@ function howToVar2() {
   console.log(username);
 }
 
-
+howToVar2();

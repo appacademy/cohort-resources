@@ -3,25 +3,29 @@
 // "A closure is a function AND the connection to variables at its birth place"
 
 
-const feed = function () {
+const createFeedFunc = function () {
   // foodItems is known as a free variable
   // closures "close over" (capture, hang onto) free variables
   const foodItems = ['Grits'];
 
   // We are going to write a closure (function) right here
-
+  return function(newItem) {
+    foodItems.push(newItem);
+    return `I have eaten ${foodItems.join(' and ')}.`
+  }
 };
 
 // How do we use this feed function???
 
+const feedItem = createFeedFunc()
 
 
 // We can also write this function like so:
-const feed2 = function(foodItems) {
-  // foodItems is a free variable (a parameter this time)
+// const feed2 = function(foodItems) {
+//   // foodItems is a free variable (a parameter this time)
 
-  // closure here
-};
+//   // closure here
+// };
 
 
 

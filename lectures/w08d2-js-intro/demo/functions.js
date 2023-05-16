@@ -3,12 +3,12 @@
 
 /* Named functions */
 
-console.log(square(10)); // ?
 
 function square(num) {
   return num * num;
 }
 
+// console.log(square(10));
 
 
 
@@ -41,6 +41,8 @@ const feedMe = function(food) {
   return 'Thanks for the ' + food + ' !';
 };
 
+// console.log(feedMe("lobster"))
+
 
 
 
@@ -67,10 +69,24 @@ const feedMe2 = (food) => {
   return 'Thanks for the ' + food + ' !';
 };
 
+
+
+
+
+
+
 // Functionally same as above
 // If numArgs === 1, no parens needed
 // If function body === 1 line, no curlies, and implicit return
-const feedMe3 = food => 'Thanks for the ' + food + ' !';
+const feedMe3 = (food) => 'Thanks for the ' + food + ' !';
+
+
+// console.log(feedMe3('pizza'))
+
+
+
+
+
 
 const arrow = (arrowArg1, arrowArg2) => {
   // function body

@@ -5,7 +5,7 @@
 
 // We want to declare a named function that logs the argument
 function logElement(el) {
-  // write code here!
+  console.log(el);
 };
 
 const arr = [1, 2, 3];
@@ -17,6 +17,24 @@ const arr = [1, 2, 3];
 
 // how do we call forEach???
 
+
+// arr.forEach(logElement)
+
+// // arr.each do |ele|
+// //   p ele
+// // end
+
+// arr.forEach(function (ele) {
+//   ele = ele * 2;
+//   console.log(ele);
+// })
+
+// arr.forEach(ele => {
+//   ele = ele * 2
+//   console.log(ele)
+// });
+
+// arr.each {|ele| p ele}
 
 
 
@@ -69,13 +87,15 @@ const arr = [1, 2, 3];
 
 
 
-const callback = function(el) {
-
+const exclamation = function(el) {
+  console.log(el.toString() + '!')
+  return 2;
 }
 
 /* Writing our own function that has a callback (function) parameter */
 function doMathWithNumber(num, callback) {
-  // write code here!
+  let result = num * num;
+  callback(result)
 }
 
-doMathWithNumber(5,callback);
+doMathWithNumber(5,exclamation);
