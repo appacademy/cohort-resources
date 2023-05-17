@@ -15,6 +15,30 @@ function timesDo(num, cb) {
 }
 
 
+
+function Dog(name) {
+  this.name = name;
+}
+
+Dog.prototype.bark = function () {
+  console.log(`${this.name} says 'woof'.`);
+};
+
+Dog.prototype.sniff = function (otherThing) {
+  console.log(`${this.name} sniffs ${otherThing.name}`);
+};
+
+
+
+
+
+
+
+
+
+
+
+
 // class Example {
 //   constructor(){
 //       console.log("Constructor", this)

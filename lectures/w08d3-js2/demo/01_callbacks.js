@@ -28,3 +28,5 @@ function sumTwoOperations(cb1, cb2, num1, num2) {
     let result2 = cb2(num1, num2);
     return result1 + result2;
 }
+
+// console.log(calculator(add, 1, 2))
