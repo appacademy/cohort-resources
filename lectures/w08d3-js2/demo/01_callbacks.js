@@ -30,3 +30,4 @@ function sumTwoOperations(cb1, cb2, num1, num2) {
 }
 
 // console.log(calculator(add, 1, 2))
+// console.log(sumTwoOperations(subtract, multiply, 4, 19))

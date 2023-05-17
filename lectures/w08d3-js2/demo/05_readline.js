@@ -21,6 +21,8 @@ const rl = readline.createInterface({
 
 // How do we fix it?
 // response callback function will get run when someone presses enter/return in keyboard
+// need to nest future calls inside the response callback
+// rl.close should only get run after any and all responses have been completed.
 
 rl.question('What do you think of JavaScript? ', response => {
     console.log(`Thank you for your valuable feedback: ${response}`);

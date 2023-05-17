@@ -14,6 +14,20 @@ function timesDo(num, cb) {
   }
 }
 
+// example
+
+const biscuit = new Cat("biscuit")
+timesDo(5, biscuit.meow)
+// logs " says 'meow'" 5 times
+// the timesDo function reads biscuit.meow as:
+// function () {
+//   console.log(`${this.name} says 'meow'`);
+// }
+// it invokes it function style and `this` ends up being the window
+
+// need to bind the biscuit context into the callback
+timesDo(5, biscuit.meow.bind(biscuit))
+// logs "biscuit says 'meow'" 5 times
 
 
 function Dog(name) {
@@ -28,16 +42,7 @@ Dog.prototype.sniff = function (otherThing) {
   console.log(`${this.name} sniffs ${otherThing.name}`);
 };
 
-
-
-
-
-
-
-
-
-
-
+// example of arrow functions automatically binding context compared to regular function
 
 // class Example {
 //   constructor(){
