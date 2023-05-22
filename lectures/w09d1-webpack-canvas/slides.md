@@ -13,10 +13,9 @@
 ---
 
 ## Lecture Agenda
-1. Review
-2. Canvas demo
-3. Webpack demo
-4. Testing on the window 
+1. Canvas demo
+2. Webpack demo
+3. Testing on the window 
 
 
 ---
