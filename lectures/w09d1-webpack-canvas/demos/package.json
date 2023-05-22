@@ -1,0 +1,16 @@
+{
+  "name": "asteroids",
+  "version": "1.0.0",
+  "description": "cool game",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --watch --mode=development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "GG",
+  "license": "ISC",
+  "dependencies": {
+    "webpack-cli": "^5.1.1"
+  }
+}
