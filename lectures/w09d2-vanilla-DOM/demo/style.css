@@ -62,10 +62,6 @@ padding: 40px;
   margin: auto;
 } 
 
-.done {
-  text-decoration: line-through;
-}
-
 .grocery-container li {
   font-size: 24px;
   cursor: pointer;
@@ -95,3 +91,10 @@ padding: 40px;
   padding: 0;
 }
 
+.hidden {
+  display: none;
+}
+
+.done {
+  text-decoration: line-through;
+}

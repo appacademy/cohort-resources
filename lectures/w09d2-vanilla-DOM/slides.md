@@ -1,4 +1,5 @@
-# Vanilla DOM Manipulation
+# W9D2
+## Vanilla DOM Manipulation
 
 ---
 
@@ -104,7 +105,7 @@ quick demo
 ## Event Listeners
 
 * There are 3 ways to register event handlers for a DOM element.
-	* On an event target element using `EventTarget.addEventListener()`*
+	* On an event target element using `EventTarget.addEventListener("click", ()=> alert("hello"))`*
   * On a HTML attribute `<button onclick="alert('Hello world!')">`
   * DOM element properties `myButton.onclick = function(event){alert('Hello world')}`
 
