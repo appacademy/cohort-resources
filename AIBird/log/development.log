@@ -9092,3 +9092,246 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 2272)
 
 
+Started GET "/" for ::1 at 2023-05-24 11:45:30 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/paulobocanegra/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/paulobocanegra/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.0ms | Allocations: 526)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 2810)
+
+
+Started GET "/users" for ::1 at 2023-05-24 11:45:34 -0500
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/_user.html.erb (Duration: 0.6ms | Allocations: 384)
+  Rendered users/_user.html.erb (Duration: 0.0ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.0ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.0ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.0ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.0ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.0ms | Allocations: 44)
+  Rendered users/index.html.erb within layouts/application (Duration: 14.1ms | Allocations: 8014)
+  Rendered layout layouts/application.html.erb (Duration: 28.4ms | Allocations: 12362)
+Completed 200 OK in 40ms (Views: 25.6ms | ActiveRecord: 4.8ms | Allocations: 15815)
+
+
+Started GET "/" for ::1 at 2023-05-24 11:45:39 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/paulobocanegra/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/paulobocanegra/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.8ms | Allocations: 280)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 828)
+
+
+Started GET "/users" for ::1 at 2023-05-24 11:46:35 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:10:in `index'
+Completed 200 OK in 10ms (Views: 3.9ms | ActiveRecord: 3.9ms | Allocations: 6214)
+
+
+Started GET "/users/" for ::1 at 2023-05-24 11:57:39 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:10:in `index'
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 8.2ms | Allocations: 4729)
+
+
+Started GET "/users/" for ::1 at 2023-05-24 12:13:45 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:10:in `index'
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 14.0ms | Allocations: 8747)
+
+
+Started GET "/users/" for ::1 at 2023-05-24 12:17:40 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 1636)
+
+
+Started GET "/userrrrs" for ::1 at 2023-05-24 12:20:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/userrrrs"):
+  
+Started GET "/userrrrrs" for ::1 at 2023-05-24 12:23:38 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/userrrrrs"):
+  
+Started GET "/" for ::1 at 2023-05-24 12:26:50 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/paulobocanegra/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/paulobocanegra/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.8ms | Allocations: 19)
+Completed 200 OK in 3ms (Views: 1.9ms | Allocations: 230)
+
+
+Started GET "/userrrrrs/" for ::1 at 2023-05-24 12:27:31 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/userrrrrs"):
+  
+Started GET "/users" for ::1 at 2023-05-24 12:43:10 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:10:in `index'
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 13.6ms | Allocations: 4857)
+
+
+Started GET "/users/" for ::1 at 2023-05-24 12:44:01 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:10:in `index'
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 1.6ms | Allocations: 1632)
+
+
+Started GET "/users/" for ::1 at 2023-05-24 12:45:39 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:10:in `index'
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.7ms | Allocations: 1630)
+
+
+Started GET "/users/" for ::1 at 2023-05-24 12:46:01 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.3ms | Allocations: 1643)
+
+
+Started GET "/" for ::1 at 2023-05-24 13:12:51 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/paulobocanegra/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/paulobocanegra/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 16)
+Completed 200 OK in 2ms (Views: 1.3ms | Allocations: 192)
+
+
+Started GET "/chirps/1" for ::1 at 2023-05-24 13:13:00 -0500
+Processing by ChirpsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mChirp Load (2.2ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:20:in `show'
+Completed 200 OK in 73ms (Views: 1.3ms | ActiveRecord: 23.7ms | Allocations: 11626)
+
+
+Started GET "/chirps/1" for ::1 at 2023-05-24 13:14:14 -0500
+Processing by ChirpsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mChirp Load (0.6ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:20:in `show'
+Completed 200 OK in 8ms (Views: 1.5ms | ActiveRecord: 0.6ms | Allocations: 651)
+
+
+Started GET "/chirps/1" for ::1 at 2023-05-24 13:14:56 -0500
+Processing by ChirpsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mChirp Load (0.6ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:20:in `show'
+Completed 200 OK in 7ms (Views: 1.2ms | ActiveRecord: 0.6ms | Allocations: 644)
+
+
+Started GET "/chirps/928379237" for ::1 at 2023-05-24 13:16:18 -0500
+Processing by ChirpsController#show as */*
+  Parameters: {"id"=>"928379237"}
+  [1m[36mChirp Load (0.4ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 928379237], ["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:20:in `show'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.4ms | Allocations: 1073)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Chirp with 'id'=928379237:
+  app/controllers/chirps_controller.rb:20:in `show'
+
+Started GET "/chirps/928379237" for ::1 at 2023-05-24 13:16:47 -0500
+Processing by ChirpsController#show as */*
+  Parameters: {"id"=>"928379237"}
+  [1m[36mChirp Load (0.6ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 928379237], ["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:20:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.6ms | Allocations: 1039)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Chirp with 'id'=928379237:
+  app/controllers/chirps_controller.rb:20:in `show'
+
+Started POST "/chirps" for ::1 at 2023-05-24 13:23:34 -0500
+Processing by ChirpsController#create as JSON
+  Parameters: {"body"=>"AI machine does chirp chirp!", "user_id"=>1, "chirp"=>{"body"=>"AI machine does chirp chirp!", "user_id"=>1}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/chirps_controller.rb:11:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:11:in `create'
+  [1m[36mChirp Create (2.8ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "AI machine does chirp chirp!"], ["user_id", 1], ["created_at", "2023-05-24 18:23:34.714012"], ["updated_at", "2023-05-24 18:23:34.714012"]]
+  ↳ app/controllers/chirps_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/chirps_controller.rb:11:in `create'
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 10.4ms | Allocations: 13487)
+
+
+Started POST "/chirps" for ::1 at 2023-05-24 13:25:18 -0500
+Processing by ChirpsController#create as JSON
+  Parameters: {"body"=>"AI machine does chirp chirp!", "user_id"=>1, "chirp"=>{"body"=>"AI machine does chirp chirp!", "user_id"=>1}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/chirps_controller.rb:11:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:11:in `create'
+  [1m[36mChirp Create (0.6ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "AI machine does chirp chirp!"], ["user_id", 1], ["created_at", "2023-05-24 18:25:18.130838"], ["updated_at", "2023-05-24 18:25:18.130838"]]
+  ↳ app/controllers/chirps_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/chirps_controller.rb:11:in `create'
+Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 1.9ms | Allocations: 2978)
+
+
+Started POST "/chirps" for ::1 at 2023-05-24 13:27:22 -0500
+Processing by ChirpsController#create as JSON
+  Parameters: {"body"=>"AI machine does chirp chirp!", "user_id"=>1, "chirp"=>{"body"=>"AI machine does chirp chirp!", "user_id"=>1}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/chirps_controller.rb:11:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:11:in `create'
+  [1m[36mChirp Create (0.6ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "AI machine does chirp chirp!"], ["user_id", 1], ["created_at", "2023-05-24 18:27:22.709271"], ["updated_at", "2023-05-24 18:27:22.709271"]]
+  ↳ app/controllers/chirps_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/chirps_controller.rb:11:in `create'
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 2.0ms | Allocations: 2951)
+
+
+Started GET "/users/" for ::1 at 2023-05-24 13:56:49 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:10:in `index'
+Completed 200 OK in 33ms (Views: 32.8ms | ActiveRecord: 15.3ms | Allocations: 4998)
+
+
+Started GET "/users/" for ::1 at 2023-05-24 13:57:31 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:10:in `index'
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.6ms | Allocations: 1621)
+
+
+Started GET "/chirps/1" for ::1 at 2023-05-24 14:04:12 -0500
+Processing by ChirpsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mChirp Load (0.6ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:20:in `show'
+Completed 200 OK in 33ms (Views: 0.8ms | ActiveRecord: 12.0ms | Allocations: 4581)
+
+
+Started GET "/chirps/1" for ::1 at 2023-05-24 14:04:25 -0500
+Processing by ChirpsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mChirp Load (0.3ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:20:in `show'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 632)
+
+
+Started GET "/chirps/1" for ::1 at 2023-05-24 14:06:23 -0500
+Processing by ChirpsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mChirp Load (0.9ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/chirps_controller.rb:20:in `show'
+Completed 200 OK in 7ms (Views: 1.2ms | ActiveRecord: 0.9ms | Allocations: 631)
+
+

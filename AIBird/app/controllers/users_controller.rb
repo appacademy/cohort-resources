@@ -7,8 +7,8 @@ class UsersController < ApplicationController
     def index
         # debugger
         @users = User.all
-        # render json: @users
-        render :index
+        render json: @users
+        # render :index
     end
 
     def show

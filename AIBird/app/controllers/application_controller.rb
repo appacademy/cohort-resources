@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-    # skip_before_action :verify_authenticity_token
+    skip_before_action :verify_authenticity_token
     # any methods in here can be used by any other controller
     helper_method :current_user, :logged_in? # what allows us to use these in our views
 
