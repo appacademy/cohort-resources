@@ -4,13 +4,13 @@ import NavBar from "./components/NavBar";
 import PostIndex from "./components/PostIndex";
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(false)
+  // const [loggedIn, setLoggedIn] = useState(false)
   
   return (
     <>
-      <NavBar loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>
+      <NavBar/>
       <Route path='/:familyName'>
-        <PostIndex loggedIn={loggedIn} />
+        <PostIndex />
       </Route>
     </>
   );

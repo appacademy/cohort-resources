@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { SessionContext } from './context/sessionContext';
 
-const PostIndex = ({loggedIn}) => {
+const PostIndex = () => {
   console.log("Rendering...");
 
+  const {loggedIn} = useContext(SessionContext)
   const [data, setData] = useState([]);
   const { familyName } = useParams();
 
