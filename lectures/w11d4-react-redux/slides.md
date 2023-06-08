@@ -114,6 +114,17 @@
 
 ---
 
+## Principles
+
++ Single source of truth
+	+ The global state of an application is stored in a single object within the store
++ State is read-only
+	+ The only way to change the state is to dispatch an action
++ Changes are made with pure functions
+	+ To specify how the state tree is transformed by actions, write pure reducers
+  
+---
+
 ## Elements of Redux
 
 + The **store** holds the whole state tree of the application
