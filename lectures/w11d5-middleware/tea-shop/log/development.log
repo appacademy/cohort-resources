@@ -1,0 +1,253 @@
+  [1m[35m (467.3ms)[0m  [1m[35mCREATE DATABASE "tea_shop_development" ENCODING = 'unicode'[0m
+  [1m[35m (126.5ms)[0m  [1m[35mCREATE DATABASE "tea_shop_test" ENCODING = 'unicode'[0m
+  [1m[35m (48.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (31.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5578173877934865480)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTeas (20230609164533)
+  [1m[36mTRANSACTION (11.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (47.3ms)[0m  [1m[35mCREATE TABLE "teas" ("id" bigserial primary key, "flavor" character varying NOT NULL, "price" float NOT NULL, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_teas_on_flavor" ON "teas" ("flavor")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (22.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230609164533"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (6.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-06-09 16:48:22.681458"], ["updated_at", "2023-06-09 16:48:22.681458"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(5578173877934865480)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-06-09 10:18:56 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-09 10:23:20 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (17.8ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:5:in `index'
+Completed 200 OK in 29ms (Views: 5.8ms | ActiveRecord: 17.8ms | Allocations: 2098)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (8.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTea Load (1.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTea Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "Green"], ["LIMIT", 1]]
+  [1m[36mTea Create (19.5ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["flavor", "Green"], ["price", 1.75], ["description", "Green tea is a type of tea that is made from Camellia sinensis leaves and buds that have not undergone the same withering and oxidation process used to make oolong teas and black teas. Green tea originated in China, but its production and manufacture has spread to other countries in East Asia."], ["created_at", "2023-06-09 17:26:05.405116"], ["updated_at", "2023-06-09 17:26:05.405116"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTea Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "Oolong"], ["LIMIT", 1]]
+  [1m[36mTea Create (0.5ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["flavor", "Oolong"], ["price", 2.0], ["description", "Oolong tea is a type of tea that is sometimes called \"wulong\" (also pronounced \"oolong\") or \"black dragon\" tea. Oolong teas are semi-oxidized teas. They are sometimes called \"semi-fermented teas\" though this moniker is considered to be less technically correct than semi-oxidized teas. After the tea leaves are picked, they are rolled and allowed to oxidize. Oxidation produces floral notes that characterize many oolongs."], ["created_at", "2023-06-09 17:26:05.441951"], ["updated_at", "2023-06-09 17:26:05.441951"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTea Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "Earl Grey"], ["LIMIT", 1]]
+  [1m[36mTea Create (0.5ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["flavor", "Earl Grey"], ["price", 2.5], ["description", "Earl Grey tea is a tea blend which has been flavoured with the addition of oil of bergamot. The rind's fragrant oil is added to black tea to give Earl Grey its unique taste. Traditionally, Earl Grey was made from black teas such as China keemun and therefore intended to be drunk without milk. However, tea companies have since begun to offer Earl Grey based upon stronger teas such as Ceylons which are better suited to the addition of milk or cream. Other varieties have been introduced as well, such as green or oolong."], ["created_at", "2023-06-09 17:26:05.455620"], ["updated_at", "2023-06-09 17:26:05.455620"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTea Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "Rooibos"], ["LIMIT", 1]]
+  [1m[36mTea Create (1.7ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["flavor", "Rooibos"], ["price", 3.0], ["description", "Rooibos (/ˈrɔɪbɒs/ ROY-boss; Afrikaans: [rɔːibɔs]; Aspalathus linearis), meaning 'red bush'; is a broom-like member of the plant family Fabaceae that grows in South Africa's fynbos. The leaves are used to make a herbal tea that is called by the names: rooibos (especially in Southern Africa), bush tea, red tea, or redbush tea (predominantly in Great Britain). The tea has been popular in Southern Africa for generations, but is now consumed in many countries worldwide. It is sometimes spelled rooibosch in accordance with the original Dutch for 'red bush'. The tea has a taste and color somewhat similar to hibiscus tea, with more or less of an earthy flavor like yerba mate."], ["created_at", "2023-06-09 17:26:05.468838"], ["updated_at", "2023-06-09 17:26:05.468838"]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTea Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "Par"], ["LIMIT", 1]]
+  [1m[36mTea Create (0.5ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["flavor", "Par"], ["price", 0.0], ["description", "byoT"], ["created_at", "2023-06-09 17:26:05.488465"], ["updated_at", "2023-06-09 17:26:05.488465"]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-09 10:27:03 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (13.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:5:in `index'
+Completed 200 OK in 65ms (Views: 34.2ms | ActiveRecord: 29.8ms | Allocations: 5862)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-09 10:27:52 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.5ms | Allocations: 1275)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-09 10:57:48 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (2.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:5:in `index'
+Completed 200 OK in 55ms (Views: 52.4ms | ActiveRecord: 25.7ms | Allocations: 4052)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-09 10:58:12 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (2.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 2.3ms | Allocations: 1169)
+
+
+Started POST "/api/teas" for 127.0.0.1 at 2023-06-09 10:59:27 -0700
+Processing by Api::TeasController#create as JSON
+  Parameters: {"flavor"=>"assam", "price"=>"5.00", "description"=>"somthing from boba", "tea"=>{"flavor"=>"assam", "price"=>"5.00", "description"=>"somthing from boba"}}
+  [1m[36mTRANSACTION (40.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teas_controller.rb:10:in `create'
+  [1m[36mTea Exists? (64.4ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "assam"], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:10:in `create'
+  [1m[36mTea Create (1.0ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["flavor", "assam"], ["price", 5.0], ["description", "somthing from boba"], ["created_at", "2023-06-09 17:59:27.778786"], ["updated_at", "2023-06-09 17:59:27.778786"]]
+  ↳ app/controllers/api/teas_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (41.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/teas_controller.rb:10:in `create'
+Completed 500 Internal Server Error in 237ms (ActiveRecord: 147.4ms | Allocations: 8940)
+
+
+
+NameError - undefined local variable or method `tea' for #<Api::TeasController:0x00000000004b00>
+      render json: tea
+                   ^^^
+Did you mean?  @tea:
+  app/controllers/api/teas_controller.rb:11:in `create'
+
+Started POST "/api/teas" for 127.0.0.1 at 2023-06-09 11:01:42 -0700
+Processing by Api::TeasController#create as JSON
+  Parameters: {"flavor"=>"assam", "price"=>5, "description"=>"something from boba", "tea"=>{"flavor"=>"assam", "price"=>5, "description"=>"something from boba"}}
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teas_controller.rb:10:in `create'
+  [1m[36mTea Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "assam"], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/teas_controller.rb:10:in `create'
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 4.7ms | Allocations: 5028)
+
+
+
+NameError - undefined local variable or method `tea' for #<Api::TeasController:0x00000000004b78>
+      render json: tea.errors.full_messages, status: 422
+                   ^^^
+Did you mean?  @tea:
+  app/controllers/api/teas_controller.rb:13:in `create'
+
+Started POST "/api/teas" for 127.0.0.1 at 2023-06-09 11:02:23 -0700
+Processing by Api::TeasController#create as JSON
+  Parameters: {"flavor"=>"assam", "price"=>5, "description"=>"something from boba", "tea"=>{"flavor"=>"assam", "price"=>5, "description"=>"something from boba"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teas_controller.rb:10:in `create'
+  [1m[36mTea Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "assam"], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/teas_controller.rb:10:in `create'
+Completed 422 Unprocessable Entity in 25ms (Views: 0.3ms | ActiveRecord: 16.4ms | Allocations: 4975)
+
+
+Started POST "/api/teas" for 127.0.0.1 at 2023-06-09 11:03:01 -0700
+Processing by Api::TeasController#create as JSON
+  Parameters: {"flavor"=>"assam lite", "price"=>4, "description"=>"something from boba", "tea"=>{"flavor"=>"assam lite", "price"=>4, "description"=>"something from boba"}}
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teas_controller.rb:10:in `create'
+  [1m[36mTea Exists? (6.7ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "assam lite"], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:10:in `create'
+  [1m[36mTea Create (3.9ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["flavor", "assam lite"], ["price", 4.0], ["description", "something from boba"], ["created_at", "2023-06-09 18:03:01.225808"], ["updated_at", "2023-06-09 18:03:01.225808"]]
+  ↳ app/controllers/api/teas_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/teas_controller.rb:10:in `create'
+Completed 200 OK in 28ms (Views: 0.9ms | ActiveRecord: 15.5ms | Allocations: 2868)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-09 11:03:13 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (3.8ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 9.9ms | ActiveRecord: 3.8ms | Allocations: 1413)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-09 11:28:54 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (2.0ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:5:in `index'
+Completed 200 OK in 289ms (Views: 277.4ms | ActiveRecord: 51.5ms | Allocations: 4190)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-09 11:30:12 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.5ms | Allocations: 1358)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-09 11:46:27 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (12.7ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:5:in `index'
+Completed 200 OK in 137ms (Views: 136.2ms | ActiveRecord: 73.5ms | Allocations: 4082)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-09 11:46:34 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (1.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:5:in `index'
+Completed 200 OK in 152ms (Views: 149.8ms | ActiveRecord: 1.3ms | Allocations: 1358)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-09 11:47:13 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.6ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.6ms | Allocations: 1358)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-09 11:48:03 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 1358)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-09 11:49:50 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (1.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:5:in `index'
+Completed 200 OK in 138ms (Views: 136.0ms | ActiveRecord: 1.4ms | Allocations: 1358)
+
+
+Started POST "/api/teas" for 127.0.0.1 at 2023-06-09 11:50:55 -0700
+Processing by Api::TeasController#create as JSON
+  Parameters: {"id"=>330, "flavor"=>"uni", "price"=>"5", "tea"=>{"id"=>330, "flavor"=>"uni", "price"=>"5"}}
+[31mUnpermitted parameter: :id. Context: { controller: Api::TeasController, action: create, request: #<ActionDispatch::Request:0x000000010b3afaf0>, params: {"id"=>330, "flavor"=>"uni", "price"=>"5", "format"=>:json, "controller"=>"api/teas", "action"=>"create", "tea"=>{"id"=>330, "flavor"=>"uni", "price"=>"5"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teas_controller.rb:10:in `create'
+  [1m[36mTea Exists? (7.1ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "uni"], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:10:in `create'
+  [1m[36mTea Create (8.1ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["flavor", "uni"], ["price", 5.0], ["description", nil], ["created_at", "2023-06-09 18:50:55.457839"], ["updated_at", "2023-06-09 18:50:55.457839"]]
+  ↳ app/controllers/api/teas_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (11.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/teas_controller.rb:10:in `create'
+Completed 200 OK in 70ms (Views: 0.7ms | ActiveRecord: 26.8ms | Allocations: 3683)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-09 11:51:12 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (2.8ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:5:in `index'
+Completed 200 OK in 38ms (Views: 35.1ms | ActiveRecord: 2.8ms | Allocations: 1447)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-09 11:55:07 -0700
+Processing by Api::TeasController#index as JSON
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-09 11:59:01 -0700
+  [1m[36mTea Load (2.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:6:in `index'
+Completed 200 OK in 232759ms (Views: 21.7ms | ActiveRecord: 71.7ms | Allocations: 86605)
+
+
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (2.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:6:in `index'
+Completed 200 OK in 10559ms (Views: 17.9ms | ActiveRecord: 46.1ms | Allocations: 6086)
+
+
+Started POST "/api/teas" for 127.0.0.1 at 2023-06-09 12:01:50 -0700
+Processing by Api::TeasController#create as JSON
+  Parameters: {"flavor"=>"shan", "price"=>"6", "tea"=>{"flavor"=>"shan", "price"=>"6"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teas_controller.rb:12:in `create'
+  [1m[36mTea Exists? (10.3ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "shan"], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `create'
+  [1m[36mTea Create (18.2ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["flavor", "shan"], ["price", 6.0], ["description", nil], ["created_at", "2023-06-09 19:01:54.678102"], ["updated_at", "2023-06-09 19:01:54.678102"]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (28.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/teas_controller.rb:12:in `create'
+Completed 200 OK in 4255ms (Views: 0.7ms | ActiveRecord: 56.9ms | Allocations: 4849)
+
+

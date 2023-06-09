@@ -1,0 +1,16 @@
+/* TODO Add site wide styles */
+
+.tea-index {
+  border: 2px solid red;
+}
+
+.tea-index-item {
+  border: 2px solid purple;
+  margin: 5px;
+}
+
+.tea-form {
+  border: 2px solid blue;
+  border-radius: 5px;
+  background: linear-gradient(45deg, cyan, aliceblue);
+}
