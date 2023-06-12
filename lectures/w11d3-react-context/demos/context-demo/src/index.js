@@ -8,9 +8,9 @@ import { SessionProvider } from './components/context/sessionContext';
 const Root = () => {
   return(
   <BrowserRouter>
-      <SessionProvider children={App} />
-        {/* <App /> */}
-      {/* </SessionProvider> */}
+      <SessionProvider >
+        <App />
+      </SessionProvider>
     </BrowserRouter>
   )
 }

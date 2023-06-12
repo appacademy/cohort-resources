@@ -7,14 +7,14 @@ export const useSessionContext = () => {
     return useContext(SessionContext)
 }
 
-export const SessionProvider = (props) => {
+export const SessionProvider = ({children}) => {
     const [loggedIn, setLoggedIn] = useState(false)
 
 
     return (
         <SessionContext.Provider value={{loggedIn, setLoggedIn}} > 
-            {/* {props.children} */}
-            <props.children />
+            {children}
+            {/* <props.children /> */}
         </SessionContext.Provider>
         )
 
