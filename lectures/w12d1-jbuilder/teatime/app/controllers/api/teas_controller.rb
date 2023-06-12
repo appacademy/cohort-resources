@@ -8,6 +8,7 @@ class Api::TeasController < ApplicationController
   end
 
   def show
+    # debugger
     @tea = Tea.find(params[:id])
     render :show
   end

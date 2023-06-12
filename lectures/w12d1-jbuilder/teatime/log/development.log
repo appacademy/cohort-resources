@@ -8174,3 +8174,1558 @@ Processing by Api::TeasController#show as JSON
 Completed 200 OK in 17ms (Views: 13.6ms | ActiveRecord: 1.8ms | Allocations: 4369)
 
 
+Started GET "/api/teas/2" for 127.0.0.1 at 2023-06-12 13:29:07 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:11:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 12.3ms | Allocations: 5090)
+Completed 200 OK in 32ms (Views: 11.9ms | ActiveRecord: 9.6ms | Allocations: 8756)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 13:29:11 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 23)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 8.6ms | Allocations: 2270)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.4ms | Allocations: 2458)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 13:29:12 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:11:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 8.1ms | Allocations: 3693)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 1.2ms | Allocations: 4369)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 13:29:32 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.4ms | Allocations: 94)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 7.2ms | Allocations: 2684)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.3ms | Allocations: 3280)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 13:29:38 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:11:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 8.5ms | Allocations: 3875)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 1.2ms | Allocations: 4653)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 13:29:59 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 23)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 8.0ms | Allocations: 2270)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.4ms | Allocations: 2459)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 13:31:42 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 23)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 9.9ms | Allocations: 2270)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.4ms | Allocations: 2458)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 13:31:44 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:11:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 9.0ms | Allocations: 3693)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 1.2ms | Allocations: 4369)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 13:35:24 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 23)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 1.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 10.0ms | Allocations: 2270)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.4ms | Allocations: 2458)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 13:35:26 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:11:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 8.5ms | Allocations: 3693)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 1.0ms | Allocations: 4371)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 13:38:16 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.5ms | Allocations: 94)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 7.9ms | Allocations: 2688)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.3ms | Allocations: 3285)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 13:38:18 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:11:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 8.4ms | Allocations: 3875)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 1.2ms | Allocations: 4653)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 13:38:55 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 3.9ms | Allocations: 94)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 17.1ms | Allocations: 2687)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.5ms | Allocations: 3285)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 13:38:59 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 23)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.3ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.4ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 11.8ms | Allocations: 2270)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.5ms | Allocations: 2477)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 13:39:00 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 23)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 7.7ms | Allocations: 2270)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.3ms | Allocations: 2458)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 13:39:01 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:11:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 10.6ms | Allocations: 3874)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 1.1ms | Allocations: 4636)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 13:39:17 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:11:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 9.1ms | Allocations: 3693)
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 1.1ms | Allocations: 4369)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 13:39:21 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:11:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 11.7ms | Allocations: 3693)
+Completed 200 OK in 16ms (Views: 10.8ms | ActiveRecord: 2.0ms | Allocations: 4369)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 13:39:42 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:11:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 9.5ms | Allocations: 3693)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 1.2ms | Allocations: 4369)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 13:39:45 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:11:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 17.4ms | Allocations: 3693)
+Completed 200 OK in 21ms (Views: 15.8ms | ActiveRecord: 2.7ms | Allocations: 4369)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 13:39:54 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:11:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 8.0ms | Allocations: 3693)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 1.1ms | Allocations: 4369)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 13:40:01 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:11:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 11.6ms | Allocations: 3693)
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 1.7ms | Allocations: 4369)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 13:40:07 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:11:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 10.4ms | Allocations: 3693)
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 1.4ms | Allocations: 4370)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 13:40:14 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:11:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 10.0ms | Allocations: 3693)
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 1.1ms | Allocations: 4369)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 13:40:18 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:11:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 13.6ms | Allocations: 3693)
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 1.3ms | Allocations: 4369)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 13:41:17 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 23)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.4ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 8.8ms | Allocations: 2273)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.4ms | Allocations: 2461)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 13:41:34 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 37)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 25.7ms | Allocations: 4205)
+Completed 200 OK in 32ms (Views: 11.5ms | ActiveRecord: 15.0ms | Allocations: 6378)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 13:42:34 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 23)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.5ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 7.9ms | Allocations: 2270)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.4ms | Allocations: 2476)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 13:42:39 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 23)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 6.8ms | Allocations: 2270)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.3ms | Allocations: 2458)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 13:42:53 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 28.3ms | Allocations: 14401)
+Completed 200 OK in 15833ms (Views: 23.4ms | ActiveRecord: 5.8ms | Allocations: 91526)
+
+
+Started GET "/api/teas/2" for 127.0.0.1 at 2023-06-12 13:45:58 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 13.1ms | Allocations: 5079)
+Completed 200 OK in 3082ms (Views: 12.6ms | ActiveRecord: 1.6ms | Allocations: 12446)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 13:46:14 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 18.7ms | Allocations: 3693)
+Completed 200 OK in 2171ms (Views: 18.5ms | ActiveRecord: 1.2ms | Allocations: 6055)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 13:47:01 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.6ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 37)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.3ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.3ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 22.2ms | Allocations: 4056)
+Completed 200 OK in 30ms (Views: 19.1ms | ActiveRecord: 4.7ms | Allocations: 6217)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 13:47:07 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 23)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 7.0ms | Allocations: 2270)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.4ms | Allocations: 2476)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 13:47:24 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 23)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 7.2ms | Allocations: 2274)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.4ms | Allocations: 2462)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 13:47:25 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 23)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 7.3ms | Allocations: 2270)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.4ms | Allocations: 2458)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 13:47:26 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.4ms | Allocations: 23)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.4ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 9.3ms | Allocations: 2270)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.5ms | Allocations: 2458)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 13:47:26 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 25.0ms | Allocations: 14274)
+Completed 200 OK in 29ms (Views: 21.3ms | ActiveRecord: 4.9ms | Allocations: 15852)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 13:47:35 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 24)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 8.0ms | Allocations: 2286)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.3ms | Allocations: 2504)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 13:47:36 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 8.8ms | Allocations: 3703)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 1.3ms | Allocations: 4391)
+
+
+Started GET "/api/teas/2" for 127.0.0.1 at 2023-06-12 13:47:38 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 13.4ms | Allocations: 5064)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 1.4ms | Allocations: 5740)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 13:47:52 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 23)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 11.9ms | Allocations: 2270)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.5ms | Allocations: 2458)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 13:47:55 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 23)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 6.6ms | Allocations: 2270)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.3ms | Allocations: 2458)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 13:47:59 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 10.2ms | Allocations: 3693)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 1.4ms | Allocations: 4370)
+
+
+Started GET "/api/teas/2" for 127.0.0.1 at 2023-06-12 13:48:02 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 11.8ms | Allocations: 5063)
+Completed 200 OK in 15ms (Views: 11.5ms | ActiveRecord: 1.5ms | Allocations: 5739)
+
+
+Started GET "/api/teas/3" for 127.0.0.1 at 2023-06-12 13:48:05 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 3]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 12.0ms | Allocations: 4447)
+Completed 200 OK in 15ms (Views: 11.3ms | ActiveRecord: 1.6ms | Allocations: 5123)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 13:48:10 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 16.0ms | Allocations: 3693)
+Completed 200 OK in 19ms (Views: 15.7ms | ActiveRecord: 1.1ms | Allocations: 4370)
+
+
+Started GET "/api/teas/4" for 127.0.0.1 at 2023-06-12 13:48:13 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 4]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 9.7ms | Allocations: 4449)
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 1.3ms | Allocations: 5125)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 13:48:24 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 10.7ms | Allocations: 3693)
+Completed 200 OK in 14ms (Views: 10.4ms | ActiveRecord: 1.1ms | Allocations: 4369)
+
+
+Started GET "/api/teas/2" for 127.0.0.1 at 2023-06-12 13:48:25 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 16.0ms | Allocations: 5064)
+Completed 200 OK in 19ms (Views: 15.3ms | ActiveRecord: 1.7ms | Allocations: 5740)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 13:49:38 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 15.3ms | Allocations: 3693)
+Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 2.3ms | Allocations: 4369)
+
+
+Started GET "/api/teas/2" for 127.0.0.1 at 2023-06-12 13:49:42 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 10.8ms | Allocations: 5063)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 1.2ms | Allocations: 5739)
+
+
+Started GET "/api/teas/8" for 127.0.0.1 at 2023-06-12 13:50:30 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"8"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 8]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  Rendered api/teas/show.json.jbuilder (Duration: 2.3ms | Allocations: 748)
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.5ms | Allocations: 1424)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 13:50:40 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.8ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 23)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 12.8ms | Allocations: 2272)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.8ms | Allocations: 2460)
+
+
+Started GET "/api/teas/9" for 127.0.0.1 at 2023-06-12 13:50:45 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"9"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 9]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  Rendered api/teas/show.json.jbuilder (Duration: 1.8ms | Allocations: 748)
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 1424)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 13:50:52 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 23)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 6.9ms | Allocations: 2270)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.4ms | Allocations: 2458)
+
+
+Started GET "/api/teas/4" for 127.0.0.1 at 2023-06-12 13:50:53 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 4]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 13.2ms | Allocations: 4444)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 1.9ms | Allocations: 5120)
+
+
+Started GET "/api/teas/2" for 127.0.0.1 at 2023-06-12 13:51:01 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 13.5ms | Allocations: 5064)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 1.2ms | Allocations: 5740)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 13:51:47 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 23)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.3ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.3ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.5ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 14.5ms | Allocations: 2270)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.4ms | Allocations: 2458)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 13:52:58 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 7.8ms | Allocations: 3693)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.9ms | Allocations: 4369)
+
+
+Started GET "/api/teas/2" for 127.0.0.1 at 2023-06-12 13:53:21 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 17.1ms | Allocations: 5063)
+Completed 200 OK in 20ms (Views: 16.3ms | ActiveRecord: 1.8ms | Allocations: 5740)
+
+
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" ORDER BY "teas"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 13:55:57 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.4ms | Allocations: 94)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.4ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.9ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.6ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 16.2ms | Allocations: 2685)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.5ms | Allocations: 3281)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 13:55:58 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/views/api/teas/show.json.jbuilder:8
+  Rendered api/teas/show.json.jbuilder (Duration: 13.4ms | Allocations: 4449)
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.9ms | Allocations: 5249)
+
+
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas" ORDER BY "teas"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" ORDER BY "teas"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" ORDER BY "teas"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Pluck (0.2ms)[0m  [1m[34mSELECT "transactions"."id" FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" ORDER BY "teas"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Pluck (0.2ms)[0m  [1m[34mSELECT "transactions"."id" FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  [1m[36mTea Load (0.6ms)[0m  [1m[34mSELECT "teas".* FROM "teas" ORDER BY "teas"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" ORDER BY "teas"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Pluck (0.2ms)[0m  [1m[34mSELECT "transactions"."id" FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+Started GET "/api/teas/1" for ::1 at 2023-06-12 13:59:05 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Pluck (0.3ms)[0m  [1m[34mSELECT "transactions"."id" FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:3
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 7.5ms | Allocations: 3064)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 1.0ms | Allocations: 4187)
+
+
+Started GET "/favicon.ico" for ::1 at 2023-06-12 13:59:05 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/teas/2" for ::1 at 2023-06-12 13:59:11 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Pluck (0.4ms)[0m  [1m[34mSELECT "transactions"."id" FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/show.json.jbuilder:3
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 1], ["id", 5], ["id", 6]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 8.3ms | Allocations: 2822)
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 1.7ms | Allocations: 3529)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 14:01:55 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.5ms | Allocations: 88)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.3ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 8.4ms | Allocations: 2541)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.4ms | Allocations: 2784)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 14:01:57 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Pluck (0.4ms)[0m  [1m[34mSELECT "transactions"."id" FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:3
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 8.5ms | Allocations: 2655)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 1.4ms | Allocations: 3331)
+
+
+Started GET "/api/teas/2" for 127.0.0.1 at 2023-06-12 14:02:00 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Pluck (0.2ms)[0m  [1m[34mSELECT "transactions"."id" FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/show.json.jbuilder:3
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 1], ["id", 5], ["id", 6]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 6.6ms | Allocations: 2821)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 1.4ms | Allocations: 3497)
+
+
+Started GET "/api/teas/4" for 127.0.0.1 at 2023-06-12 14:02:09 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Pluck (0.3ms)[0m  [1m[34mSELECT "transactions"."id" FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 4]]
+  ↳ app/views/api/teas/show.json.jbuilder:3
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 4]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3, $4)[0m  [["id", 8], ["id", 7], ["id", 4], ["id", 5]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 7.6ms | Allocations: 2767)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 1.0ms | Allocations: 3443)
+
+
+Started GET "/api/teas/5" for 127.0.0.1 at 2023-06-12 14:02:37 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Pluck (0.3ms)[0m  [1m[34mSELECT "transactions"."id" FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 5]]
+  ↳ app/views/api/teas/show.json.jbuilder:3
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 5]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 3.3ms | Allocations: 1419)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.7ms | Allocations: 2095)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 14:03:06 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 23)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 6.7ms | Allocations: 2272)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.4ms | Allocations: 2460)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 14:03:12 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Pluck (0.2ms)[0m  [1m[34mSELECT "transactions"."id" FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:3
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 6.2ms | Allocations: 2655)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 1.1ms | Allocations: 3331)
+
+
+Started GET "/api/teas/2" for 127.0.0.1 at 2023-06-12 14:03:14 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Pluck (0.2ms)[0m  [1m[34mSELECT "transactions"."id" FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/show.json.jbuilder:3
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 1], ["id", 5], ["id", 6]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 7.9ms | Allocations: 2822)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 1.3ms | Allocations: 3498)
+
+
+Started GET "/api/teas/3" for 127.0.0.1 at 2023-06-12 14:03:16 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Pluck (0.3ms)[0m  [1m[34mSELECT "transactions"."id" FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 3]]
+  ↳ app/views/api/teas/show.json.jbuilder:3
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 3]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3, $4)[0m  [["id", 6], ["id", 2], ["id", 7], ["id", 8]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 7.5ms | Allocations: 2765)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 1.3ms | Allocations: 3441)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-06-12 14:04:06 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 23)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.3ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.4ms | Allocations: 22)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 22)
+  Rendered api/teas/index.json.jbuilder (Duration: 15.1ms | Allocations: 2273)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.4ms | Allocations: 2461)
+
+
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-06-12 14:04:20 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Pluck (0.3ms)[0m  [1m[34mSELECT "transactions"."id" FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:3
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 8.1ms | Allocations: 2655)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 1.3ms | Allocations: 3332)
+
+
+Started GET "/api/teas/2" for 127.0.0.1 at 2023-06-12 14:07:00 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Pluck (0.2ms)[0m  [1m[34mSELECT "transactions"."id" FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/show.json.jbuilder:3
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 1], ["id", 5], ["id", 6]]
+  ↳ app/views/api/teas/show.json.jbuilder:9
+  Rendered api/teas/show.json.jbuilder (Duration: 6.7ms | Allocations: 2821)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 1.0ms | Allocations: 3497)
+
+

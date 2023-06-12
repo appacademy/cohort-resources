@@ -9,6 +9,7 @@ export const RECEIVE_TEA_DETAIL = 'RECEIVE_TEA_DETAIL';
 /* ----ACTION CREATORS---- */
 
 export const receiveTeaDetail = (payload) => {
+  // debugger
   return {
     type: RECEIVE_TEA_DETAIL,
     payload
@@ -54,6 +55,7 @@ export const createTea = (tea) => (dispatch) => {
 }
 
 export const fetchTeaDetail = (teaId) => async (dispatch) => {
+  // debugger
   const res = await fetch(`api/teas/${teaId}`)
   const data = await res.json();
   dispatch(receiveTeaDetail(data))
@@ -76,6 +78,7 @@ const teaReducer = (state = {}, action) => {
       delete nextState[action.teaId];
       return nextState;
     case RECEIVE_TEA_DETAIL:
+      // debugger
       nextState[action.payload.tea.id] = action.payload.tea
       return nextState
     default:

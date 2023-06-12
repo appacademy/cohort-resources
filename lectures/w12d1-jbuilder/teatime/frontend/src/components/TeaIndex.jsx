@@ -8,6 +8,7 @@ const TeaIndex = props => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    // debugger
     dispatch(fetchAllTeas())
   }, []);
   return(

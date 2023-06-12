@@ -6,7 +6,17 @@ import { fetchTeaDetail } from "../store/teaReducer";
 
 const TeaDetail = ({ teaId }) => {
   const tea = useSelector(state => state.teas[teaId])
-  const transactions = useSelector(state => Object.values(state.transactions))
+
+  const selector = (state) => {
+    let ids = [];
+    if(tea.transactionIds !== undefined){
+      ids = tea.transactionIds
+    }
+    return ids.map(id => state.transactions[id])
+  }
+
+  // const transactions = useSelector(state => Object.values(state.transactionstate => Object.values(state.transactions))
+  const transactions = useSelector(selector)
   const dispatch = useDispatch()
 
   useEffect(()=>{
@@ -20,8 +30,10 @@ const TeaDetail = ({ teaId }) => {
       {transactions.map(transaction => {
         return (
           <div>
-            <div>{transaction.customer}</div>
-            <div>{transaction.quantity}</div>
+            <div>Customer: {transaction.customer}</div>
+            <div>Quantity: {transaction.quantity}</div>
+            <div>Total: {tea.price * transaction.quantity}</div>
+            <br />
           </div>
         )
       })}
