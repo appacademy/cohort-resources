@@ -12,8 +12,9 @@ export const asyncAwaitTeas = async () => {
   }
 }
 
-export const postTea = async (tea) => {
-  return await fetch('api/teas', {
+export const postTea = (tea) => {
+  // debugger
+  return fetch('api/teas', {
     method: 'POST',
     body: JSON.stringify(tea),
     headers: {

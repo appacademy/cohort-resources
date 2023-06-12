@@ -5,8 +5,8 @@ import teaReducer from './teaReducer';
 import transactionReducer from './transactionReducer';
 
 const rootReducer = combineReducers({
-  transactions: transactionReducer,
-  teas: teaReducer
+  teas: teaReducer,
+  transactions: transactionReducer
 });
 
 const configureStore = (preloadedState = {}) => (

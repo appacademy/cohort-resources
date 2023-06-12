@@ -10,7 +10,7 @@ const AddTeaForm = props => {
 
   
   const handleSubmit = e => {
-    debugger
+    // debugger
     e.preventDefault();
     const tea = {
       flavor: flavor,
