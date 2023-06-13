@@ -1,3 +1,5 @@
+import { csrfFetch } from "../store/csrf";
+
 export const requestTeas = () => {
   return fetch('api/teas');
 }
@@ -14,12 +16,8 @@ export const asyncAwaitTeas = async () => {
 
 export const postTea = (tea) => {
   // debugger
-  return fetch('api/teas', {
+  return csrfFetch('api/teas', {
     method: 'POST',
-    body: JSON.stringify(tea),
-    headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-    }
+    body: JSON.stringify(tea)
 })
 }

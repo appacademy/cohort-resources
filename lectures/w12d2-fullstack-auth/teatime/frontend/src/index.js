@@ -7,6 +7,7 @@ import {receiveTea, receiveTeas, removeTea } from './store/teaReducer';
 import { Provider } from 'react-redux';
 import { requestTeas, postTea } from './utils/tea_api_utils';
 import { fetchAllTeas} from './store/teaReducer';
+import { restoreSession } from './store/csrf';
 
 const store = configureStore();
 
@@ -20,11 +21,16 @@ window.postTea = postTea;
 window.fetchAllTeas = fetchAllTeas;
 //
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const initializeApp = () => {
+  ReactDOM.render(
+    <React.StrictMode>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
+};
+
+// we get our csrf token and potentially a current user before initializing our app
+restoreSession().then(initializeApp);
