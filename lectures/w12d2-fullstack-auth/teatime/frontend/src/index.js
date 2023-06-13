@@ -8,20 +8,39 @@ import { Provider } from 'react-redux';
 import { requestTeas, postTea } from './utils/tea_api_utils';
 import { fetchAllTeas} from './store/teaReducer';
 import { restoreSession } from './store/csrf';
+import { createUser, loginUser, logoutUser } from './store/usersReducer';
 
-const store = configureStore();
+
 
 // testing
-window.store = store;
+// window.store = store;
 window.receiveTea = receiveTea;
 window.receiveTeas = receiveTeas;
 window.removeTea = removeTea;
 window.requestTeas = requestTeas;
 window.postTea = postTea;
 window.fetchAllTeas = fetchAllTeas;
+window.createUser = createUser;
+window.loginUser = loginUser;
+window.logoutUser = logoutUser;
 //
 
 const initializeApp = () => {
+  let currentUser = JSON.parse(sessionStorage.getItem('currentUser')); // grab current user object from session storage
+  let initialState = {};
+
+  if (currentUser) {
+    initialState = {
+      users: {
+        [currentUser.id]: currentUser
+      }
+    };
+  };
+
+  // initialize store with currentUser if logged in
+  const store = configureStore(initialState);
+  window.store = store;
+
   ReactDOM.render(
     <React.StrictMode>
       <Provider store={store}>

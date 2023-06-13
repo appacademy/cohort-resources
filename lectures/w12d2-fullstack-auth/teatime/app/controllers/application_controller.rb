@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::API
+  include ActionController::RequestForgeryProtection
 
   protect_from_forgery with: :exception # csrf
   before_action :snake_case_params, :attach_authenticity_token
