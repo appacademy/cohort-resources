@@ -1,0 +1,60 @@
+#spanish{
+    color: green;
+}
+
+.greeting{
+    background-color: aqua;
+    color: red ;
+    font-size: 34px;
+    font-weight: bolder;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+}
+
+nav > div{
+    color: blue;
+}
+
+button{
+    background-color: purple;
+    color: white;
+    height: 100px;
+    width: 200px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+button:hover{
+    background-color: green;
+}
+button:active{
+    background-color: blue;
+}
+
+.input{
+    border: 2px solid purple;
+}
+
+.input:focus{
+    border: 2px solid green;
+}
+
+
+input[type="text"]{
+    border: 2px solid yellow;
+}
+
+div.french{
+    color: coral;
+    font-size: 40px;
+    height: 200px;
+    width: 300px;
+    border: 5px solid black;
+    padding: 250px;
+    margin: 300px;
+    box-sizing: border-box;
+}
+
+*{
+    color: red;
+}
