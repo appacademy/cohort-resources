@@ -16,26 +16,26 @@ end
 def example_query
 
   # Final way adding the heredoc straight into the execute method with funny parentheses
-  # execute(<<-SQL)
-  #   SELECT
-  #     *
-  #   FROM
-  #     sf_instructors;
-  # SQL
+  execute(<<-SQL)
+    SELECT
+      *
+    FROM
+      sf_instructors;
+  SQL
 
   # Second, heredoc way of writing this method:
   # query = <<-SQL
   #   SELECT
   #     *
   #   FROM
-  #     app_academy;
-  #   SQL
-  #
+  #     sf_instructors;
+  # SQL
+  
   # execute(query)
 
 
   # First way:
-  execute("SELECT * FROM app_academy;")
+  # execute("SELECT * FROM sf_instructors;")
 end
 
 p example_query
