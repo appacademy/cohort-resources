@@ -1,20 +1,20 @@
 # Test 1 Public Method
 
-class Test 
-  def test_method(other_instance) 
-      public_method                   # a 
-      self.public_method              # b 
-      other_instance.public_method    # c 
-  end 
-  def public_method 
-      puts "This is a public method" 
-  end 
-end 
-a = Test.new 
-b = Test.new 
-a.test_method(b) 
-a.public_method                         # d 
-# no error                              # e 
+# class Test 
+#   def test_method(other_instance) 
+#       public_method                   # a 
+#       self.public_method              # b 
+#       other_instance.public_method    # c 
+#   end 
+#   def public_method 
+#       puts "This is a public method" 
+#   end 
+# end 
+# a = Test.new 
+# b = Test.new 
+# a.test_method(b) 
+# a.public_method                         # d 
+# # no error                              # e 
 
 # Test 2 Private Method
 
@@ -39,22 +39,22 @@ a.public_method                         # d
 
 # Test 3 Protected Method
 
-# class Test 
-#   def test_method(other_instance) 
-#       protected_method                  # a 
-#       self.protected_method             # b 
-#       other_instance.protected_method   # c 
-#   end 
-#   protected 
-#   def protected_method 
-#       puts "This is a protected method" 
-#   end 
-# end 
-# a = Test.new 
-# b = Test.new 
-# a.test_method(b) 
-# a.protected_method                        # d 
-# # no error                              # e 
+class Test 
+  def test_method(other_instance) 
+      protected_method                  # a 
+      self.protected_method             # b 
+      other_instance.protected_method   # c 
+  end 
+  protected 
+  def protected_method 
+      puts "This is a protected method" 
+  end 
+end 
+a = Test.new 
+b = Test.new 
+a.test_method(b) 
+a.protected_method                        # d 
+# no error                              # e 
 
 
 
