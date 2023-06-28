@@ -101,6 +101,9 @@ The **path** and **query string** are part of the URL
     - the actual data/content the server responded with
 
 ---
+## HTTP Response Demo
+
+---
 
 ## Lecture Agenda
 + MVC Overview
@@ -164,6 +167,9 @@ A RESTful API defines a predictable way for us to access and manipulate resource
   ```
 
 * Rails Guide on Routing: https://edgeguides.rubyonrails.org/routing.html
+
+---
+## Routes Demo
 
 ---
 
@@ -238,6 +244,10 @@ Note:
 Note:
 
 + Write the controllers by hand (avoid using generators)
+
+---
+
+## Controller Demo
 
 ---
 
