@@ -10,10 +10,10 @@ header {
     padding: 0px 10px 5px 10px;
     font-size: 30px;
     color: teal;
-    height: 5vh;
-    width: 98vw;
     position: sticky;
     top: 0px;
+    height: 5vh;
+    width: 98vw;
 }
 
 main {
@@ -34,5 +34,23 @@ footer {
 .menu-items {
     width: 300px;
     background-color: beige;
-    display: none
+    display: none;
+    position: absolute;
+    right: 0px;
+}
+
+.menu {
+    position: relative;
+}
+
+.menu:hover .menu-items {
+    display: block;
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-end; */
+}
+
+li:hover{
+    background-color: gray;
+    cursor: pointer;
 }
