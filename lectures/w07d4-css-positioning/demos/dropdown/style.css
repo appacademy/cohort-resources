@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+header {
+    background-color: beige;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px 5px 10px;
+    font-size: 30px;
+    color: teal;
+    height: 5vh;
+    width: 98vw;
+    position: sticky;
+    top: 0px;
+}
+
+main {
+    background-color: pink;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+img{
+    padding: 10px;
+}
+
+footer {
+    background-color: maroon;
+    height: 50px;
+}
+
+.menu-items {
+    width: 300px;
+    background-color: beige;
+    display: none
+}
