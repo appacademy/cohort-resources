@@ -10,12 +10,15 @@ class Clock {
 
     // 3. Call printTime.
     this.printTime();
+
+    this._tick = this._tick.bind(this);
   
     // 4. Schedule the tick at 1 second intervals.
     // callbacks are always invoked function style - they take on the context of their environment when invoked
-    this.interval = setInterval(this._tick, 1000); //doesn't work because context ('this') becomes global inside _tick later b/c called function-style
+    
+    //this.interval = setInterval(this._tick, 1000); //doesn't work because context ('this') becomes global inside _tick later b/c called function-style
     //setInterval(this._tick.bind(this), 1000); //binding this to _tick will force the context to be kept even when called function-style
-    //setInterval(() => this._tick(), 1000); //wrapping this._tick in an arrow function will also bind the context.  We do need to invoke this._tick b/c when the callback is invoked only the wrapping function will be invoked.
+    setInterval(() => this._tick(), 1000); //wrapping this._tick in an arrow function will also bind the context.  We do need to invoke this._tick b/c when the callback is invoked only the wrapping function will be invoked.
   }
 
   hello() {
