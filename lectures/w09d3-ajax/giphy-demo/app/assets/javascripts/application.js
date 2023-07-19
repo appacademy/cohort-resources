@@ -5,8 +5,12 @@ const url = 'https://api.giphy.com/v1/gifs/random?api_key=3yvEbPRnIhHJhjKS9vBRQj
 
 //Document queries
 const gifDisplay = document.querySelector('.gif-display');
-const newGifForm = document.querySelector('#new-gif-form')
-
+const newGifForm = document.querySelector('#new-gif-form');
+const saveGifTitle = document.getElementById('save-gif-title');
+const saveGifForm = document.getElementById('save-gif-form');
+const oldGifForm =document.getElementById('old-gif-form');
+const oldGifQuery = document.getElementById('old-gif-query');
+const clearButton = document.querySelector('.clear');
 
 const fetchNewGif = async e => {
     e.preventDefault();
@@ -25,10 +29,7 @@ const fetchNewGif = async e => {
     }catch (err){
         console.error(err);
     }
-
 }
-
-
 
 
 // const fetchNewGif = ()=> {
@@ -51,6 +52,60 @@ const fetchNewGif = async e => {
 // }
 
 
+//saveGif
+
+const saveGif = async gif => {
+    //expect gif = {title: 'whatever', url: 'url.com'}
+    const res = await fetch('/api/gifs', {
+        method: 'POST',
+        body: JSON.stringify({gif}), //{gif: gif}
+        headers:{'Content-Type': 'application/json', 'Accept': 'application/json'}
+    });
+    if(res.ok){
+        saveGifTitle.value = '';
+        setTimeout(()=>alert('Saved successfully'), 50);
+    } else {
+        alert('Title of gif already taken')
+    }
+}
+
+const handleSaveGif = e =>{
+    e.preventDefault();
+    saveGif({title: saveGifTitle.value, url: currentGif})
+}
+
+const fetchSavedGif = async e => {
+    e.preventDefault();
+    const title = oldGifQuery.value;
+    const res = await fetch(`/api/gifs/${title}`, {
+        method: 'GET',
+        headers: {'Accept': 'application/json'}
+    });
+    if(res.ok){
+        oldGifQuery.value = '';
+        const data = await res.json();
+        let newGif = document.createElement('img');
+        newGif.src = data.url;
+        currentGif = data.url;
+        gifDisplay.childNodes.forEach(child => child.remove());
+        gifDisplay.append(newGif);
+    } else {
+        alert('Not found')
+    }
+
+}
+
+const handleClear = e => {
+    e.preventDefault();
+    gifDisplay.childNodes.forEach(child => child.remove())
+}
+
+
+
+
 //Event listeners
 
-newGifForm.addEventListener('submit', fetchNewGif)
+newGifForm.addEventListener('submit', fetchNewGif);
+saveGifForm.addEventListener('submit', handleSaveGif);
+oldGifForm.addEventListener('submit', fetchSavedGif);
+clearButton.addEventListener('click', handleClear)
