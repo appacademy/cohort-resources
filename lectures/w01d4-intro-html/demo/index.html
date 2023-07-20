@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/main.css" type="text/css">
+    <script type="text/javascript" src="./assets/printName.js"></script>
+    <title>HTML demo! :D</title>
+  </head>
+  <body>
+    <section id="users">
+      <form id="user-form" action="http://example.com/signup" method="post">
+        <label for="username">Username</label>
+        <input type="text" name="username">
+        <br />
+      
+        <label>Password
+          <input type="password" name="password">
+        </label>
+        <br />
+      
+        <label for="role">Role</label>
+        <select id="role" name="role">
+          <option value="admin">Admin</option>
+          <option value="user">User</option>
+          <option value="guest">Guest</option>
+        </select>
+        <br />
+      
+        <label for="preferred-pronouns">Preferred Pronouns:</label>
+
+        <label for="pronoun-choice-1">He/Him/His</label>
+        <input 
+        type="radio" 
+        id="pronoun-choice-1" 
+        name="preferred-pronouns" 
+        value="he/him/his">
+
+        <label>She/Her/Hers
+          <input type="radio" name="preferred-pronouns" value="she/her/hers">
+        </label>
+
+        <label for="pronoun-choice-3">They/Them/Theirs</label>
+        <input type="radio" id="pronoun-choice-3" name="preferred-pronouns" value="they/them/theirs">
+        <br />
+
+        <input type="submit" value="Sign Up!">
+      </form>
+    </section>
+    
+  </body>
+</html>
