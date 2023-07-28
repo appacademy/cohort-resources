@@ -5,9 +5,17 @@
 }
 
 .job-index{
-    border: 1px solid red
+    /* border: 1px solid red */
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
 }
 
 .job-item{
     border: 1px solid green;
+}
+
+.banana{
+    font-weight: bold;
+    color: aqua;
 }

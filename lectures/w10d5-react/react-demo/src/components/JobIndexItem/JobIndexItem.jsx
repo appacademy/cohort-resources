@@ -1,7 +1,9 @@
+import {Link, NavLink} from 'react-router-dom';
 const JobIndexItem = props =>{
+
     const {job} = props;
     return (
-        <li className="job-item">{job.title}</li>
+        <NavLink to={`/jobs/${job.id}`} activeClassName={"banana"}><li className="job-item" >{job.title}</li></NavLink>
     )
 }
 
