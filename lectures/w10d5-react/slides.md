@@ -130,7 +130,7 @@ npx create-react-app my-app --template @appacademy/react-v17 --use-npm
 
 ---
 
-## Demo!
+## Demo - Initializing a React App!
 
 Note:
   1. Create new app using default configuration
@@ -249,7 +249,7 @@ Understanding this is key to utilizing React effectively.
 
 ---
 
-## Demo!
+## Demo - Using Props and Nesting Components!
 
 Note:
 
@@ -420,7 +420,7 @@ import { Route } from 'react-router-dom';
 
 ---
 
-## Demo!
+## Demo - Using Frontend Routes!
 
 Note: 
 + In order to easily show some routing behavior, we need to create a show component to route to based on the url
