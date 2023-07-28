@@ -1,0 +1,115 @@
+/* ALL OF THEM, comma separated */
+
+/* p, h2 { 
+  color: red
+} */
+
+
+/* adjacent sibiling: select the p tag that comes right after a h3 */
+/* h3 + p {
+  color: red;
+} */
+
+
+/* general sibiling: select all p tags that come after an h3 */
+/* h3 ~ p { 
+  background-color: green;
+} */
+
+/* common descendant selector: select all p tags that are children of .class_name */
+/* .descendant-selector p {
+  background-color: blue;
+} */
+
+/* direct child selector: select p tags that are direct children of .class_name */
+/* .child-selector > p {
+  background-color: red;
+} */
+
+/* first child selector: select the first p tag */
+/* p:first-child{
+  color: red;
+} */
+
+
+/* last child selector: select the last p tag */
+/* p:last-child{
+  color: red;
+} */
+
+/* nth child selector: select the nth p tag */
+/* p:nth-child(3){
+  color: red;
+} */
+
+
+button {
+  height: 80px;
+  width: 80px;
+  border: none;
+  background-color: rgb(0, 255, 60);
+  color: white;
+  border-radius: 50%;
+}
+
+button:hover{
+  background-color: rgb(110, 110, 194);
+  cursor: pointer;
+}
+
+
+input[type="text"]{
+  color: blue;
+} 
+
+/* .highlight {
+  background: yellow;
+} */
+
+
+
+/* show p.highlight vs p .highlight */
+
+/* select the p tag with the class highlight*/
+/* p.highlight{
+  background-color: red;
+} */
+
+
+/* select the children of p tags that have the class highlight */
+/* p .highlight {
+  background-color: orange;
+} */
+
+
+/* :: is for PSEUDO ELEMENT */
+/* p::first-letter{
+  color: red;
+  font-size: 60px;
+} */
+
+
+/* UNIVERSAL SELECTOR: */
+/* * {
+  background-color: yellow;
+} */
+
+
+
+div#blue {
+  background-color: blue;
+}
+
+
+/* make it red! (add .red) */
+
+/* 
+#blue.red {
+  background-color: red;
+} */
+
+/* .red {
+  background-color: red;
+} */
+
+
