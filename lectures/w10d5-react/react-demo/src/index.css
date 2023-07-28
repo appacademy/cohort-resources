@@ -1,0 +1,13 @@
+/* TODO Add site wide styles */
+
+.app{
+    border: 1px solid blue;
+}
+
+.job-index{
+    border: 1px solid red
+}
+
+.job-item{
+    border: 1px solid green;
+}
