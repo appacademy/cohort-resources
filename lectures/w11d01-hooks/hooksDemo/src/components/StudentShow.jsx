@@ -19,6 +19,7 @@ const StudentShow = props => {
       }
     }
     fn();
+    
     const intId = setInterval(() => console.log('cedric is the best'), 1000)
 
     // cleanup function is invoked when component is about to unmount

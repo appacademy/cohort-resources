@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom/cjs/react-router-dom";
+import Form from "./Form";
 
 const StudentIndex = props => {
   const [students, setStudents] = useState([]);
@@ -26,6 +27,7 @@ const StudentIndex = props => {
           <p>{stu.name}</p>
         </Link>
       })}
+    <Form />
     </>
   )
 }
