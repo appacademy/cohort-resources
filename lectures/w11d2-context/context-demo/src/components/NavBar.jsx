@@ -1,18 +1,21 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { SessionContext, useSessionContext } from "../context/sessionContext";
 
 const NavBar = (props) => {
-  const [loggedIn, setLogin] = useState(false);
+  // const [loggedIn, setLogin] = useState(false);
+  // const {loggedIn, setLogin} = props;
+  const {loggedIn, setLogin} = useSessionContext(); //custom hook return the provider's value
   const [currentUser, setCurrentUser] = useState({});
 
   console.log(loggedIn)
 
   const handleClick = e => {
     e.preventDefault();
-    if (loggedIn) {
+    if (loggedIn) { //logging out scenario
       setCurrentUser({});
       setLogin(false);
-    } else {
+    } else { //logging in scenario
       setCurrentUser({ name: 'Mike' });
       setLogin(true);
     }
@@ -36,6 +39,9 @@ const NavBar = (props) => {
         <div>
           <p>The Front Page of the Swamp</p>
         </div>
+        {/* <SessionContext.Consumer> */}
+          {/* {(value) => <h2>I like the fruit {value.fruit}</h2>} */}
+        {/* </SessionContext.Consumer> */}
         <div className="session-buttons">
           {button}
         </div>
