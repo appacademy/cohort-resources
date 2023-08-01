@@ -97,6 +97,9 @@
    - Adequate seed data
 * Total of 7 Features
 
+---
+
+
 ## Project Completion and Expectations
 ### What did we mean by "finish as many Features as possible?"
 - Your progress on this project will directly translate into your readiness and success in the Job Search
