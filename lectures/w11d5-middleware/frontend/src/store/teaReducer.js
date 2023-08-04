@@ -21,11 +21,12 @@ export const removeTea = teaId => ({
 })
 
 // SELECTORS
-export const selectAllTeas = state => state.teas
+export const selectAllTeas = state => state.entities.teas
 
 // REDUCER
 const teaReducer = (state = {}, action) => {
   const nextState = { ...state }
+  // const nextState = Object.assign({}, state)
 
   switch (action.type) {
     case RECEIVE_TEA:

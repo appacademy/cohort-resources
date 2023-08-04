@@ -1,27 +1,20 @@
-import { useDispatch, useSelector } from "react-redux"
+import { useSelector } from "react-redux"
 import './TeaIndex.css'
-import { removeTea, selectAllTeas } from "../../store/teaReducer"
+import { selectAllTeas } from "../../store/teaReducer"
+import TeaDetail from "../TeaDetail/TeaDetail"
 
 const TeaIndex = props => {
+  // reduxn uses === to check for equality of 'teas' variable whenever state updates
   const teas = useSelector(selectAllTeas)
-  const dispatch = useDispatch()
   
-  const teasArray = Object.values(teas)
+  // const teasArray = Object.values(teas)
 
   return (
     <>
       <h2>Tea Index</h2>
-      {teasArray.map(tea => (
+      {Object.values(teas).map(tea => (
         <ul key={tea.id} className="tea-list">
-          <li>
-            <h3>Flavor: {tea.flavor}</h3>
-          </li>
-          <li>
-            <p>Price: ${tea.price}</p>
-          </li>
-          <li>
-            <button onClick={e => dispatch(removeTea(tea.id))}>Delete Tea</button>
-          </li>
+          <TeaDetail tea={tea} />
         </ul>
       ))}
     </>

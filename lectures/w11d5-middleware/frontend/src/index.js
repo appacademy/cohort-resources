@@ -7,18 +7,28 @@ import configureStore from './store/store';
 import { receiveTea, receiveTeas, removeTea } from './store/teaReducer';
 
 const store = configureStore({
-  teas: {
-    1: {
-      id: 1,
-      flavor: 'green',
-      amount: '2',
-      price: '14'
-    }
-  },
-  users: {
-    1: {
-      id: 1,
-      username: 'bob'
+  entities: {
+    teas: {
+      1: {
+        id: 1,
+        flavor: 'green',
+        amount: 98,
+        price: '14'
+      }
+    },
+    users: {
+      1: {
+        id: 1,
+        username: 'bob'
+      }
+    },
+    transactions: {
+      1: {
+        id: 1,
+        teaId: 1,
+        userId: 1,
+        quantity: 7
+      }
     }
   },
   session: {
@@ -37,7 +47,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <App prop1={'hello'} prop2={'world'} />
     </Provider>
   </React.StrictMode>
 );

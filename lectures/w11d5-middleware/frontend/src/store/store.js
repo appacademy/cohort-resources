@@ -1,12 +1,12 @@
 import { legacy_createStore, combineReducers } from 'redux';
-import teaReducer from './teaReducer';
+import entitiesReducer from './entitiesReducer';
 
-const dummyReducer = (state = {}, action) => state;
+const dummyReducer = (state = {}, action) => state
 
 const rootReducer = combineReducers({
-  teas: teaReducer,
-  users: dummyReducer,
-  session: dummyReducer
+  entities: entitiesReducer,
+  session: dummyReducer,
+  ui: dummyReducer
 })
 
 const configureStore = (preloadedState = {}) => (

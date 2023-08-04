@@ -10,6 +10,7 @@ const TeaForm = props => {
   const [flavor, setFlavor] = useState('')
   const [price, setPrice] = useState('')
   const [amount, setAmount] = useState('')
+  const [description, setDescription] = useState('')
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -17,12 +18,14 @@ const TeaForm = props => {
       id: Math.floor(Math.random()*1000),
       flavor,
       price,
-      amount
+      amount,
+      description
     }
     dispatch(receiveTea(tea))
     setFlavor('')
     setPrice('')
     setAmount('')
+    setDescription('')
   }
 
   return (
@@ -54,6 +57,14 @@ const TeaForm = props => {
             type="text"
             value={amount}
             onChange={e => setAmount(e.target.value)}
+          />
+        </div>
+        <div>
+          <label htmlFor="description">Description:</label>
+          <textarea
+            id="description"
+            value={description}
+            onChange={e => setDescription(e.target.value)}
           />
         </div>
         <input type="submit" value={'Create Tea'} disabled={currentUser ? false : true}/>

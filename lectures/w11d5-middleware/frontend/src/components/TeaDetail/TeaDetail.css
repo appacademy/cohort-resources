@@ -1,0 +1,13 @@
+.tea-detail {
+  border: 1px solid black;
+  border-radius: 0.4em;
+}
+
+.tea-transactions {
+  list-style: none;
+}
+
+.transactions {
+  border: 1px solid black;
+  border-radius: 0.4em;
+}
