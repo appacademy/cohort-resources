@@ -199,6 +199,14 @@ Which nodes are internal?
 
 ## Conceptual walk-through of BFS and DFS
 
+---
+
+whiteboards from demo
+![bfs](https://aa-ch-lecture-assets.s3.us-west-1.amazonaws.com/data-structures/bfs-walkthrough.png)
+
+---
+
+![dfs](https://aa-ch-lecture-assets.s3.us-west-1.amazonaws.com/data-structures/dfs-walkthrough.png)
 
 ---
 
