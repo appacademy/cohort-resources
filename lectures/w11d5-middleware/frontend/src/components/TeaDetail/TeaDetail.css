@@ -1,4 +1,5 @@
 .tea-detail {
+  padding: 5px;
   border: 1px solid black;
   border-radius: 0.4em;
 }
@@ -8,6 +9,14 @@
 }
 
 .transactions {
+  padding: 5px;
   border: 1px solid black;
   border-radius: 0.4em;
+  margin: 5px;
+}
+
+.transaction-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }

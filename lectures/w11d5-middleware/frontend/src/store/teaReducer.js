@@ -1,3 +1,5 @@
+import * as teaApiUtils from '../utils/teaApiUtils'
+
 // CONSTANTS
 const RECEIVE_TEA = 'RECEIVE_TEA'
 const RECEIVE_TEAS = 'RECEIVE_TEAS';
@@ -19,6 +21,20 @@ export const removeTea = teaId => ({
   type: REMOVE_TEA,
   payload: teaId
 })
+
+// THUNK ACTION CREATORS
+export const fetchTeas = () => async (dispatch, getState) => {
+  const teas = await teaApiUtils.fetchAllTeas()
+  return dispatch(receiveTeas(teas))
+}
+
+export const fetchTea = teaId => (dispatch, getState) => (
+  teaApiUtils.fetchTea(teaId)
+    .then(tea => (
+      dispatch(receiveTea(tea))
+    )
+  )
+)
 
 // SELECTORS
 export const selectAllTeas = state => state.entities.teas

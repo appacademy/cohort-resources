@@ -24,9 +24,9 @@ const TeaDetail = ({ tea }) => {
             <p>Transactions:</p>
             <ul className='tea-transactions'>
               {teaTransactions.map(t => (
-                <li key={t.id}>
-                  <span>User ID: {t.userId}</span>
-                  <span>Quantity: {t.quantity}</span>
+                <li key={t.id} className='transaction-item'>
+                  <div>User ID: {t.userId}</div>
+                  <div>Quantity: {t.quantity}</div>
                 </li>
               ))}
             </ul>

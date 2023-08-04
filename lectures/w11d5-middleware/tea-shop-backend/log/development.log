@@ -664,3 +664,704 @@ Processing by Api::TeasController#show as JSON
 Completed 200 OK in 36ms (Views: 3.7ms | ActiveRecord: 1.8ms | Allocations: 3203)
 
 
+Started GET "/api/teas/" for ::1 at 2023-08-04 11:23:03 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.7ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.5ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 1.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 62.4ms | Allocations: 4160)
+Completed 200 OK in 72ms (Views: 67.3ms | ActiveRecord: 21.8ms | Allocations: 4345)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 11:30:30 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (1.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 64.3ms | Allocations: 3991)
+Completed 200 OK in 66ms (Views: 65.1ms | ActiveRecord: 31.3ms | Allocations: 4174)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 11:30:43 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 7.4ms | Allocations: 1126)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.5ms | Allocations: 1304)
+
+
+Started GET "/api/teas/3" for 127.0.0.1 at 2023-08-04 11:35:36 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mTea Load (2.0ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:20:in `show'
+  [1m[36mTransaction Load (1.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 3]]
+  ↳ app/controllers/api/teas_controller.rb:20:in `show'
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3, $4)[0m  [["id", 6], ["id", 2], ["id", 7], ["id", 8]]
+  ↳ app/controllers/api/teas_controller.rb:20:in `show'
+  Rendering api/teas/show.json.jbuilder
+  Rendered api/teas/show.json.jbuilder (Duration: 7.0ms | Allocations: 593)
+Completed 200 OK in 58ms (Views: 8.0ms | ActiveRecord: 7.1ms | Allocations: 3190)
+
+
+Started GET "/api/teas/3" for ::1 at 2023-08-04 11:35:52 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mTea Load (0.6ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:20:in `show'
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 3]]
+  ↳ app/controllers/api/teas_controller.rb:20:in `show'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3, $4)[0m  [["id", 6], ["id", 2], ["id", 7], ["id", 8]]
+  ↳ app/controllers/api/teas_controller.rb:20:in `show'
+  Rendering api/teas/show.json.jbuilder
+  Rendered api/teas/show.json.jbuilder (Duration: 1.8ms | Allocations: 593)
+Completed 200 OK in 16ms (Views: 2.9ms | ActiveRecord: 1.3ms | Allocations: 3160)
+
+
+Started POST "/api/teas" for 127.0.0.1 at 2023-08-04 11:46:50 -0700
+Processing by Api::TeasController#create as JSON
+  Parameters: {"flavor"=>"iced", "price"=>23, "amount"=>32, "description"=>"you know you want to", "tea"=>{"flavor"=>"iced", "price"=>23, "description"=>"you know you want to", "amount"=>32}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teas_controller.rb:11:in `create'
+  [1m[36mTea Exists? (4.0ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "iced"], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:11:in `create'
+  [1m[36mTea Create (3.2ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flavor", "iced"], ["price", 23.0], ["description", "you know you want to"], ["amount", 32], ["created_at", "2023-08-04 18:46:50.980506"], ["updated_at", "2023-08-04 18:46:50.980506"]]
+  ↳ app/controllers/api/teas_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/teas_controller.rb:11:in `create'
+  Rendering api/teas/tea_abrev.json.jbuilder
+  Rendered api/teas/_tea.json.jbuilder (Duration: 1.2ms | Allocations: 114)
+  Rendered api/teas/tea_abrev.json.jbuilder (Duration: 3.4ms | Allocations: 431)
+Completed 200 OK in 75ms (Views: 9.7ms | ActiveRecord: 20.7ms | Allocations: 8184)
+
+
+Started POST "/api/teas" for 127.0.0.1 at 2023-08-04 11:48:10 -0700
+Processing by Api::TeasController#create as JSON
+  Parameters: {"flavor"=>"purple", "price"=>23, "amount"=>32, "description"=>"you know you want to", "tea"=>{"flavor"=>"purple", "price"=>23, "description"=>"you know you want to", "amount"=>32}}
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teas_controller.rb:11:in `create'
+  [1m[36mTea Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "purple"], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:11:in `create'
+  [1m[36mTea Create (2.1ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flavor", "purple"], ["price", 23.0], ["description", "you know you want to"], ["amount", 32], ["created_at", "2023-08-04 18:48:10.801308"], ["updated_at", "2023-08-04 18:48:10.801308"]]
+  ↳ app/controllers/api/teas_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/teas_controller.rb:11:in `create'
+  Rendering api/teas/tea_abrev.json.jbuilder
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 45)
+  Rendered api/teas/tea_abrev.json.jbuilder (Duration: 0.4ms | Allocations: 156)
+Completed 200 OK in 36ms (Views: 1.3ms | ActiveRecord: 6.0ms | Allocations: 3214)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:13:39 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (1.0ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 50.7ms | Allocations: 4491)
+Completed 200 OK in 55ms (Views: 52.7ms | ActiveRecord: 16.0ms | Allocations: 4722)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:15:12 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.6ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 1.4ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 7.8ms | Allocations: 1392)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.6ms | Allocations: 1571)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:16:54 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.6ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 9.1ms | Allocations: 1392)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.6ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:16:59 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 4.1ms | Allocations: 1392)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.3ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:16:59 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 3.7ms | Allocations: 1392)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.3ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:17:00 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.9ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.3ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 8.0ms | Allocations: 1392)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.9ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:17:00 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 3.8ms | Allocations: 1392)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.2ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:17:01 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (1.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 8.4ms | Allocations: 1392)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 1.5ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:17:01 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 3.0ms | Allocations: 1392)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:17:03 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (1.0ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 1.2ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 9.4ms | Allocations: 1392)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 1.0ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:17:03 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 5.7ms | Allocations: 1392)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.4ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:17:31 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 4.9ms | Allocations: 1393)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.5ms | Allocations: 1571)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:17:31 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (2.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.4ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.3ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.3ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.4ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 6.5ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 21.6ms | Allocations: 1392)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 2.3ms | Allocations: 1571)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:17:34 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.3ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.4ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 7.7ms | Allocations: 1392)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.4ms | Allocations: 1571)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:17:34 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 4.3ms | Allocations: 1392)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.2ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:17:42 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.3ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 5.9ms | Allocations: 1392)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.4ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:17:42 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.8ms | Allocations: 1392)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:18:05 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 7.1ms | Allocations: 1392)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.4ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:18:05 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.3ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 3.6ms | Allocations: 1392)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:18:20 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.6ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.3ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 9.0ms | Allocations: 1392)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.6ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:18:20 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 4.6ms | Allocations: 1392)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.3ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:18:23 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (1.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.4ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 13.5ms | Allocations: 1392)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 1.1ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:18:23 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.7ms | Allocations: 1392)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:18:24 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (1.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.6ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 32.9ms | Allocations: 1392)
+Completed 200 OK in 35ms (Views: 32.9ms | ActiveRecord: 1.3ms | Allocations: 1571)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:18:24 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.2ms | Allocations: 1392)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 1571)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:18:25 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (5.8ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.3ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 13.6ms | Allocations: 1392)
+Completed 200 OK in 14ms (Views: 8.4ms | ActiveRecord: 5.8ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:18:25 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 14.1ms | Allocations: 1392)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.5ms | Allocations: 1571)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:18:29 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 5.4ms | Allocations: 1392)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.5ms | Allocations: 1572)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:18:29 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (1.0ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 5.2ms | Allocations: 1392)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 1.0ms | Allocations: 1571)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:19:09 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 4.9ms | Allocations: 1392)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.4ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:19:09 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 5.0ms | Allocations: 1392)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.4ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:22:18 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.3ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 6.1ms | Allocations: 1392)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.5ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:22:18 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 2.5ms | Allocations: 1392)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:22:19 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.6ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.4ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 6.4ms | Allocations: 1392)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.6ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:22:19 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 6.9ms | Allocations: 1392)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.2ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:23:27 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 6.2ms | Allocations: 1392)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.4ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:23:28 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 9.6ms | Allocations: 1392)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.3ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:25:05 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 6.6ms | Allocations: 1392)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.5ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:25:06 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.8ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 1.4ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.1ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 8.8ms | Allocations: 1392)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.8ms | Allocations: 1570)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-08-04 12:25:33 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.8ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.2ms | Allocations: 46)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/_tea.json.jbuilder (Duration: 0.0ms | Allocations: 12)
+  Rendered api/teas/index.json.jbuilder (Duration: 6.6ms | Allocations: 1392)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.8ms | Allocations: 1570)
+
+
