@@ -5,19 +5,15 @@ import TeaDetail from "../TeaDetail/TeaDetail"
 import { useEffect } from "react"
 
 const TeaIndex = props => {
-  // reduxn uses === to check for equality of 'teas' variable whenever state updates
-  const dispatch = useDispatch()
   const teas = useSelector(selectAllTeas)
+  const dispatch = useDispatch()
   
-  // const teasArray = Object.values(teas)
-
   useEffect(() => {
     dispatch(fetchTeas())
-  },[])
+  },[dispatch])
 
   return (
     <>
-      <h2>Tea Index</h2>
       {Object.values(teas).map(tea => (
         <ul key={tea.id} className="tea-list">
           <TeaDetail tea={tea} />

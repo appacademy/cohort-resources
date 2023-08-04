@@ -1,6 +1,6 @@
 import './TeaDetail.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { removeTea } from '../../store/teaReducer'
+import { fetchTea, removeTea } from '../../store/teaReducer'
 import { useState } from 'react'
 import { selectTransactionsByTeaId } from '../../store/transactionReducer'
 
@@ -10,12 +10,17 @@ const TeaDetail = ({ tea }) => {
   const [showMore, setShowMore] = useState(false)
 
   const handleClick = e => {
-    setShowMore(prev => !prev)
+    if(!showMore) {
+      dispatch(fetchTea(tea.id))
+        .then(() => setShowMore(prev => !prev))
+    } else {
+      setShowMore(prev => !prev)
+    }
   }
   return (
-    <li className='tea-detail' onClick={handleClick}>
+    <li className={`tea-detail ${showMore ? 'show' : 'hide'}`} onClick={handleClick}>
       <h3>Flavor: {tea.flavor}</h3>
-      <p>Price: {tea.price}</p>
+      <p>Price: ${tea.price}</p>
       <p>Amount: {tea.amount}</p>
       {showMore && (
         <>
@@ -25,7 +30,7 @@ const TeaDetail = ({ tea }) => {
             <ul className='tea-transactions'>
               {teaTransactions.map(t => (
                 <li key={t.id} className='transaction-item'>
-                  <div>User ID: {t.userId}</div>
+                  <div>Customer: {t.customer}</div>
                   <div>Quantity: {t.quantity}</div>
                 </li>
               ))}
@@ -39,13 +44,3 @@ const TeaDetail = ({ tea }) => {
 }
 
 export default TeaDetail
-
-  // < li >
-  // <h3>Flavor: {tea.flavor}</h3>
-  //         </li >
-  //         <li>
-  //           <p>Price: ${tea.price}</p>
-  //         </li>
-  //         <li>
-  //           <button onClick={e => dispatch(removeTea(tea.id))}>Delete Tea</button>
-  //         </li>

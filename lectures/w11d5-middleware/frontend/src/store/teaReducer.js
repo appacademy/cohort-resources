@@ -1,7 +1,7 @@
 import * as teaApiUtils from '../utils/teaApiUtils'
 
 // CONSTANTS
-const RECEIVE_TEA = 'RECEIVE_TEA'
+export const RECEIVE_TEA = 'RECEIVE_TEA'
 const RECEIVE_TEAS = 'RECEIVE_TEAS';
 const REMOVE_TEA = 'REMOVE_TEA'
 
@@ -30,11 +30,16 @@ export const fetchTeas = () => async (dispatch, getState) => {
 
 export const fetchTea = teaId => (dispatch, getState) => (
   teaApiUtils.fetchTea(teaId)
-    .then(tea => (
-      dispatch(receiveTea(tea))
+    .then(data => (
+      dispatch(receiveTea(data))
     )
   )
 )
+
+export const createTea = tea => async dispatch => {
+  const teaData = await teaApiUtils.createTea(tea)
+  return dispatch(receiveTea({ teaData }))
+}
 
 // SELECTORS
 export const selectAllTeas = state => state.entities.teas
@@ -46,7 +51,7 @@ const teaReducer = (state = {}, action) => {
 
   switch (action.type) {
     case RECEIVE_TEA:
-      nextState[action.payload.id] = action.payload
+      nextState[action.payload.tea.id] = action.payload.tea
       return nextState
     case RECEIVE_TEAS:
       // if action.payload is an array of tea objects

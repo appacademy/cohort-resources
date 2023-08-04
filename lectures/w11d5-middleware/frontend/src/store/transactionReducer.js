@@ -1,3 +1,5 @@
+import { RECEIVE_TEA } from "./teaReducer"
+
 // CONSTANTS
 const RECEIVE_TRANSACTION = 'RECEIVE_TRANSACTION'
 const RECEIVE_TRANSACTIONS = 'RECEIVE_TRANSACTIONS'
@@ -31,6 +33,12 @@ const transactionReducer = (state = {}, action) => {
   const nextState = Object.assign({}, state)
 
   switch(action.type) {
+    case RECEIVE_TEA:
+      if(action.payload.transactions) {
+        return action.payload.transactions
+      } else {
+        return {}
+      }
     default:
       return state
   }

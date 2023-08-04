@@ -1,1 +1,1 @@
-json.extract! tea, :id, :flavor, :price
+json.extract! tea, :id, :flavor, :price, :amount

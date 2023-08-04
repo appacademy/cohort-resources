@@ -1,5 +1,5 @@
 json.tea do
-    json.extract! @tea, :id, :price, :flavor, :description
+    json.extract! @tea, :id, :price, :flavor, :amount, :description
 end
 
 json.transactions do

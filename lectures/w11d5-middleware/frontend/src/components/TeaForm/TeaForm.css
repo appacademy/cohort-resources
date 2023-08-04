@@ -1,5 +1,17 @@
+.tea-form-wrapper {
+  padding: 0px 40px;
+}
+
 .tea-form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.tea-form input {
+  width: 174px;
+}
+
+.tea-form input[type=submit] {
+  width: 85px;
 }

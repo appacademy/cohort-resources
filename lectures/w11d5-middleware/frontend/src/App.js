@@ -5,7 +5,9 @@ import TeaIndex from './components/TeaIndex/TeaIndex';
 function App({ props1, props2 }) {
   return (
     <>
-      <h1>Magic Tea Shop</h1>
+      <div className='header'>
+        <h1>Magic Tea Shop</h1>
+      </div>
       <TeaIndex />
       <TeaForm />
     </>
