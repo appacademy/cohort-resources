@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
 import './TeaIndex.css'
-import { fetchTeas, selectAllTeas } from "../../store/teaReducer"
+import { fetchTeas, selectAllTeas } from "../../store/teasReducer"
 import TeaDetail from "../TeaDetail/TeaDetail"
 import { useEffect } from "react"
 

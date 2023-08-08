@@ -1,4 +1,4 @@
-import { RECEIVE_TEA } from "./teaReducer"
+import { RECEIVE_TEA } from "./teasReducer"
 
 // CONSTANTS
 const RECEIVE_TRANSACTION = 'RECEIVE_TRANSACTION'

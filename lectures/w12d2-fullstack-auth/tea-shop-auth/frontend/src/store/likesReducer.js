@@ -23,7 +23,7 @@ export const removeLikes = likeId => ({
 
 
 // REDUCER
-const likeReducer = (state = {}, action) => {
+const likesReducer = (state = {}, action) => {
   const nextState = Object.assign({}, state)
 
   switch (action.type) {
@@ -32,4 +32,4 @@ const likeReducer = (state = {}, action) => {
   }
 }
 
-export default likeReducer
+export default likesReducer

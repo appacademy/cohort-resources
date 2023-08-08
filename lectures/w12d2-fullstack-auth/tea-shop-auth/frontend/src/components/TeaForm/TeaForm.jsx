@@ -1,7 +1,7 @@
 import { useState } from "react"
 import './TeaForm.css'
 import { useDispatch, useSelector } from "react-redux"
-import { createTea, receiveTea } from "../../store/teaReducer";
+import { createTea, receiveTea } from "../../store/teasReducer";
 
 const TeaForm = props => {
   const currentUser = useSelector(state => state.session.currentUser)

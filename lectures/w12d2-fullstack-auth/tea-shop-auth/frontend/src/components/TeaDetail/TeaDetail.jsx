@@ -1,8 +1,8 @@
 import './TeaDetail.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchTea, removeTea } from '../../store/teaReducer'
+import { fetchTea, removeTea } from '../../store/teasReducer'
 import { useState } from 'react'
-import { selectTransactionsByTeaId } from '../../store/transactionReducer'
+import { selectTransactionsByTeaId } from '../../store/transactionsReducer'
 
 const TeaDetail = ({ tea }) => {
   const dispatch = useDispatch()
