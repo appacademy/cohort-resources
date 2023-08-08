@@ -25,14 +25,14 @@ ActiveRecord::Base.transaction do
     rooibos_tea = Tea.create!(flavor: "Rooibos", price: 3.00, amount: 348, description: "Rooibos (/ˈrɔɪbɒs/ ROY-boss; Afrikaans: [rɔːibɔs]; Aspalathus linearis), meaning 'red bush'; is a broom-like member of the plant family Fabaceae that grows in South Africa's fynbos. The leaves are used to make a herbal tea that is called by the names: rooibos (especially in Southern Africa), bush tea, red tea, or redbush tea (predominantly in Great Britain). The tea has been popular in Southern Africa for generations, but is now consumed in many countries worldwide. It is sometimes spelled rooibosch in accordance with the original Dutch for 'red bush'. The tea has a taste and color somewhat similar to hibiscus tea, with more or less of an earthy flavor like yerba mate.")
    
     puts "Creating users..."
-    mike = User.create!(username: 'madz')
-    paulo = User.create!(username: 'papi')
-    chris = User.create!(username: 'kriz')
-    abbey = User.create!(username: 'abz')
-    darren = User.create!(username: 'darude')
-    diego = User.create!(username: 'didi')
-    taylor = User.create!(username: 'taytay')
-    disnee = User.create!(username: "diz")
+    mike = User.create!(username: 'madz', password: 'password')
+    paulo = User.create!(username: 'papi', password: 'password')
+    chris = User.create!(username: 'kriz', password: 'password')
+    abbey = User.create!(username: 'abz', password: 'password')
+    darren = User.create!(username: 'darude', password: 'password')
+    diego = User.create!(username: 'didi', password: 'password')
+    taylor = User.create!(username: 'taytay', password: 'password')
+    disnee = User.create!(username: "diz", password: 'password')
     puts "Creating transactions..."
     # Green
     Transaction.create!(tea_id: green_tea.id, user_id: paulo.id, quantity: 1)
