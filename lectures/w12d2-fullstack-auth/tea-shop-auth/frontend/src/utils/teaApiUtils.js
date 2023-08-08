@@ -1,3 +1,5 @@
+import { csrfFetch } from "./authUtils"
+
 export const fetchAllTeas = () => (
   fetch('/api/teas')
     .then(res => {
@@ -20,13 +22,8 @@ export const fetchTea = async teaId => {
 }
 
 export const createTea = async tea => {
-  const res = await fetch('/api/teas', {
-    method: 'POST',
-    body: JSON.stringify(tea),
-    headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json'
-    }
+  const res = await csrfFetch('/api/teas', {
+    method: 'POST'
   })
   if (res.ok) {
     const data = await res.json()

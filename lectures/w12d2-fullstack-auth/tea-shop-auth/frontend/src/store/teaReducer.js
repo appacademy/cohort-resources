@@ -36,9 +36,9 @@ export const fetchTea = teaId => (dispatch, getState) => (
   )
 )
 
-export const createTea = tea => async dispatch => {
-  const teaData = await teaApiUtils.createTea(tea)
-  return dispatch(receiveTea({ teaData }))
+export const createTea = teaData => async dispatch => {
+  const tea = await teaApiUtils.createTea(teaData)
+  return dispatch(receiveTea({ tea }))
 }
 
 // SELECTORS

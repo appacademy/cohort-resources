@@ -7,7 +7,7 @@ class Api::SessionsController < ApplicationController
     if @user
       render 'api/users/show'
     else
-      render json: {}
+      render json: { user: nil }
     end
   end
 
