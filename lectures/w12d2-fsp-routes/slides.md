@@ -1,4 +1,4 @@
-# W12D2 Full Stack Backend Routes
+## W12D2 - Full Stack Backend Routes
 
 ---
 
@@ -55,7 +55,8 @@ Is this needed?
   + `GET /api/users/:user_id/chirps` 
 + But you can just as well pass in the user_id with a query string
   + `GET /api/chirps?user_id=1` 
---- 
+
+---
 
 ## Backend Routes Demo
 + [BlueBird Wiki](https://github.com/appacademy/bluebird/wiki)
@@ -64,9 +65,9 @@ Is this needed?
 
 ## Questions
 
---- 
+---
 
-Full Stack Frontend Routes
+## Full Stack Frontend Routes
 
 ---
 
@@ -98,9 +99,9 @@ Full Stack Frontend Routes
 
 ## Questions
 
---- 
+---
 
-### Tips for the FSP
+## Tips for the FSP
 
 + Have a working app at every stage of the project. It might not be a
   "good" app, but it should function.
@@ -113,7 +114,7 @@ Full Stack Frontend Routes
 
 ---
 
-# Due Dates 
+## Due Dates 
 * Backend/Frontend Routes as well as all other unfinished design docs due tomorrow, W12D3
 * TAs will not provide help on full stack projects until the design documents/proposal are finished!
 
