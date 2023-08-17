@@ -10,7 +10,7 @@
 #
 class Chirp < ApplicationRecord
   validates :body, presence: true
-  validates :user_id, presence: true
+  # validates :user_id, presence: true # done by belongs to
   # custom validation for short messages
   validate :body_too_long
 
@@ -20,10 +20,20 @@ class Chirp < ApplicationRecord
     end
   end
 
+  # belongs to automatically validates foreign key presence true
   belongs_to :author,
     primary_key: :id,
     foreign_key: :user_id,
     class_name: :User
     # class_name: "User" # same thing
+
+  has_many :likes,
+    primary_key: :id,
+    foreign_key: :chirp_id,
+    class_name: :Like
+
+  has_many :likers,
+    through: :likes,
+    source: :liker
   
 end

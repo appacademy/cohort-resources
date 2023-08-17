@@ -17,4 +17,14 @@ class User < ApplicationRecord
     primary_key: :id,
     foreign_key: :user_id,
     class_name: :Chirp
+
+  has_many :likes,
+    primary_key: :id,
+    foreign_key: :liker_id,
+    class_name: :Like
+
+    # has many through - uses existing associations, rather than foreign keys
+  has_many :liked_chirps,
+    through: :likes,
+    source: :chirp
 end
