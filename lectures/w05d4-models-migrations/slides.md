@@ -77,7 +77,7 @@ Note:
 
 * `create_table`
 * `add_column`
-* `change_column`
+* `remove_column`
 * `add_index`
 
 
@@ -256,7 +256,7 @@ end
 ---
 
 ## Terminal Commands Recap
-- `rails _5.2.3_ new {project_name} -G --database=postgresql --skip-turbolinks`
+- `rails new {project_name} -G --database=postgresql --minimal`
 - `bundle exec rails db:create`
 - `bundle exec rails g migration Create{TableName}`
 - `bundle exec rails db:migrate`
