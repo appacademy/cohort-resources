@@ -27,4 +27,43 @@ class User < ApplicationRecord
   has_many :liked_chirps,
     through: :likes,
     source: :chirp
+
+    # GETTING RECORDS, NOT RELATIONS:
+
+    #first user
+    # User.first
+
+    #last user
+    # User.last
+
+    #user with the specified id, id only
+    # User.find(1)
+
+    #user with specified key-value pair
+    # User.find_by(username: "abbey")
+
+    def self.nice_users
+      # User.select(:id, :username, :affiliation).where("evil_score BETWEEN 1 AND 5")
+      User.select(:id, :username, :affiliation).where(evil_score: 1..5)
+    end
+
+    def self.evil_users
+      # User.select(:id, :username, :affiliation).where("evil_score = 9")
+      User.select(:id, :username, :affiliation).where(evil_score: 9)
+    end
+
+    def self.all_affiliations
+      User.select(:affiliation).group(:affiliation)
+    end
+
+    def self.non_humans
+      affiliations = ["cyborg", "AI"]
+      # User.where("affiliation IN ('cyborg', 'AI')")
+      User.where("affiliation IN (?)", affiliations).order(username: :ASC)
+    end
+
+    def self.find_ai_mike_chirps
+      User.find_by(email: "ai_mike@aa.io").chirps
+    end
+
 end

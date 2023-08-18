@@ -19,12 +19,12 @@ ApplicationRecord.connection.reset_pk_sequence!('likes')
 
 puts "Creating users..."
 mike = User.create(username: "ai_mike", email: "ai_mike@aa.io", affiliation: "AI", evil_score: 6 )
-chris = User.create(username: "ai_chris", email: "ai_chris@aa.io", affiliation: "AI", evil_score: 5 )
-paulo = User.create(username: "ai_paulo", email: "ai_paulo@aa.io", affiliation: "cyborg", evil_score: 4 )
+chris = User.create(username: "ai_chris", email: "ai_chris@aa.io", affiliation: "AI", evil_score: 1 )
+paulo = User.create(username: "ai_paulo", email: "ai_paulo@aa.io", affiliation: "cyborg", evil_score: 5 )
 darren = User.create(username: "darren", email: "darren@aa.io", affiliation: "human", evil_score: 2 )
 diego = User.create(username: "diego", email: "diego@aa.io", affiliation: "human", evil_score: 9 )
 taylor = User.create(username: "taylor", email: "taylor@aa.io", affiliation: "human", evil_score: 6 )
-abbey = User.create(username: "abbey", email: "abbey@aa.io", affiliation: "human", evil_score: 5 )
+abbey = User.create(username: "abbey", email: "abbey@aa.io", affiliation: "human", evil_score: 4 )
 
 
 puts "Creating chirps"
