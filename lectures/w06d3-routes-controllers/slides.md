@@ -91,6 +91,11 @@ The **path** and **query string** are part of the URL
   * **Body** (e.g. actual HTML document, or data formatted as JSON)
     - the actual data/content the server responded with
 
+Note:
+
+go to https://httpstatusdogs.com/
+
+
 ---
 
 + MVC Overview
@@ -227,12 +232,6 @@ Note:
   class UsersController < ApplicationController
   end
   ```
-
-Note:
-
-+ Write the controllers by hand (avoid using generators)
-
----
 
 
 ---
