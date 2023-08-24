@@ -9,14 +9,13 @@
 #  updated_at :datetime         not null
 #
 class Like < ApplicationRecord
+  # no need for presence true on foreign_keys due to the belongs_to
+  validates :liker_id, uniqueness: {scope: :chirp_id} # similar unique db constraint
 
   belongs_to :liker,
-    primary_key: :id,
     foreign_key: :liker_id,
     class_name: :User
 
-  belongs_to :chirp,
-    primary_key: :id,
-    foreign_key: :chirp_id,
-    class_name: :Chirp
+  belongs_to :chirp
+
 end

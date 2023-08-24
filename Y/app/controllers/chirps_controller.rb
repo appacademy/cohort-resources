@@ -29,6 +29,7 @@ class ChirpsController < ApplicationController
   end
 
   def create
+    debugger
     chirp = Chirp.new(chirp_params)
     if chirp.save
       # if successful save
@@ -64,9 +65,13 @@ class ChirpsController < ApplicationController
   end
 
   # called strong params - it is a rails standard for reading a request body
+  private
   def chirp_params
     params.require(:chirp).permit(:body, :user_id)
   end
+  
+  # params.require(:banana).permit(:body, :user_id)
+  # postman keys -> banana[body] banana[user_id]
 
   
 end

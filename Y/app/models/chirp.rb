@@ -27,10 +27,7 @@ class Chirp < ApplicationRecord
     class_name: :User
     # class_name: "User" # same thing
 
-  has_many :likes,
-    primary_key: :id,
-    foreign_key: :chirp_id,
-    class_name: :Like
+  has_many :likes
 
   has_many :likers,
     through: :likes,

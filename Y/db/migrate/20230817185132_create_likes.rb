@@ -7,6 +7,7 @@ class CreateLikes < ActiveRecord::Migration[7.0]
     end
     # creating a unique constraint on the COMBINATION of liker and chirp
     # one person cant like the same chirp more than once
+    # actual index is on liker_id
     add_index :likes, [:liker_id, :chirp_id], unique: true
   end
 end

@@ -12,6 +12,7 @@ Like.destroy_all
 Chirp.destroy_all
 User.destroy_all
 
+# makes ids start at 1
 puts "Resetting primary keys..."
 ApplicationRecord.connection.reset_pk_sequence!('users')
 ApplicationRecord.connection.reset_pk_sequence!('chirps')
