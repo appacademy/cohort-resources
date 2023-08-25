@@ -19,5 +19,6 @@ Rails.application.routes.draw do
   # put update -> need the whole chirp to update, including things like author_id etc
 
   resources :chirps, except: [:new, :edit]
+  resources :users
   
 end
