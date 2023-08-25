@@ -1,0 +1,13 @@
+User Index Page
+<br>
+<a href="<%= new_user_url %>">Go to new user page</a>
+
+<ul>
+  <% @users.each do |user| %>
+  <a href="<%= user_url(user) %>">User show page</a>
+  <li>
+    <%= render 'partial', banana: user %>
+  </li>
+  <% end %>
+</ul>
+

@@ -1,0 +1,21 @@
+<h1>Edit User Form</h1>
+
+<form action="<%= user_url(@user) %>" method="POST">
+  <%# overwrite the post method %>
+  <input type="hidden" name="_method" value="PATCH">
+  <label>Username: 
+    <input type="text" name="user[username]" value="<%= @user.username %>">
+  </label>
+  <br>
+  <label>Email: 
+    <input type="text" name="user[email]" value="<%= @user.email %>">
+  </label>
+  <br>
+  <label>Evil Score
+    <input type="text" name="user[evil_score]" value="<%= @user.evil_score %>">
+  </label>
+  <br>
+  
+  <input type="submit" value="Update User">
+
+</form>
