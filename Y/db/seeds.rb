@@ -19,13 +19,13 @@ ApplicationRecord.connection.reset_pk_sequence!('chirps')
 ApplicationRecord.connection.reset_pk_sequence!('likes')
 
 puts "Creating users..."
-mike = User.create(username: "ai_mike", email: "ai_mike@aa.io", affiliation: "AI", evil_score: 6 )
-chris = User.create(username: "ai_chris", email: "ai_chris@aa.io", affiliation: "AI", evil_score: 1 )
-paulo = User.create(username: "ai_paulo", email: "ai_paulo@aa.io", affiliation: "cyborg", evil_score: 5 )
-darren = User.create(username: "darren", email: "darren@aa.io", affiliation: "human", evil_score: 2 )
-diego = User.create(username: "diego", email: "diego@aa.io", affiliation: "human", evil_score: 9 )
-taylor = User.create(username: "taylor", email: "taylor@aa.io", affiliation: "human", evil_score: 6 )
-abbey = User.create(username: "abbey", email: "abbey@aa.io", affiliation: "human", evil_score: 4 )
+mike = User.create(username: "ai_mike", email: "ai_mike@aa.io", affiliation: "AI", evil_score: 6, password: "password" )
+chris = User.create(username: "ai_chris", email: "ai_chris@aa.io", affiliation: "AI", evil_score: 1, password: "password" )
+paulo = User.create(username: "ai_paulo", email: "ai_paulo@aa.io", affiliation: "cyborg", evil_score: 5, password: "password" )
+darren = User.create(username: "darren", email: "darren@aa.io", affiliation: "human", evil_score: 2, password: "password" )
+diego = User.create(username: "diego", email: "diego@aa.io", affiliation: "human", evil_score: 9, password: "password" )
+taylor = User.create(username: "taylor", email: "taylor@aa.io", affiliation: "human", evil_score: 6, password: "password" )
+abbey = User.create(username: "abbey", email: "abbey@aa.io", affiliation: "human", evil_score: 4, password: "password" )
 
 
 puts "Creating chirps"

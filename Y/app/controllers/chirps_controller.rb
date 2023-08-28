@@ -29,7 +29,6 @@ class ChirpsController < ApplicationController
   end
 
   def create
-    debugger
     chirp = Chirp.new(chirp_params)
     if chirp.save
       # if successful save

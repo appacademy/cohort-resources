@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
+  before_action :require_logged_out, only: [:new, :create]
+  before_action :require_logged_in, only: [:show]
 
-  def new
+  def new 
     render :new
   end
 
@@ -49,7 +51,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:username, :email, :evil_score)
+    params.require(:user).permit(:username, :email, :evil_score, :password)
   end
   
 end

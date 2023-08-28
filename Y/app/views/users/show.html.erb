@@ -6,6 +6,7 @@
 <a href="<%= edit_user_url(@user) %>">Go To Edit User Page</a>
 <%= render 'partial', banana: @user %>
 <br>
+<h1>This is sensitive data: "hello"</h1>
 
 <form action="<%= user_url(@user) %>" method="POST">
   <input type="hidden" name="_method" value="DELETE">
