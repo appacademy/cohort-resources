@@ -12,6 +12,7 @@ class SessionsController < ApplicationController
             login!(@user)
             redirect_to users_url
         else
+            flash.now[:errors] = ['Not user found with that username or password']
             render :new
         end
     end
