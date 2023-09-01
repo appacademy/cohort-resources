@@ -1,9 +1,22 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :bigint           not null, primary key
+#  username        :string           not null
+#  session_token   :string           not null
+#  password_digest :string           not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+  subject { User.create!(username: 'lilly_llama', password: 'password') }
 
   it { should validate_presence_of(:username) }
   it { should validate_uniqueness_of(:username) }
+  it { should validate_uniqueness_of(:session_token) }
   it { should validate_presence_of(:password_digest) }
   it { should validate_length_of(:password).is_at_least(6) }
   it { should have_many(:goals) }
@@ -14,7 +27,8 @@ RSpec.describe User, type: :model do
       sunny = User.find_by(username: 'sunny_d')
       expect(sunny.password).not_to be('password')
     end
-    context 'it saves passwords properly' do 
+
+    context 'saves passwords properly' do
       it 'encrypts the password using BCrypt' do
         expect(BCrypt::Password).to receive(:create)
         User.new(username: 'jack_bruce', password: 'abcdef')
@@ -27,14 +41,12 @@ RSpec.describe User, type: :model do
     end
   end
 
-  subject {  User.create!(username: 'lilly_llama', password: 'password')}
-
   describe 'session token' do
     it 'assigns a session_token if one is not given' do
       expect(subject.session_token).not_to be_nil
     end
 
-    it 'resets a session token on a user' do
+    it 'uses `#reset_session_token!` to reset a session token on a user' do
       old_session_token = subject.session_token
       new_session_token = subject.reset_session_token!
       expect(old_session_token).not_to eq(new_session_token)
@@ -42,11 +54,10 @@ RSpec.describe User, type: :model do
   end
 
   describe 'finds users by credentials' do
-
     context 'with a valid username and password' do
-      it 'should return the proper user' do
+      it 'returns the proper user' do
         sally = User.create(username: 'sally_lee', password: 'password')
-        user = User.find_by_credentials('sally_lee','password')
+        user = User.find_by_credentials('sally_lee', 'password')
 
         expect(sally.username).to eq(user.username)
         expect(sally.password_digest).to eq(user.password_digest)
@@ -54,12 +65,11 @@ RSpec.describe User, type: :model do
     end
 
     context 'with an invalid username and password' do
-      it 'should return nil' do
+      it 'returns nil' do
         jack = User.create(username: 'jack_bruce', password: 'abcdef')
-        user = User.find_by_credentials('jack_bruce','notthepassword')
+        user = User.find_by_credentials('jack_bruce', 'notthepassword')
         expect(user).to be_nil
       end
     end
   end
-
 end

@@ -1,26 +1,19 @@
 class UsersController < ApplicationController
-
-  before_action :require_signed_in!, only: [:show, :index]
-  
-  def create
-    @user = User.new(user_params)
-    
-    if @user.save!
-      redirect_to users_url
-    else
-      flash.now[:errors] = @user.errors.full_messages
-      render :new
-    end
-  end
+  before_action :require_logged_in!, only: [:show, :index]
 
   def new
-    @user = User.new
+    user = User.new
     render :new
   end
 
-  def index
-    @users = User.all
-    render :index
+  def create
+    @user = User.new(user_params)
+    if @user.save!
+      redirect_to users_url
+    else
+      flash[:errors] = @user.errors.full_messages 
+      render :new
+    end
   end
 
   def show
@@ -28,9 +21,15 @@ class UsersController < ApplicationController
     render :show
   end
 
-  private
-  
-  def user_params
-    params.require(:users).permit(:password, :username)
+  def index
+    @users = User.all
+    render :index
   end
+
+  private
+
+  def user_params
+    params.require(:users).permit(:username, :password)
+  end
+  
 end
