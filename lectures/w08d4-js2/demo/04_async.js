@@ -3,28 +3,28 @@ Part 1: A simple recipe to boil an egg; all steps in order
 --------------------------------------------------------------------------------- */
 
 // initial egg state
-let eggState = "raw";
+// let eggState = "raw";
 
-// steps of our recipe
-function putEggInBoilingWater() {
-    console.log(`1. Putting ${eggState} egg in boiling water`);
-    eggState = "cooked";
-    console.log(`2. Egg is ${eggState}!`);
-}
+// // steps of our recipe
+// function putEggInBoilingWater() {
+//     console.log(`1. Putting ${eggState} egg in boiling water`);
+//     eggState = "cooked";
+//     console.log(`2. Egg is ${eggState}!`);
+// }
 
-function takeEggOutOfPot() {
-    console.log(`3. Taking ${eggState} egg out of pot`);
-}
+// function takeEggOutOfPot() {
+//     console.log(`3. Taking ${eggState} egg out of pot`);
+// }
 
-function eatEgg() {
-    console.log(`4. Eating ${eggState} egg`);
-}
+// function eatEgg() {
+//     console.log(`4. Eating ${eggState} egg`);
+// }
 
 
-// now try to perform the steps in the right order
-putEggInBoilingWater();
-takeEggOutOfPot();
-eatEgg();
+// // now try to perform the steps in the right order
+// putEggInBoilingWater();
+// takeEggOutOfPot();
+// eatEgg();
 
 
 
@@ -49,6 +49,8 @@ amount of time to complete
 //     setTimeout(() => {
 //         eggState = "cooked";
 //         console.log(`2. Egg is ${eggState}!`);
+//         takeEggOutOfPot();
+//         eatEgg();
 //     }, 2500);
 // }
 
@@ -68,8 +70,7 @@ amount of time to complete
 
 // // now try to perform the steps in the right order
 // putEggInBoilingWater();
-// takeEggOutOfPot();
-// eatEgg();
+
 
 
 
@@ -124,41 +125,42 @@ Part 3: Ensuring the correct order of operations between async and sync code
 Part 4: Asynchronous code is non-blocking
 --------------------------------------------------------------------------------- */
 
-// // initial egg state
-// let eggState = "raw";
+// initial egg state
+let eggState = "raw";
 
-// // steps of our recipe
-// function putEggInBoilingWater() {
-//     console.log(`1. Putting ${eggState} egg in boiling water`);
-//     setTimeout(() => {
-//         eggState = "cooked";
-//         console.log(`2. Egg is ${eggState}!`);
-//         takeEggOutOfPot();
-//         eatEgg();
-//     }, 2500);
-// }
+// steps of our recipe
+function putEggInBoilingWater() {
+    console.log(`1. Putting ${eggState} egg in boiling water`);
+    setTimeout(() => {
+        eggState = "cooked";
+        console.log(`2. Egg is ${eggState}!`);
+        takeEggOutOfPot();
+        eatEgg();
+    }, 7000);
+}
 
-// function takeEggOutOfPot() {
-//     console.log(`3. Taking ${eggState} egg out of pot`);
-// }
+function takeEggOutOfPot() {
+    console.log(`3. Taking ${eggState} egg out of pot`);
+}
 
-// function eatEgg() {
-//     if (eggState === "raw") {
-//         console.log(`4. Eating RAW egg. What a mess! 🤢`);
-//     } else {
-//         console.log(`4. Eating COOKED egg. Yum! 😋`);
-//     }
+function eatEgg() {
+    if (eggState === "raw") {
+        console.log(`4. Eating RAW egg. What a mess! 🤢`);
+    } else {
+        console.log(`4. Eating COOKED egg. Yum! 😋`);
+    }
 
-//     showImage("fancy");
-// }
+    showImage("fancy");
+}
 
-// function setTable() {
-//     console.log("Setting the table 🍽️");
-// }
+function setTable() {
+    console.log("Setting the table 🍽️");
+}
 
-// // now try to perform the steps in the right order
-// // if we want to set the table while the egg is cooking, where should we invoke `setTable`???
-// putEggInBoilingWater();
+// now try to perform the steps in the right order
+// if we want to set the table while the egg is cooking, where should we invoke `setTable`???
+putEggInBoilingWater();
+setTable();
 
 
 

@@ -23,8 +23,12 @@ function calculator(operationCallback, num1, num2) {
     return operationCallback(num1, num2);
 }
 
+console.log(calculator(sqrt, 4))
+
 function sumTwoOperations(cb1, cb2, num1, num2) {
     let result1 = cb1(num1, num2);
     let result2 = cb2(num1, num2);
     return result1 + result2;
 }
+
+console.log(sumTwoOperations(multiply, subtract, 40, 123))
