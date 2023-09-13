@@ -240,7 +240,7 @@ possible element, it then triggers on its parents in nesting order.
 * "#" comes at the end of the url
 * it looks for ids with whatever string comes after the "#"
 * if it doesn't find any then nothing happens
-
+å
 * if it does then it takes the page and anchors it to that html element
 
 ---
