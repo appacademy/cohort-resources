@@ -250,7 +250,6 @@ possible element, it then triggers on its parents in nesting order.
 + [Location](https://developer.mozilla.org/en-US/docs/Web/API/Window/location)
 + [History](https://developer.mozilla.org/en-US/docs/Web/API/Window/history)
 
----
 
 
 
