@@ -8,7 +8,6 @@
 * SQL -> ORM -> Active Record
 * Ruby on Rails
 * JS -> Vanilla DOM 🍦
-* JQuery
 * React/Redux
 
 ---
@@ -26,7 +25,7 @@
     * `target` vs `currentTarget`
 * Web APIs
   * `Document`, `History`, `Location`
-* Vanilla DOM Manipulation <> jQuery
+* Vanilla DOM Manipulation
   
 ---
 
@@ -244,8 +243,6 @@ possible element, it then triggers on its parents in nesting order.
 
 * if it does then it takes the page and anchors it to that html element
 
-* [ActiveRecord docs](https://guides.rubyonrails.org/active_record_basics.html)
-
 ---
 
 ## Location, History and Anchor Demo!
@@ -255,16 +252,7 @@ possible element, it then triggers on its parents in nesting order.
 
 ---
 
-## jQuery?
 
-* **A JS library that abstracts much of the DOM manipulation for us**
-  * Low-level => fast
-  * Rapid Development
-    * concise: "write less, do more"
-    * Simplifies "complicated" AJAX calls and DOM manipulation
-  * Multi-browser cross compatible
-
-* **A solid understanding of Vanilla JS and Dom Manipulation means JQuery may not be necessary. Always ask yourself, ["Do I need JQuery?](https://blog.garstasio.com/you-dont-need-jquery/why-not/) or is Vanilla JS better for this application?"**
 
 ---
 
@@ -274,7 +262,6 @@ possible element, it then triggers on its parents in nesting order.
 
 * The appropriate resources are dynamically loaded and added to the page as necessary, usually in response to user actions.
 
-* [When to use Vanilla JavaScript vs jQuery](https://www.geeksforgeeks.org/when-to-use-vanilla-javascript-vs-jquery/)
 
 ---
 
