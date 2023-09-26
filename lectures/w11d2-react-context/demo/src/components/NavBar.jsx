@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
-const NavBar = (props) => {
-  const [loggedIn, setLogin] = useState(false);
+const NavBar = ({loggedIn, setLogin}) => {
   const [currentUser, setCurrentUser] = useState({});
 
   // console.log(loggedIn)

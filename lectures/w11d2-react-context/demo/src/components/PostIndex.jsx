@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { SessionContext } from '../context/SessionContext';
 
-const PostIndex = (props) => {
+
+const PostIndex = ({loggedIn}) => {
   // console.log("Rendering...");
 
   const [data, setData] = useState([]);
@@ -20,18 +22,22 @@ const PostIndex = (props) => {
 
   const title = familyName.slice(0, familyName.length - 1);
 
-  return (
-    <>
-      {/* {console.log("returning...")} */}
-      <p>Fun {title[0].toUpperCase() + title.slice(1, title.length)} Posts</p>
-      {data.map((ele, i) => (
-        <div key={i} className="index-item">
-          <p className='title'>{ele.title}</p>
-          <p className='body'>{ele.body}</p>
-        </div>
-      ))}
-    </>
-  )
+    return (loggedIn) ? (
+      <>
+        {/* {console.log("returning...")} */}
+        <SessionContext.Consumer>
+          {(value) => (<h1>{value.fruit} is my most used fruit for examples</h1>)}
+        </SessionContext.Consumer>
+
+        <p>Fun {title[0].toUpperCase() + title.slice(1, title.length)} Posts</p>
+        {data.map((ele, i) => (
+          <div key={i} className="index-item">
+            <p className='title'>{ele.title}</p>
+            <p className='body'>{ele.body}</p>
+          </div>
+        ))}
+      </>
+    ) : (<h1>You must be logged in to see posts</h1>)
 };
 
 export default PostIndex;
