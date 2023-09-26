@@ -1,13 +1,15 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { SessionContext } from '../context/SessionContext';
+import { useSessionContext } from '../context/SessionContext';
 
 
-const PostIndex = ({loggedIn}) => {
+
+const PostIndex = () => {
   // console.log("Rendering...");
 
   const [data, setData] = useState([]);
   const { familyName } = useParams();
+  const {loggedIn} = useSessionContext();
 
   useEffect(() => {
     console.log('fetching new data');
@@ -25,9 +27,9 @@ const PostIndex = ({loggedIn}) => {
     return (loggedIn) ? (
       <>
         {/* {console.log("returning...")} */}
-        <SessionContext.Consumer>
+        {/* <SessionContext.Consumer>
           {(value) => (<h1>{value.fruit} is my most used fruit for examples</h1>)}
-        </SessionContext.Consumer>
+        </SessionContext.Consumer> */}
 
         <p>Fun {title[0].toUpperCase() + title.slice(1, title.length)} Posts</p>
         {data.map((ele, i) => (

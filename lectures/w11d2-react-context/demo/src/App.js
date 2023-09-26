@@ -3,14 +3,14 @@ import { Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import PostIndex from "./components/PostIndex";
 
-function App() {
-  const [loggedIn, setLogin] = useState(false);
+function App(props) {
   
   return (
     <>
-      <NavBar loggedIn={loggedIn} setLogin={setLogin} />
+      <NavBar  />
       <Route path='/:familyName'>
-        <PostIndex loggedIn={loggedIn} />
+        <PostIndex  />
+        {props.str}
       </Route>
     </>
   );

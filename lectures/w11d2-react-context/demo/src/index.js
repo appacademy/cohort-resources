@@ -3,15 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-import { SessionContext } from './context/SessionContext';
+import { SessionProvider } from './context/SessionContext';
 
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <SessionContext.Provider value={{fruit: "banana"}}>
-        <App />
-      </SessionContext.Provider>
+      {/* <SessionContext.Provider value={{fruit: "banana"}}> */}
+      <SessionProvider>
+        <App str={"hello"} />
+      </SessionProvider>
+      {/* </SessionContext.Provider> */}
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

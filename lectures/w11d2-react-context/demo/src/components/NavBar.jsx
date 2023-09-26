@@ -1,8 +1,14 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+// import { SessionContext } from "../context/SessionContext";
+import { useSessionContext } from "../context/SessionContext";
 
-const NavBar = ({loggedIn, setLogin}) => {
+
+
+const NavBar = () => {
   const [currentUser, setCurrentUser] = useState({});
+  const {loggedIn, setLogin} = useSessionContext();
+  // const {loggedIn, setLogin} = useContext(SessionContext)
 
   // console.log(loggedIn)
 
