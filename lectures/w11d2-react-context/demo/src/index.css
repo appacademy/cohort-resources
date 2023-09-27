@@ -1,1 +1,7 @@
 /* TODO Add site wide styles */
+.profile{
+    width: 98vw;
+    height: 50vh;
+    background-color: gray;
+    
+}

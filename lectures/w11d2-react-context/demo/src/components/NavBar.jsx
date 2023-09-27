@@ -6,11 +6,7 @@ import { useSessionContext } from "../context/SessionContext";
 
 
 const NavBar = () => {
-  const [currentUser, setCurrentUser] = useState({});
-  const {loggedIn, setLogin} = useSessionContext();
-  // const {loggedIn, setLogin} = useContext(SessionContext)
-
-  // console.log(loggedIn)
+  const {loggedIn, setLogin, currentUser, setCurrentUser} = useSessionContext();
 
   const handleClick = e => {
     e.preventDefault();

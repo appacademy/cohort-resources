@@ -6,11 +6,12 @@ export const SessionContext = createContext();
 
 export const SessionProvider = (props) => {
     const [loggedIn, setLogin] = useState(false);
+    const [currentUser, setCurrentUser] = useState({});
+
 
     return (
-        <SessionContext.Provider value={{loggedIn, setLogin}}>
+        <SessionContext.Provider value={{loggedIn, setLogin, currentUser, setCurrentUser}}>
             {props.children}
-            {console.log("props.children:", props.children)}
         </SessionContext.Provider>
     )
 }

@@ -11,7 +11,7 @@ ReactDOM.render(
     <BrowserRouter>
       {/* <SessionContext.Provider value={{fruit: "banana"}}> */}
       <SessionProvider>
-        <App str={"hello"} />
+        <App />
       </SessionProvider>
       {/* </SessionContext.Provider> */}
     </BrowserRouter>
