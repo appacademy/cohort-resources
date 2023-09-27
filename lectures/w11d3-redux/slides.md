@@ -227,7 +227,7 @@ Note:
 ## Reducer
 
 + *Pure function* that generates new state using the previous state and an action
-  + Pure functions don't modify arguments and return immutable data
+  + Pure functions don't modify arguments and have deterministic output
 + Multiple reducers can be combined using `combineReducers`
 	+ Dispatched actions hit every single reducer, but that doesn't mean every 
   reducer has to respond to that action
@@ -313,7 +313,7 @@ wrap our `<App />` component
 
 + Returns data from the Redux state as specified by the single callback argument
 	+ The callback takes in the entire Redux state and returns desired portions
-  + ex: `useSelector(state => state.teas)`
+  + ex: `const teas = useSelector(state => state.teas)`
 + The component will update whenever the return value from the callback changes (using `===` strict equality)
 
 ---
