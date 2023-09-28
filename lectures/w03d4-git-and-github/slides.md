@@ -51,7 +51,7 @@
 
 ## Git's Internal System
 
-+ The visible, editable contents of a repository are considered to be its _working tree
++ The visible, editable contents of a repository are considered to be its _working tree_
 + Individual files or folders that have been modified can be added to the _staging area_
 + The contents of the staging area are moved into the `.git` directory upon making a commit
 
@@ -124,7 +124,7 @@
 
 ---
 
-## Diagram: Resetting Files
+## Diagram: Reset
 
 ![reset_staging](https://aa-ch-lecture-assets.s3.us-west-1.amazonaws.com/git-github/reset_file.png)
 
@@ -192,73 +192,60 @@
 
 ## Code Demo #3
 
+1. Add a remote to a local repository
+2. Push and/or pull from a remote repository
+3. Clone down a remote repository
+
 ---
 
-## Git Flow Diagram
+## Diagram: Git Workflow (with Remote)
 
 ![git flow](https://s3-us-west-1.amazonaws.com/eventliter-prod/download.jpeg)
 
 ---
 
-## Keep your options open
-
-+ `git push --force <remote> <branch>`
-  + or `-f` force option, be careful
-+ `git push --all`
-  + pushes _all_ branches
+# Branches
 
 ---
 
-# Branching
+## Branch Commands
 
----
-
-## Branching Commands / Vocab
-
-+ `master`
-  + default main branch
 + `git branch`
-  + lists branches
+  + _list branch names (and identify current branch)_
 + `git checkout <branch-name>`
-  + switch to branch
+  + _switch to a particular branch_
 + `git checkout -b <branch-name>`
-  + create and immediately switch to branch
+  + _create a new branch with the specified name_
+  + _switch to newly created branch_
 + `git branch -d <branch-name>`
-  + deletes branch
+  + _delete specified branch_
 + `git merge <branch-name>`
-  + merge `<branch-name>` into current branch
+  + _merge specified branch into current branch_
 
 ---
 
-### Conceptual Diagram - Branching
+## Diagram: Branches
 
 ![branch](https://aa-ch-lecture-assets.s3.us-west-1.amazonaws.com/git-github/branch.png)
 
 ---
 
-### Conceptual Diagram - Diverging Branches
+## Diagram: Divergent Branches
 
 ![diverging_branch](https://aa-ch-lecture-assets.s3.us-west-1.amazonaws.com/git-github/diverge_branch.png)
 
 ---
 
-## Code demo - Branching
+## Code Demo #4
+
+1. Create new branch
+2. Switch between branches
+3. Merge branches
 
 ---
 
-## One more incentive...
+# Today's Project
 
-[Green squares == green rectangles](https://github.com/gaearon)
-
----
-
-## Today's Project
-
-+ Learn more about Git *today*
-+ **Do NOT push the Screwdoku project**
-	+ No nested repositories!
-+ You will be working on Screwdoku by sharing your screens  
-  + Switch off every level!
-+ Daily project repos can now be submitted on PT
-  + Submit here today if you do the Minesweeper project
-+ Push your nightly homework to your homework repo
++ Screwdoku should be its own repository
+	+ Avoid nested repositories
++ Going forward, EOD reports require a link to your daily classwork repository
