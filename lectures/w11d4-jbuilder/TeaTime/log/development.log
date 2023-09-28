@@ -618,3 +618,544 @@ Processing by Api::TeasController#show as JSON
 Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 1.3ms | Allocations: 2563)
 
 
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mTea Load (0.6ms)[0m  [1m[34mSELECT "teas".* FROM "teas" ORDER BY "teas"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas" ORDER BY "teas"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLike Load (1.0ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas" ORDER BY "teas"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  [1m[36mTea Load (0.9ms)[0m  [1m[34mSELECT "teas".* FROM "teas" ORDER BY "teas"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLike Load (0.6ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3, $4)[0m  [["id", 3], ["id", 2], ["id", 4], ["id", 5]]
+  [1m[36mTea Load (1.0ms)[0m  [1m[34mSELECT "teas".* FROM "teas" ORDER BY "teas"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLike Load (0.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas" ORDER BY "teas"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas" ORDER BY "teas"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas" ORDER BY "teas"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTea Load (1.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" ORDER BY "teas"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTea Load (0.8ms)[0m  [1m[34mSELECT "teas".* FROM "teas" ORDER BY "teas"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLike Load (0.8ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas" ORDER BY "teas"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+Started GET "/" for ::1 at 2023-09-28 09:58:31 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/paulobocanegra/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/paulobocanegra/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.1ms | Allocations: 527)
+Completed 200 OK in 7ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 4564)
+
+
+Started GET "/teas" for ::1 at 2023-09-28 09:58:37 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/teas"):
+  
+Started GET "/api/teas" for ::1 at 2023-09-28 10:00:52 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (1.0ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:5:in `index'
+Completed 200 OK in 27ms (Views: 11.8ms | ActiveRecord: 5.2ms | Allocations: 8962)
+
+
+Started GET "/api/teas/q" for ::1 at 2023-09-28 10:01:02 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"q"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 3783)
+
+
+Started GET "/api/teas/1" for ::1 at 2023-09-28 10:01:05 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mTransaction Load (0.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+Completed 200 OK in 63ms (Views: 0.3ms | ActiveRecord: 9.2ms | Allocations: 15489)
+
+
+Started GET "/api/teas/2" for ::1 at 2023-09-28 10:01:08 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 1], ["id", 5], ["id", 6]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+Completed 200 OK in 13ms (Views: 0.8ms | ActiveRecord: 1.4ms | Allocations: 2622)
+
+
+Started GET "/api/teas/1" for ::1 at 2023-09-28 10:01:23 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mTransaction Load (1.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 2.2ms | Allocations: 2537)
+
+
+Started GET "/api/teas" for ::1 at 2023-09-28 10:01:25 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 1097)
+
+
+Started GET "/api/teas/1" for ::1 at 2023-09-28 10:05:32 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 1.7ms | Allocations: 2519)
+
+
+  [1m[36mTea Load (1.6ms)[0m  [1m[34mSELECT "teas".* FROM "teas" ORDER BY "teas"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."tea_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["tea_id", 1], ["LIMIT", 11]]
+  [1m[36mTea Load (1.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" ORDER BY "teas"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  [1m[36mUser Load (8.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3, $4)[0m  [["id", 3], ["id", 2], ["id", 4], ["id", 5]]
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas" ORDER BY "teas"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["tea_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3, $4)[0m  [["id", 3], ["id", 2], ["id", 4], ["id", 5]]
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/teas/1" for ::1 at 2023-09-28 10:44:39 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.9ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mTransaction Load (1.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+Completed 200 OK in 44ms (Views: 0.8ms | ActiveRecord: 11.7ms | Allocations: 5575)
+
+
+Started GET "/api/teas" for ::1 at 2023-09-28 10:44:42 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 1095)
+
+
+Started GET "/api/teas" for ::1 at 2023-09-28 10:47:29 -0700
+Processing by Api::TeasController#index as JSON
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/controllers/api/teas_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.4ms | Allocations: 1095)
+
+
+Started GET "/api/teas" for ::1 at 2023-09-28 10:48:02 -0700
+Processing by Api::TeasController#index as JSON
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1896)
+
+
+Started GET "/api/teas" for ::1 at 2023-09-28 10:50:20 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.7ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/index.json.jbuilder (Duration: 7.7ms | Allocations: 6049)
+Completed 200 OK in 16ms (Views: 9.1ms | ActiveRecord: 3.8ms | Allocations: 12580)
+
+
+Started GET "/favicon.ico" for ::1 at 2023-09-28 10:50:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/teas" for ::1 at 2023-09-28 10:51:34 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.7ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  Rendered api/teas/index.json.jbuilder (Duration: 6.4ms | Allocations: 918)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.7ms | Allocations: 1159)
+
+
+Started GET "/api/teas/q" for ::1 at 2023-09-28 10:55:25 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"q"}
+  [1m[36mTea Load (0.9ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+Completed 200 OK in 28ms (Views: 0.4ms | ActiveRecord: 2.6ms | Allocations: 3720)
+
+
+Started GET "/api/teas/1" for ::1 at 2023-09-28 10:55:28 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (1.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+Completed 200 OK in 54ms (Views: 2.7ms | ActiveRecord: 14.1ms | Allocations: 15619)
+
+
+Started GET "/api/teas/1" for ::1 at 2023-09-28 10:55:49 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 8.7ms | Allocations: 13212)
+
+
+Started GET "/api/teas/1" for ::1 at 2023-09-28 10:56:00 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+Completed 200 OK in 30ms (Views: 0.3ms | ActiveRecord: 9.9ms | Allocations: 25960)
+
+
+Started GET "/api/teas/1" for ::1 at 2023-09-28 10:56:25 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  Rendering api/teas/show.json.jbuilder
+  Rendered api/teas/show.json.jbuilder (Duration: 1.6ms | Allocations: 2232)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 7.8ms | Allocations: 18880)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check json.extract! @tea :name, :price, :description, :id, :flavor:
+  app/controllers/api/teas_controller.rb:19:in `show'
+
+Started POST "/__better_errors/c29110a5bf010db9/variables" for ::1 at 2023-09-28 10:56:25 -0700
+Started GET "/api/teas/1" for ::1 at 2023-09-28 10:56:47 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.7ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  Rendering api/teas/show.json.jbuilder
+  Rendered api/teas/show.json.jbuilder (Duration: 5.0ms | Allocations: 6781)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 11.9ms | Allocations: 36037)
+
+
+
+NoMethodError - undefined method `name' for #<Tea id: 1, flavor: "Green", price: 1.75, description: "Green tea is a type of tea that is made from Camel...", amount: nil, created_at: "2023-09-27 23:33:07.943852000 +0000", updated_at: "2023-09-27 23:33:07.943852000 +0000">:
+  app/views/api/teas/show.json.jbuilder:1
+  app/controllers/api/teas_controller.rb:19:in `show'
+
+Started POST "/__better_errors/90a0dc656714d6c3/variables" for ::1 at 2023-09-28 10:56:47 -0700
+Started GET "/api/teas/1" for ::1 at 2023-09-28 10:57:01 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.7ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mTransaction Load (1.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  Rendering api/teas/show.json.jbuilder
+  Rendered api/teas/show.json.jbuilder (Duration: 0.6ms | Allocations: 252)
+Completed 200 OK in 37ms (Views: 2.7ms | ActiveRecord: 2.6ms | Allocations: 3502)
+
+
+Started GET "/favicon.ico" for ::1 at 2023-09-28 10:57:01 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/teas" for ::1 at 2023-09-28 11:19:59 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.7ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  [1m[36mLike Load (1.6ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/index.json.jbuilder:4
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/index.json.jbuilder:4
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 3]]
+  ↳ app/views/api/teas/index.json.jbuilder:4
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 4]]
+  ↳ app/views/api/teas/index.json.jbuilder:4
+  Rendered api/teas/index.json.jbuilder (Duration: 60.3ms | Allocations: 13588)
+Completed 200 OK in 68ms (Views: 66.5ms | ActiveRecord: 20.7ms | Allocations: 14280)
+
+
+Started GET "/api/teas" for ::1 at 2023-09-28 11:20:40 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.6ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  [1m[36mLike Load (0.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/index.json.jbuilder:4
+  [1m[36mLike Load (0.8ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/index.json.jbuilder:4
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 3]]
+  ↳ app/views/api/teas/index.json.jbuilder:4
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 4]]
+  ↳ app/views/api/teas/index.json.jbuilder:4
+  Rendered api/teas/index.json.jbuilder (Duration: 14.7ms | Allocations: 3996)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 2.4ms | Allocations: 4689)
+
+
+Started GET "/favicon.ico" for ::1 at 2023-09-28 11:20:40 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/teas" for ::1 at 2023-09-28 11:23:47 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.6ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 3]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 4]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/index.json.jbuilder (Duration: 14.9ms | Allocations: 3975)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 1.3ms | Allocations: 4654)
+
+
+Started GET "/favicon.ico" for ::1 at 2023-09-28 11:23:47 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/teas/1" for ::1 at 2023-09-28 11:25:22 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mTransaction Load (2.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  Rendering api/teas/show.json.jbuilder
+  Rendered api/teas/show.json.jbuilder (Duration: 0.7ms | Allocations: 201)
+Completed 200 OK in 20ms (Views: 2.7ms | ActiveRecord: 5.2ms | Allocations: 3301)
+
+
+Started GET "/api/teas" for ::1 at 2023-09-28 11:25:52 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.8ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  [1m[36mLike Load (0.8ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (0.7ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 3]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 4]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/index.json.jbuilder (Duration: 19.2ms | Allocations: 3982)
+Completed 200 OK in 22ms (Views: 18.8ms | ActiveRecord: 2.9ms | Allocations: 4660)
+
+
+Started GET "/api/1" for ::1 at 2023-09-28 11:26:05 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/1"):
+  
+Started GET "/api/teas/1" for ::1 at 2023-09-28 11:26:11 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  Rendering api/teas/show.json.jbuilder
+  Rendered api/teas/show.json.jbuilder (Duration: 1.8ms | Allocations: 153)
+Completed 200 OK in 13ms (Views: 3.3ms | ActiveRecord: 1.9ms | Allocations: 2786)
+
+
+Started GET "/api/teas/1" for ::1 at 2023-09-28 11:27:26 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.8ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mTransaction Load (1.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  Rendering api/teas/show.json.jbuilder
+  Rendered api/teas/show.json.jbuilder (Duration: 18.9ms | Allocations: 4700)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 3.0ms | Allocations: 7702)
+
+
+
+NameError - undefined local variable or method `teas' for #<ActionView::Base:0x00000000007828>
+Did you mean?  @tea:
+  app/views/api/teas/show.json.jbuilder:1
+  app/controllers/api/teas_controller.rb:19:in `show'
+
+Started POST "/__better_errors/afeb7e8e13eedbdb/variables" for ::1 at 2023-09-28 11:27:26 -0700
+Started GET "/api/teas/1" for ::1 at 2023-09-28 11:27:36 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.6ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  Rendering api/teas/show.json.jbuilder
+  Rendered api/teas/show.json.jbuilder (Duration: 1.1ms | Allocations: 241)
+Completed 200 OK in 19ms (Views: 4.5ms | ActiveRecord: 1.6ms | Allocations: 3414)
+
+
+Started GET "/favicon.ico" for ::1 at 2023-09-28 11:27:36 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/teas/1" for ::1 at 2023-09-28 11:29:07 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (2.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  Rendering api/teas/show.json.jbuilder
+  Rendered api/teas/show.json.jbuilder (Duration: 2.2ms | Allocations: 546)
+Completed 200 OK in 36ms (Views: 5.3ms | ActiveRecord: 4.3ms | Allocations: 3720)
+
+
+Started GET "/api/teas/1" for ::1 at 2023-09-28 11:49:15 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mLike Load (0.6ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:14
+  Rendered api/teas/show.json.jbuilder (Duration: 3.7ms | Allocations: 1512)
+Completed 200 OK in 49ms (Views: 5.2ms | ActiveRecord: 11.3ms | Allocations: 7728)
+
+
+Started GET "/favicon.ico" for ::1 at 2023-09-28 11:49:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/teas/1" for ::1 at 2023-09-28 11:50:13 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mLike Load (0.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:14
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:17
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:17
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:17
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:17
+  Rendered api/teas/show.json.jbuilder (Duration: 15.5ms | Allocations: 6577)
+Completed 200 OK in 27ms (Views: 16.5ms | ActiveRecord: 3.2ms | Allocations: 9656)
+
+
+Started GET "/favicon.ico" for ::1 at 2023-09-28 11:50:13 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas" ORDER BY "teas"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLike Load (0.6ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTea Load (1.0ms)[0m  [1m[34mSELECT "teas".* FROM "teas" ORDER BY "teas"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLike Load (0.5ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["tea_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3, $4)[0m  [["id", 3], ["id", 2], ["id", 4], ["id", 5]]
+  [1m[36mTea Load (0.6ms)[0m  [1m[34mSELECT "teas".* FROM "teas" ORDER BY "teas"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTea Load (0.8ms)[0m  [1m[34mSELECT "teas".* FROM "teas" ORDER BY "teas"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLike Load (1.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3, $4)[0m  [["id", 3], ["id", 2], ["id", 4], ["id", 5]]
+Started GET "/" for ::1 at 2023-09-28 11:59:49 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/paulobocanegra/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/paulobocanegra/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 526)
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 4560)
+
+
+Started GET "/api/teas/1" for ::1 at 2023-09-28 11:59:56 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mTransaction Load (0.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/api/teas_controller.rb:18:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mLike Load (0.6ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:16
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3, $4)[0m  [["id", 3], ["id", 2], ["id", 4], ["id", 5]]
+  ↳ app/views/api/teas/show.json.jbuilder:16
+  Rendered api/teas/show.json.jbuilder (Duration: 14.1ms | Allocations: 8809)
+Completed 200 OK in 84ms (Views: 11.7ms | ActiveRecord: 16.0ms | Allocations: 35039)
+
+
+Started GET "/favicon.ico" for ::1 at 2023-09-28 11:59:56 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
