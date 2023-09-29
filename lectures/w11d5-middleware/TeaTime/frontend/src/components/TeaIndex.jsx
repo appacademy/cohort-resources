@@ -1,9 +1,17 @@
-import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchTeas } from "../store/teaReducer";
 import './TeaIndex.css'
 
 const TeaIndex = props => {
   const teas = useSelector(state => state.teas)
   const teaArray = Object.values(teas)
+  const dispatch = useDispatch();
+  // debugger
+  useEffect(() => {
+    // debugger
+    dispatch(fetchTeas())
+  }, [])
 
   return(
     <div className="tea-index">

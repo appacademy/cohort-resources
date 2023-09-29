@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { receiveTea } from '../store/teaReducer';
+import { receiveTea, postTea } from '../store/teaReducer';
 import './TeaForm.css'
 
 const TeaForm = props => {
@@ -22,7 +22,7 @@ const TeaForm = props => {
       price: price
     };
 
-    dispatch(receiveTea(tea));
+    dispatch(postTea(tea));
 
     setFlavor('');
     setPrice('');

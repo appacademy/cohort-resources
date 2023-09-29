@@ -1916,3 +1916,667 @@ Processing by Api::TeasController#index as JSON
 Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 4.5ms | Allocations: 12249)
 
 
+  [1m[35m (1.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "TeaTime_development"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "TeaTime_test"[0m
+  [1m[35m (1149.2ms)[0m  [1m[35mCREATE DATABASE "TeaTime_development" ENCODING = 'unicode'[0m
+  [1m[35m (515.3ms)[0m  [1m[35mCREATE DATABASE "TeaTime_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "likes" CASCADE[0m
+  [1m[35m (16.7ms)[0m  [1m[35mCREATE TABLE "likes" ("id" bigserial primary key, "user_id" bigint NOT NULL, "tea_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE INDEX "index_likes_on_tea_id" ON "likes" ("tea_id")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE INDEX "index_likes_on_user_id" ON "likes" ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "teas" CASCADE[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "teas" ("id" bigserial primary key, "flavor" character varying NOT NULL, "price" float NOT NULL, "description" character varying, "amount" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_teas_on_flavor" ON "teas" ("flavor")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "quantity" integer NOT NULL, "user_id" bigint NOT NULL, "tea_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_transactions_on_tea_id" ON "transactions" ("tea_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE INDEX "index_transactions_on_user_id" ON "transactions" ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_username" ON "users" ("username")[0m
+  [1m[35m (4.6ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_42cb2ae4ad"
+FOREIGN KEY ("tea_id")
+  REFERENCES "teas" ("id")
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_1e09b5dabf"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_d165608510"
+FOREIGN KEY ("tea_id")
+  REFERENCES "teas" ("id")
+[0m
+  [1m[35m (6.1ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_77364e6416"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230803164319)[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230803163516),
+(20230803164255),
+(20230803164309);
+
+[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (6.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-09-29 16:44:08.622882"], ["updated_at", "2023-09-29 16:44:08.622882"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "e42cb8da928a61ce5a2b9e88f0deacab142bc8ad"], ["created_at", "2023-09-29 16:44:08.642807"], ["updated_at", "2023-09-29 16:44:08.642807"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (17.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "likes" CASCADE[0m
+  [1m[35m (95.7ms)[0m  [1m[35mCREATE TABLE "likes" ("id" bigserial primary key, "user_id" bigint NOT NULL, "tea_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (23.6ms)[0m  [1m[35mCREATE INDEX "index_likes_on_tea_id" ON "likes" ("tea_id")[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE INDEX "index_likes_on_user_id" ON "likes" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "teas" CASCADE[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "teas" ("id" bigserial primary key, "flavor" character varying NOT NULL, "price" float NOT NULL, "description" character varying, "amount" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_teas_on_flavor" ON "teas" ("flavor")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "quantity" integer NOT NULL, "user_id" bigint NOT NULL, "tea_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE INDEX "index_transactions_on_tea_id" ON "transactions" ("tea_id")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE INDEX "index_transactions_on_user_id" ON "transactions" ("user_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_username" ON "users" ("username")[0m
+  [1m[35m (7.3ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_42cb2ae4ad"
+FOREIGN KEY ("tea_id")
+  REFERENCES "teas" ("id")
+[0m
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_1e09b5dabf"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_d165608510"
+FOREIGN KEY ("tea_id")
+  REFERENCES "teas" ("id")
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "transactions" ADD CONSTRAINT "fk_rails_77364e6416"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230803164319)[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230803163516),
+(20230803164255),
+(20230803164309);
+
+[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-09-29 16:44:08.928195"], ["updated_at", "2023-09-29 16:44:08.928195"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (3.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2023-09-29 16:44:08.937856"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "e42cb8da928a61ce5a2b9e88f0deacab142bc8ad"], ["created_at", "2023-09-29 16:44:08.949476"], ["updated_at", "2023-09-29 16:44:08.949476"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Load (1.7ms)[0m  [1m[34mSELECT "likes".* FROM "likes"[0m
+  [1m[36mTransaction Load (1.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTea Load (1.0ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  [1m[36mTea Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "Green"], ["LIMIT", 1]]
+  [1m[36mTea Create (3.2ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flavor", "Green"], ["price", 1.75], ["description", "Green tea is a type of tea that is made from Camellia sinensis leaves and buds that have not undergone the same withering and oxidation process used to make oolong teas and black teas. Green tea originated in China, but its production and manufacture has spread to other countries in East Asia."], ["amount", nil], ["created_at", "2023-09-29 16:44:09.140393"], ["updated_at", "2023-09-29 16:44:09.140393"]]
+  [1m[36mTea Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "Oolong"], ["LIMIT", 1]]
+  [1m[36mTea Create (0.9ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flavor", "Oolong"], ["price", 2.0], ["description", "Oolong tea is a type of tea that is sometimes called \"wulong\" (also pronounced \"oolong\") or \"black dragon\" tea. Oolong teas are semi-oxidized teas. They are sometimes called \"semi-fermented teas\" though this moniker is considered to be less technically correct than semi-oxidized teas. After the tea leaves are picked, they are rolled and allowed to oxidize. Oxidation produces floral notes that characterize many oolongs."], ["amount", nil], ["created_at", "2023-09-29 16:44:09.151870"], ["updated_at", "2023-09-29 16:44:09.151870"]]
+  [1m[36mTea Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "Earl Grey"], ["LIMIT", 1]]
+  [1m[36mTea Create (0.6ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flavor", "Earl Grey"], ["price", 2.5], ["description", "Earl Grey tea is a tea blend which has been flavoured with the addition of oil of bergamot. The rind's fragrant oil is added to black tea to give Earl Grey its unique taste. Traditionally, Earl Grey was made from black teas such as China keemun and therefore intended to be drunk without milk. However, tea companies have since begun to offer Earl Grey based upon stronger teas such as Ceylons which are better suited to the addition of milk or cream. Other varieties have been introduced as well, such as green or oolong."], ["amount", nil], ["created_at", "2023-09-29 16:44:09.159162"], ["updated_at", "2023-09-29 16:44:09.159162"]]
+  [1m[36mTea Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "Rooibos"], ["LIMIT", 1]]
+  [1m[36mTea Create (0.7ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flavor", "Rooibos"], ["price", 3.0], ["description", "Rooibos (/ˈrɔɪbɒs/ ROY-boss; Afrikaans: [rɔːibɔs]; Aspalathus linearis), meaning 'red bush'; is a broom-like member of the plant family Fabaceae that grows in South Africa's fynbos. The leaves are used to make a herbal tea that is called by the names: rooibos (especially in Southern Africa), bush tea, red tea, or redbush tea (predominantly in Great Britain). The tea has been popular in Southern Africa for generations, but is now consumed in many countries worldwide. It is sometimes spelled rooibosch in accordance with the original Dutch for 'red bush'. The tea has a taste and color somewhat similar to hibiscus tea, with more or less of an earthy flavor like yerba mate."], ["amount", nil], ["created_at", "2023-09-29 16:44:09.165040"], ["updated_at", "2023-09-29 16:44:09.165040"]]
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "madz"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "madz"], ["created_at", "2023-09-29 16:44:09.195208"], ["updated_at", "2023-09-29 16:44:09.195208"]]
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "papi"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "papi"], ["created_at", "2023-09-29 16:44:09.206321"], ["updated_at", "2023-09-29 16:44:09.206321"]]
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kriz"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "kriz"], ["created_at", "2023-09-29 16:44:09.214213"], ["updated_at", "2023-09-29 16:44:09.214213"]]
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "abz"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "abz"], ["created_at", "2023-09-29 16:44:09.221270"], ["updated_at", "2023-09-29 16:44:09.221270"]]
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "darude"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "darude"], ["created_at", "2023-09-29 16:44:09.228942"], ["updated_at", "2023-09-29 16:44:09.228942"]]
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "didi"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "didi"], ["created_at", "2023-09-29 16:44:09.235522"], ["updated_at", "2023-09-29 16:44:09.235522"]]
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "taytay"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "taytay"], ["created_at", "2023-09-29 16:44:09.240597"], ["updated_at", "2023-09-29 16:44:09.240597"]]
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "diz"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "diz"], ["created_at", "2023-09-29 16:44:09.245976"], ["updated_at", "2023-09-29 16:44:09.245976"]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTea Load (1.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTransaction Create (6.8ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["user_id", 2], ["tea_id", 1], ["created_at", "2023-09-29 16:44:09.301672"], ["updated_at", "2023-09-29 16:44:09.301672"]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTea Load (2.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTransaction Create (4.5ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 2], ["user_id", 3], ["tea_id", 1], ["created_at", "2023-09-29 16:44:09.320499"], ["updated_at", "2023-09-29 16:44:09.320499"]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTransaction Create (1.0ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["user_id", 4], ["tea_id", 1], ["created_at", "2023-09-29 16:44:09.334304"], ["updated_at", "2023-09-29 16:44:09.334304"]]
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTea Load (2.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTransaction Create (1.1ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 3], ["user_id", 3], ["tea_id", 1], ["created_at", "2023-09-29 16:44:09.350890"], ["updated_at", "2023-09-29 16:44:09.350890"]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTea Load (0.8ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.7ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["user_id", 1], ["tea_id", 2], ["created_at", "2023-09-29 16:44:09.364484"], ["updated_at", "2023-09-29 16:44:09.364484"]]
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTransaction Create (1.9ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["user_id", 5], ["tea_id", 2], ["created_at", "2023-09-29 16:44:09.379406"], ["updated_at", "2023-09-29 16:44:09.379406"]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTea Load (1.8ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.6ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 5], ["user_id", 1], ["tea_id", 2], ["created_at", "2023-09-29 16:44:09.390719"], ["updated_at", "2023-09-29 16:44:09.390719"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.6ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 3], ["user_id", 1], ["tea_id", 2], ["created_at", "2023-09-29 16:44:09.400169"], ["updated_at", "2023-09-29 16:44:09.400169"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTransaction Create (1.4ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 2], ["user_id", 1], ["tea_id", 2], ["created_at", "2023-09-29 16:44:09.411605"], ["updated_at", "2023-09-29 16:44:09.411605"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.9ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["user_id", 6], ["tea_id", 2], ["created_at", "2023-09-29 16:44:09.421402"], ["updated_at", "2023-09-29 16:44:09.421402"]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTransaction Create (1.0ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["user_id", 6], ["tea_id", 3], ["created_at", "2023-09-29 16:44:09.430869"], ["updated_at", "2023-09-29 16:44:09.430869"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.6ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 2], ["user_id", 2], ["tea_id", 3], ["created_at", "2023-09-29 16:44:09.439430"], ["updated_at", "2023-09-29 16:44:09.439430"]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.7ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 3], ["user_id", 6], ["tea_id", 3], ["created_at", "2023-09-29 16:44:09.453160"], ["updated_at", "2023-09-29 16:44:09.453160"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.7ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 15], ["user_id", 7], ["tea_id", 3], ["created_at", "2023-09-29 16:44:09.460952"], ["updated_at", "2023-09-29 16:44:09.460952"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.5ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 2], ["user_id", 8], ["tea_id", 3], ["created_at", "2023-09-29 16:44:09.468992"], ["updated_at", "2023-09-29 16:44:09.468992"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.6ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 2], ["user_id", 8], ["tea_id", 4], ["created_at", "2023-09-29 16:44:09.476744"], ["updated_at", "2023-09-29 16:44:09.476744"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.7ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["user_id", 7], ["tea_id", 4], ["created_at", "2023-09-29 16:44:09.483904"], ["updated_at", "2023-09-29 16:44:09.483904"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.7ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 3], ["user_id", 8], ["tea_id", 4], ["created_at", "2023-09-29 16:44:09.492752"], ["updated_at", "2023-09-29 16:44:09.492752"]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.6ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 2], ["user_id", 4], ["tea_id", 4], ["created_at", "2023-09-29 16:44:09.501301"], ["updated_at", "2023-09-29 16:44:09.501301"]]
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTransaction Create (0.6ms)[0m  [1m[32mINSERT INTO "transactions" ("quantity", "user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["user_id", 5], ["tea_id", 4], ["created_at", "2023-09-29 16:44:09.514640"], ["updated_at", "2023-09-29 16:44:09.514640"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLike Create (2.0ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["tea_id", 1], ["created_at", "2023-09-29 16:44:09.594713"], ["updated_at", "2023-09-29 16:44:09.594713"]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLike Create (0.7ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["tea_id", 1], ["created_at", "2023-09-29 16:44:09.611387"], ["updated_at", "2023-09-29 16:44:09.611387"]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTea Load (4.0ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLike Create (0.5ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 4], ["tea_id", 1], ["created_at", "2023-09-29 16:44:09.626187"], ["updated_at", "2023-09-29 16:44:09.626187"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLike Create (4.5ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["tea_id", 1], ["created_at", "2023-09-29 16:44:09.636299"], ["updated_at", "2023-09-29 16:44:09.636299"]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLike Create (4.1ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["tea_id", 2], ["created_at", "2023-09-29 16:44:09.652897"], ["updated_at", "2023-09-29 16:44:09.652897"]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLike Create (1.0ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["tea_id", 2], ["created_at", "2023-09-29 16:44:09.667590"], ["updated_at", "2023-09-29 16:44:09.667590"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLike Create (0.4ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["tea_id", 3], ["created_at", "2023-09-29 16:44:09.682743"], ["updated_at", "2023-09-29 16:44:09.682743"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLike Create (1.9ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["tea_id", 3], ["created_at", "2023-09-29 16:44:09.697026"], ["updated_at", "2023-09-29 16:44:09.697026"]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLike Create (0.4ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 6], ["tea_id", 3], ["created_at", "2023-09-29 16:44:09.713155"], ["updated_at", "2023-09-29 16:44:09.713155"]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLike Create (0.6ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 7], ["tea_id", 3], ["created_at", "2023-09-29 16:44:09.727663"], ["updated_at", "2023-09-29 16:44:09.727663"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mLike Create (3.3ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 6], ["tea_id", 4], ["created_at", "2023-09-29 16:44:09.736709"], ["updated_at", "2023-09-29 16:44:09.736709"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mLike Create (1.0ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 8], ["tea_id", 4], ["created_at", "2023-09-29 16:44:09.748380"], ["updated_at", "2023-09-29 16:44:09.748380"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTea Load (0.5ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mLike Create (0.6ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 4], ["tea_id", 4], ["created_at", "2023-09-29 16:44:09.758426"], ["updated_at", "2023-09-29 16:44:09.758426"]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mLike Create (0.8ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["tea_id", 4], ["created_at", "2023-09-29 16:44:09.768906"], ["updated_at", "2023-09-29 16:44:09.768906"]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mLike Create (0.6ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "tea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 7], ["tea_id", 4], ["created_at", "2023-09-29 16:44:09.777939"], ["updated_at", "2023-09-29 16:44:09.777939"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/teas" for ::1 at 2023-09-29 09:50:35 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (1.9ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  [1m[36mLike Load (7.6ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (3.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 3]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (2.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 4]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/index.json.jbuilder (Duration: 97.4ms | Allocations: 21034)
+Completed 200 OK in 122ms (Views: 77.3ms | ActiveRecord: 36.4ms | Allocations: 27550)
+
+
+Started GET "/favicon.ico" for ::1 at 2023-09-29 09:50:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/teas" for ::1 at 2023-09-29 09:54:38 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.6ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  [1m[36mLike Load (6.7ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (3.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (0.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 3]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (1.0ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 4]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/index.json.jbuilder (Duration: 26.2ms | Allocations: 3872)
+Completed 200 OK in 27ms (Views: 14.7ms | ActiveRecord: 12.1ms | Allocations: 4115)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-09-29 09:56:18 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/teas" for 127.0.0.1 at 2023-09-29 09:56:18 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  [1m[36mLike Load (0.8ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (0.7ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (3.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 3]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (0.8ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 4]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/index.json.jbuilder (Duration: 42.2ms | Allocations: 3694)
+Completed 200 OK in 44ms (Views: 37.8ms | ActiveRecord: 5.8ms | Allocations: 3873)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-09-29 09:56:28 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.9ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  [1m[36mLike Load (9.5ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (1.0ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (0.8ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 3]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (1.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 4]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/index.json.jbuilder (Duration: 26.3ms | Allocations: 3705)
+Completed 200 OK in 27ms (Views: 13.1ms | ActiveRecord: 13.7ms | Allocations: 3891)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-09-29 09:56:59 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.8ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  [1m[36mLike Load (1.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (0.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (1.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 3]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (10.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 4]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/index.json.jbuilder (Duration: 42.1ms | Allocations: 3704)
+Completed 200 OK in 46ms (Views: 30.3ms | ActiveRecord: 14.1ms | Allocations: 3887)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-09-29 10:01:58 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (2.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  [1m[36mLike Load (3.8ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (2.5ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (0.7ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 3]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (0.8ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 4]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/index.json.jbuilder (Duration: 48.6ms | Allocations: 3705)
+Completed 200 OK in 60ms (Views: 42.5ms | ActiveRecord: 10.1ms | Allocations: 3892)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-09-29 10:55:37 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (5.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  [1m[36mLike Load (4.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (0.5ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (1.0ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 3]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (0.5ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 4]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/index.json.jbuilder (Duration: 131.4ms | Allocations: 6756)
+Completed 200 OK in 142ms (Views: 137.2ms | ActiveRecord: 54.3ms | Allocations: 6932)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-09-29 11:20:26 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (1.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:1
+  [1m[36mLike Load (1.5ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (0.6ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (0.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 3]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  [1m[36mLike Load (2.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 4]]
+  ↳ app/views/api/teas/index.json.jbuilder:6
+  Rendered api/teas/index.json.jbuilder (Duration: 126.1ms | Allocations: 6581)
+Completed 200 OK in 134ms (Views: 131.0ms | ActiveRecord: 26.7ms | Allocations: 6756)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-09-29 11:21:50 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  Rendered api/teas/index.json.jbuilder (Duration: 42.4ms | Allocations: 3255)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 0.0ms | Allocations: 3935)
+
+
+
+NoMethodError - undefined method `likes' for nil:NilClass:
+  app/views/api/teas/index.json.jbuilder:1
+  app/controllers/api/teas_controller.rb:5:in `index'
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-09-29 11:22:16 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.6ms)[0m  [1m[34mSELECT "teas".* FROM "teas" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/api/teas_controller.rb:5:in `index'
+  Rendered api/teas/index.json.jbuilder (Duration: 43.6ms | Allocations: 6137)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.6ms | Allocations: 6795)
+
+
+  [1m[36mCACHE Tea Load (0.0ms)[0m  [1m[34mSELECT "teas".* FROM "teas" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Tea Load (0.0ms)[0m  [1m[34mSELECT "teas".* FROM "teas" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+
+NoMethodError - undefined method `likes' for #<ActiveRecord::Relation [#<Tea id: 1, flavor: "Green", price: 1.75, description: "Green tea is a type of tea that is made from Camel...", amount: nil, created_at: "2023-09-29 16:44:09.140393000 +0000", updated_at: "2023-09-29 16:44:09.140393000 +0000">, #<Tea id: 2, flavor: "Oolong", price: 2.0, description: "Oolong tea is a type of tea that is sometimes call...", amount: nil, created_at: "2023-09-29 16:44:09.151870000 +0000", updated_at: "2023-09-29 16:44:09.151870000 +0000">, #<Tea id: 3, flavor: "Earl Grey", price: 2.5, description: "Earl Grey tea is a tea blend which has been flavou...", amount: nil, created_at: "2023-09-29 16:44:09.159162000 +0000", updated_at: "2023-09-29 16:44:09.159162000 +0000">, #<Tea id: 4, flavor: "Rooibos", price: 3.0, description: "Rooibos (/ˈrɔɪbɒs/ ROY-boss; Afrikaans: [rɔːibɔs];...", amount: nil, created_at: "2023-09-29 16:44:09.165040000 +0000", updated_at: "2023-09-29 16:44:09.165040000 +0000">]>:
+  app/views/api/teas/index.json.jbuilder:1
+  app/controllers/api/teas_controller.rb:5:in `index'
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-09-29 11:23:01 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.6ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  [1m[36mCACHE Tea Load (0.0ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:8
+  [1m[36mLike Load (3.9ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" IN ($1, $2, $3, $4)[0m  [["tea_id", 1], ["tea_id", 2], ["tea_id", 3], ["tea_id", 4]]
+  ↳ app/views/api/teas/index.json.jbuilder:8
+  Rendered api/teas/index.json.jbuilder (Duration: 67.0ms | Allocations: 4885)
+Completed 200 OK in 70ms (Views: 65.3ms | ActiveRecord: 4.4ms | Allocations: 5567)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-09-29 11:24:26 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.9ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  [1m[36mLike Load (0.5ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/index.json.jbuilder:8
+  [1m[36mLike Load (0.6ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 2]]
+  ↳ app/views/api/teas/index.json.jbuilder:8
+  [1m[36mLike Load (0.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 3]]
+  ↳ app/views/api/teas/index.json.jbuilder:8
+  [1m[36mLike Load (0.7ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 4]]
+  ↳ app/views/api/teas/index.json.jbuilder:8
+  Rendered api/teas/index.json.jbuilder (Duration: 50.4ms | Allocations: 3991)
+Completed 200 OK in 52ms (Views: 49.0ms | ActiveRecord: 3.1ms | Allocations: 4669)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-09-29 11:25:21 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  [1m[36mLike Load (0.7ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" IN ($1, $2, $3, $4)[0m  [["tea_id", 1], ["tea_id", 2], ["tea_id", 3], ["tea_id", 4]]
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/index.json.jbuilder (Duration: 10.1ms | Allocations: 2358)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 1.1ms | Allocations: 3036)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-09-29 11:33:42 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (1.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  [1m[36mLike Load (1.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" IN ($1, $2, $3, $4)[0m  [["tea_id", 1], ["tea_id", 2], ["tea_id", 3], ["tea_id", 4]]
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/index.json.jbuilder (Duration: 160924.2ms | Allocations: 13617)
+Completed 200 OK in 220476ms (Views: 160926.8ms | ActiveRecord: 18.3ms | Allocations: 89498)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-09-29 11:48:09 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.7ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  [1m[36mLike Load (8.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" IN ($1, $2, $3, $4)[0m  [["tea_id", 1], ["tea_id", 2], ["tea_id", 3], ["tea_id", 4]]
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/index.json.jbuilder (Duration: 264.8ms | Allocations: 11390)
+Completed 200 OK in 288ms (Views: 276.7ms | ActiveRecord: 30.8ms | Allocations: 13804)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-09-29 11:48:10 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  [1m[36mLike Load (3.5ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" IN ($1, $2, $3, $4)[0m  [["tea_id", 1], ["tea_id", 2], ["tea_id", 3], ["tea_id", 4]]
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/index.json.jbuilder (Duration: 16.4ms | Allocations: 2085)
+Completed 200 OK in 20ms (Views: 16.3ms | ActiveRecord: 3.8ms | Allocations: 2298)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-09-29 11:48:15 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (6.6ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  [1m[36mLike Load (1.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" IN ($1, $2, $3, $4)[0m  [["tea_id", 1], ["tea_id", 2], ["tea_id", 3], ["tea_id", 4]]
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/index.json.jbuilder (Duration: 18.5ms | Allocations: 2069)
+Completed 200 OK in 19ms (Views: 11.3ms | ActiveRecord: 7.8ms | Allocations: 2247)
+
+
+Started GET "/api/teas/[object%20Object]" for 127.0.0.1 at 2023-09-29 11:49:02 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mTea Load (0.2ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:20:in `show'
+  Rendering api/teas/show.json.jbuilder
+  Rendered api/teas/show.json.jbuilder (Duration: 11.6ms | Allocations: 3438)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.6ms | Allocations: 4419)
+
+
+
+NoMethodError - undefined method `price' for nil:NilClass
+    attributes.each{ |key| _set_value key, _format_keys(object.public_send(key)) }
+                                                              ^^^^^^^^^^^^:
+  app/views/api/teas/show.json.jbuilder:2
+  app/views/api/teas/show.json.jbuilder:1
+  app/controllers/api/teas_controller.rb:21:in `show'
+
+Started GET "/api/teas/[object%20Object]" for 127.0.0.1 at 2023-09-29 11:49:57 -0700
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+Started GET "/api/teas/1" for 127.0.0.1 at 2023-09-29 11:50:39 -0700
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:21:in `show'
+  Rendering api/teas/show.json.jbuilder
+  Rendered api/teas/show.json.jbuilder (Duration: 12.1ms | Allocations: 3232)
+Completed 500 Internal Server Error in 42449ms (ActiveRecord: 40.3ms | Allocations: 61788)
+
+
+
+NoMethodError - undefined method `price' for nil:NilClass
+    attributes.each{ |key| _set_value key, _format_keys(object.public_send(key)) }
+                                                              ^^^^^^^^^^^^:
+  app/views/api/teas/show.json.jbuilder:2
+  app/views/api/teas/show.json.jbuilder:1
+  app/controllers/api/teas_controller.rb:22:in `show'
+
+Processing by Api::TeasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTea Load (1.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas" WHERE "teas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:21:in `show'
+  [1m[36mTransaction Load (2.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/controllers/api/teas_controller.rb:21:in `show'
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3)[0m  [["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/api/teas_controller.rb:21:in `show'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 1]]
+  ↳ app/views/api/teas/show.json.jbuilder:16
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2, $3, $4)[0m  [["id", 3], ["id", 2], ["id", 4], ["id", 5]]
+  ↳ app/views/api/teas/show.json.jbuilder:16
+  Rendered api/teas/show.json.jbuilder (Duration: 23.6ms | Allocations: 7810)
+Completed 200 OK in 2494ms (Views: 13.5ms | ActiveRecord: 62.8ms | Allocations: 24150)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-09-29 11:52:40 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  [1m[36mLike Load (0.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" IN ($1, $2, $3, $4)[0m  [["tea_id", 1], ["tea_id", 2], ["tea_id", 3], ["tea_id", 4]]
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/index.json.jbuilder (Duration: 120.3ms | Allocations: 8859)
+Completed 200 OK in 130ms (Views: 96.6ms | ActiveRecord: 24.9ms | Allocations: 11008)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-09-29 12:06:01 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (4.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  [1m[36mLike Load (1.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" IN ($1, $2, $3, $4)[0m  [["tea_id", 1], ["tea_id", 2], ["tea_id", 3], ["tea_id", 4]]
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/index.json.jbuilder (Duration: 305.3ms | Allocations: 5104)
+Completed 200 OK in 320ms (Views: 311.0ms | ActiveRecord: 179.3ms | Allocations: 5309)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-09-29 12:08:26 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.8ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  [1m[36mLike Load (1.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" IN ($1, $2, $3, $4)[0m  [["tea_id", 1], ["tea_id", 2], ["tea_id", 3], ["tea_id", 4]]
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/index.json.jbuilder (Duration: 94.8ms | Allocations: 8980)
+Completed 200 OK in 157ms (Views: 37.3ms | ActiveRecord: 59.6ms | Allocations: 11129)
+
+
+Started POST "/api/teas" for 127.0.0.1 at 2023-09-29 12:08:53 -0700
+Processing by Api::TeasController#create as JSON
+  Parameters: {"id"=>16, "flavor"=>"reali", "price"=>"100", "tea"=>{"id"=>16, "flavor"=>"reali", "price"=>"100"}}
+[31mUnpermitted parameter: :id. Context: { controller: Api::TeasController, action: create, request: #<ActionDispatch::Request:0x0000000109c77400>, params: {"id"=>16, "flavor"=>"reali", "price"=>"100", "format"=>:json, "controller"=>"api/teas", "action"=>"create", "tea"=>{"id"=>16, "flavor"=>"reali", "price"=>"100"}} }[0m
+[31mUnpermitted parameter: :id. Context: { controller: Api::TeasController, action: create, request: #<ActionDispatch::Request:0x0000000109c77400>, params: {"id"=>16, "flavor"=>"reali", "price"=>"100", "format"=>:json, "controller"=>"api/teas", "action"=>"create", "tea"=>{"id"=>16, "flavor"=>"reali", "price"=>"100"}} }[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teas_controller.rb:12:in `create'
+  [1m[36mTea Exists? (9.2ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "reali"], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `create'
+  [1m[36mTea Create (11.1ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flavor", "reali"], ["price", 100.0], ["description", nil], ["amount", nil], ["created_at", "2023-09-29 19:09:19.667883"], ["updated_at", "2023-09-29 19:09:19.667883"]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (14.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/teas_controller.rb:12:in `create'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 5]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mLike Load (14.7ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 5]]
+  ↳ app/views/api/teas/show.json.jbuilder:16
+  Rendered api/teas/show.json.jbuilder (Duration: 47.8ms | Allocations: 5250)
+Completed 200 OK in 25875ms (Views: 15.4ms | ActiveRecord: 68.5ms | Allocations: 13737)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-09-29 12:12:42 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (1.1ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  [1m[36mLike Load (0.7ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" IN ($1, $2, $3, $4, $5)[0m  [["tea_id", 1], ["tea_id", 2], ["tea_id", 3], ["tea_id", 4], ["tea_id", 5]]
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/index.json.jbuilder (Duration: 25.2ms | Allocations: 2462)
+Completed 200 OK in 29ms (Views: 26.5ms | ActiveRecord: 1.8ms | Allocations: 3142)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-09-29 12:12:57 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (27.3ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  [1m[36mLike Load (5.0ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" IN ($1, $2, $3, $4, $5)[0m  [["tea_id", 1], ["tea_id", 2], ["tea_id", 3], ["tea_id", 4], ["tea_id", 5]]
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/index.json.jbuilder (Duration: 231.0ms | Allocations: 2173)
+Completed 200 OK in 233ms (Views: 199.7ms | ActiveRecord: 32.3ms | Allocations: 2367)
+
+
+Started GET "/api/teas" for 127.0.0.1 at 2023-09-29 12:14:06 -0700
+Processing by Api::TeasController#index as JSON
+  Rendering api/teas/index.json.jbuilder
+  [1m[36mTea Load (0.4ms)[0m  [1m[34mSELECT "teas".* FROM "teas"[0m
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  [1m[36mLike Load (1.0ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" IN ($1, $2, $3, $4, $5)[0m  [["tea_id", 1], ["tea_id", 2], ["tea_id", 3], ["tea_id", 4], ["tea_id", 5]]
+  ↳ app/views/api/teas/index.json.jbuilder:3
+  Rendered api/teas/index.json.jbuilder (Duration: 11.2ms | Allocations: 2173)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 1.4ms | Allocations: 2351)
+
+
+Started POST "/api/teas" for 127.0.0.1 at 2023-09-29 12:14:47 -0700
+Processing by Api::TeasController#create as JSON
+  Parameters: {"id"=>97, "flavor"=>"em", "price"=>"3", "tea"=>{"id"=>97, "flavor"=>"em", "price"=>"3"}}
+[31mUnpermitted parameter: :id. Context: { controller: Api::TeasController, action: create, request: #<ActionDispatch::Request:0x00000001099dd898>, params: {"id"=>97, "flavor"=>"em", "price"=>"3", "format"=>:json, "controller"=>"api/teas", "action"=>"create", "tea"=>{"id"=>97, "flavor"=>"em", "price"=>"3"}} }[0m
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teas_controller.rb:12:in `create'
+  [1m[36mTea Exists? (2.6ms)[0m  [1m[34mSELECT 1 AS one FROM "teas" WHERE "teas"."flavor" = $1 LIMIT $2[0m  [["flavor", "em"], ["LIMIT", 1]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `create'
+  [1m[36mTea Create (11.2ms)[0m  [1m[32mINSERT INTO "teas" ("flavor", "price", "description", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["flavor", "em"], ["price", 3.0], ["description", nil], ["amount", nil], ["created_at", "2023-09-29 19:14:47.965967"], ["updated_at", "2023-09-29 19:14:47.965967"]]
+  ↳ app/controllers/api/teas_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/teas_controller.rb:12:in `create'
+  Rendering api/teas/show.json.jbuilder
+  [1m[36mTransaction Load (1.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."tea_id" = $1[0m  [["tea_id", 6]]
+  ↳ app/views/api/teas/show.json.jbuilder:6
+  [1m[36mLike Load (0.5ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."tea_id" = $1[0m  [["tea_id", 6]]
+  ↳ app/views/api/teas/show.json.jbuilder:16
+  Rendered api/teas/show.json.jbuilder (Duration: 48.3ms | Allocations: 7599)
+Completed 200 OK in 115ms (Views: 36.1ms | ActiveRecord: 58.9ms | Allocations: 12933)
+
+

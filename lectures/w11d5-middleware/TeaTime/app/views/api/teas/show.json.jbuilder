@@ -1,4 +1,4 @@
-json.teas do
+json.tea do
     json.extract! @tea, :price, :description, :id, :flavor
 end
 

@@ -11,7 +11,9 @@
     "react-redux": "^8.1.2",
     "react-router-dom": "^5.3.4",
     "react-scripts": "5.0.1",
-    "redux": "^4.2.1"
+    "redux": "^4.2.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.4.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -33,5 +35,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "http://localhost:5000"
 }

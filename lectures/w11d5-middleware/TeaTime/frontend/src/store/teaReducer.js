@@ -1,3 +1,5 @@
+import * as TeaApiUtil from "../utils/tea_api_utils";
+
 // this file will contain all redux logic pertaining to teas, actions, reducers, etc
 
 const RECEIVE_TEA = 'RECEIVE_TEA';
@@ -6,15 +8,16 @@ const REMOVE_TEA = 'REMOVE_TEA';
 
 // ------------ ACTION CREATORS -------- //
 
-export const receiveTea = tea => {
+export const receiveTea = payload => {
   // debugger
   return {
     type: RECEIVE_TEA,
-    tea: tea
+    payload
   }
 };
 
 export const receiveTeas = teas => {
+  // debugger
   return {
     type: RECEIVE_TEAS,
     teas // syntactic sugar for teas: teas
@@ -26,6 +29,25 @@ export const removeTea = teaId => ({ // note implicit return, cant add debugger
   teaId
 })
 
+// ----------- THUNK ACTION CREATORS ---------- //
+
+// called from component
+export const fetchTeas = () => async (dispatch) => {
+  // debugger
+  const teas = await TeaApiUtil.requestTeas();
+  dispatch(receiveTeas(teas)); // this updates store
+};
+
+export const fetchTea = (teaId) => async (dispatch) => {
+  const tea = await TeaApiUtil.requestTea(teaId);
+  dispatch(receiveTea(tea));
+};
+
+export const postTea = (tea) => async (dispatch) => {
+  const newTea = await TeaApiUtil.createTea(tea);
+  dispatch(receiveTea(newTea));
+}
+
 // ---------------- REDUCER --------------- //
 
 
@@ -35,11 +57,13 @@ const teaReducer = (state = {}, action) => {
 
   switch (action.type) {
     case RECEIVE_TEA:
+      // debugger
       // example tea action
       // action: { type: 'RECEIVE_TEA', tea: {id: 1, flavor: 'green', price: 1.23}}
-      nextState[action.tea.id] = action.tea; // use bracket notation to add key of 1 or 2 or 3 etc
+      nextState[action.payload.tea.id] = action.payload.tea; // use bracket notation to add key of 1 or 2 or 3 etc
       return nextState;
     case RECEIVE_TEAS:
+      // debugger 
       // example teas action
       // action: { type: 'RECEIVE_TEAS', teas: 1: {id: 1, flavor: 'green', price: 1.23}, 2: {...}}
       //
