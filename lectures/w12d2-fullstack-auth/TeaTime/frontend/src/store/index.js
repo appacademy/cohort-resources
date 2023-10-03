@@ -2,9 +2,13 @@ import {createStore, combineReducers, applyMiddleware} from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import teaReducer from './teaReducer';
+import userReducer from './userReducer';
+import sessionReducer from './sessionReducer';
 
 const rootReducer = combineReducers({
-  teas: teaReducer
+  teas: teaReducer,
+  users: userReducer,
+  session: sessionReducer
 })
 
 /*
