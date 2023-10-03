@@ -87,6 +87,14 @@
 
 ---
 
+## What is sessionStorage for?
++ storing the currentUser
+	+ can't use the current_user helper method anymore
++ storing csrf tokens
+	+ can't use hidden inputs with form_authenticity_tokens
+  
+---
+
 ## Questions?
 
 ---
