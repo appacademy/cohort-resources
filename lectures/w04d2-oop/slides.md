@@ -216,7 +216,6 @@ end
 
 ### Inheritance Pitfalls
 
-
 + Inheritance creates implicit dependencies.
     + Inherited methods and variables are not listed in the subclass code.
     + Multiple inheritance and mixins: potential for conflict.
@@ -261,6 +260,7 @@ s.some_method # Will print "in SuperClass#some_method" then "in SubClass#some_me
 ---
 
 ## Modules
+
 - Sometimes we have shared functionality that doesn't make sense to group under a shared parent
 - Modules allow us to write functionality we can add to classes
 - A module is like a class that can't be initialized - we can never have an instance of a module
@@ -270,7 +270,7 @@ s.some_method # Will print "in SuperClass#some_method" then "in SubClass#some_me
 
 ---
 
-## Module Demo
+## Code Demo #5
 
 ---
 
