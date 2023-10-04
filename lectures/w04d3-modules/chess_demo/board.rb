@@ -1,4 +1,6 @@
 require_relative 'piece'
+require_relative 'rook'
+require_relative 'null_piece'
 
 class Board
   def self.populate_rows(board)
@@ -13,7 +15,7 @@ class Board
         when 7
           row.map.with_index { |_, c| Piece.new(:black, board, [r, c]) }
         else
-          row.map.with_index { |_, c| nil }
+          row.map.with_index { |_, c| NullPiece.instance }
         end
     end
   end
@@ -43,16 +45,12 @@ class Board
 
     self[end_pos] = piece
     piece.pos = end_pos
-    self[start_pos] = nil
+    self[start_pos] = NullPiece.instance
   end
 
   def valid_pos?(pos)
     return false if pos.any? { |n| n < 0 || n > 7 }
     true
-  end
-
-  def add_piece(piece, pos)
-    self[pos] = piece
   end
 
   def render
@@ -63,14 +61,17 @@ class Board
   end
 end
 
-b = Board.new
-b.render
-pos_a = [0,0]
-pos_b = [4,4]
-pos_c = [-1, 5]
-pos_d = [3, 9]
-p b[pos_a]
-b.move_piece(pos_b, pos_a)
-b.render
-p b[pos_a]
-p b[pos_b]
+if __FILE__ == $PROGRAM_NAME
+  b = Board.new
+  b.render
+  pos_a = [0,0]
+  pos_b = [1,4]
+  pos_c = [-1, 5]
+  pos_d = [3, 9]
+  p b[pos_b] = Rook.new(:white, b, pos_b)
+  b.render
+  p b[pos_b].moves
+  b.move_piece(pos_b,[4,4])
+  b.render
+  p b[[4,4]].moves
+end

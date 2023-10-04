@@ -13,6 +13,18 @@ class Piece
   end
 
   def to_s
-    'P'
+    symbol.to_s
   end
+
+  def symbol
+    color == :white ? 'W' : 'B'
+  end
+
+  def empty?
+    false
+  end
+end
+
+if __FILE__ == $PROGRAM_NAME
+  p "Here I am in the piece.rb file"
 end
