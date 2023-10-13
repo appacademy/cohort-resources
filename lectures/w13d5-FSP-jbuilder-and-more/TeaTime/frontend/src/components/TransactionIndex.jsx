@@ -6,12 +6,6 @@ import './TransactionIndex.css'
 const TransactionIndex = props => {
   const transactions = useSelector(state => state.transactions)
   const transArray = Object.values(transactions)
-  const dispatch = useDispatch();
-  // debugger
-  useEffect(() => {
-    // debugger
-    dispatch(fetchTransactions(props.teaId));
-  }, [dispatch, props.teaId])
 
   return(
     <div className="transaction-index">

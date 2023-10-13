@@ -5,3 +5,10 @@
 .tea-item {
   border: solid aquamarine 3px;
 }
+
+.tea-button {
+  background: darksalmon;
+  border: solid aquamarine 3px;
+  border-radius: 4px;
+  margin: 10px;
+}

@@ -13,11 +13,7 @@ const TeaForm = props => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // random id just to make this work
-    let id = Math.floor(Math.random()*1000);
-
     const tea = {
-      id: id,
       flavor: flavor,
       price: price
     };

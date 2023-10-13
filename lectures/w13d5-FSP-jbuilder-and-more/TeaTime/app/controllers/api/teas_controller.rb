@@ -7,7 +7,6 @@ class Api::TeasController < ApplicationController
     end
 
     def create
-        # debugger
         @tea = Tea.new(tea_params)
         if @tea.save
             render :show
@@ -18,7 +17,7 @@ class Api::TeasController < ApplicationController
 
     def show
         # debugger
-        @tea = Tea.includes(transactions: :user).find_by(id: params[:id]) #transactions is an association being called on @tea and user is an association called on each trasaction.  Using includes will help avoid an n+1 query
+        @tea = Tea.find_by(id: params[:id]) #transactions is an association being called on @tea and user is an association called on each trasaction.  Using includes will help avoid an n+1 query
         render :show
     end
 

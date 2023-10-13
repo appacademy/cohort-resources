@@ -1,8 +1,9 @@
 import * as TeaApiUtil from "../utils/tea_api_utils";
+import { receiveTransactions } from "./transactionReducer";
 
 // this file will contain all redux logic pertaining to teas, actions, reducers, etc
 
-const RECEIVE_TEA = 'RECEIVE_TEA';
+export const RECEIVE_TEA = 'RECEIVE_TEA';
 const RECEIVE_TEAS = 'RECEIVE_TEAS';
 const REMOVE_TEA = 'REMOVE_TEA';
 
@@ -39,8 +40,8 @@ export const fetchTeas = () => async (dispatch) => {
 };
 
 export const fetchTea = (teaId) => async (dispatch) => {
-  const tea = await TeaApiUtil.requestTea(teaId);
-  dispatch(receiveTea(tea));
+  const payload = await TeaApiUtil.requestTea(teaId);
+  dispatch(receiveTea(payload)); // every action hits every reducer
 };
 
 export const postTea = (tea) => async (dispatch) => {

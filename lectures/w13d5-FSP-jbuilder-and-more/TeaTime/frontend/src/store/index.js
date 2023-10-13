@@ -3,10 +3,12 @@ import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import teaReducer from './teaReducer';
 import transactions from './transactionReducer'
+import modal from './modalReducer'
 
 const rootReducer = combineReducers({
   teas: teaReducer,
-  transactions
+  transactions,
+  modal
 })
 
 /*

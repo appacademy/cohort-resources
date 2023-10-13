@@ -1,4 +1,5 @@
 
+import { RECEIVE_TEA } from "./teaReducer";
 const RECEIVE_TRANSACTIONS = 'RECEIVE_TRANSACTIONS';
 
 // ------------ ACTION CREATORS -------- //
@@ -26,8 +27,10 @@ const transactionReducer = (state = {}, action) => {
   const nextState = Object.assign({}, Object.freeze(state))
 
   switch (action.type) {
-    case RECEIVE_TRANSACTIONS:
-      return { ...nextState, ...action.transactions};
+    // case RECEIVE_TRANSACTIONS:
+    //   return { ...nextState, ...action.transactions};
+    case RECEIVE_TEA:
+      return { ...nextState, ...action.payload.transactions};
     default:
       return state;
   }
