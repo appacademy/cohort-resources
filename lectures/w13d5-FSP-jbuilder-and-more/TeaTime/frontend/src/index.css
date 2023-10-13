@@ -1,0 +1,10 @@
+/* TODO Add site wide styles */
+.active {
+  color: cyan;
+  font-weight: 700;
+}
+
+.link {
+  cursor: pointer;
+  text-decoration: none;
+}
