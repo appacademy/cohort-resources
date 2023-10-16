@@ -116,10 +116,10 @@
 
 -- CHALLENGE #18
 -- Find the total number of possessions owned by each person
-SELECT sf_instructors.id, sf_instructors.name, COUNT(possessions.id)
-FROM possessions
-   FULL OUTER JOIN sf_instructors ON possessions.owner_id = sf_instructors.id
-GROUP BY possessions.owner_id, sf_instructors.name, sf_instructors.id;
+-- SELECT sf_instructors.id, sf_instructors.name, COUNT(possessions.*)
+-- FROM possessions
+--   FULL JOIN sf_instructors ON possessions.owner_id = sf_instructors.id
+-- GROUP BY possessions.owner_id, sf_instructors.name, sf_instructors.id;
 
 
 -- CHALLENGE #19
@@ -129,9 +129,15 @@ GROUP BY possessions.owner_id, sf_instructors.name, sf_instructors.id;
 
 -- CHALLENGE #20
 -- Get all the friendships between SF and NY instructors
-
+-- SELECT *
+-- FROM sf_instructors
+  -- LEFT JOIN friendships ON friendships.sf_id = sf_instructors.id
+  -- FULL JOIN ny_instructors ON friendships.ny_id = ny_instructors.id;
 
 
 -- CHALLENGE #21
 -- Get all of the app academy instructors who are also pod leaders
 -- visualize
+-- SELECT DISTINCT pod_leaders.name
+-- FROM sf_instructors
+--   JOIN sf_instructors AS pod_leaders ON sf_instructors.pod_leader_id = pod_leaders.id;
