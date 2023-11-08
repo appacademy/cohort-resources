@@ -41,3 +41,61 @@
   [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "58addd46498439b0246039134434c38aae6c70d3"], ["created_at", "2023-11-08 16:45:28.403870"], ["updated_at", "2023-11-08 16:45:28.403870"]]
   [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGifs (20231108194821)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.0ms)[0m  [1m[35mCREATE TABLE "gifs" ("id" bigserial primary key, "title" character varying NOT NULL, "url" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_gifs_on_title" ON "gifs" ("title")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20231108194821"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started OPTIONS "/api/gifs" for ::1 at 2023-11-08 12:07:25 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/gifs"):
+  
+Started POST "/api/gifs" for ::1 at 2023-11-08 12:10:43 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::GifsController#create as JSON
+  Parameters: {"title"=>"claymation patrick", "url"=>"https://media2.giphy.com/media/Z3tR3NNAWZBWeZlsiH/200.gif?cid=2cb8fdb7tlvj503lsnhe38srwsm8c1oe0pzm92657bv9w1ip&ep=v1_gifs_random&rid=200.gif&ct=g", "gif"=>{"title"=>"claymation patrick", "url"=>"https://media2.giphy.com/media/Z3tR3NNAWZBWeZlsiH/200.gif?cid=2cb8fdb7tlvj503lsnhe38srwsm8c1oe0pzm92657bv9w1ip&ep=v1_gifs_random&rid=200.gif&ct=g"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/gifs_controller.rb:10:in `create'
+  [1m[36mGif Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "claymation patrick"], ["LIMIT", 1]]
+  ↳ app/controllers/api/gifs_controller.rb:10:in `create'
+  [1m[36mGif Create (0.3ms)[0m  [1m[32mINSERT INTO "gifs" ("title", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "claymation patrick"], ["url", "https://media2.giphy.com/media/Z3tR3NNAWZBWeZlsiH/200.gif?cid=2cb8fdb7tlvj503lsnhe38srwsm8c1oe0pzm92657bv9w1ip&ep=v1_gifs_random&rid=200.gif&ct=g"], ["created_at", "2023-11-08 20:10:43.776937"], ["updated_at", "2023-11-08 20:10:43.776937"]]
+  ↳ app/controllers/api/gifs_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/gifs_controller.rb:10:in `create'
+Completed 200 OK in 33ms (Views: 0.3ms | ActiveRecord: 5.9ms | Allocations: 12266)
+
+
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs"[0m
+Started POST "/api/gifs" for ::1 at 2023-11-08 12:12:16 -0800
+Processing by Api::GifsController#create as JSON
+  Parameters: {"title"=>"party bob", "url"=>"https://media1.giphy.com/media/YcmDwrqcfwoVlUBg5i/200.gif?cid=2cb8fdb7zcxvzxp3bwr1qai4ddi4tne7oharuwrt21f1jnkp&ep=v1_gifs_random&rid=200.gif&ct=g", "gif"=>{"title"=>"party bob", "url"=>"https://media1.giphy.com/media/YcmDwrqcfwoVlUBg5i/200.gif?cid=2cb8fdb7zcxvzxp3bwr1qai4ddi4tne7oharuwrt21f1jnkp&ep=v1_gifs_random&rid=200.gif&ct=g"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/gifs_controller.rb:10:in `create'
+  [1m[36mGif Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "party bob"], ["LIMIT", 1]]
+  ↳ app/controllers/api/gifs_controller.rb:10:in `create'
+  [1m[36mGif Create (0.2ms)[0m  [1m[32mINSERT INTO "gifs" ("title", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "party bob"], ["url", "https://media1.giphy.com/media/YcmDwrqcfwoVlUBg5i/200.gif?cid=2cb8fdb7zcxvzxp3bwr1qai4ddi4tne7oharuwrt21f1jnkp&ep=v1_gifs_random&rid=200.gif&ct=g"], ["created_at", "2023-11-08 20:12:16.627907"], ["updated_at", "2023-11-08 20:12:16.627907"]]
+  ↳ app/controllers/api/gifs_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/gifs_controller.rb:10:in `create'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 2.5ms | Allocations: 2828)
+
+
+Started POST "/api/gifs" for ::1 at 2023-11-08 12:12:30 -0800
+Processing by Api::GifsController#create as JSON
+  Parameters: {"title"=>"party bob", "url"=>nil, "gif"=>{"title"=>"party bob", "url"=>nil}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/gifs_controller.rb:10:in `create'
+  [1m[36mGif Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "gifs" WHERE "gifs"."title" = $1 LIMIT $2[0m  [["title", "party bob"], ["LIMIT", 1]]
+  ↳ app/controllers/api/gifs_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/gifs_controller.rb:10:in `create'
+Completed 422 Unprocessable Entity in 7ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 4905)
+
+
