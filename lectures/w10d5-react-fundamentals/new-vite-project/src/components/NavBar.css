@@ -9,3 +9,12 @@
   height: 50px;
   width: 50px;
 }
+
+.active {
+  font-weight: bold;
+}
+
+.pending {
+  color: pink;
+  font-style: italic;
+}
