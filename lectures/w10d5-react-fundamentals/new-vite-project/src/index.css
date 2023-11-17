@@ -1,0 +1,13 @@
+/* TODO: Add sitewide styles */
+
+* {
+  margin: 5px;
+}
+
+.app {
+  border: 1px solid red;
+}
+
+ul {
+  list-style: none;
+}
