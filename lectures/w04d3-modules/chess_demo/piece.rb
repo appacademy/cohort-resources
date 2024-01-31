@@ -24,6 +24,6 @@ class Piece
   end
 
   def symbol
-    ""
+    " "
   end
 end
