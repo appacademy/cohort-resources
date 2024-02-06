@@ -14,7 +14,16 @@ def execute(sql)
 end
 
 def example_query
+  # query = <<-SQL
+  #   SELECT *
+  #   FROM sf_instructors;
+  # SQL
 
+  execute(<<-SQL)
+    SELECT *
+    FROM sf_instructors
+    WHERE name ILIKE 'M%';
+  SQL
 end
 
 p example_query
