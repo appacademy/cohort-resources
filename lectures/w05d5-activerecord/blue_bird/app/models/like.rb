@@ -9,7 +9,6 @@
 #  updated_at :datetime         not null
 #
 class Like < ApplicationRecord
-
   belongs_to :liker,
     foreign_key: :liker_id,
     primary_key: :id,
