@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BlueBird</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application" %>
+  </head>
+
+  <body>
+
+
+<%# if the person is logged_in? then show them the log out button, otherwise hide it %>
+  <% if logged_in? %>
+    <h3>welcome <%= current_user.username %></h3>
+    <form action="<%= session_url %>" method="POST">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" value="LOGOUT">
+    
+    </form>
+
+
+  <% end %>
+
+    <%= yield %>
+
+    <% if flash[:errors] %>
+      <% flash[:errors].each do |error| %>
+        <p><%= error %></p>
+      <% end %>
+    <% end %>
+
+      <% if flash[:messages] %>
+      <% flash[:messages].each do |message| %>
+        <p><%= message %></p>
+      <% end %>
+    <% end %>
+
+  </body>
+</html>

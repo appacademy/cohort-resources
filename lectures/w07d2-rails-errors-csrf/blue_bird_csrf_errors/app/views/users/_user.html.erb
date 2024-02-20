@@ -1,0 +1,13 @@
+<ul>
+  <li><%= user.username %></li>
+  <li><%= user.email %></li>
+  <li><%= user.age %></li>
+</ul>
+
+<% if action == :from_show_page %>
+  <li><a href="<%= users_url %>">User Index</a></li> 
+<% elsif action == :from_index_page %>
+  <li><a href="<%= user_url(user.id) %>">User Show Page</a></li> 
+<% end %>
+
+<li><a href="<%= edit_user_url(user.id) %>">Edit User</a></li> 

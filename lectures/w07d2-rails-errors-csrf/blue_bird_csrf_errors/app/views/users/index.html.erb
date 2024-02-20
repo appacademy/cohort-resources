@@ -1,0 +1,9 @@
+<h1>Hello world</h1>
+<h2>Users</h2>
+<ul>
+  <% @users.each do |user| %>
+  <li>
+    <%= render 'user', user: user, action: :from_index_page %>
+  </li>
+  <% end %>
+</ul>

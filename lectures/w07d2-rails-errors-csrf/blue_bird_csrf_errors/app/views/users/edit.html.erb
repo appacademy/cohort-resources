@@ -1,0 +1,26 @@
+<h1>Edit User</h1>
+<form action="<%= user_url(@user) %>" method="POST">
+<input type="hidden" name="_method" value="PATCH">
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+<label for="username">Username:
+    <input type="text" id="username" name="user[username]" value="<%= @user.username %>"> 
+  </label>
+
+  <br>
+
+  <label for="email">Email:
+    <input type="text" id="email" name="user[email]" value="<%= @user.email %>"> 
+  </label>
+
+  <br>
+
+  <label for="age">Age:
+    <input type="text" id="age" name="user[age]" value="<%= @user.age %>"> 
+  </label>
+
+  <br>
+
+  <input type="submit" value="Update User">
+
+</form> 
