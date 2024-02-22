@@ -1,0 +1,74 @@
+.blocks{
+    height: 300px;
+    width: 300px;
+    background-color: lightblue;
+    border: 2px solid blue;
+    display: inline-block;
+}
+
+#yellow{
+    background-color: yellow;
+    position: absolute;
+    top: 500px;
+    right: 400px;
+}
+
+.wrapper{
+    height: fit-content;
+    width: 50%;
+    border: 5px solid red;
+    position: relative;
+}
+
+
+nav{
+    width: 100vw;
+    height: 5vh;
+    background-color: teal;
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main{
+    position: relative;
+    top: 10vh;
+}
+
+.menu{
+    background-color: red;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+.nav-right{
+    height: 100%;
+   
+}
+
+.menu:hover{
+    cursor: pointer;
+    background-color: darkgreen;
+}
+
+#drop-down{
+    background-color: orange;
+    position: absolute;
+    padding: 15px;
+    top: 100%;
+    display: none;
+}
+
+.menu:hover #drop-down {
+    display: block;
+}
+
+li:hover{
+    color: cyan;
+}
