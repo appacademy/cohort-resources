@@ -1,0 +1,14 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rack (2.2.8.1)
+
+PLATFORMS
+  ruby
+  x86_64-linux
+
+DEPENDENCIES
+  rack (~> 2.2.4)
+
+BUNDLED WITH
+   2.5.6
