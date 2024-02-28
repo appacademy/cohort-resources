@@ -24,12 +24,13 @@ end
 # crud methods/ actions 
 
 # gonna get you back multiple records
-def index 
+def index
+    # debugger
     # debugger
     # incoming_username = params[:username]
- @users = User.all
-#  render json: @users
-render :index
+    @users = User.all
+    # render json: @users
+    render :index
 end 
 
 # gets you back a specific record
