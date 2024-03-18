@@ -1,0 +1,17 @@
+.job-index {
+  border: 1px dotted blue;
+  padding: 5px;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.filter-buttons > p {
+  padding-right: 10px;
+}
+
+.active {
+  font-style: italic;
+}
