@@ -1,0 +1,14 @@
+.post-index-item {
+  border: 1px dotted red;
+  padding: 2px;
+  margin: 2px;
+}
+
+.reactions {
+  display: flex;
+  flex-direction: row;
+}
+
+.reactions * {
+  margin-right: 5px;
+}

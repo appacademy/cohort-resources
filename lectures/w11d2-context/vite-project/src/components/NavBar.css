@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid blue;
+  padding: 5px;
+  margin: 5px;
+}
+
+.navbar * {
+  padding-right: 5px;
+  text-decoration: none;
+  color: black;
+}
+
+.navbar > .active {
+  color: purple;
+  font-weight: bold;
+}
+
+.logo {
+  height: 5vh;
+}
+
+.home {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

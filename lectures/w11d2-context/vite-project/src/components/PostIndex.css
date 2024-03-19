@@ -1,0 +1,11 @@
+.post-index {
+  border: 1px dotted green;
+  padding: 5px;
+  margin: 5px;
+}
+
+.salamander {
+  height: 15vh;
+  width: 100%;
+  object-fit: cover;
+}
