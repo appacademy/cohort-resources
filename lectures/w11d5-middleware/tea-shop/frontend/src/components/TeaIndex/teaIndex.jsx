@@ -1,9 +1,16 @@
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import './teaIndex.css'
+import { destroyTea, fetchTeas, selectAllTeas } from '../../store/teaReducer';
 
 const TeaIndex = props => {
+  const dispatch = useDispatch();
+  // React uses object comparision when deciding whether `teas` has changed
+  const teas = useSelector(selectAllTeas);
 
-  const teas = useSelector(state => Object.values(state.teas));
+  useEffect(() => {
+    dispatch(fetchTeas());
+  }, []);
 
   return (
     <div className='tea-index'>
@@ -22,6 +29,7 @@ const TeaIndex = props => {
                 Price: {tea.price}
               </h4>
             </li>
+            <li onClick={() => dispatch(destroyTea(tea.id))}>Delete Tea</li>
           </ul>
         </div>
       ))}

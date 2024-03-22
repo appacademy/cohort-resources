@@ -13,7 +13,8 @@ class Tea < ApplicationRecord
   validates :flavor, presence: true, uniqueness: true
   validates :price, presence: true
 
-  has_many :transactions
+  has_many :transactions,
+    dependent: :destroy
 
   has_many :purchasers,
     through: :transactions,

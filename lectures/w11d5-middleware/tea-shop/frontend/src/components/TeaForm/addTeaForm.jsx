@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { receive_tea } from '../../store/teaReducer';
+import { createTea, receiveTea } from '../../store/teaReducer';
 
 const AddTeaForm = props => {
   const dispatch = useDispatch();
@@ -11,19 +11,15 @@ const AddTeaForm = props => {
   const handleSubmit = e => {
     e.preventDefault();
 
-    let id = Math.floor(Math.random() * 1000);
-
     const teaObject = {
-      id: id,
       flavor: flavor,
       price: price
     }
 
-    dispatch(receive_tea(teaObject));
+    dispatch(createTea(teaObject));
 
     setFlavor("");
-    setPrice("")
-
+    setPrice("");
   }
 
   return (
