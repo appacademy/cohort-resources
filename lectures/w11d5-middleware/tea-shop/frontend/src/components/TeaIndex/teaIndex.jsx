@@ -4,6 +4,7 @@ import './teaIndex.css'
 import { destroyTea, fetchTeas, selectAllTeas } from '../../store/teaReducer';
 
 const TeaIndex = props => {
+  debugger;
   const dispatch = useDispatch();
   // React uses object comparision when deciding whether `teas` has changed
   const teas = useSelector(selectAllTeas);
