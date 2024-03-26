@@ -58,13 +58,12 @@ export const logoutUser = () => (dispatch, getState) => (
 );
 
 // SELECTORS
+export const selectCurrentUser = state => state.session;
 
 // REDUCER
 const initialState = JSON.parse(sessionStorage.getItem('currentUser'));
 
 const sessionReducer = (state = initialState, action) => {
-  const nextState = { ...state };
-
   switch (action.type) {
     case CREATE_SESSION:
       return action.sessionInfo;
